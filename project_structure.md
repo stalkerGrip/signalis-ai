@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-28T23:59:10`
+Generated: `2026-05-29T00:25:20`
 
 ## Workspace
 
