@@ -182,3 +182,12 @@ CharacterLoaded
 → inventorySetPanelStatus
 → client inventory UI
 ```
+
+## Retrieval Evaluation
+
+Evaluate retrieval quality against benchmark expectations:
+
+```powershell
+python scripts/qdrant/evaluate_retrieval.py `
+  --workspace E:/signalis_ai `
+  --out reports/retrieval_eval

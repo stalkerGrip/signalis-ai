@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-29T00:25:20`
+Generated: `2026-05-29T01:16:35`
 
 ## Workspace
 
@@ -20,6 +20,7 @@ docs/
 embeddings/
 graphs/
 investigations/
+  templates/
 logs/
 manifests/
   character_inventory/
@@ -86,6 +87,8 @@ temp/
 - `investigations/inventory_desync_phase1.md` (99.7 KB)
 - `investigations/paths_characterloaded_to_inventory_panel_status.md` (7.6 KB)
 - `investigations/paths_v2_characterloaded_to_inventory_panel_status.md` (10.3 KB)
+- `investigations/templates/`
+- `investigations/templates/investigation.md` (0.0 KB)
 
 ### Subsystem Docs
 
@@ -104,7 +107,9 @@ temp/
 - `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
 - `scripts/qdrant/context_pack.py` (3.9 KB)
 - `scripts/qdrant/embed_qdrant_documents.py` (2.5 KB)
+- `scripts/qdrant/evaluate_retrieval.py` (17.2 KB)
 - `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
+- `scripts/qdrant/investigate.py` (0.0 KB)
 - `scripts/qdrant/path_reconstruction.py` (7.9 KB)
 - `scripts/qdrant/path_reconstruction_v2.py` (11.4 KB)
 - `scripts/qdrant/query_qdrant.py` (7.4 KB)

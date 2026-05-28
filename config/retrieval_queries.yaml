@@ -1,0 +1,354 @@
+# SIGNALIS AI — Retrieval Evaluation Queries
+#
+# Purpose:
+#   Benchmark whether Qdrant retrieval returns the right subsystems,
+#   plugins, hooks, network messages, files, and topology context.
+#
+# Usage target:
+#   scripts/qdrant/evaluate_retrieval.py
+#
+# Notes:
+#   These are not truth claims.
+#   They are expected retrieval targets for evaluation.
+#   Exact behavior still requires topology/source/human validation.
+
+version: 1
+
+metadata:
+  project: SIGNALIS AI
+  sprint: Investigation Pipeline V1
+  purpose: retrieval_quality_evaluation
+  authority: benchmark_config
+  created_for:
+    - qdrant retrieval testing
+    - reranker evaluation
+    - investigation pipeline validation
+
+defaults:
+  top_k: 10
+  min_expected_hits: 2
+  scoring:
+    subsystem_weight: 3
+    plugin_weight: 3
+    hook_weight: 2
+    network_weight: 2
+    file_weight: 1
+
+queries:
+
+  - id: inv_desync_after_character_load
+    query: inventory desync after character load
+    intent: lifecycle_sync_investigation
+    priority: critical
+    expect:
+      subsystems: [inventory, gridinv, multichar]
+      plugins: [inventory, gridinv, multichar]
+      hooks: [CharacterLoaded, PlayerLoadedChar, PlayerLoadout, PostPlayerLoadout]
+      network_messages: [inventoryOpen, inventorySetPanelStatus, nutInventoryInit]
+      files:
+        - plugins/inventory/sh_plugin.lua
+        - plugins/inventory/cl_hooks.lua
+        - plugins/multichar/sv_networking.lua
+
+  - id: vendor_price_stale_after_purchase
+    query: vendor price labels remain visible after buying item
+    intent: ui_metadata_sync_investigation
+    priority: critical
+    expect:
+      subsystems: [vendor, inventory, gridinv]
+      plugins: [vendor, inventory, gridinv]
+      hooks: [VendorItemStockUpdated, VendorMoneyUpdated, VendorOpened, CanPlayerTradeWithVendor]
+      network_messages: [nutVendorTrade, nutVendorOpen, inventorySetPanelStatus]
+      files:
+        - plugins/vendor/cl_networking.lua
+        - plugins/vendor/derma/cl_vendor.lua
+        - plugins/vendor/sv_hooks.lua
+        - plugins/inventory/cl_hooks.lua
+
+  - id: storage_refresh_clears_vendor_metadata
+    query: moving item through storage clears stale vendor price label
+    intent: cross_subsystem_ui_refresh
+    priority: high
+    expect:
+      subsystems: [storage, inventory, vendor, gridinv]
+      plugins: [storage, inventory, vendor, gridinv]
+      hooks: [StorageOpen, ItemTransfered, InventoryItemAdded, InventoryItemRemoved]
+      network_messages: [storageInventory, nutStorageOpen, nutTransferItem, inventorySetPanelStatus]
+      files:
+        - plugins/storage/cl_networking.lua
+        - plugins/storage/sv_networking.lua
+        - plugins/gridinv/sv_transfer.lua
+        - plugins/inventory/cl_hooks.lua
+
+  - id: player_loadout_inventory_sync_boundary
+    query: which lifecycle event should synchronize inventory UI after player loadout
+    intent: lifecycle_boundary_analysis
+    priority: high
+    expect:
+      subsystems: [inventory, multichar]
+      plugins: [inventory, multichar]
+      hooks: [PlayerLoadedChar, PlayerLoadout, PostPlayerLoadout]
+      network_messages: [inventoryOpen, inventorySetPanelStatus, nutInventoryInit]
+      files:
+        - gamemode/core/hooks/sv_hooks.lua
+        - plugins/inventory/sh_plugin.lua
+        - plugins/multichar/sv_networking.lua
+
+  - id: inventory_panel_status_sync
+    query: inventorySetPanelStatus synchronization ownership
+    intent: network_contract_analysis
+    priority: high
+    expect:
+      subsystems: [inventory, gridinv, storage]
+      plugins: [inventory, gridinv, storage]
+      network_messages: [inventorySetPanelStatus]
+      files:
+        - plugins/inventory/sv_hooks.lua
+        - plugins/inventory/cl_hooks.lua
+        - plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua
+
+  - id: nut_inventory_init_payload
+    query: nutInventoryInit payload and inventory client initialization
+    intent: network_payload_analysis
+    priority: high
+    expect:
+      subsystems: [inventory]
+      plugins: [inventory]
+      network_messages: [nutInventoryInit, nutInventoryAdd, nutInventoryRemove, nutInventoryDelete]
+      files:
+        - gamemode/core/libs/item/cl_networking.lua
+        - gamemode/core/meta/inventory/cl_base_inventory.lua
+        - gamemode/core/meta/inventory/sv_base_inventory.lua
+
+  - id: gridinv_transfer_contract
+    query: grid inventory item transfer contract and validation
+    intent: transfer_contract_analysis
+    priority: high
+    expect:
+      subsystems: [gridinv, inventory]
+      plugins: [gridinv, inventory]
+      hooks: [CanItemBeTransfered, HandleItemTransferRequest, ItemTransfered]
+      network_messages: [nutTransferItem]
+      files:
+        - plugins/gridinv/sv_transfer.lua
+        - plugins/gridinv/sv_access_rules.lua
+        - plugins/inventory/sv_hooks.lua
+
+  - id: storage_open_sync_contract
+    query: storage open network sync and inventory panel interaction
+    intent: storage_sync_analysis
+    priority: high
+    expect:
+      subsystems: [storage, gridinv, inventory]
+      plugins: [storage, gridinv, inventory]
+      hooks: [StorageOpen]
+      network_messages: [nutStorageOpen, storageInventory, inventorySetPanelStatus]
+      files:
+        - plugins/storage/cl_networking.lua
+        - plugins/storage/sv_networking.lua
+        - plugins/gridinv/plugins/gridstorage/sh_plugin.lua
+
+  - id: save_load_inventory_storage_vendor
+    query: SaveData LoadData inventory storage vendor persistence ordering
+    intent: persistence_lifecycle_analysis
+    priority: high
+    expect:
+      subsystems: [storage, vendor, inventory]
+      plugins: [storage, vendor, inventory]
+      hooks: [SaveData, LoadData, PostLoadData, StorageRestored]
+      files:
+        - plugins/storage/sv_storage.lua
+        - plugins/vendor/sv_data.lua
+        - gamemode/core/hooks/sv_hooks.lua
+        - gamemode/core/sv_data.lua
+
+  - id: vendor_legacy_authority_check
+    query: which vendor files are legacy and which are authoritative after vendor rework
+    intent: legacy_authority_validation
+    priority: high
+    expect:
+      subsystems: [vendor]
+      plugins: [vendor]
+      hooks: [VendorOpened, PlayerAccessVendor, CanPlayerAccessVendor, CanPlayerTradeWithVendor]
+      files:
+        - plugins/vendor/cl_networking.lua
+        - plugins/vendor/sv_networking.lua
+        - plugins/vendor/sv_hooks.lua
+        - plugins/vendor/derma/cl_vendor.lua
+        - plugins/vendor/entities/entities/nut_vendor/init.lua
+
+  - id: ui_desync_client_inventory_panels
+    query: client inventory UI desync panel refresh stale item data
+    intent: ui_desync_analysis
+    priority: high
+    expect:
+      subsystems: [inventory, gridinv, vendor, storage]
+      plugins: [inventory, gridinv, vendor, storage]
+      hooks: [CreateNewInventoryPanel, CreateInventoryPanel, DrawItemDescription, ItemDataChanged]
+      network_messages: [inventorySetPanelStatus, inventoryOpen, storageInventory]
+      files:
+        - plugins/inventory/cl_hooks.lua
+        - gamemode/core/meta/inventory/cl_panel_extensions.lua
+        - plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua
+        - plugins/vendor/derma/cl_vendor.lua
+
+  - id: character_lifecycle_cross_realm
+    query: character lifecycle cross realm synchronization CharacterLoaded PlayerLoadedChar
+    intent: lifecycle_cross_realm_analysis
+    priority: high
+    expect:
+      subsystems: [multichar, inventory]
+      plugins: [multichar, inventory]
+      hooks: [CharacterLoaded, PrePlayerLoadedChar, PlayerLoadedChar, OnCharCreated]
+      network_messages: [nutCharChoose, nutCharCreate, nutCharList]
+      files:
+        - plugins/multichar/sv_networking.lua
+        - plugins/multichar/cl_networking.lua
+        - plugins/multichar/sh_plugin.lua
+
+  - id: pvp_fps_timer_hotspots
+    query: PVP FPS drops timer Think hooks entity simulation hotspots
+    intent: performance_topology_analysis
+    priority: medium
+    expect:
+      subsystems: [healthproblems, needs, lightitems, nextbots, ragdollinteraction]
+      plugins: [healthproblems, needs, lightitems, ragdollinteraction]
+      hooks: [Think, HUDPaint]
+      files:
+        - plugins/healthproblems/sv_hooks.lua
+        - plugins/needs/sv_hooks.lua
+        - plugins/lightitems/sv_hooks.lua
+        - plugins/ragdollinteraction/interaction/sv_hooks.lua
+
+  - id: dynamic_light_performance
+    query: dynamic light performance impact lightitems generators
+    intent: performance_subsystem_analysis
+    priority: medium
+    expect:
+      subsystems: [lightitems]
+      plugins: [lightitems]
+      files:
+        - plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+        - plugins/lightitems/sv_hooks.lua
+        - plugins/lightitems/cl_hooks.lua
+
+  - id: health_status_scheduler
+    query: health problems disease status timers scheduler player status tick
+    intent: scheduler_subsystem_analysis
+    priority: medium
+    expect:
+      subsystems: [healthproblems, needs]
+      plugins: [healthproblems, needs]
+      files:
+        - plugins/healthproblems/sv_hooks.lua
+        - plugins/needs/sv_hooks.lua
+
+  - id: ragdoll_inventory_interaction
+    query: ragdoll interaction inventory transfer character search coupling
+    intent: cross_subsystem_coupling
+    priority: medium
+    expect:
+      subsystems: [inventory, gridinv, ragdollinteraction]
+      plugins: [inventory, gridinv, ragdollinteraction, tying]
+      hooks: [DisplayInventoryNut1_1, DisplayInventoryNut1_1_beta, TransferInventory, CanItemBeTransfered]
+      files:
+        - plugins/ragdollinteraction/interaction/sv_hooks.lua
+        - plugins/ragdollinteraction/interaction/cl_hooks.lua
+        - plugins/tying/sh_charsearch.lua
+
+  - id: mining_smelter_storage_persistence
+    query: ore smelter storage persistence SaveData StorageEntityRemoved
+    intent: entity_persistence_analysis
+    priority: medium
+    expect:
+      subsystems: [mining, storage]
+      plugins: [mining, storage]
+      hooks: [SaveData, LoadData, StorageEntityRemoved]
+      files:
+        - plugins/mining/entities/entities/nut_ore_smelter/init.lua
+        - plugins/storage/sv_storage.lua
+
+  - id: network_receiver_without_sender
+    query: network messages with receiver without sender inventory vendor storage
+    intent: network_qa
+    priority: medium
+    expect:
+      subsystems: [inventory, vendor, storage]
+      network_messages: [inventorySetPanelStatus, nutVendorOpen, nutStorageOpen, nutTransferItem]
+
+  - id: raw_net_addnetworkstring_check
+    query: raw net messages missing util.AddNetworkString inventory vendor multichar
+    intent: network_qa
+    priority: medium
+    expect:
+      subsystems: [inventory, vendor, multichar]
+      network_messages: [nutInventoryInit, nutVendorOpen, nutCharChoose, nutCharCreate]
+
+  - id: timer_risk_persistence_network_inventory
+    query: suspicious timers persistence networking inventory mutation large entity scans
+    intent: timer_risk_analysis
+    priority: medium
+    expect:
+      subsystems: [inventory, storage, vendor]
+      hooks: [SaveData, LoadData]
+      files:
+        - plugins/inventory/sv_hooks.lua
+        - plugins/storage/sv_storage.lua
+        - plugins/vendor/cl_networking.lua
+
+  - id: plugin_coupling_inventory_vendor_storage
+    query: hidden coupling between inventory vendor storage gridinv
+    intent: topology_coupling_analysis
+    priority: high
+    expect:
+      subsystems: [inventory, vendor, storage, gridinv]
+      plugins: [inventory, vendor, storage, gridinv]
+      hooks: [CanItemBeTransfered, ItemTransfered, StorageOpen, VendorOpened]
+
+  - id: player_loaded_char_side_effects
+    query: PlayerLoadedChar side effects across health inventory armor biorezonance
+    intent: lifecycle_fanout_analysis
+    priority: medium
+    expect:
+      subsystems: [multichar, inventory, healthproblems, biorezonance]
+      plugins: [multichar, inventory, healthproblems, biorezonance, armor]
+      hooks: [PrePlayerLoadedChar, PlayerLoadedChar]
+      files:
+        - plugins/multichar/sv_networking.lua
+        - plugins/healthproblems/sv_hooks.lua
+
+  - id: inventory_database_ownership
+    query: character inventory ownership inv var database items CreateDefaultInventory
+    intent: ownership_model_analysis
+    priority: high
+    expect:
+      subsystems: [inventory, gridinv, multichar]
+      hooks: [CharacterPreSave, PlayerLoadedChar, PlayerLoadout]
+      files:
+        - gamemode/core/meta/sh_character.lua
+        - gamemode/core/meta/inventory/sv_base_inventory.lua
+        - gamemode/core/libs/character/sv_character.lua
+        - gamemode/core/hooks/sv_hooks.lua
+
+  - id: inventory_item_data_changed_sync
+    query: ItemDataChanged item data synchronization stale client item metadata
+    intent: item_metadata_sync_analysis
+    priority: high
+    expect:
+      subsystems: [inventory, vendor, gridinv]
+      hooks: [ItemDataChanged, DrawItemDescription, InventoryItemAdded, InventoryItemRemoved]
+      network_messages: [nutInventoryData, nutInventoryAdd, nutInventoryRemove]
+      files:
+        - gamemode/core/libs/item/cl_networking.lua
+        - plugins/inventory/cl_hooks.lua
+        - plugins/vendor/derma/cl_vendor.lua
+
+  - id: context_pack_inventory_vendor_bug
+    query: build context pack for vendor stale price label inventory UI bug
+    intent: context_pack_generation
+    priority: critical
+    expect:
+      subsystems: [vendor, inventory, gridinv, storage]
+      plugins: [vendor, inventory, gridinv, storage]
+      hooks: [VendorItemStockUpdated, ItemDataChanged, ItemTransfered, StorageOpen]
+      network_messages: [nutVendorTrade, inventorySetPanelStatus, storageInventory, nutTransferItem]

@@ -1,0 +1,1688 @@
+{
+  "metadata": {
+    "generated_at": "2026-05-29T01:23:35",
+    "queries_file": "config\\retrieval_queries.yaml",
+    "results_file": null,
+    "workspace": "E:\\signalis_ai",
+    "top_k": 10,
+    "pass_threshold": 0.6
+  },
+  "summary": {
+    "total": 25,
+    "passed": 0,
+    "average_score": 0.0
+  },
+  "scores": [
+    {
+      "id": "inv_desync_after_character_load",
+      "query": "inventory desync after character load",
+      "intent": "lifecycle_sync_investigation",
+      "priority": "critical",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "multichar"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "multichar"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "multichar"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "multichar"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "CharacterLoaded",
+            "PlayerLoadedChar",
+            "PlayerLoadout",
+            "PostPlayerLoadout"
+          ],
+          "matched": [],
+          "missing": [
+            "CharacterLoaded",
+            "PlayerLoadedChar",
+            "PlayerLoadout",
+            "PostPlayerLoadout"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "inventoryOpen",
+            "inventorySetPanelStatus",
+            "nutInventoryInit"
+          ],
+          "matched": [],
+          "missing": [
+            "inventoryOpen",
+            "inventorySetPanelStatus",
+            "nutInventoryInit"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/inventory/sh_plugin.lua",
+            "plugins/inventory/cl_hooks.lua",
+            "plugins/multichar/sv_networking.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/inventory/sh_plugin.lua",
+            "plugins/inventory/cl_hooks.lua",
+            "plugins/multichar/sv_networking.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "vendor_price_stale_after_purchase",
+      "query": "vendor price labels remain visible after buying item",
+      "intent": "ui_metadata_sync_investigation",
+      "priority": "critical",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "vendor",
+            "inventory",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "vendor",
+            "inventory",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "vendor",
+            "inventory",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "vendor",
+            "inventory",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "VendorItemStockUpdated",
+            "VendorMoneyUpdated",
+            "VendorOpened",
+            "CanPlayerTradeWithVendor"
+          ],
+          "matched": [],
+          "missing": [
+            "VendorItemStockUpdated",
+            "VendorMoneyUpdated",
+            "VendorOpened",
+            "CanPlayerTradeWithVendor"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutVendorTrade",
+            "nutVendorOpen",
+            "inventorySetPanelStatus"
+          ],
+          "matched": [],
+          "missing": [
+            "nutVendorTrade",
+            "nutVendorOpen",
+            "inventorySetPanelStatus"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/vendor/cl_networking.lua",
+            "plugins/vendor/derma/cl_vendor.lua",
+            "plugins/vendor/sv_hooks.lua",
+            "plugins/inventory/cl_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/vendor/cl_networking.lua",
+            "plugins/vendor/derma/cl_vendor.lua",
+            "plugins/vendor/sv_hooks.lua",
+            "plugins/inventory/cl_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "storage_refresh_clears_vendor_metadata",
+      "query": "moving item through storage clears stale vendor price label",
+      "intent": "cross_subsystem_ui_refresh",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "storage",
+            "inventory",
+            "vendor",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "storage",
+            "inventory",
+            "vendor",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "storage",
+            "inventory",
+            "vendor",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "storage",
+            "inventory",
+            "vendor",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "StorageOpen",
+            "ItemTransfered",
+            "InventoryItemAdded",
+            "InventoryItemRemoved"
+          ],
+          "matched": [],
+          "missing": [
+            "StorageOpen",
+            "ItemTransfered",
+            "InventoryItemAdded",
+            "InventoryItemRemoved"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "storageInventory",
+            "nutStorageOpen",
+            "nutTransferItem",
+            "inventorySetPanelStatus"
+          ],
+          "matched": [],
+          "missing": [
+            "storageInventory",
+            "nutStorageOpen",
+            "nutTransferItem",
+            "inventorySetPanelStatus"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/storage/cl_networking.lua",
+            "plugins/storage/sv_networking.lua",
+            "plugins/gridinv/sv_transfer.lua",
+            "plugins/inventory/cl_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/storage/cl_networking.lua",
+            "plugins/storage/sv_networking.lua",
+            "plugins/gridinv/sv_transfer.lua",
+            "plugins/inventory/cl_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "player_loadout_inventory_sync_boundary",
+      "query": "which lifecycle event should synchronize inventory UI after player loadout",
+      "intent": "lifecycle_boundary_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "multichar"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "multichar"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory",
+            "multichar"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "multichar"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "PlayerLoadedChar",
+            "PlayerLoadout",
+            "PostPlayerLoadout"
+          ],
+          "matched": [],
+          "missing": [
+            "PlayerLoadedChar",
+            "PlayerLoadout",
+            "PostPlayerLoadout"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "inventoryOpen",
+            "inventorySetPanelStatus",
+            "nutInventoryInit"
+          ],
+          "matched": [],
+          "missing": [
+            "inventoryOpen",
+            "inventorySetPanelStatus",
+            "nutInventoryInit"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "gamemode/core/hooks/sv_hooks.lua",
+            "plugins/inventory/sh_plugin.lua",
+            "plugins/multichar/sv_networking.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "gamemode/core/hooks/sv_hooks.lua",
+            "plugins/inventory/sh_plugin.lua",
+            "plugins/multichar/sv_networking.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "inventory_panel_status_sync",
+      "query": "inventorySetPanelStatus synchronization ownership",
+      "intent": "network_contract_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "inventorySetPanelStatus"
+          ],
+          "matched": [],
+          "missing": [
+            "inventorySetPanelStatus"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/inventory/sv_hooks.lua",
+            "plugins/inventory/cl_hooks.lua",
+            "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/inventory/sv_hooks.lua",
+            "plugins/inventory/cl_hooks.lua",
+            "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "nut_inventory_init_payload",
+      "query": "nutInventoryInit payload and inventory client initialization",
+      "intent": "network_payload_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutInventoryInit",
+            "nutInventoryAdd",
+            "nutInventoryRemove",
+            "nutInventoryDelete"
+          ],
+          "matched": [],
+          "missing": [
+            "nutInventoryInit",
+            "nutInventoryAdd",
+            "nutInventoryRemove",
+            "nutInventoryDelete"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "gamemode/core/libs/item/cl_networking.lua",
+            "gamemode/core/meta/inventory/cl_base_inventory.lua",
+            "gamemode/core/meta/inventory/sv_base_inventory.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "gamemode/core/libs/item/cl_networking.lua",
+            "gamemode/core/meta/inventory/cl_base_inventory.lua",
+            "gamemode/core/meta/inventory/sv_base_inventory.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "gridinv_transfer_contract",
+      "query": "grid inventory item transfer contract and validation",
+      "intent": "transfer_contract_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "gridinv",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "gridinv",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "gridinv",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "gridinv",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "CanItemBeTransfered",
+            "HandleItemTransferRequest",
+            "ItemTransfered"
+          ],
+          "matched": [],
+          "missing": [
+            "CanItemBeTransfered",
+            "HandleItemTransferRequest",
+            "ItemTransfered"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutTransferItem"
+          ],
+          "matched": [],
+          "missing": [
+            "nutTransferItem"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/gridinv/sv_transfer.lua",
+            "plugins/gridinv/sv_access_rules.lua",
+            "plugins/inventory/sv_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/gridinv/sv_transfer.lua",
+            "plugins/gridinv/sv_access_rules.lua",
+            "plugins/inventory/sv_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "storage_open_sync_contract",
+      "query": "storage open network sync and inventory panel interaction",
+      "intent": "storage_sync_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "storage",
+            "gridinv",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "storage",
+            "gridinv",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "storage",
+            "gridinv",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "storage",
+            "gridinv",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "StorageOpen"
+          ],
+          "matched": [],
+          "missing": [
+            "StorageOpen"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutStorageOpen",
+            "storageInventory",
+            "inventorySetPanelStatus"
+          ],
+          "matched": [],
+          "missing": [
+            "nutStorageOpen",
+            "storageInventory",
+            "inventorySetPanelStatus"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/storage/cl_networking.lua",
+            "plugins/storage/sv_networking.lua",
+            "plugins/gridinv/plugins/gridstorage/sh_plugin.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/storage/cl_networking.lua",
+            "plugins/storage/sv_networking.lua",
+            "plugins/gridinv/plugins/gridstorage/sh_plugin.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "save_load_inventory_storage_vendor",
+      "query": "SaveData LoadData inventory storage vendor persistence ordering",
+      "intent": "persistence_lifecycle_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "storage",
+            "vendor",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "storage",
+            "vendor",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "storage",
+            "vendor",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "storage",
+            "vendor",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "SaveData",
+            "LoadData",
+            "PostLoadData",
+            "StorageRestored"
+          ],
+          "matched": [],
+          "missing": [
+            "SaveData",
+            "LoadData",
+            "PostLoadData",
+            "StorageRestored"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/storage/sv_storage.lua",
+            "plugins/vendor/sv_data.lua",
+            "gamemode/core/hooks/sv_hooks.lua",
+            "gamemode/core/sv_data.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/storage/sv_storage.lua",
+            "plugins/vendor/sv_data.lua",
+            "gamemode/core/hooks/sv_hooks.lua",
+            "gamemode/core/sv_data.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "vendor_legacy_authority_check",
+      "query": "which vendor files are legacy and which are authoritative after vendor rework",
+      "intent": "legacy_authority_validation",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "vendor"
+          ],
+          "matched": [],
+          "missing": [
+            "vendor"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "vendor"
+          ],
+          "matched": [],
+          "missing": [
+            "vendor"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "VendorOpened",
+            "PlayerAccessVendor",
+            "CanPlayerAccessVendor",
+            "CanPlayerTradeWithVendor"
+          ],
+          "matched": [],
+          "missing": [
+            "VendorOpened",
+            "PlayerAccessVendor",
+            "CanPlayerAccessVendor",
+            "CanPlayerTradeWithVendor"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/vendor/cl_networking.lua",
+            "plugins/vendor/sv_networking.lua",
+            "plugins/vendor/sv_hooks.lua",
+            "plugins/vendor/derma/cl_vendor.lua",
+            "plugins/vendor/entities/entities/nut_vendor/init.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/vendor/cl_networking.lua",
+            "plugins/vendor/sv_networking.lua",
+            "plugins/vendor/sv_hooks.lua",
+            "plugins/vendor/derma/cl_vendor.lua",
+            "plugins/vendor/entities/entities/nut_vendor/init.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "ui_desync_client_inventory_panels",
+      "query": "client inventory UI desync panel refresh stale item data",
+      "intent": "ui_desync_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "vendor",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "vendor",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "vendor",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "vendor",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "CreateNewInventoryPanel",
+            "CreateInventoryPanel",
+            "DrawItemDescription",
+            "ItemDataChanged"
+          ],
+          "matched": [],
+          "missing": [
+            "CreateNewInventoryPanel",
+            "CreateInventoryPanel",
+            "DrawItemDescription",
+            "ItemDataChanged"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "inventorySetPanelStatus",
+            "inventoryOpen",
+            "storageInventory"
+          ],
+          "matched": [],
+          "missing": [
+            "inventorySetPanelStatus",
+            "inventoryOpen",
+            "storageInventory"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/inventory/cl_hooks.lua",
+            "gamemode/core/meta/inventory/cl_panel_extensions.lua",
+            "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+            "plugins/vendor/derma/cl_vendor.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/inventory/cl_hooks.lua",
+            "gamemode/core/meta/inventory/cl_panel_extensions.lua",
+            "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+            "plugins/vendor/derma/cl_vendor.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "character_lifecycle_cross_realm",
+      "query": "character lifecycle cross realm synchronization CharacterLoaded PlayerLoadedChar",
+      "intent": "lifecycle_cross_realm_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "multichar",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "multichar",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "multichar",
+            "inventory"
+          ],
+          "matched": [],
+          "missing": [
+            "multichar",
+            "inventory"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "CharacterLoaded",
+            "PrePlayerLoadedChar",
+            "PlayerLoadedChar",
+            "OnCharCreated"
+          ],
+          "matched": [],
+          "missing": [
+            "CharacterLoaded",
+            "PrePlayerLoadedChar",
+            "PlayerLoadedChar",
+            "OnCharCreated"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutCharChoose",
+            "nutCharCreate",
+            "nutCharList"
+          ],
+          "matched": [],
+          "missing": [
+            "nutCharChoose",
+            "nutCharCreate",
+            "nutCharList"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/multichar/sv_networking.lua",
+            "plugins/multichar/cl_networking.lua",
+            "plugins/multichar/sh_plugin.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/multichar/sv_networking.lua",
+            "plugins/multichar/cl_networking.lua",
+            "plugins/multichar/sh_plugin.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "pvp_fps_timer_hotspots",
+      "query": "PVP FPS drops timer Think hooks entity simulation hotspots",
+      "intent": "performance_topology_analysis",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "healthproblems",
+            "needs",
+            "lightitems",
+            "nextbots",
+            "ragdollinteraction"
+          ],
+          "matched": [],
+          "missing": [
+            "healthproblems",
+            "needs",
+            "lightitems",
+            "nextbots",
+            "ragdollinteraction"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "healthproblems",
+            "needs",
+            "lightitems",
+            "ragdollinteraction"
+          ],
+          "matched": [],
+          "missing": [
+            "healthproblems",
+            "needs",
+            "lightitems",
+            "ragdollinteraction"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "Think",
+            "HUDPaint"
+          ],
+          "matched": [],
+          "missing": [
+            "Think",
+            "HUDPaint"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/healthproblems/sv_hooks.lua",
+            "plugins/needs/sv_hooks.lua",
+            "plugins/lightitems/sv_hooks.lua",
+            "plugins/ragdollinteraction/interaction/sv_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/healthproblems/sv_hooks.lua",
+            "plugins/needs/sv_hooks.lua",
+            "plugins/lightitems/sv_hooks.lua",
+            "plugins/ragdollinteraction/interaction/sv_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "dynamic_light_performance",
+      "query": "dynamic light performance impact lightitems generators",
+      "intent": "performance_subsystem_analysis",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "lightitems"
+          ],
+          "matched": [],
+          "missing": [
+            "lightitems"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "lightitems"
+          ],
+          "matched": [],
+          "missing": [
+            "lightitems"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+            "plugins/lightitems/sv_hooks.lua",
+            "plugins/lightitems/cl_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+            "plugins/lightitems/sv_hooks.lua",
+            "plugins/lightitems/cl_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "health_status_scheduler",
+      "query": "health problems disease status timers scheduler player status tick",
+      "intent": "scheduler_subsystem_analysis",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "healthproblems",
+            "needs"
+          ],
+          "matched": [],
+          "missing": [
+            "healthproblems",
+            "needs"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "healthproblems",
+            "needs"
+          ],
+          "matched": [],
+          "missing": [
+            "healthproblems",
+            "needs"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/healthproblems/sv_hooks.lua",
+            "plugins/needs/sv_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/healthproblems/sv_hooks.lua",
+            "plugins/needs/sv_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "ragdoll_inventory_interaction",
+      "query": "ragdoll interaction inventory transfer character search coupling",
+      "intent": "cross_subsystem_coupling",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "ragdollinteraction"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "ragdollinteraction"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "ragdollinteraction",
+            "tying"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "ragdollinteraction",
+            "tying"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "DisplayInventoryNut1_1",
+            "DisplayInventoryNut1_1_beta",
+            "TransferInventory",
+            "CanItemBeTransfered"
+          ],
+          "matched": [],
+          "missing": [
+            "DisplayInventoryNut1_1",
+            "DisplayInventoryNut1_1_beta",
+            "TransferInventory",
+            "CanItemBeTransfered"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/ragdollinteraction/interaction/sv_hooks.lua",
+            "plugins/ragdollinteraction/interaction/cl_hooks.lua",
+            "plugins/tying/sh_charsearch.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/ragdollinteraction/interaction/sv_hooks.lua",
+            "plugins/ragdollinteraction/interaction/cl_hooks.lua",
+            "plugins/tying/sh_charsearch.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "mining_smelter_storage_persistence",
+      "query": "ore smelter storage persistence SaveData StorageEntityRemoved",
+      "intent": "entity_persistence_analysis",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "mining",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "mining",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "mining",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "mining",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "SaveData",
+            "LoadData",
+            "StorageEntityRemoved"
+          ],
+          "matched": [],
+          "missing": [
+            "SaveData",
+            "LoadData",
+            "StorageEntityRemoved"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/mining/entities/entities/nut_ore_smelter/init.lua",
+            "plugins/storage/sv_storage.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/mining/entities/entities/nut_ore_smelter/init.lua",
+            "plugins/storage/sv_storage.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "network_receiver_without_sender",
+      "query": "network messages with receiver without sender inventory vendor storage",
+      "intent": "network_qa",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "vendor",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "vendor",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "inventorySetPanelStatus",
+            "nutVendorOpen",
+            "nutStorageOpen",
+            "nutTransferItem"
+          ],
+          "matched": [],
+          "missing": [
+            "inventorySetPanelStatus",
+            "nutVendorOpen",
+            "nutStorageOpen",
+            "nutTransferItem"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "raw_net_addnetworkstring_check",
+      "query": "raw net messages missing util.AddNetworkString inventory vendor multichar",
+      "intent": "network_qa",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "vendor",
+            "multichar"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "vendor",
+            "multichar"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutInventoryInit",
+            "nutVendorOpen",
+            "nutCharChoose",
+            "nutCharCreate"
+          ],
+          "matched": [],
+          "missing": [
+            "nutInventoryInit",
+            "nutVendorOpen",
+            "nutCharChoose",
+            "nutCharCreate"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "timer_risk_persistence_network_inventory",
+      "query": "suspicious timers persistence networking inventory mutation large entity scans",
+      "intent": "timer_risk_analysis",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "storage",
+            "vendor"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "storage",
+            "vendor"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "SaveData",
+            "LoadData"
+          ],
+          "matched": [],
+          "missing": [
+            "SaveData",
+            "LoadData"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/inventory/sv_hooks.lua",
+            "plugins/storage/sv_storage.lua",
+            "plugins/vendor/cl_networking.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/inventory/sv_hooks.lua",
+            "plugins/storage/sv_storage.lua",
+            "plugins/vendor/cl_networking.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "plugin_coupling_inventory_vendor_storage",
+      "query": "hidden coupling between inventory vendor storage gridinv",
+      "intent": "topology_coupling_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "vendor",
+            "storage",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "vendor",
+            "storage",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "inventory",
+            "vendor",
+            "storage",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "vendor",
+            "storage",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "CanItemBeTransfered",
+            "ItemTransfered",
+            "StorageOpen",
+            "VendorOpened"
+          ],
+          "matched": [],
+          "missing": [
+            "CanItemBeTransfered",
+            "ItemTransfered",
+            "StorageOpen",
+            "VendorOpened"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "player_loaded_char_side_effects",
+      "query": "PlayerLoadedChar side effects across health inventory armor biorezonance",
+      "intent": "lifecycle_fanout_analysis",
+      "priority": "medium",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "multichar",
+            "inventory",
+            "healthproblems",
+            "biorezonance"
+          ],
+          "matched": [],
+          "missing": [
+            "multichar",
+            "inventory",
+            "healthproblems",
+            "biorezonance"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "multichar",
+            "inventory",
+            "healthproblems",
+            "biorezonance",
+            "armor"
+          ],
+          "matched": [],
+          "missing": [
+            "multichar",
+            "inventory",
+            "healthproblems",
+            "biorezonance",
+            "armor"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "PrePlayerLoadedChar",
+            "PlayerLoadedChar"
+          ],
+          "matched": [],
+          "missing": [
+            "PrePlayerLoadedChar",
+            "PlayerLoadedChar"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "plugins/multichar/sv_networking.lua",
+            "plugins/healthproblems/sv_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "plugins/multichar/sv_networking.lua",
+            "plugins/healthproblems/sv_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "inventory_database_ownership",
+      "query": "character inventory ownership inv var database items CreateDefaultInventory",
+      "intent": "ownership_model_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "gridinv",
+            "multichar"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "gridinv",
+            "multichar"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "CharacterPreSave",
+            "PlayerLoadedChar",
+            "PlayerLoadout"
+          ],
+          "matched": [],
+          "missing": [
+            "CharacterPreSave",
+            "PlayerLoadedChar",
+            "PlayerLoadout"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "gamemode/core/meta/sh_character.lua",
+            "gamemode/core/meta/inventory/sv_base_inventory.lua",
+            "gamemode/core/libs/character/sv_character.lua",
+            "gamemode/core/hooks/sv_hooks.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "gamemode/core/meta/sh_character.lua",
+            "gamemode/core/meta/inventory/sv_base_inventory.lua",
+            "gamemode/core/libs/character/sv_character.lua",
+            "gamemode/core/hooks/sv_hooks.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "inventory_item_data_changed_sync",
+      "query": "ItemDataChanged item data synchronization stale client item metadata",
+      "intent": "item_metadata_sync_analysis",
+      "priority": "high",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "inventory",
+            "vendor",
+            "gridinv"
+          ],
+          "matched": [],
+          "missing": [
+            "inventory",
+            "vendor",
+            "gridinv"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "ItemDataChanged",
+            "DrawItemDescription",
+            "InventoryItemAdded",
+            "InventoryItemRemoved"
+          ],
+          "matched": [],
+          "missing": [
+            "ItemDataChanged",
+            "DrawItemDescription",
+            "InventoryItemAdded",
+            "InventoryItemRemoved"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutInventoryData",
+            "nutInventoryAdd",
+            "nutInventoryRemove"
+          ],
+          "matched": [],
+          "missing": [
+            "nutInventoryData",
+            "nutInventoryAdd",
+            "nutInventoryRemove"
+          ],
+          "score": 0.0
+        },
+        "files": {
+          "expected": [
+            "gamemode/core/libs/item/cl_networking.lua",
+            "plugins/inventory/cl_hooks.lua",
+            "plugins/vendor/derma/cl_vendor.lua"
+          ],
+          "matched": [],
+          "missing": [
+            "gamemode/core/libs/item/cl_networking.lua",
+            "plugins/inventory/cl_hooks.lua",
+            "plugins/vendor/derma/cl_vendor.lua"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    },
+    {
+      "id": "context_pack_inventory_vendor_bug",
+      "query": "build context pack for vendor stale price label inventory UI bug",
+      "intent": "context_pack_generation",
+      "priority": "critical",
+      "top_k": 10,
+      "categories": {
+        "subsystems": {
+          "expected": [
+            "vendor",
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "vendor",
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "plugins": {
+          "expected": [
+            "vendor",
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "matched": [],
+          "missing": [
+            "vendor",
+            "inventory",
+            "gridinv",
+            "storage"
+          ],
+          "score": 0.0
+        },
+        "hooks": {
+          "expected": [
+            "VendorItemStockUpdated",
+            "ItemDataChanged",
+            "ItemTransfered",
+            "StorageOpen"
+          ],
+          "matched": [],
+          "missing": [
+            "VendorItemStockUpdated",
+            "ItemDataChanged",
+            "ItemTransfered",
+            "StorageOpen"
+          ],
+          "score": 0.0
+        },
+        "network_messages": {
+          "expected": [
+            "nutVendorTrade",
+            "inventorySetPanelStatus",
+            "storageInventory",
+            "nutTransferItem"
+          ],
+          "matched": [],
+          "missing": [
+            "nutVendorTrade",
+            "inventorySetPanelStatus",
+            "storageInventory",
+            "nutTransferItem"
+          ],
+          "score": 0.0
+        }
+      },
+      "overall": 0.0,
+      "passed": false
+    }
+  ]
+}

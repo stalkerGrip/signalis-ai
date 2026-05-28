@@ -2,7 +2,10 @@
 
 ## Current Phase
 
-`Retrieval-Guided Architecture Intelligence`
+Retrieval-Guided Architecture Intelligence
+
+Current Sprint:
+Investigation Pipeline V1
 
 The extraction and normalization bootstrap is complete. The current goal is to use deterministic semantic artifacts, Qdrant retrieval, and external architect reasoning to answer architecture questions about the SIGNALIS NutScript framework.
 
