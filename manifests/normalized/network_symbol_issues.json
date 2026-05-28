@@ -1,0 +1,6863 @@
+[
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "schema\\sh_schema.lua",
+    "line": 155,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"cDisp\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 841,
+    "manifest_message": "v",
+    "corrected_message_expr": "\"hideAdd\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 74,
+    "manifest_message": "v",
+    "corrected_message_expr": "\"rezonatorAdd\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 116,
+    "manifest_message": "v",
+    "corrected_message_expr": "\"rezonatorAdd\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 69,
+    "manifest_message": "cPlayerActive",
+    "corrected_message_expr": "entity",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 69,
+    "message": "entity",
+    "message_expr": "entity",
+    "quality": "suspicious",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "message_looks_like_recipient_or_placeholder",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 77,
+    "manifest_message": "cPlayerDisable",
+    "corrected_message_expr": "entity",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 77,
+    "message": "entity",
+    "message_expr": "entity",
+    "quality": "suspicious",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "message_looks_like_recipient_or_placeholder",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 91,
+    "manifest_message": "cPlayerVolumeChanged",
+    "corrected_message_expr": "entity",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 91,
+    "message": "entity",
+    "message_expr": "entity",
+    "quality": "suspicious",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "message_looks_like_recipient_or_placeholder",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 157,
+    "manifest_message": "cPlayerActive",
+    "corrected_message_expr": "entity",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 157,
+    "message": "entity",
+    "message_expr": "entity",
+    "quality": "suspicious",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "message_looks_like_recipient_or_placeholder",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 165,
+    "manifest_message": "cPlayerDisable",
+    "corrected_message_expr": "entity",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 165,
+    "message": "entity",
+    "message_expr": "entity",
+    "quality": "suspicious",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "message_looks_like_recipient_or_placeholder",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 42,
+    "manifest_message": "k",
+    "corrected_message_expr": "\"workbenchInvClose\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 171,
+    "manifest_message": "v",
+    "corrected_message_expr": "\"compSyncWorkShift\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 183,
+    "manifest_message": "v",
+    "corrected_message_expr": "\"compSyncWorkShift\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 628,
+    "manifest_message": "ents.GetByIndex",
+    "corrected_message_expr": "\"diseasesStatusInterfaceSync\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 654,
+    "manifest_message": "ents.GetByIndex",
+    "corrected_message_expr": "\"diseasesStatusInterfaceSync\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 161,
+    "manifest_message": "removeReceiverFromVendor",
+    "corrected_message_expr": "\"removeReceiverFromVendor\"",
+    "layout": "client_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 246,
+    "message": "hookName",
+    "message_expr": "hookName",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "client_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 254,
+    "message": "hookName",
+    "message_expr": "hookName",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 253,
+    "manifest_message": "targets",
+    "corrected_message_expr": "\"Topology_BatchStart\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 267,
+    "manifest_message": "targets",
+    "corrected_message_expr": "\"Topology_BatchChunk\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 276,
+    "manifest_message": "targets",
+    "corrected_message_expr": "\"Topology_BatchEnd\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 283,
+    "message": "mnhr",
+    "message_expr": "mnhr",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_client_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 294,
+    "message": "mnhr",
+    "message_expr": "mnhr",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 38,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"actBar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 42,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"actBar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 43,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"inventoryCloseOnAction\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 50,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"actBar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 643,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"charTraits\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 26,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 268,
+    "manifest_message": "inventoryTargetUpdBg",
+    "corrected_message_expr": "\"inventoryTargetUpdBg\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 269,
+    "manifest_message": "inventoryTargetUpdSkin",
+    "corrected_message_expr": "\"inventoryTargetUpdSkin\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 75,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 135,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"cOpen\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 75,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 62,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 115,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 98,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"compSendUserCardAccess\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 108,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 192,
+    "manifest_message": "self.user",
+    "corrected_message_expr": "callbackHook",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 192,
+    "message": "callbackHook",
+    "message_expr": "callbackHook",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 326,
+    "manifest_message": "self.user",
+    "corrected_message_expr": "\"setUpLocksView\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 85,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 49,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 94,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 95,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 53,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"elPanelSendLamps\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 54,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 60,
+    "message": "hookName",
+    "message_expr": "hookName",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\init.lua",
+    "line": 20,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 150,
+    "message": "hookName",
+    "message_expr": "hookName",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 307,
+    "manifest_message": "cookingpotGetCompositionClient",
+    "corrected_message_expr": "\"cookingpotGetCompositionClient\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 320,
+    "manifest_message": "cookingpotUpdateCompositionClient",
+    "corrected_message_expr": "\"cookingpotUpdateCompositionClient\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 75,
+    "manifest_message": "kettlePartAddClient",
+    "corrected_message_expr": "\"kettlePartAddClient\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 95,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"foodReadyPartAddClient\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 25,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"foodPartUseClient\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 41,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"foodPartAddClient\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 70,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"radioAdjust\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 65,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"radioAdjust\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\radio\\entities\\entities\\nut_radio_station\\init.lua",
+    "line": 26,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 84,
+    "manifest_message": "diseasesStatusInterfaceTargetGetData",
+    "corrected_message_expr": "\"diseasesStatusInterfaceTargetGetData\"",
+    "layout": "client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 211,
+    "manifest_message": "lootOpenClient",
+    "corrected_message_expr": "\"lootOpenClient\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 19,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"nutViewPaper\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 35,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"nutViewPaper\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 366,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"voicePlay\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 368,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"voicePlay\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 376,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"voicePlay\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\3dpanel.lua",
+    "line": 33,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"panel\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\3dpanel.lua",
+    "line": 53,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"panel\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\3dtext.lua",
+    "line": 31,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"txt\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\3dtext.lua",
+    "line": 51,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"txt\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\mapscene.lua",
+    "line": 160,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"mapScn\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\mapscene.lua",
+    "line": 211,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"mapScnDel\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 40,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"cfgSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 381,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"seqSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 404,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"seqSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 415,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"seqSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 184,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"charSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 301,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"charSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 347,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"charData\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 395,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"charVar\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_class.lua",
+    "line": 164,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"classUpdate\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sh_log.lua",
+    "line": 94,
+    "manifest_message": "admin",
+    "corrected_message_expr": "\"nutLogStream\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 29,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"gVar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 36,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"gVar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 40,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"nVar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 47,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"nVar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 52,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"nDel\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 81,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"nLcl\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\sv_player.lua",
+    "line": 57,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"nutData\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 73,
+    "manifest_message": "self.player",
+    "corrected_message_expr": "\"charInfo\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 91,
+    "manifest_message": "receiver",
+    "corrected_message_expr": "\"charInfo\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 181,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"charDel\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 244,
+    "manifest_message": "self.player",
+    "corrected_message_expr": "\"charSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 253,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"charSet\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\sh_player.lua",
+    "line": 43,
+    "manifest_message": "self",
+    "corrected_message_expr": "self:GetPos()",
+    "layout": "inferred_client_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "gamemode\\core\\meta\\sh_player.lua",
+    "line": 43,
+    "message": "self:GetPos()",
+    "message_expr": "self:GetPos()",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message",
+      "expression_like_message"
+    ],
+    "layout": "inferred_client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 32,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"actBar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 37,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"actBar\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 38,
+    "manifest_message": "self",
+    "corrected_message_expr": "\"inventoryCloseOnAction\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 152,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"charDel\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 193,
+    "manifest_message": "nil",
+    "corrected_message_expr": "\"charDel\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\libs\\item\\sh_item_functions.lua",
+    "line": 80,
+    "manifest_message": "item.player",
+    "corrected_message_expr": "\"itemSplitDrop\"",
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 54,
+    "message": "name",
+    "message_expr": "name",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_server_netstream_start"
+  },
+  {
+    "kind": "netstream_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 132,
+    "message": "name",
+    "message_expr": "name",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ],
+    "layout": "inferred_client_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 172,
+    "manifest_message": "receivers",
+    "corrected_message_expr": "\"invData\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 228,
+    "manifest_message": "receivers",
+    "corrected_message_expr": "\"invQuantity\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 101,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 28,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"sendVendorInfo\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 31,
+    "manifest_message": "activator",
+    "corrected_message_expr": "\"interfaceTurnOn\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "corrected_recipient_misread_as_message",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 70,
+    "manifest_message": "v",
+    "corrected_message_expr": "\"setUpTargetMoney\"",
+    "layout": "server_netstream_start"
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 96,
+    "message": "nut_DisplaySpawnPoints",
+    "message_expr": "nut_DisplaySpawnPoints",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\cl_hooks.lua",
+    "line": 3,
+    "message": "hideAdd",
+    "message_expr": "hideAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 587,
+    "message": "createCustomItem",
+    "message_expr": "createCustomItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 9,
+    "message": "eventpointSetSpawn",
+    "message_expr": "eventpointSetSpawn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 16,
+    "message": "eventpointSetUnbanTime",
+    "message_expr": "eventpointSetUnbanTime",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 23,
+    "message": "eventpointSpawnMenuSwitch",
+    "message_expr": "eventpointSpawnMenuSwitch",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 30,
+    "message": "eventpointSpawnItem",
+    "message_expr": "eventpointSpawnItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 37,
+    "message": "eventpointSpawn300Mid",
+    "message_expr": "eventpointSpawn300Mid",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 43,
+    "message": "eventpointSpawn300Lrg",
+    "message_expr": "eventpointSpawn300Lrg",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 3,
+    "message": "rezonatorAdd",
+    "message_expr": "rezonatorAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 9,
+    "message": "rezonatorRemove",
+    "message_expr": "rezonatorRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 354,
+    "message": "gasMaskOn",
+    "message_expr": "gasMaskOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 367,
+    "message": "gasMaskOff",
+    "message_expr": "gasMaskOff",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 380,
+    "message": "startO2Hud",
+    "message_expr": "startO2Hud",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 421,
+    "message": "endO2Hud",
+    "message_expr": "endO2Hud",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 152,
+    "message": "oxystantionSelfFill",
+    "message_expr": "oxystantionSelfFill",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 159,
+    "message": "oxystantionTankFill",
+    "message_expr": "oxystantionTankFill",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 166,
+    "message": "oxystantionL1Fill",
+    "message_expr": "oxystantionL1Fill",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 173,
+    "message": "setBioSwep",
+    "message_expr": "setBioSwep",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 119,
+    "message": "cOpen",
+    "message_expr": "cOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\crafting\\cl_hooks.lua",
+    "line": 3,
+    "message": "workbenchInvClose",
+    "message_expr": "workbenchInvClose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\crafting\\sv_hooks.lua",
+    "line": 52,
+    "message": "workbenchInvOpen",
+    "message_expr": "workbenchInvOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\crafting\\sv_hooks.lua",
+    "line": 59,
+    "message": "pressingSetProgram",
+    "message_expr": "pressingSetProgram",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\farming\\sh_plugin.lua",
+    "line": 10,
+    "message": "fpotHarvest",
+    "message_expr": "fpotHarvest",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 19,
+    "message": "interfaceTurnOn",
+    "message_expr": "interfaceTurnOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 26,
+    "message": "setUpUserCard",
+    "message_expr": "setUpUserCard",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 33,
+    "message": "setUpReplicastatus",
+    "message_expr": "setUpReplicastatus",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 40,
+    "message": "setUpPointsUpdate",
+    "message_expr": "setUpPointsUpdate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 47,
+    "message": "setUpLocksView",
+    "message_expr": "setUpLocksView",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 54,
+    "message": "compSendUserCardAccess",
+    "message_expr": "compSendUserCardAccess",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 66,
+    "message": "compSyncWorkShift",
+    "message_expr": "compSyncWorkShift",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 78,
+    "message": "setUpLocksInfo",
+    "message_expr": "setUpLocksInfo",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 85,
+    "message": "doorInterfaceTurnOn",
+    "message_expr": "doorInterfaceTurnOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 151,
+    "message": "searchReplica",
+    "message_expr": "searchReplica",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 158,
+    "message": "logOut",
+    "message_expr": "logOut",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 165,
+    "message": "compAddShiftSv",
+    "message_expr": "compAddShiftSv",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 175,
+    "message": "remAddShiftSv",
+    "message_expr": "remAddShiftSv",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 188,
+    "message": "lockResetPassword",
+    "message_expr": "lockResetPassword",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 195,
+    "message": "lockCorrectPass",
+    "message_expr": "lockCorrectPass",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 202,
+    "message": "lockUpdateAccess",
+    "message_expr": "lockUpdateAccess",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 209,
+    "message": "setUpCard",
+    "message_expr": "setUpCard",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 216,
+    "message": "setUpCardAccess",
+    "message_expr": "setUpCardAccess",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 223,
+    "message": "getUserCardAccess",
+    "message_expr": "getUserCardAccess",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 230,
+    "message": "setUpCardBodyGroup",
+    "message_expr": "setUpCardBodyGroup",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 237,
+    "message": "setCharPoints",
+    "message_expr": "setCharPoints",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 244,
+    "message": "getLocksView",
+    "message_expr": "getLocksView",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 251,
+    "message": "getLockInfo",
+    "message_expr": "getLockInfo",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 258,
+    "message": "lockNameChange",
+    "message_expr": "lockNameChange",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 265,
+    "message": "switchLockState",
+    "message_expr": "switchLockState",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 272,
+    "message": "doorLockSwitchState",
+    "message_expr": "doorLockSwitchState",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 280,
+    "message": "doorLockResetPassword",
+    "message_expr": "doorLockResetPassword",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 299,
+    "message": "doorLockUpdateAccess",
+    "message_expr": "doorLockUpdateAccess",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 11,
+    "message": "diseasesAddBlindness",
+    "message_expr": "diseasesAddBlindness",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 19,
+    "message": "diseasesRemoveBlindness",
+    "message_expr": "diseasesRemoveBlindness",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 25,
+    "message": "diseasesSelectWeapon",
+    "message_expr": "diseasesSelectWeapon",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 34,
+    "message": "diseasesStatusInterfaceOpen",
+    "message_expr": "diseasesStatusInterfaceOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 45,
+    "message": "diseasesStatusInterfaceSync",
+    "message_expr": "diseasesStatusInterfaceSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 229,
+    "message": "diseasesHandleSwepSelect",
+    "message_expr": "diseasesHandleSwepSelect",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 250,
+    "message": "diseasesStatusInterfaceClose",
+    "message_expr": "diseasesStatusInterfaceClose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 268,
+    "message": "diseasesUseItem",
+    "message_expr": "diseasesUseItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 288,
+    "message": "diseasesStatusInterfaceTargetGetData",
+    "message_expr": "diseasesStatusInterfaceTargetGetData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 434,
+    "message": "hudAddStatusIcon",
+    "message_expr": "hudAddStatusIcon",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 465,
+    "message": "hudHandleStatusIconCount",
+    "message_expr": "hudHandleStatusIconCount",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 484,
+    "message": "hudRemoveStatusIcon",
+    "message_expr": "hudRemoveStatusIcon",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 507,
+    "message": "hudRemoveAllStatusIcons",
+    "message_expr": "hudRemoveAllStatusIcons",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 112,
+    "message": "inventoryOpen",
+    "message_expr": "inventoryOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 123,
+    "message": "vendorTradeInterface",
+    "message_expr": "vendorTradeInterface",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 193,
+    "message": "itemSplitTake",
+    "message_expr": "itemSplitTake",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 222,
+    "message": "setUpTargetMoney",
+    "message_expr": "setUpTargetMoney",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 259,
+    "message": "foodPartUseClient",
+    "message_expr": "foodPartUseClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 261,
+    "message": "foodPartAddClient",
+    "message_expr": "foodPartAddClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 263,
+    "message": "foodReadyPartAddClient",
+    "message_expr": "foodReadyPartAddClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 265,
+    "message": "kettlePartAddClient",
+    "message_expr": "kettlePartAddClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 267,
+    "message": "itemSplitDrop",
+    "message_expr": "itemSplitDrop",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 269,
+    "message": "inventoryUpdBg",
+    "message_expr": "inventoryUpdBg",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 282,
+    "message": "inventoryUpdSkin",
+    "message_expr": "inventoryUpdSkin",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 290,
+    "message": "inventoryTargetUpdBg",
+    "message_expr": "inventoryTargetUpdBg",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 304,
+    "message": "inventoryTargetUpdSkin",
+    "message_expr": "inventoryTargetUpdSkin",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 313,
+    "message": "inventoryCloseOnAction",
+    "message_expr": "inventoryCloseOnAction",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 312,
+    "message": "invsRuleSet",
+    "message_expr": "invsRuleSet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 334,
+    "message": "itemSplitAdd",
+    "message_expr": "itemSplitAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 501,
+    "message": "itemSplitDrop",
+    "message_expr": "itemSplitDrop",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 73,
+    "message": "inventoryPackAmmo",
+    "message_expr": "inventoryPackAmmo",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 118,
+    "message": "inventorySetPanelStatus",
+    "message_expr": "inventorySetPanelStatus",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 429,
+    "message": "elPanelSendLamps",
+    "message_expr": "elPanelSendLamps",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 436,
+    "message": "lampLightUpdate",
+    "message_expr": "lampLightUpdate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 447,
+    "message": "lightItemGensViewShow",
+    "message_expr": "lightItemGensViewShow",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 471,
+    "message": "Topology_BatchStart",
+    "message_expr": "Topology_BatchStart",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 482,
+    "message": "Topology_BatchChunk",
+    "message_expr": "Topology_BatchChunk",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 492,
+    "message": "Topology_BatchEnd",
+    "message_expr": "Topology_BatchEnd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 15,
+    "message": "elPanelTryFix",
+    "message_expr": "elPanelTryFix",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 22,
+    "message": "lightItemSwitchPower",
+    "message_expr": "lightItemSwitchPower",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 29,
+    "message": "lampManage",
+    "message_expr": "lampManage",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 43,
+    "message": "lightItemTakeOff",
+    "message_expr": "lightItemTakeOff",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 50,
+    "message": "lampSetPower",
+    "message_expr": "lampSetPower",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 57,
+    "message": "elPanelStartFix",
+    "message_expr": "elPanelStartFix",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 64,
+    "message": "elPanelRelaySetUp",
+    "message_expr": "elPanelRelaySetUp",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 71,
+    "message": "lightItemGensView",
+    "message_expr": "lightItemGensView",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 78,
+    "message": "elPanelAttachToGen",
+    "message_expr": "elPanelAttachToGen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 86,
+    "message": "genGroupToGen",
+    "message_expr": "genGroupToGen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 94,
+    "message": "genQuickCheck",
+    "message_expr": "genQuickCheck",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 101,
+    "message": "genCheck",
+    "message_expr": "genCheck",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 108,
+    "message": "genRepair",
+    "message_expr": "genRepair",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 115,
+    "message": "genFill",
+    "message_expr": "genFill",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 122,
+    "message": "genUngroup",
+    "message_expr": "genUngroup",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 287,
+    "message": "RequestTopologyBake",
+    "message_expr": "RequestTopologyBake",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 43,
+    "message": "oresmelterSelectProgram",
+    "message_expr": "oresmelterSelectProgram",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 50,
+    "message": "oresmelterOvenStart",
+    "message_expr": "oresmelterOvenStart",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 57,
+    "message": "oresmelterCrusherStart",
+    "message_expr": "oresmelterCrusherStart",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 64,
+    "message": "oresmelterSmelterStart",
+    "message_expr": "oresmelterSmelterStart",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 74,
+    "message": "mnhrCloseVisor",
+    "message_expr": "mnhrCloseVisor",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 94,
+    "message": "mnhrOpenVisor",
+    "message_expr": "mnhrOpenVisor",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 105,
+    "message": "mnhrNvgOn",
+    "message_expr": "mnhrNvgOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 115,
+    "message": "mnhrNvgOff",
+    "message_expr": "mnhrNvgOff",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 122,
+    "message": "mnhrPowerArmorOut",
+    "message_expr": "mnhrPowerArmorOut",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 255,
+    "message": "plugMNHRToStation",
+    "message_expr": "plugMNHRToStation",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 262,
+    "message": "stationMNHRRepair",
+    "message_expr": "stationMNHRRepair",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 269,
+    "message": "stationFlashLight",
+    "message_expr": "stationFlashLight",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 277,
+    "message": "stationNvg2",
+    "message_expr": "stationNvg2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 288,
+    "message": "stationNvg3",
+    "message_expr": "stationNvg3",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 299,
+    "message": "stationWepPower",
+    "message_expr": "stationWepPower",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 45,
+    "message": "cookingPotInterfaceTurnOn",
+    "message_expr": "cookingPotInterfaceTurnOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 52,
+    "message": "kettleInterfaceTurnOn",
+    "message_expr": "kettleInterfaceTurnOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 59,
+    "message": "cookingpotGetCompositionClient",
+    "message_expr": "cookingpotGetCompositionClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 70,
+    "message": "cookingpotUpdateCompositionClient",
+    "message_expr": "cookingpotUpdateCompositionClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 297,
+    "message": "cookingovenFirstBurnerSwitch",
+    "message_expr": "cookingovenFirstBurnerSwitch",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 304,
+    "message": "cookingovenStartFix",
+    "message_expr": "cookingovenStartFix",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 311,
+    "message": "cookingpotEat",
+    "message_expr": "cookingpotEat",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 318,
+    "message": "cookingpotPourOut",
+    "message_expr": "cookingpotPourOut",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 325,
+    "message": "cookingpotTakePortion",
+    "message_expr": "cookingpotTakePortion",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 332,
+    "message": "cookingpotTakeOff",
+    "message_expr": "cookingpotTakeOff",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 339,
+    "message": "cookingpotPickUp",
+    "message_expr": "cookingpotPickUp",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 346,
+    "message": "cookingpotPreserveFood",
+    "message_expr": "cookingpotPreserveFood",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 353,
+    "message": "foodPartUseServer",
+    "message_expr": "foodPartUseServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 376,
+    "message": "foodPartAddServer",
+    "message_expr": "foodPartAddServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 399,
+    "message": "foodReadyPartAddServer",
+    "message_expr": "foodReadyPartAddServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 410,
+    "message": "kettlePartAddServer",
+    "message_expr": "kettlePartAddServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 419,
+    "message": "kettleTurnOn",
+    "message_expr": "kettleTurnOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 426,
+    "message": "cookingpotGetCompositionServer",
+    "message_expr": "cookingpotGetCompositionServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 433,
+    "message": "cookingpotUpdateCompositionServer",
+    "message_expr": "cookingpotUpdateCompositionServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 440,
+    "message": "waterfaucetDrawWater",
+    "message_expr": "waterfaucetDrawWater",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 447,
+    "message": "waterfaucetDrinkWater",
+    "message_expr": "waterfaucetDrinkWater",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 454,
+    "message": "waterfaucetWash",
+    "message_expr": "waterfaucetWash",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 461,
+    "message": "cookingboardCut",
+    "message_expr": "cookingboardCut",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 468,
+    "message": "cookingovenStartBake",
+    "message_expr": "cookingovenStartBake",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 475,
+    "message": "cookingovenTakeFood",
+    "message_expr": "cookingovenTakeFood",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\cl_hooks.lua",
+    "line": 3,
+    "message": "sendVendorInfo",
+    "message_expr": "sendVendorInfo",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 34,
+    "message": "applyVendorAppearance",
+    "message_expr": "applyVendorAppearance",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 41,
+    "message": "vendorTrade",
+    "message_expr": "vendorTrade",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 48,
+    "message": "itemVendorTradeSet",
+    "message_expr": "itemVendorTradeSet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 55,
+    "message": "itemVendorBuySet",
+    "message_expr": "itemVendorBuySet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 62,
+    "message": "itemVendorRemove",
+    "message_expr": "itemVendorRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 69,
+    "message": "updateVendorFaction",
+    "message_expr": "updateVendorFaction",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 76,
+    "message": "removeReceiverFromVendor",
+    "message_expr": "removeReceiverFromVendor",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 83,
+    "message": "applyVendorPos",
+    "message_expr": "applyVendorPos",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 90,
+    "message": "changeVendorPos",
+    "message_expr": "changeVendorPos",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 97,
+    "message": "makeVendorMovable",
+    "message_expr": "makeVendorMovable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newweapons\\cl_hooks.lua",
+    "line": 3,
+    "message": "attachAttachment",
+    "message_expr": "attachAttachment",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newweapons\\cl_hooks.lua",
+    "line": 9,
+    "message": "detachAttachment",
+    "message_expr": "detachAttachment",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newweapons\\cl_hooks.lua",
+    "line": 15,
+    "message": "mopRemoveDecal",
+    "message_expr": "mopRemoveDecal",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newweapons\\sv_hooks.lua",
+    "line": 9,
+    "message": "smokeTryChoke",
+    "message_expr": "smokeTryChoke",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\newweapons\\sv_hooks.lua",
+    "line": 30,
+    "message": "attachAfterSelect",
+    "message_expr": "attachAfterSelect",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 119,
+    "message": "radioAdjust",
+    "message_expr": "radioAdjust",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 135,
+    "message": "radioAdjust",
+    "message_expr": "radioAdjust",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\radio\\sv_hooks.lua",
+    "line": 3,
+    "message": "radiostationSwitchPower",
+    "message_expr": "radiostationSwitchPower",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\radio\\sv_hooks.lua",
+    "line": 10,
+    "message": "radiostationRadioAdjust",
+    "message_expr": "radiostationRadioAdjust",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\radio\\sv_hooks.lua",
+    "line": 17,
+    "message": "radiostationSendMsg",
+    "message_expr": "radiostationSendMsg",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 150,
+    "message": "nvisionOn",
+    "message_expr": "nvisionOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 156,
+    "message": "nvisionOff",
+    "message_expr": "nvisionOff",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 5,
+    "message": "storageOpen",
+    "message_expr": "storageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 12,
+    "message": "storageChangePass",
+    "message_expr": "storageChangePass",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 19,
+    "message": "storageTakeOffLock",
+    "message_expr": "storageTakeOffLock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 26,
+    "message": "storageHangLock",
+    "message_expr": "storageHangLock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 33,
+    "message": "storageNewDesc",
+    "message_expr": "storageNewDesc",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 40,
+    "message": "storageCleanTrash",
+    "message_expr": "storageCleanTrash",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 47,
+    "message": "entFreezeState",
+    "message_expr": "entFreezeState",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 61,
+    "message": "storageLockTrashcan",
+    "message_expr": "storageLockTrashcan",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 68,
+    "message": "storageInventory",
+    "message_expr": "storageInventory",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 671,
+    "message": "charTraits",
+    "message_expr": "charTraits",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 682,
+    "message": "fakechatmessage",
+    "message_expr": "fakechatmessage",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 710,
+    "message": "broketraitsetup",
+    "message_expr": "broketraitsetup",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 1172,
+    "message": "broketraitadd",
+    "message_expr": "broketraitadd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\traits\\sh_skilltree.lua",
+    "line": 32,
+    "message": "LevelupSkill",
+    "message_expr": "LevelupSkill",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 136,
+    "message": "searchExit",
+    "message_expr": "searchExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 149,
+    "message": "searchPly",
+    "message_expr": "searchPly",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 216,
+    "message": "searchPly",
+    "message_expr": "searchPly",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 257,
+    "message": "searchExit",
+    "message_expr": "searchExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\writing\\cl_hooks.lua",
+    "line": 1,
+    "message": "nutViewPaper",
+    "message_expr": "nutViewPaper",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\writing\\sv_hooks.lua",
+    "line": 3,
+    "message": "nutWritingEdit",
+    "message_expr": "nutWritingEdit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\attributes\\libs\\sh_attribs.lua",
+    "line": 104,
+    "message": "attrib",
+    "message_expr": "attrib",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 190,
+    "message": "cPlayerActive",
+    "message_expr": "cPlayerActive",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 198,
+    "message": "cPlayerDisable",
+    "message_expr": "cPlayerDisable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 206,
+    "message": "cPlayerVolumeChanged",
+    "message_expr": "cPlayerVolumeChanged",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 32,
+    "message": "lootMoney",
+    "message_expr": "lootMoney",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 266,
+    "message": "lootOpenClient",
+    "message_expr": "lootOpenClient",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 290,
+    "message": "corpseInterfaceTurnOn",
+    "message_expr": "corpseInterfaceTurnOn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 313,
+    "message": "performCprChoose",
+    "message_expr": "performCprChoose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 194,
+    "message": "lootExit",
+    "message_expr": "lootExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 198,
+    "message": "lootOpenServer",
+    "message_expr": "lootOpenServer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 243,
+    "message": "lootWdMny",
+    "message_expr": "lootWdMny",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 266,
+    "message": "lootDpMny",
+    "message_expr": "lootDpMny",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 276,
+    "message": "performCpr",
+    "message_expr": "performCpr",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 326,
+    "message": "corpseCorruptFinish",
+    "message_expr": "corpseCorruptFinish",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 407,
+    "message": "corpseCorruptIgnite",
+    "message_expr": "corpseCorruptIgnite",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 420,
+    "message": "corpseEat",
+    "message_expr": "corpseEat",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 505,
+    "message": "corpsePlyFinish",
+    "message_expr": "corpsePlyFinish",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 535,
+    "message": "corpseHide",
+    "message_expr": "corpseHide",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 555,
+    "message": "corpseTakeAmmo",
+    "message_expr": "corpseTakeAmmo",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 160,
+    "message": "cDisp",
+    "message_expr": "cDisp",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 164,
+    "message": "plyData",
+    "message_expr": "plyData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 168,
+    "message": "obj",
+    "message_expr": "obj",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 172,
+    "message": "voicePlay",
+    "message_expr": "voicePlay",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 421,
+    "message": "dataCls",
+    "message_expr": "dataCls",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 432,
+    "message": "obj",
+    "message_expr": "obj",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\3dpanel.lua",
+    "line": 80,
+    "message": "panel",
+    "message_expr": "panel",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\3dpanel.lua",
+    "line": 100,
+    "message": "panelList",
+    "message_expr": "panelList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\3dtext.lua",
+    "line": 78,
+    "message": "txt",
+    "message_expr": "txt",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\3dtext.lua",
+    "line": 106,
+    "message": "txtList",
+    "message_expr": "txtList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mapscene.lua",
+    "line": 106,
+    "message": "mapScn",
+    "message_expr": "mapScn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mapscene.lua",
+    "line": 115,
+    "message": "mapScnDel",
+    "message_expr": "mapScnDel",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\mapscene.lua",
+    "line": 127,
+    "message": "mapScnInit",
+    "message_expr": "mapScnInit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\recognition.lua",
+    "line": 135,
+    "message": "rgnMenu",
+    "message_expr": "rgnMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\recognition.lua",
+    "line": 154,
+    "message": "rgnDone",
+    "message_expr": "rgnDone",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\recognition.lua",
+    "line": 179,
+    "message": "rgnDirect",
+    "message_expr": "rgnDirect",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\recognition.lua",
+    "line": 192,
+    "message": "rgn",
+    "message_expr": "rgn",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 126,
+    "message": "cfgSet",
+    "message_expr": "cfgSet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 146,
+    "message": "cfgList",
+    "message_expr": "cfgList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 156,
+    "message": "cfgSet",
+    "message_expr": "cfgSet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 752,
+    "message": "vManipShowHands",
+    "message_expr": "vManipShowHands",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 962,
+    "message": "vManipDoorAnimation",
+    "message_expr": "vManipDoorAnimation",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 7,
+    "message": "nVar",
+    "message_expr": "nVar",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 12,
+    "message": "nDel",
+    "message_expr": "nDel",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 16,
+    "message": "nLcl",
+    "message_expr": "nLcl",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 21,
+    "message": "gVar",
+    "message_expr": "gVar",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 426,
+    "message": "seqSet",
+    "message_expr": "seqSet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 28,
+    "message": "nutCharFetchNames",
+    "message_expr": "nutCharFetchNames",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 49,
+    "message": "nutCharFetchNames",
+    "message_expr": "nutCharFetchNames",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 111,
+    "message": "nutCharFetchNames",
+    "message_expr": "nutCharFetchNames",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+    "line": 206,
+    "message": "cMsg",
+    "message_expr": "cMsg",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_command.lua",
+    "line": 266,
+    "message": "cmd",
+    "message_expr": "cmd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_player.lua",
+    "line": 31,
+    "message": "nutDataSync",
+    "message_expr": "nutDataSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\sh_player.lua",
+    "line": 37,
+    "message": "nutData",
+    "message_expr": "nutData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\meta\\sh_player.lua",
+    "line": 34,
+    "message": "nutSyncGesture",
+    "message_expr": "nutSyncGesture",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 1,
+    "message": "charInfo",
+    "message_expr": "charInfo",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 5,
+    "message": "charSet",
+    "message_expr": "charSet",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 17,
+    "message": "charVar",
+    "message_expr": "charVar",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 30,
+    "message": "charData",
+    "message_expr": "charData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 39,
+    "message": "charKick",
+    "message_expr": "charKick",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 1,
+    "message": "item",
+    "message_expr": "item",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 13,
+    "message": "invData",
+    "message_expr": "invData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 24,
+    "message": "invQuantity",
+    "message_expr": "invQuantity",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 5,
+    "message": "invAct",
+    "message_expr": "invAct",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 149,
+    "message": "areaEdit",
+    "message_expr": "areaEdit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 166,
+    "message": "areaTeleport",
+    "message_expr": "areaTeleport",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 181,
+    "message": "areaAdd",
+    "message_expr": "areaAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 190,
+    "message": "areaRemove",
+    "message_expr": "areaRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 206,
+    "message": "displayPosition",
+    "message_expr": "displayPosition",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 243,
+    "message": "areaManager",
+    "message_expr": "areaManager",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 308,
+    "message": "displayAreaText",
+    "message_expr": "displayAreaText",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 100,
+    "message": "msg",
+    "message_expr": "msg",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 77,
+    "message": "nutAreaManager",
+    "message_expr": "nutAreaManager",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\bars\\libs\\cl_bar.lua",
+    "line": 165,
+    "message": "actBar",
+    "message_expr": "actBar",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "netstream_hook_message_issue",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\libs\\sh_item.lua",
+    "line": 92,
+    "message": "invMv",
+    "message_expr": "invMv",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 25,
+    "message": "adminSpawnMenu",
+    "message_expr": "adminSpawnMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 65,
+    "message": "adminSpawnItem",
+    "message_expr": "adminSpawnItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "schema\\sh_commands.lua",
+    "line": 265,
+    "message": "ChatMessage",
+    "message_expr": "ChatMessage",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weaponhacks.lua",
+    "line": 182,
+    "message": "mgbase_tpanim",
+    "message_expr": "mgbase_tpanim",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 552,
+    "message": "OpenItemManager",
+    "message_expr": "OpenItemManager",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 607,
+    "message": "OpenCustomItemMenu",
+    "message_expr": "OpenCustomItemMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 67,
+    "message": "SendItemData",
+    "message_expr": "SendItemData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 85,
+    "message": "SendEntityData",
+    "message_expr": "SendEntityData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 95,
+    "message": "ItemUpdated",
+    "message_expr": "ItemUpdated",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 108,
+    "message": "ItemUpdated",
+    "message_expr": "ItemUpdated",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 439,
+    "message": "ShowScreamerImage2",
+    "message_expr": "ShowScreamerImage2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 475,
+    "message": "ShowScreamerImage",
+    "message_expr": "ShowScreamerImage",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 425,
+    "message": "openhkmenu",
+    "message_expr": "openhkmenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 469,
+    "message": "givenearbyents",
+    "message_expr": "givenearbyents",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 768,
+    "message": "requestnearbyents",
+    "message_expr": "requestnearbyents",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 979,
+    "message": "hackfail",
+    "message_expr": "hackfail",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1231,
+    "message": "hackent",
+    "message_expr": "hackent",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 19,
+    "message": "RequestItemData",
+    "message_expr": "RequestItemData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 34,
+    "message": "ClearAllItems",
+    "message_expr": "ClearAllItems",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 61,
+    "message": "RemoveEntity",
+    "message_expr": "RemoveEntity",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 131,
+    "message": "cOpen",
+    "message_expr": "cOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 50,
+    "message": "StartCraft",
+    "message_expr": "StartCraft",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 104,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 145,
+    "message": "openhkmenu",
+    "message_expr": "openhkmenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 153,
+    "message": "RandomNumber",
+    "message_expr": "RandomNumber",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+    "line": 107,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 62,
+    "message": "ItemFound",
+    "message_expr": "ItemFound",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 169,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_board\\init.lua",
+    "line": 122,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 67,
+    "message": "CreedBroomSweep",
+    "message_expr": "CreedBroomSweep",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 70,
+    "message": "CreedBroomSweep2",
+    "message_expr": "CreedBroomSweep2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 284,
+    "message": "nutCorpseTransfer",
+    "message_expr": "nutCorpseTransfer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 59,
+    "message": "nutPluginDisable",
+    "message_expr": "nutPluginDisable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 92,
+    "message": "nutPluginList",
+    "message_expr": "nutPluginList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 133,
+    "message": "nutPluginDisable",
+    "message_expr": "nutPluginDisable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 160,
+    "message": "nutPluginList",
+    "message_expr": "nutPluginList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\typing.lua",
+    "line": 11,
+    "message": "nutTypeStatus",
+    "message_expr": "nutTypeStatus",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\typing.lua",
+    "line": 17,
+    "message": "nutTypeStatus",
+    "message_expr": "nutTypeStatus",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 514,
+    "message": "VManip_PickupEntity",
+    "message_expr": "VManip_PickupEntity",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 978,
+    "message": "VManip_SimplePlay",
+    "message_expr": "VManip_SimplePlay",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 982,
+    "message": "VManip_SimplePlay",
+    "message_expr": "VManip_SimplePlay",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 990,
+    "message": "VManip_SimplePlay",
+    "message_expr": "VManip_SimplePlay",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 995,
+    "message": "VManip_SimplePlay",
+    "message_expr": "VManip_SimplePlay",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 1001,
+    "message": "VManip_SimplePlay",
+    "message_expr": "VManip_SimplePlay",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 14,
+    "message": "syncClientTime",
+    "message_expr": "syncClientTime",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 161,
+    "message": "syncClientTime",
+    "message_expr": "syncClientTime",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 172,
+    "message": "nutCharacterInvList",
+    "message_expr": "nutCharacterInvList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\util\\cl_stringreq.lua",
+    "line": 16,
+    "message": "nutStringReq",
+    "message_expr": "nutStringReq",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 6,
+    "message": "nutNotify",
+    "message_expr": "nutNotify",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 29,
+    "message": "nutNotifyL",
+    "message_expr": "nutNotifyL",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\util\\sv_stringreq.lua",
+    "line": 20,
+    "message": "nutStringReq",
+    "message_expr": "nutStringReq",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 89,
+    "message": "NetStreamDS",
+    "message_expr": "NetStreamDS",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 137,
+    "message": "NetStreamDS",
+    "message_expr": "NetStreamDS",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 49,
+    "message": "nutInventoryAdd",
+    "message_expr": "nutInventoryAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 115,
+    "message": "nutInventoryRemove",
+    "message_expr": "nutInventoryRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 275,
+    "message": "nutInventoryData",
+    "message_expr": "nutInventoryData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 284,
+    "message": "nutInventoryInit",
+    "message_expr": "nutInventoryInit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 330,
+    "message": "nutInventoryDelete",
+    "message_expr": "nutInventoryDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 43,
+    "message": "nutItemDelete",
+    "message_expr": "nutItemDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 146,
+    "message": "nutItemInstance",
+    "message_expr": "nutItemInstance",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\gridinv\\sh_grid_inv.lua",
+    "line": 385,
+    "message": "nutTransferItem",
+    "message_expr": "nutTransferItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 10,
+    "message": "nutCharList",
+    "message_expr": "nutCharList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 46,
+    "message": "nutCharChoose",
+    "message_expr": "nutCharChoose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 86,
+    "message": "nutCharCreate",
+    "message_expr": "nutCharCreate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 100,
+    "message": "nutCharDelete",
+    "message_expr": "nutCharDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 11,
+    "message": "nutCharChoose",
+    "message_expr": "nutCharChoose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 45,
+    "message": "nutCharCreate",
+    "message_expr": "nutCharCreate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 13,
+    "message": "nutPACSync",
+    "message_expr": "nutPACSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 19,
+    "message": "nutPACPartAdd",
+    "message_expr": "nutPACPartAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 30,
+    "message": "nutPACPartRemove",
+    "message_expr": "nutPACPartRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 41,
+    "message": "nutPACPartReset",
+    "message_expr": "nutPACPartReset",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\storage\\cl_networking.lua",
+    "line": 12,
+    "message": "nutStorageExit",
+    "message_expr": "nutStorageExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\storage\\cl_password.lua",
+    "line": 7,
+    "message": "nutStorageUnlock",
+    "message_expr": "nutStorageUnlock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 25,
+    "message": "nutStorageTransfer",
+    "message_expr": "nutStorageTransfer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\cl_editor.lua",
+    "line": 5,
+    "message": "nutVendorEdit",
+    "message_expr": "nutVendorEdit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 176,
+    "message": "nutVendorOpen",
+    "message_expr": "nutVendorOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 182,
+    "message": "nutVendorAllowFaction",
+    "message_expr": "nutVendorAllowFaction",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 188,
+    "message": "nutVendorAllowClass",
+    "message_expr": "nutVendorAllowClass",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 98,
+    "message": "nutInventoryDelete",
+    "message_expr": "nutInventoryDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 152,
+    "message": "nutTransferItem",
+    "message_expr": "nutTransferItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 79,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 126,
+    "message": "nutStorageUnlock",
+    "message_expr": "nutStorageUnlock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 81,
+    "message": "nutVendorTrade",
+    "message_expr": "nutVendorTrade",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 88,
+    "message": "nutVendorTrade",
+    "message_expr": "nutVendorTrade",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 235,
+    "message": "nutVendorExit",
+    "message_expr": "nutVendorExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_start_message_issue",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 269,
+    "message": "nutVendorExit",
+    "message_expr": "nutVendorExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 11,
+    "message": "adminSpawnItem",
+    "message_expr": "adminSpawnItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 31,
+    "message": "adminSpawnMenu",
+    "message_expr": "adminSpawnMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 49,
+    "message": "RequestItemData",
+    "message_expr": "RequestItemData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 72,
+    "message": "RequestEntityData",
+    "message_expr": "RequestEntityData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 90,
+    "message": "RemoveItem",
+    "message_expr": "RemoveItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 102,
+    "message": "ClearAllItems",
+    "message_expr": "ClearAllItems",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 279,
+    "message": "ShowScreamerImage",
+    "message_expr": "ShowScreamerImage",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 316,
+    "message": "ShowScreamerImage2",
+    "message_expr": "ShowScreamerImage2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 20,
+    "message": "cOpen",
+    "message_expr": "cOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 17,
+    "message": "StartCraft",
+    "message_expr": "StartCraft",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 285,
+    "message": "OpenCraft",
+    "message_expr": "OpenCraft",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 438,
+    "message": "requestnearbyents",
+    "message_expr": "requestnearbyents",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 474,
+    "message": "hackent",
+    "message_expr": "hackent",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 480,
+    "message": "hackfail",
+    "message_expr": "hackfail",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 670,
+    "message": "givenearbyents",
+    "message_expr": "givenearbyents",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 690,
+    "message": "openhkmenu",
+    "message_expr": "openhkmenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 99,
+    "message": "OpenMyInv",
+    "message_expr": "OpenMyInv",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 5,
+    "message": "RandomNumber",
+    "message_expr": "RandomNumber",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 3,
+    "message": "OpenItemManager",
+    "message_expr": "OpenItemManager",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 23,
+    "message": "SendItemData",
+    "message_expr": "SendItemData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 40,
+    "message": "ItemUpdated",
+    "message_expr": "ItemUpdated",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 46,
+    "message": "SendEntityData",
+    "message_expr": "SendEntityData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\admintools\\derma\\cl_menu.lua",
+    "line": 11,
+    "message": "OpenCustomItemMenu",
+    "message_expr": "OpenCustomItemMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\cl_init.lua",
+    "line": 3,
+    "message": "ItemFound",
+    "message_expr": "ItemFound",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 9,
+    "message": "CreedBroomSweep",
+    "message_expr": "CreedBroomSweep",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 17,
+    "message": "CreedBroomSweep2",
+    "message_expr": "CreedBroomSweep2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_networking.lua",
+    "line": 12,
+    "message": "nutCorpseTransfer",
+    "message_expr": "nutCorpseTransfer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 81,
+    "message": "nutPluginDisable",
+    "message_expr": "nutPluginDisable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 88,
+    "message": "nutPluginList",
+    "message_expr": "nutPluginList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 175,
+    "message": "nutPluginList",
+    "message_expr": "nutPluginList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 184,
+    "message": "nutPluginDisable",
+    "message_expr": "nutPluginDisable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\typing.lua",
+    "line": 65,
+    "message": "nutTypeStatus",
+    "message_expr": "nutTypeStatus",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 899,
+    "message": "VManip_PickupEntity",
+    "message_expr": "VManip_PickupEntity",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 151,
+    "message": "syncClientTime",
+    "message_expr": "syncClientTime",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 156,
+    "message": "syncClientTime",
+    "message_expr": "syncClientTime",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\util\\cl_notice.lua",
+    "line": 11,
+    "message": "nutNotify",
+    "message_expr": "nutNotify",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\util\\cl_notice.lua",
+    "line": 16,
+    "message": "nutNotifyL",
+    "message_expr": "nutNotifyL",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\util\\cl_stringreq.lua",
+    "line": 1,
+    "message": "nutStringReq",
+    "message_expr": "nutStringReq",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\util\\sv_stringreq.lua",
+    "line": 30,
+    "message": "nutStringReq",
+    "message_expr": "nutStringReq",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 35,
+    "message": "nutItemInstance",
+    "message_expr": "nutItemInstance",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 51,
+    "message": "nutCharacterInvList",
+    "message_expr": "nutCharacterInvList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 66,
+    "message": "nutItemDelete",
+    "message_expr": "nutItemDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 101,
+    "message": "NetStreamDS",
+    "message_expr": "NetStreamDS",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 145,
+    "message": "NetStreamDS",
+    "message_expr": "NetStreamDS",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+    "line": 3,
+    "message": "nutInventoryData",
+    "message_expr": "nutInventoryData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+    "line": 20,
+    "message": "nutInventoryInit",
+    "message_expr": "nutInventoryInit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+    "line": 56,
+    "message": "nutInventoryAdd",
+    "message_expr": "nutInventoryAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+    "line": 67,
+    "message": "nutInventoryRemove",
+    "message_expr": "nutInventoryRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+    "line": 79,
+    "message": "nutInventoryDelete",
+    "message_expr": "nutInventoryDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\gridinv\\sv_transfer.lua",
+    "line": 229,
+    "message": "nutTransferItem",
+    "message_expr": "nutTransferItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\multichar\\cl_networking.lua",
+    "line": 1,
+    "message": "nutCharList",
+    "message_expr": "nutCharList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 37,
+    "message": "nutCharChoose",
+    "message_expr": "nutCharChoose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 75,
+    "message": "nutCharCreate",
+    "message_expr": "nutCharCreate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 9,
+    "message": "nutCharChoose",
+    "message_expr": "nutCharChoose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 41,
+    "message": "nutCharCreate",
+    "message_expr": "nutCharCreate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 110,
+    "message": "nutCharDelete",
+    "message_expr": "nutCharDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 49,
+    "message": "nutPACSync",
+    "message_expr": "nutPACSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 59,
+    "message": "nutPACPartAdd",
+    "message_expr": "nutPACPartAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 67,
+    "message": "nutPACPartRemove",
+    "message_expr": "nutPACPartRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 75,
+    "message": "nutPACPartReset",
+    "message_expr": "nutPACPartReset",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\storage\\cl_networking.lua",
+    "line": 1,
+    "message": "nutStorageUnlock",
+    "message_expr": "nutStorageUnlock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\storage\\cl_networking.lua",
+    "line": 6,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 15,
+    "message": "nutStorageExit",
+    "message_expr": "nutStorageExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 23,
+    "message": "nutStorageUnlock",
+    "message_expr": "nutStorageUnlock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 42,
+    "message": "nutStorageTransfer",
+    "message_expr": "nutStorageTransfer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 3,
+    "message": "nutVendor",
+    "message_expr": "nutVendor",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 9,
+    "message": "nutVendorSync",
+    "message_expr": "nutVendorSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 42,
+    "message": "nutVendorOpen",
+    "message_expr": "nutVendorOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 50,
+    "message": "nutVendorExit",
+    "message_expr": "nutVendorExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 131,
+    "message": "nutVendorEdit",
+    "message_expr": "nutVendorEdit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 140,
+    "message": "nutVendorFaction",
+    "message_expr": "nutVendorFaction",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 17,
+    "message": "nutVendorExit",
+    "message_expr": "nutVendorExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 24,
+    "message": "nutVendorEdit",
+    "message_expr": "nutVendorEdit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "net_receive_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 36,
+    "message": "nutVendorTrade",
+    "message_expr": "nutVendorTrade",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 8,
+    "message": "adminSpawnMenu",
+    "message_expr": "adminSpawnMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 9,
+    "message": "adminSpawnItem",
+    "message_expr": "adminSpawnItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 585,
+    "message": "OpenCustomItemMenu",
+    "message_expr": "OpenCustomItemMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 259,
+    "message": "ShowScreamerImage",
+    "message_expr": "ShowScreamerImage",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 260,
+    "message": "ShowScreamerImage2",
+    "message_expr": "ShowScreamerImage2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 8,
+    "message": "cOpen",
+    "message_expr": "cOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 14,
+    "message": "StartCraft",
+    "message_expr": "StartCraft",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 15,
+    "message": "OpenCraft",
+    "message_expr": "OpenCraft",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 433,
+    "message": "requestnearbyents",
+    "message_expr": "requestnearbyents",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 434,
+    "message": "givenearbyents",
+    "message_expr": "givenearbyents",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 435,
+    "message": "openhkmenu",
+    "message_expr": "openhkmenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 436,
+    "message": "hackent",
+    "message_expr": "hackent",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 437,
+    "message": "hackfail",
+    "message_expr": "hackfail",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 232,
+    "message": "OpenMyInv",
+    "message_expr": "OpenMyInv",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 5,
+    "message": "RandomNumber",
+    "message_expr": "RandomNumber",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 6,
+    "message": "IsFix",
+    "message_expr": "IsFix",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 5,
+    "message": "RandomNumber",
+    "message_expr": "RandomNumber",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 6,
+    "message": "IsFix",
+    "message_expr": "IsFix",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 5,
+    "message": "ItemFound",
+    "message_expr": "ItemFound",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 6,
+    "message": "ContainerEmpty",
+    "message_expr": "ContainerEmpty",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 6,
+    "message": "CreedBroomSweep",
+    "message_expr": "CreedBroomSweep",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 7,
+    "message": "CreedBroomSweep2",
+    "message_expr": "CreedBroomSweep2",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_networking.lua",
+    "line": 1,
+    "message": "nutCorpseTransfer",
+    "message_expr": "nutCorpseTransfer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 10,
+    "message": "nutPluginDisable",
+    "message_expr": "nutPluginDisable",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 11,
+    "message": "nutPluginList",
+    "message_expr": "nutPluginList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\typing.lua",
+    "line": 63,
+    "message": "nutTypeStatus",
+    "message_expr": "nutTypeStatus",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 897,
+    "message": "VManip_PickupEntity",
+    "message_expr": "VManip_PickupEntity",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 11,
+    "message": "syncClientTime",
+    "message_expr": "syncClientTime",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 1,
+    "message": "nutNotify",
+    "message_expr": "nutNotify",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 2,
+    "message": "nutNotifyL",
+    "message_expr": "nutNotifyL",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\util\\sv_stringreq.lua",
+    "line": 1,
+    "message": "nutStringReq",
+    "message_expr": "nutStringReq",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 1,
+    "message": "nutCharacterInvList",
+    "message_expr": "nutCharacterInvList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 2,
+    "message": "nutItemDelete",
+    "message_expr": "nutItemDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 3,
+    "message": "nutItemInstance",
+    "message_expr": "nutItemInstance",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 51,
+    "message": "NetStreamDS",
+    "message_expr": "NetStreamDS",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 9,
+    "message": "nutInventoryInit",
+    "message_expr": "nutInventoryInit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 10,
+    "message": "nutInventoryData",
+    "message_expr": "nutInventoryData",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 11,
+    "message": "nutInventoryDelete",
+    "message_expr": "nutInventoryDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 12,
+    "message": "nutInventoryAdd",
+    "message_expr": "nutInventoryAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 13,
+    "message": "nutInventoryRemove",
+    "message_expr": "nutInventoryRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\gridinv\\sv_transfer.lua",
+    "line": 1,
+    "message": "nutTransferItem",
+    "message_expr": "nutTransferItem",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 3,
+    "message": "nutCharChoose",
+    "message_expr": "nutCharChoose",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 4,
+    "message": "nutCharCreate",
+    "message_expr": "nutCharCreate",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 5,
+    "message": "nutCharDelete",
+    "message_expr": "nutCharDelete",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 6,
+    "message": "nutCharList",
+    "message_expr": "nutCharList",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 7,
+    "message": "nutCharMenu",
+    "message_expr": "nutCharMenu",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 1,
+    "message": "nutPACSync",
+    "message_expr": "nutPACSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 2,
+    "message": "nutPACPartAdd",
+    "message_expr": "nutPACPartAdd",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 3,
+    "message": "nutPACPartRemove",
+    "message_expr": "nutPACPartRemove",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 4,
+    "message": "nutPACPartReset",
+    "message_expr": "nutPACPartReset",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 1,
+    "message": "nutStorageOpen",
+    "message_expr": "nutStorageOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 2,
+    "message": "nutStorageExit",
+    "message_expr": "nutStorageExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 3,
+    "message": "nutStorageUnlock",
+    "message_expr": "nutStorageUnlock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 4,
+    "message": "nutStorageTransfer",
+    "message_expr": "nutStorageTransfer",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 4,
+    "message": "nutVendorAllowClass",
+    "message_expr": "nutVendorAllowClass",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 5,
+    "message": "nutVendorAllowFaction",
+    "message_expr": "nutVendorAllowFaction",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 6,
+    "message": "nutVendorExit",
+    "message_expr": "nutVendorExit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 7,
+    "message": "nutVendorEdit",
+    "message_expr": "nutVendorEdit",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 8,
+    "message": "nutVendorMode",
+    "message_expr": "nutVendorMode",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 9,
+    "message": "nutVendorMoney",
+    "message_expr": "nutVendorMoney",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 10,
+    "message": "nutVendorOpen",
+    "message_expr": "nutVendorOpen",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 11,
+    "message": "nutVendorPrice",
+    "message_expr": "nutVendorPrice",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 12,
+    "message": "nutVendorStock",
+    "message_expr": "nutVendorStock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 13,
+    "message": "nutVendorMaxStock",
+    "message_expr": "nutVendorMaxStock",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 14,
+    "message": "nutVendorSync",
+    "message_expr": "nutVendorSync",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  },
+  {
+    "kind": "util_add_network_string_message_issue",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 15,
+    "message": "nutVendorTrade",
+    "message_expr": "nutVendorTrade",
+    "quality": "dynamic",
+    "reasons": [
+      "unresolved_dynamic_expr",
+      "dynamic_or_symbolic_message"
+    ]
+  }
+]

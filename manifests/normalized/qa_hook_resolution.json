@@ -1,0 +1,4219 @@
+{
+  "inputs": {
+    "normalized_dir": "E:\\signalis_ai\\manifests\\normalized",
+    "source_roots_scanned": [],
+    "resolved_file_exists": true,
+    "unresolved_file_exists": true,
+    "edges_file_exists": true
+  },
+  "summary": {
+    "total_hook_runs": 495,
+    "resolved_hook_runs": 289,
+    "unresolved_hook_runs": 206,
+    "plugin_hook_edges": 289,
+    "resolution_rate_pct": 58.38,
+    "unresolved_rate_pct": 41.62,
+    "edge_count_matches_resolved": true
+  },
+  "resolved_by_source": {
+    "literal": 211,
+    "leaf_pascal_fallback": 78
+  },
+  "resolved_by_confidence": {
+    "medium": 259,
+    "low": 30
+  },
+  "unresolved_classifications": {
+    "probably_schema_or_project_core_hook": 12,
+    "probably_schema_hook": 34,
+    "missing_plugin_method_or_external_hook": 91,
+    "probably_nutscript_builtin": 25,
+    "probably_project_domain_hook": 43,
+    "probably_gmod_builtin": 1
+  },
+  "top_unresolved_hooks": [
+    {
+      "hook_name": "screamer2",
+      "count": 9
+    },
+    {
+      "hook_name": "StorageRestored",
+      "count": 5
+    },
+    {
+      "hook_name": "StorageEntityRemoved",
+      "count": 5
+    },
+    {
+      "hook_name": "OnCharVarChanged",
+      "count": 5
+    },
+    {
+      "hook_name": "GetDefaultCharName",
+      "count": 4
+    },
+    {
+      "hook_name": "OnNPCKilled",
+      "count": 3
+    },
+    {
+      "hook_name": "PersistenceSave",
+      "count": 3
+    },
+    {
+      "hook_name": "IsPlayerRecognized",
+      "count": 3
+    },
+    {
+      "hook_name": "ItemInitialized",
+      "count": 3
+    },
+    {
+      "hook_name": "CanPlayerBustLock",
+      "count": 2
+    },
+    {
+      "hook_name": "CanPlayerEditData",
+      "count": 2
+    },
+    {
+      "hook_name": "CanPlayerEditObjectives",
+      "count": 2
+    },
+    {
+      "hook_name": "PlayerCanKnock",
+      "count": 2
+    },
+    {
+      "hook_name": "GetStartAttribPoints",
+      "count": 2
+    },
+    {
+      "hook_name": "OnCreateStoragePanel",
+      "count": 2
+    },
+    {
+      "hook_name": "ShouldRadioBeep",
+      "count": 2
+    },
+    {
+      "hook_name": "CanOutfitChangeModel",
+      "count": 2
+    },
+    {
+      "hook_name": "OnCharAttribUpdated",
+      "count": 2
+    },
+    {
+      "hook_name": "useIhnolitOre",
+      "count": 2
+    },
+    {
+      "hook_name": "ihnolitOreTimer",
+      "count": 2
+    },
+    {
+      "hook_name": "PlayerCanUseLock",
+      "count": 2
+    },
+    {
+      "hook_name": "StorageCanTransferItem",
+      "count": 2
+    },
+    {
+      "hook_name": "CreateSalaryTimer",
+      "count": 2
+    },
+    {
+      "hook_name": "OnPickupObject",
+      "count": 2
+    },
+    {
+      "hook_name": "InitializedConfig",
+      "count": 2
+    },
+    {
+      "hook_name": "VManipPickupHook",
+      "count": 2
+    },
+    {
+      "hook_name": "PostLoadData",
+      "count": 2
+    },
+    {
+      "hook_name": "PlayerMessageSend",
+      "count": 2
+    },
+    {
+      "hook_name": "OnPlayerJoinClass",
+      "count": 2
+    },
+    {
+      "hook_name": "CanPlayerUseCommand",
+      "count": 2
+    },
+    {
+      "hook_name": "CreateDefaultInventory",
+      "count": 2
+    },
+    {
+      "hook_name": "InventoryItemRemoved",
+      "count": 2
+    },
+    {
+      "hook_name": "GetMaxPlayerCharacter",
+      "count": 2
+    },
+    {
+      "hook_name": "CanPlayerViewData",
+      "count": 1
+    },
+    {
+      "hook_name": "CanPlayerViewObjectives",
+      "count": 1
+    },
+    {
+      "hook_name": "PlayerGetStunThreshold",
+      "count": 1
+    },
+    {
+      "hook_name": "terminator_blocktarget",
+      "count": 1
+    },
+    {
+      "hook_name": "terminator_engagedenemywasbad",
+      "count": 1
+    },
+    {
+      "hook_name": "OnTerminatorKilledRagdoll",
+      "count": 1
+    },
+    {
+      "hook_name": "TerminatorUse",
+      "count": 1
+    }
+  ],
+  "top_unresolved_files": [
+    {
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "count": 16
+    },
+    {
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "count": 9
+    },
+    {
+      "file": "entities\\weapons\\nut_hands.lua",
+      "count": 7
+    },
+    {
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "count": 6
+    },
+    {
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "count": 6
+    },
+    {
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "count": 6
+    },
+    {
+      "file": "plugins\\biorezonance\\sv_hooks.lua",
+      "count": 5
+    },
+    {
+      "file": "gamemode\\core\\libs\\sh_character.lua",
+      "count": 5
+    },
+    {
+      "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+      "count": 5
+    },
+    {
+      "file": "schema\\sh_commands.lua",
+      "count": 4
+    },
+    {
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+      "count": 4
+    },
+    {
+      "file": "gamemode\\init.lua",
+      "count": 4
+    },
+    {
+      "file": "gamemode\\core\\sh_config.lua",
+      "count": 4
+    },
+    {
+      "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+      "count": 4
+    },
+    {
+      "file": "gamemode\\core\\libs\\sv_database.lua",
+      "count": 4
+    },
+    {
+      "file": "gamemode\\core\\meta\\sh_character.lua",
+      "count": 4
+    },
+    {
+      "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+      "count": 3
+    },
+    {
+      "file": "schema\\hooks\\sv_hooks.lua",
+      "count": 3
+    },
+    {
+      "file": "plugins\\recognition.lua",
+      "count": 3
+    },
+    {
+      "file": "gamemode\\core\\derma\\cl_tooltip.lua",
+      "count": 3
+    },
+    {
+      "file": "gamemode\\core\\libs\\sh_class.lua",
+      "count": 3
+    },
+    {
+      "file": "gamemode\\core\\libs\\sh_plugin.lua",
+      "count": 3
+    },
+    {
+      "file": "plugins\\shootlock.lua",
+      "count": 2
+    },
+    {
+      "file": "entities\\weapons\\nut_stunstick.lua",
+      "count": 2
+    },
+    {
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+      "count": 2
+    }
+  ],
+  "ambiguous_resolved_hooks": [],
+  "known_target_checks": {
+    "HandleDiseaseOnCall": true,
+    "EnduranceCheck": true
+  },
+  "unresolved_details": [
+    {
+      "hook_name": "CanPlayerBustLock",
+      "symbol": null,
+      "file": "plugins\\shootlock.lua",
+      "line": 20,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerBustLock:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerBustLock",
+      "symbol": null,
+      "file": "plugins\\shootlock.lua",
+      "line": 41,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerBustLock:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerViewData",
+      "symbol": null,
+      "file": "schema\\sh_commands.lua",
+      "line": 40,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerViewData:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerEditData",
+      "symbol": null,
+      "file": "schema\\sh_commands.lua",
+      "line": 45,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerEditData:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerViewObjectives",
+      "symbol": null,
+      "file": "schema\\sh_commands.lua",
+      "line": 52,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerViewObjectives:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerEditObjectives",
+      "symbol": null,
+      "file": "schema\\sh_commands.lua",
+      "line": 53,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerEditObjectives:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnNPCKilled",
+      "symbol": null,
+      "file": "entities\\entities\\nut_flesh_bee.lua",
+      "line": 194,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnNPCKilled:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerGetStunThreshold",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_stunstick.lua",
+      "line": 144,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerGetStunThreshold:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerCanKnock",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_stunstick.lua",
+      "line": 196,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerCanKnock:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnNPCKilled",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_base\\init.lua",
+      "line": 196,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnNPCKilled:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "terminator_blocktarget",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+      "line": 222,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:terminator_blocktarget:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "terminator_engagedenemywasbad",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+      "line": 251,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:terminator_engagedenemywasbad:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnTerminatorKilledRagdoll",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\prettydamage.lua",
+      "line": 361,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnTerminatorKilledRagdoll:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnNPCKilled",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\prettydamage.lua",
+      "line": 368,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnNPCKilled:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "TerminatorUse",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+      "line": 1056,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:TerminatorUse:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "terminator_spotenemy",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+      "line": 2818,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:terminator_spotenemy:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "terminator_loseenemy",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+      "line": 2822,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:terminator_loseenemy:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "terminator_enemythink",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+      "line": 2826,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:terminator_enemythink:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "terminator_holstering_overrideangles",
+      "symbol": null,
+      "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weapholstering.lua",
+      "line": 154,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:terminator_holstering_overrideangles:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetStartAttribPoints",
+      "symbol": null,
+      "file": "plugins\\attributes\\sh_plugin.lua",
+      "line": 42,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetStartAttribPoints:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\sh_plugin.lua",
+      "line": 496,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\sv_hooks.lua",
+      "line": 41,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\sv_hooks.lua",
+      "line": 73,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\sv_hooks.lua",
+      "line": 77,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\sv_hooks.lua",
+      "line": 128,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\sv_hooks.lua",
+      "line": 144,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCraftFinish",
+      "symbol": null,
+      "file": "plugins\\crafting\\sh_plugin.lua",
+      "line": 274,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnCraftFinish:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerDisinfect",
+      "symbol": null,
+      "file": "plugins\\healthproblems\\sh_plugin.lua",
+      "line": 178,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerDisinfect:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanDrawAmmoHUD",
+      "symbol": null,
+      "file": "plugins\\hud\\sh_plugin.lua",
+      "line": 710,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CanDrawAmmoHUD:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "DrawAmmoHUD",
+      "symbol": null,
+      "file": "plugins\\hud\\sh_plugin.lua",
+      "line": 711,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:DrawAmmoHUD:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCreateStoragePanel",
+      "symbol": null,
+      "file": "plugins\\inventory\\cl_hooks.lua",
+      "line": 166,
+      "realm": "client",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnCreateStoragePanel:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldRadioBeep",
+      "symbol": null,
+      "file": "plugins\\radio\\sh_plugin.lua",
+      "line": 167,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldRadioBeep:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldRadioBeep",
+      "symbol": null,
+      "file": "plugins\\traits\\sh_languages.lua",
+      "line": 212,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldRadioBeep:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanOutfitChangeModel",
+      "symbol": null,
+      "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+      "line": 124,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CanOutfitChangeModel:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanOutfitChangeModel",
+      "symbol": null,
+      "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+      "line": 546,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CanOutfitChangeModel:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetStartAttribPoints",
+      "symbol": null,
+      "file": "plugins\\attributes\\derma\\cl_attributes_step.lua",
+      "line": 13,
+      "realm": "client",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetStartAttribPoints:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharAttribUpdated",
+      "symbol": null,
+      "file": "plugins\\attributes\\libs\\sh_attribs.lua",
+      "line": 58,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharAttribUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharAttribUpdated",
+      "symbol": null,
+      "file": "plugins\\attributes\\libs\\sh_attribs.lua",
+      "line": 79,
+      "realm": "shared",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharAttribUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "useIhnolitOre",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+      "line": 26,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:useIhnolitOre:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ihnolitOreTimer",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+      "line": 34,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ihnolitOreTimer:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+      "line": 77,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+      "line": 83,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "screamer2",
+      "symbol": null,
+      "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+      "line": 92,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:screamer2:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageCanTransfer",
+      "symbol": null,
+      "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+      "line": 55,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:StorageCanTransfer:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageRestored",
+      "symbol": null,
+      "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+      "line": 48,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageRestored:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageEntityRemoved",
+      "symbol": null,
+      "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+      "line": 121,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageEntityRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerCanUseLock",
+      "symbol": null,
+      "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+      "line": 79,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerCanUseLock:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerCanUseLock",
+      "symbol": null,
+      "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+      "line": 81,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerCanUseLock:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageRestored",
+      "symbol": null,
+      "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+      "line": 53,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageRestored:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageEntityRemoved",
+      "symbol": null,
+      "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+      "line": 83,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageEntityRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "useIhnolitOre",
+      "symbol": null,
+      "file": "plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua",
+      "line": 19,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:useIhnolitOre:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ihnolitOreTimer",
+      "symbol": null,
+      "file": "plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua",
+      "line": 27,
+      "realm": "unknown",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ihnolitOreTimer:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageRestored",
+      "symbol": null,
+      "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+      "line": 54,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageRestored:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageEntityRemoved",
+      "symbol": null,
+      "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+      "line": 474,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageEntityRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageCanTransferItem",
+      "symbol": null,
+      "file": "plugins\\ragdollinteraction\\interaction\\sv_networking.lua",
+      "line": 31,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:StorageCanTransferItem:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerRankChanged",
+      "symbol": null,
+      "file": "schema\\hooks\\sv_hooks.lua",
+      "line": 224,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerRankChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerEditData",
+      "symbol": null,
+      "file": "schema\\hooks\\sv_hooks.lua",
+      "line": 424,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerEditData:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerEditObjectives",
+      "symbol": null,
+      "file": "schema\\hooks\\sv_hooks.lua",
+      "line": 433,
+      "realm": "server",
+      "framework_layer": "domain",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerEditObjectives:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "SetupDatabase",
+      "symbol": null,
+      "file": "gamemode\\init.lua",
+      "line": 21,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:SetupDatabase:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "DatabaseConnected",
+      "symbol": null,
+      "file": "gamemode\\init.lua",
+      "line": 31,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:DatabaseConnected:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PersistenceSave",
+      "symbol": null,
+      "file": "gamemode\\init.lua",
+      "line": 45,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PersistenceSave:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PersistenceLoad",
+      "symbol": null,
+      "file": "gamemode\\init.lua",
+      "line": 51,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PersistenceLoad:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CreateSalaryTimer",
+      "symbol": null,
+      "file": "gamemode\\shared.lua",
+      "line": 104,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CreateSalaryTimer:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "RetrievedPluginList",
+      "symbol": null,
+      "file": "plugins\\pluginconfig.lua",
+      "line": 181,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:RetrievedPluginList:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PluginConfigDisabled",
+      "symbol": null,
+      "file": "plugins\\pluginconfig.lua",
+      "line": 188,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PluginConfigDisabled:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "IsPlayerRecognized",
+      "symbol": null,
+      "file": "plugins\\recognition.lua",
+      "line": 71,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:IsPlayerRecognized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "IsPlayerRecognized",
+      "symbol": null,
+      "file": "plugins\\recognition.lua",
+      "line": 87,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:IsPlayerRecognized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "IsPlayerRecognized",
+      "symbol": null,
+      "file": "plugins\\recognition.lua",
+      "line": 111,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:IsPlayerRecognized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldDeleteSavedItems",
+      "symbol": null,
+      "file": "plugins\\saveitems.lua",
+      "line": 20,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldDeleteSavedItems:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnSavedItemLoaded",
+      "symbol": null,
+      "file": "plugins\\saveitems.lua",
+      "line": 51,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnSavedItemLoaded:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "WeaponCycleSound",
+      "symbol": null,
+      "file": "plugins\\wepselect.lua",
+      "line": 113,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:WeaponCycleSound:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "WeaponSelectSound",
+      "symbol": null,
+      "file": "plugins\\wepselect.lua",
+      "line": 152,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:WeaponSelectSound:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnItemSpawned",
+      "symbol": null,
+      "file": "entities\\entities\\nut_item.lua",
+      "line": 16,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnItemSpawned:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "DrawItemDescription",
+      "symbol": null,
+      "file": "entities\\entities\\nut_item.lua",
+      "line": 187,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:DrawItemDescription:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPickupMoney",
+      "symbol": null,
+      "file": "entities\\entities\\nut_money.lua",
+      "line": 31,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnPickupMoney:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GravGunOnDropped",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 209,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GravGunOnDropped:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerCanKnock",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 388,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerCanKnock:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GravGunPickupAllowed",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 445,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GravGunPickupAllowed:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPickupObject",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 465,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnPickupObject:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPickupObject",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 478,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnPickupObject:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetPreferredCarryAngles",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 540,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetPreferredCarryAngles:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GravGunOnPickedUp",
+      "symbol": null,
+      "file": "entities\\weapons\\nut_hands.lua",
+      "line": 595,
+      "realm": "unknown",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GravGunOnPickedUp:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharGivenItem",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_commands.lua",
+      "line": 324,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:CharGivenItem:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterFactionTransfered",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_commands.lua",
+      "line": 596,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterFactionTransfered:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InitializedConfig",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_config.lua",
+      "line": 89,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:InitializedConfig:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerModifyConfig",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_config.lua",
+      "line": 127,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerModifyConfig:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InitializedConfig",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_config.lua",
+      "line": 153,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:InitializedConfig:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerUseConfig",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_config.lua",
+      "line": 185,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerUseConfig:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPlayerRestricted",
+      "symbol": null,
+      "file": "gamemode\\core\\sh_util.lua",
+      "line": 259,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnPlayerRestricted:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PersistenceSave",
+      "symbol": null,
+      "file": "gamemode\\core\\sv_data.lua",
+      "line": 96,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PersistenceSave:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemPaintOver",
+      "symbol": null,
+      "file": "gamemode\\core\\derma\\cl_inventory.lua",
+      "line": 130,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemPaintOver:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCreateItemInteractionMenu",
+      "symbol": null,
+      "file": "gamemode\\core\\derma\\cl_inventory.lua",
+      "line": 153,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnCreateItemInteractionMenu:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "DrawNutModelView",
+      "symbol": null,
+      "file": "gamemode\\core\\derma\\cl_modelpanel.lua",
+      "line": 84,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:DrawNutModelView:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "TooltipLayout",
+      "symbol": null,
+      "file": "gamemode\\core\\derma\\cl_tooltip.lua",
+      "line": 65,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:TooltipLayout:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "TooltipPaint",
+      "symbol": null,
+      "file": "gamemode\\core\\derma\\cl_tooltip.lua",
+      "line": 105,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:TooltipPaint:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "TooltipInitialize",
+      "symbol": null,
+      "file": "gamemode\\core\\derma\\cl_tooltip.lua",
+      "line": 116,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:TooltipInitialize:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldCreateLoadingScreen",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "line": 340,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldCreateLoadingScreen:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CreateLoadingScreen",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "line": 341,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CreateLoadingScreen:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "AdjustBlurAmount",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "line": 426,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:AdjustBlurAmount:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemShowEntityMenu",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "line": 466,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemShowEntityMenu:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VManipPickupHook",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "line": 635,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:VManipPickupHook:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VManipPickupHook",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+      "line": 662,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:VManipPickupHook:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CheckFactionLimitReached",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sh_hooks.lua",
+      "line": 296,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:CheckFactionLimitReached:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "SetupBotInventory",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 14,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:SetupBotInventory:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "SetupBotCharacter",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 37,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:SetupBotCharacter:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerUseDoor",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 77,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerUseDoor:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerUseDoor",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 82,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerUseDoor:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerDropItem",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 134,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerDropItem:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerTakeItem",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 136,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerTakeItem:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CreateSalaryTimer",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 218,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CreateSalaryTimer:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PostPlayerSay",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 252,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PostPlayerSay:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharDisconnect",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 596,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharDisconnect:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PostLoadData",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 642,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:PostLoadData:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldDataBeSaved",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 647,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldDataBeSaved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PersistenceSave",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 732,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PersistenceSave:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PostLoadData",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 738,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:PostLoadData:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetSalaryAmount",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 868,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetSalaryAmount:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetSalaryLimit",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 869,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetSalaryLimit:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetSalaryInterval",
+      "symbol": null,
+      "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+      "line": 874,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetSalaryInterval:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPlayerEnterSequence",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_anims.lua",
+      "line": 378,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnPlayerEnterSequence:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetDefaultCharName",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_character.lua",
+      "line": 97,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetDefaultCharName:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetDefaultCharName",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_character.lua",
+      "line": 129,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetDefaultCharName:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetDefaultCharName",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_character.lua",
+      "line": 137,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetDefaultCharName:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharVarChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_character.lua",
+      "line": 189,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharVarChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharVarChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_character.lua",
+      "line": 306,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharVarChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerMessageSend",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+      "line": 156,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerMessageSend:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerMessageSend",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+      "line": 201,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerMessageSend:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnChatReceived",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+      "line": 209,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnChatReceived:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetPlayerIcon",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+      "line": 463,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetPlayerIcon:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerJoinClass",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_class.lua",
+      "line": 88,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerJoinClass:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPlayerJoinClass",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_class.lua",
+      "line": 125,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnPlayerJoinClass:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPlayerJoinClass",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_class.lua",
+      "line": 149,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnPlayerJoinClass:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerUseCommand",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_command.lua",
+      "line": 59,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerUseCommand:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerUseCommand",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_command.lua",
+      "line": 101,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerUseCommand:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterFlagCheck",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_flag.lua",
+      "line": 109,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterFlagCheck:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanPlayerSeeLog",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_log.lua",
+      "line": 93,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CanPlayerSeeLog:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PluginShouldLoad",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_plugin.lua",
+      "line": 7,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PluginShouldLoad:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "DoPluginIncludes",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_plugin.lua",
+      "line": 103,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:DoPluginIncludes:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InitializedSchema",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sh_plugin.lua",
+      "line": 205,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:InitializedSchema:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnMySQLOOConnected",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sv_database.lua",
+      "line": 251,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnMySQLOOConnected:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnWipeTables",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sv_database.lua",
+      "line": 510,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnWipeTables:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnLoadTables",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sv_database.lua",
+      "line": 547,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnLoadTables:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "RegisterPreparedStatements",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\sv_database.lua",
+      "line": 716,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:RegisterPreparedStatements:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterPostSave",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\sh_character.lua",
+      "line": 51,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterPostSave:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharPermakilled",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\sh_character.lua",
+      "line": 169,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharPermakilled:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharVarChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\sh_character.lua",
+      "line": 246,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharVarChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharVarChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\sh_character.lua",
+      "line": 255,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharVarChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ScreenResolutionChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\util\\cl_draw.lua",
+      "line": 61,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ScreenResolutionChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharVarChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+      "line": 13,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharVarChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCharLocalVarChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+      "line": 26,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnCharLocalVarChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CreateDefaultInventory",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+      "line": 28,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:CreateDefaultInventory:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterRestored",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+      "line": 100,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterRestored:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CreateDefaultInventory",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+      "line": 108,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:CreateDefaultInventory:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterCleanUp",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+      "line": 156,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterCleanUp:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PreCharacterDelete",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+      "line": 183,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:PreCharacterDelete:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemInitialized",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "line": 10,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemInitialized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemDataChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "line": 20,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemDataChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemQuantityChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "line": 31,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemQuantityChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemInitialized",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "line": 48,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemInitialized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InventoryItemRemoved",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "line": 75,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InventoryItemRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemDeleted",
+      "symbol": null,
+      "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+      "line": 79,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemDeleted:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InventoryDataChanged",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "line": 17,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InventoryDataChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ItemInitialized",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "line": 41,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ItemInitialized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InventoryInitialized",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "line": 45,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InventoryInitialized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InventoryItemAdded",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "line": 63,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InventoryItemAdded:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InventoryItemRemoved",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "line": 75,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InventoryItemRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InventoryDeleted",
+      "symbol": null,
+      "file": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+      "line": 83,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "unknown_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InventoryDeleted:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanDisplayArea",
+      "symbol": null,
+      "file": "plugins\\area\\sh_plugin.lua",
+      "line": 314,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:CanDisplayArea:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "PlayerSay",
+      "symbol": null,
+      "file": "plugins\\chatbox\\sh_plugin.lua",
+      "line": 102,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_gmod_builtin",
+      "classification_confidence": 0.9,
+      "classification_reasons": [
+        "known_gmod_builtin_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:PlayerSay:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPlayerLostStackItem",
+      "symbol": null,
+      "file": "plugins\\gridinv\\sh_grid_inv.lua",
+      "line": 328,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:OnPlayerLostStackItem:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterListUpdated",
+      "symbol": null,
+      "file": "plugins\\multichar\\cl_networking.lua",
+      "line": 12,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterListUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CharacterListLoaded",
+      "symbol": null,
+      "file": "plugins\\multichar\\cl_networking.lua",
+      "line": 14,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:CharacterListLoaded:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetMaxPlayerCharacter",
+      "symbol": null,
+      "file": "plugins\\multichar\\sh_plugin.lua",
+      "line": 20,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetMaxPlayerCharacter:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "AdjustCreationData",
+      "symbol": null,
+      "file": "plugins\\multichar\\sv_networking.lua",
+      "line": 94,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_hook",
+      "classification_confidence": 0.65,
+      "classification_reasons": [
+        "matches_schema_style_hook_prefix"
+      ],
+      "normalization_reasons": [
+        "literal:AdjustCreationData:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "nutCharDeleted",
+      "symbol": null,
+      "file": "plugins\\multichar\\sv_networking.lua",
+      "line": 116,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:nutCharDeleted:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnPAC3PartTransfered",
+      "symbol": null,
+      "file": "plugins\\pac\\cl_ragdolls.lua",
+      "line": 10,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:OnPAC3PartTransfered:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldPlayerDrown",
+      "symbol": null,
+      "file": "plugins\\playerinjuries\\sv_drowning.lua",
+      "line": 5,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldPlayerDrown:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetPlayerDeathSound",
+      "symbol": null,
+      "file": "plugins\\playerinjuries\\sv_hooks.lua",
+      "line": 23,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetPlayerDeathSound:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldWeaponBeRaised",
+      "symbol": null,
+      "file": "plugins\\raiseweapons\\sh_player_extensions.lua",
+      "line": 6,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldWeaponBeRaised:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageCanTransferItem",
+      "symbol": null,
+      "file": "plugins\\storage\\sv_networking.lua",
+      "line": 61,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:StorageCanTransferItem:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageRestored",
+      "symbol": null,
+      "file": "plugins\\storage\\sv_storage.lua",
+      "line": 147,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageRestored:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnOpenVendorMenu",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_hooks.lua",
+      "line": 3,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnOpenVendorMenu:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorSynchronized",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 39,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorSynchronized:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorMoneyUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 59,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorMoneyUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorItemPriceUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 70,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorItemPriceUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorItemModeUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 81,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorItemModeUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorItemStockUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 91,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorItemStockUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorItemMaxStockUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 102,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorItemMaxStockUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorFactionUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 115,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorFactionUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorClassUpdated",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 128,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorClassUpdated:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "VendorEdited",
+      "symbol": null,
+      "file": "plugins\\vendor\\cl_networking.lua",
+      "line": 136,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:VendorEdited:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldHideBars",
+      "symbol": null,
+      "file": "plugins\\bars\\libs\\cl_bar.lua",
+      "line": 123,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldHideBars:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldBarDraw",
+      "symbol": null,
+      "file": "plugins\\bars\\libs\\cl_bar.lua",
+      "line": 147,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldBarDraw:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ChatTextChanged",
+      "symbol": null,
+      "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+      "line": 178,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ChatTextChanged:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CanCreateCharInfo",
+      "symbol": null,
+      "file": "plugins\\f1menu\\derma\\cl_information.lua",
+      "line": 12,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CanCreateCharInfo:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "CreateCharInfo",
+      "symbol": null,
+      "file": "plugins\\f1menu\\derma\\cl_information.lua",
+      "line": 82,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:CreateCharInfo:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnCreateStoragePanel",
+      "symbol": null,
+      "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+      "line": 213,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnCreateStoragePanel:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "InterceptClickItemIcon",
+      "symbol": null,
+      "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+      "line": 65,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:InterceptClickItemIcon:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "OnRequestItemTransfer",
+      "symbol": null,
+      "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+      "line": 96,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:OnRequestItemTransfer:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetMaxPlayerCharacter",
+      "symbol": null,
+      "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+      "line": 69,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:GetMaxPlayerCharacter:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShouldMenuButtonShow",
+      "symbol": null,
+      "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+      "line": 75,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "missing_plugin_method_or_external_hook",
+      "classification_confidence": 0.55,
+      "classification_reasons": [
+        "literal_hook_has_no_matching_PLUGIN_method"
+      ],
+      "normalization_reasons": [
+        "literal:ShouldMenuButtonShow:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "GetDefaultCharName",
+      "symbol": null,
+      "file": "plugins\\multichar\\plugins\\charselect\\derma\\steps\\cl_biography.lua",
+      "line": 52,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_nutscript_builtin",
+      "classification_confidence": 0.85,
+      "classification_reasons": [
+        "known_or_likely_nutscript_hook_seed"
+      ],
+      "normalization_reasons": [
+        "literal:GetDefaultCharName:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "ShowFactionInScoreboard",
+      "symbol": null,
+      "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+      "line": 127,
+      "realm": "client",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_project_domain_hook",
+      "classification_confidence": 0.6,
+      "classification_reasons": [
+        "contains_domain_word"
+      ],
+      "normalization_reasons": [
+        "literal:ShowFactionInScoreboard:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageEntityRemoved",
+      "symbol": null,
+      "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+      "line": 46,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageEntityRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageEntityRemoved",
+      "symbol": null,
+      "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+      "line": 278,
+      "realm": "server",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageEntityRemoved:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    },
+    {
+      "hook_name": "StorageRestored",
+      "symbol": null,
+      "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua",
+      "line": 71,
+      "realm": "shared",
+      "framework_layer": "framework",
+      "plugin_context": "plugin_file",
+      "classification": "probably_schema_or_project_core_hook",
+      "classification_confidence": 0.8,
+      "classification_reasons": [
+        "known_project_core_domain_event_seed"
+      ],
+      "normalization_reasons": [
+        "literal:StorageRestored:no_plugin_method"
+      ],
+      "source_scan_plugin_methods": [],
+      "source_scan_hook_refs": []
+    }
+  ]
+}

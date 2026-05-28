@@ -1,0 +1,16 @@
+workspace_name: signalis_ai
+
+source_roots:
+  - E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\signalis
+  - E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript
+
+exclude:
+  - sandbox
+  - terrortown
+  - warhammer
+  - .git
+  - node_modules
+
+priority:
+  - signalis
+  - nutscript

@@ -1,0 +1,2106 @@
+[
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nut_DisplaySpawnPoints",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 96,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "hideAdd",
+    "file": "plugins\\admintools\\cl_hooks.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "createCustomItem",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 587,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "eventpointSetSpawn",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 9,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "eventpointSetUnbanTime",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 16,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "eventpointSpawnMenuSwitch",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 23,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "eventpointSpawnItem",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "eventpointSpawn300Mid",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 37,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "eventpointSpawn300Lrg",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "rezonatorAdd",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "rezonatorRemove",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 9,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "gasMaskOn",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 354,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "gasMaskOff",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 367,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "startO2Hud",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 380,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "endO2Hud",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 421,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oxystantionSelfFill",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 152,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oxystantionTankFill",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 159,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oxystantionL1Fill",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 166,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setBioSwep",
+    "file": "plugins\\biorezonance\\sv_hooks.lua",
+    "line": 173,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cOpen",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "workbenchInvClose",
+    "file": "plugins\\crafting\\cl_hooks.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "workbenchInvOpen",
+    "file": "plugins\\crafting\\sv_hooks.lua",
+    "line": 52,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "pressingSetProgram",
+    "file": "plugins\\crafting\\sv_hooks.lua",
+    "line": 59,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "fpotHarvest",
+    "file": "plugins\\farming\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "interfaceTurnOn",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 19,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpUserCard",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 26,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpReplicastatus",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 33,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpPointsUpdate",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpLocksView",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 47,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "compSendUserCardAccess",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 54,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "compSyncWorkShift",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 66,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpLocksInfo",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "doorInterfaceTurnOn",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 85,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "searchReplica",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 151,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "logOut",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 158,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "compAddShiftSv",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 165,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "remAddShiftSv",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 175,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lockResetPassword",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 188,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lockCorrectPass",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 195,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lockUpdateAccess",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 202,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpCard",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 209,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpCardAccess",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 216,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "getUserCardAccess",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 223,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpCardBodyGroup",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 230,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setCharPoints",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 237,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "getLocksView",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 244,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "getLockInfo",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 251,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lockNameChange",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 258,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "switchLockState",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 265,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "doorLockSwitchState",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 272,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "doorLockResetPassword",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 280,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "doorLockUpdateAccess",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 299,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesAddBlindness",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 11,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesRemoveBlindness",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 19,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesSelectWeapon",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 25,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesStatusInterfaceOpen",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 34,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesStatusInterfaceSync",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesHandleSwepSelect",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 229,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesStatusInterfaceClose",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 250,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesUseItem",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 268,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "diseasesStatusInterfaceTargetGetData",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 288,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "hudAddStatusIcon",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 434,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "hudHandleStatusIconCount",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 465,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "hudRemoveStatusIcon",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 484,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "hudRemoveAllStatusIcons",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 507,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryOpen",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 112,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "vendorTradeInterface",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 123,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemSplitTake",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 193,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "setUpTargetMoney",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 222,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "foodPartUseClient",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 259,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "foodPartAddClient",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 261,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "foodReadyPartAddClient",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 263,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "kettlePartAddClient",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 265,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemSplitDrop",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 267,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryUpdBg",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 269,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryUpdSkin",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 282,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryTargetUpdBg",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 290,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryTargetUpdSkin",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 304,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryCloseOnAction",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 313,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "invsRuleSet",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 312,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemSplitAdd",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 334,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemSplitDrop",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 501,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventoryPackAmmo",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 73,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "inventorySetPanelStatus",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 118,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "elPanelSendLamps",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 429,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lampLightUpdate",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 436,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lightItemGensViewShow",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 447,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "Topology_BatchStart",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 471,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "Topology_BatchChunk",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 482,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "Topology_BatchEnd",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 492,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "elPanelTryFix",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 15,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lightItemSwitchPower",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 22,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lampManage",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 29,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lightItemTakeOff",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lampSetPower",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 50,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "elPanelStartFix",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "elPanelRelaySetUp",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 64,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lightItemGensView",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 71,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "elPanelAttachToGen",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 78,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "genGroupToGen",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 86,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "genQuickCheck",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 94,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "genCheck",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 101,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "genRepair",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 108,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "genFill",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 115,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "genUngroup",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 122,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "RequestTopologyBake",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 287,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oresmelterSelectProgram",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oresmelterOvenStart",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 50,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oresmelterCrusherStart",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "oresmelterSmelterStart",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 64,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mnhrCloseVisor",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mnhrOpenVisor",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 94,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mnhrNvgOn",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 105,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mnhrNvgOff",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 115,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mnhrPowerArmorOut",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 122,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "plugMNHRToStation",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 255,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "stationMNHRRepair",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 262,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "stationFlashLight",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 269,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "stationNvg2",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 277,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "stationNvg3",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 288,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "stationWepPower",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 299,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingPotInterfaceTurnOn",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "kettleInterfaceTurnOn",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotGetCompositionClient",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotUpdateCompositionClient",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 70,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingovenFirstBurnerSwitch",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 297,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingovenStartFix",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 304,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotEat",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 311,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotPourOut",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 318,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotTakePortion",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 325,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotTakeOff",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 332,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotPickUp",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 339,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotPreserveFood",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 346,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "foodPartUseServer",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 353,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "foodPartAddServer",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 376,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "foodReadyPartAddServer",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 399,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "kettlePartAddServer",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 410,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "kettleTurnOn",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 419,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotGetCompositionServer",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 426,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingpotUpdateCompositionServer",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 433,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "waterfaucetDrawWater",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 440,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "waterfaucetDrinkWater",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 447,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "waterfaucetWash",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 454,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingboardCut",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 461,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingovenStartBake",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 468,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cookingovenTakeFood",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 475,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "sendVendorInfo",
+    "file": "plugins\\newvendorsystem\\cl_hooks.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "applyVendorAppearance",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "vendorTrade",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemVendorTradeSet",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 48,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemVendorBuySet",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 55,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "itemVendorRemove",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 62,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "updateVendorFaction",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "removeReceiverFromVendor",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "applyVendorPos",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 83,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "changeVendorPos",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 90,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "makeVendorMovable",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 97,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "attachAttachment",
+    "file": "plugins\\newweapons\\cl_hooks.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "detachAttachment",
+    "file": "plugins\\newweapons\\cl_hooks.lua",
+    "line": 9,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mopRemoveDecal",
+    "file": "plugins\\newweapons\\cl_hooks.lua",
+    "line": 15,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "smokeTryChoke",
+    "file": "plugins\\newweapons\\sv_hooks.lua",
+    "line": 9,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "attachAfterSelect",
+    "file": "plugins\\newweapons\\sv_hooks.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "radioAdjust",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "radioAdjust",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 135,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "radiostationSwitchPower",
+    "file": "plugins\\radio\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "radiostationRadioAdjust",
+    "file": "plugins\\radio\\sv_hooks.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "radiostationSendMsg",
+    "file": "plugins\\radio\\sv_hooks.lua",
+    "line": 17,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nvisionOn",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 150,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nvisionOff",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 156,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageOpen",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageChangePass",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageTakeOffLock",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 19,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageHangLock",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 26,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageNewDesc",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 33,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageCleanTrash",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 40,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "entFreezeState",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageLockTrashcan",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 61,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "storageInventory",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 68,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "charTraits",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 671,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "fakechatmessage",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 682,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "broketraitsetup",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 710,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "broketraitadd",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 1172,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "LevelupSkill",
+    "file": "plugins\\traits\\sh_skilltree.lua",
+    "line": 32,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "searchExit",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 136,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "searchPly",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 149,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "searchPly",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 216,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "searchExit",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 257,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutViewPaper",
+    "file": "plugins\\writing\\cl_hooks.lua",
+    "line": 1,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutWritingEdit",
+    "file": "plugins\\writing\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "attrib",
+    "file": "plugins\\attributes\\libs\\sh_attribs.lua",
+    "line": 104,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cPlayerActive",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 190,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cPlayerDisable",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 198,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cPlayerVolumeChanged",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 206,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lootMoney",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 32,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lootOpenClient",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 266,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpseInterfaceTurnOn",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 290,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "performCprChoose",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 313,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lootExit",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 194,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lootOpenServer",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 198,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lootWdMny",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 243,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "lootDpMny",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 266,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "performCpr",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 276,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpseCorruptFinish",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 326,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpseCorruptIgnite",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 407,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpseEat",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 420,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpsePlyFinish",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 505,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpseHide",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 535,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "corpseTakeAmmo",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 555,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cDisp",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 160,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "plyData",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 164,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "obj",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 168,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "voicePlay",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 172,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "dataCls",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 421,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "obj",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 432,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "panel",
+    "file": "plugins\\3dpanel.lua",
+    "line": 80,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "panelList",
+    "file": "plugins\\3dpanel.lua",
+    "line": 100,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "txt",
+    "file": "plugins\\3dtext.lua",
+    "line": 78,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "txtList",
+    "file": "plugins\\3dtext.lua",
+    "line": 106,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mapScn",
+    "file": "plugins\\mapscene.lua",
+    "line": 106,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mapScnDel",
+    "file": "plugins\\mapscene.lua",
+    "line": 115,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "mapScnInit",
+    "file": "plugins\\mapscene.lua",
+    "line": 127,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "rgnMenu",
+    "file": "plugins\\recognition.lua",
+    "line": 135,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "rgnDone",
+    "file": "plugins\\recognition.lua",
+    "line": 154,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "rgnDirect",
+    "file": "plugins\\recognition.lua",
+    "line": 179,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "rgn",
+    "file": "plugins\\recognition.lua",
+    "line": 192,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cfgSet",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 126,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cfgList",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cfgSet",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 156,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "vManipShowHands",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 752,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "vManipDoorAnimation",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 962,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nVar",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 7,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nDel",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 12,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nLcl",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 16,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "gVar",
+    "file": "gamemode\\core\\libs\\cl_networking.lua",
+    "line": 21,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "seqSet",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 426,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutCharFetchNames",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutCharFetchNames",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 49,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutCharFetchNames",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 111,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cMsg",
+    "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+    "line": 206,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "cmd",
+    "file": "gamemode\\core\\libs\\sh_command.lua",
+    "line": 266,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutDataSync",
+    "file": "gamemode\\core\\libs\\sh_player.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutData",
+    "file": "gamemode\\core\\libs\\sh_player.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutSyncGesture",
+    "file": "gamemode\\core\\meta\\sh_player.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "charInfo",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 1,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "charSet",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 5,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "charVar",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 17,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "charData",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 30,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "charKick",
+    "file": "gamemode\\core\\libs\\character\\cl_networking.lua",
+    "line": 39,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "item",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 1,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "invData",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 13,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "invQuantity",
+    "file": "gamemode\\core\\libs\\item\\cl_networking.lua",
+    "line": 24,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "invAct",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "areaEdit",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 149,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "areaTeleport",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "areaAdd",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 181,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "areaRemove",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 190,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "displayPosition",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 206,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "areaManager",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 243,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "displayAreaText",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 308,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "msg",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 100,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "nutAreaManager",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 77,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "actBar",
+    "file": "plugins\\bars\\libs\\cl_bar.lua",
+    "line": 165,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_ui_hook",
+    "message_name": "invMv",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\libs\\sh_item.lua",
+    "line": 92,
+    "realm": "shared",
+    "framework_layer": "framework"
+  }
+]

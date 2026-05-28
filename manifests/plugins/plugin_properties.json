@@ -1,0 +1,2990 @@
+[
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\diffchat.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\diffchat.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\diffchat.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\playerconnected.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\playerconnected.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\playerconnected.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\restrictQmenu.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "description",
+    "file": "plugins\\restrictQmenu.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\restrictQmenu.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\shootlock.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\shootlock.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\shootlock.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "config",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "timeData",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "sndWind",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "sndInternal",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "sndMusic",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "musicList",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "sirenSounds",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 49,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "sndWind",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "sndInternal",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 77,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "itempoints",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "spawngroups",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 7,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "spawnrate",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 33,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "maxitems",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 34,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "itemsperspawn",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "spawneditems",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 36,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\books\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\books\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\books\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "recipeList",
+    "file": "plugins\\crafting\\sh_config.lua",
+    "line": 122,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\farming\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\farming\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\farming\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\gadgets\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\gadgets\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\gadgets\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "mapdata",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "programlist",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 9,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "description",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\lootablecontainers\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\lootablecontainers\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "description",
+    "file": "plugins\\lootablecontainers\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\mining\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\mining\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "description",
+    "file": "plugins\\mining\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\newvendorsystem\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\newweapons\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\newweapons\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\newweapons\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\npc\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\npc\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\npc\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "corpseMaxDist",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\snowy_components\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\snowy_components\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\snowy_components\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\storageinterface\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "skilllist",
+    "file": "plugins\\traits\\sh_skillbooks.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "searchPanels",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 140,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "searchPanels",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 263,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\writing\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "description",
+    "file": "plugins\\writing\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\writing\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "maxLength",
+    "file": "plugins\\writing\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "localInvPanel",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 90,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "localParent",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 91,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "lootingInvPanel",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 110,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "localInvPanel",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 160,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "depositText",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 183,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "depositEntry",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 201,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "depositButton",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 208,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "lootingInvPanel",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 218,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "widthdrawText",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 237,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "widthdrawEntry",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 243,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "widthdrawButton",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 250,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "panel",
+    "file": "plugins\\writing\\derma\\cl_paper.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "panel",
+    "file": "plugins\\writing\\derma\\cl_paper.lua",
+    "line": 133,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\3dpanel.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\3dpanel.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\3dpanel.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "list",
+    "file": "plugins\\3dpanel.lua",
+    "line": 6,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "list",
+    "file": "plugins\\3dpanel.lua",
+    "line": 102,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\3dtext.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\3dtext.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\3dtext.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "list",
+    "file": "plugins\\3dtext.lua",
+    "line": 6,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "list",
+    "file": "plugins\\3dtext.lua",
+    "line": 108,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\ammosave.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\ammosave.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\ammosave.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "ammoList",
+    "file": "plugins\\ammosave.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\blur3d2d.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\blur3d2d.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\blur3d2d.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\chatsizediff.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\chatsizediff.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\chatsizediff.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\deathscreen.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\deathscreen.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\deathscreen.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\holsteredweps.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\holsteredweps.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\holsteredweps.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\logging.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\logging.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\logging.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\mapscene.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\mapscene.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\mapscene.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "scenes",
+    "file": "plugins\\mapscene.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "ordered",
+    "file": "plugins\\mapscene.lua",
+    "line": 12,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "scenes",
+    "file": "plugins\\mapscene.lua",
+    "line": 128,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\newvoice.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\newvoice.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\newvoice.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\nscredits.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\nscredits.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\nscredits.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\observer.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\observer.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\observer.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\permakill.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\permakill.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\permakill.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\persistence.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\persistence.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\persistence.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "entities",
+    "file": "plugins\\persistence.lua",
+    "line": 8,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "blacklist",
+    "file": "plugins\\persistence.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "overwrite",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 8,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\propprotect.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\propprotect.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\propprotect.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "PlayerSpawnedEffect",
+    "file": "plugins\\propprotect.lua",
+    "line": 108,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "PlayerSpawnedRagdoll",
+    "file": "plugins\\propprotect.lua",
+    "line": 109,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "PlayerSpawnedSENT",
+    "file": "plugins\\propprotect.lua",
+    "line": 115,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "PlayerSpawnedVehicle",
+    "file": "plugins\\propprotect.lua",
+    "line": 116,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\recognition.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\recognition.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\recognition.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\saveitems.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\saveitems.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\saveitems.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\serverguardsupport.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\serverguardsupport.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\serverguardsupport.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\spawns.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\spawns.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\spawns.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "spawns",
+    "file": "plugins\\spawns.lua",
+    "line": 6,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\spawnsaver.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\spawnsaver.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\spawnsaver.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\thirdperson.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\thirdperson.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\thirdperson.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\typing.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\typing.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\typing.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\vignette.lua",
+    "line": 1,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\vignette.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\vignette.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\wepselect.lua",
+    "line": 2,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\wepselect.lua",
+    "line": 3,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\wepselect.lua",
+    "line": 4,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "index",
+    "file": "plugins\\wepselect.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "deltaIndex",
+    "file": "plugins\\wepselect.lua",
+    "line": 12,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "infoAlpha",
+    "file": "plugins\\wepselect.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "alpha",
+    "file": "plugins\\wepselect.lua",
+    "line": 14,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "alphaDelta",
+    "file": "plugins\\wepselect.lua",
+    "line": 15,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "fadeTime",
+    "file": "plugins\\wepselect.lua",
+    "line": 16,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 740,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 744,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "folder",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "loading",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 45,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "path",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "loading",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 55,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "acts",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "areaTable",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\bars\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\bars\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\bars\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "INVENTORY_TYPE_ID",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\notices\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\notices\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\notices\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\nsintro\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\nsintro\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\nsintro\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\nstheme\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\nstheme\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\nstheme\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\pac\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\pac\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\pac\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "partData",
+    "file": "plugins\\pac\\sh_plugin.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\playerinjuries\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\playerinjuries\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\playerinjuries\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\raiseweapons\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\raiseweapons\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\raiseweapons\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "definitions",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\vendor\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\vendor\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\vendor\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "areaTable",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\_disabled\\simpleinv\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\_disabled\\simpleinv\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\_disabled\\simpleinv\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "INVENTORY_TYPE_ID",
+    "file": "plugins\\_disabled\\simpleinv\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "name",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "author",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_property",
+    "property_name": "desc",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  }
+]

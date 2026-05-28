@@ -1,0 +1,2833 @@
+[
+  {
+    "type": "command_effects",
+    "command_name": "adminspawnmenu",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 22,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "itemspawnadd",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 113,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "itemspawnremove",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 125,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "itemspawndisplay",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 143,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "doorkick",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "data",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "objectives",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 50,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "setpriority",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 60,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "request",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 87,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "createid",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 112,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "playsound",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 130,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "stopsound",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "getlocation",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 162,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "infiniteammo",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 214,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "translate",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "schema\\sh_commands.lua",
+    "line": 257,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "entinfo",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "targetdropitem",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": true,
+      "calls_item_hook": true,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 48,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "breakent",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 70,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "genminorbreak",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 84,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "genrepair",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "geninfo",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 110,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "genpanels",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 135,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "lampinfo",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 147,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "epanelinfo",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "genoilset",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 180,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "gencoolantset",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 197,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "potinfo",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 214,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "potsetctime",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 231,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "potsetactime",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 248,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "searchentinsphere",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 265,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "getentposlist",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 286,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "recreateents",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": true,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 300,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "delent",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 329,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "findentbyindex",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 344,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyoocmute",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 359,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyoocunmute",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 392,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charscale",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 426,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "chardell",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 507,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "itemhelper",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 549,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "createitem",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 604,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "spawntp",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 612,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "lampsblinking",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 622,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "lampsred",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 640,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "lampschangestop",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 663,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "selectenttotp",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 678,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "unselectenttotp",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 691,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "tpenttotrace",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": true,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 698,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "spawncockroaches",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": true,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 712,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "clearitems",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 736,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "clearragdolls",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 745,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "clearbees",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 758,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "moveto",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": true,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 767,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "biorezinfo",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 775,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyinvitemsdel",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 800,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyunbusy",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 818,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "hideintab",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 829,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsetattrib",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\attributes\\sh_commands.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charaddattrib",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\attributes\\sh_commands.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "addrezonator",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 79,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "screamer",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 460,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "screamer2",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 488,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "closevisor",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 505,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "openvisor",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 525,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "freeworkbench",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 317,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "hackmenu",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 418,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyinfect",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 137,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plydisinfect",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 171,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plydisinfectall",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 199,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plysetstatus",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 215,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyresetbodydata",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 234,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plygetbodydata",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 383,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plygetstatuses",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 396,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plydropstatuses",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 406,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plygetblood",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 416,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plysetblood",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 431,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plygethp",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 445,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plysetmaxhp",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 459,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "fallover",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 474,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plygetboosts",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": true,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 491,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plydamage",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 504,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "storagegiveitem",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "stginvlist",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "stgrmvitmbyid",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 89,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "strgrmvnstkitm",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 113,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "strgrmvstkitm",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 161,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "gengroup",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 353,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "spawnloot",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\lootablecontainers\\sv_hooks.lua",
+    "line": 188,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "giveloyalty",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "giveviolation",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 80,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "replikastatus",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 167,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "chargiveloyalty",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 214,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "chargiveviolation",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 232,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charcheckpoints",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 250,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "crushore",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\mining\\sh_plugin.lua",
+    "line": 66,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "sethunger",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 103,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "setthirst",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 127,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "updatevolume",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 151,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "fixfoodcontainers",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\needs\\sh_plugin.lua",
+    "line": 160,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "setchardeathparam",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "checkalcohlevel",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 539,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyremovetrait",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 552,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plysettrait",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 570,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "dotraits",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 698,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsearch",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 272,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "struggle",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "untying",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": true,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 118,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "paneladd",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\3dpanel.lua",
+    "line": 144,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "panelremove",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\3dpanel.lua",
+    "line": 167,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "textadd",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\3dtext.lua",
+    "line": 158,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "textremove",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\3dtext.lua",
+    "line": 177,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "mapsceneadd",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\mapscene.lua",
+    "line": 167,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "mapsceneremove",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\mapscene.lua",
+    "line": 191,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "checkduplicates",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": true,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\persistence.lua",
+    "line": 109,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "spawnadd",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\spawns.lua",
+    "line": 50,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "spawnremove",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\spawns.lua",
+    "line": 118,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "roll",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "pm",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "reply",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "sat",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 56,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "сат",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 63,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "sler",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 80,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "слер",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 88,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "setvoicemail",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 96,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "flaggive",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 113,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "flagtake",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 144,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsetmodel",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsetskin",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 189,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsetbodygroup",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 205,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsetbodygroupind",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 235,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charsetname",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 264,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "chargiveitem",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 288,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charkick",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 335,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charban",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 354,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "charunban",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 371,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "givemoney",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 423,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plywhitelist",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 448,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "chargetup",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 468,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plyunwhitelist",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 486,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "beclass",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 506,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "chardesc",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 550,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "plytransfer",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 574,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "clearinv",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": true,
+      "uses_find_player": true,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 611,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "content",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 628,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "areaadd",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 385,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "arearemove",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 426,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "areachange",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 450,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "areamanager",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 472,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "toggleraise",
+    "effects": {
+      "uses_trace": false,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": false
+    },
+    "file": "plugins\\raiseweapons\\sh_plugin.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "command_effects",
+    "command_name": "storagelock",
+    "effects": {
+      "uses_trace": true,
+      "uses_inventory": false,
+      "uses_find_player": false,
+      "uses_position_mutation": false,
+      "uses_entity_class_check": false,
+      "uses_print_table": false,
+      "calls_item_action": false,
+      "calls_item_hook": false,
+      "calls_notify": true
+    },
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "framework"
+  }
+]

@@ -1,0 +1,690 @@
+[
+  {
+    "type": "net_start",
+    "message_name": "adminSpawnMenu",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "adminSpawnItem",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 65,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ChatMessage",
+    "file": "schema\\sh_commands.lua",
+    "line": 265,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "mgbase_tpanim",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weaponhacks.lua",
+    "line": 182,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "OpenItemManager",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 552,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "OpenCustomItemMenu",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 607,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "SendItemData",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 67,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "SendEntityData",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 85,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ItemUpdated",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 95,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ItemUpdated",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 108,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ShowScreamerImage2",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 439,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ShowScreamerImage",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 475,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "openhkmenu",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 425,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "givenearbyents",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 469,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "requestnearbyents",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 768,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "hackfail",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 979,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "hackent",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1231,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "RequestItemData",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 19,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ClearAllItems",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 34,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "RemoveEntity",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 61,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "cOpen",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 131,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "StartCraft",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 50,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageOpen",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 104,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "openhkmenu",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 145,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "RandomNumber",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 153,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageOpen",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+    "line": 107,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "ItemFound",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 62,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageOpen",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 169,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageOpen",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_board\\init.lua",
+    "line": 122,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "CreedBroomSweep",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 67,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "CreedBroomSweep2",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 70,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCorpseTransfer",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 284,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPluginDisable",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 59,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPluginList",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 92,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPluginDisable",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 133,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPluginList",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 160,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutTypeStatus",
+    "file": "plugins\\typing.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutTypeStatus",
+    "file": "plugins\\typing.lua",
+    "line": 17,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "VManip_PickupEntity",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 514,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "VManip_SimplePlay",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 978,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "VManip_SimplePlay",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 982,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "VManip_SimplePlay",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 990,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "VManip_SimplePlay",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 995,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "VManip_SimplePlay",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 1001,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "syncClientTime",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "syncClientTime",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 161,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharacterInvList",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 172,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStringReq",
+    "file": "gamemode\\core\\util\\cl_stringreq.lua",
+    "line": 16,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutNotify",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutNotifyL",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 29,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStringReq",
+    "file": "gamemode\\core\\util\\sv_stringreq.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "NetStreamDS",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 89,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "NetStreamDS",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 137,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutInventoryAdd",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutInventoryRemove",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 115,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutInventoryData",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 275,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutInventoryInit",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 284,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutInventoryDelete",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 330,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutItemDelete",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutItemInstance",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 146,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutTransferItem",
+    "file": "plugins\\gridinv\\sh_grid_inv.lua",
+    "line": 385,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharList",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharChoose",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharCreate",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 86,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharDelete",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 100,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharChoose",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 11,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutCharCreate",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 45,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPACSync",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 13,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPACPartAdd",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 19,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPACPartRemove",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutPACPartReset",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 41,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageExit",
+    "file": "plugins\\storage\\cl_networking.lua",
+    "line": 12,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageUnlock",
+    "file": "plugins\\storage\\cl_password.lua",
+    "line": 7,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageTransfer",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorEdit",
+    "file": "plugins\\vendor\\cl_editor.lua",
+    "line": 5,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorOpen",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 176,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorAllowFaction",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 182,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorAllowClass",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 188,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutInventoryDelete",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutTransferItem",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 152,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageOpen",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 79,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutStorageUnlock",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 126,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorTrade",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 81,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorTrade",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 88,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorExit",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 235,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "net_start",
+    "message_name": "nutVendorExit",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 269,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

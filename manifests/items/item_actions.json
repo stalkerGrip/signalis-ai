@@ -1,0 +1,641 @@
+[
+  {
+    "type": "item_action",
+    "action_name": "Use",
+    "file": "plugins\\armor\\items\\base\\sh_armor_repair_kit.lua",
+    "line": 46,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipUnNew",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 278,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipUn",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 365,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipNew",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 397,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Equip",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 504,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Lower",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 23,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Raise",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 65,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 72,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\biorezonance\\items\\sh_thermite.lua",
+    "line": 31,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "closeVisor",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 104,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "openVisor",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 128,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Read",
+    "file": "plugins\\books\\items\\base\\sh_books.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Read",
+    "file": "plugins\\books\\items\\base\\sh_bucklets.lua",
+    "line": 8,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "zdestroy",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 51,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "take",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 44,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "take",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 45,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "combine",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 85,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "take",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 138,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "zdestroy",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 205,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "place",
+    "file": "plugins\\crafting\\items\\base\\sh_storage_consumables.lua",
+    "line": 9,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "place",
+    "file": "plugins\\crafting\\items\\base\\sh_workbench_consumables.lua",
+    "line": 9,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "_Place",
+    "file": "plugins\\farming\\items\\base\\sh_pot.lua",
+    "line": 9,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Assign",
+    "file": "plugins\\gadgets\\items\\sh_cid.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Place",
+    "file": "plugins\\gadgets\\items\\sh_civil_lock.lua",
+    "line": 14,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Place",
+    "file": "plugins\\gadgets\\items\\sh_nation_lock.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Place",
+    "file": "plugins\\gadgets\\items\\sh_protect_lock.lua",
+    "line": 14,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "detachremote",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 79,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "programej",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 99,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Open",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 140,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Equip",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 155,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipUn",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 174,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Use",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 248,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "TreatOnPlayer",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 264,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "place",
+    "file": "plugins\\lightitems\\items\\base\\sh_electrical_appliances.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "place",
+    "file": "plugins\\lightitems\\items\\base\\sh_glowstick.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "attach",
+    "file": "plugins\\lightitems\\items\\engineering_consumables\\sh_eng_wiring.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "unAttach",
+    "file": "plugins\\lightitems\\items\\engineering_consumables\\sh_eng_wiring.lua",
+    "line": 62,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\needs\\items\\sh_metalcan.lua",
+    "line": 14,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "UseFilter",
+    "file": "plugins\\needs\\items\\sh_water_filter.lua",
+    "line": 7,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 24,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "pourOut",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 55,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "place",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 14,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "partAdd",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 88,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "partUse",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 20,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "partAdd",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 34,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 51,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "pourOut",
+    "file": "plugins\\needs\\items\\food\\sh_drink_waterbottle.lua",
+    "line": 38,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "toggle",
+    "file": "plugins\\radio\\items\\sh_mcradio.lua",
+    "line": 53,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "toggle",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 53,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 65,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "toggle",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 48,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 60,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "read",
+    "file": "plugins\\traits\\items\\base\\sh_skillbook.lua",
+    "line": 14,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Use",
+    "file": "plugins\\tying\\items\\sh_tie.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "View",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 16,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Edit",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 32,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Drink",
+    "file": "schema\\items\\sh_bleach.lua",
+    "line": 6,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Use",
+    "file": "schema\\items\\sh_drugs_cigarettes.lua",
+    "line": 19,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Open",
+    "file": "schema\\items\\sh_ration.lua",
+    "line": 11,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "TakeSlag",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 18,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "place",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 68,
+    "realm": "compound",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action",
+    "action_name": "use",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 29,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipUn",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 75,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Equip",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 90,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipUnNew",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 117,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipUn",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 205,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "EquipNew",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 274,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Equip",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 423,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Unload",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 522,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "Use",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 604,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action",
+    "action_name": "View",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 13,
+    "realm": "compound",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "type": "nut_table_assignment",
+    "namespace": "biorez",
+    "full_name": "nut.biorez",
+    "assignment_style": "preserve_or_create",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "biorez.rezonators",
+    "full_name": "nut.biorez.rezonators",
+    "assignment_style": "preserve_or_create",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "biorez.customRezonators",
+    "full_name": "nut.biorez.customRezonators",
+    "assignment_style": "preserve_or_create",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "diseases.stringConsts",
+    "full_name": "nut.diseases.stringConsts",
+    "assignment_style": "preserve_or_create",
+    "registry_class": "symbolic_constant_registry",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "diseases.stringConstsLocalization",
+    "full_name": "nut.diseases.stringConstsLocalization",
+    "assignment_style": "direct_table",
+    "registry_class": "symbolic_constant_registry",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 77,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "diseases.registered",
+    "full_name": "nut.diseases.registered",
+    "assignment_style": "preserve_or_create",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 81,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "diseases.loaded",
+    "full_name": "nut.diseases.loaded",
+    "assignment_style": "preserve_or_create",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 127,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "diseases.randomGetDiseases",
+    "full_name": "nut.diseases.randomGetDiseases",
+    "assignment_style": "direct_table",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 128,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "traits.list",
+    "full_name": "nut.traits.list",
+    "assignment_style": "direct_table",
+    "registry_class": "generic_nut_registry",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "class.list",
+    "full_name": "nut.class.list",
+    "assignment_style": "direct_table",
+    "registry_class": "generic_nut_registry",
+    "file": "gamemode\\core\\libs\\sh_class.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "inventory.types",
+    "full_name": "nut.inventory.types",
+    "assignment_style": "direct_table",
+    "registry_class": "generic_nut_registry",
+    "file": "gamemode\\core\\libs\\sh_inventory.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "db.pool",
+    "full_name": "nut.db.pool",
+    "assignment_style": "direct_table",
+    "registry_class": "generic_nut_registry",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 220,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_table_assignment",
+    "namespace": "db.queryQueue",
+    "full_name": "nut.db.queryQueue",
+    "assignment_style": "direct_table",
+    "registry_class": "generic_nut_registry",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 331,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

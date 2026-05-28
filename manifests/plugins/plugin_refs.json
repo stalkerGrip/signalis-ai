@@ -1,0 +1,425 @@
+[
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list.doors",
+    "file": "schema\\sh_schema.lua",
+    "line": 182,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list.doors",
+    "file": "schema\\sh_schema.lua",
+    "line": 195,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hackprogram.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hackprogram.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hackprogram.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hackprogram.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 107,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 124,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 125,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 126,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 127,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list.scanner",
+    "file": "schema\\derma\\cl_combine.lua",
+    "line": 42,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list.scanner",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 177,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.initialize",
+    "file": "gamemode\\shared.lua",
+    "line": 86,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.initialize",
+    "file": "gamemode\\shared.lua",
+    "line": 110,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.setDisabled",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 56,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.isDisabled",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 98,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 736,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.namecache",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 749,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.isDisabled",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 848,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.unloaded",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.unloaded",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.load",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 38,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadExtras",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 49,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 83,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadExtras",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 94,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadEntities",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 99,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadFromDir",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 101,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadEntities",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 112,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.initialize",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 201,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadFromDir",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 202,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.load",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 204,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadFromDir",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 207,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadFromDir",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 208,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.loadFromDir",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 213,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.load",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 217,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.load",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 221,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.setDisabled",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 225,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.isDisabled",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 233,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list",
+    "file": "plugins\\f1menu\\derma\\cl_helps.lua",
+    "line": 68,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.namecache",
+    "file": "plugins\\f1menu\\derma\\cl_helps.lua",
+    "line": 75,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_ref",
+    "reference": "nut.plugin.list.mapscene",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 75,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  }
+]

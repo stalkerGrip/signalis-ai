@@ -1,0 +1,110 @@
+[
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "mnhrflashlight",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 32,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "flashlight",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "radio",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 189,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "radio",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 233,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "mnhrflashlight",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 189,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "flashlight",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 197,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "oxy_tank",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 113,
+    "realm": "server",
+    "framework_layer": "domain",
+    "file_context": "entity_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "outfit_l1",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 144,
+    "realm": "server",
+    "framework_layer": "domain",
+    "file_context": "entity_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "metalcan",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 206,
+    "realm": "client",
+    "framework_layer": "domain",
+    "file_context": "plugin_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "paper",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 720,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "file_context": "entity_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "ration_mark",
+    "file": "gamemode\\core\\libs\\sh_currency.lua",
+    "line": 57,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "file_context": "unknown_file"
+  },
+  {
+    "type": "inventory_item_type_query",
+    "item_type": "ration_mark",
+    "file": "gamemode\\core\\libs\\sh_currency.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "file_context": "unknown_file"
+  }
+]

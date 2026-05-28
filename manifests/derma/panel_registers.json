@@ -1,0 +1,754 @@
+[
+  {
+    "type": "vgui_register",
+    "panel_name": "nutRadioDial",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 56,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutRadioMenu",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 117,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "eventpointInterface",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 152,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutAttribBar",
+    "file": "plugins\\attributes\\derma\\cl_attribute.lua",
+    "line": 142,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterAttribs",
+    "file": "plugins\\attributes\\derma\\cl_attributes_step.lua",
+    "line": 106,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterAttribsRow",
+    "file": "plugins\\attributes\\derma\\cl_attributes_step.lua",
+    "line": 197,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "oxystantionInterface",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 55,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCraftItem",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 57,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCrafting",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 120,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "pressingInterface",
+    "file": "plugins\\crafting\\derma\\cl_pressing_interface.lua",
+    "line": 72,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "workbenchInterface",
+    "file": "plugins\\crafting\\derma\\cl_workbench_interface.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "farmingpotInterface",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 48,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "computerInterface",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 828,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "doorLockInterface",
+    "file": "plugins\\gadgets\\derma\\cl_door_interface.lua",
+    "line": 277,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nationlockInterface",
+    "file": "plugins\\gadgets\\derma\\cl_nationlock_interface.lua",
+    "line": 270,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "statusInterface",
+    "file": "plugins\\healthproblems\\derma\\cl_status_interface.lua",
+    "line": 264,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "extendedNutGridInventory",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 267,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "vendor_grid_inventory",
+    "file": "plugins\\inventory\\derma\\cl_vendor_grid_inventory.lua",
+    "line": 123,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "electricPanelInterface",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 152,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "genInterface",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 254,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "lampInterface",
+    "file": "plugins\\lightitems\\derma\\cl_lamp_interface.lua",
+    "line": 87,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "oresmelterInterface",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 108,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "mnhrstationInterface",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 236,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "cookingboardInterface",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 180,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "cookingovenInterface",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 133,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "cookingInterface",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 248,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "kettleInterface",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 73,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "waterfaucetInterface",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 165,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "vendorInterface",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 335,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "radiostationPanelInterface",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 109,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "corpseInterface",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 131,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "ModScroll",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 13,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "ModEntry",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 32,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "ModCombo",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "ModLabel",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 61,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "MButt",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 94,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "TermEntry",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 114,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "DIGIT",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 177,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "storageInterface",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 239,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutTraitStuff",
+    "file": "plugins\\traits\\derma\\cl_traitcreation.lua",
+    "line": 478,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutPaper",
+    "file": "plugins\\writing\\derma\\cl_paper.lua",
+    "line": 136,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCombineDisplay",
+    "file": "schema\\derma\\cl_combine.lua",
+    "line": 72,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutData",
+    "file": "schema\\derma\\cl_data.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutObjective",
+    "file": "schema\\derma\\cl_objective.lua",
+    "line": 38,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "VoicePanel",
+    "file": "plugins\\newvoice.lua",
+    "line": 73,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "CreditsNamePanel",
+    "file": "plugins\\nscredits.lua",
+    "line": 93,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "CreditsContribPanel",
+    "file": "plugins\\nscredits.lua",
+    "line": 123,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "CreditsCreditsList",
+    "file": "plugins\\nscredits.lua",
+    "line": 147,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "CreditsLogo",
+    "file": "plugins\\nscredits.lua",
+    "line": 163,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCreditsList",
+    "file": "plugins\\nscredits.lua",
+    "line": 213,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutTPConfig",
+    "file": "plugins\\thirdperson.lua",
+    "line": 67,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutHelperFrame",
+    "file": "entities\\weapons\\nut_poshelper.lua",
+    "line": 156,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "iconPreview",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 58,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "iconRenderPreview",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 102,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "iconEditor",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 531,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutHorizontalScroll",
+    "file": "gamemode\\core\\derma\\cl_horizontal_scroll.lua",
+    "line": 95,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutHorizontalScrollBar",
+    "file": "gamemode\\core\\derma\\cl_horizontal_scroll_bar.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutItemIcon",
+    "file": "gamemode\\core\\derma\\cl_inventory.lua",
+    "line": 259,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutInventory",
+    "file": "gamemode\\core\\derma\\cl_inventory.lua",
+    "line": 309,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutModelPanel",
+    "file": "gamemode\\core\\derma\\cl_modelpanel.lua",
+    "line": 102,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutQuick",
+    "file": "gamemode\\core\\derma\\cl_quick.lua",
+    "line": 246,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutSpawnIcon",
+    "file": "gamemode\\core\\derma\\cl_spawnicon.lua",
+    "line": 95,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutAreaManager",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 75,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutChatBox",
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 376,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutMarkupPanel",
+    "file": "plugins\\chatbox\\derma\\cl_markup.lua",
+    "line": 15,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharInfo",
+    "file": "plugins\\f1menu\\derma\\cl_information.lua",
+    "line": 156,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutMenu",
+    "file": "plugins\\f1menu\\derma\\cl_menu.lua",
+    "line": 191,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutMenuButton",
+    "file": "plugins\\f1menu\\derma\\cl_menubutton.lua",
+    "line": 63,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutGridInventory",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutGridInvItem",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_item.lua",
+    "line": 39,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutGridInventoryPanel",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 322,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharBGMusic",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua",
+    "line": 67,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharButton",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_button.lua",
+    "line": 24,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacter",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 249,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterSlot",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 153,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterConfirm",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_confirmation.lua",
+    "line": 119,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterCreation",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 376,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterSelection",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_selection.lua",
+    "line": 85,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterCreateStep",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_step.lua",
+    "line": 108,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterTabButton",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_tab_button.lua",
+    "line": 54,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterBiography",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\steps\\cl_biography.lua",
+    "line": 90,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterFaction",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\steps\\cl_faction.lua",
+    "line": 85,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutCharacterModel",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\steps\\cl_model.lua",
+    "line": 91,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutNotice",
+    "file": "plugins\\notices\\derma\\cl_notice.lua",
+    "line": 29,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutIntro",
+    "file": "plugins\\nsintro\\derma\\cl_intro.lua",
+    "line": 147,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutScoreboard",
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 321,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutVendor",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 260,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutVendorEditor",
+    "file": "plugins\\vendor\\derma\\cl_vendoreditor.lua",
+    "line": 327,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutVendorFactionEditor",
+    "file": "plugins\\vendor\\derma\\cl_vendorfaction.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutVendorItem",
+    "file": "plugins\\vendor\\derma\\cl_vendor_item.lua",
+    "line": 140,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutVendorTrader",
+    "file": "plugins\\vendor\\derma\\cl_vendor_trader.lua",
+    "line": 43,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutListInventory",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\derma\\cl_list_inventory.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutListInventoryPanel",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\derma\\cl_list_inventory_panel.lua",
+    "line": 175,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_register",
+    "panel_name": "nutListStorage",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\derma\\cl_list_storage.lua",
+    "line": 111,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

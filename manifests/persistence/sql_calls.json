@@ -1,0 +1,66 @@
+[
+  {
+    "type": "sql_call",
+    "method_name": "Query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 44,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "LastError",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 45,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "QueryValue",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 52,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "SQLStr",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "escape",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 94,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "SQLStr",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 94,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "initialize",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 106,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "sql_call",
+    "method_name": "SQLStr",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 164,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

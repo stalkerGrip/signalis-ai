@@ -1,0 +1,3188 @@
+[
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\admintools\\items\\sh_fixed_customitem.lua",
+    "line": 9,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\admintools\\items\\sh_fixed_customitem.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\admintools\\items\\sh_fixed_customitem.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\admintools\\items\\sh_fixed_customitem.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\admintools\\items\\sh_fixed_customitem.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 122,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "call",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 176,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 188,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 209,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 211,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 214,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 221,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "onWear",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 225,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 229,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "removeOutfit",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 236,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 693,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 705,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 716,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "wearOutfit",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 717,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 724,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "removeOutfit",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 725,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 755,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setWorkTimecheck",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 771,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 771,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 783,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 786,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 93,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 150,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\biorezonance\\items\\sh_thermite.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 56,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 66,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "wearOutfit",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setWorkTime",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 70,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 79,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 63,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 68,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 87,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 87,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 87,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "wearOutfit",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 90,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setWorkTime",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 91,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_ammo_comsumables.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_ammo_comsumables.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_ammo_comsumables.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_ammo_comsumables.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_ammo_comsumables.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_ammo_comsumables.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 38,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 42,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_engineering_consumables.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_engineering_consumables.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_engineering_consumables.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_engineering_consumables.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_engineering_consumables.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_engineering_consumables.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_explosives_consumables.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_explosives_consumables.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_explosives_consumables.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_explosives_consumables.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_explosives_consumables.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_explosives_consumables.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_generator_comsumables.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_generator_comsumables.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_generator_comsumables.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_generator_comsumables.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_generator_comsumables.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_generator_comsumables.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 192,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 195,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 199,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_medical_consumables.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_medical_consumables.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_medical_consumables.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_medical_consumables.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_medical_consumables.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_medical_consumables.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_weapon_consumables.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_weapon_consumables.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_weapon_consumables.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_weapon_consumables.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_weapon_consumables.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\base\\sh_weapon_consumables.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\crafting\\items\\junk\\sh_junk_bodybag.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\crafting\\items\\junk\\sh_junk_bodybag.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\crafting\\items\\junk\\sh_junk_bodybag.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_cid.lua",
+    "line": 65,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_cid.lua",
+    "line": 65,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_cid.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_nation_cid.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_nation_cid.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_nation_cid.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gadgets\\items\\sh_nation_cid.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\sh_hack_remote.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\sh_hack_remote.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\sh_hack_remote.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 33,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 50,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getOwner",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 63,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getOwner",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getOwner",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 190,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 191,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 193,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 194,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 199,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyWoundsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 116,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBleedingsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 117,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyAcidBurnsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 118,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyHeatBurnsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBoneFracturesTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 120,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyWoundsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 140,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBleedingsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 141,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyHeatBurnsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 142,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyAcidBurnsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 143,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBoneFracturesTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 144,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyWoundsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 148,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBleedingsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 149,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyHeatBurnsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 150,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyAcidBurnsTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 151,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBoneFracturesTreatment",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 152,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 162,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 164,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "Use",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 195,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "SetAction",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 212,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "SetUpAfterUse",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 218,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 298,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 302,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 306,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_bandage.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_health_kit.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_health_vial.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_alkali.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyWoundsTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_army_stimulator.lua",
+    "line": 62,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBleedingsTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_army_stimulator.lua",
+    "line": 63,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBoneFracturesTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_army_stimulator.lua",
+    "line": 64,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyWoundsTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_autoinjector.lua",
+    "line": 60,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBleedingsTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_autoinjector.lua",
+    "line": 61,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_gestalt_first_aid_kit.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_pantenol.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_pantenol_bandage.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_patch.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_simple_bandage.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 26,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_splint.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApllyTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_stimulator.lua",
+    "line": 60,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "Use",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBleedingsTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyWoundsTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 42,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TryApplyBoneFracturesTreatment",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 45,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 125,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 129,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 136,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 148,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 155,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 159,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 163,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "TreatDisease",
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua",
+    "line": 167,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 19,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 100,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 104,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 110,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 113,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua",
+    "line": 97,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua",
+    "line": 83,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\lightitems\\items\\generator_comsumables\\sh_gen_coolant_canister.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\lightitems\\items\\generator_comsumables\\sh_gen_machine_oil_canister.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\mining\\items\\base\\sh_ore.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\mining\\items\\base\\sh_ore.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\sh_metalcan.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\sh_metalcan.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 82,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 108,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 109,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 110,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 111,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 112,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 114,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 117,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 121,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 71,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 72,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 75,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 76,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 81,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 143,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 147,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 148,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 149,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 150,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 153,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 159,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 164,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 165,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 173,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 174,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 177,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 178,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "freezeSpoiling",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 201,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "startSpoiling",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 209,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 230,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 231,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 234,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 235,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 239,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 244,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 244,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 244,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 248,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 278,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 281,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 284,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 285,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 289,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 296,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 298,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 300,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 301,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 302,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 308,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 308,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 311,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 318,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 395,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 397,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 400,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 401,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 422,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 426,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 432,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 436,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\needs\\items\\food\\sh_drink_waterbottle.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_whiskey.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\needs\\items\\food\\sh_drink_whiskey.lua",
+    "line": 32,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_whiskey.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_whiskey.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_red.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_red.lua",
+    "line": 32,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_red.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_red.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_white.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_white.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_white.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_white.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drugs_cigarette.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "plugins\\needs\\items\\food\\sh_drugs_cigarette.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "remove",
+    "file": "plugins\\needs\\items\\food\\sh_drugs_cigarette.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\radio\\items\\sh_mcradio.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 38,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "disableTimer",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "removeOutfit",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 58,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 61,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_mnhrflashlight.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "disableTimer",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_mnhrflashlight.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "removeOutfit",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_mnhrflashlight.lua",
+    "line": 44,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 48,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "schema\\items\\sh_drugs_cigarettes.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "schema\\items\\sh_matches.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "schema\\items\\sh_matches.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "schema\\items\\sh_matches.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getID",
+    "file": "gamemode\\core\\meta\\sh_item.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "framework_metaclass"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "calcPrice",
+    "file": "gamemode\\core\\meta\\sh_item.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "framework_metaclass"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getID",
+    "file": "gamemode\\core\\meta\\sh_item.lua",
+    "line": 101,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "framework_metaclass"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getQuantity",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 82,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 85,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setQuantity",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 89,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 128,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 136,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "removePart",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 147,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 55,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "handleUnEquipGreande",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 61,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 65,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 71,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 72,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 768,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 776,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 787,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 790,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 795,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 809,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 813,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 819,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 837,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 838,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 907,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 928,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getID",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 53,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "setData",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 59,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "resolveInvAwaiters",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 62,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "resolveInvAwaiters",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 72,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 78,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 85,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getInv",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 89,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getData",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 96,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getInv",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getInv",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getInv",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 133,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_self_call",
+    "method_name": "getInv",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 150,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  }
+]

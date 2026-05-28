@@ -1,0 +1,994 @@
+[
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 32,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacterAttribs",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 127,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 123,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 52,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 139,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCrafting",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 291,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 709,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DButton",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1099,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "statusInterface",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 37,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 169,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 443,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 6,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "extendedNutGridInventory",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "vendor_grid_inventory",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 133,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 196,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 233,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 9,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 20,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 28,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DIconLayout",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutRadioMenu",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 120,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutTraitStuff",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 404,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 420,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DButton",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 455,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 725,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutInventory",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 223,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutInventory",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 229,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutPaper",
+    "file": "plugins\\writing\\cl_hooks.lua",
+    "line": 2,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 4,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DListView",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 10,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DButton",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 30,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DButton",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DComboBox",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 83,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DTextEntry",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 88,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\admintools\\derma\\cl_menu.lua",
+    "line": 12,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\books\\items\\base\\sh_books.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\books\\items\\base\\sh_bucklets.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DScrollPanel",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 69,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DCategoryList",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 74,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DIconLayout",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 92,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\crafting\\derma\\cl_pressing_interface.lua",
+    "line": 23,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCrafting",
+    "file": "plugins\\crafting\\derma\\cl_pressing_interface.lua",
+    "line": 55,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\crafting\\derma\\cl_workbench_interface.lua",
+    "line": 23,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCrafting",
+    "file": "plugins\\crafting\\derma\\cl_workbench_interface.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 82,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\inventory\\derma\\cl_vendor_grid_inventory.lua",
+    "line": 26,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPropertySheet",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 100,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 103,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 119,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 201,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 205,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 58,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 88,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 82,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 109,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 116,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutRadioMenu",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutInventory",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 159,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutInventory",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 218,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 316,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCombineDisplay",
+    "file": "schema\\derma\\cl_combine.lua",
+    "line": 75,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCombineDisplay",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 128,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutData",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 165,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutObjective",
+    "file": "schema\\hooks\\cl_hooks.lua",
+    "line": 169,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DHTML",
+    "file": "plugins\\3dpanel.lua",
+    "line": 84,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DHTML",
+    "file": "plugins\\3dpanel.lua",
+    "line": 107,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\newvoice.lua",
+    "line": 10,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DLabel",
+    "file": "plugins\\newvoice.lua",
+    "line": 18,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\newvoice.lua",
+    "line": 125,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 107,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutTPConfig",
+    "file": "plugins\\thirdperson.lua",
+    "line": 97,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutHelperFrame",
+    "file": "entities\\weapons\\nut_poshelper.lua",
+    "line": 173,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutQuick",
+    "file": "gamemode\\core\\derma\\cl_contextmenu.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "iconPreview",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 209,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "iconRenderPreview",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 210,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "iconEditor",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 535,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "EditablePanel",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 289,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "HTML",
+    "file": "gamemode\\core\\libs\\thirdparty\\cl_surfaceGetURL.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "gamemode\\core\\libs\\thirdparty\\cl_surfaceGetURL.lua",
+    "line": 48,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DFrame",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 227,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutChatBox",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutMenu",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutNotice",
+    "file": "plugins\\notices\\cl_notice.lua",
+    "line": 20,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutIntro",
+    "file": "plugins\\nsintro\\sh_plugin.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutScoreboard",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutVendor",
+    "file": "plugins\\vendor\\cl_hooks.lua",
+    "line": 2,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutAreaManager",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 79,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharInfo",
+    "file": "plugins\\f1menu\\derma\\cl_menu.lua",
+    "line": 70,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutMenu",
+    "file": "plugins\\f1menu\\derma\\cl_menu.lua",
+    "line": 194,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutGridInventory",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacter",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 81,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacter",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 86,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacter",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 95,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacterConfirm",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 46,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "DPanel",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 213,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacterConfirm",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 12,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacterFaction",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 5,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacterModel",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 6,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutCharacterBiography",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 7,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutVendorEditor",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutVendor",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 263,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutVendorFactionEditor",
+    "file": "plugins\\vendor\\derma\\cl_vendoreditor.lua",
+    "line": 120,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutListStorage",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\sh_plugin.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "vgui_create",
+    "panel_class": "nutListStorage",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\derma\\cl_list_storage.lua",
+    "line": 115,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

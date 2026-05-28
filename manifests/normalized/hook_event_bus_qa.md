@@ -1,0 +1,196 @@
+# Hook event bus QA
+
+## Summary
+- Events: **464**
+- Emitters: **495**
+- Resolved emitters: **495**
+- Unresolved symbol emitters: **0**
+- Listeners: **999**
+- Emitter → listener edges: **1041**
+- Events with emitters but no listeners: **90**
+- Events with listeners but no emitters: **209**
+
+## Event classes
+- `global_runtime_event`: **99**
+- `entity_inventory_domain`: **82**
+- `query_or_gate`: **75**
+- `ad_hoc_lowercase_event`: **48**
+- `player_lifecycle_or_action`: **47**
+- `ui_extension_point`: **46**
+- `domain_event`: **45**
+- `framework_lifecycle`: **19**
+- `network_or_sync`: **3**
+
+## Listener types
+- `plugin_method`: **763**
+- `hook_add`: **116**
+- `gamemode_method`: **87**
+- `schema_method`: **33**
+
+## Top emitted events
+- `HandleDiseaseOnEnd`: 38
+- `CreateUsingInterface`: 26
+- `HandleDiseaseOnCall`: 20
+- `CheckBothHandsAmputation`: 12
+- `HandlePain`: 12
+- `GetDisplayedName`: 11
+- `screamer2`: 9
+- `LoadNutFonts`: 7
+- `HandleInfection`: 6
+- `HandleBloodLoss`: 5
+- `StorageRestored`: 5
+- `StorageInventorySet`: 5
+- `StorageEntityRemoved`: 5
+- `OnCharVarChanged`: 5
+- `EnduranceCheck`: 4
+- `EnduranceDecrease`: 4
+- `CreateNewInventoryPanel`: 4
+- `ItemTransfered`: 4
+- `saveStorage`: 4
+- `GetDefaultCharName`: 4
+- `OnNPCKilled`: 3
+- `AddStrenghtBonus`: 3
+- `HandleBulletInjure`: 3
+- `HandlePlayerStatus`: 3
+- `HandlePainKillBoost`: 3
+- `PersistenceSave`: 3
+- `ShouldAllowScoreboardOverride`: 3
+- `IsPlayerRecognized`: 3
+- `OnCharRecognized`: 3
+- `SaveData`: 3
+
+## Top listened events
+- `LoadData`: 45
+- `SaveData`: 35
+- `HUDPaint`: 22
+- `PostPlayerLoadout`: 16
+- `PlayerDeath`: 14
+- `SetupQuickMenu`: 13
+- `Think`: 13
+- `PlayerInitialSpawn`: 13
+- `PlayerLoadedChar`: 13
+- `PrePlayerLoadedChar`: 11
+- `PlayerLoadout`: 11
+- `CharacterPreSave`: 11
+- `KeyPress`: 10
+- `LoadFonts`: 10
+- `PlayerBindPress`: 10
+- `EntityTakeDamage`: 8
+- `OnCharCreated`: 8
+- `LoadNutFonts`: 7
+- `PlayerButtonDown`: 7
+- `ShouldDrawEntityInfo`: 7
+- `CanPlayerInteractItem`: 7
+- `PostDrawTranslucentRenderables`: 7
+- `CalcView`: 7
+- `InitPostEntity`: 7
+- `HUDPaintBackground`: 6
+- `PlayerHurt`: 6
+- `InitializedPlugins`: 6
+- `PlayerSpawn`: 6
+- `OnEntityCreated`: 6
+- `PlayerUse`: 5
+
+## Top events with emitters but no listeners
+- `StorageEntityRemoved`: emitters=5, class=entity_inventory_domain, return=maybe_returns
+- `StorageRestored`: emitters=5, class=entity_inventory_domain, return=maybe_returns
+- `IsPlayerRecognized`: emitters=3, class=query_or_gate, return=likely_returns
+- `ItemInitialized`: emitters=3, class=entity_inventory_domain, return=maybe_returns
+- `PersistenceSave`: emitters=3, class=framework_lifecycle, return=maybe_returns
+- `CanOutfitChangeModel`: emitters=2, class=query_or_gate, return=likely_returns
+- `CanPlayerBustLock`: emitters=2, class=query_or_gate, return=likely_returns
+- `CanPlayerUseCommand`: emitters=2, class=query_or_gate, return=likely_returns
+- `GetMaxPlayerCharacter`: emitters=2, class=query_or_gate, return=likely_returns
+- `GetStartAttribPoints`: emitters=2, class=query_or_gate, return=likely_returns
+- `InventoryItemRemoved`: emitters=2, class=entity_inventory_domain, return=maybe_returns
+- `OnCharAttribUpdated`: emitters=2, class=global_runtime_event, return=maybe_returns
+- `OnCreateStoragePanel`: emitters=2, class=ui_extension_point, return=maybe_returns
+- `OnPickupObject`: emitters=2, class=entity_inventory_domain, return=maybe_returns
+- `PlayerCanKnock`: emitters=2, class=player_lifecycle_or_action, return=likely_returns
+- `PlayerCanUseLock`: emitters=2, class=player_lifecycle_or_action, return=likely_returns
+- `PostLoadData`: emitters=2, class=framework_lifecycle, return=maybe_returns
+- `ShouldRadioBeep`: emitters=2, class=query_or_gate, return=likely_returns
+- `StorageCanTransferItem`: emitters=2, class=entity_inventory_domain, return=maybe_returns
+- `AdjustBlurAmount`: emitters=1, class=ui_extension_point, return=maybe_returns
+- `AdjustCreationData`: emitters=1, class=domain_event, return=maybe_returns
+- `CanCreateCharInfo`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanDisplayArea`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanDrawAmmoHUD`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanPlayerDisinfect`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanPlayerJoinClass`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanPlayerModifyConfig`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanPlayerSeeLog`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanPlayerUseConfig`: emitters=1, class=query_or_gate, return=likely_returns
+- `CanPlayerUseDoor`: emitters=1, class=query_or_gate, return=likely_returns
+- `CharGivenItem`: emitters=1, class=entity_inventory_domain, return=maybe_returns
+- `CharacterCleanUp`: emitters=1, class=domain_event, return=maybe_returns
+- `CharacterFactionTransfered`: emitters=1, class=domain_event, return=maybe_returns
+- `CharacterFlagCheck`: emitters=1, class=domain_event, return=maybe_returns
+- `CharacterPostSave`: emitters=1, class=domain_event, return=maybe_returns
+- `CharacterRestored`: emitters=1, class=domain_event, return=maybe_returns
+- `ChatTextChanged`: emitters=1, class=domain_event, return=maybe_returns
+- `CreateCharInfo`: emitters=1, class=domain_event, return=maybe_returns
+- `DatabaseConnected`: emitters=1, class=framework_lifecycle, return=maybe_returns
+- `DrawAmmoHUD`: emitters=1, class=ui_extension_point, return=maybe_returns
+- `DrawItemDescription`: emitters=1, class=ui_extension_point, return=maybe_returns
+- `GetPlayerIcon`: emitters=1, class=query_or_gate, return=likely_returns
+- `GetSalaryAmount`: emitters=1, class=query_or_gate, return=likely_returns
+- `GetSalaryLimit`: emitters=1, class=query_or_gate, return=likely_returns
+- `GravGunOnDropped`: emitters=1, class=domain_event, return=maybe_returns
+- `GravGunOnPickedUp`: emitters=1, class=domain_event, return=maybe_returns
+- `GravGunPickupAllowed`: emitters=1, class=domain_event, return=maybe_returns
+- `InterceptClickItemIcon`: emitters=1, class=entity_inventory_domain, return=maybe_returns
+- `InventoryDataChanged`: emitters=1, class=entity_inventory_domain, return=maybe_returns
+- `InventoryDeleted`: emitters=1, class=entity_inventory_domain, return=maybe_returns
+
+## Top events with listeners but no emitters
+- `HUDPaint`: listeners=22, class=ui_extension_point, return=maybe_returns
+- `PlayerDeath`: listeners=14, class=player_lifecycle_or_action, return=maybe_returns
+- `PlayerInitialSpawn`: listeners=13, class=framework_lifecycle, return=maybe_returns
+- `Think`: listeners=13, class=global_runtime_event, return=maybe_returns
+- `KeyPress`: listeners=10, class=global_runtime_event, return=maybe_returns
+- `PlayerBindPress`: listeners=10, class=player_lifecycle_or_action, return=maybe_returns
+- `EntityTakeDamage`: listeners=8, class=entity_inventory_domain, return=maybe_returns
+- `CalcView`: listeners=7, class=ui_extension_point, return=maybe_returns
+- `InitPostEntity`: listeners=7, class=entity_inventory_domain, return=maybe_returns
+- `PlayerButtonDown`: listeners=7, class=player_lifecycle_or_action, return=maybe_returns
+- `PostDrawTranslucentRenderables`: listeners=7, class=ui_extension_point, return=maybe_returns
+- `ShouldDrawEntityInfo`: listeners=7, class=query_or_gate, return=likely_returns
+- `HUDPaintBackground`: listeners=6, class=ui_extension_point, return=maybe_returns
+- `OnEntityCreated`: listeners=6, class=entity_inventory_domain, return=maybe_returns
+- `PlayerHurt`: listeners=6, class=player_lifecycle_or_action, return=maybe_returns
+- `PlayerSpawn`: listeners=6, class=player_lifecycle_or_action, return=maybe_returns
+- `EntityRemoved`: listeners=5, class=entity_inventory_domain, return=maybe_returns
+- `PhysgunPickup`: listeners=5, class=global_runtime_event, return=maybe_returns
+- `CalcViewModelView`: listeners=4, class=ui_extension_point, return=maybe_returns
+- `DrawCharInfo`: listeners=4, class=ui_extension_point, return=maybe_returns
+- `HUDShouldDraw`: listeners=4, class=ui_extension_point, return=maybe_returns
+- `PlayerSpawnedProp`: listeners=4, class=player_lifecycle_or_action, return=maybe_returns
+- `ShouldDrawLocalPlayer`: listeners=4, class=query_or_gate, return=likely_returns
+- `StartCommand`: listeners=4, class=global_runtime_event, return=maybe_returns
+- `getItemStackKey`: listeners=4, class=entity_inventory_domain, return=maybe_returns
+- `getItemStacks`: listeners=4, class=entity_inventory_domain, return=maybe_returns
+- `transferItem`: listeners=4, class=entity_inventory_domain, return=maybe_returns
+- `CanProperty`: listeners=3, class=query_or_gate, return=likely_returns
+- `GetPlayerPainSound`: listeners=3, class=query_or_gate, return=likely_returns
+- `KeyRelease`: listeners=3, class=global_runtime_event, return=maybe_returns
+- `OnReloaded`: listeners=3, class=global_runtime_event, return=maybe_returns
+- `PlayerCanPickupWeapon`: listeners=3, class=entity_inventory_domain, return=likely_returns
+- `PlayerDisconnected`: listeners=3, class=player_lifecycle_or_action, return=maybe_returns
+- `PlayerFootstep`: listeners=3, class=player_lifecycle_or_action, return=maybe_returns
+- `PlayerNoClip`: listeners=3, class=player_lifecycle_or_action, return=maybe_returns
+- `AcceptInput`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `AllowPlayerPickup`: listeners=2, class=query_or_gate, return=likely_returns
+- `AttachTo`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `BiorezHealDiseaseHandle`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `BuildHelpMenu`: listeners=2, class=ui_extension_point, return=maybe_returns
+- `CanPlayerViewInventory`: listeners=2, class=query_or_gate, return=likely_returns
+- `CanTool`: listeners=2, class=query_or_gate, return=likely_returns
+- `CanWearParts`: listeners=2, class=query_or_gate, return=likely_returns
+- `ChatText`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `CheckEquipment`: listeners=2, class=query_or_gate, return=likely_returns
+- `CloneVarsOn`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `CloseCorpse`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `CreateInventory`: listeners=2, class=entity_inventory_domain, return=maybe_returns
+- `CreateMove`: listeners=2, class=global_runtime_event, return=maybe_returns
+- `DepositMoney`: listeners=2, class=global_runtime_event, return=maybe_returns

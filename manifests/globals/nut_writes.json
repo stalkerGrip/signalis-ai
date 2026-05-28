@@ -1,0 +1,742 @@
+[
+  {
+    "type": "nut_write",
+    "namespace": "biorez",
+    "full_name": "nut.biorez",
+    "namespace_class": "biorez_subsystem",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "biorez.rezonators",
+    "full_name": "nut.biorez.rezonators",
+    "namespace_class": "biorez_subsystem",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "biorez.customRezonators",
+    "full_name": "nut.biorez.customRezonators",
+    "namespace_class": "biorez_subsystem",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases",
+    "full_name": "nut.diseases",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases.stringConsts",
+    "full_name": "nut.diseases.stringConsts",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases.stringConstsLocalization",
+    "full_name": "nut.diseases.stringConstsLocalization",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sh_plugin.lua",
+    "line": 77,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases.registered",
+    "full_name": "nut.diseases.registered",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 81,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases.loaded",
+    "full_name": "nut.diseases.loaded",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 127,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases.randomGetDiseases",
+    "full_name": "nut.diseases.randomGetDiseases",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 128,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "diseases.stringConsts.infection",
+    "full_name": "nut.diseases.stringConsts.infection",
+    "namespace_class": "disease_subsystem",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 367,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "traits",
+    "full_name": "nut.traits",
+    "namespace_class": "traits_subsystem",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "traits.list",
+    "full_name": "nut.traits.list",
+    "namespace_class": "traits_subsystem",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.inventories",
+    "full_name": "nut.item.inventories",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 9,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "plugin.namecache",
+    "full_name": "nut.plugin.namecache",
+    "namespace_class": "plugin_registry",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 749,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char",
+    "full_name": "nut.char",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char.loaded",
+    "full_name": "nut.char.loaded",
+    "namespace_class": "character_runtime_registry",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char.vars",
+    "full_name": "nut.char.vars",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char.names",
+    "full_name": "nut.char.names",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char.names",
+    "full_name": "nut.char.names",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 50,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char.varHooks",
+    "full_name": "nut.char.varHooks",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 82,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "char.names",
+    "full_name": "nut.char.names",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 112,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "class",
+    "full_name": "nut.class",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_class.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "class.list",
+    "full_name": "nut.class.list",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_class.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "command",
+    "full_name": "nut.command",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_command.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "command.list",
+    "full_name": "nut.command.list",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_command.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "faction",
+    "full_name": "nut.faction",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_faction.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "faction.teams",
+    "full_name": "nut.faction.teams",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_faction.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "faction.indices",
+    "full_name": "nut.faction.indices",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_faction.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "inventory",
+    "full_name": "nut.inventory",
+    "namespace_class": "inventory_subsystem",
+    "file": "gamemode\\core\\libs\\sh_inventory.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "inventory.types",
+    "full_name": "nut.inventory.types",
+    "namespace_class": "inventory_subsystem",
+    "file": "gamemode\\core\\libs\\sh_inventory.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "inventory.instances",
+    "full_name": "nut.inventory.instances",
+    "namespace_class": "inventory_subsystem",
+    "file": "gamemode\\core\\libs\\sh_inventory.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item",
+    "full_name": "nut.item",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.list",
+    "full_name": "nut.item.list",
+    "namespace_class": "item_runtime_registry",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.base",
+    "full_name": "nut.item.base",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.instances",
+    "full_name": "nut.item.instances",
+    "namespace_class": "item_runtime_registry",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.inventories",
+    "full_name": "nut.item.inventories",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.inventoryTypes",
+    "full_name": "nut.item.inventoryTypes",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sh_item.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "plugin",
+    "full_name": "nut.plugin",
+    "namespace_class": "plugin_registry",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "plugin.list",
+    "full_name": "nut.plugin.list",
+    "namespace_class": "plugin_registry",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "plugin.unloaded",
+    "full_name": "nut.plugin.unloaded",
+    "namespace_class": "plugin_registry",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db",
+    "full_name": "nut.db",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.queryQueue",
+    "full_name": "nut.db.queryQueue",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 2,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.query",
+    "full_name": "nut.db.query",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 60,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.object",
+    "full_name": "nut.db.object",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 110,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.escape",
+    "full_name": "nut.db.escape",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 111,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.query",
+    "full_name": "nut.db.query",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 112,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.prepared",
+    "full_name": "nut.db.prepared",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 127,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.pool",
+    "full_name": "nut.db.pool",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 220,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.escape",
+    "full_name": "nut.db.escape",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 239,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.query",
+    "full_name": "nut.db.query",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 240,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.prepare",
+    "full_name": "nut.db.prepare",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 241,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.abort",
+    "full_name": "nut.db.abort",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 242,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.queue",
+    "full_name": "nut.db.queue",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 243,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.getObject",
+    "full_name": "nut.db.getObject",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 244,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.preparedCall",
+    "full_name": "nut.db.preparedCall",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 245,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.object",
+    "full_name": "nut.db.object",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 260,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.escape",
+    "full_name": "nut.db.escape",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 312,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.query",
+    "full_name": "nut.db.query",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 313,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.connected",
+    "full_name": "nut.db.connected",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 323,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.queryQueue",
+    "full_name": "nut.db.queryQueue",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 331,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.escape",
+    "full_name": "nut.db.escape",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 335,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.query",
+    "full_name": "nut.db.query",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 336,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.tablesLoaded",
+    "full_name": "nut.db.tablesLoaded",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 518,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.module",
+    "full_name": "nut.db.module",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 522,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "db.config",
+    "full_name": "nut.db.config",
+    "namespace_class": "nutscript_core",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 696,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.inventories",
+    "full_name": "nut.item.inventories",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\libs\\sh_item.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.held",
+    "full_name": "nut.item.held",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 79,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.heldPanel",
+    "full_name": "nut.item.heldPanel",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 80,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.held",
+    "full_name": "nut.item.held",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 164,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.heldPanel",
+    "full_name": "nut.item.heldPanel",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 165,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.held",
+    "full_name": "nut.item.held",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 281,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.heldPanel",
+    "full_name": "nut.item.heldPanel",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 290,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.heldPanel",
+    "full_name": "nut.item.heldPanel",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 317,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_write",
+    "namespace": "item.heldPanel",
+    "full_name": "nut.item.heldPanel",
+    "namespace_class": "nutscript_core",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "line": 318,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

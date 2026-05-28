@@ -1,0 +1,522 @@
+[
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutUnRagdoll\" .. corpse.nutPlayer:SteamID(",
+    "file": "entities\\entities\\sb_advanced_nextbot_empire_base.lua",
+    "line": 505,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "QTETimer_\"..ply:SteamID(",
+    "file": "entities\\entities\\nut_flesh\\init.lua",
+    "line": 69,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerName",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 750,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerName",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 752,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerName",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 2322,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerName",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 2336,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerName",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 1276,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerId",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 2278,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "relockdoor\"..v:MapCreationID(",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 574,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "hacktimer",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 937,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "hacktimer",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 941,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "hacktimer",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 968,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "hacktimer",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1217,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "shadowtime",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1273,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "shadowtime",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1277,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "shadowtime",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1342,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "hacktimer",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 936,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMovAct\" .. self:UniqueID(",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 37,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMovAct\" .. self:UniqueID(",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMovAct\" .. self:UniqueID(",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "nutMovAct\" .. self:UniqueID(",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 67,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_reps_left",
+    "timer_name_expr": "nutMovAct\" .. self:UniqueID(",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 55,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "glassblur\"..id",
+    "file": "plugins\\traits\\sh_config.lua",
+    "line": 817,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "alcoh\"..id",
+    "file": "plugins\\traits\\sh_config.lua",
+    "line": 897,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 121,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "self.superDamageTimer",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_fleshradioactive\\init.lua",
+    "line": 225,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "self.gasDamageTimer",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua",
+    "line": 111,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "EntityBiorezonanseTimer_\" .. self:EntIndex(",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+    "line": 40,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "EntityBiorezonanseTimer_\" .. self:EntIndex(",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+    "line": 38,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "seedUniqueID",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 95,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "seedUniqueID",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 93,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_reps_left",
+    "timer_name_expr": "seedUniqueID",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 99,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "EntityBiorezonanseTimer_\" .. self:EntIndex(",
+    "file": "plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua",
+    "line": 33,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "EntityBiorezonanseTimer_\" .. self:EntIndex(",
+    "file": "plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua",
+    "line": 31,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "cutMinigame",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 112,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "decreaseBtn",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 125,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "cutMinigame",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 126,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutUnRagdoll\" .. entity.nutPlayer:SteamID(",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 473,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutUnRagdoll\" .. entity.nutPlayer:SteamID(",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 516,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "self:EntIndex(",
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "_identifier",
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "HintSystem_OpeningMenu",
+    "file": "gamemode\\cl_init.lua",
+    "line": 13,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "HintSystem_Annoy1",
+    "file": "gamemode\\cl_init.lua",
+    "line": 14,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "HintSystem_Annoy2",
+    "file": "gamemode\\cl_init.lua",
+    "line": 15,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutWaitUntilPlayerValid",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 351,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutToggleRaise\"..client:SteamID(",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 108,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 235,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerID",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 878,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "timerID",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 873,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "timerName",
+    "file": "gamemode\\core\\libs\\sh_log.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "timerName",
+    "file": "gamemode\\core\\libs\\sh_log.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutAct\" .. self:UniqueID(",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 31,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 66,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 75,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_reps_left",
+    "timer_name_expr": "uniqueID",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 71,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID2",
+    "file": "gamemode\\core\\util\\sv_door.lua",
+    "line": 126,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID",
+    "file": "gamemode\\core\\util\\sv_door.lua",
+    "line": 144,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "uniqueID",
+    "file": "gamemode\\core\\util\\sv_ragdoll.lua",
+    "line": 338,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutAreaController",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 442,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_exists",
+    "timer_name_expr": "nutAreaController",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 417,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMusicFader",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua",
+    "line": 10,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMusicFader",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua",
+    "line": 16,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMusicFader",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutMusicFader",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_remove",
+    "timer_name_expr": "nutFailedToCreate",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 96,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

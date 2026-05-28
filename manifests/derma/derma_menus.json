@@ -1,0 +1,37 @@
+[
+  {
+    "type": "derma_menu",
+    "file": "plugins\\recognition.lua",
+    "line": 136,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "derma_menu",
+    "file": "gamemode\\core\\derma\\cl_inventory.lua",
+    "line": 152,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "derma_menu",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "derma_menu",
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 158,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "derma_menu",
+    "file": "plugins\\vendor\\derma\\cl_vendoreditor.lua",
+    "line": 141,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

@@ -1,0 +1,3822 @@
+[
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerConnect",
+    "args": "client, ip",
+    "file": "plugins\\playerconnected.lua",
+    "line": 7,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerDisconnected",
+    "args": "client",
+    "file": "plugins\\playerconnected.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnSpawnMenuOpen",
+    "args": "",
+    "file": "plugins\\restrictQmenu.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EntityTakeDamage",
+    "args": "entity, dmgInfo",
+    "file": "plugins\\shootlock.lua",
+    "line": 7,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupQuickMenu",
+    "args": "menu",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 64,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "Think",
+    "args": "",
+    "file": "plugins\\sh_ambients.lua",
+    "line": 75,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ItemShouldSave",
+    "args": "entity",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 41,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "Think",
+    "args": "",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 45,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 86,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 90,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 474,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 894,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 903,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EntityTakeDamage",
+    "args": "entity, dmgInfo",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 86,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ScalePlayerDamage",
+    "args": "client, hitGroup, dmgInfo",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 120,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePlayerLoadedChar",
+    "args": "client, character, lastChar",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 264,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadout",
+    "args": "client",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 270,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 56,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharAttribBoosted",
+    "args": "client, character, attribID",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 60,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateCharInfoText",
+    "args": "panel, suppress",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharInfoSetup",
+    "args": "panel",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 82,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ConfigureCharacterCreationSteps",
+    "args": "panel",
+    "file": "plugins\\attributes\\sh_plugin.lua",
+    "line": 126,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePlayerLoadedChar",
+    "args": "client, character, lastChar",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 542,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EntityTakeDamage",
+    "args": "target, dmg",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 558,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 569,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 580,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 172,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 190,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "InitializedItems",
+    "args": "",
+    "file": "plugins\\crafting\\sh_massitems.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "canCreate",
+    "args": "ply, recipee, ent",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 81,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "craft",
+    "args": "ply, recipee, pickeditem, ent",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 187,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getByVisible",
+    "args": "workbench, char",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 297,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\crafting\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\crafting\\sv_hooks.lua",
+    "line": 37,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadNutFonts",
+    "args": "font, genericFont",
+    "file": "plugins\\farming\\cl_hooks.lua",
+    "line": 1,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\farming\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\farming\\sv_hooks.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateUsingInterface",
+    "args": "index, interfaceType",
+    "file": "plugins\\gadgets\\cl_hooks.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\gadgets\\sh_plugin.lua",
+    "line": 133,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\gadgets\\sh_plugin.lua",
+    "line": 209,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "AcceptInput",
+    "args": "ent, name, client, caller, data",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShowCardProp",
+    "args": "card, door, hitNormal",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerButtonDown",
+    "args": "client, key",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 67,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "TryOpenDoor",
+    "args": "client, door",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 98,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DoorLockSwitchState",
+    "args": "door",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 134,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 294,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveStatuses",
+    "args": "client",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 536,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CharacterPreSave",
+    "args": "char",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 576,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePlayerLoadedChar",
+    "args": "client, char, lastChar",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 585,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandlePlayerStatus",
+    "args": "client",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 678,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleBloodLoss",
+    "args": "client, blood",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 751,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandlePain",
+    "args": "client, count, bodyPart",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 776,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleBulletInjure",
+    "args": "client, ammoType, hitGroup",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 801,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleBluntInjure",
+    "args": "client, hitGroup, damage, isElectro",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 840,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleCuttingInjure",
+    "args": "client, hitGroup, damage, bleedingBonus",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 861,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleDiseaseOnCall",
+    "args": "client, disease, isLoad, count, time, tooltip, setAction",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 886,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleDiseaseOnEnd",
+    "args": "client, disease, count",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 912,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerStepSoundTime",
+    "args": "client, type, walking",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 930,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "KeyPress",
+    "args": "client, key",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 943,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "FinishMove",
+    "args": "client, mv",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 958,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CheckHandsAmputation",
+    "args": "client",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 972,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CheckBothHandsAmputation",
+    "args": "client, needNotification",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 976,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleAmputation",
+    "args": "client, bodyPart, isTreated",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 986,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "UpdateMaxHp",
+    "args": "client, char",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1027,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandlePainKillBoost",
+    "args": "client, boost, id, state",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1035,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerButtonDown",
+    "args": "client, key",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1063,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleInfection",
+    "args": "client, bodyPartName",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1097,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetInfectionAction",
+    "args": "targetDuplicat",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1121,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "BiorezHealDiseaseHandle",
+    "args": "client, count, bioSwep, bodyPart",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1159,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "BiorezHealHandle",
+    "args": "client, swep, bioSwep, bodyPart",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1213,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleHeartStop",
+    "args": "client, target",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1253,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShouldDrawEntityInfo",
+    "args": "entity",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 524,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupQuickMenu",
+    "args": "menu",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 547,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DrawCharInfo",
+    "args": "client, character, info",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 558,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DrawEntityInfo",
+    "args": "entity, alpha, position",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 570,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShouldDrawEntityInfo",
+    "args": "entity",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 636,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaintBackground",
+    "args": "",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 651,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDShouldDraw",
+    "args": "element",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 723,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DrawDeathNotice",
+    "args": "",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 729,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDAmmoPickedUp",
+    "args": "",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 733,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDDrawPickupHistory",
+    "args": "",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 737,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDDrawTargetID",
+    "args": "",
+    "file": "plugins\\hud\\sh_plugin.lua",
+    "line": 741,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateNewInventoryPanel",
+    "args": "client, parent",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 91,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateTargetNewInventoryPanel",
+    "args": "target, invId, parent",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 95,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OpenVendorTradeInterface",
+    "args": "client, vendor, invId",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 246,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadout",
+    "args": "client",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 638,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 689,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CharacterPreSave",
+    "args": "char",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 719,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerButtonDown",
+    "args": "client, key",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ItemTransfered",
+    "args": "context",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 42,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 270,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\lootablecontainers\\sh_plugin.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\lootablecontainers\\sh_plugin.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadedChar",
+    "args": "client, char",
+    "file": "plugins\\loyal_system\\sh_plugin.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\mining\\sv_hooks.lua",
+    "line": 28,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CheckEquipment",
+    "args": "char",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadout",
+    "args": "client",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 201,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePlayerLoadedChar",
+    "args": "client, character, lastChar",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 244,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 307,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 334,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadNutFonts",
+    "args": "font, genericFont",
+    "file": "plugins\\needs\\cl_hooks.lua",
+    "line": 21,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CharacterPreSave",
+    "args": "char",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 120,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "UpdateMaxNeeds",
+    "args": "char",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 126,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 146,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 218,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "MopRemoveDecal",
+    "args": "hitPos",
+    "file": "plugins\\newweapons\\sv_hooks.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PluginLoaded",
+    "args": "",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 19,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 286,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 304,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerHurt",
+    "args": "client, attacker, health, damage",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnNPCKilledNew",
+    "args": "npc, dmg",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 151,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EntityTakeDamage",
+    "args": "target, dmg",
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 291,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePlayerLoadedChar",
+    "args": "client, character, lastChar",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 163,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSwitchFlashlight",
+    "args": "client, state",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 168,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadNutFonts",
+    "args": "font, genericFont",
+    "file": "plugins\\snowy_components\\cl_fonts.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ConfigureCharacterCreationSteps",
+    "args": "panel",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 403,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharCreated",
+    "args": "client, char",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 476,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadedChar",
+    "args": "client, newchar, char",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 486,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 517,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerFootstep",
+    "args": "ply, pos, foot, sound, volume, rf",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 594,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "InitializedPlugins",
+    "args": "",
+    "file": "plugins\\traits\\sh_skillbooks.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LevelupCheck",
+    "args": "name, num",
+    "file": "plugins\\traits\\sh_skilltree.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetSkillChoiceForSkill",
+    "args": "name",
+    "file": "plugins\\traits\\sh_skilltree.lua",
+    "line": 53,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ns1SetupInventorySearch",
+    "args": "client, target",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 4,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ns1RemoveInventorySearchPermissions",
+    "args": "client, target",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ns2SetupInventorySearch",
+    "args": "client, target",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 52,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ns2RemoveInventorySearchPermissions",
+    "args": "client, target",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 68,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "searchPlayer",
+    "args": "client, target",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 75,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerInteractItem",
+    "args": "client, action, item",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 113,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "stopSearching",
+    "args": "client",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerViewInventory",
+    "args": "",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 142,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadout",
+    "args": "client",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 42,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerUse",
+    "args": "client, entity",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 49,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnPlayerUnRestricted",
+    "args": "client",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 92,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DrawCharInfo",
+    "args": "client, character, info",
+    "file": "plugins\\tying\\sh_plugin.lua",
+    "line": 104,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EnduranceCheck",
+    "args": "client, staminaUse",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EnduranceDecrease",
+    "args": "client, staminaUse",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "AddStrenghtBonus",
+    "args": "client, damage",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 59,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerGetFistDamage",
+    "args": "client",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 71,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerThrowPunch",
+    "args": "client, hit",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 79,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerHurt",
+    "args": "client",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 103,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 112,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnPlayerJump",
+    "args": "client, speed",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 200,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnStaminaLoss",
+    "args": "client, staminaLoss",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 235,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerStaminaLost",
+    "args": "client",
+    "file": "plugins\\attributes\\plugins\\strength\\sh_plugin.lua",
+    "line": 253,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EyeTrace",
+    "args": "client",
+    "file": "plugins\\ragdollinteraction\\corpses\\sh_hooks.lua",
+    "line": 1,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DoPlayerDeath",
+    "args": "victim, attacker, dmg",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 4,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerDeath",
+    "args": "victim, inflictor, attacker",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 21,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupBones",
+    "args": "corpse, victim",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 29,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "AttachTo",
+    "args": "entity, otherEntity",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 54,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "MakeHandle",
+    "args": "ent",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 62,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CloneVarsOn",
+    "args": "ent1, ent2",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 91,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "MakeCorpseFromVictim",
+    "args": "victim",
+    "file": "plugins\\ragdollinteraction\\corpses\\sv_hooks.lua",
+    "line": 122,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EraseVars",
+    "args": "",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 17,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetCorpseMoney",
+    "args": "value",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 24,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DisplayInventoryNut1_1_beta",
+    "args": "",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 83,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DisplayInventoryNut1_1",
+    "args": "",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 152,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "transferItem",
+    "args": "itemID",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 282,
+    "realm": "client",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerInteractItem",
+    "args": "client, action, itemObject, data",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_access_rules.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CorpseInventorySet",
+    "args": "corpse, inventory",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_access_rules.lua",
+    "line": 39,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCorpseCreated",
+    "args": "corpse, victim, char",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 4,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateInventory",
+    "args": "victim, victimInventory, corpse, width, height",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 31,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanItemBeTransfered",
+    "args": "item, curInv, inventory",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 92,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "TransferInventory",
+    "args": "fromPlayer, from, to",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 144,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "TransferMoney",
+    "args": "victim, corpse",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 152,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "RegSearcher",
+    "args": "corpse, client",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 164,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "UnregSearcher",
+    "args": "corpse, client",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 173,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CloseCorpse",
+    "args": "client, share",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 181,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShareCorpseMoney",
+    "args": "corpse",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 225,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "WidthdrawMoney",
+    "args": "client, corpse, amount",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 232,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DepositMoney",
+    "args": "client, corpse, amount",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 253,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "KeyPress",
+    "args": "client, key",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 580,
+    "realm": "server",
+    "framework_layer": "domain",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\3dpanel.lua",
+    "line": 12,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "addPanel",
+    "args": "position, angles, url, w, h, scale",
+    "file": "plugins\\3dpanel.lua",
+    "line": 22,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "removePanel",
+    "args": "position, radius",
+    "file": "plugins\\3dpanel.lua",
+    "line": 40,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\3dpanel.lua",
+    "line": 70,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SavePanels",
+    "args": "",
+    "file": "plugins\\3dpanel.lua",
+    "line": 75,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostDrawTranslucentRenderables",
+    "args": "drawingDepth, drawingSkyBox",
+    "file": "plugins\\3dpanel.lua",
+    "line": 120,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\3dtext.lua",
+    "line": 12,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "addText",
+    "args": "position, angles, text, scale",
+    "file": "plugins\\3dtext.lua",
+    "line": 22,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "removeText",
+    "args": "position, radius",
+    "file": "plugins\\3dtext.lua",
+    "line": 38,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\3dtext.lua",
+    "line": 68,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveText",
+    "args": "",
+    "file": "plugins\\3dtext.lua",
+    "line": 73,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostDrawTranslucentRenderables",
+    "args": "drawingDepth, drawingSkyBox",
+    "file": "plugins\\3dtext.lua",
+    "line": 132,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CharacterPreSave",
+    "args": "character",
+    "file": "plugins\\ammosave.lua",
+    "line": 42,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadedChar",
+    "args": "client",
+    "file": "plugins\\ammosave.lua",
+    "line": 63,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostDrawTranslucentRenderables",
+    "args": "",
+    "file": "plugins\\blur3d2d.lua",
+    "line": 46,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadFonts",
+    "args": "font",
+    "file": "plugins\\chatsizediff.lua",
+    "line": 10,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ChatAddText",
+    "args": "text, ...",
+    "file": "plugins\\chatsizediff.lua",
+    "line": 41,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaint",
+    "args": "",
+    "file": "plugins\\deathscreen.lua",
+    "line": 12,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerDraw",
+    "args": "client",
+    "file": "plugins\\holsteredweps.lua",
+    "line": 85,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "EntityRemoved",
+    "args": "entity",
+    "file": "plugins\\holsteredweps.lua",
+    "line": 145,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CharacterLoaded",
+    "args": "id",
+    "file": "plugins\\logging.lua",
+    "line": 145,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharacterDelete",
+    "args": "client, id",
+    "file": "plugins\\logging.lua",
+    "line": 151,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharCreated",
+    "args": "client, character",
+    "file": "plugins\\logging.lua",
+    "line": 155,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnTakeShipmentItem",
+    "args": "client, itemClass, amount",
+    "file": "plugins\\logging.lua",
+    "line": 159,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCreateShipment",
+    "args": "client, shipmentEntity",
+    "file": "plugins\\logging.lua",
+    "line": 164,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharTradeVendor",
+    "args": "client, vendor, x, y, invID, price, isSell",
+    "file": "plugins\\logging.lua",
+    "line": 168,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnPlayerInteractItem",
+    "args": "client, action, item",
+    "file": "plugins\\logging.lua",
+    "line": 171,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CalcView",
+    "args": "client, origin, angles, fov",
+    "file": "plugins\\mapscene.lua",
+    "line": 14,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CalcViewModelView",
+    "args": "weapon, viewModel, oldEyePos, oldEyeAngles, eyePos, eyeAngles",
+    "file": "plugins\\mapscene.lua",
+    "line": 96,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveScenes",
+    "args": "",
+    "file": "plugins\\mapscene.lua",
+    "line": 137,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\mapscene.lua",
+    "line": 141,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\mapscene.lua",
+    "line": 145,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "addScene",
+    "args": "position, angles, position2, angles2",
+    "file": "plugins\\mapscene.lua",
+    "line": 149,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerStartVoice",
+    "args": "client",
+    "file": "plugins\\newvoice.lua",
+    "line": 75,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerEndVoice",
+    "args": "client",
+    "file": "plugins\\newvoice.lua",
+    "line": 108,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaint",
+    "args": "",
+    "file": "plugins\\observer.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupQuickMenu",
+    "args": "menu",
+    "file": "plugins\\observer.lua",
+    "line": 42,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShouldDrawEntityInfo",
+    "args": "entity",
+    "file": "plugins\\observer.lua",
+    "line": 72,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnPlayerObserve",
+    "args": "client, state",
+    "file": "plugins\\observer.lua",
+    "line": 83,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerNoClip",
+    "args": "client, state",
+    "file": "plugins\\observer.lua",
+    "line": 87,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerDeath",
+    "args": "client, inflictor, attacker",
+    "file": "plugins\\permakill.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawn",
+    "args": "client",
+    "file": "plugins\\permakill.lua",
+    "line": 27,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PhysgunPickup",
+    "args": "client, entity",
+    "file": "plugins\\persistence.lua",
+    "line": 149,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\persistence.lua",
+    "line": 155,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\persistence.lua",
+    "line": 181,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getPluginList",
+    "args": "",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "setPluginDisabled",
+    "args": "name, disabled",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 55,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "createPluginPanel",
+    "args": "parent, plugins",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 106,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateConfigPanel",
+    "args": "parent",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 164,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawnObject",
+    "args": "client, model, skin",
+    "file": "plugins\\propprotect.lua",
+    "line": 64,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PhysgunPickup",
+    "args": "client, entity",
+    "file": "plugins\\propprotect.lua",
+    "line": 80,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanProperty",
+    "args": "client, property, entity",
+    "file": "plugins\\propprotect.lua",
+    "line": 86,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanTool",
+    "args": "client, trace, tool",
+    "file": "plugins\\propprotect.lua",
+    "line": 92,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawnedEntity",
+    "args": "client, entity",
+    "file": "plugins\\propprotect.lua",
+    "line": 100,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawnedProp",
+    "args": "client, model, entity",
+    "file": "plugins\\propprotect.lua",
+    "line": 104,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawnedNPC",
+    "args": "client, entity",
+    "file": "plugins\\propprotect.lua",
+    "line": 111,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "IsCharRecognized",
+    "args": "char, id",
+    "file": "plugins\\recognition.lua",
+    "line": 34,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "IsRecognizedChatType",
+    "args": "chatType",
+    "file": "plugins\\recognition.lua",
+    "line": 66,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetDisplayedDescription",
+    "args": "client",
+    "file": "plugins\\recognition.lua",
+    "line": 70,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShouldAllowScoreboardOverride",
+    "args": "client",
+    "file": "plugins\\recognition.lua",
+    "line": 76,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetDisplayedName",
+    "args": "client, chatType",
+    "file": "plugins\\recognition.lua",
+    "line": 82,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetFullDesc",
+    "args": "",
+    "file": "plugins\\recognition.lua",
+    "line": 106,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharRecognized",
+    "args": "client, recogCharID",
+    "file": "plugins\\recognition.lua",
+    "line": 158,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShowSpare1",
+    "args": "client",
+    "file": "plugins\\recognition.lua",
+    "line": 173,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\saveitems.lua",
+    "line": 5,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\saveitems.lua",
+    "line": 59,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerLoadout",
+    "args": "client",
+    "file": "plugins\\spawns.lua",
+    "line": 8,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\spawns.lua",
+    "line": 42,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveSpawns",
+    "args": "",
+    "file": "plugins\\spawns.lua",
+    "line": 46,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CharacterPreSave",
+    "args": "character",
+    "file": "plugins\\spawnsaver.lua",
+    "line": 6,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadedChar",
+    "args": "client, character, lastChar",
+    "file": "plugins\\spawnsaver.lua",
+    "line": 18,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupQuickMenu",
+    "args": "menu",
+    "file": "plugins\\thirdperson.lua",
+    "line": 73,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CalcView",
+    "args": "client, origin, angles, fov",
+    "file": "plugins\\thirdperson.lua",
+    "line": 125,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateMove",
+    "args": "cmd",
+    "file": "plugins\\thirdperson.lua",
+    "line": 163,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "InputMouseApply",
+    "args": "cmd, x, y, ang",
+    "file": "plugins\\thirdperson.lua",
+    "line": 178,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShouldDrawLocalPlayer",
+    "args": "",
+    "file": "plugins\\thirdperson.lua",
+    "line": 194,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StartChat",
+    "args": "",
+    "file": "plugins\\typing.lua",
+    "line": 10,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "FinishChat",
+    "args": "",
+    "file": "plugins\\typing.lua",
+    "line": 16,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaint",
+    "args": "",
+    "file": "plugins\\typing.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaintBackground",
+    "args": "",
+    "file": "plugins\\vignette.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaint",
+    "args": "",
+    "file": "plugins\\wepselect.lua",
+    "line": 18,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "onIndexChanged",
+    "args": "",
+    "file": "plugins\\wepselect.lua",
+    "line": 89,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerBindPress",
+    "args": "client, bind, pressed",
+    "file": "plugins\\wepselect.lua",
+    "line": 118,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StartCommand",
+    "args": "client, cmd",
+    "file": "plugins\\wepselect.lua",
+    "line": 164,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "setData",
+    "args": "value, global, ignoreMap",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 63,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getData",
+    "args": "default, global, ignoreMap, refresh",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "IsValid",
+    "args": "",
+    "file": "gamemode\\core\\libs\\sh_plugin.lua",
+    "line": 81,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "unknown_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "UpdateAnimation",
+    "args": "client, moveData",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnPlayerLeaveSequence",
+    "args": "client",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 82,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerDeath",
+    "args": "client",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 86,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharFallover",
+    "args": "client",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 94,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShouldDrawLocalPlayer",
+    "args": "client",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 102,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CalcView",
+    "args": "client, origin, angles, fov",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 111,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerBindPress",
+    "args": "client, bind, pressed",
+    "file": "plugins\\act\\sh_plugin.lua",
+    "line": 123,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "createAreaTimer",
+    "args": "",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 57,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "saveAreas",
+    "args": "",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 83,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 87,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadedChar",
+    "args": "client, character, lastChar",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 95,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerDeath",
+    "args": "client",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 99,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawn",
+    "args": "client",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 103,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnPlayerAreaChanged",
+    "args": "client, areaID",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 144,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadFonts",
+    "args": "font",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 247,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaint",
+    "args": "",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 312,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDPaint",
+    "args": "",
+    "file": "plugins\\bars\\sh_plugin.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "createChat",
+    "args": "",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "InitPostEntity",
+    "args": "",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerBindPress",
+    "args": "client, bind, pressed",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HUDShouldDraw",
+    "args": "element",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 33,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ChatText",
+    "args": "index, name, text, messageType",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 55,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupQuickMenu",
+    "args": "menu",
+    "file": "plugins\\chatbox\\sh_plugin.lua",
+    "line": 73,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShowHelp",
+    "args": "",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 5,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerBindPress",
+    "args": "client, bind, pressed",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 9,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharInfoSetup",
+    "args": "infoPanel",
+    "file": "plugins\\f1menu\\sh_plugin.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetDefaultInventoryType",
+    "args": "character",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ItemCombine",
+    "args": "client, item, target",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ItemDraggedOutOfInventory",
+    "args": "client, item",
+    "file": "plugins\\gridinv\\sh_plugin.lua",
+    "line": 33,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupBagInventoryAccessRules",
+    "args": "inventory",
+    "file": "plugins\\gridinv\\sv_access_rules.lua",
+    "line": 54,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "HandleItemTransferRequest",
+    "args": "client, itemID, x, y, invID, laltPressed",
+    "file": "plugins\\gridinv\\sv_transfer.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "syncCharList",
+    "args": "client",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerCreateCharacter",
+    "args": "client",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "chooseCharacter",
+    "args": "id",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "createCharacter",
+    "args": "data",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 55,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "deleteCharacter",
+    "args": "id",
+    "file": "plugins\\multichar\\sh_plugin.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerNutDataLoaded",
+    "args": "client",
+    "file": "plugins\\multichar\\sv_hooks.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\multichar\\sv_hooks.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerUseChar",
+    "args": "client, character, oldCharacter",
+    "file": "plugins\\multichar\\sv_hooks.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadedChar",
+    "args": "client, character, oldCharacter",
+    "file": "plugins\\multichar\\sv_hooks.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnCharCreated",
+    "args": "client, character",
+    "file": "plugins\\multichar\\sv_hooks.lua",
+    "line": 53,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadFonts",
+    "args": "",
+    "file": "plugins\\nsintro\\sh_plugin.lua",
+    "line": 19,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateIntroduction",
+    "args": "",
+    "file": "plugins\\nsintro\\sh_plugin.lua",
+    "line": 52,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ForceDermaSkin",
+    "args": "",
+    "file": "plugins\\nstheme\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "AdjustPACPartData",
+    "args": "wearer, id, data",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 4,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getAdjustedPartData",
+    "args": "wearer, id",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 14,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "attachPart",
+    "args": "client, id",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 20,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "removePart",
+    "args": "client, id",
+    "file": "plugins\\pac\\cl_parts.lua",
+    "line": 35,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "DrawPlayerRagdoll",
+    "args": "entity",
+    "file": "plugins\\pac\\cl_ragdolls.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnEntityCreated",
+    "args": "entity",
+    "file": "plugins\\pac\\cl_ragdolls.lua",
+    "line": 21,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "setupPACDataFromItems",
+    "args": "",
+    "file": "plugins\\pac\\sh_pacoutfit.lua",
+    "line": 2,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "InitializedPlugins",
+    "args": "",
+    "file": "plugins\\pac\\sh_pacoutfit.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getAllowedUserGroups",
+    "args": "",
+    "file": "plugins\\pac\\sh_permissions.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "isAllowedToUsePAC",
+    "args": "client",
+    "file": "plugins\\pac\\sh_permissions.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanWearParts",
+    "args": "client, file",
+    "file": "plugins\\pac\\sh_permissions.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePACEditorOpen",
+    "args": "client",
+    "file": "plugins\\pac\\sh_permissions.lua",
+    "line": 58,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PrePACConfigApply",
+    "args": "client",
+    "file": "plugins\\pac\\sh_permissions.lua",
+    "line": 62,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PostPlayerInitialSpawn",
+    "args": "client",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 47,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerLoadout",
+    "args": "client",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 53,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerDeath",
+    "args": "client",
+    "file": "plugins\\playerinjuries\\sv_hooks.lua",
+    "line": 22,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetPlayerPainSound",
+    "args": "client",
+    "file": "plugins\\playerinjuries\\sv_hooks.lua",
+    "line": 32,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetFallDamage",
+    "args": "client, speed",
+    "file": "plugins\\playerinjuries\\sv_hooks.lua",
+    "line": 38,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CalcViewModelView",
+    "args": "weapon, viewModel, oldEyePos, oldEyeAngles, eyePos, eyeAngles",
+    "file": "plugins\\raiseweapons\\cl_hooks.lua",
+    "line": 4,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SetupQuickMenu",
+    "args": "menu",
+    "file": "plugins\\raiseweapons\\cl_hooks.lua",
+    "line": 33,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StartCommand",
+    "args": "client, command",
+    "file": "plugins\\raiseweapons\\sh_hooks.lua",
+    "line": 3,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerThrowPunch",
+    "args": "client",
+    "file": "plugins\\raiseweapons\\sh_hooks.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "KeyPress",
+    "args": "client, key",
+    "file": "plugins\\raiseweapons\\sv_hooks.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSwitchWeapon",
+    "args": "client, oldWeapon, newWeapon",
+    "file": "plugins\\raiseweapons\\sv_hooks.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ScoreboardHide",
+    "args": "",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ScoreboardShow",
+    "args": "",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "OnReloaded",
+    "args": "",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 32,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "ShowPlayerOptions",
+    "args": "client, options",
+    "file": "plugins\\scoreboard\\sh_plugin.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "exitStorage",
+    "args": "",
+    "file": "plugins\\storage\\cl_networking.lua",
+    "line": 11,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StorageUnlockPrompt",
+    "args": "entity",
+    "file": "plugins\\storage\\cl_password.lua",
+    "line": 1,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "transferItem",
+    "args": "itemID",
+    "file": "plugins\\storage\\sh_plugin.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerInteractItem",
+    "args": "client, action, itemObject, data",
+    "file": "plugins\\storage\\sv_access_rules.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StorageInventorySet",
+    "args": "storage, inventory",
+    "file": "plugins\\storage\\sv_access_rules.lua",
+    "line": 39,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerSpawnedProp",
+    "args": "client, model, entity",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerSpawnStorage",
+    "args": "client, entity, info",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 46,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanSaveStorage",
+    "args": "entity, inventory",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 52,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "saveStorage",
+    "args": "",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 56,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StorageItemRemoved",
+    "args": "entity, inventory",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 78,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 82,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 86,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "VendorOpened",
+    "args": "vendor",
+    "file": "plugins\\vendor\\cl_hooks.lua",
+    "line": 1,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "VendorExited",
+    "args": "",
+    "file": "plugins\\vendor\\cl_hooks.lua",
+    "line": 6,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadFonts",
+    "args": "font",
+    "file": "plugins\\vendor\\cl_hooks.lua",
+    "line": 12,
+    "realm": "client",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "SaveData",
+    "args": "",
+    "file": "plugins\\vendor\\sv_data.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadData",
+    "args": "",
+    "file": "plugins\\vendor\\sv_data.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerAccessVendor",
+    "args": "client, vendor",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 2,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CanPlayerTradeWithVendor",
+    "args": "client,\n\tvendor,\n\titemType,\n\tisSellingToVendor",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 18,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "VendorTradeAttempt",
+    "args": "client,\n\tvendor,\n\titemType,\n\tisSellingToVendor",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 71,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "PlayerAccessVendor",
+    "args": "client, vendor",
+    "file": "plugins\\vendor\\sv_hooks.lua",
+    "line": 171,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "NutScriptTablesLoaded",
+    "args": "",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "print",
+    "args": "message",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "whereSameID",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getMigrationFilter",
+    "args": "",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 14,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "addInventoryData",
+    "args": "res, key, value",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 24,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateStorageSize",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 38,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "deleteCharID",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 66,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateBagSize",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 75,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateInventorySize",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 110,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateSize",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 124,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateInvType",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 128,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateInventory",
+    "args": "res",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 144,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "migrateInventories",
+    "args": "",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 150,
+    "realm": "server",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateInventoryPanel",
+    "args": "inventory, parent",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getItemStackKey",
+    "args": "item",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getItemStacks",
+    "args": "inventory",
+    "file": "plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StorageOpen",
+    "args": "storage",
+    "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+    "line": 153,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "LoadFonts",
+    "args": "font",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "NutScriptLoaded",
+    "args": "",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 80,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "KickedFromCharacter",
+    "args": "id, isCurrentChar",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 84,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateMenuButtons",
+    "args": "tabs",
+    "file": "plugins\\multichar\\plugins\\charselect\\sh_plugin.lua",
+    "line": 90,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "GetDefaultInventoryType",
+    "args": "character",
+    "file": "plugins\\_disabled\\simpleinv\\sh_plugin.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "CreateInventoryPanel",
+    "args": "inventory, parent",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getItemStackKey",
+    "args": "item",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "getItemStacks",
+    "args": "inventory",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  },
+  {
+    "type": "plugin_method",
+    "method_name": "StorageOpen",
+    "args": "storage",
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\liststorage\\sh_plugin.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "plugin_context": "plugin_file"
+  }
+]

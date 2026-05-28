@@ -1,0 +1,515 @@
+[
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 94,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 142,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 15,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "PaintOver",
+    "hotpath": true,
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 118,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\attributes\\derma\\cl_attribute.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 19,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 84,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 201,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 104,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 120,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 202,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 206,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 189,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\nscredits.lua",
+    "line": 105,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\nscredits.lua",
+    "line": 115,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 81,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "PerformLayout",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_horizontal_scroll.lua",
+    "line": 12,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_horizontal_scroll_bar.lua",
+    "line": 8,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_horizontal_scroll_bar.lua",
+    "line": 11,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_quick.lua",
+    "line": 32,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_quick.lua",
+    "line": 129,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_quick.lua",
+    "line": 159,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "PaintOver",
+    "hotpath": true,
+    "file": "gamemode\\core\\derma\\cl_quick.lua",
+    "line": 215,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 292,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "PaintOver",
+    "hotpath": true,
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 215,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\libs\\thirdparty\\cl_surfaceGetURL.lua",
+    "line": 35,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "gamemode\\core\\libs\\thirdparty\\cl_surfaceGetURL.lua",
+    "line": 51,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 30,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "PaintOver",
+    "hotpath": true,
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 132,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 166,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 302,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\chatbox\\derma\\cl_markup.lua",
+    "line": 11,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\f1menu\\derma\\cl_information.lua",
+    "line": 119,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 105,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 30,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "PaintOver",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 46,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 79,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_confirmation.lua",
+    "line": 17,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 142,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_selection.lua",
+    "line": 15,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_selection.lua",
+    "line": 19,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\steps\\cl_faction.lua",
+    "line": 11,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\nsintro\\derma\\cl_intro.lua",
+    "line": 80,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\nsintro\\derma\\cl_intro.lua",
+    "line": 106,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 29,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 53,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 90,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Think",
+    "hotpath": true,
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 204,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\vendor\\derma\\cl_vendor_item.lua",
+    "line": 88,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\vendor\\derma\\cl_vendor_trader.lua",
+    "line": 11,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_hotpath_callback",
+    "callback": "Paint",
+    "hotpath": true,
+    "file": "plugins\\_disabled\\simpleinv\\plugins\\listinvui\\derma\\cl_list_inventory_panel.lua",
+    "line": 25,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

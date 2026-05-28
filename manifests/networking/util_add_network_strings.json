@@ -1,0 +1,530 @@
+[
+  {
+    "type": "util_add_network_string",
+    "message_name": "adminSpawnMenu",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 8,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "adminSpawnItem",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 9,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "OpenCustomItemMenu",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 585,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "ShowScreamerImage",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 259,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "ShowScreamerImage2",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 260,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "cOpen",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 8,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "StartCraft",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "OpenCraft",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "requestnearbyents",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 433,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "givenearbyents",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 434,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "openhkmenu",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 435,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "hackent",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 436,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "hackfail",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 437,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "OpenMyInv",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 232,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "RandomNumber",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "IsFix",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "RandomNumber",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "IsFix",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "ItemFound",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "ContainerEmpty",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "CreedBroomSweep",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 6,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "CreedBroomSweep2",
+    "file": "plugins\\newweapons\\entities\\weapons\\nut_mop.lua",
+    "line": 7,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCorpseTransfer",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_networking.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutPluginDisable",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 10,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutPluginList",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutTypeStatus",
+    "file": "plugins\\typing.lua",
+    "line": 63,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "VManip_PickupEntity",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 897,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "syncClientTime",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutNotify",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutNotifyL",
+    "file": "gamemode\\core\\util\\sv_notice.lua",
+    "line": 2,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutStringReq",
+    "file": "gamemode\\core\\util\\sv_stringreq.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCharacterInvList",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutItemDelete",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 2,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutItemInstance",
+    "file": "gamemode\\core\\libs\\item\\sv_networking.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "NetStreamDS",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutInventoryInit",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 9,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutInventoryData",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutInventoryDelete",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 11,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutInventoryAdd",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 12,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutInventoryRemove",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 13,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutTransferItem",
+    "file": "plugins\\gridinv\\sv_transfer.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCharChoose",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCharCreate",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 4,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCharDelete",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCharList",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutCharMenu",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutPACSync",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutPACPartAdd",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 2,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutPACPartRemove",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutPACPartReset",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 4,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutStorageOpen",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 1,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutStorageExit",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 2,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutStorageUnlock",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 3,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutStorageTransfer",
+    "file": "plugins\\storage\\sv_networking.lua",
+    "line": 4,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorAllowClass",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 4,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorAllowFaction",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorExit",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorEdit",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorMode",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 8,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorMoney",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 9,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorOpen",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorPrice",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 11,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorStock",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 12,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorMaxStock",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 13,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorSync",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 14,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "util_add_network_string",
+    "message_name": "nutVendorTrade",
+    "file": "plugins\\vendor\\sv_networking.lua",
+    "line": 15,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

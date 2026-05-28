@@ -1,0 +1,1226 @@
+[
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\base\\sh_armor_repair_kit.lua",
+    "line": 53,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\base\\sh_armor_repair_kit.lua",
+    "line": 190,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 282,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 355,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 369,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 379,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 401,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 466,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 508,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 595,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 25,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 55,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 67,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\armor\\items\\outfit\\sh_helmet_arar_mask.lua",
+    "line": 82,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 74,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 137,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\biorezonance\\items\\sh_thermite.lua",
+    "line": 33,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\biorezonance\\items\\sh_thermite.lua",
+    "line": 60,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 106,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 118,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 130,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 139,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onClick",
+    "inferred_realm": "unknown",
+    "file": "plugins\\books\\items\\base\\sh_books.lua",
+    "line": 9,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\books\\items\\base\\sh_books.lua",
+    "line": 42,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onClick",
+    "inferred_realm": "unknown",
+    "file": "plugins\\books\\items\\base\\sh_bucklets.lua",
+    "line": 11,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\books\\items\\base\\sh_bucklets.lua",
+    "line": 22,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 59,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_component.lua",
+    "line": 84,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 48,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 78,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 90,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 119,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 141,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 184,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 213,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_junk.lua",
+    "line": 238,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_storage_consumables.lua",
+    "line": 11,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_storage_consumables.lua",
+    "line": 41,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\crafting\\items\\base\\sh_workbench_consumables.lua",
+    "line": 11,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\crafting\\items\\base\\sh_workbench_consumables.lua",
+    "line": 40,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\farming\\items\\base\\sh_pot.lua",
+    "line": 11,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\farming\\items\\base\\sh_pot.lua",
+    "line": 34,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\gadgets\\items\\sh_cid.lua",
+    "line": 7,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\gadgets\\items\\sh_cid.lua",
+    "line": 59,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\gadgets\\items\\sh_civil_lock.lua",
+    "line": 16,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\gadgets\\items\\sh_nation_lock.lua",
+    "line": 8,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\gadgets\\items\\sh_nation_lock.lua",
+    "line": 141,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\gadgets\\items\\sh_protect_lock.lua",
+    "line": 16,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\sh_hack_remote.lua",
+    "line": 33,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\sh_hack_remote.lua",
+    "line": 45,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\base\\sh_hackprogram.lua",
+    "line": 36,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\base\\sh_hackprogram.lua",
+    "line": 55,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 84,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 94,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 118,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 133,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 144,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 150,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 160,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 170,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 179,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\hacking\\items\\base\\sh_hacktool.lua",
+    "line": 184,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 249,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 254,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 267,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\healthproblems\\items\\base\\sh_peals.lua",
+    "line": 284,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\lightitems\\items\\base\\sh_electrical_appliances.lua",
+    "line": 8,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\lightitems\\items\\base\\sh_electrical_appliances.lua",
+    "line": 37,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\lightitems\\items\\base\\sh_glowstick.lua",
+    "line": 8,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\lightitems\\items\\base\\sh_glowstick.lua",
+    "line": 26,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\lightitems\\items\\engineering_consumables\\sh_eng_wiring.lua",
+    "line": 8,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\lightitems\\items\\engineering_consumables\\sh_eng_wiring.lua",
+    "line": 57,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\lightitems\\items\\engineering_consumables\\sh_eng_wiring.lua",
+    "line": 64,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\lightitems\\items\\engineering_consumables\\sh_eng_wiring.lua",
+    "line": 85,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\sh_metalcan.lua",
+    "line": 18,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\sh_metalcan.lua",
+    "line": 30,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\sh_water_filter.lua",
+    "line": 9,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\sh_water_filter.lua",
+    "line": 77,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 28,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 50,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 59,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_container.lua",
+    "line": 75,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 16,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 63,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 92,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 99,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 24,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 29,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 38,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 45,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 55,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 136,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\needs\\items\\food\\sh_drink_waterbottle.lua",
+    "line": 42,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\needs\\items\\food\\sh_drink_waterbottle.lua",
+    "line": 46,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\radio\\items\\sh_mcradio.lua",
+    "line": 57,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 57,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 69,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 52,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 64,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\traits\\items\\base\\sh_skillbook.lua",
+    "line": 18,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\traits\\items\\base\\sh_skillbook.lua",
+    "line": 123,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\tying\\items\\sh_tie.lua",
+    "line": 7,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\tying\\items\\sh_tie.lua",
+    "line": 65,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 18,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 22,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 34,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 38,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 48,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "schema\\items\\sh_bleach.lua",
+    "line": 9,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "schema\\items\\sh_drugs_cigarettes.lua",
+    "line": 21,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "schema\\items\\sh_drugs_cigarettes.lua",
+    "line": 35,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "schema\\items\\sh_ration.lua",
+    "line": 14,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 20,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 63,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 70,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "schema\\items\\sh_shovel_tool.lua",
+    "line": 99,
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onClick",
+    "inferred_realm": "unknown",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 56,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_ammo.lua",
+    "line": 62,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 79,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 84,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 94,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 122,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 121,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 188,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 209,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 256,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 278,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 313,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 427,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 517,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 525,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 543,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onRun",
+    "inferred_realm": "server",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 616,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 663,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onClick",
+    "inferred_realm": "unknown",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 15,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_action_callback",
+    "callback_name": "onCanRun",
+    "inferred_realm": "client_or_shared",
+    "file": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "line": 41,
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  }
+]

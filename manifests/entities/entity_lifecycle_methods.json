@@ -1,0 +1,2142 @@
+[
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_flesh_bee.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_flesh_bee.lua",
+    "line": 43,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_flesh_bee.lua",
+    "method_name": "Think",
+    "file": "entities\\entities\\nut_flesh_bee.lua",
+    "line": 90,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_flesh_bee.lua",
+    "method_name": "OnRemove",
+    "file": "entities\\entities\\nut_flesh_bee.lua",
+    "line": 182,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_simple_enemy.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_simple_enemy.lua",
+    "line": 10,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_simple_enemy.lua",
+    "method_name": "Touch",
+    "file": "entities\\entities\\nut_simple_enemy.lua",
+    "line": 147,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 71,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "Use",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 107,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "OnRemove",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 192,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 205,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "Draw",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 216,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_corrupt_base.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_corrupt_base.lua",
+    "line": 482,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_empire_base.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_empire_base.lua",
+    "line": 808,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_soldier_base.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_soldier_base.lua",
+    "line": 481,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_soldier_follower.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_soldier_follower.lua",
+    "line": 29,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_empire_hostile.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_empire_hostile.lua",
+    "line": 41,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_klbr_hostile.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_klbr_hostile.lua",
+    "line": 39,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_klbr_hostile.lua",
+    "method_name": "Think",
+    "file": "entities\\entities\\sb_klbr_hostile.lua",
+    "line": 70,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_klbr_hostile.lua",
+    "method_name": "OnRemove",
+    "file": "entities\\entities\\sb_klbr_hostile.lua",
+    "line": 97,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_replica_crazy.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_replica_crazy.lua",
+    "line": 61,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_replica_friendly.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_replica_friendly.lua",
+    "line": 29,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_replica_hostile.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_replica_hostile.lua",
+    "line": 54,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bucket",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_bucket\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bucket",
+    "method_name": "StartTouch",
+    "file": "entities\\entities\\nut_bucket\\init.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bucket",
+    "method_name": "Use",
+    "file": "entities\\entities\\nut_bucket\\init.lua",
+    "line": 54,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cockroach",
+    "method_name": "Draw",
+    "file": "entities\\entities\\nut_cockroach\\cl_init.lua",
+    "line": 5,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cockroach",
+    "method_name": "DrawTranslucent",
+    "file": "entities\\entities\\nut_cockroach\\cl_init.lua",
+    "line": 9,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cockroach",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_cockroach\\init.lua",
+    "line": 14,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cockroach",
+    "method_name": "Think",
+    "file": "entities\\entities\\nut_cockroach\\init.lua",
+    "line": 46,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cockroach",
+    "method_name": "Touch",
+    "file": "entities\\entities\\nut_cockroach\\init.lua",
+    "line": 158,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_flesh",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_flesh\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_flesh",
+    "method_name": "Use",
+    "file": "entities\\entities\\nut_flesh\\init.lua",
+    "line": 27,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_manhole_teleport",
+    "method_name": "SetupDataTables",
+    "file": "entities\\entities\\nut_manhole_teleport\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_manhole_teleport",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_manhole_teleport\\init.lua",
+    "line": 19,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_manhole_teleport",
+    "method_name": "Use",
+    "file": "entities\\entities\\nut_manhole_teleport\\init.lua",
+    "line": 37,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_manhole_teleport",
+    "method_name": "OnRemove",
+    "file": "entities\\entities\\nut_manhole_teleport\\init.lua",
+    "line": 75,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_utilizator",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_utilizator",
+    "method_name": "StartTouch",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 28,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_utilizator",
+    "method_name": "Use",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 101,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_utilizator",
+    "method_name": "OnRemove",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 124,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_base",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\cl_init.lua",
+    "line": 7,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_base",
+    "method_name": "Draw",
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\cl_init.lua",
+    "line": 20,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_base",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\init.lua",
+    "line": 104,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_base",
+    "method_name": "Think",
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\shared.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_terminator_hunter",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_terminator_hunter",
+    "method_name": "Use",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 1936,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_terminator_hunter",
+    "method_name": "Think",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 2350,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "sb_advanced_nextbot_terminator_hunter",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 2390,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_eventpoint",
+    "method_name": "Initialize",
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_eventpoint",
+    "method_name": "Use",
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 23,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_eventpoint",
+    "method_name": "OnRemove",
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 90,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_eventpoint",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_fleshradioactive",
+    "method_name": "Initialize",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_fleshradioactive\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_fleshradioactive",
+    "method_name": "Use",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_fleshradioactive\\init.lua",
+    "line": 71,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_fleshradioactive",
+    "method_name": "OnRemove",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_fleshradioactive\\init.lua",
+    "line": 146,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_fleshradioactive",
+    "method_name": "StartTouch",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_fleshradioactive\\init.lua",
+    "line": 156,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_gas",
+    "method_name": "Initialize",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_gas",
+    "method_name": "Use",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua",
+    "line": 26,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_gas",
+    "method_name": "OnRemove",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua",
+    "line": 51,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_gas",
+    "method_name": "Think",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua",
+    "line": 55,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_ihnolite",
+    "method_name": "Initialize",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_ihnolite",
+    "method_name": "Use",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_ihnolite",
+    "method_name": "OnRemove",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua",
+    "line": 29,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_teleport",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_teleport",
+    "method_name": "Initialize",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+    "line": 19,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_teleport",
+    "method_name": "Use",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+    "line": 39,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_bioresonanse_teleport",
+    "method_name": "OnRemove",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua",
+    "line": 109,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_oxygen_stantion",
+    "method_name": "Initialize",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_oxygen_stantion",
+    "method_name": "Use",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 74,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "Initialize",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "Use",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 121,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "OnRemove",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 144,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "Think",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 175,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_crafting_base",
+    "method_name": "Initialize",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_crafting_base",
+    "method_name": "Use",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 69,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_crafting_base",
+    "method_name": "OnRemove",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 112,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_crafting_base",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\shared.lua",
+    "line": 17,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_craft_pressing",
+    "method_name": "Draw",
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\cl_init.lua",
+    "line": 23,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_craft_pressing",
+    "method_name": "Use",
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_craft_pressing",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage_kit",
+    "method_name": "Initialize",
+    "file": "plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage_kit",
+    "method_name": "Use",
+    "file": "plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage_kit",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\crafting\\entities\\entities\\nut_storage_kit\\shared.lua",
+    "line": 9,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_workbench_kit",
+    "method_name": "Initialize",
+    "file": "plugins\\crafting\\entities\\entities\\nut_workbench_kit\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_workbench_kit",
+    "method_name": "Use",
+    "file": "plugins\\crafting\\entities\\entities\\nut_workbench_kit\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_workbench_kit",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\crafting\\entities\\entities\\nut_workbench_kit\\shared.lua",
+    "line": 9,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "farming_pot",
+    "method_name": "Draw",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\cl_init.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "farming_pot",
+    "method_name": "Initialize",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "farming_pot",
+    "method_name": "StartTouch",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 59,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "farming_pot",
+    "method_name": "Use",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 114,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "farming_pot",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\shared.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cmblock.lua",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cmblock.lua",
+    "method_name": "Initialize",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+    "line": 40,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cmblock.lua",
+    "method_name": "OnRemove",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+    "line": 51,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cmblock.lua",
+    "method_name": "Use",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+    "line": 61,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cmblock.lua",
+    "method_name": "Think",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+    "line": 169,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cmblock.lua",
+    "method_name": "Draw",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cmblock.lua",
+    "line": 212,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_culock.lua",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_culock.lua",
+    "method_name": "Initialize",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+    "line": 40,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_culock.lua",
+    "method_name": "OnRemove",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+    "line": 51,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_culock.lua",
+    "method_name": "Use",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+    "line": 61,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_culock.lua",
+    "method_name": "Think",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+    "line": 171,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_culock.lua",
+    "method_name": "Draw",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_culock.lua",
+    "line": 214,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cardupdater",
+    "method_name": "Draw",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cardupdater\\cl_init.lua",
+    "line": 25,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cardupdater",
+    "method_name": "Initialize",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cardupdater\\init.lua",
+    "line": 19,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cardupdater",
+    "method_name": "StartTouch",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cardupdater\\init.lua",
+    "line": 34,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cardupdater",
+    "method_name": "Think",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cardupdater\\init.lua",
+    "line": 103,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cardupdater",
+    "method_name": "Use",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cardupdater\\init.lua",
+    "line": 116,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cardupdater",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_cardupdater\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_computer",
+    "method_name": "Draw",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\cl_init.lua",
+    "line": 27,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_computer",
+    "method_name": "Initialize",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_computer",
+    "method_name": "StartTouch",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_computer",
+    "method_name": "Use",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 94,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_computer",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_nationlock",
+    "method_name": "Draw",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\cl_init.lua",
+    "line": 27,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_nationlock",
+    "method_name": "Initialize",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_nationlock",
+    "method_name": "Use",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 38,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_nationlock",
+    "method_name": "OnRemove",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 169,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_nationlock",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "customhackbase.lua",
+    "method_name": "Initialize",
+    "file": "plugins\\hacking\\entities\\entities\\customhackbase.lua",
+    "line": 50,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "customhackbase.lua",
+    "method_name": "Use",
+    "file": "plugins\\hacking\\entities\\entities\\customhackbase.lua",
+    "line": 67,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "customhackbase.lua",
+    "method_name": "Draw",
+    "file": "plugins\\hacking\\entities\\entities\\customhackbase.lua",
+    "line": 75,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_chemlight_glow",
+    "method_name": "Think",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_chemlight_glow\\cl_init.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_chemlight_glow",
+    "method_name": "Initialize",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_chemlight_glow\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_chemlight_glow",
+    "method_name": "Think",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_chemlight_glow\\init.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "Initialize",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\cl_init.lua",
+    "line": 44,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "Think",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\cl_init.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "OnRemove",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\cl_init.lua",
+    "line": 108,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "Draw",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\cl_init.lua",
+    "line": 114,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "Initialize",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "Use",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 40,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "OnRemove",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 271,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_diode_light",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\shared.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_generator",
+    "method_name": "Draw",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\cl_init.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_generator",
+    "method_name": "Initialize",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 8,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_generator",
+    "method_name": "Use",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 93,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_generator",
+    "method_name": "OnRemove",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 277,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_generator",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_panel",
+    "method_name": "Initialize",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 8,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_panel",
+    "method_name": "Use",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 51,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_panel",
+    "method_name": "OnRemove",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 68,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_electric_panel",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loot_container_base",
+    "method_name": "Initialize",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loot_container_base",
+    "method_name": "OnRemove",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+    "line": 74,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loot_container_base",
+    "method_name": "Use",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+    "line": 87,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loot_container_base",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loot_junk",
+    "method_name": "Initialize",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 8,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loot_junk",
+    "method_name": "Use",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua",
+    "line": 27,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loyal_terminal",
+    "method_name": "Initialize",
+    "file": "plugins\\loyal_system\\entities\\entities\\nut_loyal_terminal\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_loyal_terminal",
+    "method_name": "Use",
+    "file": "plugins\\loyal_system\\entities\\entities\\nut_loyal_terminal\\init.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ihnolit_orevein.lua",
+    "method_name": "Use",
+    "file": "plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua",
+    "line": 18,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ihnolit_orevein.lua",
+    "method_name": "OnRemove",
+    "file": "plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua",
+    "line": 22,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_melting_pot",
+    "method_name": "Initialize",
+    "file": "plugins\\mining\\entities\\entities\\nut_melting_pot\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_orevein_base",
+    "method_name": "Initialize",
+    "file": "plugins\\mining\\entities\\entities\\nut_orevein_base\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "Draw",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\cl_init.lua",
+    "line": 42,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "Initialize",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "Use",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 145,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "Think",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 179,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "OnRemove",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 465,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "StartTouch",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 478,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_ore_smelter",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\shared.lua",
+    "line": 26,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_mnhr_powerarmor",
+    "method_name": "Initialize",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_powerarmor\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_mnhr_powerarmor",
+    "method_name": "Use",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_powerarmor\\init.lua",
+    "line": 80,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_mnhr_powerarmor",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_powerarmor\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_mnhr_service",
+    "method_name": "Initialize",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_mnhr_service",
+    "method_name": "Use",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\init.lua",
+    "line": 19,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_mnhr_service",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_base.lua",
+    "method_name": "Use",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 10,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_base.lua",
+    "method_name": "StartTouch",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 134,
+    "realm": "unknown",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_board",
+    "method_name": "StartTouch",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_board\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_board",
+    "method_name": "Use",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_board\\init.lua",
+    "line": 45,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_board",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_board\\shared.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_kettle",
+    "method_name": "Draw",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\cl_init.lua",
+    "line": 23,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_kettle",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 7,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_kettle",
+    "method_name": "StartTouch",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_kettle",
+    "method_name": "Use",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 101,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_kettle",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\shared.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_oven",
+    "method_name": "Draw",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\cl_init.lua",
+    "line": 22,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_oven",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_oven",
+    "method_name": "StartTouch",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 45,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_oven",
+    "method_name": "Use",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 105,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_oven",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\shared.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_pan",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_pan\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_pan",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_pan\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_plate",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_plate\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_pot",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_pot\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_pot",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_pot\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_cooking_pottea",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_pottea\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_waterfaucet",
+    "method_name": "Initialize",
+    "file": "plugins\\needs\\entities\\entities\\nut_waterfaucet\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_waterfaucet",
+    "method_name": "Use",
+    "file": "plugins\\needs\\entities\\entities\\nut_waterfaucet\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_waterfaucet",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\needs\\entities\\entities\\nut_waterfaucet\\shared.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_type39",
+    "method_name": "Draw",
+    "file": "plugins\\newweapons\\entities\\entities\\nut_type39\\shared.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_type39",
+    "method_name": "Initialize",
+    "file": "plugins\\newweapons\\entities\\entities\\nut_type39\\shared.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_type39",
+    "method_name": "PhysicsCollide",
+    "file": "plugins\\newweapons\\entities\\entities\\nut_type39\\shared.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_type39",
+    "method_name": "Think",
+    "file": "plugins\\newweapons\\entities\\entities\\nut_type39\\shared.lua",
+    "line": 40,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_radio_station",
+    "method_name": "Draw",
+    "file": "plugins\\radio\\entities\\entities\\nut_radio_station\\cl_init.lua",
+    "line": 23,
+    "realm": "client",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_radio_station",
+    "method_name": "Initialize",
+    "file": "plugins\\radio\\entities\\entities\\nut_radio_station\\init.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_radio_station",
+    "method_name": "Use",
+    "file": "plugins\\radio\\entities\\entities\\nut_radio_station\\init.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_radio_station",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\radio\\entities\\entities\\nut_radio_station\\shared.lua",
+    "line": 12,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_item.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_item.lua",
+    "method_name": "OnRemove",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 94,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_item.lua",
+    "method_name": "Think",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 112,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_item.lua",
+    "method_name": "DrawTranslucent",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 199,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_money.lua",
+    "method_name": "Initialize",
+    "file": "entities\\entities\\nut_money.lua",
+    "line": 9,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_money.lua",
+    "method_name": "Use",
+    "file": "entities\\entities\\nut_money.lua",
+    "line": 24,
+    "realm": "unknown",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage",
+    "method_name": "Initialize",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 12,
+    "realm": "server",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage",
+    "method_name": "OnRemove",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 53,
+    "realm": "server",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage",
+    "method_name": "Use",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 98,
+    "realm": "server",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_storage",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\shared.lua",
+    "line": 9,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendor",
+    "method_name": "Think",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\cl_init.lua",
+    "line": 3,
+    "realm": "client",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendor",
+    "method_name": "Use",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendor",
+    "method_name": "OnRemove",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 264,
+    "realm": "server",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendor",
+    "method_name": "SetupDataTables",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "lifecycle": true
+  },
+  {
+    "type": "entity_lifecycle_method",
+    "entity_name": "nut_vendor",
+    "method_name": "Initialize",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "lifecycle": true
+  }
+]

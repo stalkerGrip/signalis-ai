@@ -1,0 +1,4196 @@
+[
+  {
+    "type": "netstream_start",
+    "message_expr": "nut_DisplaySpawnPoints",
+    "resolution": "literal",
+    "file": "plugins\\worlditemspawner.lua",
+    "line": 147,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "plyData",
+    "resolution": "literal",
+    "file": "schema\\sh_commands.lua",
+    "line": 45,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "obj",
+    "resolution": "literal",
+    "file": "schema\\sh_commands.lua",
+    "line": 53,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "schema\\sh_schema.lua",
+    "line": 155,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cDisp",
+    "resolution": "literal",
+    "file": "schema\\sh_schema.lua",
+    "line": 168,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lampLightUpdate",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 656,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "v",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 841,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "hideAdd",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\sv_hooks.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\armor\\sh_plugin.lua",
+    "line": 258,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setBioSwep",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 117,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setBioSwep",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 209,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rezonatorAdd",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 64,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rezonatorAdd",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "v",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 74,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "v",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 116,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 517,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 535,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "gasMaskOff",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 548,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 555,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invExit",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invExit",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 48,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cPlayerActive",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cPlayerDisable",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 77,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cPlayerVolumeChanged",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 91,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invExit",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 136,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cPlayerActive",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 157,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cPlayerDisable",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\sh_plugin.lua",
+    "line": 165,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "k",
+    "resolution": "literal",
+    "file": "plugins\\crafting\\sh_plugin.lua",
+    "line": 42,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "doorInterfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 92,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "v",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 171,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "v",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 183,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesHandleSwepSelect",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\cl_hooks.lua",
+    "line": 8,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesSelectWeapon",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 247,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesStatusInterfaceOpen",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 279,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "hudRemoveAllStatusIcons",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 593,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "ents.GetByIndex",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 628,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "ents.GetByIndex",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 654,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 905,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudHandleStatusIconCount",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 906,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudHandleStatusIconCount",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 918,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 925,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesStatusInterfaceOpen",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1083,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudHandleStatusIconCount",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 1112,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 30,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 35,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invsRuleSet",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 82,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 86,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "removeReceiverFromVendor",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 161,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 163,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "itemSplitAdd",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 209,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "itemSplitAdd",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 217,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "hookName",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 246,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "hookName",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 254,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 319,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "vendorTradeInterface",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\sh_plugin.lua",
+    "line": 273,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryOpen",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 18,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelTryFix",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelTryFix",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 74,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelTryFix",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 88,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelTryFix",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 100,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "RequestTopologyBake",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 564,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "targets",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 253,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "targets",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 267,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "targets",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 276,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 69,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 86,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 111,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 191,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 208,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 214,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 251,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhr",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 283,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhr",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 294,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mopRemoveDecal",
+    "resolution": "literal",
+    "file": "plugins\\newweapons\\sv_hooks.lua",
+    "line": 5,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "radioAdjust",
+    "resolution": "literal",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 83,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "radiostationRadioAdjust",
+    "resolution": "literal",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 88,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\sh_plugin.lua",
+    "line": 164,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 38,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 42,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "plugins\\snowy_components\\sv_meta.lua",
+    "line": 50,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "fakechatmessage",
+    "resolution": "literal",
+    "file": "plugins\\traits\\sh_config.lua",
+    "line": 924,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "fakechatmessage",
+    "resolution": "literal",
+    "file": "plugins\\traits\\sh_config.lua",
+    "line": 938,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "LevelupSkill",
+    "resolution": "literal",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 470,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 643,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "broketraitsetup",
+    "resolution": "literal",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 702,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "broketraitadd",
+    "resolution": "literal",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 717,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchPly",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 105,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchExit",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 132,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchExit",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 172,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 176,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchExit",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 220,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchExit",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 239,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchExit",
+    "resolution": "literal",
+    "file": "plugins\\tying\\sh_charsearch.lua",
+    "line": 248,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSetSpawn",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSetUnbanTime",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 57,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSetUnbanTime",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 63,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSpawnMenuSwitch",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 69,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSpawnItem",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 121,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSpawn300Mid",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 131,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "eventpointSpawn300Lrg",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 137,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "createCustomItem",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\derma\\cl_menu.lua",
+    "line": 32,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 26,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryUpdBg",
+    "resolution": "literal",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryUpdSkin",
+    "resolution": "literal",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 140,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryTargetUpdBg",
+    "resolution": "literal",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 268,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryTargetUpdSkin",
+    "resolution": "literal",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 269,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryUpdSkin",
+    "resolution": "literal",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 577,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "attrib",
+    "resolution": "literal",
+    "file": "plugins\\attributes\\libs\\sh_attribs.lua",
+    "line": 50,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "attrib",
+    "resolution": "literal",
+    "file": "plugins\\attributes\\libs\\sh_attribs.lua",
+    "line": 71,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oxystantionSelfFill",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 33,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oxystantionTankFill",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oxystantionL1Fill",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 47,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 75,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "gasMaskOn",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 26,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "gasMaskOff",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "gasMaskOff",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 47,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 48,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "gasMaskOn",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 72,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 73,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 53,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 93,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "startO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 113,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "endO2Hud",
+    "resolution": "literal",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 135,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 135,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "pressingSetProgram",
+    "resolution": "literal",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 46,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "workbenchInvOpen",
+    "resolution": "literal",
+    "file": "plugins\\crafting\\derma\\cl_pressing_interface.lua",
+    "line": 64,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "workbenchInvOpen",
+    "resolution": "literal",
+    "file": "plugins\\crafting\\derma\\cl_workbench_interface.lua",
+    "line": 54,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 75,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 62,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "fpotHarvest",
+    "resolution": "literal",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 27,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 37,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 43,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\farming\\entities\\entities\\farming_pot\\init.lua",
+    "line": 115,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchReplica",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 76,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "compAddShiftSv",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 183,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "remAddShiftSv",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 188,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "getLocksView",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 327,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setUpCardBodyGroup",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 482,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setUpCard",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 491,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setUpCard",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 537,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setUpCardAccess",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 538,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setCharPoints",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 689,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setCharPoints",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 726,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "getLockInfo",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 757,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lockNameChange",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 792,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "switchLockState",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 798,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "getLocksView",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 819,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "doorLockSwitchState",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_door_interface.lua",
+    "line": 99,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "doorLockResetPassword",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_door_interface.lua",
+    "line": 114,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "doorLockUpdateAccess",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_door_interface.lua",
+    "line": 168,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lockCorrectPass",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_nationlock_interface.lua",
+    "line": 93,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lockResetPassword",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_nationlock_interface.lua",
+    "line": 108,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lockUpdateAccess",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\derma\\cl_nationlock_interface.lua",
+    "line": 161,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "logOut",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\cl_init.lua",
+    "line": 75,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchReplica",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\cl_init.lua",
+    "line": 83,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 98,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 108,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self.user",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 192,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self.user",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 326,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 85,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "setUpLocksInfo",
+    "resolution": "literal",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 200,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesUseItem",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\derma\\cl_status_interface.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesStatusInterfaceClose",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\derma\\cl_status_interface.lua",
+    "line": 261,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\activatedcarbon.lua",
+    "line": 17,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\activatedcarbon.lua",
+    "line": 29,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\alcoholaddiction.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\alcoholaddiction.lua",
+    "line": 37,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\alcoholoverdose.lua",
+    "line": 30,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\alcoholoverdose.lua",
+    "line": 42,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\aminocaproicacid.lua",
+    "line": 22,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\aminocaproicacid.lua",
+    "line": 34,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\anemia.lua",
+    "line": 23,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\anemia.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\antibiotics.lua",
+    "line": 27,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\antibiotics.lua",
+    "line": 39,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesAddBlindness",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\diseases\\blindness.lua",
+    "line": 20,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\blindness.lua",
+    "line": 22,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesRemoveBlindness",
+    "resolution": "literal",
+    "file": "plugins\\healthproblems\\diseases\\blindness.lua",
+    "line": 34,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\blindness.lua",
+    "line": 36,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\cigaretteaddiction.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\cigaretteaddiction.lua",
+    "line": 37,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\cough.lua",
+    "line": 78,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\cough.lua",
+    "line": 96,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\diclofenak.lua",
+    "line": 17,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\diclofenak.lua",
+    "line": 29,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\dpainkilladdiction.lua",
+    "line": 27,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\dpainkilladdiction.lua",
+    "line": 39,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\dpainkillkddetox.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\dpainkillkddetox.lua",
+    "line": 46,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\dpainkilloverdose.lua",
+    "line": 30,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\dpainkilloverdose.lua",
+    "line": 42,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\foodpoisoning.lua",
+    "line": 27,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\foodpoisoning.lua",
+    "line": 45,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\galoperedol.lua",
+    "line": 19,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\galoperedol.lua",
+    "line": 32,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\glucosesolution.lua",
+    "line": 31,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\glucosesolution.lua",
+    "line": 43,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\heartstop.lua",
+    "line": 39,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\heartstop.lua",
+    "line": 51,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\infection.lua",
+    "line": 11,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\infection.lua",
+    "line": 30,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudHandleStatusIconCount",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\infection.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\madness.lua",
+    "line": 50,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\madness.lua",
+    "line": 62,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\painkill.lua",
+    "line": 12,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudHandleStatusIconCount",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\painkill.lua",
+    "line": 18,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\painkill.lua",
+    "line": 33,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudHandleStatusIconCount",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\painkill.lua",
+    "line": 38,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\restoreblood.lua",
+    "line": 17,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\restoreblood.lua",
+    "line": 29,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\staminaregen.lua",
+    "line": 14,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\staminaregen.lua",
+    "line": 18,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\staminaregen.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\starvation.lua",
+    "line": 17,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\starvation.lua",
+    "line": 29,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudAddStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\unconscious.lua",
+    "line": 23,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nut.diseases.stringConsts.hudRemoveStatusIcon",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\healthproblems\\diseases\\unconscious.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventoryPackAmmo",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 161,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhrOpenVisor",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 177,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhrCloseVisor",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 182,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhrNvgOn",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 187,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhrNvgOff",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 192,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mnhrPowerArmorOut",
+    "resolution": "literal",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 197,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemSwitchPower",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemTakeOff",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 56,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lampSetPower",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 77,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelStartFix",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 92,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelRelaySetUp",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 98,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemGensView",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 104,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "elPanelAttachToGen",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 125,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemSwitchPower",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemGensView",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 55,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genUngroup",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genQuickCheck",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 69,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genQuickCheck",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 76,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genCheck",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 106,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genCheck",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 138,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genRepair",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 170,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genFill",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 185,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genFill",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 192,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "genGroupToGen",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 213,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lampManage",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_lamp_interface.lua",
+    "line": 60,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemTakeOff",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\derma\\cl_lamp_interface.lua",
+    "line": 83,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 94,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 95,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemGensViewShow",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 1076,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 53,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 54,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lightItemGensViewShow",
+    "resolution": "literal",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 462,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oresmelterOvenStart",
+    "resolution": "literal",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 51,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oresmelterCrusherStart",
+    "resolution": "literal",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 57,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oresmelterSmelterStart",
+    "resolution": "literal",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 63,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "oresmelterSelectProgram",
+    "resolution": "literal",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 84,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "workbenchInvOpen",
+    "resolution": "literal",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 100,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "interfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 146,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "hookName",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 60,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "plugMNHRToStation",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 77,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "stationMNHRRepair",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 110,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "stationMNHRRepair",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 116,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "plugMNHRToStation",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 214,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingboardCut",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 129,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 145,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 151,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingovenFirstBurnerSwitch",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingovenFirstBurnerSwitch",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 47,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingovenStartFix",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 55,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingovenStartBake",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 113,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingovenTakeFood",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 123,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotUpdateCompositionServer",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 74,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "hookName",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 150,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotGetCompositionServer",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 167,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotPourOut",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 174,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotTakeOff",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 230,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotPickUp",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 238,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "kettleTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 58,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 64,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "waterfaucetDrawWater",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "waterfaucetDrinkWater",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 47,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "waterfaucetWash",
+    "resolution": "literal",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 136,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingPotInterfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 13,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotGetCompositionClient",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 307,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cookingpotUpdateCompositionClient",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 320,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "interfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_board\\init.lua",
+    "line": 51,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "kettlePartAddClient",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 75,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "kettleInterfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 104,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "interfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 121,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "interfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\needs\\entities\\entities\\nut_waterfaucet\\init.lua",
+    "line": 21,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 95,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "applyVendorAppearance",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 71,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "updateVendorFaction",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 108,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "itemVendorBuySet",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 218,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "itemVendorTradeSet",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 220,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "itemVendorRemove",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 227,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "makeVendorMovable",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 272,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "applyVendorPos",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 278,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "changeVendorPos",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 285,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "vendorTrade",
+    "resolution": "literal",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 293,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "attachAttachment",
+    "resolution": "literal",
+    "file": "plugins\\newweapons\\items\\base\\sh_arc9_attachments.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "radiostationSwitchPower",
+    "resolution": "literal",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 43,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "radiostationSendMsg",
+    "resolution": "literal",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 87,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\radio\\items\\sh_radio.lua",
+    "line": 70,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\radio\\items\\sh_sradio.lua",
+    "line": 65,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\radio\\entities\\entities\\nut_radio_station\\init.lua",
+    "line": 26,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootOpenServer",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 51,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpseCorruptFinish",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 60,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpseCorruptIgnite",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 67,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpsePlyFinish",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 77,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesStatusInterfaceTargetGetData",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 84,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "performCpr",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 93,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpseEat",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 104,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpseHide",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 114,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpseTakeAmmo",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 124,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootWdMny",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 43,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootDpMny",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 68,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootExit",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 101,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 102,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootExit",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 120,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 122,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootExit",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 173,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootExit",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\cl_hooks.lua",
+    "line": 230,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootExit",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 189,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "lootOpenClient",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 211,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "searchers",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 228,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "corpseInterfaceTurnOn",
+    "resolution": "literal",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 605,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 44,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 44,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOff",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 44,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nvisionOn",
+    "resolution": "literal",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "bank::ValidateVaultPassword",
+    "resolution": "literal",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 159,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "bank::SyncVaultAttempts",
+    "resolution": "literal",
+    "file": "plugins\\snowy_components\\derma\\cl_objects.lua",
+    "line": 161,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageOpen",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageChangePass",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 68,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageTakeOffLock",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 87,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageTakeOffLock",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 98,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageHangLock",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 111,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageNewDesc",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 154,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageInventory",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 174,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageInventory",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 181,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageCleanTrash",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 197,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageCleanTrash",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 204,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 217,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "entFreezeState",
+    "resolution": "literal",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 223,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutWritingEdit",
+    "resolution": "literal",
+    "file": "plugins\\writing\\derma\\cl_paper.lua",
+    "line": 34,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 19,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "plugins\\writing\\items\\base\\sh_writing.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "dataCls",
+    "resolution": "literal",
+    "file": "schema\\derma\\cl_data.lua",
+    "line": 38,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "obj",
+    "resolution": "literal",
+    "file": "schema\\derma\\cl_objective.lua",
+    "line": 35,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 366,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 368,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "schema\\hooks\\sv_hooks.lua",
+    "line": 376,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "panelList",
+    "resolution": "literal",
+    "file": "plugins\\3dpanel.lua",
+    "line": 16,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "plugins\\3dpanel.lua",
+    "line": 33,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "plugins\\3dpanel.lua",
+    "line": 53,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "txtList",
+    "resolution": "literal",
+    "file": "plugins\\3dtext.lua",
+    "line": 16,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "plugins\\3dtext.lua",
+    "line": 31,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "plugins\\3dtext.lua",
+    "line": 51,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "mapScnInit",
+    "resolution": "literal",
+    "file": "plugins\\mapscene.lua",
+    "line": 146,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "plugins\\mapscene.lua",
+    "line": 160,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "plugins\\mapscene.lua",
+    "line": 211,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgn",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 138,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgn",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 141,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgn",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 144,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgn",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 147,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgnDirect",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 166,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgnMenu",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 175,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgnDone",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 184,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "rgnDone",
+    "resolution": "literal",
+    "file": "plugins\\recognition.lua",
+    "line": 230,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "attachAfterSelect",
+    "resolution": "literal",
+    "file": "plugins\\wepselect.lua",
+    "line": 171,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 40,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cfgList",
+    "resolution": "literal",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cfgSet",
+    "resolution": "literal",
+    "file": "gamemode\\core\\sh_config.lua",
+    "line": 288,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invAct",
+    "resolution": "literal",
+    "file": "gamemode\\core\\derma\\cl_inventory.lua",
+    "line": 187,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invAct",
+    "resolution": "literal",
+    "file": "gamemode\\core\\derma\\cl_inventory.lua",
+    "line": 217,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invAct",
+    "resolution": "literal",
+    "file": "gamemode\\core\\derma\\cl_inventory.lua",
+    "line": 248,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "invAct",
+    "resolution": "literal",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 626,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "vManipDoorAnimation",
+    "resolution": "literal",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 762,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutDataSync",
+    "resolution": "literal",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 51,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "vManipShowHands",
+    "resolution": "literal",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 958,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 381,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 404,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_anims.lua",
+    "line": 415,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutCharFetchNames",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 29,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutCharFetchNames",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 36,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutCharFetchNames",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutCharFetchNames",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutCharFetchNames",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 109,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 184,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 301,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 347,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 395,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cMsg",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_chatbox.lua",
+    "line": 201,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_class.lua",
+    "line": 164,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "cmd",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_command.lua",
+    "line": 282,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "admin",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sh_log.lua",
+    "line": 94,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 29,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 36,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 40,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 47,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 52,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_networking.lua",
+    "line": 81,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\sv_player.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self.player",
+    "resolution": "unresolved_symbol",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 73,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receiver",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 91,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "charKick",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 181,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self.player",
+    "resolution": "unresolved_symbol",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 244,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 253,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\sh_player.lua",
+    "line": 43,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 32,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 37,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "self",
+    "resolution": "literal",
+    "file": "gamemode\\core\\util\\sv_action.lua",
+    "line": 38,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesSelectWeapon",
+    "resolution": "literal",
+    "file": "gamemode\\core\\util\\sv_ragdoll.lua",
+    "line": 184,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 152,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "charKick",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 165,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nil",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 193,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "item.player",
+    "resolution": "unresolved_symbol",
+    "file": "gamemode\\core\\libs\\item\\sh_item_functions.lua",
+    "line": 80,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "name",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 54,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "name",
+    "resolution": "literal",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_netstream2.lua",
+    "line": 132,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receivers",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 172,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "receivers",
+    "resolution": "literal",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 228,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "detachAttachment",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 379,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "attachAttachment",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 397,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "attachAttachment",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 414,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesSelectWeapon",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 471,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "detachAttachment",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 637,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesSelectWeapon",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 803,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "diseasesSelectWeapon",
+    "resolution": "literal",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 893,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "displayAreaText",
+    "resolution": "literal",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 146,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "displayPosition",
+    "resolution": "literal",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 399,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "displayPosition",
+    "resolution": "literal",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 410,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "nutAreaManager",
+    "resolution": "literal",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 476,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "itemSplitTake",
+    "resolution": "literal",
+    "file": "plugins\\gridinv\\sv_transfer.lua",
+    "line": 51,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "areaEdit",
+    "resolution": "literal",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 37,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "areaTeleport",
+    "resolution": "literal",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "areaRemove",
+    "resolution": "literal",
+    "file": "plugins\\area\\derma\\cl_areamanager.lua",
+    "line": 65,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "areaAdd",
+    "resolution": "literal",
+    "file": "plugins\\area\\entities\\weapons\\nut_areahelper.lua",
+    "line": 88,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "msg",
+    "resolution": "literal",
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 162,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "storageLockTrashcan",
+    "resolution": "literal",
+    "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+    "line": 207,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "inventorySetPanelStatus",
+    "resolution": "literal",
+    "file": "plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua",
+    "line": 210,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 101,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "vendorEdit",
+    "resolution": "literal",
+    "file": "plugins\\vendor\\derma\\cl_vendoreditor.lua",
+    "line": 249,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 28,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "activator",
+    "resolution": "literal",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 31,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "v",
+    "resolution": "literal",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 70,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "sendVendorInfo",
+    "resolution": "literal",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 120,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "netstream_start",
+    "message_expr": "sendVendorInfo",
+    "resolution": "literal",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 137,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

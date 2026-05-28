@@ -1,0 +1,922 @@
+[
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 520,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 520,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 529,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 530,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 615,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 619,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 155,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 156,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 138,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 139,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 285,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 285,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 298,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 302,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 81,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 82,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "connect",
+    "file": "gamemode\\init.lua",
+    "line": 23,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "loadTables",
+    "file": "gamemode\\init.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\saveitems.lua",
+    "line": 21,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "plugins\\saveitems.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 400,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 400,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\sh_commands.lua",
+    "line": 416,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 189,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "waitForTablesToLoad",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 639,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 838,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 840,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 843,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "getObject",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 130,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "getObject",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 131,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "getObject",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 140,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "connect",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 145,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "getObject",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 159,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "getObject",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 272,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "getObject",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 274,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "convertDataType",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 295,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "connect",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 317,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 329,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "wipeTables",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 459,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 461,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 482,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 491,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 493,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "wipeTables",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 511,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "loadTables",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 516,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 523,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 538,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "waitForTablesToLoad",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 550,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "convertDataType",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 566,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 571,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 577,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "convertDataType",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 593,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "convertDataType",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 604,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 609,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 611,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 614,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 618,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 621,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 636,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "upsert",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 642,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 653,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 659,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 669,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "prepare",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 725,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "prepare",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 726,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "prepare",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 727,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "prepare",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 728,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "prepare",
+    "file": "gamemode\\core\\libs\\sv_database.lua",
+    "line": 729,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "gamemode\\core\\libs\\sv_inventory.lua",
+    "line": 44,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "gamemode\\core\\libs\\sv_inventory.lua",
+    "line": 45,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "gamemode\\core\\libs\\sv_inventory.lua",
+    "line": 109,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\libs\\sv_inventory.lua",
+    "line": 118,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\libs\\sv_inventory.lua",
+    "line": 119,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\libs\\sv_inventory.lua",
+    "line": 120,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\sv_player.lua",
+    "line": 10,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\libs\\sv_player.lua",
+    "line": 12,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "gamemode\\core\\libs\\sv_player.lua",
+    "line": 25,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\libs\\sv_player.lua",
+    "line": 45,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\sh_character.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 6,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 194,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\character\\sv_character.lua",
+    "line": 195,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "preparedCall",
+    "file": "gamemode\\core\\libs\\item\\sv_item.lua",
+    "line": 64,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "gamemode\\core\\libs\\item\\sv_item.lua",
+    "line": 68,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\libs\\item\\sv_item.lua",
+    "line": 85,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "query",
+    "file": "gamemode\\core\\libs\\item\\sv_item.lua",
+    "line": 99,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 26,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 61,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 79,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 123,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 147,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 152,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 154,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "upsert",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 157,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 223,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\meta\\inventory\\sv_base_inventory.lua",
+    "line": 235,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "delete",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 18,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "preparedCall",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 187,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 189,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "preparedCall",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 202,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 204,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "preparedCall",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 241,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "gamemode\\core\\meta\\item\\sv_item.lua",
+    "line": 243,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 11,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 18,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "insertTable",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 30,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 69,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 80,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 82,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "escape",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 129,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "updateTable",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 132,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "nut_db_call",
+    "method_name": "select",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sv_migrations.lua",
+    "line": 155,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

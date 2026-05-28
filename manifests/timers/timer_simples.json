@@ -1,0 +1,1190 @@
+[
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.5",
+    "delay_class": "subsecond",
+    "file": "plugins\\shootlock.lua",
+    "line": 63,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.75",
+    "delay_class": "subsecond",
+    "file": "schema\\sh_commands.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": ".25",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\nut_flesh_bee.lua",
+    "line": 62,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 135,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "3",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_empire_base.lua",
+    "line": 627,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.12",
+    "delay_class": "subsecond",
+    "file": "entities\\weapons\\arc9_ein12.lua",
+    "line": 367,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\weapons\\arc9_srp_base.lua",
+    "line": 65,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "10",
+    "delay_class": "multi_second",
+    "file": "entities\\weapons\\nut_stunstick.lua",
+    "line": 137,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "entities\\entities\\nut_cockroach\\init.lua",
+    "line": 120,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "5",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\nodegraph_path.lua",
+    "line": 35,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "wep.NPC_TimeUntilFire",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\compatibilityhacks.lua",
+    "line": 25,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "tv",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\compatibilityhacks.lua",
+    "line": 31,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+    "line": 295,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+    "line": 307,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.5",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+    "line": 324,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "120",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+    "line": 558,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 1368,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 2258,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "2",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua",
+    "line": 2594,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "normalBadTimeout",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\pathoverrides.lua",
+    "line": 227,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "superBadTimeout",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\pathoverrides.lua",
+    "line": 244,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "math.Rand( 0.5",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\prettydamage.lua",
+    "line": 291,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\prettydamage.lua",
+    "line": 322,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\prettydamage.lua",
+    "line": 330,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "time",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 574,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "15",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 1006,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "60",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 2125,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "60",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 2190,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "20",
+    "delay_class": "multi_second",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 3041,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.5",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 3379,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 3387,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 4052,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 5102,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 6013,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 6062,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua",
+    "line": 6168,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.6",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weaponhacks.lua",
+    "line": 103,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.5",
+    "delay_class": "subsecond",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weapons.lua",
+    "line": 200,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weapons.lua",
+    "line": 289,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weapons.lua",
+    "line": 301,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "reloadTime",
+    "delay_class": "dynamic",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\weapons.lua",
+    "line": 583,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "2",
+    "delay_class": "multi_second",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 449,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.2",
+    "delay_class": "subsecond",
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 473,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "5",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 23,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "12",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 584,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "180",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 605,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.7*(k-1)",
+    "delay_class": "dynamic",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1075,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "(0.7*#hack.comb)-0.1",
+    "delay_class": "dynamic",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1082,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "time",
+    "delay_class": "dynamic",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1159,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "time",
+    "delay_class": "dynamic",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1262,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "time",
+    "delay_class": "dynamic",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1357,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 71,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 85,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\lightitems\\cl_hooks.lua",
+    "line": 97,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "3",
+    "delay_class": "multi_second",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 341,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\lightitems\\sh_plugin.lua",
+    "line": 346,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "5",
+    "delay_class": "multi_second",
+    "file": "plugins\\lightitems\\sv_hooks.lua",
+    "line": 282,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "k1*2",
+    "delay_class": "dynamic",
+    "file": "plugins\\npc\\sv_plugin.lua",
+    "line": 123,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 166,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\traits\\sh_languages.lua",
+    "line": 211,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "3",
+    "delay_class": "multi_second",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 686,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "300",
+    "delay_class": "multi_second",
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_fleshradioactive\\init.lua",
+    "line": 24,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\crafting\\entities\\entities\\nut_crafting_base\\init.lua",
+    "line": 51,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1200",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\entities\\entities\\hack_secdb.lua",
+    "line": 41,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1800",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\entities\\entities\\hack_secdb.lua",
+    "line": 100,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "3000",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\entities\\entities\\hack_secdb.lua",
+    "line": 130,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1800",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\entities\\entities\\hack_secdb.lua",
+    "line": 182,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1200",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\entities\\entities\\hack_secdb.lua",
+    "line": 222,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "2400",
+    "delay_class": "multi_second",
+    "file": "plugins\\hacking\\entities\\entities\\hack_secdb.lua",
+    "line": 237,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "600",
+    "delay_class": "multi_second",
+    "file": "plugins\\lightitems\\entities\\entities\\nut_chemlight_glow\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\lootablecontainers\\entities\\entities\\nut_loot_container_base\\init.lua",
+    "line": 56,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 57,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\needs\\items\\base\\sh_food.lua",
+    "line": 255,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\newweapons\\entities\\weapons\\tfa_nade_base.lua",
+    "line": 122,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\newweapons\\items\\base\\sh_arc9_attachments.lua",
+    "line": 37,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\traits\\derma\\cl_traitcreation.lua",
+    "line": 34,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "schema\\items\\sh_ration.lua",
+    "line": 18,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "delay",
+    "delay_class": "dynamic",
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 7,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "gamemode\\init.lua",
+    "line": 20,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\3dpanel.lua",
+    "line": 14,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\3dtext.lua",
+    "line": 14,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.25",
+    "delay_class": "subsecond",
+    "file": "plugins\\ammosave.lua",
+    "line": 64,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\observer.lua",
+    "line": 112,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\spawnsaver.lua",
+    "line": 19,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\weapons\\nut_hands.lua",
+    "line": 128,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\weapons\\nut_hands.lua",
+    "line": 138,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "entities\\weapons\\nut_hands.lua",
+    "line": 158,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": ".3",
+    "delay_class": "subsecond",
+    "file": "entities\\weapons\\nut_poshelper.lua",
+    "line": 174,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "gamemode\\core\\sh_util.lua",
+    "line": 256,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "tooltip_delay",
+    "delay_class": "dynamic",
+    "file": "gamemode\\core\\derma\\cl_tooltip.lua",
+    "line": 121,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "5",
+    "delay_class": "multi_second",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 306,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.2",
+    "delay_class": "subsecond",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 514,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.01",
+    "delay_class": "subsecond",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 516,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.2",
+    "delay_class": "subsecond",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 530,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.4",
+    "delay_class": "subsecond",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 539,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.6",
+    "delay_class": "subsecond",
+    "file": "gamemode\\core\\hooks\\cl_hooks.lua",
+    "line": 764,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "2",
+    "delay_class": "multi_second",
+    "file": "gamemode\\core\\hooks\\sv_hooks.lua",
+    "line": 634,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "remainingSeconds",
+    "delay_class": "dynamic",
+    "file": "gamemode\\core\\libs\\sh_date.lua",
+    "line": 119,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "delay",
+    "delay_class": "dynamic",
+    "file": "gamemode\\core\\util\\sh_sound.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "gamemode\\core\\libs\\thirdparty\\cl_ikon.lua",
+    "line": 329,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1 or tonumber(time)",
+    "delay_class": "dynamic",
+    "file": "gamemode\\core\\libs\\thirdparty\\cl_surfaceGetURL.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_deferred.lua",
+    "line": 64,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "gamemode\\core\\libs\\thirdparty\\sh_deferred.lua",
+    "line": 192,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 380,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 394,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 487,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 490,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 638,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 784,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 897,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\area\\sh_plugin.lua",
+    "line": 248,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\multichar\\sv_hooks.lua",
+    "line": 35,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": ".5",
+    "delay_class": "subsecond",
+    "file": "plugins\\multichar\\sv_networking.lua",
+    "line": 120,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.15",
+    "delay_class": "subsecond",
+    "file": "plugins\\notices\\cl_notice.lua",
+    "line": 39,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "7.75",
+    "delay_class": "multi_second",
+    "file": "plugins\\notices\\cl_notice.lua",
+    "line": 44,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\pac\\cl_ragdolls.lua",
+    "line": 24,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\pac\\sh_pacoutfit.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\pac\\sv_parts.lua",
+    "line": 48,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\storage\\sv_storage.lua",
+    "line": 149,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.25",
+    "delay_class": "subsecond",
+    "file": "plugins\\vendor\\cl_networking.lua",
+    "line": 134,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": ".5",
+    "delay_class": "subsecond",
+    "file": "plugins\\area\\entities\\weapons\\nut_areahelper.lua",
+    "line": 103,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "WAIT",
+    "delay_class": "dynamic",
+    "file": "plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "nut.gui.character.ANIM_SPEED * 0.5",
+    "delay_class": "dynamic",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_confirmation.lua",
+    "line": 82,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.25",
+    "delay_class": "subsecond",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_selection.lua",
+    "line": 72,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0.1",
+    "delay_class": "subsecond",
+    "file": "plugins\\nsintro\\derma\\cl_intro.lua",
+    "line": 16,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "5",
+    "delay_class": "multi_second",
+    "file": "plugins\\nsintro\\derma\\cl_intro.lua",
+    "line": 89,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 174,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 277,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "0",
+    "delay_class": "immediate_or_next_tick",
+    "file": "plugins\\vendor\\derma\\cl_vendoreditor.lua",
+    "line": 254,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "timer_simple",
+    "delay_expr": "1",
+    "delay_class": "one_second",
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua",
+    "line": 106,
+    "realm": "shared",
+    "framework_layer": "framework"
+  }
+]

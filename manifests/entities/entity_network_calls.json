@@ -1,0 +1,443 @@
+[
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 86,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 87,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 117,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 139,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 144,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 144,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 145,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 151,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 183,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 243,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_vendingm.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_vendingm.lua",
+    "line": 248,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "sb_advanced_nextbot_corrupt_base.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\sb_advanced_nextbot_corrupt_base.lua",
+    "line": 417,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "sb_advanced_nextbot_empire_base.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\sb_advanced_nextbot_empire_base.lua",
+    "line": 743,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "sb_advanced_nextbot_soldier_base.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\sb_advanced_nextbot_soldier_base.lua",
+    "line": 416,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWBool",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 21,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWInt",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 22,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "GetNWBool",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 34,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "GetNWInt",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 68,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWInt",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 69,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWBool",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 77,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWInt",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 83,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "GetNWBool",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 102,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWBool",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 111,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_utilizator",
+    "method_name": "SetNWInt",
+    "file": "entities\\entities\\nut_utilizator\\init.lua",
+    "line": 112,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "sb_advanced_nextbot_terminator_hunter",
+    "method_name": "GetNWEntity",
+    "file": "entities\\entities\\sb_advanced_nextbot_terminator_hunter\\enemyoverrides.lua",
+    "line": 584,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "setNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 41,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "setNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 70,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "getNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 95,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "setNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 96,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "getNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 115,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "setNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 117,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "getNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 145,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "getNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 162,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "setNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 164,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "setNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 182,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "getNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 187,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_cassetteplayer.lua",
+    "method_name": "getNetVar",
+    "file": "plugins\\cassetteplayer\\entities\\entities\\nut_cassetteplayer.lua",
+    "line": 221,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_type39",
+    "method_name": "SetNWBool",
+    "file": "plugins\\newweapons\\entities\\entities\\nut_type39\\shared.lua",
+    "line": 60,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_item.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 54,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_item.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 55,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_item.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 59,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_item.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 165,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_item.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 211,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_item.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_item.lua",
+    "line": 220,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_money.lua",
+    "method_name": "setNetVar",
+    "file": "entities\\entities\\nut_money.lua",
+    "line": 59,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_money.lua",
+    "method_name": "getNetVar",
+    "file": "entities\\entities\\nut_money.lua",
+    "line": 63,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_storage",
+    "method_name": "setNetVar",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 35,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_storage",
+    "method_name": "setNetVar",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\init.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_network_call",
+    "entity_name": "nut_storage",
+    "method_name": "getNetVar",
+    "file": "plugins\\storage\\entities\\entities\\nut_storage\\shared.lua",
+    "line": 16,
+    "realm": "shared",
+    "framework_layer": "framework"
+  }
+]

@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# VSCode
+.vscode/
+
+# Logs
+logs/
+
+# Temporary
+temp/
+
+# Embeddings
+embeddings/
+
+# Qdrant runtime
+qdrant_storage/
+
+# Generated outputs
+manifests/semantic/qdrant_embeddings.jsonl
+
+# OS
+Thumbs.db
+.DS_Store

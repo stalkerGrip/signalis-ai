@@ -1,0 +1,1610 @@
+[
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\adminspawnmenu.lua",
+    "line": 64,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 116,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\biorezonance\\cl_hooks.lua",
+    "line": 190,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 767,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 888,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1039,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1103,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\hacking\\sh_plugin.lua",
+    "line": 1328,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 208,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 214,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 245,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\cl_hooks.lua",
+    "line": 251,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\playeranimator\\sh_plugin.lua",
+    "line": 102,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 34,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 44,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\sh_plugin.lua",
+    "line": 71,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 98,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 184,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 254,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 322,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 465,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_creation.lua",
+    "line": 504,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 805,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 909,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 1000,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\sh_plugin.lua",
+    "line": 1086,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 48,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 56,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 68,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 77,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 120,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 130,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_eventpoint_interface.lua",
+    "line": 136,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_itempanel.lua",
+    "line": 33,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\admintools\\derma\\cl_menu.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 38,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\biorezonance\\derma\\cl_oxystantion_interface.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\crafting\\derma\\cl_crafting.lua",
+    "line": 43,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\crafting\\derma\\cl_pressing_interface.lua",
+    "line": 42,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\crafting\\derma\\cl_pressing_interface.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\crafting\\derma\\cl_workbench_interface.lua",
+    "line": 42,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\crafting\\derma\\cl_workbench_interface.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 25,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 35,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\farming\\derma\\cl_farmingpot_interface.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 72,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 114,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 136,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 175,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 182,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 187,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 254,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 287,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 320,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 490,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 536,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 660,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 697,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 791,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_computer_interface.lua",
+    "line": 797,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_door_interface.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_door_interface.lua",
+    "line": 238,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_nationlock_interface.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\gadgets\\derma\\cl_nationlock_interface.lua",
+    "line": 231,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\healthproblems\\derma\\cl_status_interface.lua",
+    "line": 9,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\healthproblems\\derma\\cl_status_interface.lua",
+    "line": 58,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 96,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 156,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 176,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 181,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 186,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 191,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_extended_grid_inventory.lua",
+    "line": 196,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_vendor_grid_inventory.lua",
+    "line": 76,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\inventory\\derma\\cl_vendor_grid_inventory.lua",
+    "line": 90,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 48,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 54,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 61,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 91,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 97,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+    "line": 103,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 48,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 54,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 60,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 67,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 74,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 81,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 119,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 151,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 183,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_gen_interface.lua",
+    "line": 190,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_lamp_interface.lua",
+    "line": 49,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\lightitems\\derma\\cl_lamp_interface.lua",
+    "line": 82,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 50,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 56,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 68,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mining\\derma\\cl_oresmelter_interface.lua",
+    "line": 98,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 58,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 75,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 82,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 108,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 114,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 127,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 147,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 166,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 185,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\mnhr\\derma\\cl_mnhrstation_interface.lua",
+    "line": 212,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 51,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 143,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 149,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingboard_interface.lua",
+    "line": 158,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 46,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 54,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 63,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 112,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cookingoven_interface.lua",
+    "line": 122,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 73,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 146,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 166,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 172,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 179,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 202,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 228,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_cooking_interface.lua",
+    "line": 236,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 41,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 56,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_kettle_interface.lua",
+    "line": 62,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 40,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 46,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 52,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\needs\\derma\\cl_waterfaucet_interface.lua",
+    "line": 106,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 42,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 69,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 78,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 115,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 160,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 215,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 226,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 240,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 276,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 283,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\newvendorsystem\\derma\\cl_vendor_interface.lua",
+    "line": 291,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 42,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 48,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 69,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\radio\\derma\\cl_radiostation_interface.lua",
+    "line": 84,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 50,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 66,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 76,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 83,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 92,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 103,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 113,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\ragdollinteraction\\derma\\cl_corpse_interface.lua",
+    "line": 123,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 50,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 59,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 81,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 96,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 103,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 126,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 146,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 160,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 189,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 215,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "line": 221,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\derma\\cl_traitcreation.lua",
+    "line": 104,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\derma\\cl_traitcreation.lua",
+    "line": 213,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\derma\\cl_traitcreation.lua",
+    "line": 303,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\traits\\derma\\cl_traitcreation.lua",
+    "line": 389,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\writing\\derma\\cl_paper.lua",
+    "line": 32,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "schema\\derma\\cl_combine.lua",
+    "line": 38,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "schema\\derma\\cl_combine.lua",
+    "line": 46,
+    "realm": "client",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\nscredits.lua",
+    "line": 101,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\nscredits.lua",
+    "line": 111,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\pluginconfig.lua",
+    "line": 170,
+    "realm": "unknown",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 222,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 232,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "gamemode\\core\\derma\\cl_dev_icon.lua",
+    "line": 244,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "gamemode\\core\\derma\\cl_quick.lua",
+    "line": 45,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "gamemode\\core\\libs\\sh_character.lua",
+    "line": 212,
+    "realm": "shared",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\chatbox\\derma\\cl_chatbox.lua",
+    "line": 236,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\f1menu\\derma\\cl_menu.lua",
+    "line": 144,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 133,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character.lua",
+    "line": 138,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 67,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_character_slot.lua",
+    "line": 83,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_confirmation.lua",
+    "line": 53,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_confirmation.lua",
+    "line": 74,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 348,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 355,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua",
+    "line": 360,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\multichar\\plugins\\charselect\\derma\\steps\\cl_model.lua",
+    "line": 31,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\scoreboard\\derma\\cl_scoreboard.lua",
+    "line": 157,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 30,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "line": 44,
+    "realm": "client",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "ui_button_callback",
+    "callback": "DoClick",
+    "file": "plugins\\vendor\\derma\\cl_vendoreditor.lua",
+    "line": 119,
+    "realm": "client",
+    "framework_layer": "framework"
+  }
+]

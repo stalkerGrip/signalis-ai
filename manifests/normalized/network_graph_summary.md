@@ -1,0 +1,286 @@
+# Network graph summary
+
+Schema: `network_graph.v1`
+
+## Inputs
+- `netstream_hooks`: **263**
+- `netstream_starts`: **466**
+- `net_receives`: **74**
+- `net_starts`: **86**
+- `util_add_network_strings`: **66**
+- `net_reads`: **150**
+- `net_writes`: **151**
+- `net_messages_deep`: **160**
+
+## Totals
+- Nodes: **2043**
+- Edges: **7042**
+- Network messages: **358**
+- Network operations: **955**
+- Payload operations: **301**
+- Dispatch edges: **423**
+- Unresolved netstream symbolic starts: **71**
+
+## Message protocols
+- `netstream`: **279**
+- `gmod_net`: **79**
+
+## Node types
+- `network_operation`: **955**
+- `network_message`: **358**
+- `network_payload_operation`: **301**
+- `file`: **218**
+- `network_context`: **160**
+- `plugin`: **48**
+- `realm`: **3**
+
+## Edge types
+- `runs_in_realm`: **1416**
+- `owns_file`: **1416**
+- `contains_network_operation`: **955**
+- `sends_network_message`: **552**
+- `file_sends_network_message`: **552**
+- `network_dispatches_to`: **423**
+- `receives_network_message`: **337**
+- `file_receives_network_message`: **337**
+- `contains_network_payload_operation`: **301**
+- `contains_network_context`: **160**
+- `context_references_network_message`: **160**
+- `writes_network_payload`: **151**
+- `reads_network_payload`: **150**
+- `registers_network_message`: **66**
+- `file_registers_network_message`: **66**
+
+## Top sent messages
+- `nut.diseases.stringConsts.hudRemoveStatusIcon`: 26
+- `nut.diseases.stringConsts.hudAddStatusIcon`: 25
+- `nil`: 20
+- `activator`: 19
+- `self`: 13
+- `endO2Hud`: 10
+- `inventorySetPanelStatus`: 10
+- `nvisionOff`: 9
+- `startO2Hud`: 8
+- `nvisionOn`: 8
+- `entFreezeState`: 8
+- `item.player`: 8
+- `receiver`: 7
+- `v`: 6
+- `nut.diseases.stringConsts.hudHandleStatusIconCount`: 6
+- `nutStorageOpen`: 5
+- `VManip_SimplePlay`: 5
+- `diseasesSelectWeapon`: 5
+- `searchExit`: 5
+- `lootExit`: 5
+- `nutCharFetchNames`: 5
+- `hookName`: 4
+- `elPanelTryFix`: 4
+- `interfaceTurnOn`: 4
+- `rgn`: 4
+- `invAct`: 4
+- `gasMaskOff`: 3
+- `invExit`: 3
+- `targets`: 3
+- `workbenchInvOpen`: 3
+
+## Top received messages
+- `nutCharFetchNames`: 3
+- `cOpen`: 2
+- `nutPluginDisable`: 2
+- `nutPluginList`: 2
+- `syncClientTime`: 2
+- `nutStringReq`: 2
+- `NetStreamDS`: 2
+- `nutCharChoose`: 2
+- `nutCharCreate`: 2
+- `nutStorageUnlock`: 2
+- `nutVendorExit`: 2
+- `nutVendorEdit`: 2
+- `itemSplitDrop`: 2
+- `radioAdjust`: 2
+- `searchExit`: 2
+- `searchPly`: 2
+- `obj`: 2
+- `cfgSet`: 2
+- `adminSpawnItem`: 1
+- `adminSpawnMenu`: 1
+- `RequestItemData`: 1
+- `RequestEntityData`: 1
+- `RemoveItem`: 1
+- `ClearAllItems`: 1
+- `ShowScreamerImage`: 1
+- `ShowScreamerImage2`: 1
+- `StartCraft`: 1
+- `OpenCraft`: 1
+- `requestnearbyents`: 1
+- `hackent`: 1
+
+## Top network dispatch pairs by message
+- `nutCharFetchNames`: 15 dispatch edge(s)
+- `endO2Hud`: 10 dispatch edge(s)
+- `inventorySetPanelStatus`: 10 dispatch edge(s)
+- `searchExit`: 10 dispatch edge(s)
+- `nvisionOff`: 9 dispatch edge(s)
+- `startO2Hud`: 8 dispatch edge(s)
+- `nvisionOn`: 8 dispatch edge(s)
+- `entFreezeState`: 8 dispatch edge(s)
+- `nutStorageOpen`: 5 dispatch edge(s)
+- `diseasesSelectWeapon`: 5 dispatch edge(s)
+- `lootExit`: 5 dispatch edge(s)
+- `nutPluginDisable`: 4 dispatch edge(s)
+- `nutPluginList`: 4 dispatch edge(s)
+- `syncClientTime`: 4 dispatch edge(s)
+- `nutStringReq`: 4 dispatch edge(s)
+- `NetStreamDS`: 4 dispatch edge(s)
+- `nutCharChoose`: 4 dispatch edge(s)
+- `nutCharCreate`: 4 dispatch edge(s)
+- `nutStorageUnlock`: 4 dispatch edge(s)
+- `nutVendorExit`: 4 dispatch edge(s)
+- `obj`: 4 dispatch edge(s)
+- `elPanelTryFix`: 4 dispatch edge(s)
+- `interfaceTurnOn`: 4 dispatch edge(s)
+- `rgn`: 4 dispatch edge(s)
+- `invAct`: 4 dispatch edge(s)
+- `gasMaskOff`: 3 dispatch edge(s)
+- `workbenchInvOpen`: 3 dispatch edge(s)
+- `attachAttachment`: 3 dispatch edge(s)
+- `ItemUpdated`: 2 dispatch edge(s)
+- `openhkmenu`: 2 dispatch edge(s)
+
+## Messages with senders but no receivers
+- `ChatMessage`
+- `ContainerEmpty`
+- `IsFix`
+- `RemoveEntity`
+- `VManip_SimplePlay`
+- `activator`
+- `admin`
+- `bank::SyncVaultAttempts`
+- `bank::ValidateVaultPassword`
+- `ents.GetByIndex`
+- `hookName`
+- `invExit`
+- `item.player`
+- `k`
+- `mgbase_tpanim`
+- `mnhr`
+- `name`
+- `nil`
+- `nut.diseases.stringConsts.hudAddStatusIcon`
+- `nut.diseases.stringConsts.hudHandleStatusIconCount`
+- `nut.diseases.stringConsts.hudRemoveStatusIcon`
+- `nutCharMenu`
+- `nutVendorAllowClass`
+- `nutVendorAllowFaction`
+- `nutVendorMaxStock`
+- `nutVendorMode`
+- `nutVendorMoney`
+- `nutVendorPrice`
+- `nutVendorStock`
+- `receiver`
+- `receivers`
+- `searchers`
+- `self`
+- `self.player`
+- `self.user`
+- `targets`
+- `unknown`
+- `v`
+- `vendorEdit`
+
+## Messages with receivers but no senders
+- `ContainerEmpty`
+- `IsFix`
+- `OpenCraft`
+- `OpenMyInv`
+- `RemoveItem`
+- `RequestEntityData`
+- `Topology_BatchChunk`
+- `Topology_BatchEnd`
+- `Topology_BatchStart`
+- `actBar`
+- `areaManager`
+- `cOpen`
+- `charData`
+- `charInfo`
+- `charSet`
+- `charTraits`
+- `charVar`
+- `compSendUserCardAccess`
+- `compSyncWorkShift`
+- `cookingpotEat`
+- `cookingpotPreserveFood`
+- `cookingpotTakePortion`
+- `diseasesStatusInterfaceSync`
+- `elPanelSendLamps`
+- `foodPartAddClient`
+- `foodPartAddServer`
+- `foodPartUseClient`
+- `foodPartUseServer`
+- `foodReadyPartAddClient`
+- `foodReadyPartAddServer`
+- `gVar`
+- `getUserCardAccess`
+- `hudAddStatusIcon`
+- `hudHandleStatusIconCount`
+- `hudRemoveStatusIcon`
+- `invData`
+- `invMv`
+- `invQuantity`
+- `inventoryCloseOnAction`
+- `item`
+- `itemSplitDrop`
+- `kettlePartAddServer`
+- `lootMoney`
+- `mapScn`
+- `mapScnDel`
+- `nDel`
+- `nLcl`
+- `nVar`
+- `nutCharMenu`
+- `nutData`
+- ... 28 more
+
+## Raw GMod net messages sent without util.AddNetworkString in manifests
+- `ChatMessage`
+- `ClearAllItems`
+- `ItemUpdated`
+- `OpenItemManager`
+- `RemoveEntity`
+- `RequestItemData`
+- `SendEntityData`
+- `SendItemData`
+- `VManip_SimplePlay`
+- `mgbase_tpanim`
+
+## Hot files by networking declarations
+- `plugins\vendor\cl_networking.lua`: 36
+- `plugins\hacking\sh_plugin.lua`: 35
+- `plugins\pluginconfig.lua`: 32
+- `gamemode\core\meta\inventory\sv_base_inventory.lua`: 31
+- `plugins\biorezonance\sh_plugin.lua`: 28
+- `plugins\inventory\cl_hooks.lua`: 27
+- `plugins\admintools\sv_hooks.lua`: 26
+- `gamemode\core\meta\inventory\cl_base_inventory.lua`: 26
+- `plugins\vendor\cl_editor.lua`: 24
+- `gamemode\core\libs\thirdparty\sh_netstream2.lua`: 23
+- `plugins\multichar\sv_networking.lua`: 23
+- `gamemode\core\hooks\sv_hooks.lua`: 22
+- `plugins\multichar\sh_plugin.lua`: 22
+- `plugins\gadgets\sv_hooks.lua`: 22
+- `plugins\vendor\sv_networking.lua`: 21
+- `plugins\mnhr\sh_plugin.lua`: 21
+- `plugins\needs\sv_hooks.lua`: 21
+- `plugins\vendor\sv_editor.lua`: 20
+- `plugins\lightitems\sv_hooks.lua`: 19
+- `gamemode\core\libs\item\cl_networking.lua`: 18
+- `plugins\pac\sv_parts.lua`: 17
+- `plugins\admintools\derma\cl_itempanel.lua`: 17
+- `plugins\cassetteplayer\sh_plugin.lua`: 15
+- `plugins\lightitems\cl_hooks.lua`: 15
+- `plugins\ragdollinteraction\interaction\cl_hooks.lua`: 15
+- `plugins\healthproblems\sv_hooks.lua`: 15
+- `plugins\ragdollinteraction\interaction\sv_hooks.lua`: 15
+- `plugins\gadgets\derma\cl_computer_interface.lua`: 14
+- `plugins\pac\cl_parts.lua`: 13
+- `plugins\adminspawnmenu.lua`: 12

@@ -1,0 +1,1832 @@
+[
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "entities\\entities\\nut_flesh_bee.lua",
+    "line": 243,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "entities\\entities\\sb_advanced_nextbot_empire_base.lua",
+    "line": 498,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "entities\\entities\\sb_advanced_nextbot_empire_base.lua",
+    "line": 500,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "entities\\entities\\sb_klbr_hostile.lua",
+    "line": 59,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\healing.lua",
+    "line": 19,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "entities\\entities\\sb_advanced_nextbot_base\\healing.lua",
+    "line": 79,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 130,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 378,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 400,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 402,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 481,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 486,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 625,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 643,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 666,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 668,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 671,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\sh_plugin.lua",
+    "line": 673,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 358,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 370,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 372,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 543,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 545,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 551,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 553,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 563,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\sh_plugin.lua",
+    "line": 565,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\sv_hooks.lua",
+    "line": 60,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 255,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 586,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 588,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 679,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 681,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\sv_hooks.lua",
+    "line": 688,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\inventory\\sv_hooks.lua",
+    "line": 123,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 50,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 52,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 62,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 88,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 90,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 247,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mnhr\\sh_plugin.lua",
+    "line": 249,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\sv_hooks.lua",
+    "line": 165,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 258,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 294,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\sh_plugin.lua",
+    "line": 296,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 41,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 43,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\admintools\\entities\\entities\\nut_eventpoint\\init.lua",
+    "line": 46,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 776,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 778,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 788,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 795,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 797,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 101,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 103,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua",
+    "line": 113,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 32,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 34,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\biorezonance\\entities\\entities\\nut_oxygen_stantion\\init.lua",
+    "line": 44,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 49,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 108,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 132,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 140,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\crafting\\entities\\entities\\nut_craft_pressing\\init.lua",
+    "line": 160,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\items\\sh_nation_lock.lua",
+    "line": 70,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\items\\sh_nation_lock.lua",
+    "line": 121,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\items\\sh_nation_lock.lua",
+    "line": 123,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\entities\\entities\\nut_computer\\init.lua",
+    "line": 189,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 41,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 41,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 73,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\gadgets\\entities\\entities\\nut_nationlock\\init.lua",
+    "line": 82,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_bandage.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_health_vial.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_alkali.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_army_stimulator.lua",
+    "line": 58,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_autoinjector.lua",
+    "line": 56,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_gestalt_first_aid_kit.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_pantenol.lua",
+    "line": 13,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_pantenol_bandage.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_simple_bandage.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\healthproblems\\items\\peals\\sh_med_stimulator.lua",
+    "line": 56,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 76,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 126,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 128,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 202,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 256,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_diode_light\\init.lua",
+    "line": 258,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 280,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 282,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 285,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 287,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 313,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 315,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 320,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 322,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 325,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 352,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 354,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 357,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 431,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 433,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 507,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 525,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 796,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "line": 798,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 312,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 357,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\entities\\entities\\nut_electric_panel\\init.lua",
+    "line": 359,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua",
+    "line": 44,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua",
+    "line": 109,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua",
+    "line": 111,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua",
+    "line": 41,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua",
+    "line": 95,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua",
+    "line": 97,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 185,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 185,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 239,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 239,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 243,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 253,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 255,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 261,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 270,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 272,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 288,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 288,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 292,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 342,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 342,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 349,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 349,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 368,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 368,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 426,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 426,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 436,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 458,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\mining\\entities\\entities\\nut_ore_smelter\\init.lua",
+    "line": 458,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 37,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 39,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 47,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 49,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 393,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 393,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 401,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 540,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_base.lua",
+    "line": 540,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 108,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 109,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 109,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 113,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_kettle\\init.lua",
+    "line": 121,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 34,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 162,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 172,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 174,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\needs\\entities\\entities\\nut_cooking_oven\\init.lua",
+    "line": 244,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\newweapons\\entities\\weapons\\tfa_locher.lua",
+    "line": 788,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\newweapons\\entities\\weapons\\tfa_locher.lua",
+    "line": 805,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\newweapons\\entities\\weapons\\tfa_locher.lua",
+    "line": 807,
+    "realm": "unknown",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\newweapons\\entities\\entities\\nut_type39\\shared.lua",
+    "line": 73,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 369,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 371,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 425,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 461,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 463,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 469,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 471,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 495,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\ragdollinteraction\\interaction\\sv_hooks.lua",
+    "line": 497,
+    "realm": "server",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 51,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 53,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 67,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_simple",
+    "method_name": "SetSimpleTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 6,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 26,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_identifier",
+    "method_name": "GetTimerFullIdentifier",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "schema\\libs\\sh_timer.lua",
+    "line": 31,
+    "realm": "shared",
+    "framework_layer": "domain"
+  },
+  {
+    "type": "entity_timer_create",
+    "method_name": "SetCustomTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 341,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_timer_exists",
+    "method_name": "TimerExists",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 349,
+    "realm": "server",
+    "framework_layer": "framework"
+  },
+  {
+    "type": "entity_timer_remove",
+    "method_name": "RemoveTimer",
+    "scope": "entity",
+    "validity_guard_expected": true,
+    "file": "plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua",
+    "line": 351,
+    "realm": "server",
+    "framework_layer": "framework"
+  }
+]

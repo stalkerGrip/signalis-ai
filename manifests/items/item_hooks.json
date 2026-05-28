@@ -1,0 +1,308 @@
+[
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\admintools\\items\\sh_fixed_customitem.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\armor\\items\\base\\sh_outfit.lua",
+    "line": 241,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "Equip",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 30,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_mask_gasmask.lua",
+    "line": 40,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "Equip",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 35,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\biorezonance\\items\\outfit\\sh_outfit_l1.lua",
+    "line": 45,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\gadgets\\items\\sh_nation_cid.lua",
+    "line": 28,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\inventory\\items\\sh_ration_mark.lua",
+    "line": 66,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\needs\\items\\base\\sh_dish_entitied.lua",
+    "line": 84,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_beer.lua",
+    "line": 24,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_milkcarton.lua",
+    "line": 22,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_waterbottle.lua",
+    "line": 26,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_whiskey.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_whiskey_glass.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_red.lua",
+    "line": 46,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_red_glass.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_white.lua",
+    "line": 39,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_drink_wine_white_glass.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_food_bruh.lua",
+    "line": 14,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "use",
+    "file": "plugins\\needs\\items\\food\\sh_food_plod.lua",
+    "line": 15,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 10,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_mnhrflashlight.lua",
+    "line": 11,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_mnhrflashlight.lua",
+    "line": 21,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nightvision.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 20,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type14.lua",
+    "line": 25,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "EquipUn",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 27,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "plugins\\rechargeableequipment\\items\\outfit\\sh_nv_type6.lua",
+    "line": 32,
+    "realm": "shared",
+    "framework_layer": "domain",
+    "item_kind": "domain_item_class"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "gamemode\\items\\base\\sh_pacoutfit.lua",
+    "line": 68,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  },
+  {
+    "type": "item_hook",
+    "hook_name": "drop",
+    "file": "gamemode\\items\\base\\sh_weapons.lua",
+    "line": 83,
+    "realm": "shared",
+    "framework_layer": "framework",
+    "item_kind": "domain_item_base"
+  }
+]
