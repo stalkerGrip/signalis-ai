@@ -434,6 +434,34 @@ memory leaks from timers/entities/panels
 
 High-frequency logic should be classified by intent before optimization.
 
+## Investigation-Oriented Topology Doctrine
+
+Validation exists to confirm runtime propagation.
+
+Investigation should prioritize:
+
+```text
+event propagation
+network propagation
+realm crossings
+state ownership transitions
+```
+
+over isolated source fragments.
+
+Preferred investigation artifacts:
+
+```text
+runtime chains
+causal chains
+subsystem interaction paths
+```
+
+rather than ranked code snippets alone.
+
+Topology-aware evidence is preferred over semantic similarity alone.
+
+
 ## Runtime Graph Doctrine
 
 Runtime topology should be built from normalized semantic facts, not raw code dumps.

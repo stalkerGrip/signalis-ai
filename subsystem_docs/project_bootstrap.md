@@ -265,6 +265,56 @@ query
 
 ---
 
+## Investigation Evidence Doctrine
+
+Investigation should not operate directly on retrieval results.
+
+Required investigation pipeline:
+
+```text
+Retrieval
+→ Source Validation
+→ Evidence Deduplication
+→ Evidence Ranking
+→ Investigation
+→ Architecture Intelligence
+```
+
+Source validation establishes truth.
+
+Deduplication establishes unique evidence.
+
+Ranking establishes likely causal importance.
+
+Investigation consumes ranked evidence only.
+
+Large quantities of overlapping source fragments are validation noise, not additional evidence.
+
+A fragment count increase does not imply investigation quality increase.
+
+Priority:
+
+```text
+unique causal evidence
+>
+fragment count
+>
+keyword frequency
+```
+
+Preferred investigation outputs:
+
+```text
+hook propagation chains
+network propagation chains
+realm transitions
+inventory ownership chains
+storage ownership chains
+persistence flows
+```
+
+The objective of investigation is runtime reconstruction, not fragment collection.
+
 ## Long-Term Vision
 
 The final system should support questions like:
