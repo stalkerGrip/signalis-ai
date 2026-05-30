@@ -712,7 +712,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `263-279`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `134`
 - Evidence classification: `network_send_or_start`
@@ -742,7 +742,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `263-279`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `134`
 - Evidence classification: `network_send_or_start`
@@ -978,7 +978,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `209-228`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `113`
 - Evidence classification: `item_data_mutation`
@@ -1008,7 +1008,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `209-228`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `113`
 - Evidence classification: `item_data_mutation`
@@ -1038,7 +1038,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `209-228`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `113`
 - Evidence classification: `item_data_mutation`
@@ -1068,7 +1068,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `290-309`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `103`
 - Evidence classification: `item_data_mutation`
@@ -1098,7 +1098,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `290-309`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `103`
 - Evidence classification: `item_data_mutation`
@@ -1128,7 +1128,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `290-309`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `103`
 - Evidence classification: `item_data_mutation`
@@ -1158,7 +1158,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `290-309`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `high`
 - Evidence score: `103`
 - Evidence classification: `item_data_mutation`
@@ -1188,7 +1188,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `149-215`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `low`
 - Evidence score: `95`
 - Evidence classification: `item_data_mutation`
@@ -1578,7 +1578,7 @@
 
 - File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
 - Lines: `117-153`
-- Realm: `unknown`
+- Realm: `server`
 - Confidence: `medium`
 - Evidence score: `67`
 - Evidence classification: `ui_presentation_logic`

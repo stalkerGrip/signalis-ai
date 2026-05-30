@@ -78,6 +78,8 @@ def infer_file_realm(file_path: str, fallback: str) -> str:
         return "client"
     if name.startswith("sh_"):
         return "shared"
+    if "/entities/entities/" in path and path.endswith("/init.lua"):
+        return "server"
 
     return fallback or "unknown"
 

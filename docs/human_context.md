@@ -30,6 +30,16 @@ If receivers are missing or incorrect, current clients may not receive the updat
 
 ## Vendor / Inventory Notes
 
+Human-validated vendor open flow:
+
+Player interacts with vendor
+→ server calls/emits OpenVendorTradeInterface
+→ client receives vendorTradeInterface
+→ vendorTradeInterface creates the player/local inventory panel through PLUGIN:CreateNewInventoryPanel(...), but the vendor inventory panel is created separately with vgui.Create("vendor_grid_inventory") and then bound to the loaded vendor inventory using storageInvPanel:SetUpPanel(loadedInv).
+→ resulting UI shows vendor inventory and player inventory side by side.
+
+CreateNewInventoryPanel in this flow is not an independent root cause. It is part of vendorTradeInterface UI construction.
+
 The vendor system has been reworked. Some files under plugins/vendor are legacy and should not be assumed authoritative without validation.
 
 Observed bug:

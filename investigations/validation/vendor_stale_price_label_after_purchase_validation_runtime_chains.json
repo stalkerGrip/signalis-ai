@@ -1,0 +1,411 @@
+{
+  "source": "E:\\signalis_ai\\investigations\\validation\\vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
+  "query": "vendor stale price label after purchase",
+  "summary": {
+    "facts_total": 63,
+    "chains_total": 5,
+    "chains": [
+      {
+        "chain_id": "vendor_open_trade_interface",
+        "title": "Vendor Open / Trade Interface Construction",
+        "steps": 5,
+        "warnings": 0,
+        "confidence": "high"
+      },
+      {
+        "chain_id": "vendor_price_update_ui_refresh",
+        "title": "Vendor Price Update / UI Refresh",
+        "steps": 10,
+        "warnings": 0,
+        "confidence": "medium"
+      },
+      {
+        "chain_id": "vendor_exit_metadata_cleanup",
+        "title": "Vendor Exit / Metadata Cleanup",
+        "steps": 7,
+        "warnings": 0,
+        "confidence": "high"
+      },
+      {
+        "chain_id": "inventory_data_delta_sync",
+        "title": "Inventory Data Delta Sync / UI Refresh Risk",
+        "steps": 3,
+        "warnings": 0,
+        "confidence": "medium"
+      },
+      {
+        "chain_id": "storage_refresh_recovery_path",
+        "title": "Storage Movement / Vendor Label Recovery Path",
+        "steps": 4,
+        "warnings": 0,
+        "confidence": "medium"
+      }
+    ]
+  },
+  "chains": [
+    {
+      "chain_id": "vendor_open_trade_interface",
+      "title": "Vendor Open / Trade Interface Construction",
+      "confidence": "high",
+      "reason": "human-validated flow plus runtime facts",
+      "steps": [
+        {
+          "order": 1,
+          "kind": "player_interaction",
+          "target": "Player interacts with vendor",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "human_validated",
+          "reason": "human-validated vendor open flow",
+          "fact_index": null
+        },
+        {
+          "order": 2,
+          "kind": "server_event_or_call",
+          "target": "OpenVendorTradeInterface",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "human_validated",
+          "reason": "server calls/emits OpenVendorTradeInterface before client vendor UI opens",
+          "fact_index": null
+        },
+        {
+          "order": 3,
+          "kind": "network_receive",
+          "target": "vendorTradeInterface",
+          "file": "plugins/inventory/cl_hooks.lua",
+          "realm": "client",
+          "lines": "101-141",
+          "confidence": "high",
+          "reason": "client receives vendorTradeInterface",
+          "fact_index": 47
+        },
+        {
+          "order": 4,
+          "kind": "ui_panel_construction",
+          "target": "CreateNewInventoryPanel",
+          "file": "plugins/inventory/cl_hooks.lua",
+          "realm": "client",
+          "lines": "85-101",
+          "confidence": "medium",
+          "reason": "vendorTradeInterface creates inventory panels; this is UI construction, not root cause",
+          "fact_index": 8
+        },
+        {
+          "order": 5,
+          "kind": "ui_result",
+          "target": "Player inventory panel + vendor_grid_inventory panel",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "human_validated",
+          "reason": "human-validated result: player inventory uses CreateNewInventoryPanel; vendor inventory uses vgui.Create('vendor_grid_inventory') and SetUpPanel(loadedInv)",
+          "fact_index": null
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "chain_id": "vendor_price_update_ui_refresh",
+      "title": "Vendor Price Update / UI Refresh",
+      "confidence": "medium",
+      "reason": "runtime facts show item metadata mutation, vendor network handler, hook dispatch, and UI refresh",
+      "steps": [
+        {
+          "order": 1,
+          "kind": "network_send_start",
+          "target": "nutVendorTrade",
+          "file": "plugins/vendor/derma/cl_vendor.lua",
+          "realm": "client",
+          "lines": "67-98",
+          "confidence": "high",
+          "reason": "client initiates buy/sell request",
+          "fact_index": 30
+        },
+        {
+          "order": 2,
+          "kind": "server_authority",
+          "target": "Server validates vendor trade",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "doctrine",
+          "reason": "server is authoritative for gameplay/inventory mutation",
+          "fact_index": null
+        },
+        {
+          "order": 3,
+          "kind": "item_data_mutation",
+          "target": "vendorQty",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "209-228",
+          "confidence": "high",
+          "reason": "server mutates vendor presentation metadata via item:setData",
+          "fact_index": 33
+        },
+        {
+          "order": 4,
+          "kind": "item_data_mutation",
+          "target": "vendorSPrice",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "209-228",
+          "confidence": "high",
+          "reason": "server mutates vendor presentation metadata via item:setData",
+          "fact_index": 32
+        },
+        {
+          "order": 5,
+          "kind": "item_data_mutation",
+          "target": "vendorMQty",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "209-228",
+          "confidence": "high",
+          "reason": "server mutates vendor presentation metadata via item:setData",
+          "fact_index": 34
+        },
+        {
+          "order": 6,
+          "kind": "sync_boundary",
+          "target": "item:setData conditional sync / persistence boundary",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "human_validated",
+          "reason": "human-validated: setData persists item data and may immediately sync to receiver/current owner or later to future owner/opened inventory",
+          "fact_index": null
+        },
+        {
+          "order": 7,
+          "kind": "vendor_network_handler",
+          "target": "Price",
+          "file": "plugins/vendor/cl_networking.lua",
+          "realm": "client",
+          "lines": "53-72",
+          "confidence": "high",
+          "reason": "client vendor Price handler receives presentation update",
+          "fact_index": 20
+        },
+        {
+          "order": 8,
+          "kind": "hook_emit",
+          "target": "VendorItemPriceUpdated",
+          "file": "plugins/vendor/cl_networking.lua",
+          "realm": "client",
+          "lines": "62-80",
+          "confidence": "high",
+          "reason": "Price handler emits VendorItemPriceUpdated",
+          "fact_index": 26
+        },
+        {
+          "order": 9,
+          "kind": "hook_listener",
+          "target": "VendorItemPriceUpdated",
+          "file": "plugins/vendor/derma/cl_vendor.lua",
+          "realm": "client",
+          "lines": "194-214",
+          "confidence": "high",
+          "reason": "vendor UI listens through self.onVendorPriceUpdated",
+          "fact_index": 2
+        },
+        {
+          "order": 10,
+          "kind": "ui_refresh_call",
+          "target": "updatePrice",
+          "file": "plugins/vendor/derma/cl_vendor.lua",
+          "realm": "client",
+          "lines": "148-183",
+          "confidence": "high",
+          "reason": "vendor UI refreshes visible price label",
+          "fact_index": 44
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "chain_id": "vendor_exit_metadata_cleanup",
+      "title": "Vendor Exit / Metadata Cleanup",
+      "confidence": "high",
+      "reason": "runtime facts show RemoveReceiverFromVendor clearing vendor* item data keys",
+      "steps": [
+        {
+          "order": 1,
+          "kind": "network_send_start",
+          "target": "nutVendorExit",
+          "file": "plugins/vendor/derma/cl_vendor.lua",
+          "realm": "client",
+          "lines": "229-245",
+          "confidence": "high",
+          "reason": "client closes/removes vendor panel and sends exit",
+          "fact_index": 31
+        },
+        {
+          "order": 2,
+          "kind": "server_cleanup_call",
+          "target": "ENT:RemoveReceiverFromVendor(client)",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "source_inferred",
+          "reason": "server removes client from vendor receivers and clears vendor metadata",
+          "fact_index": null
+        },
+        {
+          "order": 3,
+          "kind": "item_data_mutation",
+          "target": "vendorBPrice",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "290-309",
+          "confidence": "high",
+          "reason": "server clears vendor presentation metadata with nil setData",
+          "fact_index": 38
+        },
+        {
+          "order": 4,
+          "kind": "item_data_mutation",
+          "target": "vendorQty",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "290-309",
+          "confidence": "high",
+          "reason": "server clears vendor presentation metadata with nil setData",
+          "fact_index": 36
+        },
+        {
+          "order": 5,
+          "kind": "item_data_mutation",
+          "target": "vendorSPrice",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "290-309",
+          "confidence": "high",
+          "reason": "server clears vendor presentation metadata with nil setData",
+          "fact_index": 35
+        },
+        {
+          "order": 6,
+          "kind": "item_data_mutation",
+          "target": "vendorMQty",
+          "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+          "realm": "server",
+          "lines": "290-309",
+          "confidence": "high",
+          "reason": "server clears vendor presentation metadata with nil setData",
+          "fact_index": 37
+        },
+        {
+          "order": 7,
+          "kind": "sync_boundary",
+          "target": "item:setData nil sync / persistence boundary",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "human_validated",
+          "reason": "human-validated: cleanup may sync immediately to receiver/current owner or persist for future sync",
+          "fact_index": null
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "chain_id": "inventory_data_delta_sync",
+      "title": "Inventory Data Delta Sync / UI Refresh Risk",
+      "confidence": "medium",
+      "reason": "runtime facts show nutInventoryData receiver; UI refresh linkage still requires validation",
+      "steps": [
+        {
+          "order": 1,
+          "kind": "network_receive",
+          "target": "nutInventoryData",
+          "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+          "realm": "client",
+          "lines": "1-13",
+          "confidence": "high",
+          "reason": "client receives inventory data delta",
+          "fact_index": 29
+        },
+        {
+          "order": 2,
+          "kind": "client_inventory_state_update",
+          "target": "Inventory instance data key/value update",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "source_inferred",
+          "reason": "nutInventoryData updates client inventory instance data",
+          "fact_index": null
+        },
+        {
+          "order": 3,
+          "kind": "ui_risk",
+          "target": "Existing inventory/vendor item panels may need refresh",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "hypothesis",
+          "reason": "stale labels may remain if UI does not observe ItemDataChanged or equivalent refresh boundary",
+          "fact_index": null
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "chain_id": "storage_refresh_recovery_path",
+      "title": "Storage Movement / Vendor Label Recovery Path",
+      "confidence": "medium",
+      "reason": "human observation plus runtime facts around storage/vendor panel creation and receiver removal",
+      "steps": [
+        {
+          "order": 1,
+          "kind": "network_receive",
+          "target": "vendorTradeInterface",
+          "file": "plugins/inventory/cl_hooks.lua",
+          "realm": "client",
+          "lines": "101-141",
+          "confidence": "high",
+          "reason": "vendor/storage inventory UI construction path exists",
+          "fact_index": 47
+        },
+        {
+          "order": 2,
+          "kind": "hook_emit",
+          "target": "OnCreateStoragePanel",
+          "file": "plugins/inventory/cl_hooks.lua",
+          "realm": "client",
+          "lines": "131-171",
+          "confidence": "high",
+          "reason": "storage panel creation emits UI/storage hook",
+          "fact_index": 59
+        },
+        {
+          "order": 3,
+          "kind": "network_send_start",
+          "target": "removeReceiverFromVendor",
+          "file": "plugins/inventory/cl_hooks.lua",
+          "realm": "client",
+          "lines": "131-171",
+          "confidence": "medium",
+          "reason": "storage/vendor panel close sends removeReceiverFromVendor",
+          "fact_index": 57
+        },
+        {
+          "order": 4,
+          "kind": "observed_recovery",
+          "target": "Moving item through storage can refresh/clear stale vendor label",
+          "file": "human_context.md",
+          "realm": "runtime",
+          "lines": "-",
+          "confidence": "human_observed",
+          "reason": "human-observed recovery path; exact source-level refresh boundary still needs validation",
+          "fact_index": null
+        }
+      ],
+      "warnings": []
+    }
+  ]
+}
