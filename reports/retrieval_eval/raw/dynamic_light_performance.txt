@@ -1,4 +1,674 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8614.11it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `dynamic light performance impact lightitems generators`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.5508**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:cdb82eee5d67162c`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `lightitems`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:cdb82eee5d67162c",
+  "doc_type": "runtime_node",
+  "content_hash": "cf2fb21b704da7e7ee3e14cf1aa6acaea9fa736f44393de533d349960e322c2a",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: lightitems\nNode ID: plugin:lightitems\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: lightitems\nOutgoing edge counts: {'emits_event': 1, 'listens_to_event': 7, 'owns_file': 23, 'owns_timer_operation': 79, 'registers_listener': 10}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"lightitems\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"lightitems\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CreateUsingInterface\n- outgoing listens_to_event -> hook_event InitPostEntity\n- outgoing listens_to_event -> hook_event LoadData\n- outgoing listens_to_event -> hook_event PlayerInitialSpawn\n- outgoing listens_to_event -> hook_event PostDrawTranslucentRenderables\n- outgoing listens_to_event -> hook_event RenderScene\n- outgoing listens_to_event -> hook_event SaveData\n- outgoing listens_to_event -> hook_event Think\n- outgoing owns_file -> file plugins\\lightitems\\cl_hooks.lua\n- outgoing owns_file -> file plugins\\lightitems\\cl_hooks.lua\n- outgoing owns_file -> file plugins\\lightitems\\cl_hooks.lua\n- outgoing owns_file -> file plugins\\lightitems\\derma\\cl_electricpanel_interface.lua",
+  "metadata": {
+    "degree": 120,
+    "file": null,
+    "in_degree": 0,
+    "label": "lightitems",
+    "node_type": "plugin",
+    "out_degree": 120,
+    "plugin": "lightitems",
+    "realm": null,
+    "source_id": "plugin:lightitems",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "lightitems",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 120
+}
+```
+
+### Text
+
+```text
+Runtime topology node: lightitems
+Node ID: plugin:lightitems
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: lightitems
+Outgoing edge counts: {'emits_event': 1, 'listens_to_event': 7, 'owns_file': 23, 'owns_timer_operation': 79, 'registers_listener': 10}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "lightitems", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "lightitems", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CreateUsingInterface
+- outgoing listens_to_event -> hook_event InitPostEntity
+- outgoing listens_to_event -> hook_event LoadData
+- outgoing listens_to_event -> hook_event PlayerInitialSpawn
+- outgoing listens_to_event -> hook_event PostDrawTranslucentRenderables
+- outgoing listens_to_event -> hook_event RenderScene
+- outgoing listens_to_event -> hook_event SaveData
+- outgoing listens_to_event -> hook_event Think
+- outgoing owns_file -> file plugins\lightitems\cl_hooks.lua
+- outgoing owns_file -> file plugins\lightitems\cl_hooks.lua
+- outgoing owns_file -> file plugins\lightitems\cl_hooks.lua
+- outgoing owns_file -> file plugins\lightitems\derma\cl_electricpanel_interface.lua
+```
+
+## Result 2
+
+- Score: **0.5505**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:8b88666376bcfb4f`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `lightitems`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:8b88666376bcfb4f",
+  "doc_type": "plugin_topology",
+  "content_hash": "f6941f3fa2826adadc51ac59f8acc13738daa2464da783042807670406b10019",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: lightitems\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_timer_operation': 79, 'owns_file': 23, 'registers_listener': 10, 'listens_to_event': 7, 'emits_event': 1}\nHot members:\n- plugin lightitems degree=120\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for lightitems.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "lightitems",
+    "source_id": "plugin:lightitems"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "lightitems"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: lightitems
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_timer_operation': 79, 'owns_file': 23, 'registers_listener': 10, 'listens_to_event': 7, 'emits_event': 1}
+Hot members:
+- plugin lightitems degree=120
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for lightitems.
+```
+
+## Result 3
+
+- Score: **0.5087**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:89c0fdc5ff697f9e`
+- Doc type: `runtime_node`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:89c0fdc5ff697f9e",
+  "doc_type": "runtime_node",
+  "content_hash": "09196dc453a7c8ef358fc99a9c44804c5de429faa143c8ae36268c0274fed904",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\nNode ID: file:plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nNode type: file\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_network_operation': 5, 'contains_timer_operation': 40, 'file_registers_network_message': 2, 'file_sends_network_message': 3, 'runs_in_realm': 2}\nIncoming edge counts: {'owns_file': 2}\nSelected properties: {\"graph_layers\": [\"network\", \"timer\"], \"label\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"merge_conflicts\": {\"source_graph\": [\"network\", \"timer\"]}, \"path\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"props\": {\"path\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\"}, \"source_graph\": \"network\"}\nSelected neighboring relationships:\n- outgoing contains_network_operation -> network_operation register IsFix\n- outgoing contains_network_operation -> network_operation register RandomNumber\n- outgoing contains_network_operation -> network_operation netstream send activator\n- outgoing contains_network_operation -> network_operation netstream send activator\n- outgoing contains_network_operation -> network_operation netstream send lightItemGensViewShow\n- outgoing contains_timer_operation -> timer_operation player_cancelable_action_timer@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:734\n- outgoing contains_timer_operation -> timer_operation entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:315\n- outgoing contains_timer_operation -> timer_operation entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:325\n- outgoing contains_timer_operation -> timer_operation entity_timer_or_action_call@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:282\n- outgoing contains_timer_operation -> timer_operation entity_timer_exists@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:320\n- outgoing contains_timer_operation -> timer_operation entity_timer_exists@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:313\n- outgoing contains_timer_operation -> timer_operation entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:357\n- incoming owns_file -> plugin lightitems\n- incoming owns_file -> plugin lightitems",
+  "metadata": {
+    "degree": 54,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua",
+    "node_type": "file",
+    "out_degree": 52,
+    "plugin": null,
+    "realm": null,
+    "source_id": "file:plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "subsystem": null
+  },
+  "node_type": "file",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 54
+}
+```
+
+### Text
+
+```text
+Runtime topology node: plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+Node ID: file:plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Node type: file
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'contains_network_operation': 5, 'contains_timer_operation': 40, 'file_registers_network_message': 2, 'file_sends_network_message': 3, 'runs_in_realm': 2}
+Incoming edge counts: {'owns_file': 2}
+Selected properties: {"graph_layers": ["network", "timer"], "label": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "merge_conflicts": {"source_graph": ["network", "timer"]}, "path": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "props": {"path": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua"}, "source_graph": "network"}
+Selected neighboring relationships:
+- outgoing contains_network_operation -> network_operation register IsFix
+- outgoing contains_network_operation -> network_operation register RandomNumber
+- outgoing contains_network_operation -> network_operation netstream send activator
+- outgoing contains_network_operation -> network_operation netstream send activator
+- outgoing contains_network_operation -> network_operation netstream send lightItemGensViewShow
+- outgoing contains_timer_operation -> timer_operation player_cancelable_action_timer@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:734
+- outgoing contains_timer_operation -> timer_operation entity_timer_remove@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:315
+- outgoing contains_timer_operation -> timer_operation entity_timer_create@plugins\lightitems\entitie...
+```
+
+## Result 4
+
+- Score: **0.5075**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:d412f40d77087402`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:d412f40d77087402",
+  "doc_type": "runtime_node",
+  "content_hash": "2e4e38d2e10833ff009e65d52ff3b037e41873edd2d434366db6950050e1bc6d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:357\nNode ID: timer_op:2f43c729e4bf\nNode type: timer_operation\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_create@plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua:357\", \"line\": 357, \"operation_type\": \"entity_timer_create\", \"realm\": \"server\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer SetCustomTimer\n- outgoing runs_in_realm -> realm server\n- outgoing schedules_entity_action -> timer SetCustomTimer\n- incoming contains_timer_operation -> file plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:357",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "timer_op:2f43c729e4bf",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_create@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:357
+Node ID: timer_op:2f43c729e4bf
+Node type: timer_operation
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "graph_layers": ["timer"], "label": "entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:357", "line": 357, "operation_type": "entity_timer_create", "realm": "server", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer SetCustomTimer
+- outgoing runs_in_realm -> realm server
+- outgoing schedules_entity_action -> timer SetCustomTimer
+- incoming contains_timer_operation -> file plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 5
+
+- Score: **0.5069**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:e1e5ba8dffc2e9e5`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/lightitems/items/electrical_appliances/sh_diode_light.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:e1e5ba8dffc2e9e5",
+  "doc_type": "runtime_node",
+  "content_hash": "821a07614c553d6039475a017caca85979085b45839b871048fd05bb4e4b6100",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_create@plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua:44\nNode ID: timer_op:5adb5a3f6da8\nNode type: timer_operation\nFile: plugins/lightitems/items/electrical_appliances/sh_diode_light.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\items\\\\electrical_appliances\\\\sh_diode_light.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_create@plugins\\\\lightitems\\\\items\\\\electrical_appliances\\\\sh_diode_light.lua:44\", \"line\": 44, \"operation_type\": \"entity_timer_create\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer SetCustomTimer\n- outgoing runs_in_realm -> realm shared\n- outgoing schedules_entity_action -> timer SetCustomTimer\n- incoming contains_timer_operation -> file plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/items/electrical_appliances/sh_diode_light.lua",
+    "in_degree": 2,
+    "label": "entity_timer_create@plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua:44",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:5adb5a3f6da8",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/lightitems/items/electrical_appliances/sh_diode_light.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_create@plugins\lightitems\items\electrical_appliances\sh_diode_light.lua:44
+Node ID: timer_op:5adb5a3f6da8
+Node type: timer_operation
+File: plugins/lightitems/items/electrical_appliances/sh_diode_light.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua", "graph_layers": ["timer"], "label": "entity_timer_create@plugins\\lightitems\\items\\electrical_appliances\\sh_diode_light.lua:44", "line": 44, "operation_type": "entity_timer_create", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer SetCustomTimer
+- outgoing runs_in_realm -> realm shared
+- outgoing schedules_entity_action -> timer SetCustomTimer
+- incoming contains_timer_operation -> file plugins\lightitems\items\electrical_appliances\sh_diode_light.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 6
+
+- Score: **0.5053**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:5c5cbd6c7a830b97`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:5c5cbd6c7a830b97",
+  "doc_type": "runtime_node",
+  "content_hash": "7504b502046ae4bbaaeefe8ebb87fb7c64a3b5d5cf3526831e6e478b5489fbb6",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:525\nNode ID: timer_op:fb6563d9dd75\nNode type: timer_operation\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_create@plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua:525\", \"line\": 525, \"operation_type\": \"entity_timer_create\", \"realm\": \"server\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer SetCustomTimer\n- outgoing runs_in_realm -> realm server\n- outgoing schedules_entity_action -> timer SetCustomTimer\n- incoming contains_timer_operation -> file plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:525",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "timer_op:fb6563d9dd75",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_create@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:525
+Node ID: timer_op:fb6563d9dd75
+Node type: timer_operation
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "graph_layers": ["timer"], "label": "entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:525", "line": 525, "operation_type": "entity_timer_create", "realm": "server", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer SetCustomTimer
+- outgoing runs_in_realm -> realm server
+- outgoing schedules_entity_action -> timer SetCustomTimer
+- incoming contains_timer_operation -> file plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 7
+
+- Score: **0.5033**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:46bc8afb7262ec9c`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:46bc8afb7262ec9c",
+  "doc_type": "runtime_node",
+  "content_hash": "2057282f675eccd7f7ff4fc75de68af754dabcf1d5165725f8832a29be10a8d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:325\nNode ID: timer_op:218bc39a25d3\nNode type: timer_operation\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_create@plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua:325\", \"line\": 325, \"operation_type\": \"entity_timer_create\", \"realm\": \"server\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer SetCustomTimer\n- outgoing runs_in_realm -> realm server\n- outgoing schedules_entity_action -> timer SetCustomTimer\n- incoming contains_timer_operation -> file plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:325",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "timer_op:218bc39a25d3",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_create@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:325
+Node ID: timer_op:218bc39a25d3
+Node type: timer_operation
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "graph_layers": ["timer"], "label": "entity_timer_create@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:325", "line": 325, "operation_type": "entity_timer_create", "realm": "server", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer SetCustomTimer
+- outgoing runs_in_realm -> realm server
+- outgoing schedules_entity_action -> timer SetCustomTimer
+- incoming contains_timer_operation -> file plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 8
+
+- Score: **0.5017**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:9f3a327aaf66c443`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:9f3a327aaf66c443",
+  "doc_type": "runtime_node",
+  "content_hash": "6e517b0db42cc0705feb1ece130f1490d8e23ebce07af1ae7cd2f881397e3a90",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:798\nNode ID: timer_op:70b0fe112f80\nNode type: timer_operation\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua:798\", \"line\": 798, \"operation_type\": \"entity_timer_remove\", \"realm\": \"server\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm server\n- incoming contains_timer_operation -> file plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:798",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "timer_op:70b0fe112f80",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:798
+Node ID: timer_op:70b0fe112f80
+Node type: timer_operation
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:798", "line": 798, "operation_type": "entity_timer_remove", "realm": "server", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm server
+- incoming contains_timer_operation -> file plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 9
+
+- Score: **0.5007**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:045b8313cb94f554`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:045b8313cb94f554",
+  "doc_type": "runtime_node",
+  "content_hash": "6a87ad58d719a578bd934ba9e002d8f0af75d46d173eb09d2e6c1bf55f2767b5",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:315\nNode ID: timer_op:12ca565d2965\nNode type: timer_operation\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua:315\", \"line\": 315, \"operation_type\": \"entity_timer_remove\", \"realm\": \"server\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm server\n- incoming contains_timer_operation -> file plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:315",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "timer_op:12ca565d2965",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:315
+Node ID: timer_op:12ca565d2965
+Node type: timer_operation
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:315", "line": 315, "operation_type": "entity_timer_remove", "realm": "server", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm server
+- incoming contains_timer_operation -> file plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 10
+
+- Score: **0.5003**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:3cf7801f5ec14a68`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/lightitems/entities/entities/nut_electric_generator/init.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:3cf7801f5ec14a68",
+  "doc_type": "runtime_node",
+  "content_hash": "a2dd0a95fdcd7cb24d8342a96ce3df8dcc99b9bedb20f79753cd7a601cb98898",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:322\nNode ID: timer_op:e91a993de3b4\nNode type: timer_operation\nFile: plugins/lightitems/entities/entities/nut_electric_generator/init.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\lightitems\\\\entities\\\\entities\\\\nut_electric_generator\\\\init.lua:322\", \"line\": 322, \"operation_type\": \"entity_timer_remove\", \"realm\": \"server\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm server\n- incoming contains_timer_operation -> file plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:322",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "timer_op:e91a993de3b4",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:322
+Node ID: timer_op:e91a993de3b4
+Node type: timer_operation
+File: plugins/lightitems/entities/entities/nut_electric_generator/init.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:322", "line": 322, "operation_type": "entity_timer_remove", "realm": "server", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm server
+- incoming contains_timer_operation -> file plugins\lightitems\entities\entities\nut_electric_generator\init.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+

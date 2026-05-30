@@ -1,4 +1,537 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8538.95it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `ragdoll interaction inventory transfer character search coupling`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.6154**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:d8c35c0e37c53a50`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `ragdollinteraction`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:d8c35c0e37c53a50",
+  "doc_type": "plugin_topology",
+  "content_hash": "426afdb21bb31c8f6b3c3f152e3e60933982f7cdfb93e8b77717410a358f39e1",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: ragdollinteraction\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 61, 'listens_to_event': 31, 'owns_timer_operation': 22, 'owns_file': 13, 'emits_event': 6}\nHot members:\n- plugin ragdollinteraction degree=133\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for ragdollinteraction.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "ragdollinteraction",
+    "source_id": "plugin:ragdollinteraction"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "ragdollinteraction"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: ragdollinteraction
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 61, 'listens_to_event': 31, 'owns_timer_operation': 22, 'owns_file': 13, 'emits_event': 6}
+Hot members:
+- plugin ragdollinteraction degree=133
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for ragdollinteraction.
+```
+
+## Result 2
+
+- Score: **0.5753**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:1fac1cd88cb0a400`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:1fac1cd88cb0a400",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e26d91c75d49591cc227766eab9ff33b97e6c624d7361f5eb415b1e80db3e1b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: inventory\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}\nHot members:\n- plugin inventory degree=37\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "inventory",
+    "source_id": "plugin:inventory"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "inventory"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: inventory
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}
+Hot members:
+- plugin inventory degree=37
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.
+```
+
+## Result 3
+
+- Score: **0.5652**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:93277d8b7012446f`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `ragdollinteraction`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:93277d8b7012446f",
+  "doc_type": "runtime_node",
+  "content_hash": "f25b4732ff01992ce7a25b5094364de3f74aaf3a7db524716db9d38df6f7689f",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: ragdollinteraction\nNode ID: plugin:ragdollinteraction\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: ragdollinteraction\nOutgoing edge counts: {'emits_event': 6, 'listens_to_event': 31, 'owns_file': 13, 'owns_timer_operation': 22, 'registers_listener': 61}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"ragdollinteraction\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"ragdollinteraction\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CorpseInventorySet\n- outgoing emits_event -> hook_event CreateNewInventoryPanel\n- outgoing emits_event -> hook_event CreateUsingInterface\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCorpseCreated\n- outgoing emits_event -> hook_event StorageCanTransferItem\n- outgoing listens_to_event -> hook_event AttachTo\n- outgoing listens_to_event -> hook_event CanItemBeTransfered\n- outgoing listens_to_event -> hook_event CanPlayerInteractItem\n- outgoing listens_to_event -> hook_event CloneVarsOn\n- outgoing listens_to_event -> hook_event CloseCorpse\n- outgoing listens_to_event -> hook_event CorpseInventorySet",
+  "metadata": {
+    "degree": 133,
+    "file": null,
+    "in_degree": 0,
+    "label": "ragdollinteraction",
+    "node_type": "plugin",
+    "out_degree": 133,
+    "plugin": "ragdollinteraction",
+    "realm": null,
+    "source_id": "plugin:ragdollinteraction",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "ragdollinteraction",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 133
+}
+```
+
+### Text
+
+```text
+Runtime topology node: ragdollinteraction
+Node ID: plugin:ragdollinteraction
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: ragdollinteraction
+Outgoing edge counts: {'emits_event': 6, 'listens_to_event': 31, 'owns_file': 13, 'owns_timer_operation': 22, 'registers_listener': 61}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "ragdollinteraction", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "ragdollinteraction", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CorpseInventorySet
+- outgoing emits_event -> hook_event CreateNewInventoryPanel
+- outgoing emits_event -> hook_event CreateUsingInterface
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCorpseCreated
+- outgoing emits_event -> hook_event StorageCanTransferItem
+- outgoing listens_to_event -> hook_event AttachTo
+- outgoing listens_to_event -> hook_event CanItemBeTransfered
+- outgoing listens_to_event -> hook_event CanPlayerInteractItem
+- outgoing listens_to_event -> hook_event CloneVarsOn
+- outgoing listens_to_event -> hook_event CloseCorpse
+- outgoing listens_to_event -> hook_event CorpseInventorySet
+```
+
+## Result 4
+
+- Score: **0.5634**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:eb771e82e3de7687`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `gamemode`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:eb771e82e3de7687",
+  "doc_type": "plugin_topology",
+  "content_hash": "a857ae5d7273bc1014dd3e065be796777aedd1a8aa5e9fbc4fba2a6ff49bc812",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: gamemode\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_timer_operation': 60, 'owns_file': 53}\nHot members:\n- plugin gamemode degree=113\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for gamemode.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "gamemode",
+    "source_id": "plugin:gamemode"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "gamemode"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: gamemode
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_timer_operation': 60, 'owns_file': 53}
+Hot members:
+- plugin gamemode degree=113
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for gamemode.
+```
+
+## Result 5
+
+- Score: **0.5570**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:530afb584f3fe7ad`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `playeranimator`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:530afb584f3fe7ad",
+  "doc_type": "plugin_topology",
+  "content_hash": "fd6adfdeee9335326a5120fb4a45d0c927d86f5d3f1815e0bca808e26a3a217b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: playeranimator\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'listens_to_event': 1, 'owns_file': 1, 'registers_listener': 1}\nHot members:\n- plugin playeranimator degree=3\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for playeranimator.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "playeranimator",
+    "source_id": "plugin:playeranimator"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "playeranimator"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: playeranimator
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'listens_to_event': 1, 'owns_file': 1, 'registers_listener': 1}
+Hot members:
+- plugin playeranimator degree=3
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for playeranimator.
+```
+
+## Result 6
+
+- Score: **0.5496**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:81dae43ecfcf4558`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `playerinjuries`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:81dae43ecfcf4558",
+  "doc_type": "plugin_topology",
+  "content_hash": "77fe03e181fb7fa70b31125ed1e168b2a421b085979f71b69f154b590004df02",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: playerinjuries\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 5, 'listens_to_event': 3, 'owns_file': 3, 'emits_event': 2, 'owns_timer_operation': 1}\nHot members:\n- plugin playerinjuries degree=14\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for playerinjuries.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "playerinjuries",
+    "source_id": "plugin:playerinjuries"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "playerinjuries"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: playerinjuries
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 5, 'listens_to_event': 3, 'owns_file': 3, 'emits_event': 2, 'owns_timer_operation': 1}
+Hot members:
+- plugin playerinjuries degree=14
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for playerinjuries.
+```
+
+## Result 7
+
+- Score: **0.5495**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:a60fd745ef7de37a`
+- Doc type: `runtime_node`
+- Node type: `hook_event`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:a60fd745ef7de37a",
+  "doc_type": "runtime_node",
+  "content_hash": "5fc00f9c7fcda54a5d44070f50a2f5a1b6a73ac1a79c32505c920cf1e278039a",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: CharacterPreSave\nNode ID: hook:CharacterPreSave\nNode type: hook_event\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'classified_as': 1}\nIncoming edge counts: {'emits': 1, 'listens_to': 11, 'listens_to_event': 6}\nSelected properties: {\"emitter_count\": 1, \"event\": \"CharacterPreSave\", \"event_class\": \"framework_lifecycle\", \"graph_layers\": [\"hook\"], \"has_emitters\": true, \"has_listeners\": true, \"label\": \"CharacterPreSave\", \"listener_count\": 11, \"realms_emitted\": [\"shared\"], \"realms_listened\": [\"server\", \"shared\"], \"return_policy\": \"maybe_returns\", \"source\": \"hook_event_graph\", \"source_artifact\": \"hook_event_listeners\", \"source_graph\": \"hook\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- outgoing classified_as -> event_class framework_lifecycle\n- incoming emits -> hook_emitter emit CharacterPreSave @ gamemode\\core\\meta\\sh_character.lua:42\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\ammosave.lua:42\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\inventory\\sh_plugin.lua:719\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\spawnsaver.lua:6\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\inventory\\sh_plugin.lua:718\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\healthproblems\\sv_hooks.lua:575\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\spawnsaver.lua:6\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\needs\\sv_hooks.lua:119\n- incoming listens_to -> hook_listener listen CharacterPreSave @ gamemode\\core\\hooks\\sv_hooks.lua:740\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\needs\\sv_hooks.lua:120\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\healthproblems\\sv_hooks.lua:576\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\ammosave.lua:42",
+  "metadata": {
+    "degree": 19,
+    "file": null,
+    "in_degree": 18,
+    "label": "CharacterPreSave",
+    "node_type": "hook_event",
+    "out_degree": 1,
+    "plugin": null,
+    "realm": null,
+    "source_id": "hook:CharacterPreSave",
+    "subsystem": null
+  },
+  "node_type": "hook_event",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 19
+}
+```
+
+### Text
+
+```text
+Runtime topology node: CharacterPreSave
+Node ID: hook:CharacterPreSave
+Node type: hook_event
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'classified_as': 1}
+Incoming edge counts: {'emits': 1, 'listens_to': 11, 'listens_to_event': 6}
+Selected properties: {"emitter_count": 1, "event": "CharacterPreSave", "event_class": "framework_lifecycle", "graph_layers": ["hook"], "has_emitters": true, "has_listeners": true, "label": "CharacterPreSave", "listener_count": 11, "realms_emitted": ["shared"], "realms_listened": ["server", "shared"], "return_policy": "maybe_returns", "source": "hook_event_graph", "source_artifact": "hook_event_listeners", "source_graph": "hook", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- outgoing classified_as -> event_class framework_lifecycle
+- incoming emits -> hook_emitter emit CharacterPreSave @ gamemode\core\meta\sh_character.lua:42
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\ammosave.lua:42
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\inventory\sh_plugin.lua:719
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\spawnsaver.lua:6
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\inventory\sh_plugin.lua:718
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\healthproblems\sv_hooks.lua:575
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\spawnsaver.lua:6
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\needs\sv_hooks.lua:119
+- incoming listens_to -> hook_listener listen CharacterPreSave @ gamemode\core\hooks\sv_hooks.lua:740
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\needs\sv_hooks.lua:120
+- incom...
+```
+
+## Result 8
+
+- Score: **0.5473**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:6734ebe6a22b5468`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `newvendorsystem`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:6734ebe6a22b5468",
+  "doc_type": "plugin_topology",
+  "content_hash": "95bb70af5942e0dde5124eb877c5ae8e82c7efe06cf7556659e3ab1a0401c341",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: newvendorsystem\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 3}\nHot members:\n- plugin newvendorsystem degree=3\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for newvendorsystem.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "newvendorsystem",
+    "source_id": "plugin:newvendorsystem"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "newvendorsystem"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: newvendorsystem
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 3}
+Hot members:
+- plugin newvendorsystem degree=3
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for newvendorsystem.
+```
+
+## Result 9
+
+- Score: **0.5445**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:5dddae1b380935be`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `typing`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:5dddae1b380935be",
+  "doc_type": "plugin_topology",
+  "content_hash": "5ce5f6c7b64a7afcaf177e6817c870254983afe9ce64fc49c6829adc321894a9",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: typing\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 1}\nHot members:\n- plugin typing degree=1\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for typing.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "typing",
+    "source_id": "plugin:typing"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "typing"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: typing
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 1}
+Hot members:
+- plugin typing degree=1
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for typing.
+```
+
+## Result 10
+
+- Score: **0.5444**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:file_topology:ba2e7ff4aa4b06f9`
+- Doc type: `file_topology`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `plugins/ragdollinteraction/interaction/sv_hooks.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:file_topology:ba2e7ff4aa4b06f9",
+  "doc_type": "file_topology",
+  "content_hash": "6f94f03d4d2b4d6e8d0166e2c2d5b1ea616ab8598cd0fa0def8824bd57c9827d",
+  "embedding_dim": 768,
+  "text": "Runtime topology file summary: plugins/ragdollinteraction/interaction/sv_hooks.lua\nThis source file participates in 81 topology relationships.\nRelationship counts: {'contains_emitter': 1, 'contains_listener': 25, 'contains_network_operation': 15, 'contains_timer_operation': 19, 'file_receives_network_message': 11, 'file_sends_network_message': 4, 'runs_in_realm': 3, 'owns_file': 3}\nPlugin/subsystem guess: unknown\nRealm: server\nSelected relationships:\n- contains_emitter: hook_emitter emit CorpseInventorySet @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:56\n- contains_listener: hook_listener listen CloseCorpse @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:181\n- contains_listener: hook_listener listen KeyPress @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:579\n- contains_listener: hook_listener listen ShareCorpseMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:225\n- contains_listener: hook_listener listen ShareCorpseMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:225\n- contains_listener: hook_listener listen UnregSearcher @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:172\n- contains_listener: hook_listener listen CreateInventory @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:30\n- contains_listener: hook_listener listen RegSearcher @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:164\n- contains_listener: hook_listener listen CreateInventory @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:31\n- contains_listener: hook_listener listen UnregSearcher @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:173\n- contains_listener: hook_listener listen CloseCorpse @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:180\n- contains_listener: hook_listener listen TransferInventory @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:143\n- contains_listener: hook_listener listen RegSearcher @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:164\n- contains_listener: hook_listener listen TransferMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:152\n- contains_listener: hook_listener listen CanItemBeTransfered @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:92\n- contains_listener: hook_listener listen WidthdrawMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:231\n- contains_listener: hook_listener listen OnCorpseCreated @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:4\n- contains_listener: hook_listener listen TransferMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:151\n- contains_listener: hook_listener listen CanItemBeTransfered @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:92\n- contains_listener: hook_listener listen KeyPress @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:580\n- contains_listener: hook_listener listen OnCorpseCreated @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:4\n- contains_listener: hook_listener listen TransferInventory @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:144\n- contains_listener: hook_listener listen WidthdrawMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:232\n- contains_listener: hook_listener listen DepositMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:252\n- contains_listener: hook_listener listen Think @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:28\n- contains_listener: hook_listener listen DepositMoney @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:253\n- contains_network_operation: network_operation netstream hook corpseCorruptFinish\n- contains_network_operation: network_operation netstream hook corpseCorruptIgnite\n- contains_network_operation: network_operation netstream hook corpseEat\n- contains_network_operation: network_operation netstream hook corpseHide\n- contains_network_operation: network_operation netstream hook corpsePlyFinish\n- contains_network_operation: network_operation netstream hook corpseTakeAmmo\n- contains_network_operation: network_operation netstream hook lootDpMny\n- contains_network_operation: network_operation netstream hook lootExit\n- contains_network_operation: network_operation netstream hook lootOpenServer\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "metadata": {
+    "degree": 81,
+    "file": "plugins/ragdollinteraction/interaction/sv_hooks.lua",
+    "node_type": "file",
+    "source_id": "file:plugins/ragdollinteraction/interaction/sv_hooks.lua"
+  },
+  "node_type": "file",
+  "file": "plugins/ragdollinteraction/interaction/sv_hooks.lua",
+  "degree": 81
+}
+```
+
+### Text
+
+```text
+Runtime topology file summary: plugins/ragdollinteraction/interaction/sv_hooks.lua
+This source file participates in 81 topology relationships.
+Relationship counts: {'contains_emitter': 1, 'contains_listener': 25, 'contains_network_operation': 15, 'contains_timer_operation': 19, 'file_receives_network_message': 11, 'file_sends_network_message': 4, 'runs_in_realm': 3, 'owns_file': 3}
+Plugin/subsystem guess: unknown
+Realm: server
+Selected relationships:
+- contains_emitter: hook_emitter emit CorpseInventorySet @ plugins\ragdollinteraction\interaction\sv_hooks.lua:56
+- contains_listener: hook_listener listen CloseCorpse @ plugins\ragdollinteraction\interaction\sv_hooks.lua:181
+- contains_listener: hook_listener listen KeyPress @ plugins\ragdollinteraction\interaction\sv_hooks.lua:579
+- contains_listener: hook_listener listen ShareCorpseMoney @ plugins\ragdollinteraction\interaction\sv_hooks.lua:225
+- contains_listener: hook_listener listen ShareCorpseMoney @ plugins\ragdollinteraction\interaction\sv_hooks.lua:225
+- contains_listener: hook_listener listen UnregSearcher @ plugins\ragdollinteraction\interaction\sv_hooks.lua:172
+- contains_listener: hook_listener listen CreateInventory @ plugins\ragdollinteraction\interaction\sv_hooks.lua:30
+- contains_listener: hook_listener listen RegSearcher @ plugins\ragdollinteraction\interaction\sv_hooks.lua:164
+- contains_listener: hook_listener listen CreateInventory @ plugins\ragdollinteraction\interaction\sv_hooks.lua:31
+- contains_listener: hook_listener listen UnregSearcher @ plugins\ragdollinteraction\interaction\sv_hooks.lua:173
+- contains_listener: hook_listener listen CloseCorpse @ plugins\ragdollinteraction\interaction\sv_hooks.lua:180
+- contains_listener: hook_listener listen TransferInventory @ plugins\ragdollinteraction\inter...
+```
+

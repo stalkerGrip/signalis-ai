@@ -1,4 +1,737 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8000.31it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `client inventory UI desync panel refresh stale item data`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.5768**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:doctrine:716ac0b5c759aa56`
+- Doc type: `doctrine`
+- Node type: `doctrine`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `subsystem_docs/runtime_doctrine.md`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:doctrine:716ac0b5c759aa56",
+  "doc_type": "doctrine",
+  "content_hash": "1a1c0dffbe0992a41d659d3d53f60b04cca8e24cedab2d289d4454f98c28116c",
+  "embedding_dim": 768,
+  "text": "some areas\n```\n\nPersistence is mostly shutdown-oriented, with some on-demand/runtime save behavior.\n\nKnown major bottlenecks are not confirmed yet.\n\n`SaveData`, `LoadData`, `PersistenceSave`, and related hooks should be treated as high-importance lifecycle hubs.\n\nFuture architecture should clarify:\n\n```text\nwhat saves when\nwhat is authoritative\nwhat can be async\nwhat must be atomic\nwhat can be rebuilt from runtime state\n```\n\n## Inventory Doctrine\n\nInventory is both server-side authoritative and client-visible through Derma/grid inventory.\n\nCurrent behavior:\n\n```text\nitems saved in DB\nserver stores authoritative information\nclient views/manipulates through UI\ngrid inventory / Derma represents state visually\n```\n\nKnown pain point:\n\n```text\nUI desync\n```\n\nInventory sync may be mixed between full refresh and partial/delta updates. This needs further inspection.\n\nInventory is a high-priority subsystem because it connects:\n\n```text\nitems\nstorage\nentities\nnetworking\nUI\npersistence\ncommands\nplayer actions\n```\n\n## Realm Doctrine\n\nRealm responsibility is currently mixed but mostly server-side.\n\nLong-term direction:\n\n```text\nserver owns authoritative simulation and persistence\nclient owns presentation and UI\nshared code should express contracts, not hide authority\nnetworking should explicitly cross realm boundaries\n```\n\nClient prediction is not currently well understood or intentionally used. Future architecture should avoid relying on prediction until the model is clear.\n\nPlugin realm roles vary:\n\n```text\nUI-only\nsimulation-only\ninfrastructure\nmixed client/server\nlegacy/base framework\n```\n\n## Performance Doctrine\n\nCurrent high-priority risk areas:\n\n```text\nPVP/PVE performance\ndynamic lights\ninfrastructure entities\nnextbots\ncorrect architecture implementation\nmemory leaks\nUI desync\nFPS drops with entities\n```\n\nLikely performance sources to investigate:\n\n```text\nThink hooks\nhigh-frequency timers\nentity simulation loops\nnextbot processing\ndynamic lighting\nnetwork sync spam\nlarge payloads\nUI refresh loops\nmemory leaks from timers/entities/panels\n```\n\nHigh-frequency logic should be classified by intent before optimization.\n\n## Runtime Graph Doctrine\n\nRuntime topology should be built from normalized semantic facts, not raw code dumps.\n\nStable graph IDs should distinguish semantic node types:\n\n```text\nhook:SaveData\nnet:invAct\ntimer:nutSaveData\nplugin:healthproblems\nfile:plugins/healthproblems/sv_hooks.lua\nentity:nut_ore_smelter\ncommand:chargetup\n```\n\nFile-level edges are useful and should be preserved:\n\n```text\nfile emits hook\nfile listens to hook\nfile sends network message\nfile receives network message\nfile creates timer\nplugin owns file\n```\n\nThese allow detection of:\n\n```text\nhot files\ngod files\ncross-plugin coupling\nruntime propagation chains\nisolated protocols\nlegacy/dead paths\nscheduler hotspots\n```\n\n## Current Normalized Graph Layers\n\nThe current pipeline has produced or is producing:\n\n```text\nhook event bus graph\nnetwork graph\ntimer graph\nruntime graph V1\n```\n\nThe next major artifact should be a unified runtime topology graph merging:\n\n```text\nhooks\nnetworking\ntimers\ncommands\ninventory\nentities\npersistence\nUI\n```\n\nInitial merge should focus on:\n\n```text\nhook graph\nnetwork graph\ntimer graph\n```\n\nbecause those are the runtime propagation backbone.\n\n## Future Architectural Goals\n\nThe long-term architecture should become:",
+  "metadata": {
+    "chunk_index": 2,
+    "file": "subsystem_docs/runtime_doctrine.md",
+    "node_type": "doctrine",
+    "source_id": "subsystem_docs/runtime_doctrine.md"
+  },
+  "node_type": "doctrine",
+  "file": "subsystem_docs/runtime_doctrine.md"
+}
+```
+
+### Text
+
+```text
+some areas
+```
+
+Persistence is mostly shutdown-oriented, with some on-demand/runtime save behavior.
+
+Known major bottlenecks are not confirmed yet.
+
+`SaveData`, `LoadData`, `PersistenceSave`, and related hooks should be treated as high-importance lifecycle hubs.
+
+Future architecture should clarify:
+
+```text
+what saves when
+what is authoritative
+what can be async
+what must be atomic
+what can be rebuilt from runtime state
+```
+
+## Inventory Doctrine
+
+Inventory is both server-side authoritative and client-visible through Derma/grid inventory.
+
+Current behavior:
+
+```text
+items saved in DB
+server stores authoritative information
+client views/manipulates through UI
+grid inventory / Derma represents state visually
+```
+
+Known pain point:
+
+```text
+UI desync
+```
+
+Inventory sync may be mixed between full refresh and partial/delta updates. This needs further inspection.
+
+Inventory is a high-priority subsystem because it connects:
+
+```text
+items
+storage
+entities
+networking
+UI
+persistence
+commands
+player actions
+```
+
+## Realm Doctrine
+
+Realm responsibility is currently mixed but mostly server-side.
+
+Long-term direction:
+
+```text
+server owns authoritative simulation and persistence
+client owns presentation and UI
+shared code should express contracts, not hide authority
+networking should explicitly cross realm boundaries
+```
+
+Client prediction is not currently well understood or intentionally used. Future architecture should avoid relying on prediction until the model is clear.
+
+Plugin realm roles vary:
+
+```text
+UI-only
+simulation-only
+infrastructure
+mixed client/server
+legacy/base framework
+```
+
+## Performance Doctrine
+
+Current high-priority risk areas:
+
+```text
+PVP/PVE performance
+dynamic lights
+infrastructure entities
+nextbots
+correct architecture implementation
+memory leaks
+UI desyn...
+```
+
+## Result 2
+
+- Score: **0.5682**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ee582278a762107b`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ee582278a762107b",
+  "doc_type": "runtime_node",
+  "content_hash": "7177379f580abf168e2c3597798f1376d6d7ca52fcfad1bc3d18787877d5848d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory_item_storage\nNode ID: subsystem:inventory_item_storage\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"inventory_item_storage\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua:30\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:147\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:315\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua:31\n- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\\inventory\\sv_hooks.lua:123\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\inventory\\sv_hooks.lua:16\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:70\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\storage\\sv_storage.lua:149",
+  "metadata": {
+    "degree": 9,
+    "file": null,
+    "in_degree": 9,
+    "label": "inventory_item_storage",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:inventory_item_storage",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 9
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory_item_storage
+Node ID: subsystem:inventory_item_storage
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 9}
+Selected properties: {"graph_layers": ["timer"], "label": "inventory_item_storage", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:256
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\crafting\entities\entities\nut_storage_kit\init.lua:30
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:147
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:315
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\gridinv\plugins\1_1compat\sh_plugin.lua:31
+- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\inventory\sv_hooks.lua:123
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\inventory\sv_hooks.lua:16
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:70
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\storage\sv_storage.lua:149
+```
+
+## Result 3
+
+- Score: **0.5612**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:03a413ab22454d13`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:03a413ab22454d13",
+  "doc_type": "runtime_node",
+  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "metadata": {
+    "degree": 37,
+    "file": null,
+    "in_degree": 0,
+    "label": "inventory",
+    "node_type": "plugin",
+    "out_degree": 37,
+    "plugin": "inventory",
+    "realm": null,
+    "source_id": "plugin:inventory",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "inventory",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 37
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory
+Node ID: plugin:inventory
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: inventory
+Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CheckBothHandsAmputation
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCreateStoragePanel
+- outgoing listens_to_event -> hook_event CharacterPreSave
+- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
+- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
+- outgoing listens_to_event -> hook_event ItemTransfered
+- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
+- outgoing listens_to_event -> hook_event PlayerButtonDown
+- outgoing listens_to_event -> hook_event PlayerLoadout
+- outgoing listens_to_event -> hook_event PostPlayerLoadout
+- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+```
+
+## Result 4
+
+- Score: **0.5479**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:9fc3e932b2a26eb0`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/gadgets/items/sh_nation_lock.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:9fc3e932b2a26eb0",
+  "doc_type": "runtime_node",
+  "content_hash": "58907664b2d718a9667116df15ce041b8a96b2b0584b3557709d4113dc77f22c",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\gadgets\\items\\sh_nation_lock.lua:123\nNode ID: timer_op:plugins/gadgets/items/sh_nation_lock.lua:123:entity_timer_remove:RemoveTimer:308\nNode type: timer_operation\nFile: plugins/gadgets/items/sh_nation_lock.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\gadgets\\\\items\\\\sh_nation_lock.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\gadgets\\\\items\\\\sh_nation_lock.lua:123\", \"line\": 123, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\gadgets\\items\\sh_nation_lock.lua\n- incoming owns_timer_operation -> plugin gadgets",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/gadgets/items/sh_nation_lock.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\gadgets\\items\\sh_nation_lock.lua:123",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/gadgets/items/sh_nation_lock.lua:123:entity_timer_remove:RemoveTimer:308",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/gadgets/items/sh_nation_lock.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\gadgets\items\sh_nation_lock.lua:123
+Node ID: timer_op:plugins/gadgets/items/sh_nation_lock.lua:123:entity_timer_remove:RemoveTimer:308
+Node type: timer_operation
+File: plugins/gadgets/items/sh_nation_lock.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\gadgets\\items\\sh_nation_lock.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\gadgets\\items\\sh_nation_lock.lua:123", "line": 123, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\gadgets\items\sh_nation_lock.lua
+- incoming owns_timer_operation -> plugin gadgets
+```
+
+## Result 5
+
+- Score: **0.5473**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:5bdfe6987d8ec777`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:5bdfe6987d8ec777",
+  "doc_type": "runtime_node",
+  "content_hash": "285597701fb482aa316de82a8f73ae63d31a71d888cd909885e388e5e7ee6de5",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:97\nNode ID: timer_op:3ab3398ffd1d\nNode type: timer_operation\nFile: plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\items\\\\electrical_appliances\\\\sh_electric_panel.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\lightitems\\\\items\\\\electrical_appliances\\\\sh_electric_panel.lua:97\", \"line\": 97, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:97",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:3ab3398ffd1d",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\lightitems\items\electrical_appliances\sh_electric_panel.lua:97
+Node ID: timer_op:3ab3398ffd1d
+Node type: timer_operation
+File: plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:97", "line": 97, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\lightitems\items\electrical_appliances\sh_electric_panel.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 6
+
+- Score: **0.5463**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:1fac1cd88cb0a400`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:1fac1cd88cb0a400",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e26d91c75d49591cc227766eab9ff33b97e6c624d7361f5eb415b1e80db3e1b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: inventory\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}\nHot members:\n- plugin inventory degree=37\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "inventory",
+    "source_id": "plugin:inventory"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "inventory"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: inventory
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}
+Hot members:
+- plugin inventory degree=37
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.
+```
+
+## Result 7
+
+- Score: **0.5456**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:98d4d0eed686eeb1`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/rechargeableequipment/items/outfit/sh_flashlight.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:98d4d0eed686eeb1",
+  "doc_type": "runtime_node",
+  "content_hash": "7e5a4413149c51fe1d2fa1f92c294cae9d34782a9b38673b53c1a743e624610d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67\nNode ID: timer_op:973a511e4aeb\nNode type: timer_operation\nFile: plugins/rechargeableequipment/items/outfit/sh_flashlight.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\rechargeableequipment\\\\items\\\\outfit\\\\sh_flashlight.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\rechargeableequipment\\\\items\\\\outfit\\\\sh_flashlight.lua:67\", \"line\": 67, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem character\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua\n- incoming owns_timer_operation -> plugin rechargeableequipment",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/rechargeableequipment/items/outfit/sh_flashlight.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:973a511e4aeb",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/rechargeableequipment/items/outfit/sh_flashlight.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\rechargeableequipment\items\outfit\sh_flashlight.lua:67
+Node ID: timer_op:973a511e4aeb
+Node type: timer_operation
+File: plugins/rechargeableequipment/items/outfit/sh_flashlight.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67", "line": 67, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem character
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\rechargeableequipment\items\outfit\sh_flashlight.lua
+- incoming owns_timer_operation -> plugin rechargeableequipment
+```
+
+## Result 8
+
+- Score: **0.5455**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:63b4b37926108939`
+- Doc type: `runtime_node`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `client`
+- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:63b4b37926108939",
+  "doc_type": "runtime_node",
+  "content_hash": "1510dbf7c55e1010321adeb65ef04b6f062d93ae1b651d98bfe5c7cb9dd07136",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: gamemode\\core\\meta\\inventory\\cl_base_inventory.lua\nNode ID: file:gamemode/core/meta/inventory/cl_base_inventory.lua\nNode type: file\nFile: gamemode/core/meta/inventory/cl_base_inventory.lua\nRealm: client\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_emitter': 6, 'contains_network_context': 5, 'contains_network_operation': 5, 'contains_network_payload_operation': 16, 'file_receives_network_message': 5, 'runs_in_realm': 3}\nIncoming edge counts: {'owns_file': 1}\nSelected properties: {\"framework_layer\": \"framework\", \"graph_layers\": [\"hook\", \"network\"], \"label\": \"gamemode\\\\core\\\\meta\\\\inventory\\\\cl_base_inventory.lua\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\"]}, \"path\": \"gamemode\\\\core\\\\meta\\\\inventory\\\\cl_base_inventory.lua\", \"props\": {\"path\": \"gamemode\\\\core\\\\meta\\\\inventory\\\\cl_base_inventory.lua\"}, \"realm\": \"client\", \"source\": \"emitter_file\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing contains_emitter -> hook_emitter emit ItemInitialized @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:41\n- outgoing contains_emitter -> hook_emitter emit InventoryDeleted @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:83\n- outgoing contains_emitter -> hook_emitter emit InventoryItemRemoved @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:75\n- outgoing contains_emitter -> hook_emitter emit InventoryDataChanged @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:17\n- outgoing contains_emitter -> hook_emitter emit InventoryItemAdded @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:63\n- outgoing contains_emitter -> hook_emitter emit InventoryInitialized @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:45\n- outgoing contains_network_context -> network_context Receive nutInventoryAdd\n- outgoing contains_network_context -> network_context Receive nutInventoryData\n- outgoing contains_network_context -> network_context Receive nutInventoryDelete\n- outgoing contains_network_context -> network_context Receive nutInventoryInit\n- outgoing contains_network_context -> network_context Receive nutInventoryRemove\n- outgoing contains_network_operation -> network_operation receive nutInventoryAdd\n- incoming owns_file -> plugin gamemode",
+  "metadata": {
+    "degree": 41,
+    "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+    "in_degree": 1,
+    "label": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
+    "node_type": "file",
+    "out_degree": 40,
+    "plugin": null,
+    "realm": "client",
+    "source_id": "file:gamemode/core/meta/inventory/cl_base_inventory.lua",
+    "subsystem": null
+  },
+  "node_type": "file",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "client",
+  "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+  "degree": 41
+}
+```
+
+### Text
+
+```text
+Runtime topology node: gamemode\core\meta\inventory\cl_base_inventory.lua
+Node ID: file:gamemode/core/meta/inventory/cl_base_inventory.lua
+Node type: file
+File: gamemode/core/meta/inventory/cl_base_inventory.lua
+Realm: client
+Plugin/subsystem: unknown
+Outgoing edge counts: {'contains_emitter': 6, 'contains_network_context': 5, 'contains_network_operation': 5, 'contains_network_payload_operation': 16, 'file_receives_network_message': 5, 'runs_in_realm': 3}
+Incoming edge counts: {'owns_file': 1}
+Selected properties: {"framework_layer": "framework", "graph_layers": ["hook", "network"], "label": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua", "merge_conflicts": {"source_graph": ["hook", "network"]}, "path": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua", "props": {"path": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua"}, "realm": "client", "source": "emitter_file", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing contains_emitter -> hook_emitter emit ItemInitialized @ gamemode\core\meta\inventory\cl_base_inventory.lua:41
+- outgoing contains_emitter -> hook_emitter emit InventoryDeleted @ gamemode\core\meta\inventory\cl_base_inventory.lua:83
+- outgoing contains_emitter -> hook_emitter emit InventoryItemRemoved @ gamemode\core\meta\inventory\cl_base_inventory.lua:75
+- outgoing contains_emitter -> hook_emitter emit InventoryDataChanged @ gamemode\core\meta\inventory\cl_base_inventory.lua:17
+- outgoing contains_emitter -> hook_emitter emit InventoryItemAdded @ gamemode\core\meta\inventory\cl_base_inventory.lua:63
+- outgoing contains_emitter -> hook_emitter emit InventoryInitialized @ gamemode\core\meta\inventory\cl_base_inventory.lua:45
+- outgoing contains_network_context -> network_context Receive nutInventoryAdd
+- outgoing co...
+```
+
+## Result 9
+
+- Score: **0.5441**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:9b44517d9b3a214f`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:9b44517d9b3a214f",
+  "doc_type": "runtime_node",
+  "content_hash": "4926e89931fd0b0d4b9dc9ee5cc199a8a1e6174d145776c175b8935aed9cbcf2",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_exists@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:95\nNode ID: timer_op:f386c75f3d59\nNode type: timer_operation\nFile: plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\lightitems\\\\items\\\\electrical_appliances\\\\sh_electric_panel.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_exists@plugins\\\\lightitems\\\\items\\\\electrical_appliances\\\\sh_electric_panel.lua:95\", \"line\": 95, \"operation_type\": \"entity_timer_exists\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer TimerExists\n- outgoing runs_in_realm -> realm shared\n- outgoing schedules_entity_action -> timer TimerExists\n- incoming contains_timer_operation -> file plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua\n- incoming owns_timer_operation -> plugin lightitems",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua",
+    "in_degree": 2,
+    "label": "entity_timer_exists@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:95",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:f386c75f3d59",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_exists@plugins\lightitems\items\electrical_appliances\sh_electric_panel.lua:95
+Node ID: timer_op:f386c75f3d59
+Node type: timer_operation
+File: plugins/lightitems/items/electrical_appliances/sh_electric_panel.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua", "graph_layers": ["timer"], "label": "entity_timer_exists@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:95", "line": 95, "operation_type": "entity_timer_exists", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer TimerExists
+- outgoing runs_in_realm -> realm shared
+- outgoing schedules_entity_action -> timer TimerExists
+- incoming contains_timer_operation -> file plugins\lightitems\items\electrical_appliances\sh_electric_panel.lua
+- incoming owns_timer_operation -> plugin lightitems
+```
+
+## Result 10
+
+- Score: **0.5437**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:f697c14b5e802638`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/gadgets/items/sh_nation_lock.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:f697c14b5e802638",
+  "doc_type": "runtime_node",
+  "content_hash": "fddcb0ee88b7c780e3eaeb0f49a6e6ff918ec2daf4375074a1d3442c378cd4c5",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_exists@plugins\\gadgets\\items\\sh_nation_lock.lua:121\nNode ID: timer_op:plugins/gadgets/items/sh_nation_lock.lua:121:entity_timer_exists:TimerExists:307\nNode type: timer_operation\nFile: plugins/gadgets/items/sh_nation_lock.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\gadgets\\\\items\\\\sh_nation_lock.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_exists@plugins\\\\gadgets\\\\items\\\\sh_nation_lock.lua:121\", \"line\": 121, \"operation_type\": \"entity_timer_exists\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer TimerExists\n- outgoing runs_in_realm -> realm shared\n- outgoing schedules_entity_action -> timer TimerExists\n- incoming contains_timer_operation -> file plugins\\gadgets\\items\\sh_nation_lock.lua\n- incoming owns_timer_operation -> plugin gadgets",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/gadgets/items/sh_nation_lock.lua",
+    "in_degree": 2,
+    "label": "entity_timer_exists@plugins\\gadgets\\items\\sh_nation_lock.lua:121",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/gadgets/items/sh_nation_lock.lua:121:entity_timer_exists:TimerExists:307",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/gadgets/items/sh_nation_lock.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_exists@plugins\gadgets\items\sh_nation_lock.lua:121
+Node ID: timer_op:plugins/gadgets/items/sh_nation_lock.lua:121:entity_timer_exists:TimerExists:307
+Node type: timer_operation
+File: plugins/gadgets/items/sh_nation_lock.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\gadgets\\items\\sh_nation_lock.lua", "graph_layers": ["timer"], "label": "entity_timer_exists@plugins\\gadgets\\items\\sh_nation_lock.lua:121", "line": 121, "operation_type": "entity_timer_exists", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer TimerExists
+- outgoing runs_in_realm -> realm shared
+- outgoing schedules_entity_action -> timer TimerExists
+- incoming contains_timer_operation -> file plugins\gadgets\items\sh_nation_lock.lua
+- incoming owns_timer_operation -> plugin gadgets
+```
+

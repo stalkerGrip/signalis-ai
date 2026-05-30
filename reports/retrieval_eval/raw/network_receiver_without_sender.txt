@@ -1,4 +1,728 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 9289.16it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `network messages with receiver without sender inventory vendor storage`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.5929**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:bcbbda50a0f14bd8`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:bcbbda50a0f14bd8",
+  "doc_type": "runtime_node",
+  "content_hash": "9534390dfd1a22049e73dd7ae7cbb4e6e440ddbefc30768638b34add11e2e20f",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventorySetPanelStatus\nNode ID: netmsg:netstream:inventorySetPanelStatus\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'file_receives_network_message': 1, 'file_sends_network_message': 10, 'receives_network_message': 1, 'sends_network_message': 10}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"inventorySetPanelStatus\", \"props\": {\"protocol\": \"netstream\", \"resolution\": \"literal\"}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming file_receives_network_message -> file plugins\\inventory\\sv_hooks.lua\n- incoming file_sends_network_message -> file plugins\\cassetteplayer\\sh_plugin.lua\n- incoming file_sends_network_message -> file plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\ragdollinteraction\\interaction\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\ragdollinteraction\\interaction\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\tying\\sh_charsearch.lua\n- incoming receives_network_message -> network_operation netstream hook inventorySetPanelStatus",
+  "metadata": {
+    "degree": 22,
+    "file": null,
+    "in_degree": 22,
+    "label": "inventorySetPanelStatus",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:netstream:inventorySetPanelStatus",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 22
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventorySetPanelStatus
+Node ID: netmsg:netstream:inventorySetPanelStatus
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'file_receives_network_message': 1, 'file_sends_network_message': 10, 'receives_network_message': 1, 'sends_network_message': 10}
+Selected properties: {"graph_layers": ["network"], "label": "inventorySetPanelStatus", "props": {"protocol": "netstream", "resolution": "literal"}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming file_receives_network_message -> file plugins\inventory\sv_hooks.lua
+- incoming file_sends_network_message -> file plugins\cassetteplayer\sh_plugin.lua
+- incoming file_sends_network_message -> file plugins\gridinv\plugins\gridstorage\sh_plugin.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\ragdollinteraction\interaction\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\ragdollinteraction\interaction\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\tying\sh_charsearch.lua
+- incoming receives_network_message -> network_operation netstream hook inventorySetPanelStatus
+```
+
+## Result 2
+
+- Score: **0.5918**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:44ac31e5d1eec606`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:44ac31e5d1eec606",
+  "doc_type": "runtime_node",
+  "content_hash": "dc68b160fe871734ec3d045e27cebccdba6b4d1ef04bd55180f08414b386d889",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: nutVendorTrade\nNode ID: netmsg:gmod_net:nutVendorTrade\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 3, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 2, 'reads_network_payload': 2, 'receives_network_message': 1, 'registers_network_message': 1, 'sends_network_message': 2, 'writes_network_payload': 4}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"nutVendorTrade\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Start nutVendorTrade\n- incoming context_references_network_message -> network_context Start nutVendorTrade\n- incoming context_references_network_message -> network_context Receive nutVendorTrade\n- incoming file_receives_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming file_registers_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming file_sends_network_message -> file plugins\\vendor\\derma\\cl_vendor.lua\n- incoming file_sends_network_message -> file plugins\\vendor\\derma\\cl_vendor.lua\n- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorTrade\n- incoming reads_network_payload -> network_payload_operation read ReadBool nutVendorTrade\n- incoming receives_network_message -> network_operation receive nutVendorTrade\n- incoming registers_network_message -> network_operation register nutVendorTrade\n- incoming sends_network_message -> network_operation send nutVendorTrade",
+  "metadata": {
+    "degree": 17,
+    "file": null,
+    "in_degree": 17,
+    "label": "nutVendorTrade",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:nutVendorTrade",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 17
+}
+```
+
+### Text
+
+```text
+Runtime topology node: nutVendorTrade
+Node ID: netmsg:gmod_net:nutVendorTrade
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 3, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 2, 'reads_network_payload': 2, 'receives_network_message': 1, 'registers_network_message': 1, 'sends_network_message': 2, 'writes_network_payload': 4}
+Selected properties: {"graph_layers": ["network"], "label": "nutVendorTrade", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Start nutVendorTrade
+- incoming context_references_network_message -> network_context Start nutVendorTrade
+- incoming context_references_network_message -> network_context Receive nutVendorTrade
+- incoming file_receives_network_message -> file plugins\vendor\sv_networking.lua
+- incoming file_registers_network_message -> file plugins\vendor\sv_networking.lua
+- incoming file_sends_network_message -> file plugins\vendor\derma\cl_vendor.lua
+- incoming file_sends_network_message -> file plugins\vendor\derma\cl_vendor.lua
+- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorTrade
+- incoming reads_network_payload -> network_payload_operation read ReadBool nutVendorTrade
+- incoming receives_network_message -> network_operation receive nutVendorTrade
+- incoming registers_network_message -> network_operation register nutVendorTrade
+- incoming sends_network_message -> network_operation send nutVendorTrade
+```
+
+## Result 3
+
+- Score: **0.5903**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:c2cd03705aab4e2d`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:c2cd03705aab4e2d",
+  "doc_type": "runtime_node",
+  "content_hash": "8a51116fd17b915192e0b910cc08c40c71ac1f2999833e5666662d75b3b34c42",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: receiver\nNode ID: netmsg:netstream:receiver\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'file_sends_network_message': 7, 'sends_network_message': 7}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"receiver\", \"props\": {\"protocol\": \"netstream\", \"resolution\": \"literal\"}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sh_character.lua\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sh_character.lua\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sv_networking.lua\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sv_networking.lua\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sv_networking.lua\n- incoming file_sends_network_message -> file gamemode\\core\\meta\\sh_character.lua\n- incoming file_sends_network_message -> file plugins\\traits\\sh_plugin.lua\n- incoming sends_network_message -> network_operation netstream send receiver\n- incoming sends_network_message -> network_operation netstream send receiver\n- incoming sends_network_message -> network_operation netstream send receiver\n- incoming sends_network_message -> network_operation netstream send receiver\n- incoming sends_network_message -> network_operation netstream send receiver",
+  "metadata": {
+    "degree": 14,
+    "file": null,
+    "in_degree": 14,
+    "label": "receiver",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:netstream:receiver",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 14
+}
+```
+
+### Text
+
+```text
+Runtime topology node: receiver
+Node ID: netmsg:netstream:receiver
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'file_sends_network_message': 7, 'sends_network_message': 7}
+Selected properties: {"graph_layers": ["network"], "label": "receiver", "props": {"protocol": "netstream", "resolution": "literal"}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming file_sends_network_message -> file gamemode\core\libs\sh_character.lua
+- incoming file_sends_network_message -> file gamemode\core\libs\sh_character.lua
+- incoming file_sends_network_message -> file gamemode\core\libs\sv_networking.lua
+- incoming file_sends_network_message -> file gamemode\core\libs\sv_networking.lua
+- incoming file_sends_network_message -> file gamemode\core\libs\sv_networking.lua
+- incoming file_sends_network_message -> file gamemode\core\meta\sh_character.lua
+- incoming file_sends_network_message -> file plugins\traits\sh_plugin.lua
+- incoming sends_network_message -> network_operation netstream send receiver
+- incoming sends_network_message -> network_operation netstream send receiver
+- incoming sends_network_message -> network_operation netstream send receiver
+- incoming sends_network_message -> network_operation netstream send receiver
+- incoming sends_network_message -> network_operation netstream send receiver
+```
+
+## Result 4
+
+- Score: **0.5782**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:d8ff901d4316a172`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:d8ff901d4316a172",
+  "doc_type": "runtime_node",
+  "content_hash": "789bd3558c32ec9f5249eeac583fef2292e3761b541e1fad75759e50c00bbc3d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: nutVendorExit\nNode ID: netmsg:gmod_net:nutVendorExit\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 4, 'file_receives_network_message': 2, 'file_registers_network_message': 1, 'file_sends_network_message': 2, 'reads_network_payload': 13, 'receives_network_message': 2, 'registers_network_message': 1, 'sends_network_message': 2}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"nutVendorExit\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Receive nutVendorExit\n- incoming context_references_network_message -> network_context Start nutVendorExit\n- incoming context_references_network_message -> network_context Start nutVendorExit\n- incoming context_references_network_message -> network_context Receive nutVendorExit\n- incoming file_receives_network_message -> file plugins\\vendor\\cl_networking.lua\n- incoming file_receives_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming file_registers_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming file_sends_network_message -> file plugins\\vendor\\derma\\cl_vendor.lua\n- incoming file_sends_network_message -> file plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua\n- incoming reads_network_payload -> network_payload_operation read ReadUInt nutVendorExit\n- incoming reads_network_payload -> network_payload_operation read ReadBool nutVendorExit\n- incoming reads_network_payload -> network_payload_operation read ReadUInt nutVendorExit",
+  "metadata": {
+    "degree": 27,
+    "file": null,
+    "in_degree": 27,
+    "label": "nutVendorExit",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:nutVendorExit",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 27
+}
+```
+
+### Text
+
+```text
+Runtime topology node: nutVendorExit
+Node ID: netmsg:gmod_net:nutVendorExit
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 4, 'file_receives_network_message': 2, 'file_registers_network_message': 1, 'file_sends_network_message': 2, 'reads_network_payload': 13, 'receives_network_message': 2, 'registers_network_message': 1, 'sends_network_message': 2}
+Selected properties: {"graph_layers": ["network"], "label": "nutVendorExit", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Receive nutVendorExit
+- incoming context_references_network_message -> network_context Start nutVendorExit
+- incoming context_references_network_message -> network_context Start nutVendorExit
+- incoming context_references_network_message -> network_context Receive nutVendorExit
+- incoming file_receives_network_message -> file plugins\vendor\cl_networking.lua
+- incoming file_receives_network_message -> file plugins\vendor\sv_networking.lua
+- incoming file_registers_network_message -> file plugins\vendor\sv_networking.lua
+- incoming file_sends_network_message -> file plugins\vendor\derma\cl_vendor.lua
+- incoming file_sends_network_message -> file plugins\vendor\entities\entities\nut_vendor\init.lua
+- incoming reads_network_payload -> network_payload_operation read ReadUInt nutVendorExit
+- incoming reads_network_payload -> network_payload_operation read ReadBool nutVendorExit
+- incoming reads_network_payload -> network_payload_operation read ReadUInt nutVendorExit
+```
+
+## Result 5
+
+- Score: **0.5754**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:0157ea5724a0dfe0`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `vendor`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:0157ea5724a0dfe0",
+  "doc_type": "runtime_node",
+  "content_hash": "f3dca0aa8f22472f15354f5cdc603c22914f736db195215bfce0efd2f09e1d45",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: vendor\nNode ID: plugin:vendor\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: vendor\nOutgoing edge counts: {'emits_event': 22, 'listens_to_event': 18, 'owns_file': 23, 'owns_timer_operation': 11, 'registers_listener': 33}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"vendor\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"vendor\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CanItemBeTransfered\n- outgoing emits_event -> hook_event CanPlayerAccessVendor\n- outgoing emits_event -> hook_event CanPlayerTradeWithVendor\n- outgoing emits_event -> hook_event CreateUsingInterface\n- outgoing emits_event -> hook_event OnCharTradeVendor\n- outgoing emits_event -> hook_event OnOpenVendorMenu\n- outgoing emits_event -> hook_event OpenVendorTradeInterface\n- outgoing emits_event -> hook_event StorageEntityRemoved\n- outgoing emits_event -> hook_event StorageInventorySet\n- outgoing emits_event -> hook_event StorageRestored\n- outgoing emits_event -> hook_event VendorClassUpdated\n- outgoing emits_event -> hook_event VendorEdited",
+  "metadata": {
+    "degree": 107,
+    "file": null,
+    "in_degree": 0,
+    "label": "vendor",
+    "node_type": "plugin",
+    "out_degree": 107,
+    "plugin": "vendor",
+    "realm": null,
+    "source_id": "plugin:vendor",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "vendor",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 107
+}
+```
+
+### Text
+
+```text
+Runtime topology node: vendor
+Node ID: plugin:vendor
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: vendor
+Outgoing edge counts: {'emits_event': 22, 'listens_to_event': 18, 'owns_file': 23, 'owns_timer_operation': 11, 'registers_listener': 33}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "vendor", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "vendor", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CanItemBeTransfered
+- outgoing emits_event -> hook_event CanPlayerAccessVendor
+- outgoing emits_event -> hook_event CanPlayerTradeWithVendor
+- outgoing emits_event -> hook_event CreateUsingInterface
+- outgoing emits_event -> hook_event OnCharTradeVendor
+- outgoing emits_event -> hook_event OnOpenVendorMenu
+- outgoing emits_event -> hook_event OpenVendorTradeInterface
+- outgoing emits_event -> hook_event StorageEntityRemoved
+- outgoing emits_event -> hook_event StorageInventorySet
+- outgoing emits_event -> hook_event StorageRestored
+- outgoing emits_event -> hook_event VendorClassUpdated
+- outgoing emits_event -> hook_event VendorEdited
+```
+
+## Result 6
+
+- Score: **0.5751**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:a98e6ee47b9d8616`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:a98e6ee47b9d8616",
+  "doc_type": "runtime_node",
+  "content_hash": "c44656ab03f87fb0732a3671e81804d62dd13929c5f937455b273d647be1d23a",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: ItemFound\nNode ID: netmsg:gmod_net:ItemFound\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 2, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'reads_network_payload': 1, 'receives_network_message': 1, 'registers_network_message': 1, 'sends_network_message': 1, 'writes_network_payload': 1}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"ItemFound\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Receive ItemFound\n- incoming context_references_network_message -> network_context Start ItemFound\n- incoming file_receives_network_message -> file plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\cl_init.lua\n- incoming file_registers_network_message -> file plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua\n- incoming file_sends_network_message -> file plugins\\lootablecontainers\\entities\\entities\\nut_loot_junk\\init.lua\n- incoming reads_network_payload -> network_payload_operation read ReadString ItemFound\n- incoming receives_network_message -> network_operation receive ItemFound\n- incoming registers_network_message -> network_operation register ItemFound\n- incoming sends_network_message -> network_operation send ItemFound\n- incoming writes_network_payload -> network_payload_operation write WriteString ItemFound",
+  "metadata": {
+    "degree": 10,
+    "file": null,
+    "in_degree": 10,
+    "label": "ItemFound",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:ItemFound",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 10
+}
+```
+
+### Text
+
+```text
+Runtime topology node: ItemFound
+Node ID: netmsg:gmod_net:ItemFound
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 2, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'reads_network_payload': 1, 'receives_network_message': 1, 'registers_network_message': 1, 'sends_network_message': 1, 'writes_network_payload': 1}
+Selected properties: {"graph_layers": ["network"], "label": "ItemFound", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Receive ItemFound
+- incoming context_references_network_message -> network_context Start ItemFound
+- incoming file_receives_network_message -> file plugins\lootablecontainers\entities\entities\nut_loot_junk\cl_init.lua
+- incoming file_registers_network_message -> file plugins\lootablecontainers\entities\entities\nut_loot_junk\init.lua
+- incoming file_sends_network_message -> file plugins\lootablecontainers\entities\entities\nut_loot_junk\init.lua
+- incoming reads_network_payload -> network_payload_operation read ReadString ItemFound
+- incoming receives_network_message -> network_operation receive ItemFound
+- incoming registers_network_message -> network_operation register ItemFound
+- incoming sends_network_message -> network_operation send ItemFound
+- incoming writes_network_payload -> network_payload_operation write WriteString ItemFound
+```
+
+## Result 7
+
+- Score: **0.5740**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:c6368b5cf9b65e83`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:c6368b5cf9b65e83",
+  "doc_type": "runtime_node",
+  "content_hash": "0d018f7c12e100a1d887fea7b008b242a4354646bb816b82f494aac6d47323e2",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: nutStorageTransfer\nNode ID: netmsg:gmod_net:nutStorageTransfer\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 2, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'reads_network_payload': 1, 'receives_network_message': 1, 'registers_network_message': 1, 'sends_network_message': 1, 'writes_network_payload': 1}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"nutStorageTransfer\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Start nutStorageTransfer\n- incoming context_references_network_message -> network_context Receive nutStorageTransfer\n- incoming file_receives_network_message -> file plugins\\storage\\sv_networking.lua\n- incoming file_registers_network_message -> file plugins\\storage\\sv_networking.lua\n- incoming file_sends_network_message -> file plugins\\storage\\sh_plugin.lua\n- incoming reads_network_payload -> network_payload_operation read ReadUInt nutStorageTransfer\n- incoming receives_network_message -> network_operation receive nutStorageTransfer\n- incoming registers_network_message -> network_operation register nutStorageTransfer\n- incoming sends_network_message -> network_operation send nutStorageTransfer\n- incoming writes_network_payload -> network_payload_operation write WriteUInt nutStorageTransfer",
+  "metadata": {
+    "degree": 10,
+    "file": null,
+    "in_degree": 10,
+    "label": "nutStorageTransfer",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:nutStorageTransfer",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 10
+}
+```
+
+### Text
+
+```text
+Runtime topology node: nutStorageTransfer
+Node ID: netmsg:gmod_net:nutStorageTransfer
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 2, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'reads_network_payload': 1, 'receives_network_message': 1, 'registers_network_message': 1, 'sends_network_message': 1, 'writes_network_payload': 1}
+Selected properties: {"graph_layers": ["network"], "label": "nutStorageTransfer", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Start nutStorageTransfer
+- incoming context_references_network_message -> network_context Receive nutStorageTransfer
+- incoming file_receives_network_message -> file plugins\storage\sv_networking.lua
+- incoming file_registers_network_message -> file plugins\storage\sv_networking.lua
+- incoming file_sends_network_message -> file plugins\storage\sh_plugin.lua
+- incoming reads_network_payload -> network_payload_operation read ReadUInt nutStorageTransfer
+- incoming receives_network_message -> network_operation receive nutStorageTransfer
+- incoming registers_network_message -> network_operation register nutStorageTransfer
+- incoming sends_network_message -> network_operation send nutStorageTransfer
+- incoming writes_network_payload -> network_payload_operation write WriteUInt nutStorageTransfer
+```
+
+## Result 8
+
+- Score: **0.5734**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:364d3b633b5779fd`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:364d3b633b5779fd",
+  "doc_type": "runtime_node",
+  "content_hash": "9985f696228437469412e57c16c9c645cc7653ef3aaca66da009f3cf3bfa88f0",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: item.player\nNode ID: netmsg:netstream:item.player\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'file_sends_network_message': 8, 'sends_network_message': 8}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"item.player\", \"props\": {\"protocol\": \"netstream\", \"resolution\": \"unresolved_symbol\"}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\item\\sh_item_functions.lua\n- incoming file_sends_network_message -> file plugins\\needs\\items\\base\\sh_dish_entitied.lua\n- incoming file_sends_network_message -> file plugins\\needs\\items\\base\\sh_food.lua\n- incoming file_sends_network_message -> file plugins\\needs\\items\\base\\sh_food.lua\n- incoming file_sends_network_message -> file plugins\\radio\\items\\sh_radio.lua\n- incoming file_sends_network_message -> file plugins\\radio\\items\\sh_sradio.lua\n- incoming file_sends_network_message -> file plugins\\writing\\items\\base\\sh_writing.lua\n- incoming file_sends_network_message -> file plugins\\writing\\items\\base\\sh_writing.lua\n- incoming sends_network_message -> network_operation netstream send item.player\n- incoming sends_network_message -> network_operation netstream send item.player\n- incoming sends_network_message -> network_operation netstream send item.player\n- incoming sends_network_message -> network_operation netstream send item.player",
+  "metadata": {
+    "degree": 16,
+    "file": null,
+    "in_degree": 16,
+    "label": "item.player",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:netstream:item.player",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 16
+}
+```
+
+### Text
+
+```text
+Runtime topology node: item.player
+Node ID: netmsg:netstream:item.player
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'file_sends_network_message': 8, 'sends_network_message': 8}
+Selected properties: {"graph_layers": ["network"], "label": "item.player", "props": {"protocol": "netstream", "resolution": "unresolved_symbol"}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming file_sends_network_message -> file gamemode\core\libs\item\sh_item_functions.lua
+- incoming file_sends_network_message -> file plugins\needs\items\base\sh_dish_entitied.lua
+- incoming file_sends_network_message -> file plugins\needs\items\base\sh_food.lua
+- incoming file_sends_network_message -> file plugins\needs\items\base\sh_food.lua
+- incoming file_sends_network_message -> file plugins\radio\items\sh_radio.lua
+- incoming file_sends_network_message -> file plugins\radio\items\sh_sradio.lua
+- incoming file_sends_network_message -> file plugins\writing\items\base\sh_writing.lua
+- incoming file_sends_network_message -> file plugins\writing\items\base\sh_writing.lua
+- incoming sends_network_message -> network_operation netstream send item.player
+- incoming sends_network_message -> network_operation netstream send item.player
+- incoming sends_network_message -> network_operation netstream send item.player
+- incoming sends_network_message -> network_operation netstream send item.player
+```
+
+## Result 9
+
+- Score: **0.5722**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:142abe12db31cd48`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:142abe12db31cd48",
+  "doc_type": "runtime_node",
+  "content_hash": "4997a3b5e7fdc942e2d82bc1a632940ed11c9584de91b2adf6c7ad0bab18a790",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: nutVendorSync\nNode ID: netmsg:gmod_net:nutVendorSync\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 1, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'reads_network_payload': 8, 'receives_network_message': 1, 'registers_network_message': 1}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"nutVendorSync\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Receive nutVendorSync\n- incoming file_receives_network_message -> file plugins\\vendor\\cl_networking.lua\n- incoming file_registers_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming reads_network_payload -> network_payload_operation read ReadEntity nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadUInt nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync\n- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync\n- incoming receives_network_message -> network_operation receive nutVendorSync",
+  "metadata": {
+    "degree": 13,
+    "file": null,
+    "in_degree": 13,
+    "label": "nutVendorSync",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:nutVendorSync",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 13
+}
+```
+
+### Text
+
+```text
+Runtime topology node: nutVendorSync
+Node ID: netmsg:gmod_net:nutVendorSync
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 1, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'reads_network_payload': 8, 'receives_network_message': 1, 'registers_network_message': 1}
+Selected properties: {"graph_layers": ["network"], "label": "nutVendorSync", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Receive nutVendorSync
+- incoming file_receives_network_message -> file plugins\vendor\cl_networking.lua
+- incoming file_registers_network_message -> file plugins\vendor\sv_networking.lua
+- incoming reads_network_payload -> network_payload_operation read ReadEntity nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadUInt nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync
+- incoming reads_network_payload -> network_payload_operation read ReadInt nutVendorSync
+- incoming receives_network_message -> network_operation receive nutVendorSync
+```
+
+## Result 10
+
+- Score: **0.5686**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:cf3eea0b39a78f9e`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:cf3eea0b39a78f9e",
+  "doc_type": "runtime_node",
+  "content_hash": "45f89d5bac918f2480a386bdc3480a11b65a5782a83012952969f64b3454bfe0",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: nutVendorEdit\nNode ID: netmsg:gmod_net:nutVendorEdit\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 3, 'file_receives_network_message': 2, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'reads_network_payload': 2, 'receives_network_message': 2, 'registers_network_message': 1, 'sends_network_message': 1, 'writes_network_payload': 22}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"nutVendorEdit\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Start nutVendorEdit\n- incoming context_references_network_message -> network_context Receive nutVendorEdit\n- incoming context_references_network_message -> network_context Receive nutVendorEdit\n- incoming file_receives_network_message -> file plugins\\vendor\\cl_networking.lua\n- incoming file_receives_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming file_registers_network_message -> file plugins\\vendor\\sv_networking.lua\n- incoming file_sends_network_message -> file plugins\\vendor\\cl_editor.lua\n- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorEdit\n- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorEdit\n- incoming receives_network_message -> network_operation receive nutVendorEdit\n- incoming receives_network_message -> network_operation receive nutVendorEdit\n- incoming registers_network_message -> network_operation register nutVendorEdit",
+  "metadata": {
+    "degree": 35,
+    "file": null,
+    "in_degree": 35,
+    "label": "nutVendorEdit",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:nutVendorEdit",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 35
+}
+```
+
+### Text
+
+```text
+Runtime topology node: nutVendorEdit
+Node ID: netmsg:gmod_net:nutVendorEdit
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 3, 'file_receives_network_message': 2, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'reads_network_payload': 2, 'receives_network_message': 2, 'registers_network_message': 1, 'sends_network_message': 1, 'writes_network_payload': 22}
+Selected properties: {"graph_layers": ["network"], "label": "nutVendorEdit", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Start nutVendorEdit
+- incoming context_references_network_message -> network_context Receive nutVendorEdit
+- incoming context_references_network_message -> network_context Receive nutVendorEdit
+- incoming file_receives_network_message -> file plugins\vendor\cl_networking.lua
+- incoming file_receives_network_message -> file plugins\vendor\sv_networking.lua
+- incoming file_registers_network_message -> file plugins\vendor\sv_networking.lua
+- incoming file_sends_network_message -> file plugins\vendor\cl_editor.lua
+- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorEdit
+- incoming reads_network_payload -> network_payload_operation read ReadString nutVendorEdit
+- incoming receives_network_message -> network_operation receive nutVendorEdit
+- incoming receives_network_message -> network_operation receive nutVendorEdit
+- incoming registers_network_message -> network_operation register nutVendorEdit
+```
+

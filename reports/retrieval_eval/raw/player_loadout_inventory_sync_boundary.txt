@@ -1,4 +1,722 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 9334.57it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `which lifecycle event should synchronize inventory UI after player loadout`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.6063**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:03a413ab22454d13`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:03a413ab22454d13",
+  "doc_type": "runtime_node",
+  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "metadata": {
+    "degree": 37,
+    "file": null,
+    "in_degree": 0,
+    "label": "inventory",
+    "node_type": "plugin",
+    "out_degree": 37,
+    "plugin": "inventory",
+    "realm": null,
+    "source_id": "plugin:inventory",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "inventory",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 37
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory
+Node ID: plugin:inventory
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: inventory
+Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CheckBothHandsAmputation
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCreateStoragePanel
+- outgoing listens_to_event -> hook_event CharacterPreSave
+- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
+- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
+- outgoing listens_to_event -> hook_event ItemTransfered
+- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
+- outgoing listens_to_event -> hook_event PlayerButtonDown
+- outgoing listens_to_event -> hook_event PlayerLoadout
+- outgoing listens_to_event -> hook_event PostPlayerLoadout
+- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+```
+
+## Result 2
+
+- Score: **0.6061**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ee582278a762107b`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ee582278a762107b",
+  "doc_type": "runtime_node",
+  "content_hash": "7177379f580abf168e2c3597798f1376d6d7ca52fcfad1bc3d18787877d5848d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory_item_storage\nNode ID: subsystem:inventory_item_storage\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"inventory_item_storage\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua:30\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:147\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:315\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua:31\n- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\\inventory\\sv_hooks.lua:123\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\inventory\\sv_hooks.lua:16\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:70\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\storage\\sv_storage.lua:149",
+  "metadata": {
+    "degree": 9,
+    "file": null,
+    "in_degree": 9,
+    "label": "inventory_item_storage",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:inventory_item_storage",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 9
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory_item_storage
+Node ID: subsystem:inventory_item_storage
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 9}
+Selected properties: {"graph_layers": ["timer"], "label": "inventory_item_storage", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:256
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\crafting\entities\entities\nut_storage_kit\init.lua:30
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:147
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:315
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\gridinv\plugins\1_1compat\sh_plugin.lua:31
+- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\inventory\sv_hooks.lua:123
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\inventory\sv_hooks.lua:16
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:70
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\storage\sv_storage.lua:149
+```
+
+## Result 3
+
+- Score: **0.6044**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:4c43cbd0e52b0078`
+- Doc type: `runtime_node`
+- Node type: `event_class`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:4c43cbd0e52b0078",
+  "doc_type": "runtime_node",
+  "content_hash": "72f3052e7603e5d2997909552579f2d7129535f09636cdf847ac4a469cccbb17",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: player_lifecycle_or_action\nNode ID: event_class:player_lifecycle_or_action\nNode type: event_class\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'classified_as': 47}\nSelected properties: {\"event_class\": \"player_lifecycle_or_action\", \"graph_layers\": [\"hook\"], \"label\": \"player_lifecycle_or_action\", \"source\": \"derived_taxonomy\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- incoming classified_as -> hook_event OnPlayerAreaChanged\n- incoming classified_as -> hook_event OnPlayerEnterSequence\n- incoming classified_as -> hook_event OnPlayerJoinClass\n- incoming classified_as -> hook_event OnPlayerJump\n- incoming classified_as -> hook_event OnPlayerLeaveSequence\n- incoming classified_as -> hook_event OnPlayerObserve\n- incoming classified_as -> hook_event OnPlayerRestricted\n- incoming classified_as -> hook_event OnPlayerUnRestricted\n- incoming classified_as -> hook_event PlayerAccessVendor\n- incoming classified_as -> hook_event PlayerAuthed\n- incoming classified_as -> hook_event PlayerBindPress\n- incoming classified_as -> hook_event PlayerButtonDown",
+  "metadata": {
+    "degree": 47,
+    "file": null,
+    "in_degree": 47,
+    "label": "player_lifecycle_or_action",
+    "node_type": "event_class",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "event_class:player_lifecycle_or_action",
+    "subsystem": null
+  },
+  "node_type": "event_class",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 47
+}
+```
+
+### Text
+
+```text
+Runtime topology node: player_lifecycle_or_action
+Node ID: event_class:player_lifecycle_or_action
+Node type: event_class
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'classified_as': 47}
+Selected properties: {"event_class": "player_lifecycle_or_action", "graph_layers": ["hook"], "label": "player_lifecycle_or_action", "source": "derived_taxonomy", "source_graph": "hook"}
+Selected neighboring relationships:
+- incoming classified_as -> hook_event OnPlayerAreaChanged
+- incoming classified_as -> hook_event OnPlayerEnterSequence
+- incoming classified_as -> hook_event OnPlayerJoinClass
+- incoming classified_as -> hook_event OnPlayerJump
+- incoming classified_as -> hook_event OnPlayerLeaveSequence
+- incoming classified_as -> hook_event OnPlayerObserve
+- incoming classified_as -> hook_event OnPlayerRestricted
+- incoming classified_as -> hook_event OnPlayerUnRestricted
+- incoming classified_as -> hook_event PlayerAccessVendor
+- incoming classified_as -> hook_event PlayerAuthed
+- incoming classified_as -> hook_event PlayerBindPress
+- incoming classified_as -> hook_event PlayerButtonDown
+```
+
+## Result 4
+
+- Score: **0.5965**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:b5b67b6f52f8aefa`
+- Doc type: `runtime_node`
+- Node type: `hook_event`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:b5b67b6f52f8aefa",
+  "doc_type": "runtime_node",
+  "content_hash": "7667abb06d3b49e674e7a0ce5ae9ab7b59d49f309629a5435a9e078692f214ee",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: PlayerLoadout\nNode ID: hook:PlayerLoadout\nNode type: hook_event\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'classified_as': 1}\nIncoming edge counts: {'emits': 2, 'listens_to': 11, 'listens_to_event': 6}\nSelected properties: {\"emitter_count\": 2, \"event\": \"PlayerLoadout\", \"event_class\": \"player_lifecycle_or_action\", \"graph_layers\": [\"hook\"], \"has_emitters\": true, \"has_listeners\": true, \"label\": \"PlayerLoadout\", \"listener_count\": 11, \"realms_emitted\": [\"server\"], \"realms_listened\": [\"server\", \"shared\"], \"return_policy\": \"maybe_returns\", \"source\": \"hook_event_graph\", \"source_artifact\": \"hook_event_listeners\", \"source_graph\": \"hook\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- outgoing classified_as -> event_class player_lifecycle_or_action\n- incoming emits -> hook_emitter emit PlayerLoadout @ gamemode\\core\\hooks\\sv_hooks.lua:219\n- incoming emits -> hook_emitter emit PlayerLoadout @ gamemode\\core\\hooks\\sv_hooks.lua:263\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\pac\\sv_parts.lua:53\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\mnhr\\sh_plugin.lua:200\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\tying\\sh_plugin.lua:42\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\armor\\sh_plugin.lua:270\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\pac\\sv_parts.lua:52\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\mnhr\\sh_plugin.lua:201\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\tying\\sh_plugin.lua:42\n- incoming listens_to -> hook_listener listen PlayerLoadout @ gamemode\\core\\hooks\\sv_hooks.lua:311\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\inventory\\sh_plugin.lua:638\n- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\\armor\\sh_plugin.lua:269",
+  "metadata": {
+    "degree": 20,
+    "file": null,
+    "in_degree": 19,
+    "label": "PlayerLoadout",
+    "node_type": "hook_event",
+    "out_degree": 1,
+    "plugin": null,
+    "realm": null,
+    "source_id": "hook:PlayerLoadout",
+    "subsystem": null
+  },
+  "node_type": "hook_event",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 20
+}
+```
+
+### Text
+
+```text
+Runtime topology node: PlayerLoadout
+Node ID: hook:PlayerLoadout
+Node type: hook_event
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'classified_as': 1}
+Incoming edge counts: {'emits': 2, 'listens_to': 11, 'listens_to_event': 6}
+Selected properties: {"emitter_count": 2, "event": "PlayerLoadout", "event_class": "player_lifecycle_or_action", "graph_layers": ["hook"], "has_emitters": true, "has_listeners": true, "label": "PlayerLoadout", "listener_count": 11, "realms_emitted": ["server"], "realms_listened": ["server", "shared"], "return_policy": "maybe_returns", "source": "hook_event_graph", "source_artifact": "hook_event_listeners", "source_graph": "hook", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- outgoing classified_as -> event_class player_lifecycle_or_action
+- incoming emits -> hook_emitter emit PlayerLoadout @ gamemode\core\hooks\sv_hooks.lua:219
+- incoming emits -> hook_emitter emit PlayerLoadout @ gamemode\core\hooks\sv_hooks.lua:263
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\pac\sv_parts.lua:53
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\mnhr\sh_plugin.lua:200
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\tying\sh_plugin.lua:42
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\armor\sh_plugin.lua:270
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\pac\sv_parts.lua:52
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\mnhr\sh_plugin.lua:201
+- incoming listens_to -> hook_listener listen PlayerLoadout @ plugins\tying\sh_plugin.lua:42
+- incoming listens_to -> hook_listener listen PlayerLoadout @ gamemode\core\hooks\sv_hooks.lua:311
+- incoming listens_to -> hook_listener liste...
+```
+
+## Result 5
+
+- Score: **0.5936**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:98d4d0eed686eeb1`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/rechargeableequipment/items/outfit/sh_flashlight.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:98d4d0eed686eeb1",
+  "doc_type": "runtime_node",
+  "content_hash": "7e5a4413149c51fe1d2fa1f92c294cae9d34782a9b38673b53c1a743e624610d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67\nNode ID: timer_op:973a511e4aeb\nNode type: timer_operation\nFile: plugins/rechargeableequipment/items/outfit/sh_flashlight.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\rechargeableequipment\\\\items\\\\outfit\\\\sh_flashlight.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\rechargeableequipment\\\\items\\\\outfit\\\\sh_flashlight.lua:67\", \"line\": 67, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem character\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua\n- incoming owns_timer_operation -> plugin rechargeableequipment",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/rechargeableequipment/items/outfit/sh_flashlight.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:973a511e4aeb",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/rechargeableequipment/items/outfit/sh_flashlight.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\rechargeableequipment\items\outfit\sh_flashlight.lua:67
+Node ID: timer_op:973a511e4aeb
+Node type: timer_operation
+File: plugins/rechargeableequipment/items/outfit/sh_flashlight.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67", "line": 67, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem character
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\rechargeableequipment\items\outfit\sh_flashlight.lua
+- incoming owns_timer_operation -> plugin rechargeableequipment
+```
+
+## Result 6
+
+- Score: **0.5923**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:131223c2f62323a4`
+- Doc type: `runtime_node`
+- Node type: `timer_class`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:131223c2f62323a4",
+  "doc_type": "runtime_node",
+  "content_hash": "8d98fb5067a0359e84093bbf9604978f625e7960a60cae928cfbe37f98b3d9f3",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: player_action_timer\nNode ID: timer_class:player_action_timer\nNode type: timer_class\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'classified_as': 102}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"player_action_timer\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\needs\\entities\\entities\\nut_waterfaucet\\init.lua:127\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\init.lua:159\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:558\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua:31\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\needs\\entities\\entities\\nut_cooking_base.lua:634\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:734\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:69\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua:33\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua:55\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\armor\\items\\base\\sh_armor_repair_kit.lua:110\n- incoming classified_as -> timer_operation player_cancelable_action_timer@entities\\entities\\nut_manhole_teleport\\init.lua:53\n- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256",
+  "metadata": {
+    "degree": 102,
+    "file": null,
+    "in_degree": 102,
+    "label": "player_action_timer",
+    "node_type": "timer_class",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "timer_class:player_action_timer",
+    "subsystem": null
+  },
+  "node_type": "timer_class",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 102
+}
+```
+
+### Text
+
+```text
+Runtime topology node: player_action_timer
+Node ID: timer_class:player_action_timer
+Node type: timer_class
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'classified_as': 102}
+Selected properties: {"graph_layers": ["timer"], "label": "player_action_timer", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\needs\entities\entities\nut_waterfaucet\init.lua:127
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\mnhr\entities\entities\nut_mnhr_service\init.lua:159
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\ragdollinteraction\interaction\sv_hooks.lua:558
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\biorezonance\entities\entities\nut_bioresonanse_gas\init.lua:31
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\needs\entities\entities\nut_cooking_base.lua:634
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:734
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\lightitems\items\electrical_appliances\sh_electric_panel.lua:69
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\healthproblems\items\peals\sh_med_surgical_kit.lua:33
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\biorezonance\entities\entities\nut_bioresonanse_teleport\init.lua:55
+- incoming classified_as -> timer_operation player_cancelable_action_timer@plugins\armor\items\base\sh_armor_repair_kit.lua:110
+- incoming classified_as -> timer_op...
+```
+
+## Result 7
+
+- Score: **0.5919**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:8a5a6770265a0254`
+- Doc type: `runtime_node`
+- Node type: `timer`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:8a5a6770265a0254",
+  "doc_type": "runtime_node",
+  "content_hash": "3033f4f6f1e0a19701a161e2cae2ea37598bf273c84802bc707df5be8981ab79",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: setCancelAction\nNode ID: timer:setCancelAction\nNode type: timer\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'references_timer': 62, 'schedules_player_action': 62}\nSelected properties: {\"dynamic_name\": false, \"graph_layers\": [\"timer\"], \"label\": \"setCancelAction\", \"name_expr\": \"setCancelAction\", \"source_graph\": \"timer\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\needs\\entities\\entities\\nut_waterfaucet\\init.lua:127\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\mnhr\\entities\\entities\\nut_mnhr_service\\init.lua:159\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:558\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_gas\\init.lua:31\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\needs\\entities\\entities\\nut_cooking_base.lua:634\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\lightitems\\entities\\entities\\nut_electric_generator\\init.lua:734\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\lightitems\\items\\electrical_appliances\\sh_electric_panel.lua:69\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\healthproblems\\items\\peals\\sh_med_surgical_kit.lua:33\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_teleport\\init.lua:55\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\armor\\items\\base\\sh_armor_repair_kit.lua:110\n- incoming references_timer -> timer_operation player_cancelable_action_timer@entities\\entities\\nut_manhole_teleport\\init.lua:53\n- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256",
+  "metadata": {
+    "degree": 124,
+    "file": null,
+    "in_degree": 124,
+    "label": "setCancelAction",
+    "node_type": "timer",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "timer:setCancelAction",
+    "subsystem": null
+  },
+  "node_type": "timer",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 124
+}
+```
+
+### Text
+
+```text
+Runtime topology node: setCancelAction
+Node ID: timer:setCancelAction
+Node type: timer
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'references_timer': 62, 'schedules_player_action': 62}
+Selected properties: {"dynamic_name": false, "graph_layers": ["timer"], "label": "setCancelAction", "name_expr": "setCancelAction", "source_graph": "timer", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\needs\entities\entities\nut_waterfaucet\init.lua:127
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\mnhr\entities\entities\nut_mnhr_service\init.lua:159
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\ragdollinteraction\interaction\sv_hooks.lua:558
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\biorezonance\entities\entities\nut_bioresonanse_gas\init.lua:31
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\needs\entities\entities\nut_cooking_base.lua:634
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\lightitems\entities\entities\nut_electric_generator\init.lua:734
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\lightitems\items\electrical_appliances\sh_electric_panel.lua:69
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\healthproblems\items\peals\sh_med_surgical_kit.lua:33
+- incoming references_timer -> timer_operation player_cancelable_action_timer@plugins\biorezonance\entities\entities\nut_bioresonanse_teleport\init.lua:55
+- incoming references_timer -> timer_o...
+```
+
+## Result 8
+
+- Score: **0.5909**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:f1b0380f60df1639`
+- Doc type: `runtime_node`
+- Node type: `hook_event`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:f1b0380f60df1639",
+  "doc_type": "runtime_node",
+  "content_hash": "a7bced7241e9bebd1ae0f62f3bb254c641153ab20fcbaa3d6241df2dbb198477",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: PlayerButtonDown\nNode ID: hook:PlayerButtonDown\nNode type: hook_event\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'classified_as': 1}\nIncoming edge counts: {'listens_to': 7, 'listens_to_event': 4}\nSelected properties: {\"emitter_count\": 0, \"event\": \"PlayerButtonDown\", \"event_class\": \"player_lifecycle_or_action\", \"graph_layers\": [\"hook\"], \"has_emitters\": false, \"has_listeners\": true, \"label\": \"PlayerButtonDown\", \"listener_count\": 7, \"realms_listened\": [\"server\", \"shared\"], \"return_policy\": \"maybe_returns\", \"source\": \"hook_event_graph\", \"source_artifact\": \"hook_event_listeners\", \"source_graph\": \"hook\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- outgoing classified_as -> event_class player_lifecycle_or_action\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\\gadgets\\sv_hooks.lua:67\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ entities\\entities\\sb_advanced_nextbot_base\\playercontrol.lua:77\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\\gadgets\\sv_hooks.lua:66\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\\inventory\\sv_hooks.lua:3\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\\healthproblems\\sv_hooks.lua:1063\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\\healthproblems\\sv_hooks.lua:1062\n- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\\inventory\\sv_hooks.lua:2\n- incoming listens_to_event -> hook_owner SBAdvancedNextBotControl\n- incoming listens_to_event -> plugin gadgets\n- incoming listens_to_event -> plugin healthproblems\n- incoming listens_to_event -> plugin inventory",
+  "metadata": {
+    "degree": 12,
+    "file": null,
+    "in_degree": 11,
+    "label": "PlayerButtonDown",
+    "node_type": "hook_event",
+    "out_degree": 1,
+    "plugin": null,
+    "realm": null,
+    "source_id": "hook:PlayerButtonDown",
+    "subsystem": null
+  },
+  "node_type": "hook_event",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 12
+}
+```
+
+### Text
+
+```text
+Runtime topology node: PlayerButtonDown
+Node ID: hook:PlayerButtonDown
+Node type: hook_event
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'classified_as': 1}
+Incoming edge counts: {'listens_to': 7, 'listens_to_event': 4}
+Selected properties: {"emitter_count": 0, "event": "PlayerButtonDown", "event_class": "player_lifecycle_or_action", "graph_layers": ["hook"], "has_emitters": false, "has_listeners": true, "label": "PlayerButtonDown", "listener_count": 7, "realms_listened": ["server", "shared"], "return_policy": "maybe_returns", "source": "hook_event_graph", "source_artifact": "hook_event_listeners", "source_graph": "hook", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- outgoing classified_as -> event_class player_lifecycle_or_action
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\gadgets\sv_hooks.lua:67
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ entities\entities\sb_advanced_nextbot_base\playercontrol.lua:77
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\gadgets\sv_hooks.lua:66
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\inventory\sv_hooks.lua:3
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\healthproblems\sv_hooks.lua:1063
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\healthproblems\sv_hooks.lua:1062
+- incoming listens_to -> hook_listener listen PlayerButtonDown @ plugins\inventory\sv_hooks.lua:2
+- incoming listens_to_event -> hook_owner SBAdvancedNextBotControl
+- incoming listens_to_event -> plugin gadgets
+- incoming listens_to_event -> plugin healthproblems
+- incoming listens_to_event -> plugin inventory
+```
+
+## Result 9
+
+- Score: **0.5905**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ed341970b1b65878`
+- Doc type: `runtime_node`
+- Node type: `timer_class`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ed341970b1b65878",
+  "doc_type": "runtime_node",
+  "content_hash": "95797dc60d071649efd2d8d40c86f843a59e272c26fe78d1f402645e0cfe6eb5",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: timer_lifecycle_operation\nNode ID: timer_class:timer_lifecycle_operation\nNode type: timer_class\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'classified_as': 53}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"timer_lifecycle_operation\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming classified_as -> timer_operation timer_remove@entities\\entities\\sb_advanced_nextbot_empire_base.lua:505\n- incoming classified_as -> timer_operation timer_remove@plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:473\n- incoming classified_as -> timer_operation timer_remove@plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:516\n- incoming classified_as -> timer_operation timer_remove@entities\\entities\\sb_advanced_nextbot_terminator_hunter\\shared.lua:1276\n- incoming classified_as -> timer_operation timer_remove@plugins\\mining\\entities\\entities\\nut_ihnolit_orevein.lua:33\n- incoming classified_as -> timer_operation timer_remove@schema\\libs\\sh_timer.lua:23\n- incoming classified_as -> timer_operation timer_remove@entities\\entities\\nut_flesh\\init.lua:69\n- incoming classified_as -> timer_operation timer_remove@gamemode\\core\\util\\sv_action.lua:31\n- incoming classified_as -> timer_operation timer_remove@plugins\\biorezonance\\entities\\entities\\nut_bioresonanse_ihnolite\\init.lua:40\n- incoming classified_as -> timer_operation timer_remove@plugins\\hacking\\sh_plugin.lua:574\n- incoming classified_as -> timer_operation timer_remove@entities\\entities\\sb_advanced_nextbot_terminator_hunter\\motionoverrides.lua:752\n- incoming classified_as -> timer_operation timer_remove@plugins\\snowy_components\\sv_meta.lua:49",
+  "metadata": {
+    "degree": 53,
+    "file": null,
+    "in_degree": 53,
+    "label": "timer_lifecycle_operation",
+    "node_type": "timer_class",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "timer_class:timer_lifecycle_operation",
+    "subsystem": null
+  },
+  "node_type": "timer_class",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 53
+}
+```
+
+### Text
+
+```text
+Runtime topology node: timer_lifecycle_operation
+Node ID: timer_class:timer_lifecycle_operation
+Node type: timer_class
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'classified_as': 53}
+Selected properties: {"graph_layers": ["timer"], "label": "timer_lifecycle_operation", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming classified_as -> timer_operation timer_remove@entities\entities\sb_advanced_nextbot_empire_base.lua:505
+- incoming classified_as -> timer_operation timer_remove@plugins\ragdollinteraction\interaction\sv_hooks.lua:473
+- incoming classified_as -> timer_operation timer_remove@plugins\ragdollinteraction\interaction\sv_hooks.lua:516
+- incoming classified_as -> timer_operation timer_remove@entities\entities\sb_advanced_nextbot_terminator_hunter\shared.lua:1276
+- incoming classified_as -> timer_operation timer_remove@plugins\mining\entities\entities\nut_ihnolit_orevein.lua:33
+- incoming classified_as -> timer_operation timer_remove@schema\libs\sh_timer.lua:23
+- incoming classified_as -> timer_operation timer_remove@entities\entities\nut_flesh\init.lua:69
+- incoming classified_as -> timer_operation timer_remove@gamemode\core\util\sv_action.lua:31
+- incoming classified_as -> timer_operation timer_remove@plugins\biorezonance\entities\entities\nut_bioresonanse_ihnolite\init.lua:40
+- incoming classified_as -> timer_operation timer_remove@plugins\hacking\sh_plugin.lua:574
+- incoming classified_as -> timer_operation timer_remove@entities\entities\sb_advanced_nextbot_terminator_hunter\motionoverrides.lua:752
+- incoming classified_as -> timer_operation timer_remove@plugins\snowy_components\sv_meta.lua:49
+```
+
+## Result 10
+
+- Score: **0.5900**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:534b8c75877ff032`
+- Doc type: `runtime_node`
+- Node type: `event_class`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:534b8c75877ff032",
+  "doc_type": "runtime_node",
+  "content_hash": "88ddaa871eb84102c89b5e4bfa87dba3d4f808a135af1202ea93916e19f93053",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: framework_lifecycle\nNode ID: event_class:framework_lifecycle\nNode type: event_class\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'classified_as': 19}\nSelected properties: {\"event_class\": \"framework_lifecycle\", \"graph_layers\": [\"hook\"], \"label\": \"framework_lifecycle\", \"source\": \"derived_taxonomy\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- incoming classified_as -> hook_event CharacterLoaded\n- incoming classified_as -> hook_event CharacterPreSave\n- incoming classified_as -> hook_event DatabaseConnected\n- incoming classified_as -> hook_event InitializedConfig\n- incoming classified_as -> hook_event InitializedItems\n- incoming classified_as -> hook_event InitializedPlugins\n- incoming classified_as -> hook_event InitializedSchema\n- incoming classified_as -> hook_event LoadData\n- incoming classified_as -> hook_event NutScriptLoaded\n- incoming classified_as -> hook_event PersistenceLoad\n- incoming classified_as -> hook_event PersistenceSave\n- incoming classified_as -> hook_event PlayerInitialSpawn",
+  "metadata": {
+    "degree": 19,
+    "file": null,
+    "in_degree": 19,
+    "label": "framework_lifecycle",
+    "node_type": "event_class",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "event_class:framework_lifecycle",
+    "subsystem": null
+  },
+  "node_type": "event_class",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 19
+}
+```
+
+### Text
+
+```text
+Runtime topology node: framework_lifecycle
+Node ID: event_class:framework_lifecycle
+Node type: event_class
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'classified_as': 19}
+Selected properties: {"event_class": "framework_lifecycle", "graph_layers": ["hook"], "label": "framework_lifecycle", "source": "derived_taxonomy", "source_graph": "hook"}
+Selected neighboring relationships:
+- incoming classified_as -> hook_event CharacterLoaded
+- incoming classified_as -> hook_event CharacterPreSave
+- incoming classified_as -> hook_event DatabaseConnected
+- incoming classified_as -> hook_event InitializedConfig
+- incoming classified_as -> hook_event InitializedItems
+- incoming classified_as -> hook_event InitializedPlugins
+- incoming classified_as -> hook_event InitializedSchema
+- incoming classified_as -> hook_event LoadData
+- incoming classified_as -> hook_event NutScriptLoaded
+- incoming classified_as -> hook_event PersistenceLoad
+- incoming classified_as -> hook_event PersistenceSave
+- incoming classified_as -> hook_event PlayerInitialSpawn
+```
+

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2026-05-29T01:23:35",
+    "generated_at": "2026-05-29T01:39:41",
     "queries_file": "config\\retrieval_queries.yaml",
     "results_file": null,
     "workspace": "E:\\signalis_ai",
@@ -9,8 +9,8 @@
   },
   "summary": {
     "total": 25,
-    "passed": 0,
-    "average_score": 0.0
+    "passed": 19,
+    "average_score": 0.7384942279942279
   },
   "scores": [
     {
@@ -26,13 +26,13 @@
             "gridinv",
             "multichar"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "gridinv",
             "multichar"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -40,13 +40,13 @@
             "gridinv",
             "multichar"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "gridinv",
             "multichar"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -55,14 +55,15 @@
             "PlayerLoadout",
             "PostPlayerLoadout"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "CharacterLoaded",
-            "PlayerLoadedChar",
             "PlayerLoadout",
             "PostPlayerLoadout"
           ],
-          "score": 0.0
+          "missing": [
+            "PlayerLoadedChar"
+          ],
+          "score": 0.75
         },
         "network_messages": {
           "expected": [
@@ -84,17 +85,18 @@
             "plugins/inventory/cl_hooks.lua",
             "plugins/multichar/sv_networking.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/inventory/sh_plugin.lua",
-            "plugins/inventory/cl_hooks.lua",
+            "plugins/inventory/cl_hooks.lua"
+          ],
+          "missing": [
             "plugins/multichar/sv_networking.lua"
           ],
-          "score": 0.0
+          "score": 0.6666666666666666
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.7424242424242423,
+      "passed": true
     },
     {
       "id": "vendor_price_stale_after_purchase",
@@ -109,13 +111,14 @@
             "inventory",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "vendor",
-            "inventory",
+            "inventory"
+          ],
+          "missing": [
             "gridinv"
           ],
-          "score": 0.0
+          "score": 0.6666666666666666
         },
         "plugins": {
           "expected": [
@@ -123,13 +126,14 @@
             "inventory",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "vendor",
-            "inventory",
+            "inventory"
+          ],
+          "missing": [
             "gridinv"
           ],
-          "score": 0.0
+          "score": 0.6666666666666666
         },
         "hooks": {
           "expected": [
@@ -138,14 +142,15 @@
             "VendorOpened",
             "CanPlayerTradeWithVendor"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "VendorItemStockUpdated",
             "VendorMoneyUpdated",
-            "VendorOpened",
             "CanPlayerTradeWithVendor"
           ],
-          "score": 0.0
+          "missing": [
+            "VendorOpened"
+          ],
+          "score": 0.75
         },
         "network_messages": {
           "expected": [
@@ -153,13 +158,14 @@
             "nutVendorOpen",
             "inventorySetPanelStatus"
           ],
-          "matched": [],
+          "matched": [
+            "nutVendorTrade"
+          ],
           "missing": [
-            "nutVendorTrade",
             "nutVendorOpen",
             "inventorySetPanelStatus"
           ],
-          "score": 0.0
+          "score": 0.3333333333333333
         },
         "files": {
           "expected": [
@@ -168,18 +174,19 @@
             "plugins/vendor/sv_hooks.lua",
             "plugins/inventory/cl_hooks.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/vendor/cl_networking.lua",
-            "plugins/vendor/derma/cl_vendor.lua",
+            "plugins/vendor/derma/cl_vendor.lua"
+          ],
+          "missing": [
             "plugins/vendor/sv_hooks.lua",
             "plugins/inventory/cl_hooks.lua"
           ],
-          "score": 0.0
+          "score": 0.5
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.6060606060606061,
+      "passed": true
     },
     {
       "id": "storage_refresh_clears_vendor_metadata",
@@ -195,14 +202,14 @@
             "vendor",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "storage",
             "inventory",
             "vendor",
             "gridinv"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -211,14 +218,14 @@
             "vendor",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "storage",
             "inventory",
             "vendor",
             "gridinv"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -243,14 +250,15 @@
             "nutTransferItem",
             "inventorySetPanelStatus"
           ],
-          "matched": [],
+          "matched": [
+            "storageInventory"
+          ],
           "missing": [
-            "storageInventory",
             "nutStorageOpen",
             "nutTransferItem",
             "inventorySetPanelStatus"
           ],
-          "score": 0.0
+          "score": 0.25
         },
         "files": {
           "expected": [
@@ -269,7 +277,7 @@
           "score": 0.0
         }
       },
-      "overall": 0.0,
+      "overall": 0.5909090909090909,
       "passed": false
     },
     {
@@ -284,24 +292,26 @@
             "inventory",
             "multichar"
           ],
-          "matched": [],
+          "matched": [
+            "inventory"
+          ],
           "missing": [
-            "inventory",
             "multichar"
           ],
-          "score": 0.0
+          "score": 0.5
         },
         "plugins": {
           "expected": [
             "inventory",
             "multichar"
           ],
-          "matched": [],
+          "matched": [
+            "inventory"
+          ],
           "missing": [
-            "inventory",
             "multichar"
           ],
-          "score": 0.0
+          "score": 0.5
         },
         "hooks": {
           "expected": [
@@ -309,13 +319,14 @@
             "PlayerLoadout",
             "PostPlayerLoadout"
           ],
-          "matched": [],
-          "missing": [
-            "PlayerLoadedChar",
+          "matched": [
             "PlayerLoadout",
             "PostPlayerLoadout"
           ],
-          "score": 0.0
+          "missing": [
+            "PlayerLoadedChar"
+          ],
+          "score": 0.6666666666666666
         },
         "network_messages": {
           "expected": [
@@ -337,16 +348,17 @@
             "plugins/inventory/sh_plugin.lua",
             "plugins/multichar/sv_networking.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "gamemode/core/hooks/sv_hooks.lua",
-            "plugins/inventory/sh_plugin.lua",
+            "plugins/inventory/sh_plugin.lua"
+          ],
+          "missing": [
             "plugins/multichar/sv_networking.lua"
           ],
-          "score": 0.0
+          "score": 0.6666666666666666
         }
       },
-      "overall": 0.0,
+      "overall": 0.45454545454545453,
       "passed": false
     },
     {
@@ -362,13 +374,13 @@
             "gridinv",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "gridinv",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -376,23 +388,23 @@
             "gridinv",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "gridinv",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "network_messages": {
           "expected": [
             "inventorySetPanelStatus"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventorySetPanelStatus"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -400,17 +412,18 @@
             "plugins/inventory/cl_hooks.lua",
             "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/inventory/sv_hooks.lua",
-            "plugins/inventory/cl_hooks.lua",
+            "plugins/inventory/cl_hooks.lua"
+          ],
+          "missing": [
             "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua"
           ],
-          "score": 0.0
+          "score": 0.6666666666666666
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.9629629629629629,
+      "passed": true
     },
     {
       "id": "nut_inventory_init_payload",
@@ -423,21 +436,21 @@
           "expected": [
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "network_messages": {
           "expected": [
@@ -446,14 +459,14 @@
             "nutInventoryRemove",
             "nutInventoryDelete"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "nutInventoryInit",
             "nutInventoryAdd",
             "nutInventoryRemove",
             "nutInventoryDelete"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -461,17 +474,17 @@
             "gamemode/core/meta/inventory/cl_base_inventory.lua",
             "gamemode/core/meta/inventory/sv_base_inventory.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "gamemode/core/libs/item/cl_networking.lua",
             "gamemode/core/meta/inventory/cl_base_inventory.lua",
             "gamemode/core/meta/inventory/sv_base_inventory.lua"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 1.0,
+      "passed": true
     },
     {
       "id": "gridinv_transfer_contract",
@@ -485,24 +498,24 @@
             "gridinv",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "gridinv",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "gridinv",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "gridinv",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -510,23 +523,23 @@
             "HandleItemTransferRequest",
             "ItemTransfered"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "CanItemBeTransfered",
             "HandleItemTransferRequest",
             "ItemTransfered"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "network_messages": {
           "expected": [
             "nutTransferItem"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "nutTransferItem"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -534,17 +547,18 @@
             "plugins/gridinv/sv_access_rules.lua",
             "plugins/inventory/sv_hooks.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/gridinv/sv_transfer.lua",
-            "plugins/gridinv/sv_access_rules.lua",
             "plugins/inventory/sv_hooks.lua"
           ],
-          "score": 0.0
+          "missing": [
+            "plugins/gridinv/sv_access_rules.lua"
+          ],
+          "score": 0.6666666666666666
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.9696969696969696,
+      "passed": true
     },
     {
       "id": "storage_open_sync_contract",
@@ -559,13 +573,13 @@
             "gridinv",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "storage",
             "gridinv",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -573,23 +587,23 @@
             "gridinv",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "storage",
             "gridinv",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
             "StorageOpen"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "StorageOpen"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "network_messages": {
           "expected": [
@@ -597,13 +611,14 @@
             "storageInventory",
             "inventorySetPanelStatus"
           ],
-          "matched": [],
-          "missing": [
-            "nutStorageOpen",
+          "matched": [
             "storageInventory",
             "inventorySetPanelStatus"
           ],
-          "score": 0.0
+          "missing": [
+            "nutStorageOpen"
+          ],
+          "score": 0.6666666666666666
         },
         "files": {
           "expected": [
@@ -611,17 +626,18 @@
             "plugins/storage/sv_networking.lua",
             "plugins/gridinv/plugins/gridstorage/sh_plugin.lua"
           ],
-          "matched": [],
-          "missing": [
-            "plugins/storage/cl_networking.lua",
-            "plugins/storage/sv_networking.lua",
+          "matched": [
             "plugins/gridinv/plugins/gridstorage/sh_plugin.lua"
           ],
-          "score": 0.0
+          "missing": [
+            "plugins/storage/cl_networking.lua",
+            "plugins/storage/sv_networking.lua"
+          ],
+          "score": 0.3333333333333333
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.8787878787878789,
+      "passed": true
     },
     {
       "id": "save_load_inventory_storage_vendor",
@@ -636,13 +652,13 @@
             "vendor",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "storage",
             "vendor",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -650,13 +666,13 @@
             "vendor",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "storage",
             "vendor",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -665,14 +681,15 @@
             "PostLoadData",
             "StorageRestored"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "SaveData",
             "LoadData",
-            "PostLoadData",
             "StorageRestored"
           ],
-          "score": 0.0
+          "missing": [
+            "PostLoadData"
+          ],
+          "score": 0.75
         },
         "files": {
           "expected": [
@@ -681,18 +698,18 @@
             "gamemode/core/hooks/sv_hooks.lua",
             "gamemode/core/sv_data.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/storage/sv_storage.lua",
             "plugins/vendor/sv_data.lua",
             "gamemode/core/hooks/sv_hooks.lua",
             "gamemode/core/sv_data.lua"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.9444444444444444,
+      "passed": true
     },
     {
       "id": "vendor_legacy_authority_check",
@@ -705,21 +722,21 @@
           "expected": [
             "vendor"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "vendor"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "vendor"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "vendor"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -728,14 +745,14 @@
             "CanPlayerAccessVendor",
             "CanPlayerTradeWithVendor"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "VendorOpened",
             "PlayerAccessVendor",
             "CanPlayerAccessVendor",
             "CanPlayerTradeWithVendor"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -745,19 +762,19 @@
             "plugins/vendor/derma/cl_vendor.lua",
             "plugins/vendor/entities/entities/nut_vendor/init.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/vendor/cl_networking.lua",
             "plugins/vendor/sv_networking.lua",
             "plugins/vendor/sv_hooks.lua",
             "plugins/vendor/derma/cl_vendor.lua",
             "plugins/vendor/entities/entities/nut_vendor/init.lua"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 1.0,
+      "passed": true
     },
     {
       "id": "ui_desync_client_inventory_panels",
@@ -773,14 +790,14 @@
             "vendor",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "gridinv",
             "vendor",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -789,14 +806,14 @@
             "vendor",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "gridinv",
             "vendor",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -805,14 +822,15 @@
             "DrawItemDescription",
             "ItemDataChanged"
           ],
-          "matched": [],
+          "matched": [
+            "CreateNewInventoryPanel"
+          ],
           "missing": [
-            "CreateNewInventoryPanel",
             "CreateInventoryPanel",
             "DrawItemDescription",
             "ItemDataChanged"
           ],
-          "score": 0.0
+          "score": 0.25
         },
         "network_messages": {
           "expected": [
@@ -835,18 +853,19 @@
             "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
             "plugins/vendor/derma/cl_vendor.lua"
           ],
-          "matched": [],
+          "matched": [
+            "plugins/inventory/cl_hooks.lua"
+          ],
           "missing": [
-            "plugins/inventory/cl_hooks.lua",
             "gamemode/core/meta/inventory/cl_panel_extensions.lua",
             "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
             "plugins/vendor/derma/cl_vendor.lua"
           ],
-          "score": 0.0
+          "score": 0.25
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.6136363636363636,
+      "passed": true
     },
     {
       "id": "character_lifecycle_cross_realm",
@@ -860,24 +879,24 @@
             "multichar",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "multichar",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "multichar",
             "inventory"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "multichar",
             "inventory"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -886,14 +905,15 @@
             "PlayerLoadedChar",
             "OnCharCreated"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "CharacterLoaded",
+            "PlayerLoadedChar"
+          ],
+          "missing": [
             "PrePlayerLoadedChar",
-            "PlayerLoadedChar",
             "OnCharCreated"
           ],
-          "score": 0.0
+          "score": 0.5
         },
         "network_messages": {
           "expected": [
@@ -915,17 +935,18 @@
             "plugins/multichar/cl_networking.lua",
             "plugins/multichar/sh_plugin.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/multichar/sv_networking.lua",
-            "plugins/multichar/cl_networking.lua",
             "plugins/multichar/sh_plugin.lua"
           ],
-          "score": 0.0
+          "missing": [
+            "plugins/multichar/cl_networking.lua"
+          ],
+          "score": 0.6666666666666666
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.696969696969697,
+      "passed": true
     },
     {
       "id": "pvp_fps_timer_hotspots",
@@ -942,15 +963,16 @@
             "nextbots",
             "ragdollinteraction"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "healthproblems",
             "needs",
             "lightitems",
-            "nextbots",
             "ragdollinteraction"
           ],
-          "score": 0.0
+          "missing": [
+            "nextbots"
+          ],
+          "score": 0.8
         },
         "plugins": {
           "expected": [
@@ -959,26 +981,27 @@
             "lightitems",
             "ragdollinteraction"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "healthproblems",
             "needs",
             "lightitems",
             "ragdollinteraction"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
             "Think",
             "HUDPaint"
           ],
-          "matched": [],
+          "matched": [
+            "Think"
+          ],
           "missing": [
-            "Think",
             "HUDPaint"
           ],
-          "score": 0.0
+          "score": 0.5
         },
         "files": {
           "expected": [
@@ -987,18 +1010,18 @@
             "plugins/lightitems/sv_hooks.lua",
             "plugins/ragdollinteraction/interaction/sv_hooks.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/healthproblems/sv_hooks.lua",
             "plugins/needs/sv_hooks.lua",
             "plugins/lightitems/sv_hooks.lua",
             "plugins/ragdollinteraction/interaction/sv_hooks.lua"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.8222222222222223,
+      "passed": true
     },
     {
       "id": "dynamic_light_performance",
@@ -1011,21 +1034,21 @@
           "expected": [
             "lightitems"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "lightitems"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "lightitems"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "lightitems"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -1033,17 +1056,18 @@
             "plugins/lightitems/sv_hooks.lua",
             "plugins/lightitems/cl_hooks.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/lightitems/entities/entities/nut_electric_generator/init.lua",
-            "plugins/lightitems/sv_hooks.lua",
             "plugins/lightitems/cl_hooks.lua"
           ],
-          "score": 0.0
+          "missing": [
+            "plugins/lightitems/sv_hooks.lua"
+          ],
+          "score": 0.6666666666666666
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.9523809523809524,
+      "passed": true
     },
     {
       "id": "health_status_scheduler",
@@ -1057,40 +1081,40 @@
             "healthproblems",
             "needs"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "healthproblems",
             "needs"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "healthproblems",
             "needs"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "healthproblems",
             "needs"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
             "plugins/healthproblems/sv_hooks.lua",
             "plugins/needs/sv_hooks.lua"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "plugins/healthproblems/sv_hooks.lua",
             "plugins/needs/sv_hooks.lua"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 1.0,
+      "passed": true
     },
     {
       "id": "ragdoll_inventory_interaction",
@@ -1105,13 +1129,14 @@
             "gridinv",
             "ragdollinteraction"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
-            "gridinv",
             "ragdollinteraction"
           ],
-          "score": 0.0
+          "missing": [
+            "gridinv"
+          ],
+          "score": 0.6666666666666666
         },
         "plugins": {
           "expected": [
@@ -1120,14 +1145,15 @@
             "ragdollinteraction",
             "tying"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
+            "ragdollinteraction"
+          ],
+          "missing": [
             "gridinv",
-            "ragdollinteraction",
             "tying"
           ],
-          "score": 0.0
+          "score": 0.5
         },
         "hooks": {
           "expected": [
@@ -1136,14 +1162,15 @@
             "TransferInventory",
             "CanItemBeTransfered"
           ],
-          "matched": [],
-          "missing": [
-            "DisplayInventoryNut1_1",
-            "DisplayInventoryNut1_1_beta",
+          "matched": [
             "TransferInventory",
             "CanItemBeTransfered"
           ],
-          "score": 0.0
+          "missing": [
+            "DisplayInventoryNut1_1",
+            "DisplayInventoryNut1_1_beta"
+          ],
+          "score": 0.5
         },
         "files": {
           "expected": [
@@ -1151,16 +1178,17 @@
             "plugins/ragdollinteraction/interaction/cl_hooks.lua",
             "plugins/tying/sh_charsearch.lua"
           ],
-          "matched": [],
+          "matched": [
+            "plugins/ragdollinteraction/interaction/sv_hooks.lua"
+          ],
           "missing": [
-            "plugins/ragdollinteraction/interaction/sv_hooks.lua",
             "plugins/ragdollinteraction/interaction/cl_hooks.lua",
             "plugins/tying/sh_charsearch.lua"
           ],
-          "score": 0.0
+          "score": 0.3333333333333333
         }
       },
-      "overall": 0.0,
+      "overall": 0.537037037037037,
       "passed": false
     },
     {
@@ -1175,24 +1203,24 @@
             "mining",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "mining",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
             "mining",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "mining",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -1200,29 +1228,30 @@
             "LoadData",
             "StorageEntityRemoved"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "SaveData",
             "LoadData",
             "StorageEntityRemoved"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
             "plugins/mining/entities/entities/nut_ore_smelter/init.lua",
             "plugins/storage/sv_storage.lua"
           ],
-          "matched": [],
+          "matched": [
+            "plugins/mining/entities/entities/nut_ore_smelter/init.lua"
+          ],
           "missing": [
-            "plugins/mining/entities/entities/nut_ore_smelter/init.lua",
             "plugins/storage/sv_storage.lua"
           ],
-          "score": 0.0
+          "score": 0.5
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.9444444444444444,
+      "passed": true
     },
     {
       "id": "network_receiver_without_sender",
@@ -1237,13 +1266,13 @@
             "vendor",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "vendor",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "network_messages": {
           "expected": [
@@ -1252,18 +1281,19 @@
             "nutStorageOpen",
             "nutTransferItem"
           ],
-          "matched": [],
+          "matched": [
+            "inventorySetPanelStatus"
+          ],
           "missing": [
-            "inventorySetPanelStatus",
             "nutVendorOpen",
             "nutStorageOpen",
             "nutTransferItem"
           ],
-          "score": 0.0
+          "score": 0.25
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.7,
+      "passed": true
     },
     {
       "id": "raw_net_addnetworkstring_check",
@@ -1319,13 +1349,14 @@
             "storage",
             "vendor"
           ],
-          "matched": [],
+          "matched": [
+            "inventory"
+          ],
           "missing": [
-            "inventory",
             "storage",
             "vendor"
           ],
-          "score": 0.0
+          "score": 0.3333333333333333
         },
         "hooks": {
           "expected": [
@@ -1345,16 +1376,17 @@
             "plugins/storage/sv_storage.lua",
             "plugins/vendor/cl_networking.lua"
           ],
-          "matched": [],
+          "matched": [
+            "plugins/inventory/sv_hooks.lua"
+          ],
           "missing": [
-            "plugins/inventory/sv_hooks.lua",
             "plugins/storage/sv_storage.lua",
             "plugins/vendor/cl_networking.lua"
           ],
-          "score": 0.0
+          "score": 0.3333333333333333
         }
       },
-      "overall": 0.0,
+      "overall": 0.2222222222222222,
       "passed": false
     },
     {
@@ -1371,14 +1403,14 @@
             "storage",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "vendor",
             "storage",
             "gridinv"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -1387,14 +1419,14 @@
             "storage",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "vendor",
             "storage",
             "gridinv"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -1403,18 +1435,19 @@
             "StorageOpen",
             "VendorOpened"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "CanItemBeTransfered",
+            "StorageOpen"
+          ],
+          "missing": [
             "ItemTransfered",
-            "StorageOpen",
             "VendorOpened"
           ],
-          "score": 0.0
+          "score": 0.5
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.875,
+      "passed": true
     },
     {
       "id": "player_loaded_char_side_effects",
@@ -1430,14 +1463,15 @@
             "healthproblems",
             "biorezonance"
           ],
-          "matched": [],
-          "missing": [
-            "multichar",
+          "matched": [
             "inventory",
             "healthproblems",
             "biorezonance"
           ],
-          "score": 0.0
+          "missing": [
+            "multichar"
+          ],
+          "score": 0.75
         },
         "plugins": {
           "expected": [
@@ -1447,27 +1481,28 @@
             "biorezonance",
             "armor"
           ],
-          "matched": [],
-          "missing": [
-            "multichar",
+          "matched": [
             "inventory",
             "healthproblems",
             "biorezonance",
             "armor"
           ],
-          "score": 0.0
+          "missing": [
+            "multichar"
+          ],
+          "score": 0.8
         },
         "hooks": {
           "expected": [
             "PrePlayerLoadedChar",
             "PlayerLoadedChar"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "PrePlayerLoadedChar",
             "PlayerLoadedChar"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -1482,8 +1517,8 @@
           "score": 0.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.7388888888888889,
+      "passed": true
     },
     {
       "id": "inventory_database_ownership",
@@ -1498,13 +1533,14 @@
             "gridinv",
             "multichar"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
-            "gridinv",
+            "gridinv"
+          ],
+          "missing": [
             "multichar"
           ],
-          "score": 0.0
+          "score": 0.6666666666666666
         },
         "hooks": {
           "expected": [
@@ -1512,13 +1548,14 @@
             "PlayerLoadedChar",
             "PlayerLoadout"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "CharacterPreSave",
-            "PlayerLoadedChar",
             "PlayerLoadout"
           ],
-          "score": 0.0
+          "missing": [
+            "PlayerLoadedChar"
+          ],
+          "score": 0.6666666666666666
         },
         "files": {
           "expected": [
@@ -1527,17 +1564,18 @@
             "gamemode/core/libs/character/sv_character.lua",
             "gamemode/core/hooks/sv_hooks.lua"
           ],
-          "matched": [],
+          "matched": [
+            "gamemode/core/hooks/sv_hooks.lua"
+          ],
           "missing": [
             "gamemode/core/meta/sh_character.lua",
             "gamemode/core/meta/inventory/sv_base_inventory.lua",
-            "gamemode/core/libs/character/sv_character.lua",
-            "gamemode/core/hooks/sv_hooks.lua"
+            "gamemode/core/libs/character/sv_character.lua"
           ],
-          "score": 0.0
+          "score": 0.25
         }
       },
-      "overall": 0.0,
+      "overall": 0.5972222222222222,
       "passed": false
     },
     {
@@ -1553,13 +1591,13 @@
             "vendor",
             "gridinv"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "inventory",
             "vendor",
             "gridinv"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -1568,14 +1606,15 @@
             "InventoryItemAdded",
             "InventoryItemRemoved"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "ItemDataChanged",
-            "DrawItemDescription",
             "InventoryItemAdded",
             "InventoryItemRemoved"
           ],
-          "score": 0.0
+          "missing": [
+            "DrawItemDescription"
+          ],
+          "score": 0.75
         },
         "network_messages": {
           "expected": [
@@ -1583,13 +1622,13 @@
             "nutInventoryAdd",
             "nutInventoryRemove"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "nutInventoryData",
             "nutInventoryAdd",
             "nutInventoryRemove"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "files": {
           "expected": [
@@ -1606,8 +1645,8 @@
           "score": 0.0
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.8125,
+      "passed": true
     },
     {
       "id": "context_pack_inventory_vendor_bug",
@@ -1623,14 +1662,14 @@
             "gridinv",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "vendor",
             "inventory",
             "gridinv",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "plugins": {
           "expected": [
@@ -1639,14 +1678,14 @@
             "gridinv",
             "storage"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "vendor",
             "inventory",
             "gridinv",
             "storage"
           ],
-          "score": 0.0
+          "missing": [],
+          "score": 1.0
         },
         "hooks": {
           "expected": [
@@ -1655,14 +1694,15 @@
             "ItemTransfered",
             "StorageOpen"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "VendorItemStockUpdated",
+            "ItemTransfered"
+          ],
+          "missing": [
             "ItemDataChanged",
-            "ItemTransfered",
             "StorageOpen"
           ],
-          "score": 0.0
+          "score": 0.5
         },
         "network_messages": {
           "expected": [
@@ -1671,18 +1711,19 @@
             "storageInventory",
             "nutTransferItem"
           ],
-          "matched": [],
-          "missing": [
+          "matched": [
             "nutVendorTrade",
+            "storageInventory"
+          ],
+          "missing": [
             "inventorySetPanelStatus",
-            "storageInventory",
             "nutTransferItem"
           ],
-          "score": 0.0
+          "score": 0.5
         }
       },
-      "overall": 0.0,
-      "passed": false
+      "overall": 0.8,
+      "passed": true
     }
   ]
 }

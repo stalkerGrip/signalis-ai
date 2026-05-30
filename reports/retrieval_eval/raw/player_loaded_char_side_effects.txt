@@ -1,4 +1,608 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8297.19it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `PlayerLoadedChar side effects across health inventory armor biorezonance`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.6018**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:476a106c84e5e3df`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `biorezonance`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:476a106c84e5e3df",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e735e35549ab46fc10bdbc6bcbec72f29adbfe4d4c425cef40c61ebc66ca551",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: biorezonance\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_timer_operation': 36, 'owns_file': 23, 'registers_listener': 15, 'listens_to_event': 9, 'emits_event': 6}\nHot members:\n- plugin biorezonance degree=89\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for biorezonance.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "biorezonance",
+    "source_id": "plugin:biorezonance"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "biorezonance"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: biorezonance
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_timer_operation': 36, 'owns_file': 23, 'registers_listener': 15, 'listens_to_event': 9, 'emits_event': 6}
+Hot members:
+- plugin biorezonance degree=89
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for biorezonance.
+```
+
+## Result 2
+
+- Score: **0.5679**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:e97ed7312a8a8b47`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `healthproblems`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:e97ed7312a8a8b47",
+  "doc_type": "plugin_topology",
+  "content_hash": "8cb1ccd4d5d6c7fae2947b3cdc4becfd8a516c889cae4777a46615d6dae46b87",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: healthproblems\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 72, 'registers_listener': 54, 'listens_to_event': 28, 'owns_timer_operation': 19, 'emits_event': 10}\nHot members:\n- plugin healthproblems degree=183\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for healthproblems.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "healthproblems",
+    "source_id": "plugin:healthproblems"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "healthproblems"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: healthproblems
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 72, 'registers_listener': 54, 'listens_to_event': 28, 'owns_timer_operation': 19, 'emits_event': 10}
+Hot members:
+- plugin healthproblems degree=183
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for healthproblems.
+```
+
+## Result 3
+
+- Score: **0.5637**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:9cbcefdb15ebec77`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `armor`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:9cbcefdb15ebec77",
+  "doc_type": "plugin_topology",
+  "content_hash": "789ecd0ad87a40c6dcc0bf64663d8ffe8c84af0c814d3ca34fe1959dfdd39f1f",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: armor\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_timer_operation': 9, 'registers_listener': 8, 'owns_file': 6, 'emits_event': 5, 'listens_to_event': 4}\nHot members:\n- plugin armor degree=32\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for armor.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "armor",
+    "source_id": "plugin:armor"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "armor"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: armor
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_timer_operation': 9, 'registers_listener': 8, 'owns_file': 6, 'emits_event': 5, 'listens_to_event': 4}
+Hot members:
+- plugin armor degree=32
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for armor.
+```
+
+## Result 4
+
+- Score: **0.5579**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:1a6c351d107b9033`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/biorezonance/sh_plugin.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:1a6c351d107b9033",
+  "doc_type": "runtime_node",
+  "content_hash": "88375210824325e1eb8323a0bd582eaf72ac70e0f3afbfe978b670d58bb9280b",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:372\nNode ID: timer_op:plugins/biorezonance/sh_plugin.lua:372:entity_timer_remove:RemoveTimer:261\nNode type: timer_operation\nFile: plugins/biorezonance/sh_plugin.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\biorezonance\\\\sh_plugin.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\biorezonance\\\\sh_plugin.lua:372\", \"line\": 372, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem entity_production\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\biorezonance\\sh_plugin.lua\n- incoming owns_timer_operation -> plugin biorezonance",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/biorezonance/sh_plugin.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:372",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/biorezonance/sh_plugin.lua:372:entity_timer_remove:RemoveTimer:261",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/biorezonance/sh_plugin.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\biorezonance\sh_plugin.lua:372
+Node ID: timer_op:plugins/biorezonance/sh_plugin.lua:372:entity_timer_remove:RemoveTimer:261
+Node type: timer_operation
+File: plugins/biorezonance/sh_plugin.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\biorezonance\\sh_plugin.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:372", "line": 372, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem entity_production
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\biorezonance\sh_plugin.lua
+- incoming owns_timer_operation -> plugin biorezonance
+```
+
+## Result 5
+
+- Score: **0.5553**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:a062034d24254d32`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/biorezonance/sh_plugin.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:a062034d24254d32",
+  "doc_type": "runtime_node",
+  "content_hash": "9ac16b9ac678816ef55d44fef1ceceb08268883f5f81c05b59370d08bb4305ef",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:565\nNode ID: timer_op:plugins/biorezonance/sh_plugin.lua:565:entity_timer_remove:RemoveTimer:267\nNode type: timer_operation\nFile: plugins/biorezonance/sh_plugin.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\biorezonance\\\\sh_plugin.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\biorezonance\\\\sh_plugin.lua:565\", \"line\": 565, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem entity_production\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\biorezonance\\sh_plugin.lua\n- incoming owns_timer_operation -> plugin biorezonance",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/biorezonance/sh_plugin.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:565",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/biorezonance/sh_plugin.lua:565:entity_timer_remove:RemoveTimer:267",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/biorezonance/sh_plugin.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\biorezonance\sh_plugin.lua:565
+Node ID: timer_op:plugins/biorezonance/sh_plugin.lua:565:entity_timer_remove:RemoveTimer:267
+Node type: timer_operation
+File: plugins/biorezonance/sh_plugin.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\biorezonance\\sh_plugin.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:565", "line": 565, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem entity_production
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\biorezonance\sh_plugin.lua
+- incoming owns_timer_operation -> plugin biorezonance
+```
+
+## Result 6
+
+- Score: **0.5550**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:14c3e09097c829a0`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/biorezonance/sh_plugin.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:14c3e09097c829a0",
+  "doc_type": "runtime_node",
+  "content_hash": "f944995a05547216f89371402f5d5bc88c62b213ce614d27a6051edab059a9d8",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:553\nNode ID: timer_op:plugins/biorezonance/sh_plugin.lua:553:entity_timer_remove:RemoveTimer:265\nNode type: timer_operation\nFile: plugins/biorezonance/sh_plugin.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\biorezonance\\\\sh_plugin.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\biorezonance\\\\sh_plugin.lua:553\", \"line\": 553, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem entity_production\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\biorezonance\\sh_plugin.lua\n- incoming owns_timer_operation -> plugin biorezonance",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/biorezonance/sh_plugin.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:553",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/biorezonance/sh_plugin.lua:553:entity_timer_remove:RemoveTimer:265",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/biorezonance/sh_plugin.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\biorezonance\sh_plugin.lua:553
+Node ID: timer_op:plugins/biorezonance/sh_plugin.lua:553:entity_timer_remove:RemoveTimer:265
+Node type: timer_operation
+File: plugins/biorezonance/sh_plugin.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\biorezonance\\sh_plugin.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:553", "line": 553, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem entity_production
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\biorezonance\sh_plugin.lua
+- incoming owns_timer_operation -> plugin biorezonance
+```
+
+## Result 7
+
+- Score: **0.5543**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:7b8d517f6a079534`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `biorezonance`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:7b8d517f6a079534",
+  "doc_type": "runtime_node",
+  "content_hash": "fca5beba6a8067cf2e6bc4349dbb53c66ff5f19572f6cb535233cf99b375da06",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: biorezonance\nNode ID: plugin:biorezonance\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: biorezonance\nOutgoing edge counts: {'emits_event': 6, 'listens_to_event': 9, 'owns_file': 23, 'owns_timer_operation': 36, 'registers_listener': 15}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"biorezonance\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"biorezonance\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event BiorezHealHandle\n- outgoing emits_event -> hook_event CreateUsingInterface\n- outgoing emits_event -> hook_event GetDisplayedName\n- outgoing emits_event -> hook_event ihnolitOreTimer\n- outgoing emits_event -> hook_event screamer2\n- outgoing emits_event -> hook_event useIhnolitOre\n- outgoing listens_to_event -> hook_event EntityTakeDamage\n- outgoing listens_to_event -> hook_event HUDPaint\n- outgoing listens_to_event -> hook_event LoadData\n- outgoing listens_to_event -> hook_event PrePlayerLoadedChar\n- outgoing listens_to_event -> hook_event SaveData\n- outgoing listens_to_event -> hook_event Think",
+  "metadata": {
+    "degree": 89,
+    "file": null,
+    "in_degree": 0,
+    "label": "biorezonance",
+    "node_type": "plugin",
+    "out_degree": 89,
+    "plugin": "biorezonance",
+    "realm": null,
+    "source_id": "plugin:biorezonance",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "biorezonance",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 89
+}
+```
+
+### Text
+
+```text
+Runtime topology node: biorezonance
+Node ID: plugin:biorezonance
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: biorezonance
+Outgoing edge counts: {'emits_event': 6, 'listens_to_event': 9, 'owns_file': 23, 'owns_timer_operation': 36, 'registers_listener': 15}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "biorezonance", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "biorezonance", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event BiorezHealHandle
+- outgoing emits_event -> hook_event CreateUsingInterface
+- outgoing emits_event -> hook_event GetDisplayedName
+- outgoing emits_event -> hook_event ihnolitOreTimer
+- outgoing emits_event -> hook_event screamer2
+- outgoing emits_event -> hook_event useIhnolitOre
+- outgoing listens_to_event -> hook_event EntityTakeDamage
+- outgoing listens_to_event -> hook_event HUDPaint
+- outgoing listens_to_event -> hook_event LoadData
+- outgoing listens_to_event -> hook_event PrePlayerLoadedChar
+- outgoing listens_to_event -> hook_event SaveData
+- outgoing listens_to_event -> hook_event Think
+```
+
+## Result 8
+
+- Score: **0.5542**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:52df950a10196324`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/biorezonance/sh_plugin.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:52df950a10196324",
+  "doc_type": "runtime_node",
+  "content_hash": "0a4406a1c8885af3067e8702153752129cd1ad092c32f77c334f432a9f4cbd93",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:545\nNode ID: timer_op:plugins/biorezonance/sh_plugin.lua:545:entity_timer_remove:RemoveTimer:263\nNode type: timer_operation\nFile: plugins/biorezonance/sh_plugin.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\biorezonance\\\\sh_plugin.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\biorezonance\\\\sh_plugin.lua:545\", \"line\": 545, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem entity_production\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\biorezonance\\sh_plugin.lua\n- incoming owns_timer_operation -> plugin biorezonance",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/biorezonance/sh_plugin.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:545",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/biorezonance/sh_plugin.lua:545:entity_timer_remove:RemoveTimer:263",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/biorezonance/sh_plugin.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\biorezonance\sh_plugin.lua:545
+Node ID: timer_op:plugins/biorezonance/sh_plugin.lua:545:entity_timer_remove:RemoveTimer:263
+Node type: timer_operation
+File: plugins/biorezonance/sh_plugin.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\biorezonance\\sh_plugin.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\biorezonance\\sh_plugin.lua:545", "line": 545, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem entity_production
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\biorezonance\sh_plugin.lua
+- incoming owns_timer_operation -> plugin biorezonance
+```
+
+## Result 9
+
+- Score: **0.5530**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:e24ed95d0007c4eb`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `deathscreen.lua`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:e24ed95d0007c4eb",
+  "doc_type": "plugin_topology",
+  "content_hash": "6b7bfdaf7a18dcfd48cdc0276e20ee90e90cff5284b7a0b16442fe50e1b03469",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: deathscreen.lua\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 2, 'listens_to_event': 1, 'owns_file': 1}\nHot members:\n- plugin deathscreen.lua degree=4\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for deathscreen.lua.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "deathscreen.lua",
+    "source_id": "plugin:deathscreen.lua"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "deathscreen.lua"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: deathscreen.lua
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 2, 'listens_to_event': 1, 'owns_file': 1}
+Hot members:
+- plugin deathscreen.lua degree=4
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for deathscreen.lua.
+```
+
+## Result 10
+
+- Score: **0.5509**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:3d16e10b86dbf272`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/biorezonance/items/sh_oxy_tank.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:3d16e10b86dbf272",
+  "doc_type": "runtime_node",
+  "content_hash": "7eab24924b40d5205210081426aa40a465cad163201d0e479dfbd1f37bc3325b",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\biorezonance\\items\\sh_oxy_tank.lua:113\nNode ID: timer_op:plugins/biorezonance/items/sh_oxy_tank.lua:113:entity_timer_remove:RemoveTimer:297\nNode type: timer_operation\nFile: plugins/biorezonance/items/sh_oxy_tank.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\biorezonance\\\\items\\\\sh_oxy_tank.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\biorezonance\\\\items\\\\sh_oxy_tank.lua:113\", \"line\": 113, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem entity_production\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\biorezonance\\items\\sh_oxy_tank.lua\n- incoming owns_timer_operation -> plugin biorezonance",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/biorezonance/items/sh_oxy_tank.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\biorezonance\\items\\sh_oxy_tank.lua:113",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/biorezonance/items/sh_oxy_tank.lua:113:entity_timer_remove:RemoveTimer:297",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/biorezonance/items/sh_oxy_tank.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\biorezonance\items\sh_oxy_tank.lua:113
+Node ID: timer_op:plugins/biorezonance/items/sh_oxy_tank.lua:113:entity_timer_remove:RemoveTimer:297
+Node type: timer_operation
+File: plugins/biorezonance/items/sh_oxy_tank.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\biorezonance\\items\\sh_oxy_tank.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\biorezonance\\items\\sh_oxy_tank.lua:113", "line": 113, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem entity_production
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\biorezonance\items\sh_oxy_tank.lua
+- incoming owns_timer_operation -> plugin biorezonance
+```
+

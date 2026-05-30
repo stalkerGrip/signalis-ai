@@ -1,0 +1,35 @@
+{
+  "generated_at": "2026-05-30T19:15:22",
+  "query": "vendor stale price label after purchase",
+  "intent": "RetrievalIntent(query='vendor stale price label after purchase', domains=set(), subsystems={'inventory', 'vendor'}, events=set(), node_types={'hook_event', 'file', 'plugin_summary', 'hook_listener', 'plugin', 'file_summary', 'hook_emitter'}, wants_timers=False, wants_network=False, wants_doctrine=True, expanded_terms=['file', 'file_summary', 'hook_emitter', 'hook_event', 'hook_listener', 'inventory', 'plugin', 'plugin_summary', 'vendor'])",
+  "expanded_query": "vendor stale price label after purchase",
+  "top_k": 12,
+  "collection": "signalis_semantic",
+  "report": "E:\\signalis_ai\\investigations\\generated\\vendor_stale_price_label_after_purchase.md",
+  "raw": "E:\\signalis_ai\\investigations\\generated\\vendor_stale_price_label_after_purchase.raw.txt",
+  "retrieval_result_file": "E:\\signalis_ai\\manifests\\semantic\\qdrant_query_results.md",
+  "validation_targets": {
+    "priority_files": [
+      "plugins/vendor/derma/cl_vendor.lua",
+      "plugins/vendor/cl_networking.lua",
+      "plugins/inventory/cl_hooks.lua",
+      "gamemode/core/meta/inventory/cl_base_inventory.lua",
+      "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "plugins/vendor/entities/entities/nut_vendor/shared.lua"
+    ],
+    "priority_hooks": [
+      "VendorItemPriceUpdated",
+      "VendorItemStockUpdated",
+      "VendorMoneyUpdated",
+      "CanPlayerAccessVendor",
+      "CanPlayerTradeWithVendor",
+      "CreateNewInventoryPanel",
+      "CreateInventoryPanel"
+    ],
+    "priority_network_messages": [
+      "nutVendorTrade",
+      "nutVendorExit",
+      "nutInventoryData"
+    ]
+  }
+}

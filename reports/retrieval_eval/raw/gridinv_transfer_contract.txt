@@ -1,4 +1,655 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8950.58it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `grid inventory item transfer contract and validation`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.5104**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:92b58fc930b2d171`
+- Doc type: `runtime_node`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `server`
+- File: `plugins/gridinv/sv_transfer.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:92b58fc930b2d171",
+  "doc_type": "runtime_node",
+  "content_hash": "8134f8ec93ce289cd1781646b99931dc48c9e77d06b92a104d113020fe7dd9e1",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: plugins\\gridinv\\sv_transfer.lua\nNode ID: file:plugins/gridinv/sv_transfer.lua\nNode type: file\nFile: plugins/gridinv/sv_transfer.lua\nRealm: server\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_emitter': 5, 'contains_listener': 2, 'contains_network_context': 1, 'contains_network_operation': 3, 'contains_network_payload_operation': 5, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'runs_in_realm': 3}\nIncoming edge counts: {'owns_file': 2}\nSelected properties: {\"framework_layer\": \"framework\", \"graph_layers\": [\"hook\", \"network\"], \"label\": \"plugins\\\\gridinv\\\\sv_transfer.lua\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\"]}, \"path\": \"plugins\\\\gridinv\\\\sv_transfer.lua\", \"props\": {\"path\": \"plugins\\\\gridinv\\\\sv_transfer.lua\"}, \"realm\": \"server\", \"source\": \"emitter_file\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing contains_emitter -> hook_emitter emit ItemDraggedOutOfInventory @ plugins\\gridinv\\sv_transfer.lua:36\n- outgoing contains_emitter -> hook_emitter emit CanItemBeTransfered @ plugins\\gridinv\\sv_transfer.lua:18\n- outgoing contains_emitter -> hook_emitter emit ItemCombine @ plugins\\gridinv\\sv_transfer.lua:191\n- outgoing contains_emitter -> hook_emitter emit ItemTransfered @ plugins\\gridinv\\sv_transfer.lua:203\n- outgoing contains_emitter -> hook_emitter emit HandleItemTransferRequest @ plugins\\gridinv\\sv_transfer.lua:236\n- outgoing contains_listener -> hook_listener listen HandleItemTransferRequest @ plugins\\gridinv\\sv_transfer.lua:5\n- outgoing contains_listener -> hook_listener listen HandleItemTransferRequest @ plugins\\gridinv\\sv_transfer.lua:4\n- outgoing contains_network_context -> network_context Receive nutTransferItem\n- outgoing contains_network_operation -> network_operation receive nutTransferItem\n- outgoing contains_network_operation -> network_operation register nutTransferItem\n- outgoing contains_network_operation -> network_operation netstream send itemSplitTake\n- outgoing contains_network_payload_operation -> network_payload_operation read ReadUInt nutTransferItem\n- incoming owns_file -> plugin gridinv\n- incoming owns_file -> plugin gridinv",
+  "metadata": {
+    "degree": 24,
+    "file": "plugins/gridinv/sv_transfer.lua",
+    "in_degree": 2,
+    "label": "plugins\\gridinv\\sv_transfer.lua",
+    "node_type": "file",
+    "out_degree": 22,
+    "plugin": null,
+    "realm": "server",
+    "source_id": "file:plugins/gridinv/sv_transfer.lua",
+    "subsystem": null
+  },
+  "node_type": "file",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "server",
+  "file": "plugins/gridinv/sv_transfer.lua",
+  "degree": 24
+}
+```
+
+### Text
+
+```text
+Runtime topology node: plugins\gridinv\sv_transfer.lua
+Node ID: file:plugins/gridinv/sv_transfer.lua
+Node type: file
+File: plugins/gridinv/sv_transfer.lua
+Realm: server
+Plugin/subsystem: unknown
+Outgoing edge counts: {'contains_emitter': 5, 'contains_listener': 2, 'contains_network_context': 1, 'contains_network_operation': 3, 'contains_network_payload_operation': 5, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'runs_in_realm': 3}
+Incoming edge counts: {'owns_file': 2}
+Selected properties: {"framework_layer": "framework", "graph_layers": ["hook", "network"], "label": "plugins\\gridinv\\sv_transfer.lua", "merge_conflicts": {"source_graph": ["hook", "network"]}, "path": "plugins\\gridinv\\sv_transfer.lua", "props": {"path": "plugins\\gridinv\\sv_transfer.lua"}, "realm": "server", "source": "emitter_file", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing contains_emitter -> hook_emitter emit ItemDraggedOutOfInventory @ plugins\gridinv\sv_transfer.lua:36
+- outgoing contains_emitter -> hook_emitter emit CanItemBeTransfered @ plugins\gridinv\sv_transfer.lua:18
+- outgoing contains_emitter -> hook_emitter emit ItemCombine @ plugins\gridinv\sv_transfer.lua:191
+- outgoing contains_emitter -> hook_emitter emit ItemTransfered @ plugins\gridinv\sv_transfer.lua:203
+- outgoing contains_emitter -> hook_emitter emit HandleItemTransferRequest @ plugins\gridinv\sv_transfer.lua:236
+- outgoing contains_listener -> hook_listener listen HandleItemTransferRequest @ plugins\gridinv\sv_transfer.lua:5
+- outgoing contains_listener -> hook_listener listen HandleItemTransferRequest @ plugins\gridinv\sv_transfer.lua:4
+- outgoing contains_network_context -> network_context Receive nutTransferItem
+- outgoing contains_net...
+```
+
+## Result 2
+
+- Score: **0.5052**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ee582278a762107b`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ee582278a762107b",
+  "doc_type": "runtime_node",
+  "content_hash": "7177379f580abf168e2c3597798f1376d6d7ca52fcfad1bc3d18787877d5848d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory_item_storage\nNode ID: subsystem:inventory_item_storage\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"inventory_item_storage\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua:30\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:147\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:315\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua:31\n- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\\inventory\\sv_hooks.lua:123\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\inventory\\sv_hooks.lua:16\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:70\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\storage\\sv_storage.lua:149",
+  "metadata": {
+    "degree": 9,
+    "file": null,
+    "in_degree": 9,
+    "label": "inventory_item_storage",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:inventory_item_storage",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 9
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory_item_storage
+Node ID: subsystem:inventory_item_storage
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 9}
+Selected properties: {"graph_layers": ["timer"], "label": "inventory_item_storage", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:256
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\crafting\entities\entities\nut_storage_kit\init.lua:30
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:147
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:315
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\gridinv\plugins\1_1compat\sh_plugin.lua:31
+- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\inventory\sv_hooks.lua:123
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\inventory\sv_hooks.lua:16
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:70
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\storage\sv_storage.lua:149
+```
+
+## Result 3
+
+- Score: **0.5029**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:8ec88ee030d2d6d4`
+- Doc type: `runtime_node`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `client`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:8ec88ee030d2d6d4",
+  "doc_type": "runtime_node",
+  "content_hash": "524e6eea7638a3bc1e9844178ef6dc55593886e7e9785dc065e024aefb189868",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua\nNode ID: file:plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua\nNode type: file\nFile: plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua\nRealm: client\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_emitter': 2, 'contains_network_context': 1, 'contains_network_operation': 1, 'contains_network_payload_operation': 5, 'file_sends_network_message': 1, 'runs_in_realm': 3}\nIncoming edge counts: {'owns_file': 2}\nSelected properties: {\"framework_layer\": \"framework\", \"graph_layers\": [\"hook\", \"network\"], \"label\": \"plugins\\\\gridinv\\\\plugins\\\\gridinvui\\\\derma\\\\cl_grid_inventory_panel.lua\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\"]}, \"path\": \"plugins\\\\gridinv\\\\plugins\\\\gridinvui\\\\derma\\\\cl_grid_inventory_panel.lua\", \"props\": {\"path\": \"plugins\\\\gridinv\\\\plugins\\\\gridinvui\\\\derma\\\\cl_grid_inventory_panel.lua\"}, \"realm\": \"client\", \"source\": \"emitter_file\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing contains_emitter -> hook_emitter emit OnRequestItemTransfer @ plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua:96\n- outgoing contains_emitter -> hook_emitter emit InterceptClickItemIcon @ plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua:65\n- outgoing contains_network_context -> network_context Start nutTransferItem\n- outgoing contains_network_operation -> network_operation send nutTransferItem\n- outgoing contains_network_payload_operation -> network_payload_operation write WriteUInt nutTransferItem\n- outgoing contains_network_payload_operation -> network_payload_operation write WriteUInt nutTransferItem\n- outgoing contains_network_payload_operation -> network_payload_operation write WriteUInt nutTransferItem\n- outgoing contains_network_payload_operation -> network_payload_operation write WriteType nutTransferItem\n- outgoing contains_network_payload_operation -> network_payload_operation write WriteBool nutTransferItem\n- outgoing file_sends_network_message -> network_message nutTransferItem\n- outgoing runs_in_realm -> realm client\n- outgoing runs_in_realm -> realm client\n- incoming owns_file -> plugin gridinv\n- incoming owns_file -> plugin gridinv",
+  "metadata": {
+    "degree": 15,
+    "file": "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+    "in_degree": 2,
+    "label": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua",
+    "node_type": "file",
+    "out_degree": 13,
+    "plugin": null,
+    "realm": "client",
+    "source_id": "file:plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+    "subsystem": null
+  },
+  "node_type": "file",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "client",
+  "file": "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+  "degree": 15
+}
+```
+
+### Text
+
+```text
+Runtime topology node: plugins\gridinv\plugins\gridinvui\derma\cl_grid_inventory_panel.lua
+Node ID: file:plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua
+Node type: file
+File: plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua
+Realm: client
+Plugin/subsystem: unknown
+Outgoing edge counts: {'contains_emitter': 2, 'contains_network_context': 1, 'contains_network_operation': 1, 'contains_network_payload_operation': 5, 'file_sends_network_message': 1, 'runs_in_realm': 3}
+Incoming edge counts: {'owns_file': 2}
+Selected properties: {"framework_layer": "framework", "graph_layers": ["hook", "network"], "label": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua", "merge_conflicts": {"source_graph": ["hook", "network"]}, "path": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua", "props": {"path": "plugins\\gridinv\\plugins\\gridinvui\\derma\\cl_grid_inventory_panel.lua"}, "realm": "client", "source": "emitter_file", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing contains_emitter -> hook_emitter emit OnRequestItemTransfer @ plugins\gridinv\plugins\gridinvui\derma\cl_grid_inventory_panel.lua:96
+- outgoing contains_emitter -> hook_emitter emit InterceptClickItemIcon @ plugins\gridinv\plugins\gridinvui\derma\cl_grid_inventory_panel.lua:65
+- outgoing contains_network_context -> network_context Start nutTransferItem
+- outgoing contains_network_operation -> network_operation send nutTransferItem
+- outgoing contains_network_payload_operation -> network_payload_operation write WriteUInt nutTransferItem
+- outgoing contains_network_payload_operation -> network_payload_operation write WriteUInt nutTransferItem
+- outgoing contains_network_payload_operation -> network_payload_operation w...
+```
+
+## Result 4
+
+- Score: **0.4951**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:file_topology:6cc9e15fd87f0ab3`
+- Doc type: `file_topology`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `plugins/gridinv/sv_transfer.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:file_topology:6cc9e15fd87f0ab3",
+  "doc_type": "file_topology",
+  "content_hash": "9b5c9e995aeef9d86bc04e38700ef4d6c0cab1393d1d10614e51f5a2f118bffb",
+  "embedding_dim": 768,
+  "text": "Runtime topology file summary: plugins/gridinv/sv_transfer.lua\nThis source file participates in 24 topology relationships.\nRelationship counts: {'contains_emitter': 5, 'contains_listener': 2, 'contains_network_context': 1, 'contains_network_operation': 3, 'contains_network_payload_operation': 5, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'runs_in_realm': 3, 'owns_file': 2}\nPlugin/subsystem guess: unknown\nRealm: server\nSelected relationships:\n- contains_emitter: hook_emitter emit ItemDraggedOutOfInventory @ plugins\\gridinv\\sv_transfer.lua:36\n- contains_emitter: hook_emitter emit CanItemBeTransfered @ plugins\\gridinv\\sv_transfer.lua:18\n- contains_emitter: hook_emitter emit ItemCombine @ plugins\\gridinv\\sv_transfer.lua:191\n- contains_emitter: hook_emitter emit ItemTransfered @ plugins\\gridinv\\sv_transfer.lua:203\n- contains_emitter: hook_emitter emit HandleItemTransferRequest @ plugins\\gridinv\\sv_transfer.lua:236\n- contains_listener: hook_listener listen HandleItemTransferRequest @ plugins\\gridinv\\sv_transfer.lua:5\n- contains_listener: hook_listener listen HandleItemTransferRequest @ plugins\\gridinv\\sv_transfer.lua:4\n- contains_network_context: network_context Receive nutTransferItem\n- contains_network_operation: network_operation receive nutTransferItem\n- contains_network_operation: network_operation register nutTransferItem\n- contains_network_operation: network_operation netstream send itemSplitTake\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutTransferItem\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutTransferItem\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutTransferItem\n- contains_network_payload_operation: network_payload_operation read ReadType nutTransferItem\n- contains_network_payload_operation: network_payload_operation read ReadBool nutTransferItem\n- file_receives_network_message: network_message nutTransferItem\n- file_registers_network_message: network_message nutTransferItem\n- file_sends_network_message: network_message itemSplitTake\n- runs_in_realm: realm server\n- runs_in_realm: realm server\n- runs_in_realm: realm server\n- owns_file: plugin gridinv\n- owns_file: plugin gridinv\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "metadata": {
+    "degree": 24,
+    "file": "plugins/gridinv/sv_transfer.lua",
+    "node_type": "file",
+    "source_id": "file:plugins/gridinv/sv_transfer.lua"
+  },
+  "node_type": "file",
+  "file": "plugins/gridinv/sv_transfer.lua",
+  "degree": 24
+}
+```
+
+### Text
+
+```text
+Runtime topology file summary: plugins/gridinv/sv_transfer.lua
+This source file participates in 24 topology relationships.
+Relationship counts: {'contains_emitter': 5, 'contains_listener': 2, 'contains_network_context': 1, 'contains_network_operation': 3, 'contains_network_payload_operation': 5, 'file_receives_network_message': 1, 'file_registers_network_message': 1, 'file_sends_network_message': 1, 'runs_in_realm': 3, 'owns_file': 2}
+Plugin/subsystem guess: unknown
+Realm: server
+Selected relationships:
+- contains_emitter: hook_emitter emit ItemDraggedOutOfInventory @ plugins\gridinv\sv_transfer.lua:36
+- contains_emitter: hook_emitter emit CanItemBeTransfered @ plugins\gridinv\sv_transfer.lua:18
+- contains_emitter: hook_emitter emit ItemCombine @ plugins\gridinv\sv_transfer.lua:191
+- contains_emitter: hook_emitter emit ItemTransfered @ plugins\gridinv\sv_transfer.lua:203
+- contains_emitter: hook_emitter emit HandleItemTransferRequest @ plugins\gridinv\sv_transfer.lua:236
+- contains_listener: hook_listener listen HandleItemTransferRequest @ plugins\gridinv\sv_transfer.lua:5
+- contains_listener: hook_listener listen HandleItemTransferRequest @ plugins\gridinv\sv_transfer.lua:4
+- contains_network_context: network_context Receive nutTransferItem
+- contains_network_operation: network_operation receive nutTransferItem
+- contains_network_operation: network_operation register nutTransferItem
+- contains_network_operation: network_operation netstream send itemSplitTake
+- contains_network_payload_operation: network_payload_operation read ReadUInt nutTransferItem
+- contains_network_payload_operation: network_payload_operation read ReadUInt nutTransferItem
+- contains_network_payload_operation: network_payload_operation read ReadUInt nutTransferItem
+- contains_network_payload_operati...
+```
+
+## Result 5
+
+- Score: **0.4950**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:1fac1cd88cb0a400`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:1fac1cd88cb0a400",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e26d91c75d49591cc227766eab9ff33b97e6c624d7361f5eb415b1e80db3e1b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: inventory\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}\nHot members:\n- plugin inventory degree=37\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "inventory",
+    "source_id": "plugin:inventory"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "inventory"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: inventory
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}
+Hot members:
+- plugin inventory degree=37
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.
+```
+
+## Result 6
+
+- Score: **0.4883**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:73732fbee349671d`
+- Doc type: `runtime_node`
+- Node type: `hook_emitter`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `gamemode/core/libs/sh_inventory.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:73732fbee349671d",
+  "doc_type": "runtime_node",
+  "content_hash": "b630afd659ebd99cc7aa89bf815d345933a84b3ff40bd10ec16655f21baa552a",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67\nNode ID: emitter:emitter_07985e2301e5\nNode type: hook_emitter\nFile: gamemode/core/libs/sh_inventory.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}\nIncoming edge counts: {'contains_emitter': 1}\nSelected properties: {\"call_type\": \"Run\", \"event\": \"CreateInventoryPanel\", \"file\": \"gamemode\\\\core\\\\libs\\\\sh_inventory.lua\", \"graph_layers\": [\"hook\"], \"label\": \"emit CreateInventoryPanel @ gamemode\\\\core\\\\libs\\\\sh_inventory.lua:67\", \"line\": 67, \"normalization_status\": \"resolved\", \"realm\": \"shared\", \"resolution_confidence\": \"low\", \"resolution_source\": \"literal\", \"return_policy\": \"maybe_returns\", \"source_artifact\": \"hook_event_emitters\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8\n- outgoing emits -> hook_event CreateInventoryPanel\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- incoming contains_emitter -> file gamemode\\core\\libs\\sh_inventory.lua",
+  "metadata": {
+    "degree": 8,
+    "file": "gamemode/core/libs/sh_inventory.lua",
+    "in_degree": 1,
+    "label": "emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67",
+    "node_type": "hook_emitter",
+    "out_degree": 7,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "emitter:emitter_07985e2301e5",
+    "subsystem": null
+  },
+  "node_type": "hook_emitter",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "gamemode/core/libs/sh_inventory.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: emit CreateInventoryPanel @ gamemode\core\libs\sh_inventory.lua:67
+Node ID: emitter:emitter_07985e2301e5
+Node type: hook_emitter
+File: gamemode/core/libs/sh_inventory.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}
+Incoming edge counts: {'contains_emitter': 1}
+Selected properties: {"call_type": "Run", "event": "CreateInventoryPanel", "file": "gamemode\\core\\libs\\sh_inventory.lua", "graph_layers": ["hook"], "label": "emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67", "line": 67, "normalization_status": "resolved", "realm": "shared", "resolution_confidence": "low", "resolution_source": "literal", "return_policy": "maybe_returns", "source_artifact": "hook_event_emitters", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8
+- outgoing emits -> hook_event CreateInventoryPanel
+- outgoing runs_in_realm -> realm shared
+- outgoing runs_in_realm -> realm shared
+- incoming contains_emitter -> file gamemode\core\libs\sh_inventory.lua
+```
+
+## Result 7
+
+- Score: **0.4855**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:fe4b8e82767334f7`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `gridinv`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:fe4b8e82767334f7",
+  "doc_type": "plugin_topology",
+  "content_hash": "b2e16e8df05572a7f306583489e5c9892487ba389574dc4402f9e8105d406507",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: gridinv\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 46, 'listens_to_event': 24, 'owns_file': 17, 'emits_event': 11, 'owns_timer_operation': 1}\nHot members:\n- plugin gridinv degree=99\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for gridinv.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "gridinv",
+    "source_id": "plugin:gridinv"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "gridinv"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: gridinv
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 46, 'listens_to_event': 24, 'owns_file': 17, 'emits_event': 11, 'owns_timer_operation': 1}
+Hot members:
+- plugin gridinv degree=99
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for gridinv.
+```
+
+## Result 8
+
+- Score: **0.4851**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:742b0a9c823b9587`
+- Doc type: `runtime_node`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/gridinv/items/base/sh_bags.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:742b0a9c823b9587",
+  "doc_type": "runtime_node",
+  "content_hash": "120418ebe01172358a0dc6c9b4ac2e957e14090d851b8524306a27457d967836",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: plugins\\gridinv\\items\\base\\sh_bags.lua\nNode ID: file:plugins/gridinv/items/base/sh_bags.lua\nNode type: file\nFile: plugins/gridinv/items/base/sh_bags.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_emitter': 3, 'contains_network_context': 1, 'contains_network_operation': 1, 'contains_network_payload_operation': 1, 'file_sends_network_message': 1, 'runs_in_realm': 3}\nIncoming edge counts: {'owns_file': 2}\nSelected properties: {\"framework_layer\": \"framework\", \"graph_layers\": [\"hook\", \"network\"], \"label\": \"plugins\\\\gridinv\\\\items\\\\base\\\\sh_bags.lua\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\"]}, \"path\": \"plugins\\\\gridinv\\\\items\\\\base\\\\sh_bags.lua\", \"props\": {\"path\": \"plugins\\\\gridinv\\\\items\\\\base\\\\sh_bags.lua\"}, \"realm\": \"shared\", \"source\": \"emitter_file\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing contains_emitter -> hook_emitter emit HandleItemTransferRequest @ plugins\\gridinv\\items\\base\\sh_bags.lua:110\n- outgoing contains_emitter -> hook_emitter emit SetupBagInventoryAccessRules @ plugins\\gridinv\\items\\base\\sh_bags.lua:71\n- outgoing contains_emitter -> hook_emitter emit SetupBagInventoryAccessRules @ plugins\\gridinv\\items\\base\\sh_bags.lua:60\n- outgoing contains_network_context -> network_context Start nutInventoryDelete\n- outgoing contains_network_operation -> network_operation send nutInventoryDelete\n- outgoing contains_network_payload_operation -> network_payload_operation write WriteType nutInventoryDelete\n- outgoing file_sends_network_message -> network_message nutInventoryDelete\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- incoming owns_file -> plugin gridinv\n- incoming owns_file -> plugin gridinv",
+  "metadata": {
+    "degree": 12,
+    "file": "plugins/gridinv/items/base/sh_bags.lua",
+    "in_degree": 2,
+    "label": "plugins\\gridinv\\items\\base\\sh_bags.lua",
+    "node_type": "file",
+    "out_degree": 10,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "file:plugins/gridinv/items/base/sh_bags.lua",
+    "subsystem": null
+  },
+  "node_type": "file",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/gridinv/items/base/sh_bags.lua",
+  "degree": 12
+}
+```
+
+### Text
+
+```text
+Runtime topology node: plugins\gridinv\items\base\sh_bags.lua
+Node ID: file:plugins/gridinv/items/base/sh_bags.lua
+Node type: file
+File: plugins/gridinv/items/base/sh_bags.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'contains_emitter': 3, 'contains_network_context': 1, 'contains_network_operation': 1, 'contains_network_payload_operation': 1, 'file_sends_network_message': 1, 'runs_in_realm': 3}
+Incoming edge counts: {'owns_file': 2}
+Selected properties: {"framework_layer": "framework", "graph_layers": ["hook", "network"], "label": "plugins\\gridinv\\items\\base\\sh_bags.lua", "merge_conflicts": {"source_graph": ["hook", "network"]}, "path": "plugins\\gridinv\\items\\base\\sh_bags.lua", "props": {"path": "plugins\\gridinv\\items\\base\\sh_bags.lua"}, "realm": "shared", "source": "emitter_file", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing contains_emitter -> hook_emitter emit HandleItemTransferRequest @ plugins\gridinv\items\base\sh_bags.lua:110
+- outgoing contains_emitter -> hook_emitter emit SetupBagInventoryAccessRules @ plugins\gridinv\items\base\sh_bags.lua:71
+- outgoing contains_emitter -> hook_emitter emit SetupBagInventoryAccessRules @ plugins\gridinv\items\base\sh_bags.lua:60
+- outgoing contains_network_context -> network_context Start nutInventoryDelete
+- outgoing contains_network_operation -> network_operation send nutInventoryDelete
+- outgoing contains_network_payload_operation -> network_payload_operation write WriteType nutInventoryDelete
+- outgoing file_sends_network_message -> network_message nutInventoryDelete
+- outgoing runs_in_realm -> realm shared
+- outgoing runs_in_realm -> realm shared
+- outgoing runs_in_realm -> realm shared
+- incoming owns_file -> plugin gridinv
+- incoming owns_file -> plugin gridinv
+```
+
+## Result 9
+
+- Score: **0.4824**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ef84a37699b3703b`
+- Doc type: `runtime_node`
+- Node type: `hook_event`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ef84a37699b3703b",
+  "doc_type": "runtime_node",
+  "content_hash": "602f51e0e659f8a0a95e5d67a7e8efdf21d76806abb03bcb800428facc9375cc",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: ItemTransfered\nNode ID: hook:ItemTransfered\nNode type: hook_event\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'classified_as': 1}\nIncoming edge counts: {'emits': 4, 'emits_event': 4, 'listens_to': 2, 'listens_to_event': 1}\nSelected properties: {\"emitter_count\": 4, \"event\": \"ItemTransfered\", \"event_class\": \"entity_inventory_domain\", \"graph_layers\": [\"hook\"], \"has_emitters\": true, \"has_listeners\": true, \"label\": \"ItemTransfered\", \"listener_count\": 2, \"realms_emitted\": [\"server\", \"shared\"], \"realms_listened\": [\"server\"], \"return_policy\": \"maybe_returns\", \"source\": \"hook_event_graph\", \"source_artifact\": \"hook_event_listeners\", \"source_graph\": \"hook\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- outgoing classified_as -> event_class entity_inventory_domain\n- incoming emits -> hook_emitter emit ItemTransfered @ plugins\\ragdollinteraction\\interaction\\sv_networking.lua:63\n- incoming emits -> hook_emitter emit ItemTransfered @ plugins\\inventory\\sh_plugin.lua:482\n- incoming emits -> hook_emitter emit ItemTransfered @ plugins\\storage\\sv_networking.lua:93\n- incoming emits -> hook_emitter emit ItemTransfered @ plugins\\gridinv\\sv_transfer.lua:203\n- incoming emits_event -> plugin gridinv\n- incoming emits_event -> plugin inventory\n- incoming emits_event -> plugin ragdollinteraction\n- incoming emits_event -> plugin storage\n- incoming listens_to -> hook_listener listen ItemTransfered @ plugins\\inventory\\sv_hooks.lua:41\n- incoming listens_to -> hook_listener listen ItemTransfered @ plugins\\inventory\\sv_hooks.lua:42\n- incoming listens_to_event -> plugin inventory",
+  "metadata": {
+    "degree": 12,
+    "file": null,
+    "in_degree": 11,
+    "label": "ItemTransfered",
+    "node_type": "hook_event",
+    "out_degree": 1,
+    "plugin": null,
+    "realm": null,
+    "source_id": "hook:ItemTransfered",
+    "subsystem": null
+  },
+  "node_type": "hook_event",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 12
+}
+```
+
+### Text
+
+```text
+Runtime topology node: ItemTransfered
+Node ID: hook:ItemTransfered
+Node type: hook_event
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'classified_as': 1}
+Incoming edge counts: {'emits': 4, 'emits_event': 4, 'listens_to': 2, 'listens_to_event': 1}
+Selected properties: {"emitter_count": 4, "event": "ItemTransfered", "event_class": "entity_inventory_domain", "graph_layers": ["hook"], "has_emitters": true, "has_listeners": true, "label": "ItemTransfered", "listener_count": 2, "realms_emitted": ["server", "shared"], "realms_listened": ["server"], "return_policy": "maybe_returns", "source": "hook_event_graph", "source_artifact": "hook_event_listeners", "source_graph": "hook", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- outgoing classified_as -> event_class entity_inventory_domain
+- incoming emits -> hook_emitter emit ItemTransfered @ plugins\ragdollinteraction\interaction\sv_networking.lua:63
+- incoming emits -> hook_emitter emit ItemTransfered @ plugins\inventory\sh_plugin.lua:482
+- incoming emits -> hook_emitter emit ItemTransfered @ plugins\storage\sv_networking.lua:93
+- incoming emits -> hook_emitter emit ItemTransfered @ plugins\gridinv\sv_transfer.lua:203
+- incoming emits_event -> plugin gridinv
+- incoming emits_event -> plugin inventory
+- incoming emits_event -> plugin ragdollinteraction
+- incoming emits_event -> plugin storage
+- incoming listens_to -> hook_listener listen ItemTransfered @ plugins\inventory\sv_hooks.lua:41
+- incoming listens_to -> hook_listener listen ItemTransfered @ plugins\inventory\sv_hooks.lua:42
+- incoming listens_to_event -> plugin inventory
+```
+
+## Result 10
+
+- Score: **0.4824**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:03a413ab22454d13`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:03a413ab22454d13",
+  "doc_type": "runtime_node",
+  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "metadata": {
+    "degree": 37,
+    "file": null,
+    "in_degree": 0,
+    "label": "inventory",
+    "node_type": "plugin",
+    "out_degree": 37,
+    "plugin": "inventory",
+    "realm": null,
+    "source_id": "plugin:inventory",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "inventory",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 37
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory
+Node ID: plugin:inventory
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: inventory
+Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CheckBothHandsAmputation
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCreateStoragePanel
+- outgoing listens_to_event -> hook_event CharacterPreSave
+- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
+- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
+- outgoing listens_to_event -> hook_event ItemTransfered
+- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
+- outgoing listens_to_event -> hook_event PlayerButtonDown
+- outgoing listens_to_event -> hook_event PlayerLoadout
+- outgoing listens_to_event -> hook_event PostPlayerLoadout
+- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+```
+

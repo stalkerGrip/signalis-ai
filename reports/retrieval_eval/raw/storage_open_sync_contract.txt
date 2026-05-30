@@ -1,4 +1,645 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8616.64it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `storage open network sync and inventory panel interaction`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.6121**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ee582278a762107b`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ee582278a762107b",
+  "doc_type": "runtime_node",
+  "content_hash": "7177379f580abf168e2c3597798f1376d6d7ca52fcfad1bc3d18787877d5848d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory_item_storage\nNode ID: subsystem:inventory_item_storage\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"inventory_item_storage\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua:30\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:147\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:315\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua:31\n- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\\inventory\\sv_hooks.lua:123\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\inventory\\sv_hooks.lua:16\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:70\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\storage\\sv_storage.lua:149",
+  "metadata": {
+    "degree": 9,
+    "file": null,
+    "in_degree": 9,
+    "label": "inventory_item_storage",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:inventory_item_storage",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 9
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory_item_storage
+Node ID: subsystem:inventory_item_storage
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 9}
+Selected properties: {"graph_layers": ["timer"], "label": "inventory_item_storage", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:256
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\crafting\entities\entities\nut_storage_kit\init.lua:30
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:147
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:315
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\gridinv\plugins\1_1compat\sh_plugin.lua:31
+- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\inventory\sv_hooks.lua:123
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\inventory\sv_hooks.lua:16
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:70
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\storage\sv_storage.lua:149
+```
+
+## Result 2
+
+- Score: **0.5966**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:bcbbda50a0f14bd8`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:bcbbda50a0f14bd8",
+  "doc_type": "runtime_node",
+  "content_hash": "9534390dfd1a22049e73dd7ae7cbb4e6e440ddbefc30768638b34add11e2e20f",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventorySetPanelStatus\nNode ID: netmsg:netstream:inventorySetPanelStatus\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'file_receives_network_message': 1, 'file_sends_network_message': 10, 'receives_network_message': 1, 'sends_network_message': 10}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"inventorySetPanelStatus\", \"props\": {\"protocol\": \"netstream\", \"resolution\": \"literal\"}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming file_receives_network_message -> file plugins\\inventory\\sv_hooks.lua\n- incoming file_sends_network_message -> file plugins\\cassetteplayer\\sh_plugin.lua\n- incoming file_sends_network_message -> file plugins\\gridinv\\plugins\\gridstorage\\sh_plugin.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\inventory\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\ragdollinteraction\\interaction\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\ragdollinteraction\\interaction\\cl_hooks.lua\n- incoming file_sends_network_message -> file plugins\\tying\\sh_charsearch.lua\n- incoming receives_network_message -> network_operation netstream hook inventorySetPanelStatus",
+  "metadata": {
+    "degree": 22,
+    "file": null,
+    "in_degree": 22,
+    "label": "inventorySetPanelStatus",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:netstream:inventorySetPanelStatus",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 22
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventorySetPanelStatus
+Node ID: netmsg:netstream:inventorySetPanelStatus
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'file_receives_network_message': 1, 'file_sends_network_message': 10, 'receives_network_message': 1, 'sends_network_message': 10}
+Selected properties: {"graph_layers": ["network"], "label": "inventorySetPanelStatus", "props": {"protocol": "netstream", "resolution": "literal"}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming file_receives_network_message -> file plugins\inventory\sv_hooks.lua
+- incoming file_sends_network_message -> file plugins\cassetteplayer\sh_plugin.lua
+- incoming file_sends_network_message -> file plugins\gridinv\plugins\gridstorage\sh_plugin.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\inventory\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\ragdollinteraction\interaction\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\ragdollinteraction\interaction\cl_hooks.lua
+- incoming file_sends_network_message -> file plugins\tying\sh_charsearch.lua
+- incoming receives_network_message -> network_operation netstream hook inventorySetPanelStatus
+```
+
+## Result 3
+
+- Score: **0.5848**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:1fac1cd88cb0a400`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:1fac1cd88cb0a400",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e26d91c75d49591cc227766eab9ff33b97e6c624d7361f5eb415b1e80db3e1b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: inventory\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}\nHot members:\n- plugin inventory degree=37\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "inventory",
+    "source_id": "plugin:inventory"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "inventory"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: inventory
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}
+Hot members:
+- plugin inventory degree=37
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.
+```
+
+## Result 4
+
+- Score: **0.5830**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:275c8f2239d5e3f5`
+- Doc type: `runtime_node`
+- Node type: `network_message`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:275c8f2239d5e3f5",
+  "doc_type": "runtime_node",
+  "content_hash": "c4373d9fa94050b1aae2e6cb2df38d0b1a14b3fd43e0bf41d7f8abce938ff0ab",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: syncClientTime\nNode ID: netmsg:gmod_net:syncClientTime\nNode type: network_message\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'context_references_network_message': 4, 'file_receives_network_message': 2, 'file_registers_network_message': 1, 'file_sends_network_message': 2, 'reads_network_payload': 1, 'receives_network_message': 2, 'registers_network_message': 1, 'sends_network_message': 2, 'writes_network_payload': 1}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"syncClientTime\", \"props\": {\"protocol\": \"gmod_net\", \"registered\": true}, \"source_graph\": \"network\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- incoming context_references_network_message -> network_context Start syncClientTime\n- incoming context_references_network_message -> network_context Receive syncClientTime\n- incoming context_references_network_message -> network_context Receive syncClientTime\n- incoming context_references_network_message -> network_context Start syncClientTime\n- incoming file_receives_network_message -> file gamemode\\core\\libs\\sh_date.lua\n- incoming file_receives_network_message -> file gamemode\\core\\libs\\sh_date.lua\n- incoming file_registers_network_message -> file gamemode\\core\\libs\\sh_date.lua\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sh_date.lua\n- incoming file_sends_network_message -> file gamemode\\core\\libs\\sh_date.lua\n- incoming reads_network_payload -> network_payload_operation read ReadString syncClientTime\n- incoming receives_network_message -> network_operation receive syncClientTime\n- incoming receives_network_message -> network_operation receive syncClientTime",
+  "metadata": {
+    "degree": 16,
+    "file": null,
+    "in_degree": 16,
+    "label": "syncClientTime",
+    "node_type": "network_message",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "netmsg:gmod_net:syncClientTime",
+    "subsystem": null
+  },
+  "node_type": "network_message",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 16
+}
+```
+
+### Text
+
+```text
+Runtime topology node: syncClientTime
+Node ID: netmsg:gmod_net:syncClientTime
+Node type: network_message
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'context_references_network_message': 4, 'file_receives_network_message': 2, 'file_registers_network_message': 1, 'file_sends_network_message': 2, 'reads_network_payload': 1, 'receives_network_message': 2, 'registers_network_message': 1, 'sends_network_message': 2, 'writes_network_payload': 1}
+Selected properties: {"graph_layers": ["network"], "label": "syncClientTime", "props": {"protocol": "gmod_net", "registered": true}, "source_graph": "network", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- incoming context_references_network_message -> network_context Start syncClientTime
+- incoming context_references_network_message -> network_context Receive syncClientTime
+- incoming context_references_network_message -> network_context Receive syncClientTime
+- incoming context_references_network_message -> network_context Start syncClientTime
+- incoming file_receives_network_message -> file gamemode\core\libs\sh_date.lua
+- incoming file_receives_network_message -> file gamemode\core\libs\sh_date.lua
+- incoming file_registers_network_message -> file gamemode\core\libs\sh_date.lua
+- incoming file_sends_network_message -> file gamemode\core\libs\sh_date.lua
+- incoming file_sends_network_message -> file gamemode\core\libs\sh_date.lua
+- incoming reads_network_payload -> network_payload_operation read ReadString syncClientTime
+- incoming receives_network_message -> network_operation receive syncClientTime
+- incoming receives_network_message -> network_operation receive syncClientTime
+```
+
+## Result 5
+
+- Score: **0.5800**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:eb0317c806ecef7f`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `storageinterface`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:eb0317c806ecef7f",
+  "doc_type": "plugin_topology",
+  "content_hash": "664fcf7ca6d68bf84368b8285b7c58357ac5ade30d686c7d8c4a282f524a6e47",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: storageinterface\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 2}\nHot members:\n- plugin storageinterface degree=2\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for storageinterface.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "storageinterface",
+    "source_id": "plugin:storageinterface"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "storageinterface"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: storageinterface
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 2}
+Hot members:
+- plugin storageinterface degree=2
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for storageinterface.
+```
+
+## Result 6
+
+- Score: **0.5785**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:d5af08bc94c14843`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `storage`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:d5af08bc94c14843",
+  "doc_type": "runtime_node",
+  "content_hash": "ce217c5f761d4bf0f87fe1bf2d2bc2e6a6600ef14b936a3b18bdf7ac795366a5",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: storage\nNode ID: plugin:storage\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: storage\nOutgoing edge counts: {'emits_event': 11, 'listens_to_event': 12, 'owns_file': 15, 'owns_timer_operation': 5, 'registers_listener': 24}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"storage\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"storage\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CanPlayerSpawnStorage\n- outgoing emits_event -> hook_event CanSaveStorage\n- outgoing emits_event -> hook_event CreateUsingInterface\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event StorageCanTransferItem\n- outgoing emits_event -> hook_event StorageEntityRemoved\n- outgoing emits_event -> hook_event StorageInventorySet\n- outgoing emits_event -> hook_event StorageOpen\n- outgoing emits_event -> hook_event StorageRestored\n- outgoing emits_event -> hook_event StorageUnlockPrompt\n- outgoing emits_event -> hook_event saveStorage\n- outgoing listens_to_event -> hook_event CanPlayerInteractItem",
+  "metadata": {
+    "degree": 67,
+    "file": null,
+    "in_degree": 0,
+    "label": "storage",
+    "node_type": "plugin",
+    "out_degree": 67,
+    "plugin": "storage",
+    "realm": null,
+    "source_id": "plugin:storage",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "storage",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 67
+}
+```
+
+### Text
+
+```text
+Runtime topology node: storage
+Node ID: plugin:storage
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: storage
+Outgoing edge counts: {'emits_event': 11, 'listens_to_event': 12, 'owns_file': 15, 'owns_timer_operation': 5, 'registers_listener': 24}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "storage", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "storage", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CanPlayerSpawnStorage
+- outgoing emits_event -> hook_event CanSaveStorage
+- outgoing emits_event -> hook_event CreateUsingInterface
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event StorageCanTransferItem
+- outgoing emits_event -> hook_event StorageEntityRemoved
+- outgoing emits_event -> hook_event StorageInventorySet
+- outgoing emits_event -> hook_event StorageOpen
+- outgoing emits_event -> hook_event StorageRestored
+- outgoing emits_event -> hook_event StorageUnlockPrompt
+- outgoing emits_event -> hook_event saveStorage
+- outgoing listens_to_event -> hook_event CanPlayerInteractItem
+```
+
+## Result 7
+
+- Score: **0.5759**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:03a413ab22454d13`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:03a413ab22454d13",
+  "doc_type": "runtime_node",
+  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "metadata": {
+    "degree": 37,
+    "file": null,
+    "in_degree": 0,
+    "label": "inventory",
+    "node_type": "plugin",
+    "out_degree": 37,
+    "plugin": "inventory",
+    "realm": null,
+    "source_id": "plugin:inventory",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "inventory",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 37
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory
+Node ID: plugin:inventory
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: inventory
+Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CheckBothHandsAmputation
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCreateStoragePanel
+- outgoing listens_to_event -> hook_event CharacterPreSave
+- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
+- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
+- outgoing listens_to_event -> hook_event ItemTransfered
+- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
+- outgoing listens_to_event -> hook_event PlayerButtonDown
+- outgoing listens_to_event -> hook_event PlayerLoadout
+- outgoing listens_to_event -> hook_event PostPlayerLoadout
+- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+```
+
+## Result 8
+
+- Score: **0.5755**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:4c2a7a9658609956`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `storage`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:4c2a7a9658609956",
+  "doc_type": "plugin_topology",
+  "content_hash": "977f812e1a27fa68e6b08bad91825c38617220af2c29681181e8443bffb36d9e",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: storage\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 24, 'owns_file': 15, 'listens_to_event': 12, 'emits_event': 11, 'owns_timer_operation': 5}\nHot members:\n- plugin storage degree=67\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for storage.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "storage",
+    "source_id": "plugin:storage"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "storage"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: storage
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 24, 'owns_file': 15, 'listens_to_event': 12, 'emits_event': 11, 'owns_timer_operation': 5}
+Hot members:
+- plugin storage degree=67
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for storage.
+```
+
+## Result 9
+
+- Score: **0.5745**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:file_topology:112aeba4e7693464`
+- Doc type: `file_topology`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:file_topology:112aeba4e7693464",
+  "doc_type": "file_topology",
+  "content_hash": "2fb60013ebbbd9fbc788a4644b8f252befb8d280f92ad472b9e52906226a907a",
+  "embedding_dim": 768,
+  "text": "Runtime topology file summary: gamemode/core/meta/inventory/sv_base_inventory.lua\nThis source file participates in 43 topology relationships.\nRelationship counts: {'contains_network_context': 5, 'contains_network_operation': 10, 'contains_network_payload_operation': 16, 'file_registers_network_message': 5, 'file_sends_network_message': 5, 'runs_in_realm': 1, 'owns_file': 1}\nPlugin/subsystem guess: unknown\nRealm: unknown\nSelected relationships:\n- contains_network_context: network_context Start nutInventoryAdd\n- contains_network_context: network_context Start nutInventoryData\n- contains_network_context: network_context Start nutInventoryDelete\n- contains_network_context: network_context Start nutInventoryInit\n- contains_network_context: network_context Start nutInventoryRemove\n- contains_network_operation: network_operation register nutInventoryAdd\n- contains_network_operation: network_operation register nutInventoryData\n- contains_network_operation: network_operation register nutInventoryDelete\n- contains_network_operation: network_operation register nutInventoryInit\n- contains_network_operation: network_operation register nutInventoryRemove\n- contains_network_operation: network_operation send nutInventoryAdd\n- contains_network_operation: network_operation send nutInventoryData\n- contains_network_operation: network_operation send nutInventoryDelete\n- contains_network_operation: network_operation send nutInventoryInit\n- contains_network_operation: network_operation send nutInventoryRemove\n- contains_network_payload_operation: network_payload_operation write WriteUInt nutInventoryAdd\n- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryAdd\n- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryData\n- contains_network_payload_operation: network_payload_operation write WriteString nutInventoryData\n- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryData\n- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryDelete\n- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteString nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteTable nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteUInt nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteUInt nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteString nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteTable nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteUInt nutInventoryInit\n- contains_network_payload_operation: network_payload_operation write WriteUInt nutInventoryRemove\n- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryRemove\n- file_registers_network_message: network_message nutInventoryAdd\n- file_registers_network_message: network_message nutInventoryData\n- file_registers_network_message: network_message nutInventoryDelete\n- file_registers_network_message: network_message nutInventoryInit\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "metadata": {
+    "degree": 43,
+    "file": "gamemode/core/meta/inventory/sv_base_inventory.lua",
+    "node_type": "file",
+    "source_id": "file:gamemode/core/meta/inventory/sv_base_inventory.lua"
+  },
+  "node_type": "file",
+  "file": "gamemode/core/meta/inventory/sv_base_inventory.lua",
+  "degree": 43
+}
+```
+
+### Text
+
+```text
+Runtime topology file summary: gamemode/core/meta/inventory/sv_base_inventory.lua
+This source file participates in 43 topology relationships.
+Relationship counts: {'contains_network_context': 5, 'contains_network_operation': 10, 'contains_network_payload_operation': 16, 'file_registers_network_message': 5, 'file_sends_network_message': 5, 'runs_in_realm': 1, 'owns_file': 1}
+Plugin/subsystem guess: unknown
+Realm: unknown
+Selected relationships:
+- contains_network_context: network_context Start nutInventoryAdd
+- contains_network_context: network_context Start nutInventoryData
+- contains_network_context: network_context Start nutInventoryDelete
+- contains_network_context: network_context Start nutInventoryInit
+- contains_network_context: network_context Start nutInventoryRemove
+- contains_network_operation: network_operation register nutInventoryAdd
+- contains_network_operation: network_operation register nutInventoryData
+- contains_network_operation: network_operation register nutInventoryDelete
+- contains_network_operation: network_operation register nutInventoryInit
+- contains_network_operation: network_operation register nutInventoryRemove
+- contains_network_operation: network_operation send nutInventoryAdd
+- contains_network_operation: network_operation send nutInventoryData
+- contains_network_operation: network_operation send nutInventoryDelete
+- contains_network_operation: network_operation send nutInventoryInit
+- contains_network_operation: network_operation send nutInventoryRemove
+- contains_network_payload_operation: network_payload_operation write WriteUInt nutInventoryAdd
+- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryAdd
+- contains_network_payload_operation: network_payload_operation write WriteType nutInventoryData...
+```
+
+## Result 10
+
+- Score: **0.5705**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:405427aaf0a78a32`
+- Doc type: `runtime_node`
+- Node type: `file`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:405427aaf0a78a32",
+  "doc_type": "runtime_node",
+  "content_hash": "2c7cc2444dea44f8be273fde8d7a71a669b94034d8df5af8085c2b28e701f7c6",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: plugins\\storageinterface\\derma\\cl_storage_interface.lua\nNode ID: file:plugins/storageinterface/derma/cl_storage_interface.lua\nNode type: file\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_network_operation': 12, 'file_sends_network_message': 12, 'runs_in_realm': 1}\nIncoming edge counts: {'owns_file': 1}\nSelected properties: {\"graph_layers\": [\"network\"], \"label\": \"plugins\\\\storageinterface\\\\derma\\\\cl_storage_interface.lua\", \"props\": {\"path\": \"plugins\\\\storageinterface\\\\derma\\\\cl_storage_interface.lua\"}, \"source_graph\": \"network\"}\nSelected neighboring relationships:\n- outgoing contains_network_operation -> network_operation netstream send entFreezeState\n- outgoing contains_network_operation -> network_operation netstream send entFreezeState\n- outgoing contains_network_operation -> network_operation netstream send storageChangePass\n- outgoing contains_network_operation -> network_operation netstream send storageCleanTrash\n- outgoing contains_network_operation -> network_operation netstream send storageCleanTrash\n- outgoing contains_network_operation -> network_operation netstream send storageHangLock\n- outgoing contains_network_operation -> network_operation netstream send storageInventory\n- outgoing contains_network_operation -> network_operation netstream send storageInventory\n- outgoing contains_network_operation -> network_operation netstream send storageNewDesc\n- outgoing contains_network_operation -> network_operation netstream send storageOpen\n- outgoing contains_network_operation -> network_operation netstream send storageTakeOffLock\n- outgoing contains_network_operation -> network_operation netstream send storageTakeOffLock\n- incoming owns_file -> plugin storageinterface",
+  "metadata": {
+    "degree": 26,
+    "file": null,
+    "in_degree": 1,
+    "label": "plugins\\storageinterface\\derma\\cl_storage_interface.lua",
+    "node_type": "file",
+    "out_degree": 25,
+    "plugin": null,
+    "realm": null,
+    "source_id": "file:plugins/storageinterface/derma/cl_storage_interface.lua",
+    "subsystem": null
+  },
+  "node_type": "file",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 26
+}
+```
+
+### Text
+
+```text
+Runtime topology node: plugins\storageinterface\derma\cl_storage_interface.lua
+Node ID: file:plugins/storageinterface/derma/cl_storage_interface.lua
+Node type: file
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'contains_network_operation': 12, 'file_sends_network_message': 12, 'runs_in_realm': 1}
+Incoming edge counts: {'owns_file': 1}
+Selected properties: {"graph_layers": ["network"], "label": "plugins\\storageinterface\\derma\\cl_storage_interface.lua", "props": {"path": "plugins\\storageinterface\\derma\\cl_storage_interface.lua"}, "source_graph": "network"}
+Selected neighboring relationships:
+- outgoing contains_network_operation -> network_operation netstream send entFreezeState
+- outgoing contains_network_operation -> network_operation netstream send entFreezeState
+- outgoing contains_network_operation -> network_operation netstream send storageChangePass
+- outgoing contains_network_operation -> network_operation netstream send storageCleanTrash
+- outgoing contains_network_operation -> network_operation netstream send storageCleanTrash
+- outgoing contains_network_operation -> network_operation netstream send storageHangLock
+- outgoing contains_network_operation -> network_operation netstream send storageInventory
+- outgoing contains_network_operation -> network_operation netstream send storageInventory
+- outgoing contains_network_operation -> network_operation netstream send storageNewDesc
+- outgoing contains_network_operation -> network_operation netstream send storageOpen
+- outgoing contains_network_operation -> network_operation netstream send storageTakeOffLock
+- outgoing contains_network_operation -> network_operation netstream send storageTakeOffLock
+- incoming owns_file -> plugin storageinterface
+```
+

@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-29T01:16:35`
+Generated: `2026-05-29T01:28:56`
 
 ## Workspace
 
@@ -39,6 +39,9 @@ manifests/
   semantic/
   timers/
 prompts/
+reports/
+  retrieval_eval/
+    raw/
 runtime_schemas/
 scripts/
   diagnostics/

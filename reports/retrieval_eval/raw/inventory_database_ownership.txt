@@ -1,4 +1,591 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 38486.16it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `character inventory ownership inv var database items CreateDefaultInventory`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.5464**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:1fac1cd88cb0a400`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:1fac1cd88cb0a400",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e26d91c75d49591cc227766eab9ff33b97e6c624d7361f5eb415b1e80db3e1b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: inventory\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}\nHot members:\n- plugin inventory degree=37\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "inventory",
+    "source_id": "plugin:inventory"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "inventory"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: inventory
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}
+Hot members:
+- plugin inventory degree=37
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.
+```
+
+## Result 2
+
+- Score: **0.5460**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ee582278a762107b`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ee582278a762107b",
+  "doc_type": "runtime_node",
+  "content_hash": "7177379f580abf168e2c3597798f1376d6d7ca52fcfad1bc3d18787877d5848d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory_item_storage\nNode ID: subsystem:inventory_item_storage\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"inventory_item_storage\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua:30\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:147\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:315\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua:31\n- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\\inventory\\sv_hooks.lua:123\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\inventory\\sv_hooks.lua:16\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:70\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\storage\\sv_storage.lua:149",
+  "metadata": {
+    "degree": 9,
+    "file": null,
+    "in_degree": 9,
+    "label": "inventory_item_storage",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:inventory_item_storage",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 9
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory_item_storage
+Node ID: subsystem:inventory_item_storage
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 9}
+Selected properties: {"graph_layers": ["timer"], "label": "inventory_item_storage", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:256
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\crafting\entities\entities\nut_storage_kit\init.lua:30
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:147
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:315
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\gridinv\plugins\1_1compat\sh_plugin.lua:31
+- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\inventory\sv_hooks.lua:123
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\inventory\sv_hooks.lua:16
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:70
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\storage\sv_storage.lua:149
+```
+
+## Result 3
+
+- Score: **0.5319**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:03a413ab22454d13`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:03a413ab22454d13",
+  "doc_type": "runtime_node",
+  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "metadata": {
+    "degree": 37,
+    "file": null,
+    "in_degree": 0,
+    "label": "inventory",
+    "node_type": "plugin",
+    "out_degree": 37,
+    "plugin": "inventory",
+    "realm": null,
+    "source_id": "plugin:inventory",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "inventory",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 37
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory
+Node ID: plugin:inventory
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: inventory
+Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CheckBothHandsAmputation
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCreateStoragePanel
+- outgoing listens_to_event -> hook_event CharacterPreSave
+- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
+- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
+- outgoing listens_to_event -> hook_event ItemTransfered
+- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
+- outgoing listens_to_event -> hook_event PlayerButtonDown
+- outgoing listens_to_event -> hook_event PlayerLoadout
+- outgoing listens_to_event -> hook_event PostPlayerLoadout
+- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+```
+
+## Result 4
+
+- Score: **0.5283**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:6734ebe6a22b5468`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `newvendorsystem`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:6734ebe6a22b5468",
+  "doc_type": "plugin_topology",
+  "content_hash": "95bb70af5942e0dde5124eb877c5ae8e82c7efe06cf7556659e3ab1a0401c341",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: newvendorsystem\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 3}\nHot members:\n- plugin newvendorsystem degree=3\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for newvendorsystem.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "newvendorsystem",
+    "source_id": "plugin:newvendorsystem"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "newvendorsystem"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: newvendorsystem
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 3}
+Hot members:
+- plugin newvendorsystem degree=3
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for newvendorsystem.
+```
+
+## Result 5
+
+- Score: **0.5208**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:73732fbee349671d`
+- Doc type: `runtime_node`
+- Node type: `hook_emitter`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `gamemode/core/libs/sh_inventory.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:73732fbee349671d",
+  "doc_type": "runtime_node",
+  "content_hash": "b630afd659ebd99cc7aa89bf815d345933a84b3ff40bd10ec16655f21baa552a",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67\nNode ID: emitter:emitter_07985e2301e5\nNode type: hook_emitter\nFile: gamemode/core/libs/sh_inventory.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}\nIncoming edge counts: {'contains_emitter': 1}\nSelected properties: {\"call_type\": \"Run\", \"event\": \"CreateInventoryPanel\", \"file\": \"gamemode\\\\core\\\\libs\\\\sh_inventory.lua\", \"graph_layers\": [\"hook\"], \"label\": \"emit CreateInventoryPanel @ gamemode\\\\core\\\\libs\\\\sh_inventory.lua:67\", \"line\": 67, \"normalization_status\": \"resolved\", \"realm\": \"shared\", \"resolution_confidence\": \"low\", \"resolution_source\": \"literal\", \"return_policy\": \"maybe_returns\", \"source_artifact\": \"hook_event_emitters\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8\n- outgoing emits -> hook_event CreateInventoryPanel\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- incoming contains_emitter -> file gamemode\\core\\libs\\sh_inventory.lua",
+  "metadata": {
+    "degree": 8,
+    "file": "gamemode/core/libs/sh_inventory.lua",
+    "in_degree": 1,
+    "label": "emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67",
+    "node_type": "hook_emitter",
+    "out_degree": 7,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "emitter:emitter_07985e2301e5",
+    "subsystem": null
+  },
+  "node_type": "hook_emitter",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "gamemode/core/libs/sh_inventory.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: emit CreateInventoryPanel @ gamemode\core\libs\sh_inventory.lua:67
+Node ID: emitter:emitter_07985e2301e5
+Node type: hook_emitter
+File: gamemode/core/libs/sh_inventory.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}
+Incoming edge counts: {'contains_emitter': 1}
+Selected properties: {"call_type": "Run", "event": "CreateInventoryPanel", "file": "gamemode\\core\\libs\\sh_inventory.lua", "graph_layers": ["hook"], "label": "emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67", "line": 67, "normalization_status": "resolved", "realm": "shared", "resolution_confidence": "low", "resolution_source": "literal", "return_policy": "maybe_returns", "source_artifact": "hook_event_emitters", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8
+- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8
+- outgoing emits -> hook_event CreateInventoryPanel
+- outgoing runs_in_realm -> realm shared
+- outgoing runs_in_realm -> realm shared
+- incoming contains_emitter -> file gamemode\core\libs\sh_inventory.lua
+```
+
+## Result 6
+
+- Score: **0.5119**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:81dae43ecfcf4558`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `playerinjuries`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:81dae43ecfcf4558",
+  "doc_type": "plugin_topology",
+  "content_hash": "77fe03e181fb7fa70b31125ed1e168b2a421b085979f71b69f154b590004df02",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: playerinjuries\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 5, 'listens_to_event': 3, 'owns_file': 3, 'emits_event': 2, 'owns_timer_operation': 1}\nHot members:\n- plugin playerinjuries degree=14\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for playerinjuries.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "playerinjuries",
+    "source_id": "plugin:playerinjuries"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "playerinjuries"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: playerinjuries
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 5, 'listens_to_event': 3, 'owns_file': 3, 'emits_event': 2, 'owns_timer_operation': 1}
+Hot members:
+- plugin playerinjuries degree=14
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for playerinjuries.
+```
+
+## Result 7
+
+- Score: **0.5109**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:d946926cea23e634`
+- Doc type: `runtime_node`
+- Node type: `event_class`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:d946926cea23e634",
+  "doc_type": "runtime_node",
+  "content_hash": "c8e43e308ce56a12087149c72add9cca82eb14ca1442772c0dd8583e76646743",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_inventory_domain\nNode ID: event_class:entity_inventory_domain\nNode type: event_class\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'classified_as': 82}\nSelected properties: {\"event_class\": \"entity_inventory_domain\", \"graph_layers\": [\"hook\"], \"label\": \"entity_inventory_domain\", \"source\": \"derived_taxonomy\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- incoming classified_as -> hook_event CharGivenItem\n- incoming classified_as -> hook_event CorpseInventorySet\n- incoming classified_as -> hook_event CreateDefaultInventory\n- incoming classified_as -> hook_event CreateInventory\n- incoming classified_as -> hook_event DisplayInventoryNut1_1\n- incoming classified_as -> hook_event DisplayInventoryNut1_1_beta\n- incoming classified_as -> hook_event DoorLockSwitchState\n- incoming classified_as -> hook_event EntityEmitSound\n- incoming classified_as -> hook_event EntityRemoved\n- incoming classified_as -> hook_event EntityTakeDamage\n- incoming classified_as -> hook_event HandleItemTransferRequest\n- incoming classified_as -> hook_event InitPostEntity",
+  "metadata": {
+    "degree": 82,
+    "file": null,
+    "in_degree": 82,
+    "label": "entity_inventory_domain",
+    "node_type": "event_class",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "event_class:entity_inventory_domain",
+    "subsystem": null
+  },
+  "node_type": "event_class",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 82
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_inventory_domain
+Node ID: event_class:entity_inventory_domain
+Node type: event_class
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'classified_as': 82}
+Selected properties: {"event_class": "entity_inventory_domain", "graph_layers": ["hook"], "label": "entity_inventory_domain", "source": "derived_taxonomy", "source_graph": "hook"}
+Selected neighboring relationships:
+- incoming classified_as -> hook_event CharGivenItem
+- incoming classified_as -> hook_event CorpseInventorySet
+- incoming classified_as -> hook_event CreateDefaultInventory
+- incoming classified_as -> hook_event CreateInventory
+- incoming classified_as -> hook_event DisplayInventoryNut1_1
+- incoming classified_as -> hook_event DisplayInventoryNut1_1_beta
+- incoming classified_as -> hook_event DoorLockSwitchState
+- incoming classified_as -> hook_event EntityEmitSound
+- incoming classified_as -> hook_event EntityRemoved
+- incoming classified_as -> hook_event EntityTakeDamage
+- incoming classified_as -> hook_event HandleItemTransferRequest
+- incoming classified_as -> hook_event InitPostEntity
+```
+
+## Result 8
+
+- Score: **0.5108**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:eb0317c806ecef7f`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `storageinterface`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:eb0317c806ecef7f",
+  "doc_type": "plugin_topology",
+  "content_hash": "664fcf7ca6d68bf84368b8285b7c58357ac5ade30d686c7d8c4a282f524a6e47",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: storageinterface\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 2}\nHot members:\n- plugin storageinterface degree=2\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for storageinterface.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "storageinterface",
+    "source_id": "plugin:storageinterface"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "storageinterface"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: storageinterface
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 2}
+Hot members:
+- plugin storageinterface degree=2
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for storageinterface.
+```
+
+## Result 9
+
+- Score: **0.5068**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:fe4b8e82767334f7`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `gridinv`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:fe4b8e82767334f7",
+  "doc_type": "plugin_topology",
+  "content_hash": "b2e16e8df05572a7f306583489e5c9892487ba389574dc4402f9e8105d406507",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: gridinv\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 46, 'listens_to_event': 24, 'owns_file': 17, 'emits_event': 11, 'owns_timer_operation': 1}\nHot members:\n- plugin gridinv degree=99\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for gridinv.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "gridinv",
+    "source_id": "plugin:gridinv"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "gridinv"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: gridinv
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 46, 'listens_to_event': 24, 'owns_file': 17, 'emits_event': 11, 'owns_timer_operation': 1}
+Hot members:
+- plugin gridinv degree=99
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for gridinv.
+```
+
+## Result 10
+
+- Score: **0.5026**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:62780315dc762d52`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/armor/items/base/sh_outfit.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:62780315dc762d52",
+  "doc_type": "runtime_node",
+  "content_hash": "bc43620535af800687825cadc6dc6a59192096f045027a3d0b5528382d52f755",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_create@plugins\\armor\\items\\base\\sh_outfit.lua:778\nNode ID: timer_op:plugins/armor/items/base/sh_outfit.lua:778:entity_timer_create:SetCustomTimer:291\nNode type: timer_operation\nFile: plugins/armor/items/base/sh_outfit.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\armor\\\\items\\\\base\\\\sh_outfit.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_create@plugins\\\\armor\\\\items\\\\base\\\\sh_outfit.lua:778\", \"line\": 778, \"operation_type\": \"entity_timer_create\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer SetCustomTimer\n- outgoing runs_in_realm -> realm shared\n- outgoing schedules_entity_action -> timer SetCustomTimer\n- incoming contains_timer_operation -> file plugins\\armor\\items\\base\\sh_outfit.lua\n- incoming owns_timer_operation -> plugin armor",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/armor/items/base/sh_outfit.lua",
+    "in_degree": 2,
+    "label": "entity_timer_create@plugins\\armor\\items\\base\\sh_outfit.lua:778",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/armor/items/base/sh_outfit.lua:778:entity_timer_create:SetCustomTimer:291",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/armor/items/base/sh_outfit.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_create@plugins\armor\items\base\sh_outfit.lua:778
+Node ID: timer_op:plugins/armor/items/base/sh_outfit.lua:778:entity_timer_create:SetCustomTimer:291
+Node type: timer_operation
+File: plugins/armor/items/base/sh_outfit.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'runs_in_realm': 1, 'schedules_entity_action': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\armor\\items\\base\\sh_outfit.lua", "graph_layers": ["timer"], "label": "entity_timer_create@plugins\\armor\\items\\base\\sh_outfit.lua:778", "line": 778, "operation_type": "entity_timer_create", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer SetCustomTimer
+- outgoing runs_in_realm -> realm shared
+- outgoing schedules_entity_action -> timer SetCustomTimer
+- incoming contains_timer_operation -> file plugins\armor\items\base\sh_outfit.lua
+- incoming owns_timer_operation -> plugin armor
+```
+

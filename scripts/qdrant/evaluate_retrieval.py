@@ -264,7 +264,8 @@ def run_query_command(
 ) -> str:
     cmd = [
         sys.executable,
-        str(query_script),
+        "-m",
+        "scripts.qdrant.query_qdrant",
         "--workspace",
         str(workspace),
         "--query",

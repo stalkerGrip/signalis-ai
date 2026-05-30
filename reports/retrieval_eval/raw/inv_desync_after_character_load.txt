@@ -1,4 +1,688 @@
-Traceback (most recent call last):
-  File "E:\signalis_ai\scripts\qdrant\query_qdrant.py", line 10, in <module>
-    from scripts.qdrant.retrieval_intent import classify_retrieval_intent, build_expanded_query
-ModuleNotFoundError: No module named 'scripts.qdrant'
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/112 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 112/112 [00:00<00:00, 8613.80it/s]
+
+Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
+# Qdrant Query Results
+
+Collection: `signalis_semantic`
+Query: `inventory desync after character load`
+Top K: **10**
+Model: `nomic-ai/nomic-embed-text-v1.5`
+Device: `cpu`
+
+## Filters
+
+```json
+{}
+```
+
+## Returned results: 10
+
+## Result 1
+
+- Score: **0.5448**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:ee582278a762107b`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:ee582278a762107b",
+  "doc_type": "runtime_node",
+  "content_hash": "7177379f580abf168e2c3597798f1376d6d7ca52fcfad1bc3d18787877d5848d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory_item_storage\nNode ID: subsystem:inventory_item_storage\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"inventory_item_storage\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:256\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\crafting\\entities\\entities\\nut_storage_kit\\init.lua:30\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:147\n- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:315\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\gridinv\\plugins\\1_1compat\\sh_plugin.lua:31\n- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\\inventory\\sv_hooks.lua:123\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\inventory\\sv_hooks.lua:16\n- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\\storage\\entities\\entities\\nut_storage\\init.lua:70\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\storage\\sv_storage.lua:149",
+  "metadata": {
+    "degree": 9,
+    "file": null,
+    "in_degree": 9,
+    "label": "inventory_item_storage",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:inventory_item_storage",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 9
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory_item_storage
+Node ID: subsystem:inventory_item_storage
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 9}
+Selected properties: {"graph_layers": ["timer"], "label": "inventory_item_storage", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:256
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\crafting\entities\entities\nut_storage_kit\init.lua:30
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:147
+- incoming belongs_to_subsystem -> timer_operation player_cancelable_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:315
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\gridinv\plugins\1_1compat\sh_plugin.lua:31
+- incoming belongs_to_subsystem -> timer_operation entity_timer_simple@plugins\inventory\sv_hooks.lua:123
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\inventory\sv_hooks.lua:16
+- incoming belongs_to_subsystem -> timer_operation player_action_timer@plugins\storage\entities\entities\nut_storage\init.lua:70
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\storage\sv_storage.lua:149
+```
+
+## Result 2
+
+- Score: **0.5375**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:03a413ab22454d13`
+- Doc type: `runtime_node`
+- Node type: `plugin`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:03a413ab22454d13",
+  "doc_type": "runtime_node",
+  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "metadata": {
+    "degree": 37,
+    "file": null,
+    "in_degree": 0,
+    "label": "inventory",
+    "node_type": "plugin",
+    "out_degree": 37,
+    "plugin": "inventory",
+    "realm": null,
+    "source_id": "plugin:inventory",
+    "subsystem": null
+  },
+  "node_type": "plugin",
+  "plugin": "inventory",
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 37
+}
+```
+
+### Text
+
+```text
+Runtime topology node: inventory
+Node ID: plugin:inventory
+Node type: plugin
+File: n/a
+Realm: unknown
+Plugin/subsystem: inventory
+Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
+Incoming edge counts: {}
+Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing emits_event -> hook_event CheckBothHandsAmputation
+- outgoing emits_event -> hook_event ItemTransfered
+- outgoing emits_event -> hook_event OnCreateStoragePanel
+- outgoing listens_to_event -> hook_event CharacterPreSave
+- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
+- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
+- outgoing listens_to_event -> hook_event ItemTransfered
+- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
+- outgoing listens_to_event -> hook_event PlayerButtonDown
+- outgoing listens_to_event -> hook_event PlayerLoadout
+- outgoing listens_to_event -> hook_event PostPlayerLoadout
+- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+```
+
+## Result 3
+
+- Score: **0.5359**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:819310f067a6850d`
+- Doc type: `runtime_node`
+- Node type: `hook_emitter`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `gamemode/core/meta/sh_character.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:819310f067a6850d",
+  "doc_type": "runtime_node",
+  "content_hash": "3d2d524e6b4f08252c8b4b3de5c83e98c40c7f354882991a10be362bbe93ee25",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: emit CharacterLoaded @ gamemode\\core\\meta\\sh_character.lua:129\nNode ID: emitter:emitter_739379a19d2e\nNode type: hook_emitter\nFile: gamemode/core/meta/sh_character.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}\nIncoming edge counts: {'contains_emitter': 1}\nSelected properties: {\"call_type\": \"Run\", \"event\": \"CharacterLoaded\", \"file\": \"gamemode\\\\core\\\\meta\\\\sh_character.lua\", \"graph_layers\": [\"hook\"], \"label\": \"emit CharacterLoaded @ gamemode\\\\core\\\\meta\\\\sh_character.lua:129\", \"line\": 129, \"normalization_status\": \"resolved\", \"realm\": \"shared\", \"resolution_confidence\": \"medium\", \"resolution_source\": \"literal\", \"return_policy\": \"maybe_returns\", \"source_artifact\": \"hook_event_emitters\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\\logging.lua:145\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ schema\\hooks\\cl_hooks.lua:121\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\\logging.lua:144\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ gamemode\\core\\hooks\\sv_hooks.lua:221\n- outgoing emits -> hook_event CharacterLoaded\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- incoming contains_emitter -> file gamemode\\core\\meta\\sh_character.lua",
+  "metadata": {
+    "degree": 8,
+    "file": "gamemode/core/meta/sh_character.lua",
+    "in_degree": 1,
+    "label": "emit CharacterLoaded @ gamemode\\core\\meta\\sh_character.lua:129",
+    "node_type": "hook_emitter",
+    "out_degree": 7,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "emitter:emitter_739379a19d2e",
+    "subsystem": null
+  },
+  "node_type": "hook_emitter",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "gamemode/core/meta/sh_character.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: emit CharacterLoaded @ gamemode\core\meta\sh_character.lua:129
+Node ID: emitter:emitter_739379a19d2e
+Node type: hook_emitter
+File: gamemode/core/meta/sh_character.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}
+Incoming edge counts: {'contains_emitter': 1}
+Selected properties: {"call_type": "Run", "event": "CharacterLoaded", "file": "gamemode\\core\\meta\\sh_character.lua", "graph_layers": ["hook"], "label": "emit CharacterLoaded @ gamemode\\core\\meta\\sh_character.lua:129", "line": 129, "normalization_status": "resolved", "realm": "shared", "resolution_confidence": "medium", "resolution_source": "literal", "return_policy": "maybe_returns", "source_artifact": "hook_event_emitters", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\logging.lua:145
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ schema\hooks\cl_hooks.lua:121
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\logging.lua:144
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ gamemode\core\hooks\sv_hooks.lua:221
+- outgoing emits -> hook_event CharacterLoaded
+- outgoing runs_in_realm -> realm shared
+- outgoing runs_in_realm -> realm shared
+- incoming contains_emitter -> file gamemode\core\meta\sh_character.lua
+```
+
+## Result 4
+
+- Score: **0.5350**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:d92f6f532bd21025`
+- Doc type: `runtime_node`
+- Node type: `hook_event`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:d92f6f532bd21025",
+  "doc_type": "runtime_node",
+  "content_hash": "f21dd42c874981f9d82a0ff144b2364d97f918462389b1d93230b037cd48ff73",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: CharacterLoaded\nNode ID: hook:CharacterLoaded\nNode type: hook_event\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'classified_as': 1}\nIncoming edge counts: {'emits': 2, 'emits_event': 1, 'listens_to': 4, 'listens_to_event': 3}\nSelected properties: {\"emitter_count\": 2, \"event\": \"CharacterLoaded\", \"event_class\": \"framework_lifecycle\", \"graph_layers\": [\"hook\"], \"has_emitters\": true, \"has_listeners\": true, \"label\": \"CharacterLoaded\", \"listener_count\": 4, \"realms_emitted\": [\"shared\"], \"realms_listened\": [\"client\", \"server\", \"shared\"], \"return_policy\": \"maybe_returns\", \"source\": \"hook_event_graph\", \"source_artifact\": \"hook_event_listeners\", \"source_graph\": \"hook\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- outgoing classified_as -> event_class framework_lifecycle\n- incoming emits -> hook_emitter emit CharacterLoaded @ gamemode\\core\\meta\\sh_character.lua:129\n- incoming emits -> hook_emitter emit CharacterLoaded @ plugins\\multichar\\sh_plugin.lua:41\n- incoming emits_event -> plugin multichar\n- incoming listens_to -> hook_listener listen CharacterLoaded @ plugins\\logging.lua:145\n- incoming listens_to -> hook_listener listen CharacterLoaded @ schema\\hooks\\cl_hooks.lua:121\n- incoming listens_to -> hook_listener listen CharacterLoaded @ plugins\\logging.lua:144\n- incoming listens_to -> hook_listener listen CharacterLoaded @ gamemode\\core\\hooks\\sv_hooks.lua:221\n- incoming listens_to_event -> gamemode GM\n- incoming listens_to_event -> plugin logging.lua\n- incoming listens_to_event -> schema schema",
+  "metadata": {
+    "degree": 11,
+    "file": null,
+    "in_degree": 10,
+    "label": "CharacterLoaded",
+    "node_type": "hook_event",
+    "out_degree": 1,
+    "plugin": null,
+    "realm": null,
+    "source_id": "hook:CharacterLoaded",
+    "subsystem": null
+  },
+  "node_type": "hook_event",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 11
+}
+```
+
+### Text
+
+```text
+Runtime topology node: CharacterLoaded
+Node ID: hook:CharacterLoaded
+Node type: hook_event
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'classified_as': 1}
+Incoming edge counts: {'emits': 2, 'emits_event': 1, 'listens_to': 4, 'listens_to_event': 3}
+Selected properties: {"emitter_count": 2, "event": "CharacterLoaded", "event_class": "framework_lifecycle", "graph_layers": ["hook"], "has_emitters": true, "has_listeners": true, "label": "CharacterLoaded", "listener_count": 4, "realms_emitted": ["shared"], "realms_listened": ["client", "server", "shared"], "return_policy": "maybe_returns", "source": "hook_event_graph", "source_artifact": "hook_event_listeners", "source_graph": "hook", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- outgoing classified_as -> event_class framework_lifecycle
+- incoming emits -> hook_emitter emit CharacterLoaded @ gamemode\core\meta\sh_character.lua:129
+- incoming emits -> hook_emitter emit CharacterLoaded @ plugins\multichar\sh_plugin.lua:41
+- incoming emits_event -> plugin multichar
+- incoming listens_to -> hook_listener listen CharacterLoaded @ plugins\logging.lua:145
+- incoming listens_to -> hook_listener listen CharacterLoaded @ schema\hooks\cl_hooks.lua:121
+- incoming listens_to -> hook_listener listen CharacterLoaded @ plugins\logging.lua:144
+- incoming listens_to -> hook_listener listen CharacterLoaded @ gamemode\core\hooks\sv_hooks.lua:221
+- incoming listens_to_event -> gamemode GM
+- incoming listens_to_event -> plugin logging.lua
+- incoming listens_to_event -> schema schema
+```
+
+## Result 5
+
+- Score: **0.5349**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:dcc1b8637d69e9b9`
+- Doc type: `runtime_node`
+- Node type: `subsystem`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:dcc1b8637d69e9b9",
+  "doc_type": "runtime_node",
+  "content_hash": "6526d11142301ca2377507462e0a785f495b535f7cebd022a06e3cfa4ca8fd73",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: character\nNode ID: subsystem:character\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 16}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"character\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\\hacking\\entities\\entities\\hack_secdb.lua:155\n- incoming belongs_to_subsystem -> timer_operation entity_timer_remove@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:67\n- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\\hacking\\entities\\entities\\hack_secdb.lua:73\n- incoming belongs_to_subsystem -> timer_operation entity_timer_exists@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:51\n- incoming belongs_to_subsystem -> timer_operation entity_timer_create@plugins\\rechargeableequipment\\items\\outfit\\sh_flashlight.lua:53\n- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua:10\n- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua:16\n- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua:46\n- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua:59\n- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\\multichar\\plugins\\charselect\\derma\\cl_bg_music.lua:62\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\multichar\\plugins\\charselect\\derma\\cl_confirmation.lua:82\n- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\\multichar\\plugins\\charselect\\derma\\cl_creation.lua:118",
+  "metadata": {
+    "degree": 16,
+    "file": null,
+    "in_degree": 16,
+    "label": "character",
+    "node_type": "subsystem",
+    "out_degree": 0,
+    "plugin": null,
+    "realm": null,
+    "source_id": "subsystem:character",
+    "subsystem": null
+  },
+  "node_type": "subsystem",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 16
+}
+```
+
+### Text
+
+```text
+Runtime topology node: character
+Node ID: subsystem:character
+Node type: subsystem
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {}
+Incoming edge counts: {'belongs_to_subsystem': 16}
+Selected properties: {"graph_layers": ["timer"], "label": "character", "source_graph": "timer"}
+Selected neighboring relationships:
+- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\hacking\entities\entities\hack_secdb.lua:155
+- incoming belongs_to_subsystem -> timer_operation entity_timer_remove@plugins\rechargeableequipment\items\outfit\sh_flashlight.lua:67
+- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\hacking\entities\entities\hack_secdb.lua:73
+- incoming belongs_to_subsystem -> timer_operation entity_timer_exists@plugins\rechargeableequipment\items\outfit\sh_flashlight.lua:51
+- incoming belongs_to_subsystem -> timer_operation entity_timer_create@plugins\rechargeableequipment\items\outfit\sh_flashlight.lua:53
+- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\multichar\plugins\charselect\derma\cl_bg_music.lua:10
+- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\multichar\plugins\charselect\derma\cl_bg_music.lua:16
+- incoming belongs_to_subsystem -> timer_operation timer_create@plugins\multichar\plugins\charselect\derma\cl_bg_music.lua:46
+- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\multichar\plugins\charselect\derma\cl_bg_music.lua:59
+- incoming belongs_to_subsystem -> timer_operation timer_remove@plugins\multichar\plugins\charselect\derma\cl_bg_music.lua:62
+- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\multichar\plugins\charselect\derma\cl_confirmation.lua:82
+- incoming belongs_to_subsystem -> timer_operation timer_cre...
+```
+
+## Result 6
+
+- Score: **0.5337**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:d58fb1246ff2ba47`
+- Doc type: `runtime_node`
+- Node type: `hook_emitter`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `gamemode/core/meta/sh_character.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:d58fb1246ff2ba47",
+  "doc_type": "runtime_node",
+  "content_hash": "9d7cb78578e526176a20915aa3d94de7f3522c0cf0a75320afcd6249cca8244d",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: emit CharacterPreSave @ gamemode\\core\\meta\\sh_character.lua:42\nNode ID: emitter:emitter_6566c7251cfe\nNode type: hook_emitter\nFile: gamemode/core/meta/sh_character.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'dispatches_to': 11, 'emits': 1, 'runs_in_realm': 2}\nIncoming edge counts: {'contains_emitter': 1}\nSelected properties: {\"call_type\": \"Run\", \"event\": \"CharacterPreSave\", \"file\": \"gamemode\\\\core\\\\meta\\\\sh_character.lua\", \"graph_layers\": [\"hook\"], \"label\": \"emit CharacterPreSave @ gamemode\\\\core\\\\meta\\\\sh_character.lua:42\", \"line\": 42, \"normalization_status\": \"resolved\", \"realm\": \"shared\", \"resolution_confidence\": \"low\", \"resolution_source\": \"literal\", \"return_policy\": \"maybe_returns\", \"source_artifact\": \"hook_event_emitters\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\ammosave.lua:42\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\inventory\\sh_plugin.lua:719\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\spawnsaver.lua:6\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\inventory\\sh_plugin.lua:718\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\healthproblems\\sv_hooks.lua:575\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\spawnsaver.lua:6\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\needs\\sv_hooks.lua:119\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ gamemode\\core\\hooks\\sv_hooks.lua:740\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\needs\\sv_hooks.lua:120\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\healthproblems\\sv_hooks.lua:576\n- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\\ammosave.lua:42\n- outgoing emits -> hook_event CharacterPreSave\n- incoming contains_emitter -> file gamemode\\core\\meta\\sh_character.lua",
+  "metadata": {
+    "degree": 15,
+    "file": "gamemode/core/meta/sh_character.lua",
+    "in_degree": 1,
+    "label": "emit CharacterPreSave @ gamemode\\core\\meta\\sh_character.lua:42",
+    "node_type": "hook_emitter",
+    "out_degree": 14,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "emitter:emitter_6566c7251cfe",
+    "subsystem": null
+  },
+  "node_type": "hook_emitter",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "gamemode/core/meta/sh_character.lua",
+  "degree": 15
+}
+```
+
+### Text
+
+```text
+Runtime topology node: emit CharacterPreSave @ gamemode\core\meta\sh_character.lua:42
+Node ID: emitter:emitter_6566c7251cfe
+Node type: hook_emitter
+File: gamemode/core/meta/sh_character.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'dispatches_to': 11, 'emits': 1, 'runs_in_realm': 2}
+Incoming edge counts: {'contains_emitter': 1}
+Selected properties: {"call_type": "Run", "event": "CharacterPreSave", "file": "gamemode\\core\\meta\\sh_character.lua", "graph_layers": ["hook"], "label": "emit CharacterPreSave @ gamemode\\core\\meta\\sh_character.lua:42", "line": 42, "normalization_status": "resolved", "realm": "shared", "resolution_confidence": "low", "resolution_source": "literal", "return_policy": "maybe_returns", "source_artifact": "hook_event_emitters", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\ammosave.lua:42
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\inventory\sh_plugin.lua:719
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\spawnsaver.lua:6
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\inventory\sh_plugin.lua:718
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\healthproblems\sv_hooks.lua:575
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\spawnsaver.lua:6
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\needs\sv_hooks.lua:119
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ gamemode\core\hooks\sv_hooks.lua:740
+- outgoing dispatches_to -> hook_listener listen CharacterPreSave @ plugins\needs\sv_hooks.lua:120
+- outgoing dispatches_to -> hook_listener listen CharacterP...
+```
+
+## Result 7
+
+- Score: **0.5154**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:c11c5d16372dfa47`
+- Doc type: `runtime_node`
+- Node type: `hook_emitter`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/multichar/sh_plugin.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:c11c5d16372dfa47",
+  "doc_type": "runtime_node",
+  "content_hash": "b7533a3659784b47997e16b040bdf412a809ce64975e99a8e97914e27ced54a1",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: emit CharacterLoaded @ plugins\\multichar\\sh_plugin.lua:41\nNode ID: emitter:emitter_74d4d83cf2fd\nNode type: hook_emitter\nFile: plugins/multichar/sh_plugin.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}\nIncoming edge counts: {'contains_emitter': 1}\nSelected properties: {\"call_type\": \"Run\", \"event\": \"CharacterLoaded\", \"file\": \"plugins\\\\multichar\\\\sh_plugin.lua\", \"graph_layers\": [\"hook\"], \"label\": \"emit CharacterLoaded @ plugins\\\\multichar\\\\sh_plugin.lua:41\", \"line\": 41, \"normalization_status\": \"resolved\", \"realm\": \"shared\", \"resolution_confidence\": \"medium\", \"resolution_source\": \"literal\", \"return_policy\": \"maybe_returns\", \"source_artifact\": \"hook_event_emitters\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\\logging.lua:145\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ schema\\hooks\\cl_hooks.lua:121\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\\logging.lua:144\n- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ gamemode\\core\\hooks\\sv_hooks.lua:221\n- outgoing emits -> hook_event CharacterLoaded\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- incoming contains_emitter -> file plugins\\multichar\\sh_plugin.lua",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/multichar/sh_plugin.lua",
+    "in_degree": 1,
+    "label": "emit CharacterLoaded @ plugins\\multichar\\sh_plugin.lua:41",
+    "node_type": "hook_emitter",
+    "out_degree": 7,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "emitter:emitter_74d4d83cf2fd",
+    "subsystem": null
+  },
+  "node_type": "hook_emitter",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/multichar/sh_plugin.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: emit CharacterLoaded @ plugins\multichar\sh_plugin.lua:41
+Node ID: emitter:emitter_74d4d83cf2fd
+Node type: hook_emitter
+File: plugins/multichar/sh_plugin.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}
+Incoming edge counts: {'contains_emitter': 1}
+Selected properties: {"call_type": "Run", "event": "CharacterLoaded", "file": "plugins\\multichar\\sh_plugin.lua", "graph_layers": ["hook"], "label": "emit CharacterLoaded @ plugins\\multichar\\sh_plugin.lua:41", "line": 41, "normalization_status": "resolved", "realm": "shared", "resolution_confidence": "medium", "resolution_source": "literal", "return_policy": "maybe_returns", "source_artifact": "hook_event_emitters", "source_graph": "hook"}
+Selected neighboring relationships:
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\logging.lua:145
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ schema\hooks\cl_hooks.lua:121
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ plugins\logging.lua:144
+- outgoing dispatches_to -> hook_listener listen CharacterLoaded @ gamemode\core\hooks\sv_hooks.lua:221
+- outgoing emits -> hook_event CharacterLoaded
+- outgoing runs_in_realm -> realm shared
+- outgoing runs_in_realm -> realm shared
+- incoming contains_emitter -> file plugins\multichar\sh_plugin.lua
+```
+
+## Result 8
+
+- Score: **0.5147**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:a60fd745ef7de37a`
+- Doc type: `runtime_node`
+- Node type: `hook_event`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:a60fd745ef7de37a",
+  "doc_type": "runtime_node",
+  "content_hash": "5fc00f9c7fcda54a5d44070f50a2f5a1b6a73ac1a79c32505c920cf1e278039a",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: CharacterPreSave\nNode ID: hook:CharacterPreSave\nNode type: hook_event\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {'classified_as': 1}\nIncoming edge counts: {'emits': 1, 'listens_to': 11, 'listens_to_event': 6}\nSelected properties: {\"emitter_count\": 1, \"event\": \"CharacterPreSave\", \"event_class\": \"framework_lifecycle\", \"graph_layers\": [\"hook\"], \"has_emitters\": true, \"has_listeners\": true, \"label\": \"CharacterPreSave\", \"listener_count\": 11, \"realms_emitted\": [\"shared\"], \"realms_listened\": [\"server\", \"shared\"], \"return_policy\": \"maybe_returns\", \"source\": \"hook_event_graph\", \"source_artifact\": \"hook_event_listeners\", \"source_graph\": \"hook\", \"topology_role\": \"runtime_signal\"}\nSelected neighboring relationships:\n- outgoing classified_as -> event_class framework_lifecycle\n- incoming emits -> hook_emitter emit CharacterPreSave @ gamemode\\core\\meta\\sh_character.lua:42\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\ammosave.lua:42\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\inventory\\sh_plugin.lua:719\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\spawnsaver.lua:6\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\inventory\\sh_plugin.lua:718\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\healthproblems\\sv_hooks.lua:575\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\spawnsaver.lua:6\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\needs\\sv_hooks.lua:119\n- incoming listens_to -> hook_listener listen CharacterPreSave @ gamemode\\core\\hooks\\sv_hooks.lua:740\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\needs\\sv_hooks.lua:120\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\healthproblems\\sv_hooks.lua:576\n- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\\ammosave.lua:42",
+  "metadata": {
+    "degree": 19,
+    "file": null,
+    "in_degree": 18,
+    "label": "CharacterPreSave",
+    "node_type": "hook_event",
+    "out_degree": 1,
+    "plugin": null,
+    "realm": null,
+    "source_id": "hook:CharacterPreSave",
+    "subsystem": null
+  },
+  "node_type": "hook_event",
+  "plugin": null,
+  "subsystem": null,
+  "realm": null,
+  "file": null,
+  "degree": 19
+}
+```
+
+### Text
+
+```text
+Runtime topology node: CharacterPreSave
+Node ID: hook:CharacterPreSave
+Node type: hook_event
+File: n/a
+Realm: unknown
+Plugin/subsystem: unknown
+Outgoing edge counts: {'classified_as': 1}
+Incoming edge counts: {'emits': 1, 'listens_to': 11, 'listens_to_event': 6}
+Selected properties: {"emitter_count": 1, "event": "CharacterPreSave", "event_class": "framework_lifecycle", "graph_layers": ["hook"], "has_emitters": true, "has_listeners": true, "label": "CharacterPreSave", "listener_count": 11, "realms_emitted": ["shared"], "realms_listened": ["server", "shared"], "return_policy": "maybe_returns", "source": "hook_event_graph", "source_artifact": "hook_event_listeners", "source_graph": "hook", "topology_role": "runtime_signal"}
+Selected neighboring relationships:
+- outgoing classified_as -> event_class framework_lifecycle
+- incoming emits -> hook_emitter emit CharacterPreSave @ gamemode\core\meta\sh_character.lua:42
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\ammosave.lua:42
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\inventory\sh_plugin.lua:719
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\spawnsaver.lua:6
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\inventory\sh_plugin.lua:718
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\healthproblems\sv_hooks.lua:575
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\spawnsaver.lua:6
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\needs\sv_hooks.lua:119
+- incoming listens_to -> hook_listener listen CharacterPreSave @ gamemode\core\hooks\sv_hooks.lua:740
+- incoming listens_to -> hook_listener listen CharacterPreSave @ plugins\needs\sv_hooks.lua:120
+- incom...
+```
+
+## Result 9
+
+- Score: **0.5139**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:plugin_topology:1fac1cd88cb0a400`
+- Doc type: `plugin_topology`
+- Node type: `plugin_summary`
+- Plugin: `inventory`
+- Subsystem: `None`
+- Realm: `None`
+- File: `None`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:plugin_topology:1fac1cd88cb0a400",
+  "doc_type": "plugin_topology",
+  "content_hash": "8e26d91c75d49591cc227766eab9ff33b97e6c624d7361f5eb415b1e80db3e1b",
+  "embedding_dim": 768,
+  "text": "Plugin/subsystem topology summary: inventory\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}\nHot members:\n- plugin inventory degree=37\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.",
+  "metadata": {
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "inventory",
+    "source_id": "plugin:inventory"
+  },
+  "node_type": "plugin_summary",
+  "plugin": "inventory"
+}
+```
+
+### Text
+
+```text
+Plugin/subsystem topology summary: inventory
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'registers_listener': 16, 'listens_to_event': 8, 'owns_file': 8, 'emits_event': 3, 'owns_timer_operation': 2}
+Hot members:
+- plugin inventory degree=37
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for inventory.
+```
+
+## Result 10
+
+- Score: **0.5124**
+- Rerank score: `None`
+- Rerank bonus: `None`
+- Rerank reasons: `[]`
+- Source ID: `doc:runtime_node:4ebf69c2c347ce17`
+- Doc type: `runtime_node`
+- Node type: `timer_operation`
+- Plugin: `None`
+- Subsystem: `None`
+- Realm: `shared`
+- File: `plugins/armor/items/base/sh_outfit.lua`
+
+### Metadata
+
+```json
+{
+  "source_id": "doc:runtime_node:4ebf69c2c347ce17",
+  "doc_type": "runtime_node",
+  "content_hash": "08652891a11cd9beb35b13f6c41cd7c3d39f8b24dae38f1360b36c022509e153",
+  "embedding_dim": 768,
+  "text": "Runtime topology node: entity_timer_remove@plugins\\armor\\items\\base\\sh_outfit.lua:797\nNode ID: timer_op:plugins/armor/items/base/sh_outfit.lua:797:entity_timer_remove:RemoveTimer:294\nNode type: timer_operation\nFile: plugins/armor/items/base/sh_outfit.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}\nIncoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}\nSelected properties: {\"file\": \"plugins\\\\armor\\\\items\\\\base\\\\sh_outfit.lua\", \"graph_layers\": [\"timer\"], \"label\": \"entity_timer_remove@plugins\\\\armor\\\\items\\\\base\\\\sh_outfit.lua:797\", \"line\": 797, \"operation_type\": \"entity_timer_remove\", \"realm\": \"shared\", \"source_graph\": \"timer\", \"source_manifest\": \"entity_timer_calls\"}\nSelected neighboring relationships:\n- outgoing belongs_to_subsystem -> subsystem misc\n- outgoing classified_as -> timer_class entity_simulation_timer\n- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected\n- outgoing references_timer -> timer RemoveTimer\n- outgoing removes_timer -> timer RemoveTimer\n- outgoing runs_in_realm -> realm shared\n- incoming contains_timer_operation -> file plugins\\armor\\items\\base\\sh_outfit.lua\n- incoming owns_timer_operation -> plugin armor",
+  "metadata": {
+    "degree": 8,
+    "file": "plugins/armor/items/base/sh_outfit.lua",
+    "in_degree": 2,
+    "label": "entity_timer_remove@plugins\\armor\\items\\base\\sh_outfit.lua:797",
+    "node_type": "timer_operation",
+    "out_degree": 6,
+    "plugin": null,
+    "realm": "shared",
+    "source_id": "timer_op:plugins/armor/items/base/sh_outfit.lua:797:entity_timer_remove:RemoveTimer:294",
+    "subsystem": null
+  },
+  "node_type": "timer_operation",
+  "plugin": null,
+  "subsystem": null,
+  "realm": "shared",
+  "file": "plugins/armor/items/base/sh_outfit.lua",
+  "degree": 8
+}
+```
+
+### Text
+
+```text
+Runtime topology node: entity_timer_remove@plugins\armor\items\base\sh_outfit.lua:797
+Node ID: timer_op:plugins/armor/items/base/sh_outfit.lua:797:entity_timer_remove:RemoveTimer:294
+Node type: timer_operation
+File: plugins/armor/items/base/sh_outfit.lua
+Realm: shared
+Plugin/subsystem: unknown
+Outgoing edge counts: {'belongs_to_subsystem': 1, 'classified_as': 1, 'has_timer_risk': 1, 'references_timer': 1, 'removes_timer': 1, 'runs_in_realm': 1}
+Incoming edge counts: {'contains_timer_operation': 1, 'owns_timer_operation': 1}
+Selected properties: {"file": "plugins\\armor\\items\\base\\sh_outfit.lua", "graph_layers": ["timer"], "label": "entity_timer_remove@plugins\\armor\\items\\base\\sh_outfit.lua:797", "line": 797, "operation_type": "entity_timer_remove", "realm": "shared", "source_graph": "timer", "source_manifest": "entity_timer_calls"}
+Selected neighboring relationships:
+- outgoing belongs_to_subsystem -> subsystem misc
+- outgoing classified_as -> timer_class entity_simulation_timer
+- outgoing has_timer_risk -> timer_risk entity_validity_guard_expected
+- outgoing references_timer -> timer RemoveTimer
+- outgoing removes_timer -> timer RemoveTimer
+- outgoing runs_in_realm -> realm shared
+- incoming contains_timer_operation -> file plugins\armor\items\base\sh_outfit.lua
+- incoming owns_timer_operation -> plugin armor
+```
+
