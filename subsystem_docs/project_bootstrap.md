@@ -262,8 +262,14 @@ query
 → Qdrant retrieval
 → deterministic reranking
 → context pack generation
-→ topology path reconstruction
-→ exact source validation when required
+→ source validation
+→ evidence deduplication
+→ runtime fact extraction
+→ runtime chain reconstruction
+→ investigation synthesis
+→ targeted validation plan
+→ targeted source validation
+→ architecture reasoning
 
 ---
 

@@ -346,6 +346,15 @@ what can be rebuilt from runtime state
 
 ## Inventory Doctrine
 
+Inventory synchronization has multiple separate channels:
+
+- inventory metadata delta: nutInventoryData → InventoryDataChanged
+- full inventory initialization: nutInventoryInit
+- item membership delta: nutInventoryAdd / nutInventoryRemove
+- item data delta: invData → ItemDataChanged
+
+Item UI desync investigations must distinguish inventory.data from item.data.
+
 Inventory is both server-side authoritative and client-visible through Derma/grid inventory.
 
 Current behavior:

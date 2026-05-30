@@ -63,7 +63,34 @@ Current investigation and design focus:
 
 ## Important Human Context
 
+Human-validated inventory sync rule:
+
+Item-level data sync and inventory-level data sync are separate.
+
+Item-level data:
+ITEM:setData / item:sync
+→ netstream "invData"
+→ client item.data[key] mutation
+→ hook.Run("ItemDataChanged", item, key, oldValue, value)
+
+Inventory-level data:
+nutInventoryData
+→ inventory instance data mutation
+→ hook.Run("InventoryDataChanged", instance, key, oldValue, value)
+
+Do not conflate ItemDataChanged with InventoryDataChanged.
+
 The vendor system was reworked.
+
+Vendor purchase transfer flow is now validated as:
+plugins/gridinv/sv_transfer.lua
+→ vendor inventory remove
+→ player inventory add
+→ item:sync
+→ nutInventoryAdd
+→ invData
+→ ItemDataChanged
+→ grid inventory panel refresh path
 
 Some files under:
 
