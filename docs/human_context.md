@@ -18,6 +18,16 @@
 
 ## Item Data Semantics
 
+Human-validated:
+
+ITEM:setData(key, value, receivers, noSave, noCheckEntity) mutates server-side item data, optionally syncs the changed key/value to receivers or the current owner through netstream "invData", updates world entity netvars when an item entity exists, and persists item data to the database unless noSave is set.
+
+Therefore item:setData is both persistent item metadata mutation and a conditional synchronization boundary.
+
+It should not be treated as a simple local state write.
+
+If receivers are missing or incorrect, current clients may not receive the update immediately. Future owners or clients opening/syncing the inventory may still receive the persisted data later.
+
 ## Vendor / Inventory Notes
 
 The vendor system has been reworked. Some files under plugins/vendor are legacy and should not be assumed authoritative without validation.

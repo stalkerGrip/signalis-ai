@@ -1,23 +1,330 @@
-# SIGNALIS AI — Deduplicated Validation Evidence
+# SIGNALIS AI — Evidence Graph
 
-- Source: `E:\signalis_ai\investigations\validation\vendor_stale_price_label_after_purchase_validation_scored.json`
+- Source: `E:\signalis_ai\investigations\validation\vendor_stale_price_label_after_purchase_validation_deduped.json`
 - Query: `vendor stale price label after purchase`
-- Original fragments: `137`
-- Deduped evidence: `36`
-- Removed duplicates: `101`
+- Nodes: `36`
+- Edges: `65`
+- Chains: `5`
 
-## Evidence
+## Runtime Chains
 
-### 1. `plugins/vendor/derma/cl_vendor.lua` lines `194-214`
+### Vendor Price Update / UI Refresh
 
-- Bucket: `critical`
-- Score: `154`
+- Confidence: `medium`
+- Reason: trade and item metadata evidence connect to vendor price hook and UI refresh
+
+1. `net:nutVendorTrade` — `plugins/vendor/derma/cl_vendor.lua:67-98` (client, score 115)
+   ↓ `item_data:vendorQty` — `plugins/vendor/entities/entities/nut_vendor/init.lua:209-228` (unknown, score 113)
+   ↓ `hook:VendorItemPriceUpdated` — `plugins/vendor/cl_networking.lua:62-80` (client, score 130)
+   ↓ `ui_call:updatePrice` — `plugins/vendor/derma/cl_vendor.lua:148-183` (client, score 75)
+
+### Vendor Exit / Metadata Clear
+
+- Confidence: `medium`
+- Reason: vendor exit evidence connects to vendor presentation metadata clearing
+
+1. `net:nutVendorExit` — `plugins/vendor/derma/cl_vendor.lua:229-245` (client, score 115)
+   ↓ `item_data:vendorBPrice` — `plugins/vendor/entities/entities/nut_vendor/init.lua:290-309` (unknown, score 103)
+   ↓ `hook:VendorExited` — `plugins/vendor/cl_networking.lua:49-68` (client, score 74)
+
+### Vendor Open / Initial Sync
+
+- Confidence: `medium`
+- Reason: vendor info sync and vendor opened hook are both client-side sync/open evidence
+
+1. `netstream:sendVendorInfo` — `plugins/vendor/entities/entities/nut_vendor/init.lua:117-153` (unknown, score 67)
+   ↓ `hook:VendorSynchronized` — `plugins/vendor/cl_networking.lua:15-42` (client, score 85)
+   ↓ `hook:VendorOpened` — `plugins/vendor/cl_networking.lua:44-60` (client, score 149)
+
+### Inventory UI Sync
+
+- Confidence: `medium`
+- Reason: inventory data and inventory panel creation connect to vendor trade interface
+
+1. `net:nutInventoryData` — `gamemode/core/meta/inventory/cl_base_inventory.lua:1-13` (client, score 117)
+   ↓ `hook:CreateNewInventoryPanel` — `plugins/inventory/cl_hooks.lua:101-141` (client, score 74)
+   ↓ `netstream:vendorTradeInterface` — `plugins/inventory/cl_hooks.lua:117-146` (client, score 44)
+
+### Hook Dispatch: VendorMoneyUpdated
+
+- Confidence: `high`
+- Reason: hook.Run dispatches to listener for VendorMoneyUpdated
+
+1. `hook:VendorMoneyUpdated` — `plugins/vendor/cl_networking.lua:53-72` (client, score 140)
+   ↓ `hook:VendorMoneyUpdated` — `plugins/vendor/derma/cl_vendor.lua:194-214` (client, score 154)
+
+## Edges
+
+- `net:nutVendorTrade` → `state:\bvendor\b`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `state:\bvendor\b` → `ui_call:updatePrice`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:OnCharVarChanged` → `net:nutVendorExit`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `net:nutVendorExit` → `state:\bvendor\b`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `net:OpenMyInv` → `hook:CreateNewInventoryPanel`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:OnCreateStoragePanel` → `netstream:itemSplitTake`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:VendorSynchronized` → `hook:VendorOpened`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:VendorItemPriceUpdated` → `hook:VendorItemStockUpdated`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `function:ENT:SetItemInStock` → `netstream:sendVendorInfo`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `item_data:vendorQty` → `state:\bprice\b`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `state:\bprice\b` → `hook:StorageEntityRemoved`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:StorageEntityRemoved` → `item_data:vendorBPrice`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `item_data:vendorBPrice` → `state:\bvendor\b`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `state:\bvendor\b` → `hook:StorageRestored`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:StorageRestored` → `hook:StorageInventorySet`
+  - Kind: `file_order`
+  - Confidence: `low`
+  - Reason: same file and source order
+- `hook:VendorMoneyUpdated` → `hook:VendorMoneyUpdated`
+  - Kind: `hook_dispatch`
+  - Confidence: `high`
+  - Reason: hook.Run dispatches to listener for VendorMoneyUpdated
+- `net:OpenMyInv` → `hook:CreateNewInventoryPanel`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorOpened` → `hook:VendorMoneyUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorOpened` → `hook:VendorItemPriceUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorOpened` → `hook:VendorExited`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorMoneyUpdated` → `hook:VendorItemPriceUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorMoneyUpdated` → `hook:VendorItemStockUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorItemPriceUpdated` → `hook:VendorItemStockUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorSynchronized` → `hook:VendorOpened`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorSynchronized` → `hook:VendorMoneyUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorSynchronized` → `hook:VendorItemPriceUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorSynchronized` → `hook:VendorExited`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorExited` → `hook:VendorMoneyUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorExited` → `hook:VendorItemPriceUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorExited` → `hook:VendorItemStockUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorClassUpdated` → `hook:VendorOpened`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorClassUpdated` → `hook:VendorMoneyUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorClassUpdated` → `hook:VendorItemPriceUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorClassUpdated` → `hook:VendorItemStockUpdated`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorClassUpdated` → `hook:VendorSynchronized`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `hook:VendorClassUpdated` → `hook:VendorExited`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `netstream:vendorTradeInterface` → `hook:OnCreateStoragePanel`
+  - Kind: `network_handler_emits_hook`
+  - Confidence: `medium`
+  - Reason: network handler and hook emission are local in client networking file
+- `item_data:vendorQty` → `hook:VendorMoneyUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorQty` → `hook:VendorMoneyUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorQty` → `hook:VendorItemPriceUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorQty` → `hook:VendorItemStockUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorQty` → `hook:VendorSynchronized`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorBPrice` → `hook:VendorMoneyUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorBPrice` → `hook:VendorMoneyUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorBPrice` → `hook:VendorItemPriceUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorBPrice` → `hook:VendorItemStockUpdated`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `item_data:vendorBPrice` → `hook:VendorSynchronized`
+  - Kind: `state_mutation_to_sync_event`
+  - Confidence: `medium`
+  - Reason: vendor item data mutation is related to vendor sync/update hook
+- `hook:VendorMoneyUpdated` → `ui_call:updatePrice`
+  - Kind: `hook_to_ui_refresh`
+  - Confidence: `high`
+  - Reason: vendor update hook leads to vendor panel price refresh
+- `hook:VendorMoneyUpdated` → `ui_call:updatePrice`
+  - Kind: `hook_to_ui_refresh`
+  - Confidence: `high`
+  - Reason: vendor update hook leads to vendor panel price refresh
+- `hook:VendorItemPriceUpdated` → `ui_call:updatePrice`
+  - Kind: `hook_to_ui_refresh`
+  - Confidence: `high`
+  - Reason: vendor update hook leads to vendor panel price refresh
+- `hook:VendorItemStockUpdated` → `ui_call:updatePrice`
+  - Kind: `hook_to_ui_refresh`
+  - Confidence: `high`
+  - Reason: vendor update hook leads to vendor panel price refresh
+- `hook:VendorSynchronized` → `ui_call:updatePrice`
+  - Kind: `hook_to_ui_refresh`
+  - Confidence: `high`
+  - Reason: vendor update hook leads to vendor panel price refresh
+- `net:nutVendorTrade` → `item_data:vendorQty`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `net:nutVendorTrade` → `item_data:vendorBPrice`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `net:nutVendorTrade` → `function:ENT:AddItemAndSetQty`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `net:nutVendorTrade` → `state:\bprice\b`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `netstream:vendorTradeInterface` → `item_data:vendorQty`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `netstream:vendorTradeInterface` → `item_data:vendorBPrice`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `netstream:vendorTradeInterface` → `function:ENT:AddItemAndSetQty`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `netstream:vendorTradeInterface` → `state:\bprice\b`
+  - Kind: `trade_to_vendor_state`
+  - Confidence: `medium`
+  - Reason: vendor trade path connects to server-side vendor item data evidence
+- `net:nutInventoryData` → `net:OpenMyInv`
+  - Kind: `inventory_sync_to_ui`
+  - Confidence: `medium`
+  - Reason: inventory data receiver is related to client inventory UI evidence
+- `net:nutInventoryData` → `netstream:itemSplitTake`
+  - Kind: `inventory_sync_to_ui`
+  - Confidence: `medium`
+  - Reason: inventory data receiver is related to client inventory UI evidence
+- `net:nutInventoryData` → `hook:CreateNewInventoryPanel`
+  - Kind: `inventory_sync_to_ui`
+  - Confidence: `medium`
+  - Reason: inventory data receiver is related to client inventory UI evidence
+- `net:nutInventoryData` → `hook:OnCreateStoragePanel`
+  - Kind: `inventory_sync_to_ui`
+  - Confidence: `medium`
+  - Reason: inventory data receiver is related to client inventory UI evidence
+- `net:nutInventoryData` → `netstream:vendorTradeInterface`
+  - Kind: `inventory_sync_to_ui`
+  - Confidence: `medium`
+  - Reason: inventory data receiver is related to client inventory UI evidence
+
+## Nodes
+
+### hook:VendorMoneyUpdated
+
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `194-214`
 - Realm: `client`
-- Semantic target: `hook:VendorMoneyUpdated`
+- Score: `154`
 - Classification: `hook_listener_explicit`
-- Match: `hook` / `VendorMoneyUpdated`
-- Duplicate count: `3`
-- Reasons: critical classification: hook_listener_explicit, hook evidence, client-side evidence, Derma/UI file, important term: VendorItemPriceUpdated, important term: VendorItemStockUpdated, important term: VendorMoneyUpdated, explicit hook listener, price label/UI presentation evidence, query term overlap: price, vendor, supporting classification: ui_presentation_logic, state/UI evidence, generic keyword match
 
 ```lua
   194: 		self.me:setMoney(newValue)
@@ -39,16 +346,13 @@
   210: 	-- Item mode change.
 ```
 
-### 2. `plugins/inventory/cl_hooks.lua` lines `85-101`
+### net:OpenMyInv
 
-- Bucket: `critical`
-- Score: `153`
+- File: `plugins/inventory/cl_hooks.lua`
+- Lines: `85-101`
 - Realm: `client`
-- Semantic target: `net:OpenMyInv`
+- Score: `153`
 - Classification: `hook_listener_plugin_method`
-- Match: `hook` / `CreateNewInventoryPanel`
-- Duplicate count: `1`
-- Reasons: critical classification: hook_listener_plugin_method, hook evidence, client-side evidence, inventory client UI hook file, important term: inventorySetPanelStatus, important term: CreateNewInventoryPanel, plugin/schema/gamemode hook listener, raw net operation, netstream operation
 
 ```lua
    85: 
@@ -70,16 +374,13 @@
   101: 	function()
 ```
 
-### 3. `plugins/vendor/cl_networking.lua` lines `44-60`
+### hook:VendorOpened
 
-- Bucket: `critical`
-- Score: `149`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `44-60`
 - Realm: `client`
-- Semantic target: `hook:VendorOpened`
+- Score: `149`
 - Classification: `network_receiver`
-- Match: `network` / `nutVendorExit`
-- Duplicate count: `1`
-- Reasons: critical classification: network_receiver, network evidence, client-side evidence, client networking file, important term: VendorMoneyUpdated, important term: nutVendorExit, hook emitter call, raw net operation, query term overlap: vendor
 
 ```lua
    44: 	if (IsValid(vendor)) then
@@ -101,16 +402,13 @@
    60: end)
 ```
 
-### 4. `plugins/vendor/derma/cl_vendor.lua` lines `201-217`
+### hook:OnCharVarChanged
 
-- Bucket: `critical`
-- Score: `142`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `201-217`
 - Realm: `client`
-- Semantic target: `hook:OnCharVarChanged`
+- Score: `142`
 - Classification: `hook_listener_explicit`
-- Match: `hook` / `VendorItemStockUpdated`
-- Duplicate count: `1`
-- Reasons: critical classification: hook_listener_explicit, hook evidence, client-side evidence, Derma/UI file, important term: VendorItemPriceUpdated, important term: VendorItemStockUpdated, explicit hook listener, price label/UI presentation evidence, query term overlap: price, vendor
 
 ```lua
   201: 	hook.Add("OnCharVarChanged", self, self.onCharVarChanged)
@@ -132,16 +430,13 @@
   217: function PANEL:InventoryItemAdded(item)
 ```
 
-### 5. `plugins/vendor/cl_networking.lua` lines `53-72`
+### hook:VendorMoneyUpdated
 
-- Bucket: `critical`
-- Score: `140`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `53-72`
 - Realm: `client`
-- Semantic target: `hook:VendorMoneyUpdated`
+- Score: `140`
 - Classification: `hook_emitter`
-- Match: `hook` / `VendorMoneyUpdated`
-- Duplicate count: `3`
-- Reasons: critical classification: hook_emitter, hook evidence, client-side evidence, client networking file, important term: VendorMoneyUpdated, hook emitter call, price label/UI presentation evidence, query term overlap: price, vendor, supporting classification: ui_presentation_logic, state/UI evidence, important term: VendorItemPriceUpdated, generic keyword match
 
 ```lua
    53: end)
@@ -163,16 +458,13 @@
    69: 
 ```
 
-### 6. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `263-279`
+### hook:StorageEntityRemoved
 
-- Bucket: `critical`
-- Score: `134`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `263-279`
 - Realm: `unknown`
-- Semantic target: `hook:StorageEntityRemoved`
+- Score: `134`
 - Classification: `network_send_or_start`
-- Match: `network` / `nutVendorExit`
-- Duplicate count: `1`
-- Reasons: critical classification: network_send_or_start, network evidence, vendor entity server init, important term: nutVendorExit, hook emitter call, raw net operation, query term overlap: vendor
 
 ```lua
   263: 
@@ -194,16 +486,13 @@
   279: end
 ```
 
-### 7. `plugins/vendor/cl_networking.lua` lines `62-80`
+### hook:VendorItemPriceUpdated
 
-- Bucket: `critical`
-- Score: `130`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `62-80`
 - Realm: `client`
-- Semantic target: `hook:VendorItemPriceUpdated`
+- Score: `130`
 - Classification: `hook_emitter`
-- Match: `hook` / `VendorItemPriceUpdated`
-- Duplicate count: `3`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, client-side evidence, client networking file, important term: VendorItemPriceUpdated, hook emitter call, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor, critical classification: hook_emitter, hook evidence
 
 ```lua
    64: 	local value = net.ReadInt(32)
@@ -225,16 +514,13 @@
    80: 
 ```
 
-### 8. `plugins/vendor/cl_networking.lua` lines `85-101`
+### hook:VendorItemStockUpdated
 
-- Bucket: `critical`
-- Score: `125`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `85-101`
 - Realm: `client`
-- Semantic target: `hook:VendorItemStockUpdated`
+- Score: `125`
 - Classification: `hook_emitter`
-- Match: `hook` / `VendorItemStockUpdated`
-- Duplicate count: `1`
-- Reasons: critical classification: hook_emitter, hook evidence, client-side evidence, client networking file, important term: VendorItemStockUpdated, hook emitter call, query term overlap: vendor
 
 ```lua
    85: 	local itemType = net.ReadString()
@@ -256,16 +542,13 @@
   101: 
 ```
 
-### 9. `gamemode/core/meta/inventory/cl_base_inventory.lua` lines `1-13`
+### net:nutInventoryData
 
-- Bucket: `critical`
-- Score: `117`
+- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
+- Lines: `1-13`
 - Realm: `client`
-- Semantic target: `net:nutInventoryData`
+- Score: `117`
 - Classification: `network_receiver`
-- Match: `network` / `nutInventoryData`
-- Duplicate count: `1`
-- Reasons: critical classification: network_receiver, network evidence, client-side evidence, client base inventory sync file, important term: nutInventoryData, raw net operation
 
 ```lua
     1: local Inventory = nut.Inventory
@@ -283,16 +566,13 @@
    13: 	local oldValue = instance.data[key]
 ```
 
-### 10. `plugins/vendor/derma/cl_vendor.lua` lines `67-98`
+### net:nutVendorTrade
 
-- Bucket: `critical`
-- Score: `115`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `67-98`
 - Realm: `client`
-- Semantic target: `net:nutVendorTrade`
+- Score: `115`
 - Classification: `network_send_or_start`
-- Match: `network` / `nutVendorTrade`
-- Duplicate count: `3`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, important term: nutVendorTrade, important term: nutListenForInventoryChanges, raw net operation, generic keyword match, query term overlap: vendor, critical classification: network_send_or_start, network evidence
 
 ```lua
    75: 	}
@@ -314,16 +594,13 @@
    91: 	net.SendToServer()
 ```
 
-### 11. `plugins/vendor/derma/cl_vendor.lua` lines `229-245`
+### net:nutVendorExit
 
-- Bucket: `critical`
-- Score: `115`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `229-245`
 - Realm: `client`
-- Semantic target: `net:nutVendorExit`
+- Score: `115`
 - Classification: `network_send_or_start`
-- Match: `network` / `nutVendorExit`
-- Duplicate count: `1`
-- Reasons: critical classification: network_send_or_start, network evidence, client-side evidence, Derma/UI file, important term: nutVendorExit, raw net operation, query term overlap: vendor
 
 ```lua
   229: 	surface.SetDrawColor(0, 0, 0, 100)
@@ -345,16 +622,13 @@
   245: 		nut.gui.vendorFactionEditor:Remove()
 ```
 
-### 12. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `209-228`
+### item_data:vendorQty
 
-- Bucket: `critical`
-- Score: `113`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `209-228`
 - Realm: `unknown`
-- Semantic target: `item_data:vendorQty`
+- Score: `113`
 - Classification: `item_data_mutation`
-- Match: `state` / `setData\s*\(`
-- Duplicate count: `9`
-- Reasons: critical classification: item_data_mutation, state/UI evidence, vendor entity server init, item/inventory data access, price label/UI presentation evidence, query term overlap: price, vendor, generic keyword match
 
 ```lua
   209: 				end
@@ -376,16 +650,13 @@
   225: 		&& self.items[uniqueID].maxQty > 0
 ```
 
-### 13. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `290-309`
+### item_data:vendorBPrice
 
-- Bucket: `critical`
-- Score: `103`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `290-309`
 - Realm: `unknown`
-- Semantic target: `item_data:vendorBPrice`
+- Score: `103`
 - Classification: `item_data_mutation`
-- Match: `state` / `:SetData\s*\(`
-- Duplicate count: `8`
-- Reasons: critical classification: item_data_mutation, state/UI evidence, vendor entity server init, item/inventory data access, query term overlap: price, vendor
 
 ```lua
   290: function ENT:RemoveReceiverFromVendor(client)
@@ -407,16 +678,13 @@
   306: 	self:SetThdPos(Vector(pos3))
 ```
 
-### 14. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `149-215`
+### function:ENT:AddItemAndSetQty
 
-- Bucket: `critical`
-- Score: `95`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `149-215`
 - Realm: `unknown`
-- Semantic target: `function:ENT:AddItemAndSetQty`
+- Score: `95`
 - Classification: `item_data_mutation`
-- Match: `state` / `setData\s*\(`
-- Duplicate count: `5`
-- Reasons: critical classification: item_data_mutation, state/UI evidence, vendor entity server init, price label/UI presentation evidence, query term overlap: price, vendor, generic keyword match
 
 ```lua
   149: function ENT:AddItemAndSetQty(inv, uniqueID, client)
@@ -438,16 +706,13 @@
   165: 	then
 ```
 
-### 15. `plugins/inventory/cl_hooks.lua` lines `181-197`
+### netstream:itemSplitTake
 
-- Bucket: `critical`
-- Score: `87`
+- File: `plugins/inventory/cl_hooks.lua`
+- Lines: `181-197`
 - Realm: `client`
-- Semantic target: `netstream:itemSplitTake`
+- Score: `87`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `SetText\s*\(`
-- Duplicate count: `1`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, client-side evidence, inventory client UI hook file, important term: SetText, netstream operation, price label/UI presentation evidence
 
 ```lua
   181: 	return text
@@ -469,16 +734,13 @@
   197: 		splitFrame:SetTitle("Разделить")
 ```
 
-### 16. `plugins/vendor/cl_networking.lua` lines `15-42`
+### hook:VendorSynchronized
 
-- Bucket: `critical`
-- Score: `85`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `15-42`
 - Realm: `client`
-- Semantic target: `hook:VendorSynchronized`
+- Score: `85`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `\bprice\b`
-- Duplicate count: `3`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, client-side evidence, client networking file, hook emitter call, raw net operation, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor
 
 ```lua
    26: 		if (price < 0) then price = nil end
@@ -500,16 +762,13 @@
    42: net.Receive("nutVendorOpen", function()
 ```
 
-### 17. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `171-215`
+### state:\bprice\b
 
-- Bucket: `critical`
-- Score: `80`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `171-215`
 - Realm: `unknown`
-- Semantic target: `state:\bprice\b`
+- Score: `80`
 - Classification: `item_data_mutation`
-- Match: `state` / `\bprice\b`
-- Duplicate count: `4`
-- Reasons: critical classification: item_data_mutation, state/UI evidence, vendor entity server init, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor, supporting classification: ui_presentation_logic
 
 ```lua
   171: 				if (isStackable)
@@ -531,16 +790,13 @@
   187: 						end
 ```
 
-### 18. `plugins/vendor/derma/cl_vendor.lua` lines `148-183`
+### ui_call:updatePrice
 
-- Bucket: `critical`
-- Score: `75`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `148-183`
 - Realm: `client`
-- Semantic target: `ui_call:updatePrice`
+- Score: `75`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `4`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, important term: updatePrice, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor, supporting classification: ui_presentation_logic, important term: VendorMoneyUpdated
 
 ```lua
   167: end
@@ -562,16 +818,13 @@
   183: 	self:updateItem(itemType, self.me)
 ```
 
-### 19. `plugins/inventory/cl_hooks.lua` lines `101-141`
+### hook:CreateNewInventoryPanel
 
-- Bucket: `critical`
-- Score: `74`
+- File: `plugins/inventory/cl_hooks.lua`
+- Lines: `101-141`
 - Realm: `client`
-- Semantic target: `hook:CreateNewInventoryPanel`
+- Score: `74`
 - Classification: `hook_reference`
-- Match: `hook` / `CreateNewInventoryPanel`
-- Duplicate count: `3`
-- Reasons: low-signal classification: hook_reference, hook evidence, client-side evidence, inventory client UI hook file, important term: vendorTradeInterface, important term: CreateNewInventoryPanel, query term overlap: vendor, netstream operation
 
 ```lua
   114: 	function()
@@ -593,16 +846,13 @@
   130: 
 ```
 
-### 20. `plugins/vendor/cl_networking.lua` lines `49-68`
+### hook:VendorExited
 
-- Bucket: `critical`
-- Score: `74`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `49-68`
 - Realm: `client`
-- Semantic target: `hook:VendorExited`
+- Score: `74`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `2`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, client networking file, important term: VendorMoneyUpdated, important term: nutVendorExit, hook emitter call, raw net operation, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor
 
 ```lua
    49: 
@@ -624,16 +874,13 @@
    65: 	if (value < 0) then value = nil end
 ```
 
-### 21. `plugins/vendor/derma/cl_vendor.lua` lines `20-50`
+### state:SetText\s*\(
 
-- Bucket: `critical`
-- Score: `73`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `20-50`
 - Realm: `client`
-- Semantic target: `state:SetText\s*\(`
+- Score: `73`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `SetText\s*\(`
-- Duplicate count: `2`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, client-side evidence, Derma/UI file, important term: SetText, price label/UI presentation evidence, query term overlap: vendor
 
 ```lua
    20: 	self.buttons:Dock(TOP)
@@ -655,16 +902,13 @@
    36: 
 ```
 
-### 22. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `117-153`
+### netstream:sendVendorInfo
 
-- Bucket: `supporting`
-- Score: `67`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `117-153`
 - Realm: `unknown`
-- Semantic target: `netstream:sendVendorInfo`
+- Score: `67`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `\bprice\b`
-- Duplicate count: `4`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, vendor entity server init, netstream operation, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor
 
 ```lua
   117: 		self:AddItemAndSetQty(inv, uniqueID, client)
@@ -686,16 +930,13 @@
   133: 			qty = 0
 ```
 
-### 23. `plugins/vendor/derma/cl_vendor.lua` lines `47-75`
+### state:\bvendor\b
 
-- Bucket: `supporting`
-- Score: `60`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `47-75`
 - Realm: `client`
-- Semantic target: `state:\bvendor\b`
+- Score: `60`
 - Classification: `networked_var_read`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `9`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, important term: nutVendorTrade, generic keyword match, query term overlap: vendor, supporting classification: networked_var_read, important term: nutListenForInventoryChanges
 
 ```lua
    54: 	self.vendor:SetWide(math.max(ScrW() * 0.25, 220))
@@ -717,16 +958,13 @@
    70: 	self:nutListenForInventoryChanges(LocalPlayer():getChar():getInv())
 ```
 
-### 24. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `82-111`
+### function:ENT:SetItemInStock
 
-- Bucket: `supporting`
-- Score: `55`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `82-111`
 - Realm: `unknown`
-- Semantic target: `function:ENT:SetItemInStock`
+- Score: `55`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `\bprice\b`
-- Duplicate count: `3`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, vendor entity server init, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor
 
 ```lua
    88: function ENT:SetItemInStock(uniqueID, qty, price, x, y, client)
@@ -748,16 +986,13 @@
   104: 		}
 ```
 
-### 25. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `231-258`
+### state:\bprice\b
 
-- Bucket: `supporting`
-- Score: `55`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `231-258`
 - Realm: `unknown`
-- Semantic target: `state:\bprice\b`
+- Score: `55`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `\bprice\b`
-- Duplicate count: `2`
-- Reasons: supporting classification: ui_presentation_logic, state/UI evidence, vendor entity server init, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor
 
 ```lua
   231: 	return self.items[uniqueID] && self.items[uniqueID].buyPrice && vendorNeed
@@ -779,16 +1014,13 @@
   247: 			self.items[uniqueID].initQty = nil
 ```
 
-### 26. `plugins/vendor/cl_networking.lua` lines `4-138`
+### hook:VendorClassUpdated
 
-- Bucket: `supporting`
-- Score: `50`
+- File: `plugins/vendor/cl_networking.lua`
+- Lines: `4-138`
 - Realm: `client`
-- Semantic target: `hook:VendorClassUpdated`
+- Score: `50`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `33`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, client networking file, hook emitter call, raw net operation, generic keyword match, query term overlap: vendor, important term: VendorItemStockUpdated, important term: VendorItemPriceUpdated, price label/UI presentation evidence, query term overlap: price, vendor, important term: VendorMoneyUpdated, important term: nutVendorExit
 
 ```lua
    61: 
@@ -810,16 +1042,13 @@
    77: 
 ```
 
-### 27. `plugins/vendor/entities/entities/nut_vendor/shared.lua` lines `66-108`
+### hook:StorageRestored
 
-- Bucket: `supporting`
-- Score: `50`
+- File: `plugins/vendor/entities/entities/nut_vendor/shared.lua`
+- Lines: `66-108`
 - Realm: `shared/conditional`
-- Semantic target: `hook:StorageRestored`
+- Score: `50`
 - Classification: `ui_presentation_logic`
-- Match: `state` / `\bprice\b`
-- Duplicate count: `3`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, hook emitter call, price label/UI presentation evidence, generic keyword match, query term overlap: price, vendor, supporting classification: ui_presentation_logic
 
 ```lua
    71: 					hook.Run("StorageRestored", self, inventory)
@@ -841,16 +1070,13 @@
    87: 									:next(function(newItem)
 ```
 
-### 28. `plugins/inventory/cl_hooks.lua` lines `131-171`
+### hook:OnCreateStoragePanel
 
-- Bucket: `supporting`
-- Score: `47`
+- File: `plugins/inventory/cl_hooks.lua`
+- Lines: `131-171`
 - Realm: `client`
-- Semantic target: `hook:OnCreateStoragePanel`
+- Score: `47`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `2`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, inventory client UI hook file, important term: inventorySetPanelStatus, hook emitter call, netstream operation, generic keyword match, query term overlap: vendor, important term: vendorTradeInterface, important term: CreateNewInventoryPanel
 
 ```lua
   155: 			nutStorageBase:exitStorage()
@@ -872,16 +1098,13 @@
   171: 	localParent.OnRemove = exitStorageOnRemove
 ```
 
-### 29. `plugins/inventory/cl_hooks.lua` lines `117-146`
+### netstream:vendorTradeInterface
 
-- Bucket: `supporting`
-- Score: `44`
+- File: `plugins/inventory/cl_hooks.lua`
+- Lines: `117-146`
 - Realm: `client`
-- Semantic target: `netstream:vendorTradeInterface`
+- Score: `44`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `4`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, inventory client UI hook file, important term: vendorTradeInterface, important term: CreateNewInventoryPanel, netstream operation, generic keyword match, query term overlap: vendor
 
 ```lua
   117: 			return
@@ -903,16 +1126,13 @@
   133: 	local storageInvPanel = vgui.Create("vendor_grid_inventory")
 ```
 
-### 30. `plugins/vendor/derma/cl_vendor.lua` lines `163-197`
+### function:PANEL:onVendorModeUpdated
 
-- Bucket: `supporting`
-- Score: `40`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `163-197`
 - Realm: `client`
-- Semantic target: `function:PANEL:onVendorModeUpdated`
+- Score: `40`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `7`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, generic keyword match, query term overlap: vendor, important term: VendorMoneyUpdated, important term: updatePrice, price label/UI presentation evidence, query term overlap: price, vendor
 
 ```lua
   163: 			if (not IsValid(panel)) then continue end
@@ -934,16 +1154,13 @@
   179: end
 ```
 
-### 31. `plugins/vendor/entities/entities/nut_vendor/shared.lua` lines `116-132`
+### hook:StorageInventorySet
 
-- Bucket: `noise`
-- Score: `12`
+- File: `plugins/vendor/entities/entities/nut_vendor/shared.lua`
+- Lines: `116-132`
 - Realm: `shared/conditional`
-- Semantic target: `hook:StorageInventorySet`
+- Score: `12`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `1`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, important term: storageInventory, hook emitter call, generic keyword match, query term overlap: vendor
 
 ```lua
   116: 			:next(
@@ -965,16 +1182,13 @@
   132: 		self.factions = self.factions || {}
 ```
 
-### 32. `plugins/vendor/entities/entities/nut_vendor/init.lua` lines `327-343`
+### state:\bvendor\b
 
-- Bucket: `noise`
-- Score: `5`
+- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- Lines: `327-343`
 - Realm: `unknown`
-- Semantic target: `state:\bvendor\b`
+- Score: `5`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `1`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, vendor entity server init, generic keyword match, query term overlap: vendor
 
 ```lua
   327: 	then
@@ -996,16 +1210,13 @@
   343: 			3600,
 ```
 
-### 33. `plugins/vendor/derma/cl_vendor.lua` lines `1-21`
+### state:\bvendor\b
 
-- Bucket: `noise`
-- Score: `1`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `1-21`
 - Realm: `client`
-- Semantic target: `state:\bvendor\b`
+- Score: `1`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `4`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, generic keyword match, query term overlap: vendor
 
 ```lua
     1: local PANEL = {}
@@ -1027,16 +1238,13 @@
    17: 
 ```
 
-### 34. `plugins/vendor/derma/cl_vendor.lua` lines `98-126`
+### state:\bvendor\b
 
-- Bucket: `noise`
-- Score: `1`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `98-126`
 - Realm: `client`
-- Semantic target: `state:\bvendor\b`
+- Score: `1`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `2`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, generic keyword match, query term overlap: vendor
 
 ```lua
    98: 
@@ -1058,16 +1266,13 @@
   114: 	end
 ```
 
-### 35. `plugins/vendor/derma/cl_vendor.lua` lines `256-264`
+### state:\bvendor\b
 
-- Bucket: `noise`
-- Score: `1`
+- File: `plugins/vendor/derma/cl_vendor.lua`
+- Lines: `256-264`
 - Realm: `client`
-- Semantic target: `state:\bvendor\b`
+- Score: `1`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `1`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, client-side evidence, Derma/UI file, generic keyword match, query term overlap: vendor
 
 ```lua
   256: 	end
@@ -1081,16 +1286,13 @@
   264: end
 ```
 
-### 36. `plugins/vendor/entities/entities/nut_vendor/shared.lua` lines `1-12`
+### state:\bvendor\b
 
-- Bucket: `noise`
-- Score: `-15`
+- File: `plugins/vendor/entities/entities/nut_vendor/shared.lua`
+- Lines: `1-12`
 - Realm: `shared/conditional`
-- Semantic target: `state:\bvendor\b`
+- Score: `-15`
 - Classification: `state_or_ui_reference`
-- Match: `state` / `\bvendor\b`
-- Duplicate count: `1`
-- Reasons: low-signal classification: state_or_ui_reference, state/UI evidence, generic keyword match, query term overlap: vendor
 
 ```lua
     1: ENT.Type = "anim"
@@ -1106,44 +1308,3 @@
    11: }
    12: 
 ```
-
-## File Counts
-
-- `plugins/vendor/derma/cl_vendor.lua`: `11`
-- `plugins/vendor/entities/entities/nut_vendor/init.lua`: `9`
-- `plugins/vendor/cl_networking.lua`: `7`
-- `plugins/inventory/cl_hooks.lua`: `5`
-- `plugins/vendor/entities/entities/nut_vendor/shared.lua`: `3`
-- `gamemode/core/meta/inventory/cl_base_inventory.lua`: `1`
-
-## Semantic Target Counts
-
-- `state:\bvendor\b`: `6`
-- `hook:VendorMoneyUpdated`: `2`
-- `state:\bprice\b`: `2`
-- `net:OpenMyInv`: `1`
-- `hook:VendorOpened`: `1`
-- `hook:OnCharVarChanged`: `1`
-- `hook:StorageEntityRemoved`: `1`
-- `hook:VendorItemPriceUpdated`: `1`
-- `hook:VendorItemStockUpdated`: `1`
-- `net:nutInventoryData`: `1`
-- `net:nutVendorTrade`: `1`
-- `net:nutVendorExit`: `1`
-- `item_data:vendorQty`: `1`
-- `item_data:vendorBPrice`: `1`
-- `function:ENT:AddItemAndSetQty`: `1`
-- `netstream:itemSplitTake`: `1`
-- `hook:VendorSynchronized`: `1`
-- `ui_call:updatePrice`: `1`
-- `hook:CreateNewInventoryPanel`: `1`
-- `hook:VendorExited`: `1`
-- `state:SetText\s*\(`: `1`
-- `netstream:sendVendorInfo`: `1`
-- `function:ENT:SetItemInStock`: `1`
-- `hook:VendorClassUpdated`: `1`
-- `hook:StorageRestored`: `1`
-- `hook:OnCreateStoragePanel`: `1`
-- `netstream:vendorTradeInterface`: `1`
-- `function:PANEL:onVendorModeUpdated`: `1`
-- `hook:StorageInventorySet`: `1`

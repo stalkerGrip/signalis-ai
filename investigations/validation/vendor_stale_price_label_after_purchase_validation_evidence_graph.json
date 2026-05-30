@@ -1,0 +1,1109 @@
+{
+  "source": "E:\\signalis_ai\\investigations\\validation\\vendor_stale_price_label_after_purchase_validation_deduped.json",
+  "query": "vendor stale price label after purchase",
+  "summary": {
+    "nodes": 36,
+    "edges": 65,
+    "chains": 5
+  },
+  "nodes": [
+    {
+      "id": "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194",
+      "target": "hook:VendorMoneyUpdated",
+      "kind": "hook",
+      "label": "VendorMoneyUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 194,
+      "line_end": 214,
+      "score": 154,
+      "bucket": "critical",
+      "classification": "hook_listener_explicit",
+      "snippet": "  194: \t\tself.me:setMoney(newValue)\n  195: \tend\n  196: end\n  197: \n  198: function PANEL:listenForChanges()\n  199: \t-- Money changes.\n  200: \thook.Add(\"VendorMoneyUpdated\", self, self.onVendorMoneyUpdated)\n  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change."
+    },
+    {
+      "id": "net:OpenMyInv_plugins_inventory_cl_hooks_lua:85",
+      "target": "net:OpenMyInv",
+      "kind": "net",
+      "label": "OpenMyInv",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "score": 153,
+      "bucket": "critical",
+      "classification": "hook_listener_plugin_method",
+      "snippet": "   85: \n   86: \tnetstream.Start(\"inventorySetPanelStatus\", true)\n   87: \n   88: \treturn panel\n   89: end\n   90: \n   91: function PLUGIN:CreateNewInventoryPanel(client, parent)\n   92: \treturn showInvPanel(client:getChar():getInv(true), client, parent)\n   93: end\n   94: \n   95: function PLUGIN:CreateTargetNewInventoryPanel(target, invId, parent)\n   96: \treturn showInvPanel(invId, target, parent)\n   97: end\n   98: \n   99: net.Receive(\n  100: \t\"OpenMyInv\",\n  101: \tfunction()"
+    },
+    {
+      "id": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "target": "hook:VendorOpened",
+      "kind": "hook",
+      "label": "VendorOpened",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 44,
+      "line_end": 60,
+      "score": 149,
+      "bucket": "critical",
+      "classification": "network_receiver",
+      "snippet": "   44: \tif (IsValid(vendor)) then\n   45: \t\tnutVendorEnt = vendor\n   46: \t\thook.Run(\"VendorOpened\", vendor)\n   47: \tend\n   48: end)\n   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)"
+    },
+    {
+      "id": "hook:OnCharVarChanged_plugins_vendor_derma_cl_vendor_lua:201",
+      "target": "hook:OnCharVarChanged",
+      "kind": "hook",
+      "label": "OnCharVarChanged",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "score": 142,
+      "bucket": "critical",
+      "classification": "hook_listener_explicit",
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "id": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "target": "hook:VendorMoneyUpdated",
+      "kind": "hook",
+      "label": "VendorMoneyUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 53,
+      "line_end": 72,
+      "score": 140,
+      "bucket": "critical",
+      "classification": "hook_emitter",
+      "snippet": "   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: "
+    },
+    {
+      "id": "hook:StorageEntityRemoved_plugins_vendor_entities_entities_nut_vendor_init_lua:263",
+      "target": "hook:StorageEntityRemoved",
+      "kind": "hook",
+      "label": "StorageEntityRemoved",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 263,
+      "line_end": 279,
+      "score": 134,
+      "bucket": "critical",
+      "classification": "network_send_or_start",
+      "snippet": "  263: \n  264: function ENT:OnRemove()\n  265: \tNUT_VENDORS[self:EntIndex()] = nil\n  266: \n  267: \tif (self.receivers)\n  268: \tthen\n  269: \t\tnet.Start(\"nutVendorExit\")\n  270: \t\tnet.Send(self.receivers)\n  271: \tend\n  272: \n  273: \tif (!nut.entityDataLoaded || !PLUGIN.loadedData) then return end\n  274: \tif (nut.shuttingDown || self.nutIsSafe) then return end\n  275: \n  276: \tlocal inv = nut.inventory.instances[self.invId]\n  277: \tinv:delete()\n  278: \thook.Run(\"StorageEntityRemoved\", self, inv)\n  279: end"
+    },
+    {
+      "id": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "target": "hook:VendorItemPriceUpdated",
+      "kind": "hook",
+      "label": "VendorItemPriceUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 62,
+      "line_end": 80,
+      "score": 130,
+      "bucket": "critical",
+      "classification": "hook_emitter",
+      "snippet": "   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: \n   78: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   79: \tvendor.items[itemType][VENDOR_MODE] = value\n   80: "
+    },
+    {
+      "id": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "target": "hook:VendorItemStockUpdated",
+      "kind": "hook",
+      "label": "VendorItemStockUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "score": 125,
+      "bucket": "critical",
+      "classification": "hook_emitter",
+      "snippet": "   85: \tlocal itemType = net.ReadString()\n   86: \tlocal value = net.ReadUInt(32)\n   87: \n   88: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   89: \tvendor.items[itemType][VENDOR_STOCK] = value\n   90: \n   91: \thook.Run(\"VendorItemStockUpdated\", vendor, itemType, value)\n   92: end)\n   93: \n   94: addNetHandler(\"MaxStock\", function(vendor)\n   95: \tlocal itemType = net.ReadString()\n   96: \tlocal value = net.ReadUInt(32)\n   97: \tif (value == 0) then value = nil end\n   98: \n   99: \tvendor.items[itemType] = vendor.items[itemType] or {}\n  100: \tvendor.items[itemType][VENDOR_MAXSTOCK] = value\n  101: "
+    },
+    {
+      "id": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+      "target": "net:nutInventoryData",
+      "kind": "net",
+      "label": "nutInventoryData",
+      "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+      "realm": "client",
+      "line_start": 1,
+      "line_end": 13,
+      "score": 117,
+      "bucket": "critical",
+      "classification": "network_receiver",
+      "snippet": "    1: local Inventory = nut.Inventory\n    2: \n    3: net.Receive(\"nutInventoryData\", function()\n    4: \tlocal id = net.ReadType()\n    5: \tlocal key = net.ReadString()\n    6: \tlocal value = net.ReadType()\n    7: \tlocal instance = nut.inventory.instances[id]\n    8: \tif (not instance) then\n    9: \t\tErrorNoHalt(\"Got data \"..key..\" for non-existent instance \"..id)\n   10: \t\treturn\n   11: \tend\n   12: \n   13: \tlocal oldValue = instance.data[key]"
+    },
+    {
+      "id": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+      "target": "net:nutVendorTrade",
+      "kind": "net",
+      "label": "nutVendorTrade",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 67,
+      "line_end": 98,
+      "score": 115,
+      "bucket": "critical",
+      "classification": "network_send_or_start",
+      "snippet": "   75: \t}\n   76: \n   77: \tself:initializeItems()\n   78: end\n   79: \n   80: function PANEL:buyItemFromVendor(itemType)\n   81: \tnet.Start(\"nutVendorTrade\")\n   82: \t\tnet.WriteString(itemType)\n   83: \t\tnet.WriteBool(false)\n   84: \tnet.SendToServer()\n   85: end\n   86: \n   87: function PANEL:sellItemToVendor(itemType)\n   88: \tnet.Start(\"nutVendorTrade\")\n   89: \t\tnet.WriteString(itemType)\n   90: \t\tnet.WriteBool(true)\n   91: \tnet.SendToServer()"
+    },
+    {
+      "id": "net:nutVendorExit_plugins_vendor_derma_cl_vendor_lua:229",
+      "target": "net:nutVendorExit",
+      "kind": "net",
+      "label": "nutVendorExit",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 229,
+      "line_end": 245,
+      "score": 115,
+      "bucket": "critical",
+      "classification": "network_send_or_start",
+      "snippet": "  229: \tsurface.SetDrawColor(0, 0, 0, 100)\n  230: \tsurface.DrawRect(0, 0, w, h)\n  231: end\n  232: \n  233: function PANEL:OnRemove()\n  234: \tif (not self.noSendExit) then\n  235: \t\tnet.Start(\"nutVendorExit\")\n  236: \t\tnet.SendToServer()\n  237: \t\tself.noSendExit = true\n  238: \tend\n  239: \n  240: \tif (IsValid(nut.gui.vendorEditor)) then\n  241: \t\tnut.gui.vendorEditor:Remove()\n  242: \tend\n  243: \n  244: \tif (IsValid(nut.gui.vendorFactionEditor)) then\n  245: \t\tnut.gui.vendorFactionEditor:Remove()"
+    },
+    {
+      "id": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "item_data:vendorQty",
+      "kind": "item_data",
+      "label": "vendorQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 209,
+      "line_end": 228,
+      "score": 113,
+      "bucket": "critical",
+      "classification": "item_data_mutation",
+      "snippet": "  209: \t\t\t\tend\n  210: \t\t\tend\n  211: \t\tend\n  212: \tend\n  213: end\n  214: \n  215: function ENT:VendorItemSetData(item, qty, price, maxQty, client)\n  216: \titem:setData(\"vendorQty\", qty, client)\n  217: \titem:setData(\"vendorSPrice\", price, client)\n  218: \titem:setData(\"vendorMQty\", maxQty, client)\n  219: end\n  220: \n  221: function ENT:CanBuy(uniqueID, qty)\n  222: \tlocal vendorNeed = true\n  223: \tif (self.items[uniqueID]\n  224: \t\t&& self.items[uniqueID].maxQty\n  225: \t\t&& self.items[uniqueID].maxQty > 0"
+    },
+    {
+      "id": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "item_data:vendorBPrice",
+      "kind": "item_data",
+      "label": "vendorBPrice",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 290,
+      "line_end": 309,
+      "score": 103,
+      "bucket": "critical",
+      "classification": "item_data_mutation",
+      "snippet": "  290: function ENT:RemoveReceiverFromVendor(client)\n  291: \ttable.RemoveByValue(self.receivers, client)\n  292: \tclient.nutVendor = nil\n  293: \n  294: \tlocal clientItems = client:getChar():getInv():getItems()\n  295: \tfor k, v in pairs(clientItems) do\n  296: \t\tv:setData(\"vendorBPrice\", nil, client)\n  297: \t\tv:setData(\"vendorQty\", nil, client)\n  298: \t\tv:setData(\"vendorSPrice\", nil, client)\n  299: \t\tv:setData(\"vendorMQty\", nil, client)\n  300: \tend\n  301: end\n  302: \n  303: function ENT:ApplyVendorPos(pos1, pos2, pos3, ang1, ang2, ang3)\n  304: \tself:SetFirstPos(Vector(pos1))\n  305: \tself:SetSecPos(Vector(pos2))\n  306: \tself:SetThdPos(Vector(pos3))"
+    },
+    {
+      "id": "function:ENT:AddItemAndSetQty_plugins_vendor_entities_entities_nut_vendor_init_lua:149",
+      "target": "function:ENT:AddItemAndSetQty",
+      "kind": "function",
+      "label": "ENT:AddItemAndSetQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 149,
+      "line_end": 215,
+      "score": 95,
+      "bucket": "critical",
+      "classification": "item_data_mutation",
+      "snippet": "  149: function ENT:AddItemAndSetQty(inv, uniqueID, client)\n  150: \tinv:add(uniqueID, self.items[uniqueID].x, self.items[uniqueID].y, true)\n  151: \t:next(function(newItem)\n  152: \t\tif (newItem && !newItem.error && newItem.isStackable)\n  153: \t\tthen\n  154: \t\t\tnewItem:setQuantity(self.items[uniqueID].qty >= newItem.maxQuantity && newItem.maxQuantity || self.items[uniqueID].qty, client)\n  155: \t\t\tself:VendorItemSetData(newItem, self.items[uniqueID].qty, self.items[uniqueID].price, self.items[uniqueID].maxQty, client)\n  156: \t\tend\n  157: \n  158: \t\treturn newItem\n  159: \tend)\n  160: end\n  161: \n  162: function ENT:HandleStock(uniqueID, isRemove, qty, isStackable, client)\n  163: \tlocal inv = nut.inventory.instances[self.invId]\n  164: \tif (self.items[uniqueID])\n  165: \tthen"
+    },
+    {
+      "id": "netstream:itemSplitTake_plugins_inventory_cl_hooks_lua:181",
+      "target": "netstream:itemSplitTake",
+      "kind": "netstream",
+      "label": "itemSplitTake",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 181,
+      "line_end": 197,
+      "score": 87,
+      "bucket": "critical",
+      "classification": "ui_presentation_logic",
+      "snippet": "  181: \treturn text\n  182: end\n  183: \n  184: local function createButton(frame, text, x, y, w, h)\n  185: \tlocal button = frame:Add(\"DButton\")\n  186: \tbutton:SetFont(\"nutWriteFont\")\n  187: \tbutton:SetText(text)\n  188: \tbutton:SetPos(x, y)\n  189: \tbutton:SetSize(w, h)\n  190: \treturn button\n  191: end\n  192: \n  193: netstream.Hook(\n  194: \t\"itemSplitTake\",\n  195: \tfunction(qty, itemID, x, y, invID, hookName)\n  196: \t\tlocal splitFrame = vgui.Create(\"DFrame\")\n  197: \t\tsplitFrame:SetTitle(\"Разделить\")"
+    },
+    {
+      "id": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "hook:VendorSynchronized",
+      "kind": "hook",
+      "label": "VendorSynchronized",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 15,
+      "line_end": 42,
+      "score": 85,
+      "bucket": "critical",
+      "classification": "ui_presentation_logic",
+      "snippet": "   26: \t\tif (price < 0) then price = nil end\n   27: \t\tif (stock < 0) then stock = nil end\n   28: \t\tif (maxStock <= 0) then maxStock = nil end\n   29: \t\tif (mode < 0) then mode = nil end\n   30: \n   31: \t\tvendor.items[itemType] = {\n   32: \t\t\t[VENDOR_PRICE] = price,\n   33: \t\t\t[VENDOR_STOCK] = stock,\n   34: \t\t\t[VENDOR_MAXSTOCK] = maxStock,\n   35: \t\t\t[VENDOR_MODE] = mode\n   36: \t\t}\n   37: \tend\n   38: \n   39: \thook.Run(\"VendorSynchronized\", vendor)\n   40: end)\n   41: \n   42: net.Receive(\"nutVendorOpen\", function()"
+    },
+    {
+      "id": "state:_bprice_b_plugins_vendor_entities_entities_nut_vendor_init_lua:171",
+      "target": "state:\\bprice\\b",
+      "kind": "state",
+      "label": "\\bprice\\b",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 171,
+      "line_end": 215,
+      "score": 80,
+      "bucket": "critical",
+      "classification": "item_data_mutation",
+      "snippet": "  171: \t\t\t\tif (isStackable)\n  172: \t\t\t\tthen\n  173: \t\t\t\t\tlocal item = inv:getFirstItemOfType(uniqueID)\n  174: \t\t\t\t\tif (item)\n  175: \t\t\t\t\tthen\n  176: \t\t\t\t\t\titem:setQuantity(self.items[uniqueID].qty >= item.maxQuantity && item.maxQuantity || self.items[uniqueID].qty, client)\n  177: \t\t\t\t\t\tself:VendorItemSetData(item, self.items[uniqueID].qty, self.items[uniqueID].price, self.items[uniqueID].maxQty, client)\n  178: \t\t\t\t\telse\n  179: \t\t\t\t\t\tself:AddItemAndSetQty(inv, uniqueID, client)\n  180: \t\t\t\t\tend\n  181: \t\t\t\telse\n  182: \t\t\t\t\tinv:add(uniqueID, self.items[uniqueID].x, self.items[uniqueID].y)\n  183: \t\t\t\t\t:next(function(newItem)\n  184: \t\t\t\t\t\tif (newItem && !newItem.error)\n  185: \t\t\t\t\t\tthen\n  186: \t\t\t\t\t\t\tself:VendorItemSetData(newItem, self.items[uniqueID].qty, self.items[uniqueID].price, self.items[uniqueID].maxQty, client)\n  187: \t\t\t\t\t\tend"
+    },
+    {
+      "id": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "target": "ui_call:updatePrice",
+      "kind": "ui_call",
+      "label": "updatePrice",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 148,
+      "line_end": 183,
+      "score": 75,
+      "bucket": "critical",
+      "classification": "ui_presentation_logic",
+      "snippet": "  167: end\n  168: \n  169: function PANEL:onVendorMoneyUpdated(vendor, money)\n  170: \tself.vendor:setMoney(money)\n  171: end\n  172: \n  173: function PANEL:onVendorPriceUpdated(vendor, itemType, value)\n  174: \tlocal panel = self.items[self.vendor][itemType]\n  175: \tif (IsValid(panel)) then panel:updatePrice() end\n  176: \n  177: \tpanel = self.items[self.me][itemType]\n  178: \tif (IsValid(panel)) then panel:updatePrice() end\n  179: end\n  180: \n  181: function PANEL:onVendorModeUpdated(vendor, itemType, mode)\n  182: \tself:updateItem(itemType, self.vendor)\n  183: \tself:updateItem(itemType, self.me)"
+    },
+    {
+      "id": "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+      "target": "hook:CreateNewInventoryPanel",
+      "kind": "hook",
+      "label": "CreateNewInventoryPanel",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 101,
+      "line_end": 141,
+      "score": 74,
+      "bucket": "critical",
+      "classification": "hook_reference",
+      "snippet": "  114: \tfunction()\n  115: \t\tif (IsValid(currInvPanel))\n  116: \t\tthen\n  117: \t\t\treturn\n  118: \t\tend\n  119: \n  120: \t\tcurrInvPanel = PLUGIN:CreateNewInventoryPanel(LocalPlayer(), nil)\n  121: \tend)\n  122: \n  123: netstream.Hook(\"vendorTradeInterface\", function(vendor, invId)\n  124: \tlocal PADDING = 4\n  125: \tif (!IsValid(vendor)) then return end\n  126: \n  127: \tlocal localInv = LocalPlayer():getChar() && LocalPlayer():getChar():getInv(true)\n  128: \tlocal loadedInv = nut.inventory.instances[invId]\n  129: \tif (!loadedInv) then return end\n  130: "
+    },
+    {
+      "id": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "target": "hook:VendorExited",
+      "kind": "hook",
+      "label": "VendorExited",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 49,
+      "line_end": 68,
+      "score": 74,
+      "bucket": "critical",
+      "classification": "state_or_ui_reference",
+      "snippet": "   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end"
+    },
+    {
+      "id": "state:SetText_s_plugins_vendor_derma_cl_vendor_lua:20",
+      "target": "state:SetText\\s*\\(",
+      "kind": "state",
+      "label": "SetText\\s*\\(",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 20,
+      "line_end": 50,
+      "score": 73,
+      "bucket": "critical",
+      "classification": "ui_presentation_logic",
+      "snippet": "   20: \tself.buttons:Dock(TOP)\n   21: \tself.buttons:SetPaintBackground(false)\n   22: \tself.buttons:SetTall(36)\n   23: \n   24: \tself.leave = self.buttons:Add(\"DButton\")\n   25: \tself.leave:SetFont(\"nutVendorButtonFont\")\n   26: \tself.leave:SetText(L(\"leave\"):upper())\n   27: \tself.leave:SetTextColor(color_white)\n   28: \tself.leave:SetContentAlignment(9)\n   29: \tself.leave:SetExpensiveShadow(2, color_black)\n   30: \tself.leave.DoClick = function(button)\n   31: \t\tself:Remove()\n   32: \tend\n   33: \tself.leave:SizeToContents()\n   34: \tself.leave:SetPaintBackground(false)\n   35: \tself.leave.x = ScrW() * 0.5 - (self.leave:GetWide() * 0.5)\n   36: "
+    },
+    {
+      "id": "netstream:sendVendorInfo_plugins_vendor_entities_entities_nut_vendor_init_lua:117",
+      "target": "netstream:sendVendorInfo",
+      "kind": "netstream",
+      "label": "sendVendorInfo",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 117,
+      "line_end": 153,
+      "score": 67,
+      "bucket": "supporting",
+      "classification": "ui_presentation_logic",
+      "snippet": "  117: \t\tself:AddItemAndSetQty(inv, uniqueID, client)\n  118: \tend\n  119: \n  120: \tnetstream.Start(client, \"sendVendorInfo\", self:EntIndex(), self.factions, self.items)\n  121: end\n  122: \n  123: function ENT:SetItemToBuy(uniqueID, qty, price)\n  124: \tif (self.items[uniqueID])\n  125: \tthen\n  126: \t\tself.items[uniqueID].maxQty = tonumber(qty) || 0\n  127: \t\tself.items[uniqueID].buyPrice = tonumber(price)\n  128: \t\tself.items[uniqueID].qty = self.items[uniqueID].qty || 0\n  129: \telse\n  130: \t\tself.items[uniqueID] = {\n  131: \t\t\tmaxQty = tonumber(qty) || 0,\n  132: \t\t\tbuyPrice = tonumber(price),\n  133: \t\t\tqty = 0"
+    },
+    {
+      "id": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:47",
+      "target": "state:\\bvendor\\b",
+      "kind": "state",
+      "label": "\\bvendor\\b",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 47,
+      "line_end": 75,
+      "score": 60,
+      "bucket": "supporting",
+      "classification": "networked_var_read",
+      "snippet": "   54: \tself.vendor:SetWide(math.max(ScrW() * 0.25, 220))\n   55: \tself.vendor:SetPos(\n   56: \t\tScrW() * 0.5 - self.vendor:GetWide() - PADDING_HALF,\n   57: \t\tPADDING + self.leave:GetTall()\n   58: \t)\n   59: \tself.vendor:SetTall(ScrH() - self.vendor.y - PADDING)\n   60: \tself.vendor:setName(nutVendorEnt:getNetVar(\"name\"))\n   61: \tself.vendor:setMoney(nutVendorEnt:getMoney())\n   62: \n   63: \tself.me = self:Add(\"nutVendorTrader\")\n   64: \tself.me:SetSize(self.vendor:GetSize())\n   65: \tself.me:SetPos(ScrW() * 0.5 + PADDING_HALF, self.vendor.y)\n   66: \tself.me:setName(L\"you\")\n   67: \tself.me:setMoney(LocalPlayer():getChar():getMoney())\n   68: \n   69: \tself:listenForChanges()\n   70: \tself:nutListenForInventoryChanges(LocalPlayer():getChar():getInv())"
+    },
+    {
+      "id": "function:ENT:SetItemInStock_plugins_vendor_entities_entities_nut_vendor_init_lua:82",
+      "target": "function:ENT:SetItemInStock",
+      "kind": "function",
+      "label": "ENT:SetItemInStock",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 82,
+      "line_end": 111,
+      "score": 55,
+      "bucket": "supporting",
+      "classification": "ui_presentation_logic",
+      "snippet": "   88: function ENT:SetItemInStock(uniqueID, qty, price, x, y, client)\n   89: \tlocal numberQty = tonumber(qty || 1)\n   90: \tif (self.items[uniqueID])\n   91: \tthen\n   92: \t\tself.items[uniqueID].initQty = numberQty\n   93: \t\tself.items[uniqueID].qty = numberQty\n   94: \t\tself.items[uniqueID].price = tonumber(price)\n   95: \t\tself.items[uniqueID].x = tonumber(x)\n   96: \t\tself.items[uniqueID].y = tonumber(y)\n   97: \telse\n   98: \t\tself.items[uniqueID] = {\n   99: \t\t\tinitQty = numberQty,\n  100: \t\t\tqty = numberQty,\n  101: \t\t\tprice = tonumber(price),\n  102: \t\t\tx = tonumber(x),\n  103: \t\t\ty = tonumber(y)\n  104: \t\t}"
+    },
+    {
+      "id": "state:_bprice_b_plugins_vendor_entities_entities_nut_vendor_init_lua:231",
+      "target": "state:\\bprice\\b",
+      "kind": "state",
+      "label": "\\bprice\\b",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 231,
+      "line_end": 258,
+      "score": 55,
+      "bucket": "supporting",
+      "classification": "ui_presentation_logic",
+      "snippet": "  231: \treturn self.items[uniqueID] && self.items[uniqueID].buyPrice && vendorNeed\n  232: end\n  233: \n  234: function ENT:RemoveItem(uniqueID, isBuy)\n  235: \tif (isBuy && self.items[uniqueID])\n  236: \tthen\n  237: \t\tif (self.items[uniqueID].price)\n  238: \t\tthen\n  239: \t\t\tself.items[uniqueID].maxQty = nil\n  240: \t\t\tself.items[uniqueID].buyPrice = nil\n  241: \t\telse\n  242: \t\t\tself.items[uniqueID] = nil\n  243: \t\tend\n  244: \telse\n  245: \t\tif (self.items[uniqueID].buyPrice)\n  246: \t\tthen\n  247: \t\t\tself.items[uniqueID].initQty = nil"
+    },
+    {
+      "id": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorClassUpdated",
+      "kind": "hook",
+      "label": "VendorClassUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 4,
+      "line_end": 138,
+      "score": 50,
+      "bucket": "supporting",
+      "classification": "state_or_ui_reference",
+      "snippet": "   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: "
+    },
+    {
+      "id": "hook:StorageRestored_plugins_vendor_entities_entities_nut_vendor_shared_lua:66",
+      "target": "hook:StorageRestored",
+      "kind": "hook",
+      "label": "StorageRestored",
+      "file": "plugins/vendor/entities/entities/nut_vendor/shared.lua",
+      "realm": "shared/conditional",
+      "line_start": 66,
+      "line_end": 108,
+      "score": 50,
+      "bucket": "supporting",
+      "classification": "ui_presentation_logic",
+      "snippet": "   71: \t\t\t\t\thook.Run(\"StorageRestored\", self, inventory)\n   72: \t\t\t\t\tinventory.vendor = self\n   73: \n   74: \t\t\t\t\tif (next(self.items))\n   75: \t\t\t\t\tthen\n   76: \t\t\t\t\t\tfor k, v in pairs(self.items) do\n   77: \t\t\t\t\t\t\tif (v.price)\n   78: \t\t\t\t\t\t\tthen\n   79: \t\t\t\t\t\t\t\tv.qty = v.initQty\n   80: \t\t\t\t\t\t\t\tlocal item = inventory:getFirstItemOfType(k)\n   81: \t\t\t\t\t\t\t\tif (item && item.isStackable)\n   82: \t\t\t\t\t\t\t\tthen\n   83: \t\t\t\t\t\t\t\t\titem:setQuantity(item.maxQuantity, nil)\n   84: \t\t\t\t\t\t\t\telseif (!item)\n   85: \t\t\t\t\t\t\t\tthen\n   86: \t\t\t\t\t\t\t\t\tinventory:add(k, v.x, v.y)\n   87: \t\t\t\t\t\t\t\t\t:next(function(newItem)"
+    },
+    {
+      "id": "hook:OnCreateStoragePanel_plugins_inventory_cl_hooks_lua:131",
+      "target": "hook:OnCreateStoragePanel",
+      "kind": "hook",
+      "label": "OnCreateStoragePanel",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 131,
+      "line_end": 171,
+      "score": 47,
+      "bucket": "supporting",
+      "classification": "state_or_ui_reference",
+      "snippet": "  155: \t\t\tnutStorageBase:exitStorage()\n  156: \t\t\tlocal otherPanel =\n  157: \t\t\t\tpanel == localParent and storageInvPanel or localParent\n  158: \t\t\tif (IsValid(otherPanel)) then otherPanel:Remove() end\n  159: \t\tend\n  160: \n  161: \t\tnetstream.Start(\"removeReceiverFromVendor\", vendor:EntIndex())\n  162: \n  163: \t\tnetstream.Start(\"inventorySetPanelStatus\", false)\n  164: \tend\n  165: \n  166: \thook.Run(\"OnCreateStoragePanel\", localInvPanel, storageInvPanel, storage)\n  167: \n  168: \tlocalInvPanel.MainInvPanel.pair = storageInvPanel.mainInvPanel\n  169: \tstorageInvPanel.mainInvPanel.pair = localInvPanel.MainInvPanel\n  170: \n  171: \tlocalParent.OnRemove = exitStorageOnRemove"
+    },
+    {
+      "id": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "target": "netstream:vendorTradeInterface",
+      "kind": "netstream",
+      "label": "vendorTradeInterface",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 117,
+      "line_end": 146,
+      "score": 44,
+      "bucket": "supporting",
+      "classification": "state_or_ui_reference",
+      "snippet": "  117: \t\t\treturn\n  118: \t\tend\n  119: \n  120: \t\tcurrInvPanel = PLUGIN:CreateNewInventoryPanel(LocalPlayer(), nil)\n  121: \tend)\n  122: \n  123: netstream.Hook(\"vendorTradeInterface\", function(vendor, invId)\n  124: \tlocal PADDING = 4\n  125: \tif (!IsValid(vendor)) then return end\n  126: \n  127: \tlocal localInv = LocalPlayer():getChar() && LocalPlayer():getChar():getInv(true)\n  128: \tlocal loadedInv = nut.inventory.instances[invId]\n  129: \tif (!loadedInv) then return end\n  130: \n  131: \tlocal localInvPanel = PLUGIN:CreateNewInventoryPanel(LocalPlayer(), nil)\n  132: \tlocal localParent = localInvPanel:GetParent()\n  133: \tlocal storageInvPanel = vgui.Create(\"vendor_grid_inventory\")"
+    },
+    {
+      "id": "function:PANEL:onVendorModeUpdated_plugins_vendor_derma_cl_vendor_lua:163",
+      "target": "function:PANEL:onVendorModeUpdated",
+      "kind": "function",
+      "label": "PANEL:onVendorModeUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 163,
+      "line_end": 197,
+      "score": 40,
+      "bucket": "supporting",
+      "classification": "state_or_ui_reference",
+      "snippet": "  163: \t\t\tif (not IsValid(panel)) then continue end\n  164: \t\t\tpanel:updatePrice()\n  165: \t\tend\n  166: \tend\n  167: end\n  168: \n  169: function PANEL:onVendorMoneyUpdated(vendor, money)\n  170: \tself.vendor:setMoney(money)\n  171: end\n  172: \n  173: function PANEL:onVendorPriceUpdated(vendor, itemType, value)\n  174: \tlocal panel = self.items[self.vendor][itemType]\n  175: \tif (IsValid(panel)) then panel:updatePrice() end\n  176: \n  177: \tpanel = self.items[self.me][itemType]\n  178: \tif (IsValid(panel)) then panel:updatePrice() end\n  179: end"
+    },
+    {
+      "id": "hook:StorageInventorySet_plugins_vendor_entities_entities_nut_vendor_shared_lua:116",
+      "target": "hook:StorageInventorySet",
+      "kind": "hook",
+      "label": "StorageInventorySet",
+      "file": "plugins/vendor/entities/entities/nut_vendor/shared.lua",
+      "realm": "shared/conditional",
+      "line_start": 116,
+      "line_end": 132,
+      "score": 12,
+      "bucket": "noise",
+      "classification": "state_or_ui_reference",
+      "snippet": "  116: \t\t\t:next(\n  117: \t\t\tfunction(inventory)\n  118: \t\t\t\tif (IsValid(self))\n  119: \t\t\t\tthen\n  120: \t\t\t\t\tself.invId = inventory:getID()\n  121: \t\t\t\t\thook.Run(\"StorageInventorySet\", self, inventory)\n  122: \t\t\t\t\tinventory.vendor = self\n  123: \t\t\t\tend\n  124: \t\t\tend,\n  125: \t\t\tfunction(err)\n  126: \t\t\t\tErrorNoHalt(\"Unable to create lut entity\\n\".. err ..\"\\n\")\n  127: \t\t\t\tif (IsValid(self)) then self:Remove() end\n  128: \t\t\tend)\n  129: \t\tend\n  130: \t\n  131: \t\tself:SetMoney(self:GetMoney() == 0 && 5000 || self:GetMoney())\n  132: \t\tself.factions = self.factions || {}"
+    },
+    {
+      "id": "state:_bvendor_b_plugins_vendor_entities_entities_nut_vendor_init_lua:327",
+      "target": "state:\\bvendor\\b",
+      "kind": "state",
+      "label": "\\bvendor\\b",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 327,
+      "line_end": 343,
+      "score": 5,
+      "bucket": "noise",
+      "classification": "state_or_ui_reference",
+      "snippet": "  327: \tthen\n  328: \t\treturn\n  329: \tend\n  330: \n  331: \tself:SetPos(poss[newPos])\n  332: \tself:SetAngles(angs[newPos])\n  333: \tprint(\"Vendor \" .. self:GetVendorName() .. \" moved to \" .. tostring(poss[newPos]))\n  334: end\n  335: \n  336: function ENT:MakeMovable()\n  337: \tself:SetIsMovable(!self:GetIsMovable())\n  338: \n  339: \tif (self:GetIsMovable())\n  340: \tthen\n  341: \t\tself:SetCustomTimer(\n  342: \t\t\t\"moveVendor::\" .. self:EntIndex(),\n  343: \t\t\t3600,"
+    },
+    {
+      "id": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:1",
+      "target": "state:\\bvendor\\b",
+      "kind": "state",
+      "label": "\\bvendor\\b",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 1,
+      "line_end": 21,
+      "score": 1,
+      "bucket": "noise",
+      "classification": "state_or_ui_reference",
+      "snippet": "    1: local PANEL = {}\n    2: \n    3: local PADDING = 64\n    4: local PADDING_HALF = PADDING / 2\n    5: \n    6: function PANEL:Init()\n    7: \tif (IsValid(nut.gui.vendor)) then\n    8: \t\tnut.gui.vendor.noSendExit = true\n    9: \t\tnut.gui.vendor:Remove()\n   10: \tend\n   11: \tnut.gui.vendor = self\n   12: \n   13: \tself:SetSize(ScrW(), ScrH())\n   14: \tself:MakePopup()\n   15: \tself:SetAlpha(0)\n   16: \tself:AlphaTo(255, 0.2, 0)\n   17: "
+    },
+    {
+      "id": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:98",
+      "target": "state:\\bvendor\\b",
+      "kind": "state",
+      "label": "\\bvendor\\b",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 98,
+      "line_end": 126,
+      "score": 1,
+      "bucket": "noise",
+      "classification": "state_or_ui_reference",
+      "snippet": "   98: \n   99: \t\tif (mode ~= VENDOR_SELLONLY) then\n  100: \t\t\tself:updateItem(itemType, self.me):setIsSelling(true)\n  101: \t\tend\n  102: \n  103: \t\tif (mode ~= VENDOR_BUYONLY) then\n  104: \t\t\tself:updateItem(itemType, self.vendor)\n  105: \t\tend\n  106: \tend\n  107: end\n  108: \n  109: function PANEL:shouldItemBeVisible(itemType, parent)\n  110: \tlocal mode = nutVendorEnt:getTradeMode(itemType)\n  111: \n  112: \tif (parent == self.me and mode == VENDOR_SELLONLY) then\n  113: \t\treturn false\n  114: \tend"
+    },
+    {
+      "id": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:256",
+      "target": "state:\\bvendor\\b",
+      "kind": "state",
+      "label": "\\bvendor\\b",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 256,
+      "line_end": 264,
+      "score": 1,
+      "bucket": "noise",
+      "classification": "state_or_ui_reference",
+      "snippet": "  256: \tend\n  257: end\n  258: \n  259: \n  260: vgui.Register(\"nutVendor\", PANEL, \"EditablePanel\")\n  261: \n  262: if (IsValid(nut.gui.vendor)) then\n  263: \tvgui.Create(\"nutVendor\")\n  264: end"
+    },
+    {
+      "id": "state:_bvendor_b_plugins_vendor_entities_entities_nut_vendor_shared_lua:1",
+      "target": "state:\\bvendor\\b",
+      "kind": "state",
+      "label": "\\bvendor\\b",
+      "file": "plugins/vendor/entities/entities/nut_vendor/shared.lua",
+      "realm": "shared/conditional",
+      "line_start": 1,
+      "line_end": 12,
+      "score": -15,
+      "bucket": "noise",
+      "classification": "state_or_ui_reference",
+      "snippet": "    1: ENT.Type = \"anim\"\n    2: ENT.PrintName = \"Vendor\"\n    3: ENT.Category = \"NutScript\"\n    4: ENT.Spawnable = true\n    5: ENT.AdminOnly = true\n    6: ENT.isVendor = true\n    7: ENT.invType = \"grid\"\n    8: ENT.invData = {\n    9: \tw = 10,\n   10: \th = 9,\n   11: }\n   12: "
+    }
+  ],
+  "edges": [
+    {
+      "source": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+      "target": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:98",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:98",
+      "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:OnCharVarChanged_plugins_vendor_derma_cl_vendor_lua:201",
+      "target": "net:nutVendorExit_plugins_vendor_derma_cl_vendor_lua:229",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "net:nutVendorExit_plugins_vendor_derma_cl_vendor_lua:229",
+      "target": "state:_bvendor_b_plugins_vendor_derma_cl_vendor_lua:256",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "net:OpenMyInv_plugins_inventory_cl_hooks_lua:85",
+      "target": "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:OnCreateStoragePanel_plugins_inventory_cl_hooks_lua:131",
+      "target": "netstream:itemSplitTake_plugins_inventory_cl_hooks_lua:181",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "function:ENT:SetItemInStock_plugins_vendor_entities_entities_nut_vendor_init_lua:82",
+      "target": "netstream:sendVendorInfo_plugins_vendor_entities_entities_nut_vendor_init_lua:117",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "state:_bprice_b_plugins_vendor_entities_entities_nut_vendor_init_lua:231",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "state:_bprice_b_plugins_vendor_entities_entities_nut_vendor_init_lua:231",
+      "target": "hook:StorageEntityRemoved_plugins_vendor_entities_entities_nut_vendor_init_lua:263",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:StorageEntityRemoved_plugins_vendor_entities_entities_nut_vendor_init_lua:263",
+      "target": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "state:_bvendor_b_plugins_vendor_entities_entities_nut_vendor_init_lua:327",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "state:_bvendor_b_plugins_vendor_entities_entities_nut_vendor_shared_lua:1",
+      "target": "hook:StorageRestored_plugins_vendor_entities_entities_nut_vendor_shared_lua:66",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:StorageRestored_plugins_vendor_entities_entities_nut_vendor_shared_lua:66",
+      "target": "hook:StorageInventorySet_plugins_vendor_entities_entities_nut_vendor_shared_lua:116",
+      "kind": "file_order",
+      "confidence": "low",
+      "reason": "same file and source order"
+    },
+    {
+      "source": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194",
+      "kind": "hook_dispatch",
+      "confidence": "high",
+      "reason": "hook.Run dispatches to listener for VendorMoneyUpdated"
+    },
+    {
+      "source": "net:OpenMyInv_plugins_inventory_cl_hooks_lua:85",
+      "target": "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "target": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "hook:VendorClassUpdated_plugins_vendor_cl_networking_lua:4",
+      "target": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "target": "hook:OnCreateStoragePanel_plugins_inventory_cl_hooks_lua:131",
+      "kind": "network_handler_emits_hook",
+      "confidence": "medium",
+      "reason": "network handler and hook emission are local in client networking file"
+    },
+    {
+      "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "target": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "target": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "kind": "state_mutation_to_sync_event",
+      "confidence": "medium",
+      "reason": "vendor item data mutation is related to vendor sync/update hook"
+    },
+    {
+      "source": "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194",
+      "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "kind": "hook_to_ui_refresh",
+      "confidence": "high",
+      "reason": "vendor update hook leads to vendor panel price refresh"
+    },
+    {
+      "source": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+      "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "kind": "hook_to_ui_refresh",
+      "confidence": "high",
+      "reason": "vendor update hook leads to vendor panel price refresh"
+    },
+    {
+      "source": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+      "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "kind": "hook_to_ui_refresh",
+      "confidence": "high",
+      "reason": "vendor update hook leads to vendor panel price refresh"
+    },
+    {
+      "source": "hook:VendorItemStockUpdated_plugins_vendor_cl_networking_lua:85",
+      "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "kind": "hook_to_ui_refresh",
+      "confidence": "high",
+      "reason": "vendor update hook leads to vendor panel price refresh"
+    },
+    {
+      "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+      "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+      "kind": "hook_to_ui_refresh",
+      "confidence": "high",
+      "reason": "vendor update hook leads to vendor panel price refresh"
+    },
+    {
+      "source": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+      "target": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+      "target": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+      "target": "function:ENT:AddItemAndSetQty_plugins_vendor_entities_entities_nut_vendor_init_lua:149",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+      "target": "state:_bprice_b_plugins_vendor_entities_entities_nut_vendor_init_lua:171",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "target": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "target": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "target": "function:ENT:AddItemAndSetQty_plugins_vendor_entities_entities_nut_vendor_init_lua:149",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "target": "state:_bprice_b_plugins_vendor_entities_entities_nut_vendor_init_lua:171",
+      "kind": "trade_to_vendor_state",
+      "confidence": "medium",
+      "reason": "vendor trade path connects to server-side vendor item data evidence"
+    },
+    {
+      "source": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+      "target": "net:OpenMyInv_plugins_inventory_cl_hooks_lua:85",
+      "kind": "inventory_sync_to_ui",
+      "confidence": "medium",
+      "reason": "inventory data receiver is related to client inventory UI evidence"
+    },
+    {
+      "source": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+      "target": "netstream:itemSplitTake_plugins_inventory_cl_hooks_lua:181",
+      "kind": "inventory_sync_to_ui",
+      "confidence": "medium",
+      "reason": "inventory data receiver is related to client inventory UI evidence"
+    },
+    {
+      "source": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+      "target": "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+      "kind": "inventory_sync_to_ui",
+      "confidence": "medium",
+      "reason": "inventory data receiver is related to client inventory UI evidence"
+    },
+    {
+      "source": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+      "target": "hook:OnCreateStoragePanel_plugins_inventory_cl_hooks_lua:131",
+      "kind": "inventory_sync_to_ui",
+      "confidence": "medium",
+      "reason": "inventory data receiver is related to client inventory UI evidence"
+    },
+    {
+      "source": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+      "target": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+      "kind": "inventory_sync_to_ui",
+      "confidence": "medium",
+      "reason": "inventory data receiver is related to client inventory UI evidence"
+    }
+  ],
+  "chains": [
+    {
+      "id": "vendor_price_update",
+      "title": "Vendor Price Update / UI Refresh",
+      "nodes": [
+        "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+        "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+        "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+        "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148"
+      ],
+      "edges": [
+        {
+          "source": "net:nutVendorTrade_plugins_vendor_derma_cl_vendor_lua:67",
+          "target": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "trade and item metadata evidence connect to vendor price hook and UI refresh"
+        },
+        {
+          "source": "item_data:vendorQty_plugins_vendor_entities_entities_nut_vendor_init_lua:209",
+          "target": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "trade and item metadata evidence connect to vendor price hook and UI refresh"
+        },
+        {
+          "source": "hook:VendorItemPriceUpdated_plugins_vendor_cl_networking_lua:62",
+          "target": "ui_call:updatePrice_plugins_vendor_derma_cl_vendor_lua:148",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "trade and item metadata evidence connect to vendor price hook and UI refresh"
+        }
+      ],
+      "confidence": "medium",
+      "reason": "trade and item metadata evidence connect to vendor price hook and UI refresh"
+    },
+    {
+      "id": "vendor_exit_metadata_clear",
+      "title": "Vendor Exit / Metadata Clear",
+      "nodes": [
+        "net:nutVendorExit_plugins_vendor_derma_cl_vendor_lua:229",
+        "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+        "hook:VendorExited_plugins_vendor_cl_networking_lua:49"
+      ],
+      "edges": [
+        {
+          "source": "net:nutVendorExit_plugins_vendor_derma_cl_vendor_lua:229",
+          "target": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "vendor exit evidence connects to vendor presentation metadata clearing"
+        },
+        {
+          "source": "item_data:vendorBPrice_plugins_vendor_entities_entities_nut_vendor_init_lua:290",
+          "target": "hook:VendorExited_plugins_vendor_cl_networking_lua:49",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "vendor exit evidence connects to vendor presentation metadata clearing"
+        }
+      ],
+      "confidence": "medium",
+      "reason": "vendor exit evidence connects to vendor presentation metadata clearing"
+    },
+    {
+      "id": "vendor_open_sync",
+      "title": "Vendor Open / Initial Sync",
+      "nodes": [
+        "netstream:sendVendorInfo_plugins_vendor_entities_entities_nut_vendor_init_lua:117",
+        "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+        "hook:VendorOpened_plugins_vendor_cl_networking_lua:44"
+      ],
+      "edges": [
+        {
+          "source": "netstream:sendVendorInfo_plugins_vendor_entities_entities_nut_vendor_init_lua:117",
+          "target": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "vendor info sync and vendor opened hook are both client-side sync/open evidence"
+        },
+        {
+          "source": "hook:VendorSynchronized_plugins_vendor_cl_networking_lua:15",
+          "target": "hook:VendorOpened_plugins_vendor_cl_networking_lua:44",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "vendor info sync and vendor opened hook are both client-side sync/open evidence"
+        }
+      ],
+      "confidence": "medium",
+      "reason": "vendor info sync and vendor opened hook are both client-side sync/open evidence"
+    },
+    {
+      "id": "inventory_ui_sync",
+      "title": "Inventory UI Sync",
+      "nodes": [
+        "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+        "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+        "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117"
+      ],
+      "edges": [
+        {
+          "source": "net:nutInventoryData_gamemode_core_meta_inventory_cl_base_inventory_lua:1",
+          "target": "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "inventory data and inventory panel creation connect to vendor trade interface"
+        },
+        {
+          "source": "hook:CreateNewInventoryPanel_plugins_inventory_cl_hooks_lua:101",
+          "target": "netstream:vendorTradeInterface_plugins_inventory_cl_hooks_lua:117",
+          "kind": "inferred_runtime_chain",
+          "confidence": "medium",
+          "reason": "inventory data and inventory panel creation connect to vendor trade interface"
+        }
+      ],
+      "confidence": "medium",
+      "reason": "inventory data and inventory panel creation connect to vendor trade interface"
+    },
+    {
+      "id": "hook_dispatch_VendorMoneyUpdated",
+      "title": "Hook Dispatch: VendorMoneyUpdated",
+      "nodes": [
+        "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+        "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194"
+      ],
+      "edges": [
+        {
+          "source": "hook:VendorMoneyUpdated_plugins_vendor_cl_networking_lua:53",
+          "target": "hook:VendorMoneyUpdated_plugins_vendor_derma_cl_vendor_lua:194",
+          "kind": "hook_dispatch",
+          "confidence": "high",
+          "reason": "hook.Run dispatches to listener for VendorMoneyUpdated"
+        }
+      ],
+      "confidence": "high",
+      "reason": "hook.Run dispatches to listener for VendorMoneyUpdated"
+    }
+  ]
+}

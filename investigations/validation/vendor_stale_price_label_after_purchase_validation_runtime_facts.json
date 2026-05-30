@@ -1,0 +1,1283 @@
+{
+  "source": "E:\\signalis_ai\\investigations\\validation\\vendor_stale_price_label_after_purchase_validation_deduped.json",
+  "query": "vendor stale price label after purchase",
+  "summary": {
+    "facts_total": 63,
+    "by_type": {
+      "hook_emit": 14,
+      "hook_listener": 13,
+      "vendor_network_handler": 9,
+      "network_receive": 8,
+      "network_send_start": 7,
+      "item_data_mutation": 7,
+      "ui_text_update": 2,
+      "ui_refresh_call": 2,
+      "function_context": 1
+    },
+    "by_realm": {
+      "client": 50,
+      "unknown": 11,
+      "shared/conditional": 2
+    },
+    "by_file": {
+      "plugins/vendor/cl_networking.lua": 22,
+      "plugins/vendor/derma/cl_vendor.lua": 16,
+      "plugins/inventory/cl_hooks.lua": 11,
+      "plugins/vendor/entities/entities/nut_vendor/init.lua": 11,
+      "plugins/vendor/entities/entities/nut_vendor/shared.lua": 2,
+      "gamemode/core/meta/inventory/cl_base_inventory.lua": 1
+    }
+  },
+  "facts": [
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorMoneyUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 194,
+      "line_end": 214,
+      "confidence": "high",
+      "evidence_score": 154,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onVendorMoneyUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "  194: \t\tself.me:setMoney(newValue)\n  195: \tend\n  196: end\n  197: \n  198: function PANEL:listenForChanges()\n  199: \t-- Money changes.\n  200: \thook.Add(\"VendorMoneyUpdated\", self, self.onVendorMoneyUpdated)\n  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change."
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemStockUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 194,
+      "line_end": 214,
+      "confidence": "high",
+      "evidence_score": 154,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onItemStockUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "  194: \t\tself.me:setMoney(newValue)\n  195: \tend\n  196: end\n  197: \n  198: function PANEL:listenForChanges()\n  199: \t-- Money changes.\n  200: \thook.Add(\"VendorMoneyUpdated\", self, self.onVendorMoneyUpdated)\n  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change."
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemPriceUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 194,
+      "line_end": 214,
+      "confidence": "high",
+      "evidence_score": 154,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onVendorPriceUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "  194: \t\tself.me:setMoney(newValue)\n  195: \tend\n  196: end\n  197: \n  198: function PANEL:listenForChanges()\n  199: \t-- Money changes.\n  200: \thook.Add(\"VendorMoneyUpdated\", self, self.onVendorMoneyUpdated)\n  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change."
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemMaxStockUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 194,
+      "line_end": 214,
+      "confidence": "high",
+      "evidence_score": 154,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onItemStockUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "  194: \t\tself.me:setMoney(newValue)\n  195: \tend\n  196: end\n  197: \n  198: function PANEL:listenForChanges()\n  199: \t-- Money changes.\n  200: \thook.Add(\"VendorMoneyUpdated\", self, self.onVendorMoneyUpdated)\n  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change."
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "OnCharVarChanged",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 194,
+      "line_end": 214,
+      "confidence": "high",
+      "evidence_score": 154,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onCharVarChanged",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "  194: \t\tself.me:setMoney(newValue)\n  195: \tend\n  196: end\n  197: \n  198: function PANEL:listenForChanges()\n  199: \t-- Money changes.\n  200: \thook.Add(\"VendorMoneyUpdated\", self, self.onVendorMoneyUpdated)\n  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change."
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "inventorySetPanelStatus",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "confidence": "medium",
+      "evidence_score": 153,
+      "evidence_classification": "hook_listener_plugin_method",
+      "details": {
+        "network_api": "netstream",
+        "sender_function": null,
+        "source_semantic_target": "net:OpenMyInv",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   85: \n   86: \tnetstream.Start(\"inventorySetPanelStatus\", true)\n   87: \n   88: \treturn panel\n   89: end\n   90: \n   91: function PLUGIN:CreateNewInventoryPanel(client, parent)\n   92: \treturn showInvPanel(client:getChar():getInv(true), client, parent)\n   93: end\n   94: \n   95: function PLUGIN:CreateTargetNewInventoryPanel(target, invId, parent)\n   96: \treturn showInvPanel(invId, target, parent)\n   97: end\n   98: \n   99: net.Receive(\n  100: \t\"OpenMyInv\",\n  101: \tfunction()"
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "OpenMyInv",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "confidence": "high",
+      "evidence_score": 153,
+      "evidence_classification": "hook_listener_plugin_method",
+      "details": {
+        "network_api": "gmod_net",
+        "receiver_function": null,
+        "source_semantic_target": "net:OpenMyInv",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   85: \n   86: \tnetstream.Start(\"inventorySetPanelStatus\", true)\n   87: \n   88: \treturn panel\n   89: end\n   90: \n   91: function PLUGIN:CreateNewInventoryPanel(client, parent)\n   92: \treturn showInvPanel(client:getChar():getInv(true), client, parent)\n   93: end\n   94: \n   95: function PLUGIN:CreateTargetNewInventoryPanel(target, invId, parent)\n   96: \treturn showInvPanel(invId, target, parent)\n   97: end\n   98: \n   99: net.Receive(\n  100: \t\"OpenMyInv\",\n  101: \tfunction()"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "CreateTargetNewInventoryPanel",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "confidence": "medium",
+      "evidence_score": 153,
+      "evidence_classification": "hook_listener_plugin_method",
+      "details": {
+        "listener_owner": "PLUGIN",
+        "listener_function": "PLUGIN:CreateTargetNewInventoryPanel",
+        "registration_model": "NutScript implicit plugin/schema hook listener",
+        "source_semantic_target": "net:OpenMyInv",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   85: \n   86: \tnetstream.Start(\"inventorySetPanelStatus\", true)\n   87: \n   88: \treturn panel\n   89: end\n   90: \n   91: function PLUGIN:CreateNewInventoryPanel(client, parent)\n   92: \treturn showInvPanel(client:getChar():getInv(true), client, parent)\n   93: end\n   94: \n   95: function PLUGIN:CreateTargetNewInventoryPanel(target, invId, parent)\n   96: \treturn showInvPanel(invId, target, parent)\n   97: end\n   98: \n   99: net.Receive(\n  100: \t\"OpenMyInv\",\n  101: \tfunction()"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "CreateNewInventoryPanel",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "confidence": "medium",
+      "evidence_score": 153,
+      "evidence_classification": "hook_listener_plugin_method",
+      "details": {
+        "listener_owner": "PLUGIN",
+        "listener_function": "PLUGIN:CreateNewInventoryPanel",
+        "registration_model": "NutScript implicit plugin/schema hook listener",
+        "source_semantic_target": "net:OpenMyInv",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   85: \n   86: \tnetstream.Start(\"inventorySetPanelStatus\", true)\n   87: \n   88: \treturn panel\n   89: end\n   90: \n   91: function PLUGIN:CreateNewInventoryPanel(client, parent)\n   92: \treturn showInvPanel(client:getChar():getInv(true), client, parent)\n   93: end\n   94: \n   95: function PLUGIN:CreateTargetNewInventoryPanel(target, invId, parent)\n   96: \treturn showInvPanel(invId, target, parent)\n   97: end\n   98: \n   99: net.Receive(\n  100: \t\"OpenMyInv\",\n  101: \tfunction()"
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Money",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 44,
+      "line_end": 60,
+      "confidence": "high",
+      "evidence_score": 149,
+      "evidence_classification": "network_receiver",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorOpened",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   44: \tif (IsValid(vendor)) then\n   45: \t\tnutVendorEnt = vendor\n   46: \t\thook.Run(\"VendorOpened\", vendor)\n   47: \tend\n   48: end)\n   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)"
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "nutVendorExit",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 44,
+      "line_end": 60,
+      "confidence": "high",
+      "evidence_score": 149,
+      "evidence_classification": "network_receiver",
+      "details": {
+        "network_api": "gmod_net",
+        "receiver_function": null,
+        "source_semantic_target": "hook:VendorOpened",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   44: \tif (IsValid(vendor)) then\n   45: \t\tnutVendorEnt = vendor\n   46: \t\thook.Run(\"VendorOpened\", vendor)\n   47: \tend\n   48: end)\n   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorOpened",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 44,
+      "line_end": 60,
+      "confidence": "high",
+      "evidence_score": 149,
+      "evidence_classification": "network_receiver",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorOpened",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   44: \tif (IsValid(vendor)) then\n   45: \t\tnutVendorEnt = vendor\n   46: \t\thook.Run(\"VendorOpened\", vendor)\n   47: \tend\n   48: end)\n   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorMoneyUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 44,
+      "line_end": 60,
+      "confidence": "high",
+      "evidence_score": 149,
+      "evidence_classification": "network_receiver",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorOpened",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   44: \tif (IsValid(vendor)) then\n   45: \t\tnutVendorEnt = vendor\n   46: \t\thook.Run(\"VendorOpened\", vendor)\n   47: \tend\n   48: end)\n   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorExited",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 44,
+      "line_end": 60,
+      "confidence": "high",
+      "evidence_score": 149,
+      "evidence_classification": "network_receiver",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorOpened",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   44: \tif (IsValid(vendor)) then\n   45: \t\tnutVendorEnt = vendor\n   46: \t\thook.Run(\"VendorOpened\", vendor)\n   47: \tend\n   48: end)\n   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemStockUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "confidence": "high",
+      "evidence_score": 142,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onItemStockUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:OnCharVarChanged",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemPriceUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "confidence": "high",
+      "evidence_score": 142,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onVendorPriceUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:OnCharVarChanged",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemModeUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "confidence": "high",
+      "evidence_score": 142,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onVendorModeUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:OnCharVarChanged",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorItemMaxStockUpdated",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "confidence": "high",
+      "evidence_score": 142,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onItemStockUpdated",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:OnCharVarChanged",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "VendorEdited",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "confidence": "high",
+      "evidence_score": 142,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onVendorPropEdited",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:OnCharVarChanged",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "fact_type": "hook_listener",
+      "target": "OnCharVarChanged",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 201,
+      "line_end": 217,
+      "confidence": "high",
+      "evidence_score": 142,
+      "evidence_classification": "hook_listener_explicit",
+      "details": {
+        "listener_owner": "self",
+        "listener_function": "self.onCharVarChanged",
+        "enclosing_function": null,
+        "source_semantic_target": "hook:OnCharVarChanged",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  201: \thook.Add(\"OnCharVarChanged\", self, self.onCharVarChanged)\n  202: \n  203: \t-- Price change.\n  204: \thook.Add(\"VendorItemPriceUpdated\", self, self.onVendorPriceUpdated)\n  205: \n  206: \t-- Item stock changes.\n  207: \thook.Add(\"VendorItemStockUpdated\", self, self.onItemStockUpdated)\n  208: \thook.Add(\"VendorItemMaxStockUpdated\", self, self.onItemStockUpdated)\n  209: \n  210: \t-- Item mode change.\n  211: \thook.Add(\"VendorItemModeUpdated\", self, self.onVendorModeUpdated)\n  212: \n  213: \t-- Name change.\n  214: \thook.Add(\"VendorEdited\", self, self.onVendorPropEdited)\n  215: end\n  216: \n  217: function PANEL:InventoryItemAdded(item)"
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Price",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 53,
+      "line_end": 72,
+      "confidence": "high",
+      "evidence_score": 140,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: "
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Money",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 53,
+      "line_end": 72,
+      "confidence": "high",
+      "evidence_score": 140,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: "
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorMoneyUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 53,
+      "line_end": 72,
+      "confidence": "high",
+      "evidence_score": 140,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorMoneyUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: "
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "nutVendorExit",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 263,
+      "line_end": 279,
+      "confidence": "high",
+      "evidence_score": 134,
+      "evidence_classification": "network_send_or_start",
+      "details": {
+        "network_api": "gmod_net",
+        "sender_function": null,
+        "source_semantic_target": "hook:StorageEntityRemoved",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  263: \n  264: function ENT:OnRemove()\n  265: \tNUT_VENDORS[self:EntIndex()] = nil\n  266: \n  267: \tif (self.receivers)\n  268: \tthen\n  269: \t\tnet.Start(\"nutVendorExit\")\n  270: \t\tnet.Send(self.receivers)\n  271: \tend\n  272: \n  273: \tif (!nut.entityDataLoaded || !PLUGIN.loadedData) then return end\n  274: \tif (nut.shuttingDown || self.nutIsSafe) then return end\n  275: \n  276: \tlocal inv = nut.inventory.instances[self.invId]\n  277: \tinv:delete()\n  278: \thook.Run(\"StorageEntityRemoved\", self, inv)\n  279: end"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "StorageEntityRemoved",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 263,
+      "line_end": 279,
+      "confidence": "high",
+      "evidence_score": 134,
+      "evidence_classification": "network_send_or_start",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:StorageEntityRemoved",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  263: \n  264: function ENT:OnRemove()\n  265: \tNUT_VENDORS[self:EntIndex()] = nil\n  266: \n  267: \tif (self.receivers)\n  268: \tthen\n  269: \t\tnet.Start(\"nutVendorExit\")\n  270: \t\tnet.Send(self.receivers)\n  271: \tend\n  272: \n  273: \tif (!nut.entityDataLoaded || !PLUGIN.loadedData) then return end\n  274: \tif (nut.shuttingDown || self.nutIsSafe) then return end\n  275: \n  276: \tlocal inv = nut.inventory.instances[self.invId]\n  277: \tinv:delete()\n  278: \thook.Run(\"StorageEntityRemoved\", self, inv)\n  279: end"
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Mode",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 62,
+      "line_end": 80,
+      "confidence": "high",
+      "evidence_score": 130,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorItemPriceUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: \n   78: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   79: \tvendor.items[itemType][VENDOR_MODE] = value\n   80: "
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorItemPriceUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 62,
+      "line_end": 80,
+      "confidence": "high",
+      "evidence_score": 130,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorItemPriceUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: \n   78: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   79: \tvendor.items[itemType][VENDOR_MODE] = value\n   80: "
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "MaxStock",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "confidence": "high",
+      "evidence_score": 125,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorItemStockUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   85: \tlocal itemType = net.ReadString()\n   86: \tlocal value = net.ReadUInt(32)\n   87: \n   88: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   89: \tvendor.items[itemType][VENDOR_STOCK] = value\n   90: \n   91: \thook.Run(\"VendorItemStockUpdated\", vendor, itemType, value)\n   92: end)\n   93: \n   94: addNetHandler(\"MaxStock\", function(vendor)\n   95: \tlocal itemType = net.ReadString()\n   96: \tlocal value = net.ReadUInt(32)\n   97: \tif (value == 0) then value = nil end\n   98: \n   99: \tvendor.items[itemType] = vendor.items[itemType] or {}\n  100: \tvendor.items[itemType][VENDOR_MAXSTOCK] = value\n  101: "
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorItemStockUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 85,
+      "line_end": 101,
+      "confidence": "high",
+      "evidence_score": 125,
+      "evidence_classification": "hook_emitter",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorItemStockUpdated",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "   85: \tlocal itemType = net.ReadString()\n   86: \tlocal value = net.ReadUInt(32)\n   87: \n   88: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   89: \tvendor.items[itemType][VENDOR_STOCK] = value\n   90: \n   91: \thook.Run(\"VendorItemStockUpdated\", vendor, itemType, value)\n   92: end)\n   93: \n   94: addNetHandler(\"MaxStock\", function(vendor)\n   95: \tlocal itemType = net.ReadString()\n   96: \tlocal value = net.ReadUInt(32)\n   97: \tif (value == 0) then value = nil end\n   98: \n   99: \tvendor.items[itemType] = vendor.items[itemType] or {}\n  100: \tvendor.items[itemType][VENDOR_MAXSTOCK] = value\n  101: "
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "nutInventoryData",
+      "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+      "realm": "client",
+      "line_start": 1,
+      "line_end": 13,
+      "confidence": "high",
+      "evidence_score": 117,
+      "evidence_classification": "network_receiver",
+      "details": {
+        "network_api": "gmod_net",
+        "receiver_function": null,
+        "source_semantic_target": "net:nutInventoryData",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "    1: local Inventory = nut.Inventory\n    2: \n    3: net.Receive(\"nutInventoryData\", function()\n    4: \tlocal id = net.ReadType()\n    5: \tlocal key = net.ReadString()\n    6: \tlocal value = net.ReadType()\n    7: \tlocal instance = nut.inventory.instances[id]\n    8: \tif (not instance) then\n    9: \t\tErrorNoHalt(\"Got data \"..key..\" for non-existent instance \"..id)\n   10: \t\treturn\n   11: \tend\n   12: \n   13: \tlocal oldValue = instance.data[key]"
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "nutVendorTrade",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 67,
+      "line_end": 98,
+      "confidence": "high",
+      "evidence_score": 115,
+      "evidence_classification": "network_send_or_start",
+      "details": {
+        "network_api": "gmod_net",
+        "sender_function": null,
+        "source_semantic_target": "net:nutVendorTrade",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   75: \t}\n   76: \n   77: \tself:initializeItems()\n   78: end\n   79: \n   80: function PANEL:buyItemFromVendor(itemType)\n   81: \tnet.Start(\"nutVendorTrade\")\n   82: \t\tnet.WriteString(itemType)\n   83: \t\tnet.WriteBool(false)\n   84: \tnet.SendToServer()\n   85: end\n   86: \n   87: function PANEL:sellItemToVendor(itemType)\n   88: \tnet.Start(\"nutVendorTrade\")\n   89: \t\tnet.WriteString(itemType)\n   90: \t\tnet.WriteBool(true)\n   91: \tnet.SendToServer()"
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "nutVendorExit",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 229,
+      "line_end": 245,
+      "confidence": "high",
+      "evidence_score": 115,
+      "evidence_classification": "network_send_or_start",
+      "details": {
+        "network_api": "gmod_net",
+        "sender_function": null,
+        "source_semantic_target": "net:nutVendorExit",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  229: \tsurface.SetDrawColor(0, 0, 0, 100)\n  230: \tsurface.DrawRect(0, 0, w, h)\n  231: end\n  232: \n  233: function PANEL:OnRemove()\n  234: \tif (not self.noSendExit) then\n  235: \t\tnet.Start(\"nutVendorExit\")\n  236: \t\tnet.SendToServer()\n  237: \t\tself.noSendExit = true\n  238: \tend\n  239: \n  240: \tif (IsValid(nut.gui.vendorEditor)) then\n  241: \t\tnut.gui.vendorEditor:Remove()\n  242: \tend\n  243: \n  244: \tif (IsValid(nut.gui.vendorFactionEditor)) then\n  245: \t\tnut.gui.vendorFactionEditor:Remove()"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorSPrice",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 209,
+      "line_end": 228,
+      "confidence": "high",
+      "evidence_score": 113,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": null,
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorQty",
+        "source_bucket": "critical",
+        "source_duplicate_count": 9
+      },
+      "snippet": "  209: \t\t\t\tend\n  210: \t\t\tend\n  211: \t\tend\n  212: \tend\n  213: end\n  214: \n  215: function ENT:VendorItemSetData(item, qty, price, maxQty, client)\n  216: \titem:setData(\"vendorQty\", qty, client)\n  217: \titem:setData(\"vendorSPrice\", price, client)\n  218: \titem:setData(\"vendorMQty\", maxQty, client)\n  219: end\n  220: \n  221: function ENT:CanBuy(uniqueID, qty)\n  222: \tlocal vendorNeed = true\n  223: \tif (self.items[uniqueID]\n  224: \t\t&& self.items[uniqueID].maxQty\n  225: \t\t&& self.items[uniqueID].maxQty > 0"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 209,
+      "line_end": 228,
+      "confidence": "high",
+      "evidence_score": 113,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": null,
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorQty",
+        "source_bucket": "critical",
+        "source_duplicate_count": 9
+      },
+      "snippet": "  209: \t\t\t\tend\n  210: \t\t\tend\n  211: \t\tend\n  212: \tend\n  213: end\n  214: \n  215: function ENT:VendorItemSetData(item, qty, price, maxQty, client)\n  216: \titem:setData(\"vendorQty\", qty, client)\n  217: \titem:setData(\"vendorSPrice\", price, client)\n  218: \titem:setData(\"vendorMQty\", maxQty, client)\n  219: end\n  220: \n  221: function ENT:CanBuy(uniqueID, qty)\n  222: \tlocal vendorNeed = true\n  223: \tif (self.items[uniqueID]\n  224: \t\t&& self.items[uniqueID].maxQty\n  225: \t\t&& self.items[uniqueID].maxQty > 0"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorMQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 209,
+      "line_end": 228,
+      "confidence": "high",
+      "evidence_score": 113,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": null,
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorQty",
+        "source_bucket": "critical",
+        "source_duplicate_count": 9
+      },
+      "snippet": "  209: \t\t\t\tend\n  210: \t\t\tend\n  211: \t\tend\n  212: \tend\n  213: end\n  214: \n  215: function ENT:VendorItemSetData(item, qty, price, maxQty, client)\n  216: \titem:setData(\"vendorQty\", qty, client)\n  217: \titem:setData(\"vendorSPrice\", price, client)\n  218: \titem:setData(\"vendorMQty\", maxQty, client)\n  219: end\n  220: \n  221: function ENT:CanBuy(uniqueID, qty)\n  222: \tlocal vendorNeed = true\n  223: \tif (self.items[uniqueID]\n  224: \t\t&& self.items[uniqueID].maxQty\n  225: \t\t&& self.items[uniqueID].maxQty > 0"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorSPrice",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 290,
+      "line_end": 309,
+      "confidence": "high",
+      "evidence_score": 103,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": "ENT:RemoveReceiverFromVendor",
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorBPrice",
+        "source_bucket": "critical",
+        "source_duplicate_count": 8
+      },
+      "snippet": "  290: function ENT:RemoveReceiverFromVendor(client)\n  291: \ttable.RemoveByValue(self.receivers, client)\n  292: \tclient.nutVendor = nil\n  293: \n  294: \tlocal clientItems = client:getChar():getInv():getItems()\n  295: \tfor k, v in pairs(clientItems) do\n  296: \t\tv:setData(\"vendorBPrice\", nil, client)\n  297: \t\tv:setData(\"vendorQty\", nil, client)\n  298: \t\tv:setData(\"vendorSPrice\", nil, client)\n  299: \t\tv:setData(\"vendorMQty\", nil, client)\n  300: \tend\n  301: end\n  302: \n  303: function ENT:ApplyVendorPos(pos1, pos2, pos3, ang1, ang2, ang3)\n  304: \tself:SetFirstPos(Vector(pos1))\n  305: \tself:SetSecPos(Vector(pos2))\n  306: \tself:SetThdPos(Vector(pos3))"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 290,
+      "line_end": 309,
+      "confidence": "high",
+      "evidence_score": 103,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": "ENT:RemoveReceiverFromVendor",
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorBPrice",
+        "source_bucket": "critical",
+        "source_duplicate_count": 8
+      },
+      "snippet": "  290: function ENT:RemoveReceiverFromVendor(client)\n  291: \ttable.RemoveByValue(self.receivers, client)\n  292: \tclient.nutVendor = nil\n  293: \n  294: \tlocal clientItems = client:getChar():getInv():getItems()\n  295: \tfor k, v in pairs(clientItems) do\n  296: \t\tv:setData(\"vendorBPrice\", nil, client)\n  297: \t\tv:setData(\"vendorQty\", nil, client)\n  298: \t\tv:setData(\"vendorSPrice\", nil, client)\n  299: \t\tv:setData(\"vendorMQty\", nil, client)\n  300: \tend\n  301: end\n  302: \n  303: function ENT:ApplyVendorPos(pos1, pos2, pos3, ang1, ang2, ang3)\n  304: \tself:SetFirstPos(Vector(pos1))\n  305: \tself:SetSecPos(Vector(pos2))\n  306: \tself:SetThdPos(Vector(pos3))"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorMQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 290,
+      "line_end": 309,
+      "confidence": "high",
+      "evidence_score": 103,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": "ENT:RemoveReceiverFromVendor",
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorBPrice",
+        "source_bucket": "critical",
+        "source_duplicate_count": 8
+      },
+      "snippet": "  290: function ENT:RemoveReceiverFromVendor(client)\n  291: \ttable.RemoveByValue(self.receivers, client)\n  292: \tclient.nutVendor = nil\n  293: \n  294: \tlocal clientItems = client:getChar():getInv():getItems()\n  295: \tfor k, v in pairs(clientItems) do\n  296: \t\tv:setData(\"vendorBPrice\", nil, client)\n  297: \t\tv:setData(\"vendorQty\", nil, client)\n  298: \t\tv:setData(\"vendorSPrice\", nil, client)\n  299: \t\tv:setData(\"vendorMQty\", nil, client)\n  300: \tend\n  301: end\n  302: \n  303: function ENT:ApplyVendorPos(pos1, pos2, pos3, ang1, ang2, ang3)\n  304: \tself:SetFirstPos(Vector(pos1))\n  305: \tself:SetSecPos(Vector(pos2))\n  306: \tself:SetThdPos(Vector(pos3))"
+    },
+    {
+      "fact_type": "item_data_mutation",
+      "target": "vendorBPrice",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 290,
+      "line_end": 309,
+      "confidence": "high",
+      "evidence_score": 103,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "mutator_function": "ENT:RemoveReceiverFromVendor",
+        "runtime_meaning": [
+          "server item metadata mutation",
+          "database persistence unless noSave",
+          "conditional immediate client sync",
+          "future owner/open inventory sync source"
+        ],
+        "human_validated": true,
+        "source_semantic_target": "item_data:vendorBPrice",
+        "source_bucket": "critical",
+        "source_duplicate_count": 8
+      },
+      "snippet": "  290: function ENT:RemoveReceiverFromVendor(client)\n  291: \ttable.RemoveByValue(self.receivers, client)\n  292: \tclient.nutVendor = nil\n  293: \n  294: \tlocal clientItems = client:getChar():getInv():getItems()\n  295: \tfor k, v in pairs(clientItems) do\n  296: \t\tv:setData(\"vendorBPrice\", nil, client)\n  297: \t\tv:setData(\"vendorQty\", nil, client)\n  298: \t\tv:setData(\"vendorSPrice\", nil, client)\n  299: \t\tv:setData(\"vendorMQty\", nil, client)\n  300: \tend\n  301: end\n  302: \n  303: function ENT:ApplyVendorPos(pos1, pos2, pos3, ang1, ang2, ang3)\n  304: \tself:SetFirstPos(Vector(pos1))\n  305: \tself:SetSecPos(Vector(pos2))\n  306: \tself:SetThdPos(Vector(pos3))"
+    },
+    {
+      "fact_type": "function_context",
+      "target": "ENT:AddItemAndSetQty",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 149,
+      "line_end": 215,
+      "confidence": "low",
+      "evidence_score": 95,
+      "evidence_classification": "item_data_mutation",
+      "details": {
+        "note": "no explicit runtime operation extracted; kept as context only",
+        "source_semantic_target": "function:ENT:AddItemAndSetQty",
+        "source_bucket": "critical",
+        "source_duplicate_count": 5
+      },
+      "snippet": "  149: function ENT:AddItemAndSetQty(inv, uniqueID, client)\n  150: \tinv:add(uniqueID, self.items[uniqueID].x, self.items[uniqueID].y, true)\n  151: \t:next(function(newItem)\n  152: \t\tif (newItem && !newItem.error && newItem.isStackable)\n  153: \t\tthen\n  154: \t\t\tnewItem:setQuantity(self.items[uniqueID].qty >= newItem.maxQuantity && newItem.maxQuantity || self.items[uniqueID].qty, client)\n  155: \t\t\tself:VendorItemSetData(newItem, self.items[uniqueID].qty, self.items[uniqueID].price, self.items[uniqueID].maxQty, client)\n  156: \t\tend\n  157: \n  158: \t\treturn newItem\n  159: \tend)\n  160: end\n  161: \n  162: function ENT:HandleStock(uniqueID, isRemove, qty, isStackable, client)\n  163: \tlocal inv = nut.inventory.instances[self.invId]\n  164: \tif (self.items[uniqueID])\n  165: \tthen"
+    },
+    {
+      "fact_type": "ui_text_update",
+      "target": "SetText",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 181,
+      "line_end": 197,
+      "confidence": "medium",
+      "evidence_score": 87,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "caller_function": null,
+        "source_semantic_target": "netstream:itemSplitTake",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  181: \treturn text\n  182: end\n  183: \n  184: local function createButton(frame, text, x, y, w, h)\n  185: \tlocal button = frame:Add(\"DButton\")\n  186: \tbutton:SetFont(\"nutWriteFont\")\n  187: \tbutton:SetText(text)\n  188: \tbutton:SetPos(x, y)\n  189: \tbutton:SetSize(w, h)\n  190: \treturn button\n  191: end\n  192: \n  193: netstream.Hook(\n  194: \t\"itemSplitTake\",\n  195: \tfunction(qty, itemID, x, y, invID, hookName)\n  196: \t\tlocal splitFrame = vgui.Create(\"DFrame\")\n  197: \t\tsplitFrame:SetTitle(\"Разделить\")"
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "itemSplitTake",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 181,
+      "line_end": 197,
+      "confidence": "high",
+      "evidence_score": 87,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "network_api": "netstream",
+        "receiver_function": null,
+        "source_semantic_target": "netstream:itemSplitTake",
+        "source_bucket": "critical",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  181: \treturn text\n  182: end\n  183: \n  184: local function createButton(frame, text, x, y, w, h)\n  185: \tlocal button = frame:Add(\"DButton\")\n  186: \tbutton:SetFont(\"nutWriteFont\")\n  187: \tbutton:SetText(text)\n  188: \tbutton:SetPos(x, y)\n  189: \tbutton:SetSize(w, h)\n  190: \treturn button\n  191: end\n  192: \n  193: netstream.Hook(\n  194: \t\"itemSplitTake\",\n  195: \tfunction(qty, itemID, x, y, invID, hookName)\n  196: \t\tlocal splitFrame = vgui.Create(\"DFrame\")\n  197: \t\tsplitFrame:SetTitle(\"Разделить\")"
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "nutVendorOpen",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 15,
+      "line_end": 42,
+      "confidence": "high",
+      "evidence_score": 85,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "network_api": "gmod_net",
+        "receiver_function": null,
+        "source_semantic_target": "hook:VendorSynchronized",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   26: \t\tif (price < 0) then price = nil end\n   27: \t\tif (stock < 0) then stock = nil end\n   28: \t\tif (maxStock <= 0) then maxStock = nil end\n   29: \t\tif (mode < 0) then mode = nil end\n   30: \n   31: \t\tvendor.items[itemType] = {\n   32: \t\t\t[VENDOR_PRICE] = price,\n   33: \t\t\t[VENDOR_STOCK] = stock,\n   34: \t\t\t[VENDOR_MAXSTOCK] = maxStock,\n   35: \t\t\t[VENDOR_MODE] = mode\n   36: \t\t}\n   37: \tend\n   38: \n   39: \thook.Run(\"VendorSynchronized\", vendor)\n   40: end)\n   41: \n   42: net.Receive(\"nutVendorOpen\", function()"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorSynchronized",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 15,
+      "line_end": 42,
+      "confidence": "high",
+      "evidence_score": 85,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorSynchronized",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   26: \t\tif (price < 0) then price = nil end\n   27: \t\tif (stock < 0) then stock = nil end\n   28: \t\tif (maxStock <= 0) then maxStock = nil end\n   29: \t\tif (mode < 0) then mode = nil end\n   30: \n   31: \t\tvendor.items[itemType] = {\n   32: \t\t\t[VENDOR_PRICE] = price,\n   33: \t\t\t[VENDOR_STOCK] = stock,\n   34: \t\t\t[VENDOR_MAXSTOCK] = maxStock,\n   35: \t\t\t[VENDOR_MODE] = mode\n   36: \t\t}\n   37: \tend\n   38: \n   39: \thook.Run(\"VendorSynchronized\", vendor)\n   40: end)\n   41: \n   42: net.Receive(\"nutVendorOpen\", function()"
+    },
+    {
+      "fact_type": "ui_refresh_call",
+      "target": "updatePrice",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 148,
+      "line_end": 183,
+      "confidence": "high",
+      "evidence_score": 75,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "caller_function": null,
+        "ui_context": "vendor/inventory presentation",
+        "source_semantic_target": "ui_call:updatePrice",
+        "source_bucket": "critical",
+        "source_duplicate_count": 4
+      },
+      "snippet": "  167: end\n  168: \n  169: function PANEL:onVendorMoneyUpdated(vendor, money)\n  170: \tself.vendor:setMoney(money)\n  171: end\n  172: \n  173: function PANEL:onVendorPriceUpdated(vendor, itemType, value)\n  174: \tlocal panel = self.items[self.vendor][itemType]\n  175: \tif (IsValid(panel)) then panel:updatePrice() end\n  176: \n  177: \tpanel = self.items[self.me][itemType]\n  178: \tif (IsValid(panel)) then panel:updatePrice() end\n  179: end\n  180: \n  181: function PANEL:onVendorModeUpdated(vendor, itemType, mode)\n  182: \tself:updateItem(itemType, self.vendor)\n  183: \tself:updateItem(itemType, self.me)"
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Price",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 49,
+      "line_end": 68,
+      "confidence": "high",
+      "evidence_score": 74,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorExited",
+        "source_bucket": "critical",
+        "source_duplicate_count": 2
+      },
+      "snippet": "   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end"
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Money",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 49,
+      "line_end": 68,
+      "confidence": "high",
+      "evidence_score": 74,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorExited",
+        "source_bucket": "critical",
+        "source_duplicate_count": 2
+      },
+      "snippet": "   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end"
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "vendorTradeInterface",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 101,
+      "line_end": 141,
+      "confidence": "high",
+      "evidence_score": 74,
+      "evidence_classification": "hook_reference",
+      "details": {
+        "network_api": "netstream",
+        "receiver_function": null,
+        "source_semantic_target": "hook:CreateNewInventoryPanel",
+        "source_bucket": "critical",
+        "source_duplicate_count": 3
+      },
+      "snippet": "  114: \tfunction()\n  115: \t\tif (IsValid(currInvPanel))\n  116: \t\tthen\n  117: \t\t\treturn\n  118: \t\tend\n  119: \n  120: \t\tcurrInvPanel = PLUGIN:CreateNewInventoryPanel(LocalPlayer(), nil)\n  121: \tend)\n  122: \n  123: netstream.Hook(\"vendorTradeInterface\", function(vendor, invId)\n  124: \tlocal PADDING = 4\n  125: \tif (!IsValid(vendor)) then return end\n  126: \n  127: \tlocal localInv = LocalPlayer():getChar() && LocalPlayer():getChar():getInv(true)\n  128: \tlocal loadedInv = nut.inventory.instances[invId]\n  129: \tif (!loadedInv) then return end\n  130: "
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "nutVendorExit",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 49,
+      "line_end": 68,
+      "confidence": "high",
+      "evidence_score": 74,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "network_api": "gmod_net",
+        "receiver_function": null,
+        "source_semantic_target": "hook:VendorExited",
+        "source_bucket": "critical",
+        "source_duplicate_count": 2
+      },
+      "snippet": "   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorMoneyUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 49,
+      "line_end": 68,
+      "confidence": "high",
+      "evidence_score": 74,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorExited",
+        "source_bucket": "critical",
+        "source_duplicate_count": 2
+      },
+      "snippet": "   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorExited",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 49,
+      "line_end": 68,
+      "confidence": "high",
+      "evidence_score": 74,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorExited",
+        "source_bucket": "critical",
+        "source_duplicate_count": 2
+      },
+      "snippet": "   49: \n   50: net.Receive(\"nutVendorExit\", function()\n   51: \tnutVendorEnt = nil\n   52: \thook.Run(\"VendorExited\")\n   53: end)\n   54: \n   55: addNetHandler(\"Money\", function(vendor)\n   56: \tlocal money = net.ReadInt(32)\n   57: \tif (money < 0) then money = nil end\n   58: \tvendor.money = money\n   59: \thook.Run(\"VendorMoneyUpdated\", vendor, money, vendor.money)\n   60: end)\n   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end"
+    },
+    {
+      "fact_type": "ui_text_update",
+      "target": "SetText",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 20,
+      "line_end": 50,
+      "confidence": "medium",
+      "evidence_score": 73,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "caller_function": null,
+        "source_semantic_target": "state:SetText\\s*\\(",
+        "source_bucket": "critical",
+        "source_duplicate_count": 2
+      },
+      "snippet": "   20: \tself.buttons:Dock(TOP)\n   21: \tself.buttons:SetPaintBackground(false)\n   22: \tself.buttons:SetTall(36)\n   23: \n   24: \tself.leave = self.buttons:Add(\"DButton\")\n   25: \tself.leave:SetFont(\"nutVendorButtonFont\")\n   26: \tself.leave:SetText(L(\"leave\"):upper())\n   27: \tself.leave:SetTextColor(color_white)\n   28: \tself.leave:SetContentAlignment(9)\n   29: \tself.leave:SetExpensiveShadow(2, color_black)\n   30: \tself.leave.DoClick = function(button)\n   31: \t\tself:Remove()\n   32: \tend\n   33: \tself.leave:SizeToContents()\n   34: \tself.leave:SetPaintBackground(false)\n   35: \tself.leave.x = ScrW() * 0.5 - (self.leave:GetWide() * 0.5)\n   36: "
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "sendVendorInfo",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "realm": "unknown",
+      "line_start": 117,
+      "line_end": 153,
+      "confidence": "medium",
+      "evidence_score": 67,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "network_api": "netstream",
+        "recipient_expr": "client",
+        "sender_function": null,
+        "source_semantic_target": "netstream:sendVendorInfo",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 4
+      },
+      "snippet": "  117: \t\tself:AddItemAndSetQty(inv, uniqueID, client)\n  118: \tend\n  119: \n  120: \tnetstream.Start(client, \"sendVendorInfo\", self:EntIndex(), self.factions, self.items)\n  121: end\n  122: \n  123: function ENT:SetItemToBuy(uniqueID, qty, price)\n  124: \tif (self.items[uniqueID])\n  125: \tthen\n  126: \t\tself.items[uniqueID].maxQty = tonumber(qty) || 0\n  127: \t\tself.items[uniqueID].buyPrice = tonumber(price)\n  128: \t\tself.items[uniqueID].qty = self.items[uniqueID].qty || 0\n  129: \telse\n  130: \t\tself.items[uniqueID] = {\n  131: \t\t\tmaxQty = tonumber(qty) || 0,\n  132: \t\t\tbuyPrice = tonumber(price),\n  133: \t\t\tqty = 0"
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Price",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 4,
+      "line_end": 138,
+      "confidence": "high",
+      "evidence_score": 50,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorClassUpdated",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 33
+      },
+      "snippet": "   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: "
+    },
+    {
+      "fact_type": "vendor_network_handler",
+      "target": "Mode",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 4,
+      "line_end": 138,
+      "confidence": "high",
+      "evidence_score": 50,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "handler_function": null,
+        "semantic_note": "vendor client-side submessage handler",
+        "source_semantic_target": "hook:VendorClassUpdated",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 33
+      },
+      "snippet": "   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: "
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "VendorItemPriceUpdated",
+      "file": "plugins/vendor/cl_networking.lua",
+      "realm": "client",
+      "line_start": 4,
+      "line_end": 138,
+      "confidence": "high",
+      "evidence_score": 50,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:VendorClassUpdated",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 33
+      },
+      "snippet": "   61: \n   62: addNetHandler(\"Price\", function(vendor)\n   63: \tlocal itemType = net.ReadString()\n   64: \tlocal value = net.ReadInt(32)\n   65: \tif (value < 0) then value = nil end\n   66: \n   67: \tvendor.items[itemType] = vendor.items[itemType] or {}\n   68: \tvendor.items[itemType][VENDOR_PRICE] = value\n   69: \n   70: \thook.Run(\"VendorItemPriceUpdated\", vendor, itemType, value)\n   71: end)\n   72: \n   73: addNetHandler(\"Mode\", function(vendor)\n   74: \tlocal itemType = net.ReadString()\n   75: \tlocal value = net.ReadInt(8)\n   76: \tif (value < 0) then value = nil end\n   77: "
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "StorageRestored",
+      "file": "plugins/vendor/entities/entities/nut_vendor/shared.lua",
+      "realm": "shared/conditional",
+      "line_start": 66,
+      "line_end": 108,
+      "confidence": "high",
+      "evidence_score": 50,
+      "evidence_classification": "ui_presentation_logic",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:StorageRestored",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 3
+      },
+      "snippet": "   71: \t\t\t\t\thook.Run(\"StorageRestored\", self, inventory)\n   72: \t\t\t\t\tinventory.vendor = self\n   73: \n   74: \t\t\t\t\tif (next(self.items))\n   75: \t\t\t\t\tthen\n   76: \t\t\t\t\t\tfor k, v in pairs(self.items) do\n   77: \t\t\t\t\t\t\tif (v.price)\n   78: \t\t\t\t\t\t\tthen\n   79: \t\t\t\t\t\t\t\tv.qty = v.initQty\n   80: \t\t\t\t\t\t\t\tlocal item = inventory:getFirstItemOfType(k)\n   81: \t\t\t\t\t\t\t\tif (item && item.isStackable)\n   82: \t\t\t\t\t\t\t\tthen\n   83: \t\t\t\t\t\t\t\t\titem:setQuantity(item.maxQuantity, nil)\n   84: \t\t\t\t\t\t\t\telseif (!item)\n   85: \t\t\t\t\t\t\t\tthen\n   86: \t\t\t\t\t\t\t\t\tinventory:add(k, v.x, v.y)\n   87: \t\t\t\t\t\t\t\t\t:next(function(newItem)"
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "removeReceiverFromVendor",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 131,
+      "line_end": 171,
+      "confidence": "medium",
+      "evidence_score": 47,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "network_api": "netstream",
+        "sender_function": null,
+        "source_semantic_target": "hook:OnCreateStoragePanel",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 2
+      },
+      "snippet": "  155: \t\t\tnutStorageBase:exitStorage()\n  156: \t\t\tlocal otherPanel =\n  157: \t\t\t\tpanel == localParent and storageInvPanel or localParent\n  158: \t\t\tif (IsValid(otherPanel)) then otherPanel:Remove() end\n  159: \t\tend\n  160: \n  161: \t\tnetstream.Start(\"removeReceiverFromVendor\", vendor:EntIndex())\n  162: \n  163: \t\tnetstream.Start(\"inventorySetPanelStatus\", false)\n  164: \tend\n  165: \n  166: \thook.Run(\"OnCreateStoragePanel\", localInvPanel, storageInvPanel, storage)\n  167: \n  168: \tlocalInvPanel.MainInvPanel.pair = storageInvPanel.mainInvPanel\n  169: \tstorageInvPanel.mainInvPanel.pair = localInvPanel.MainInvPanel\n  170: \n  171: \tlocalParent.OnRemove = exitStorageOnRemove"
+    },
+    {
+      "fact_type": "network_send_start",
+      "target": "inventorySetPanelStatus",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 131,
+      "line_end": 171,
+      "confidence": "medium",
+      "evidence_score": 47,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "network_api": "netstream",
+        "sender_function": null,
+        "source_semantic_target": "hook:OnCreateStoragePanel",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 2
+      },
+      "snippet": "  155: \t\t\tnutStorageBase:exitStorage()\n  156: \t\t\tlocal otherPanel =\n  157: \t\t\t\tpanel == localParent and storageInvPanel or localParent\n  158: \t\t\tif (IsValid(otherPanel)) then otherPanel:Remove() end\n  159: \t\tend\n  160: \n  161: \t\tnetstream.Start(\"removeReceiverFromVendor\", vendor:EntIndex())\n  162: \n  163: \t\tnetstream.Start(\"inventorySetPanelStatus\", false)\n  164: \tend\n  165: \n  166: \thook.Run(\"OnCreateStoragePanel\", localInvPanel, storageInvPanel, storage)\n  167: \n  168: \tlocalInvPanel.MainInvPanel.pair = storageInvPanel.mainInvPanel\n  169: \tstorageInvPanel.mainInvPanel.pair = localInvPanel.MainInvPanel\n  170: \n  171: \tlocalParent.OnRemove = exitStorageOnRemove"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "OnCreateStoragePanel",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 131,
+      "line_end": 171,
+      "confidence": "high",
+      "evidence_score": 47,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:OnCreateStoragePanel",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 2
+      },
+      "snippet": "  155: \t\t\tnutStorageBase:exitStorage()\n  156: \t\t\tlocal otherPanel =\n  157: \t\t\t\tpanel == localParent and storageInvPanel or localParent\n  158: \t\t\tif (IsValid(otherPanel)) then otherPanel:Remove() end\n  159: \t\tend\n  160: \n  161: \t\tnetstream.Start(\"removeReceiverFromVendor\", vendor:EntIndex())\n  162: \n  163: \t\tnetstream.Start(\"inventorySetPanelStatus\", false)\n  164: \tend\n  165: \n  166: \thook.Run(\"OnCreateStoragePanel\", localInvPanel, storageInvPanel, storage)\n  167: \n  168: \tlocalInvPanel.MainInvPanel.pair = storageInvPanel.mainInvPanel\n  169: \tstorageInvPanel.mainInvPanel.pair = localInvPanel.MainInvPanel\n  170: \n  171: \tlocalParent.OnRemove = exitStorageOnRemove"
+    },
+    {
+      "fact_type": "network_receive",
+      "target": "vendorTradeInterface",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "realm": "client",
+      "line_start": 117,
+      "line_end": 146,
+      "confidence": "high",
+      "evidence_score": 44,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "network_api": "netstream",
+        "receiver_function": null,
+        "source_semantic_target": "netstream:vendorTradeInterface",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 4
+      },
+      "snippet": "  117: \t\t\treturn\n  118: \t\tend\n  119: \n  120: \t\tcurrInvPanel = PLUGIN:CreateNewInventoryPanel(LocalPlayer(), nil)\n  121: \tend)\n  122: \n  123: netstream.Hook(\"vendorTradeInterface\", function(vendor, invId)\n  124: \tlocal PADDING = 4\n  125: \tif (!IsValid(vendor)) then return end\n  126: \n  127: \tlocal localInv = LocalPlayer():getChar() && LocalPlayer():getChar():getInv(true)\n  128: \tlocal loadedInv = nut.inventory.instances[invId]\n  129: \tif (!loadedInv) then return end\n  130: \n  131: \tlocal localInvPanel = PLUGIN:CreateNewInventoryPanel(LocalPlayer(), nil)\n  132: \tlocal localParent = localInvPanel:GetParent()\n  133: \tlocal storageInvPanel = vgui.Create(\"vendor_grid_inventory\")"
+    },
+    {
+      "fact_type": "ui_refresh_call",
+      "target": "updatePrice",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "realm": "client",
+      "line_start": 163,
+      "line_end": 197,
+      "confidence": "high",
+      "evidence_score": 40,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "caller_function": null,
+        "ui_context": "vendor/inventory presentation",
+        "source_semantic_target": "function:PANEL:onVendorModeUpdated",
+        "source_bucket": "supporting",
+        "source_duplicate_count": 7
+      },
+      "snippet": "  163: \t\t\tif (not IsValid(panel)) then continue end\n  164: \t\t\tpanel:updatePrice()\n  165: \t\tend\n  166: \tend\n  167: end\n  168: \n  169: function PANEL:onVendorMoneyUpdated(vendor, money)\n  170: \tself.vendor:setMoney(money)\n  171: end\n  172: \n  173: function PANEL:onVendorPriceUpdated(vendor, itemType, value)\n  174: \tlocal panel = self.items[self.vendor][itemType]\n  175: \tif (IsValid(panel)) then panel:updatePrice() end\n  176: \n  177: \tpanel = self.items[self.me][itemType]\n  178: \tif (IsValid(panel)) then panel:updatePrice() end\n  179: end"
+    },
+    {
+      "fact_type": "hook_emit",
+      "target": "StorageInventorySet",
+      "file": "plugins/vendor/entities/entities/nut_vendor/shared.lua",
+      "realm": "shared/conditional",
+      "line_start": 116,
+      "line_end": 132,
+      "confidence": "high",
+      "evidence_score": 12,
+      "evidence_classification": "state_or_ui_reference",
+      "details": {
+        "emitter_function": null,
+        "runtime_meaning": "event emission",
+        "source_semantic_target": "hook:StorageInventorySet",
+        "source_bucket": "noise",
+        "source_duplicate_count": 1
+      },
+      "snippet": "  116: \t\t\t:next(\n  117: \t\t\tfunction(inventory)\n  118: \t\t\t\tif (IsValid(self))\n  119: \t\t\t\tthen\n  120: \t\t\t\t\tself.invId = inventory:getID()\n  121: \t\t\t\t\thook.Run(\"StorageInventorySet\", self, inventory)\n  122: \t\t\t\t\tinventory.vendor = self\n  123: \t\t\t\tend\n  124: \t\t\tend,\n  125: \t\t\tfunction(err)\n  126: \t\t\t\tErrorNoHalt(\"Unable to create lut entity\\n\".. err ..\"\\n\")\n  127: \t\t\t\tif (IsValid(self)) then self:Remove() end\n  128: \t\t\tend)\n  129: \t\tend\n  130: \t\n  131: \t\tself:SetMoney(self:GetMoney() == 0 && 5000 || self:GetMoney())\n  132: \t\tself.factions = self.factions || {}"
+    }
+  ]
+}
