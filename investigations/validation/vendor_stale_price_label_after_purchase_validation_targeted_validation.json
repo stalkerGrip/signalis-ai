@@ -1,0 +1,481 @@
+{
+  "source": "E:\\signalis_ai\\investigations\\validation\\vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json",
+  "query": "vendor stale price label after purchase",
+  "summary": {
+    "checks_total": 15,
+    "by_priority": {
+      "high": 4,
+      "medium": 7,
+      "low": 4
+    },
+    "by_file": {
+      "plugins/inventory/cl_hooks.lua": 3,
+      "gamemode/core/meta/inventory/cl_base_inventory.lua": 2,
+      "plugins/vendor/derma/cl_vendor.lua": 2,
+      "plugins/vendor/entities/entities/nut_vendor/init.lua": 2,
+      "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua": 2,
+      "gamemode/core/libs/item/sv_item.lua": 1,
+      "gamemode/core/meta/inventory/sv_base_inventory.lua": 1,
+      "plugins/gridinv/plugins/gridstorage/sh_plugin.lua": 1,
+      "plugins/storage/cl_networking.lua": 1
+    }
+  },
+  "checks": [
+    {
+      "check_id": "TV-001",
+      "hypothesis": "Cleanup sync does not reach or refresh the active client UI",
+      "confidence": "high",
+      "priority": "high",
+      "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+      "validation_questions": [
+        "What does nutInventoryData mutate on the client?",
+        "Does nutInventoryData emit ItemDataChanged or another refresh event?",
+        "Does item data update trigger existing item panel refresh?"
+      ],
+      "required_patterns": [
+        "ItemDataChanged",
+        "RemoveReceiverFromVendor",
+        "data",
+        "invData",
+        "net.Receive",
+        "netstream.Hook",
+        "nil",
+        "nutInventoryData",
+        "setData",
+        "vendorSPrice"
+      ],
+      "expected_runtime_relation": "client inventory data delta receiver mutates local inventory/item data",
+      "falsifies_if": [
+        "If nutInventoryData always triggers an item panel redraw for the affected item.",
+        "If vendor panel close always destroys all item panels before stale labels can persist.",
+        "If vendor* metadata is not actually present on the player's purchased item clientside."
+      ]
+    },
+    {
+      "check_id": "TV-003",
+      "hypothesis": "Cleanup sync does not reach or refresh the active client UI",
+      "confidence": "high",
+      "priority": "high",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "validation_questions": [
+        "How exactly is vendorTradeInterface constructed?",
+        "Which panel is the player inventory panel?",
+        "Which panel is vendor_grid_inventory?",
+        "Do either panels subscribe to item data changes?",
+        "Does panel removal trigger removeReceiverFromVendor?"
+      ],
+      "required_patterns": [
+        "CreateNewInventoryPanel",
+        "OnCreateStoragePanel",
+        "OnRemove",
+        "RemoveReceiverFromVendor",
+        "SetUpPanel",
+        "invData",
+        "nil",
+        "removeReceiverFromVendor",
+        "vendorSPrice",
+        "vendorTradeInterface",
+        "vendor_grid_inventory"
+      ],
+      "expected_runtime_relation": "client inventory/vendor interface constructs player inventory and vendor_grid_inventory panels",
+      "falsifies_if": [
+        "If nutInventoryData always triggers an item panel redraw for the affected item.",
+        "If vendor panel close always destroys all item panels before stale labels can persist.",
+        "If vendor* metadata is not actually present on the player's purchased item clientside."
+      ]
+    },
+    {
+      "check_id": "TV-002",
+      "hypothesis": "Cleanup sync does not reach or refresh the active client UI",
+      "confidence": "high",
+      "priority": "high",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "validation_questions": [
+        "Does vendor UI refresh only vendor-side item panels or also player inventory panels?",
+        "Does closing/removing the vendor panel send the cleanup message reliably?",
+        "Does updatePrice read vendor* metadata from item data?"
+      ],
+      "required_patterns": [
+        "OnRemove",
+        "RemoveReceiverFromVendor",
+        "VendorItemPriceUpdated",
+        "hook.Add",
+        "invData",
+        "nil",
+        "nutVendorExit",
+        "nutVendorTrade",
+        "onVendorPriceUpdated",
+        "updatePrice",
+        "vendorSPrice"
+      ],
+      "expected_runtime_relation": "client vendor UI sends trade/exit and refreshes visible vendor price labels",
+      "falsifies_if": [
+        "If nutInventoryData always triggers an item panel redraw for the affected item.",
+        "If vendor panel close always destroys all item panels before stale labels can persist.",
+        "If vendor* metadata is not actually present on the player's purchased item clientside."
+      ]
+    },
+    {
+      "check_id": "TV-004",
+      "hypothesis": "Cleanup sync does not reach or refresh the active client UI",
+      "confidence": "high",
+      "priority": "high",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "validation_questions": [
+        "Where is vendor presentation metadata created?",
+        "Where is vendor presentation metadata cleared?",
+        "Does cleanup happen before or after item ownership/inventory transfer?",
+        "Which receiver/client is passed into item:setData during cleanup?"
+      ],
+      "required_patterns": [
+        "OpenVendorTradeInterface",
+        "RemoveReceiverFromVendor",
+        "VendorItemSetData",
+        "invData",
+        "netstream.Start",
+        "nil",
+        "setData",
+        "vendorBPrice",
+        "vendorMQty",
+        "vendorQty",
+        "vendorSPrice"
+      ],
+      "expected_runtime_relation": "server vendor entity mutates/clears vendor item presentation metadata",
+      "falsifies_if": [
+        "If nutInventoryData always triggers an item panel redraw for the affected item.",
+        "If vendor panel close always destroys all item panels before stale labels can persist.",
+        "If vendor* metadata is not actually present on the player's purchased item clientside."
+      ]
+    },
+    {
+      "check_id": "TV-009",
+      "hypothesis": "Receiver ownership mismatch during item:setData cleanup",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "gamemode/core/libs/item/sv_item.lua",
+      "validation_questions": [
+        "What receivers does ITEM:setData use by default?",
+        "Does setData send invData immediately?",
+        "Does noSave/noCheckEntity affect persistence or network sync?"
+      ],
+      "required_patterns": [
+        "ITEM:setData",
+        "client",
+        "getOwner",
+        "invData",
+        "netstream.Start",
+        "nut.db.updateTable",
+        "owner",
+        "receiver",
+        "receivers",
+        "setData",
+        "setNetVar"
+      ],
+      "expected_runtime_relation": "server item data mutation persists and conditionally syncs item data",
+      "falsifies_if": [
+        "If cleanup is always sent to the actual current owner of every affected item.",
+        "If purchased item metadata is cleared before ownership transfer.",
+        "If client item data receiver updates all inventory instances globally by item ID."
+      ]
+    },
+    {
+      "check_id": "TV-011",
+      "hypothesis": "Receiver ownership mismatch during item:setData cleanup",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
+      "validation_questions": [
+        "What does nutInventoryData mutate on the client?",
+        "Does nutInventoryData emit ItemDataChanged or another refresh event?",
+        "Does item data update trigger existing item panel refresh?"
+      ],
+      "required_patterns": [
+        "ItemDataChanged",
+        "client",
+        "data",
+        "getOwner",
+        "net.Receive",
+        "netstream.Hook",
+        "nutInventoryData",
+        "owner",
+        "receiver",
+        "receivers",
+        "setData"
+      ],
+      "expected_runtime_relation": "client inventory data delta receiver mutates local inventory/item data",
+      "falsifies_if": [
+        "If cleanup is always sent to the actual current owner of every affected item.",
+        "If purchased item metadata is cleared before ownership transfer.",
+        "If client item data receiver updates all inventory instances globally by item ID."
+      ]
+    },
+    {
+      "check_id": "TV-010",
+      "hypothesis": "Receiver ownership mismatch during item:setData cleanup",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "gamemode/core/meta/inventory/sv_base_inventory.lua",
+      "validation_questions": [
+        "How does server inventory transfer change item ownership?",
+        "Are receivers updated before or after item data cleanup?",
+        "Does inventory sync resend full item data after transfers?"
+      ],
+      "required_patterns": [
+        "addItem",
+        "client",
+        "getOwner",
+        "getReceivers",
+        "invData",
+        "netstream.Start",
+        "owner",
+        "receiver",
+        "receivers",
+        "removeItem",
+        "setData",
+        "sync"
+      ],
+      "expected_runtime_relation": "server inventory ownership/transfer/sync boundary",
+      "falsifies_if": [
+        "If cleanup is always sent to the actual current owner of every affected item.",
+        "If purchased item metadata is cleared before ownership transfer.",
+        "If client item data receiver updates all inventory instances globally by item ID."
+      ]
+    },
+    {
+      "check_id": "TV-007",
+      "hypothesis": "Price update path refreshes vendor UI, but not necessarily player inventory UI",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+      "validation_questions": [
+        "Does grid inventory panel redraw when item data changes?",
+        "Does it cache vendor price labels?",
+        "Does it read vendorSPrice/vendorBPrice during paint or only on construction?"
+      ],
+      "required_patterns": [
+        "CreateNewInventoryPanel",
+        "ItemDataChanged",
+        "Paint",
+        "SetUpPanel",
+        "getData",
+        "refresh",
+        "update",
+        "updatePrice",
+        "vendorBPrice",
+        "vendorSPrice",
+        "vendor_grid_inventory"
+      ],
+      "expected_runtime_relation": "client grid inventory panel renders or refreshes item presentation metadata",
+      "falsifies_if": [
+        "If updatePrice is called for both vendor_grid_inventory and player inventory item panels.",
+        "If purchased item panel is reconstructed immediately after trade.",
+        "If player inventory panel ignores vendor* metadata entirely."
+      ]
+    },
+    {
+      "check_id": "TV-006",
+      "hypothesis": "Price update path refreshes vendor UI, but not necessarily player inventory UI",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "validation_questions": [
+        "How exactly is vendorTradeInterface constructed?",
+        "Which panel is the player inventory panel?",
+        "Which panel is vendor_grid_inventory?",
+        "Do either panels subscribe to item data changes?",
+        "Does panel removal trigger removeReceiverFromVendor?"
+      ],
+      "required_patterns": [
+        "CreateNewInventoryPanel",
+        "OnCreateStoragePanel",
+        "OnRemove",
+        "SetUpPanel",
+        "getData",
+        "removeReceiverFromVendor",
+        "updatePrice",
+        "vendorTradeInterface",
+        "vendor_grid_inventory"
+      ],
+      "expected_runtime_relation": "client inventory/vendor interface constructs player inventory and vendor_grid_inventory panels",
+      "falsifies_if": [
+        "If updatePrice is called for both vendor_grid_inventory and player inventory item panels.",
+        "If purchased item panel is reconstructed immediately after trade.",
+        "If player inventory panel ignores vendor* metadata entirely."
+      ]
+    },
+    {
+      "check_id": "TV-005",
+      "hypothesis": "Price update path refreshes vendor UI, but not necessarily player inventory UI",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "plugins/vendor/derma/cl_vendor.lua",
+      "validation_questions": [
+        "Does vendor UI refresh only vendor-side item panels or also player inventory panels?",
+        "Does closing/removing the vendor panel send the cleanup message reliably?",
+        "Does updatePrice read vendor* metadata from item data?"
+      ],
+      "required_patterns": [
+        "CreateNewInventoryPanel",
+        "OnRemove",
+        "VendorItemPriceUpdated",
+        "getData",
+        "hook.Add",
+        "nutVendorExit",
+        "nutVendorTrade",
+        "onVendorPriceUpdated",
+        "updatePrice",
+        "vendor_grid_inventory"
+      ],
+      "expected_runtime_relation": "client vendor UI sends trade/exit and refreshes visible vendor price labels",
+      "falsifies_if": [
+        "If updatePrice is called for both vendor_grid_inventory and player inventory item panels.",
+        "If purchased item panel is reconstructed immediately after trade.",
+        "If player inventory panel ignores vendor* metadata entirely."
+      ]
+    },
+    {
+      "check_id": "TV-008",
+      "hypothesis": "Receiver ownership mismatch during item:setData cleanup",
+      "confidence": "medium",
+      "priority": "medium",
+      "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+      "validation_questions": [
+        "Where is vendor presentation metadata created?",
+        "Where is vendor presentation metadata cleared?",
+        "Does cleanup happen before or after item ownership/inventory transfer?",
+        "Which receiver/client is passed into item:setData during cleanup?"
+      ],
+      "required_patterns": [
+        "OpenVendorTradeInterface",
+        "RemoveReceiverFromVendor",
+        "VendorItemSetData",
+        "client",
+        "getOwner",
+        "netstream.Start",
+        "owner",
+        "receiver",
+        "receivers",
+        "setData",
+        "vendorBPrice",
+        "vendorMQty",
+        "vendorQty",
+        "vendorSPrice"
+      ],
+      "expected_runtime_relation": "server vendor entity mutates/clears vendor item presentation metadata",
+      "falsifies_if": [
+        "If cleanup is always sent to the actual current owner of every affected item.",
+        "If purchased item metadata is cleared before ownership transfer.",
+        "If client item data receiver updates all inventory instances globally by item ID."
+      ]
+    },
+    {
+      "check_id": "TV-015",
+      "hypothesis": "Storage movement forces broader panel reconstruction or item data refresh",
+      "confidence": "low",
+      "priority": "low",
+      "file": "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua",
+      "validation_questions": [
+        "Does grid inventory panel redraw when item data changes?",
+        "Does it cache vendor price labels?",
+        "Does it read vendorSPrice/vendorBPrice during paint or only on construction?"
+      ],
+      "required_patterns": [
+        "ItemDataChanged",
+        "Paint",
+        "SetUpPanel",
+        "getData",
+        "refresh",
+        "update",
+        "vendorBPrice",
+        "vendorSPrice"
+      ],
+      "expected_runtime_relation": "client grid inventory panel renders or refreshes item presentation metadata",
+      "falsifies_if": [
+        "If storage movement does not reconstruct the affected item panel.",
+        "If storage movement does not trigger item data resync.",
+        "If recovery is caused by vendor exit rather than storage transfer."
+      ]
+    },
+    {
+      "check_id": "TV-014",
+      "hypothesis": "Storage movement forces broader panel reconstruction or item data refresh",
+      "confidence": "low",
+      "priority": "low",
+      "file": "plugins/gridinv/plugins/gridstorage/sh_plugin.lua",
+      "validation_questions": [
+        "Does storage movement reconstruct item panels?",
+        "Does storage movement force full inventory data resync?",
+        "What refresh boundary explains observed stale-label recovery?"
+      ],
+      "required_patterns": [
+        "ItemDataChanged",
+        "OnCreateStoragePanel",
+        "SetUpPanel",
+        "StorageOpen",
+        "refresh",
+        "storageInventory"
+      ],
+      "expected_runtime_relation": "storage movement may reconstruct panels or force broader item sync",
+      "falsifies_if": [
+        "If storage movement does not reconstruct the affected item panel.",
+        "If storage movement does not trigger item data resync.",
+        "If recovery is caused by vendor exit rather than storage transfer."
+      ]
+    },
+    {
+      "check_id": "TV-013",
+      "hypothesis": "Storage movement forces broader panel reconstruction or item data refresh",
+      "confidence": "low",
+      "priority": "low",
+      "file": "plugins/inventory/cl_hooks.lua",
+      "validation_questions": [
+        "How exactly is vendorTradeInterface constructed?",
+        "Which panel is the player inventory panel?",
+        "Which panel is vendor_grid_inventory?",
+        "Do either panels subscribe to item data changes?",
+        "Does panel removal trigger removeReceiverFromVendor?"
+      ],
+      "required_patterns": [
+        "CreateNewInventoryPanel",
+        "OnCreateStoragePanel",
+        "OnRemove",
+        "SetUpPanel",
+        "removeReceiverFromVendor",
+        "vendorTradeInterface",
+        "vendor_grid_inventory"
+      ],
+      "expected_runtime_relation": "client inventory/vendor interface constructs player inventory and vendor_grid_inventory panels",
+      "falsifies_if": [
+        "If storage movement does not reconstruct the affected item panel.",
+        "If storage movement does not trigger item data resync.",
+        "If recovery is caused by vendor exit rather than storage transfer."
+      ]
+    },
+    {
+      "check_id": "TV-012",
+      "hypothesis": "Storage movement forces broader panel reconstruction or item data refresh",
+      "confidence": "low",
+      "priority": "low",
+      "file": "plugins/storage/cl_networking.lua",
+      "validation_questions": [
+        "Does storage movement reconstruct item panels?",
+        "Does storage movement force full inventory data resync?",
+        "What refresh boundary explains observed stale-label recovery?"
+      ],
+      "required_patterns": [
+        "ItemDataChanged",
+        "OnCreateStoragePanel",
+        "SetUpPanel",
+        "StorageOpen",
+        "refresh",
+        "storageInventory"
+      ],
+      "expected_runtime_relation": "storage movement may reconstruct panels or force broader item sync",
+      "falsifies_if": [
+        "If storage movement does not reconstruct the affected item panel.",
+        "If storage movement does not trigger item data resync.",
+        "If recovery is caused by vendor exit rather than storage transfer."
+      ]
+    }
+  ]
+}

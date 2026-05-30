@@ -36,6 +36,8 @@ runtime topology
 semantic documents
 doctrine docs
 source code for exact checks
+NutScript code inside the SIGNALIS repository is not external authority
+External NutScript should be used only for comparison
 ```
 
 LLMs reason over truth; they do not define it.
