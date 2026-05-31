@@ -28,7 +28,7 @@ manifests/semantic/qdrant_embedding_summary.md
 manifests/semantic/qdrant_query_results*
 
 investigations/context_pack*
-
+investigations/validation*
 qdrant_storage/
 
 # OS

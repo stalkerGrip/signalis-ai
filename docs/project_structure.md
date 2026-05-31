@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-31T16:17:44`
+Generated: `2026-05-31T16:59:30`
 
 ## Workspace
 
@@ -113,8 +113,15 @@ temp/
 - `investigations/validation/`
 - `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.json` (284.4 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.md` (18.2 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.json` (197.4 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.md` (24.3 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json` (6.9 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.md` (5.6 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.md` (39.5 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_request_v1.json` (1.2 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.json` (0.7 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.md` (0.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.json` (164.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.md` (102.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json` (266.7 KB)
@@ -197,6 +204,7 @@ temp/
 ## Important Matched Files
 
 - `investigations/context_pack.summary.md` (1.3 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json` (6.9 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)

@@ -298,3 +298,30 @@ Evidence Ranking
 → Investigation Synthesis
 
 Planner/Executor should be implemented only after runtime chain reconstruction is reliable.
+
+## Source Validation Environment
+
+Canonical source roots are defined in:
+
+config/workspace.yaml
+
+Source validation tools must use workspace.yaml and must not assume:
+
+E:/signalis_ai
+
+is the raw Lua source root.
+
+The repository root and source root are separate concepts.
+
+Repository root contains:
+
+- scripts
+- investigations
+- manifests
+- docs
+
+Raw source roots are resolved from workspace.yaml.
+
+All future validation, runtime chain reconstruction, targeted validation, and source discovery tools should load source paths from workspace.yaml.
+
+Do not hardcode source roots in investigation scripts.
