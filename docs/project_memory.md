@@ -243,6 +243,17 @@ pytest — golden regression tests
 duckdb — local topology/evidence query cache
 pyinstrument — script profiling
 
+## Runtime Chain Regression Milestone
+
+Runtime Chain Regression V1 is operational.
+
+Validated promoted chains:
+
+```text
+1. vendor_purchase_item_data_propagation_topology_chain
+2. characterload_inventory_initialization_lifecycle_chain
+```
+
 ## Investigation Pipeline Lessons
 
 Validated pipeline lesson:
@@ -314,6 +325,7 @@ Planner/Executor are pipeline control layers, not autonomous code editors and no
 Current priority remains:
 
 Evidence Ranking
+→ Generic Runtime Fact Builder
 → Runtime Chain Reconstruction
 → Investigation Synthesis
 
@@ -394,3 +406,35 @@ Allowed exceptions:
 - evidence ranking fixes
 - runtime chain fixes
 - investigation orchestration fixes
+
+## Script Contracts
+
+Stable CLI contracts are generated into:
+
+```text
+docs/runtime/script_contracts.md
+docs/runtime/script_contracts.json
+```
+
+Generator:
+
+scripts/tools/generate_script_contracts.py
+
+Purpose:
+
+scan scripts/
+run python -m <module> --help
+record current CLI contracts
+prevent guessed arguments and wrapper drift
+
+Known issue resolved:
+
+Older scripts created across sessions used inconsistent CLI names.
+Examples:
+--steps vs --runtime-steps
+--recovery-input vs --source-validation
+--workspace vs --topology
+
+Rule:
+
+Before wrapping or chaining older scripts, regenerate script contracts and inspect the relevant module contract.
