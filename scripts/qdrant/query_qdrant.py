@@ -1,7 +1,7 @@
 import argparse
 import json
 from pathlib import Path
-from typing import Any, Dict, Optional
+from typing import Any, Optional
 
 from qdrant_client import QdrantClient
 from qdrant_client.models import FieldCondition, Filter, MatchValue
@@ -12,6 +12,7 @@ from scripts.qdrant.rerank_results import rerank_results
 from scripts.qdrant.context_pack import build_context_pack
 
 DEFAULT_COLLECTION = "signalis_semantic"
+
 
 def build_filter(args: argparse.Namespace) -> Optional[Filter]:
     conditions = []
@@ -39,11 +40,6 @@ def run_search(
     query_filter: Optional[Filter],
     limit: int,
 ):
-    """
-    Supports both older qdrant-client versions with client.search(...)
-    and newer versions with client.query_points(...).
-    """
-
     if hasattr(client, "search"):
         return client.search(
             collection_name=collection_name,
@@ -63,24 +59,43 @@ def run_search(
         with_vectors=False,
     )
 
-    # Newer clients return QueryResponse(points=[...]).
     return getattr(response, "points", response)
+
+
+def result_to_dict(result: Any) -> dict[str, Any]:
+    payload = result.payload or {}
+    return {
+        "score": result.score,
+        "payload": payload,
+        "text": payload.get("text", ""),
+        "doc_type": payload.get("doc_type"),
+        "node_type": payload.get("node_type"),
+        "plugin": payload.get("plugin"),
+        "subsystem": payload.get("subsystem"),
+        "realm": payload.get("realm"),
+        "file": payload.get("file"),
+        "_raw": result,
+    }
 
 
 def format_result(index: int, result: Any, text_chars: int) -> str:
     rerank_score = None
     rerank_bonus = None
     rerank_reasons = []
+    rerank_components = {}
+    bge_score = None
+    bge_error = None
 
     if isinstance(result, dict):
         rerank_score = result.get("rerank_score")
         rerank_bonus = result.get("rerank_bonus")
         rerank_reasons = result.get("rerank_reasons", [])
-        raw = result.get("_raw")
+        rerank_components = result.get("rerank_components", {})
+        bge_score = result.get("bge_score")
+        bge_error = result.get("bge_error")
         payload = result.get("payload", {})
         score = result.get("score", 0.0)
     else:
-        raw = result
         payload = result.payload or {}
         score = result.score
 
@@ -94,8 +109,11 @@ def format_result(index: int, result: Any, text_chars: int) -> str:
         f"## Result {index}",
         "",
         f"- Score: **{score:.4f}**",
+        f"- BGE score: `{bge_score}`",
+        f"- BGE error: `{bge_error}`",
         f"- Rerank score: `{rerank_score}`",
         f"- Rerank bonus: `{rerank_bonus}`",
+        f"- Rerank components: `{rerank_components}`",
         f"- Rerank reasons: `{rerank_reasons}`",
         f"- Source ID: `{payload.get('source_id')}`",
         f"- Doc type: `{payload.get('doc_type')}`",
@@ -134,13 +152,23 @@ def main() -> None:
     parser.add_argument("--port", type=int, default=6333)
     parser.add_argument("--collection", default=DEFAULT_COLLECTION)
     parser.add_argument("--top-k", type=int, default=10)
+    parser.add_argument("--retrieve-k", type=int, default=None)
     parser.add_argument("--text-chars", type=int, default=1800)
     parser.add_argument("--write", action="store_true")
 
     parser.add_argument("--rerank", action="store_true")
     parser.add_argument("--expanded-query", action="store_true")
 
-    # Optional metadata filters.
+    parser.add_argument("--bge-rerank", action="store_true")
+    parser.add_argument("--bge-model", default="BAAI/bge-reranker-v2-m3")
+    parser.add_argument("--bge-fp16", action="store_true")
+    parser.add_argument("--bge-batch-size", type=int, default=4)
+
+    parser.add_argument("--dense-weight", type=float, default=0.35)
+    parser.add_argument("--bge-weight", type=float, default=0.25)
+    parser.add_argument("--structural-weight", type=float, default=0.25)
+    parser.add_argument("--causal-weight", type=float, default=0.15)
+
     parser.add_argument("--doc-type")
     parser.add_argument("--node-type")
     parser.add_argument("--plugin")
@@ -156,43 +184,47 @@ def main() -> None:
     intent = classify_retrieval_intent(args.query)
 
     query_text = args.query
-    if args.expanded_query or args.rerank:
+    if args.expanded_query or args.rerank or args.bge_rerank:
         query_text = build_expanded_query(intent)
 
     model = SentenceTransformer(args.model, device=args.device)
     query_vector = model.encode(query_text, normalize_embeddings=True).tolist()
 
     client = QdrantClient(host=args.host, port=args.port)
-
     query_filter = build_filter(args)
 
-    results = run_search(
+    retrieve_k = args.retrieve_k or args.top_k
+    if args.rerank or args.bge_rerank:
+        retrieve_k = max(retrieve_k, args.top_k)
+
+    raw_results = run_search(
         client=client,
         collection_name=args.collection,
         query_vector=query_vector,
         query_filter=query_filter,
-        limit=args.top_k,
+        limit=retrieve_k,
     )
 
-    if args.rerank:
-        result_dicts = []
+    results: list[Any] = list(raw_results)
 
-        for result in results:
-            payload = result.payload or {}
-            result_dicts.append({
-                "score": result.score,
-                "payload": payload,
-                "text": payload.get("text", ""),
-                "doc_type": payload.get("doc_type"),
-                "node_type": payload.get("node_type"),
-                "plugin": payload.get("plugin"),
-                "subsystem": payload.get("subsystem"),
-                "realm": payload.get("realm"),
-                "file": payload.get("file"),
-                "_raw": result,
-            })
+    if args.rerank or args.bge_rerank:
+        result_dicts = [result_to_dict(result) for result in results]
 
-        results = rerank_results(result_dicts, intent)
+        results = rerank_results(
+            result_dicts,
+            intent,
+            query=args.query,
+            use_bge=args.bge_rerank,
+            bge_model=args.bge_model,
+            bge_fp16=args.bge_fp16,
+            bge_batch_size=args.bge_batch_size,
+            dense_weight=args.dense_weight,
+            bge_weight=args.bge_weight,
+            structural_weight=args.structural_weight,
+            causal_weight=args.causal_weight,
+        )
+
+        results = results[:args.top_k]
 
     filter_summary = {
         "doc_type": args.doc_type,
@@ -209,9 +241,15 @@ def main() -> None:
         "",
         f"Collection: `{args.collection}`",
         f"Query: `{args.query}`",
+        f"Expanded query used: `{query_text}`",
         f"Top K: **{args.top_k}**",
+        f"Retrieve K: **{retrieve_k}**",
         f"Model: `{args.model}`",
         f"Device: `{args.device}`",
+        f"Deterministic rerank: `{args.rerank}`",
+        f"BGE rerank: `{args.bge_rerank}`",
+        f"BGE model: `{args.bge_model}`",
+        f"BGE fp16: `{args.bge_fp16}`",
         "",
         "## Filters",
         "",

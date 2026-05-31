@@ -2,11 +2,11 @@
   "source": "E:\\signalis_ai\\investigations\\validation\\vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json",
   "query": "vendor stale price label after purchase",
   "summary": {
-    "checks_total": 15,
+    "checks_total": 17,
     "by_priority": {
-      "high": 4,
-      "medium": 7,
-      "low": 4
+      "high": 6,
+      "low": 4,
+      "medium": 7
     },
     "by_role": {
       "client_inventory_hooks": 3,
@@ -17,7 +17,9 @@
       "server_inventory": 1,
       "server_item_data": 1,
       "grid_storage_ui": 1,
-      "storage_client_networking": 1
+      "storage_client_networking": 1,
+      "gridinv_transfer": 1,
+      "client_item_networking": 1
     },
     "by_file": {
       "plugins/inventory/cl_hooks.lua": 3,
@@ -28,7 +30,9 @@
       "gamemode/core/meta/inventory/sv_base_inventory.lua": 1,
       "gamemode/core/meta/item/sv_item.lua": 1,
       "plugins/gridinv/plugins/gridstorage/sh_plugin.lua": 1,
-      "plugins/storage/cl_networking.lua": 1
+      "plugins/storage/cl_networking.lua": 1,
+      "plugins/gridinv/sv_transfer.lua": 1,
+      "gamemode/core/libs/item/cl_networking.lua": 1
     }
   },
   "checks": [
@@ -479,6 +483,61 @@
         "If storage movement does not reconstruct the affected item panel.",
         "If storage movement does not trigger item data resync.",
         "If recovery is caused by vendor exit rather than storage transfer."
+      ]
+    },
+    {
+      "check_id": "TV-PATCH-016",
+      "hypothesis": "Vendor purchase transfer clears purchased-item vendor metadata and syncs item data to client UI",
+      "confidence": "high",
+      "priority": "high",
+      "file": "plugins/gridinv/sv_transfer.lua",
+      "semantic_role": "gridinv_transfer",
+      "validation_questions": [
+        "Does gridinv transfer identify vendor to player purchase through vendorSellItem?",
+        "Does the transfer cross oldInventory to player inventory boundary?",
+        "Does the transfer add the item to player inventory before vendor metadata cleanup?",
+        "Does the purchase cleanup clear vendorSPrice/vendorQty/vendorMQty on the purchased item?"
+      ],
+      "required_patterns": [
+        "vendorSellItem",
+        "oldInventory",
+        "inventory:add",
+        "item:setData(\"vendorSPrice\", nil",
+        "item:setData(\"vendorQty\", nil",
+        "item:setData(\"vendorMQty\", nil",
+        "item:setData(\"vendorBPrice\"",
+        "CanItemBeTransfered",
+        "HandleItemTransferRequest"
+      ],
+      "expected_runtime_relation": "vendor purchase transfer boundary and purchased-item vendor metadata cleanup",
+      "falsifies_if": [
+        "Required patterns are absent from the validated source file.",
+        "The file is legacy or not used in the current vendor purchase runtime path."
+      ]
+    },
+    {
+      "check_id": "TV-PATCH-017",
+      "hypothesis": "Vendor purchase transfer clears purchased-item vendor metadata and syncs item data to client UI",
+      "confidence": "high",
+      "priority": "high",
+      "file": "gamemode/core/libs/item/cl_networking.lua",
+      "semantic_role": "client_item_networking",
+      "validation_questions": [
+        "Does client item networking receive invData?",
+        "Does invData mutate client item.data[key]?",
+        "Does invData emit ItemDataChanged after mutation?"
+      ],
+      "required_patterns": [
+        "netstream.Hook(\"invData\"",
+        "hook.Run(\"ItemDataChanged\"",
+        "nut.item.instances",
+        "item.data[key]",
+        "oldValue"
+      ],
+      "expected_runtime_relation": "client item metadata delta receive path and ItemDataChanged emission",
+      "falsifies_if": [
+        "Required patterns are absent from the validated source file.",
+        "The file is legacy or not used in the current vendor purchase runtime path."
       ]
     }
   ]

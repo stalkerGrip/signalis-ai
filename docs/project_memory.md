@@ -195,3 +195,44 @@ When human-confirmed information resolves ambiguity, update one of:
 - `docs/ai_subsystems/*.md`
 - `investigations/*.md`
 - project instructions, only for reusable global rules
+
+## Local Development Environment
+
+User workstation:
+
+```text
+OS: Windows 10
+CPU: Ryzen 5 7500F
+RAM: 32 GB DDR4
+GPU: AMD RX 9060 XT 16 GB
+Python torch: 2.12.0+cpu
+CUDA available: false
+```
+
+CUDA is unavailable because GPU is AMD.
+Default ML pipeline should assume CPU inference.
+BGE reranker should use use_fp16=False by default.
+Do not prioritize ROCm until ranking quality is proven useful.
+
+## Investigation Pipeline Lessons
+
+Validated pipeline lesson:
+
+Inventory membership sync and item metadata sync are separate runtime systems, but both may participate in the same causal chain.
+
+For vendor purchase:
+
+```text
+gridinv sv_transfer
+→ inventory membership transfer
+→ Inventory:syncItemAdded
+→ item:sync(recipients)
+→ nutInventoryAdd
+→ purchase metadata cleanup
+→ item:setData("vendorSPrice", nil, client)
+→ ITEM:setData
+→ invData
+→ ItemDataChanged
+→ grid panel InventoryItemDataChanged
+→ populateItems
+```

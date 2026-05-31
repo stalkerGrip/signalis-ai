@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-30T22:50:27`
+Generated: `2026-05-30T23:20:19`
 
 ## Workspace
 
@@ -113,8 +113,8 @@ temp/
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.md` (65.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.json` (203.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.md` (75.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json` (57.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.md` (8.7 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json` (235.9 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.md` (111.9 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json` (18.9 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.md` (15.6 KB)
 
@@ -187,7 +187,7 @@ temp/
 - `subsystem_docs/persistence_model.md` (3.3 KB)
 - `subsystem_docs/qdrant_plan.md` (3.6 KB)
 - `subsystem_docs/realm_model.md` (3.5 KB)
-- `subsystem_docs/runtime_doctrine.md` (10.3 KB)
+- `subsystem_docs/runtime_doctrine.md` (10.7 KB)
 
 ## Active Investigation
 

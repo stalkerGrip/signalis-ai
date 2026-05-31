@@ -1,26 +1,30 @@
 #!/usr/bin/env python3
-"""
-SIGNALIS AI — Targeted Validation Report Builder V1
-
-Input:
-  *_investigation_synthesis.json
-
-Output:
-  *_targeted_validation.json
-  *_targeted_validation.md
-
-Usage:
-  python -m scripts.qdrant.build_targeted_validation_report `
-    --synthesis investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json
-"""
-
 from __future__ import annotations
 
 import argparse
 import json
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
+
+
+PATH_ALIASES = {
+    "gamemode/core/libs/item/sv_item.lua": "gamemode/core/meta/item/sv_item.lua",
+}
+
+SEMANTIC_PATH_ROLES = {
+    "gamemode/core/meta/item/sv_item.lua": "server_item_data",
+    "gamemode/core/meta/inventory/sv_base_inventory.lua": "server_inventory",
+    "gamemode/core/meta/inventory/cl_base_inventory.lua": "client_inventory",
+    "plugins/gridinv/sv_transfer.lua": "gridinv_transfer",
+    "plugins/vendor/entities/entities/nut_vendor/init.lua": "server_vendor_entity",
+    "plugins/inventory/cl_hooks.lua": "client_inventory_hooks",
+    "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua": "client_grid_panel",
+    "plugins/vendor/derma/cl_vendor.lua": "legacy_or_vendor_trade_ui",
+    "plugins/vendor/cl_networking.lua": "vendor_client_networking",
+    "plugins/storage/cl_networking.lua": "storage_client_networking",
+    "plugins/gridinv/plugins/gridstorage/sh_plugin.lua": "grid_storage_ui",
+}
 
 
 @dataclass
@@ -30,10 +34,24 @@ class TargetedCheck:
     confidence: str
     priority: str
     file: str
+    semantic_role: str
     validation_questions: list[str]
     required_patterns: list[str]
     expected_runtime_relation: str
     falsifies_if: list[str]
+
+
+def norm_path(value: str) -> str:
+    return value.replace("\\", "/").strip().lstrip("./")
+
+
+def canonical_path(value: str) -> str:
+    path = norm_path(value)
+    return PATH_ALIASES.get(path.lower(), path)
+
+
+def semantic_role(file_path: str) -> str:
+    return SEMANTIC_PATH_ROLES.get(canonical_path(file_path).lower(), "unknown")
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -58,224 +76,203 @@ def priority_from_confidence(confidence: str) -> str:
     return "low"
 
 
-def patterns_for_file(file_path: str, hypothesis_title: str) -> list[str]:
-    path = file_path.replace("\\", "/").lower()
+def patterns_for_role(role: str, hypothesis_title: str) -> list[str]:
     title = hypothesis_title.lower()
-
     patterns: set[str] = set()
 
-    if "vendor/entities/entities/nut_vendor/init.lua" in path:
+    if role == "server_item_data":
         patterns.update([
-            "VendorItemSetData",
-            "RemoveReceiverFromVendor",
-            "setData",
-            "vendorSPrice",
-            "vendorBPrice",
-            "vendorQty",
-            "vendorMQty",
-            "OpenVendorTradeInterface",
+            "function ITEM:setData",
+            "self.data[key] = value",
             "netstream.Start",
+            "\"invData\"",
+            "nut.db.updateTable",
+            "self:getOwner",
+            "self:setNetVar",
         ])
 
-    if "vendor/derma/cl_vendor.lua" in path:
+    elif role == "server_inventory":
         patterns.update([
-            "nutVendorTrade",
-            "nutVendorExit",
-            "VendorItemPriceUpdated",
-            "onVendorPriceUpdated",
-            "updatePrice",
-            "hook.Add",
-            "OnRemove",
+            "function Inventory:addItem",
+            "function Inventory:removeItem",
+            "function Inventory:syncItemAdded",
+            "local recipients = self:getRecipients()",
+            "item:sync(recipients)",
+            "net.Start(\"nutInventoryAdd\")",
+            "net.Send(recipients)",
+            "function Inventory:getRecipients",
         ])
 
-    if "vendor/cl_networking.lua" in path:
+    elif role == "client_inventory":
         patterns.update([
-            "addNetHandler",
-            "Price",
-            "Stock",
-            "Money",
-            "Mode",
-            "hook.Run",
+            "net.Receive(\"nutInventoryData\"",
+            "hook.Run(\"InventoryDataChanged\"",
+            "net.Receive(\"nutInventoryAdd\"",
+            "hook.Run(\"InventoryItemAdded\"",
+            "net.Receive(\"nutInventoryRemove\"",
+            "hook.Run(\"InventoryItemRemoved\"",
+        ])
+
+    elif role == "gridinv_transfer":
+        patterns.update([
+            "HandleItemTransferRequest",
+            "CanItemBeTransfered",
+            "oldInventory",
+            "inventory:add",
+            "vendorSellItem",
+            "item:setData(\"vendorQty\", nil",
+            "item:setData(\"vendorSPrice\", nil",
+            "item:setData(\"vendorMQty\", nil",
+            "item:setData(\"vendorBPrice\"",
+        ])
+
+    elif role == "server_vendor_entity":
+        patterns.update([
+            "function ENT:VendorItemSetData",
+            "item:setData(\"vendorQty\"",
+            "item:setData(\"vendorSPrice\"",
+            "item:setData(\"vendorMQty\"",
+            "function ENT:RemoveReceiverFromVendor",
+            "v:setData(\"vendorBPrice\", nil",
+            "v:setData(\"vendorQty\", nil",
+            "v:setData(\"vendorSPrice\", nil",
+            "v:setData(\"vendorMQty\", nil",
+            "hook.Run(\"OpenVendorTradeInterface\"",
+        ])
+
+    elif role == "client_inventory_hooks":
+        patterns.update([
+            "netstream.Hook(\"vendorTradeInterface\"",
+            "PLUGIN:CreateNewInventoryPanel",
+            "vgui.Create(\"vendor_grid_inventory\")",
+            "storageInvPanel:SetUpPanel(loadedInv)",
+            "netstream.Start(\"removeReceiverFromVendor\"",
+            "netstream.Start(\"inventorySetPanelStatus\"",
+            "hook.Run(\"OnCreateStoragePanel\"",
+        ])
+
+    elif role == "client_grid_panel":
+        patterns.update([
+            "function PANEL:InventoryItemDataChanged",
+            "self:populateItems()",
+            "function PANEL:InventoryItemRemoved",
+            "function PANEL:addItem",
+            "item:getData(\"x\")",
+            "item:getData(\"y\")",
+        ])
+
+    elif role == "legacy_or_vendor_trade_ui":
+        patterns.update([
+            "net.Start(\"nutVendorTrade\")",
+            "net.Start(\"nutVendorExit\")",
+            "hook.Add(\"VendorItemPriceUpdated\"",
+            "function PANEL:onVendorPriceUpdated",
+            "panel:updatePrice()",
+        ])
+
+    elif role == "vendor_client_networking":
+        patterns.update([
             "VendorItemPriceUpdated",
             "VendorItemStockUpdated",
-        ])
-
-    if "inventory/cl_hooks.lua" in path:
-        patterns.update([
-            "vendorTradeInterface",
-            "CreateNewInventoryPanel",
-            "vendor_grid_inventory",
-            "SetUpPanel",
-            "OnCreateStoragePanel",
-            "removeReceiverFromVendor",
-            "OnRemove",
-        ])
-
-    if "cl_base_inventory.lua" in path:
-        patterns.update([
-            "nutInventoryData",
-            "net.Receive",
+            "VendorMoneyUpdated",
+            "hook.Run",
             "netstream.Hook",
-            "setData",
-            "data",
-            "ItemDataChanged",
         ])
 
-    if "sv_item.lua" in path:
-        patterns.update([
-            "ITEM:setData",
-            "netstream.Start",
-            "invData",
-            "getOwner",
-            "nut.db.updateTable",
-            "setNetVar",
-        ])
-
-    if "sv_base_inventory.lua" in path:
-        patterns.update([
-            "addItem",
-            "removeItem",
-            "sync",
-            "getReceivers",
-            "netstream.Start",
-            "invData",
-        ])
-
-    if "cl_grid_inventory_panel.lua" in path:
-        patterns.update([
-            "SetUpPanel",
-            "update",
-            "refresh",
-            "ItemDataChanged",
-            "Paint",
-            "getData",
-            "vendorSPrice",
-            "vendorBPrice",
-        ])
-
-    if "gridstorage/sh_plugin.lua" in path or "storage/cl_networking.lua" in path:
+    elif role in {"storage_client_networking", "grid_storage_ui"}:
         patterns.update([
             "StorageOpen",
-            "storageInventory",
+            "hook.Run(\"StorageOpen\"",
             "OnCreateStoragePanel",
             "SetUpPanel",
-            "refresh",
-            "ItemDataChanged",
+            "inventorySetPanelStatus",
         ])
 
     if "cleanup sync" in title:
-        patterns.update(["nil", "RemoveReceiverFromVendor", "vendorSPrice", "invData"])
+        patterns.update([
+            "item:setData(\"vendorSPrice\", nil",
+            "\"invData\"",
+            "InventoryItemDataChanged",
+            "self:populateItems()",
+        ])
 
     if "player inventory ui" in title:
-        patterns.update(["CreateNewInventoryPanel", "vendor_grid_inventory", "updatePrice", "getData"])
+        patterns.update([
+            "PLUGIN:CreateNewInventoryPanel",
+            "vgui.Create(\"vendor_grid_inventory\")",
+            "InventoryItemDataChanged",
+            "panel:updatePrice()",
+        ])
 
     if "receiver ownership" in title:
-        patterns.update(["client", "receiver", "receivers", "owner", "getOwner", "setData"])
+        patterns.update([
+            "self:getOwner",
+            "local recipients = self:getRecipients()",
+            "item:sync(recipients)",
+            "netstream.Start",
+            "\"invData\"",
+        ])
+
+    if "storage movement" in title:
+        patterns.update([
+            "StorageOpen",
+            "OnCreateStoragePanel",
+            "SetUpPanel",
+            "self:populateItems()",
+        ])
 
     return sorted(patterns)
 
 
-def questions_for_file(file_path: str, hypothesis_title: str) -> list[str]:
-    path = file_path.replace("\\", "/").lower()
-    title = hypothesis_title.lower()
-
-    questions: list[str] = []
-
-    if "vendor/entities/entities/nut_vendor/init.lua" in path:
-        questions.extend([
-            "Where is vendor presentation metadata created?",
-            "Where is vendor presentation metadata cleared?",
-            "Does cleanup happen before or after item ownership/inventory transfer?",
-            "Which receiver/client is passed into item:setData during cleanup?",
-        ])
-
-    if "vendor/derma/cl_vendor.lua" in path:
-        questions.extend([
-            "Does vendor UI refresh only vendor-side item panels or also player inventory panels?",
-            "Does closing/removing the vendor panel send the cleanup message reliably?",
-            "Does updatePrice read vendor* metadata from item data?",
-        ])
-
-    if "vendor/cl_networking.lua" in path:
-        questions.extend([
-            "Which network handler emits VendorItemPriceUpdated?",
-            "Does the Price handler update item data, UI state, or only emit hooks?",
-            "Is there a handler for metadata cleanup or only price/stock updates?",
-        ])
-
-    if "inventory/cl_hooks.lua" in path:
-        questions.extend([
-            "How exactly is vendorTradeInterface constructed?",
-            "Which panel is the player inventory panel?",
-            "Which panel is vendor_grid_inventory?",
-            "Do either panels subscribe to item data changes?",
-            "Does panel removal trigger removeReceiverFromVendor?",
-        ])
-
-    if "cl_base_inventory.lua" in path:
-        questions.extend([
-            "What does nutInventoryData mutate on the client?",
-            "Does nutInventoryData emit ItemDataChanged or another refresh event?",
-            "Does item data update trigger existing item panel refresh?",
-        ])
-
-    if "sv_item.lua" in path:
-        questions.extend([
-            "What receivers does ITEM:setData use by default?",
-            "Does setData send invData immediately?",
-            "Does noSave/noCheckEntity affect persistence or network sync?",
-        ])
-
-    if "sv_base_inventory.lua" in path:
-        questions.extend([
-            "How does server inventory transfer change item ownership?",
-            "Are receivers updated before or after item data cleanup?",
-            "Does inventory sync resend full item data after transfers?",
-        ])
-
-    if "cl_grid_inventory_panel.lua" in path:
-        questions.extend([
-            "Does grid inventory panel redraw when item data changes?",
-            "Does it cache vendor price labels?",
-            "Does it read vendorSPrice/vendorBPrice during paint or only on construction?",
-        ])
-
-    if "storage" in path:
-        questions.extend([
-            "Does storage movement reconstruct item panels?",
-            "Does storage movement force full inventory data resync?",
-            "What refresh boundary explains observed stale-label recovery?",
-        ])
-
-    if not questions:
-        questions.append("Identify exact runtime relation relevant to this hypothesis.")
-
-    return questions
+def questions_for_role(role: str) -> list[str]:
+    if role == "server_item_data":
+        return [
+            "Does ITEM:setData persist item metadata?",
+            "Does ITEM:setData immediately emit invData?",
+            "Which receiver path is used when explicit receivers are passed?",
+            "What happens if explicit receiver is stale or wrong?",
+        ]
+    if role == "server_inventory":
+        return [
+            "When item ownership changes, which recipients receive item sync?",
+            "Does addItem call item:sync before nutInventoryAdd?",
+            "Does transfer update recipients before item data cleanup?",
+        ]
+    if role == "gridinv_transfer":
+        return [
+            "Does vendor purchase cleanup happen after transfer?",
+            "Are vendorSPrice/vendorQty/vendorMQty cleared on the transferred item?",
+            "Which client is passed into item:setData cleanup?",
+        ]
+    if role == "client_grid_panel":
+        return [
+            "Does item data change call populateItems?",
+            "Does panel reconstruction remove stale icon presentation state?",
+            "Does the panel read vendor price data only during icon creation?",
+        ]
+    if role == "client_inventory_hooks":
+        return [
+            "How is the vendor trade interface built?",
+            "Which panel is player inventory and which is vendor inventory?",
+            "Does close/removal trigger removeReceiverFromVendor?",
+        ]
+    return ["Validate the exact runtime relation for this semantic role."]
 
 
-def expected_relation(file_path: str, hypothesis_title: str) -> str:
-    path = file_path.replace("\\", "/").lower()
-
-    if "vendor/entities/entities/nut_vendor/init.lua" in path:
-        return "server vendor entity mutates/clears vendor item presentation metadata"
-    if "vendor/derma/cl_vendor.lua" in path:
-        return "client vendor UI sends trade/exit and refreshes visible vendor price labels"
-    if "vendor/cl_networking.lua" in path:
-        return "client vendor network handler emits vendor update hooks"
-    if "inventory/cl_hooks.lua" in path:
-        return "client inventory/vendor interface constructs player inventory and vendor_grid_inventory panels"
-    if "cl_base_inventory.lua" in path:
-        return "client inventory data delta receiver mutates local inventory/item data"
-    if "sv_item.lua" in path:
-        return "server item data mutation persists and conditionally syncs item data"
-    if "sv_base_inventory.lua" in path:
-        return "server inventory ownership/transfer/sync boundary"
-    if "cl_grid_inventory_panel.lua" in path:
-        return "client grid inventory panel renders or refreshes item presentation metadata"
-    if "storage" in path:
-        return "storage movement may reconstruct panels or force broader item sync"
-
-    return "runtime relation requires source validation"
+def expected_relation(role: str) -> str:
+    return {
+        "server_item_data": "server item data mutation persists and conditionally syncs item data through invData",
+        "server_inventory": "server inventory ownership and recipient sync boundary",
+        "client_inventory": "client inventory membership/data receiver boundary",
+        "gridinv_transfer": "server transfer flow mutates ownership and vendor presentation metadata",
+        "server_vendor_entity": "server vendor entity creates/clears vendor item presentation metadata",
+        "client_inventory_hooks": "client inventory/vendor interface construction and close cleanup boundary",
+        "client_grid_panel": "client grid panel refreshes item icons when item data changes",
+        "legacy_or_vendor_trade_ui": "vendor trade UI price hooks and trade/exit messages",
+        "vendor_client_networking": "client vendor networking emits vendor update hooks",
+        "storage_client_networking": "storage open/exit network boundary",
+        "grid_storage_ui": "grid storage UI construction and panel pairing boundary",
+    }.get(role, "runtime relation requires source validation")
 
 
 def build_checks(payload: dict[str, Any]) -> list[TargetedCheck]:
@@ -288,110 +285,104 @@ def build_checks(payload: dict[str, Any]) -> list[TargetedCheck]:
         priority = priority_from_confidence(confidence)
         falsification = list(hyp.get("falsification", []))
 
-        for file_path in hyp.get("validation_targets", []):
-            checks.append(
-                TargetedCheck(
-                    check_id=f"TV-{counter:03d}",
-                    hypothesis=title,
-                    confidence=confidence,
-                    priority=priority,
-                    file=str(file_path),
-                    validation_questions=questions_for_file(str(file_path), title),
-                    required_patterns=patterns_for_file(str(file_path), title),
-                    expected_runtime_relation=expected_relation(str(file_path), title),
-                    falsifies_if=falsification,
-                )
-            )
+        for raw_file in hyp.get("validation_targets", []):
+            file_path = canonical_path(str(raw_file))
+            role = semantic_role(file_path)
+
+            checks.append(TargetedCheck(
+                check_id=f"TV-{counter:03d}",
+                hypothesis=title,
+                confidence=confidence,
+                priority=priority,
+                file=file_path,
+                semantic_role=role,
+                validation_questions=questions_for_role(role),
+                required_patterns=patterns_for_role(role, title),
+                expected_runtime_relation=expected_relation(role),
+                falsifies_if=falsification,
+            ))
             counter += 1
 
-    checks.sort(key=lambda c: (0 if c.priority == "high" else 1 if c.priority == "medium" else 2, c.file))
+    checks.sort(key=lambda c: (
+        0 if c.priority == "high" else 1 if c.priority == "medium" else 2,
+        c.semantic_role,
+        c.file,
+    ))
     return checks
 
 
 def summarize(checks: list[TargetedCheck]) -> dict[str, Any]:
     by_priority: dict[str, int] = {}
     by_file: dict[str, int] = {}
+    by_role: dict[str, int] = {}
 
     for check in checks:
         by_priority[check.priority] = by_priority.get(check.priority, 0) + 1
         by_file[check.file] = by_file.get(check.file, 0) + 1
+        by_role[check.semantic_role] = by_role.get(check.semantic_role, 0) + 1
 
     return {
         "checks_total": len(checks),
         "by_priority": by_priority,
+        "by_role": dict(sorted(by_role.items(), key=lambda x: x[1], reverse=True)),
         "by_file": dict(sorted(by_file.items(), key=lambda x: x[1], reverse=True)),
     }
 
 
 def format_md(source: Path, payload: dict[str, Any], checks: list[TargetedCheck]) -> str:
     summary = summarize(checks)
-
-    lines: list[str] = []
-    lines.append("# SIGNALIS AI — Targeted Validation Plan")
-    lines.append("")
-    lines.append(f"- Source synthesis: `{source}`")
-    lines.append(f"- Query: `{payload.get('query', '')}`")
-    lines.append(f"- Checks total: `{summary['checks_total']}`")
-    lines.append("")
-    lines.append("## Purpose")
-    lines.append("")
-    lines.append("This report converts investigation hypotheses into exact source-validation checks.")
-    lines.append("")
-    lines.append("Goal:")
-    lines.append("")
-    lines.append("```text")
-    lines.append("hypotheses")
-    lines.append("→ target files")
-    lines.append("→ exact questions")
-    lines.append("→ required source patterns")
-    lines.append("→ validation/falsification")
-    lines.append("```")
-    lines.append("")
-
-    lines.append("## Primary Failure Boundary")
-    lines.append("")
-    lines.append("```text")
-    lines.append("item:setData cleanup / sync boundary")
-    lines.append("→ client inventory data delta")
-    lines.append("→ active item panel refresh")
-    lines.append("```")
-    lines.append("")
-
-    lines.append("## Checks")
-    lines.append("")
+    lines = [
+        "# SIGNALIS AI — Targeted Validation Plan",
+        "",
+        f"- Source synthesis: `{source}`",
+        f"- Query: `{payload.get('query', '')}`",
+        f"- Checks total: `{summary['checks_total']}`",
+        "",
+        "## Purpose",
+        "",
+        "Convert investigation hypotheses into exact source-validation checks.",
+        "",
+        "## Summary",
+        "",
+        "```json",
+        json.dumps(summary, indent=2, ensure_ascii=False),
+        "```",
+        "",
+        "## Checks",
+        "",
+    ]
 
     for check in checks:
-        lines.append(f"### {check.check_id} — `{check.file}`")
-        lines.append("")
-        lines.append(f"- Priority: `{check.priority}`")
-        lines.append(f"- Hypothesis: {check.hypothesis}")
-        lines.append(f"- Confidence: `{check.confidence}`")
-        lines.append(f"- Expected runtime relation: {check.expected_runtime_relation}")
-        lines.append("")
-        lines.append("Validation questions:")
-        lines.append("")
-        for q in check.validation_questions:
-            lines.append(f"- {q}")
-        lines.append("")
-        lines.append("Required source patterns:")
-        lines.append("")
-        for p in check.required_patterns:
-            lines.append(f"- `{p}`")
-        lines.append("")
-        lines.append("Falsifies hypothesis if:")
-        lines.append("")
-        for f in check.falsifies_if:
-            lines.append(f"- {f}")
+        lines += [
+            f"### {check.check_id} — `{check.file}`",
+            "",
+            f"- Priority: `{check.priority}`",
+            f"- Semantic role: `{check.semantic_role}`",
+            f"- Hypothesis: {check.hypothesis}",
+            f"- Confidence: `{check.confidence}`",
+            f"- Expected runtime relation: {check.expected_runtime_relation}",
+            "",
+            "Validation questions:",
+            "",
+        ]
+        lines += [f"- {q}" for q in check.validation_questions]
+        lines += ["", "Required source patterns:", ""]
+        lines += [f"- `{p}`" for p in check.required_patterns]
+        lines += ["", "Falsifies hypothesis if:", ""]
+        lines += [f"- {f}" for f in check.falsifies_if] or ["- No falsification rule provided."]
         lines.append("")
 
-    lines.append("## Suggested Next Command")
-    lines.append("")
-    lines.append("```powershell")
-    lines.append("python -m scripts.qdrant.validate_sources `")
-    lines.append("  --workspace E:/signalis_ai `")
-    lines.append("  --report investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.md")
-    lines.append("```")
-    lines.append("")
+    lines += [
+        "## Suggested Next Command",
+        "",
+        "```powershell",
+        "python -m scripts.qdrant.validate_targeted_sources `",
+        "  --workspace E:/signalis_ai `",
+        "  --workspace-config workspace.yaml `",
+        "  --targeted investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json",
+        "```",
+        "",
+    ]
 
     return "\n".join(lines)
 

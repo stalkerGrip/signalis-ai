@@ -1,30 +1,23 @@
 #!/usr/bin/env python3
-"""
-SIGNALIS AI — Targeted Source Validator V1
-
-Input:
-  *_targeted_validation.json
-
-Output:
-  *_source_validation.json
-  *_source_validation.md
-
-Usage:
-  python -m scripts.qdrant.validate_targeted_sources `
-    --workspace E:/signalis_ai `
-    --targeted investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json
-"""
-
 from __future__ import annotations
 
 import argparse
 import json
 import re
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
 import yaml
+
+
+@dataclass
+class ResolvedFile:
+    requested: str
+    resolved_path: str | None
+    status: str
+    candidates: list[str]
+
 
 @dataclass
 class SourceHit:
@@ -33,17 +26,17 @@ class SourceHit:
     priority: str
     file: str
     resolved_path: str | None
+    resolution_status: str
     pattern: str
     line_start: int
     line_end: int
     snippet: str
     found: bool
 
-def load_source_roots(config_path: Path) -> list[Path]:
-    config = yaml.safe_load(config_path.read_text(encoding="utf-8"))
-    roots = config.get("source_roots", [])
 
-    return [Path(root).resolve() for root in roots]
+def norm_path(value: str) -> str:
+    return value.strip().strip("`'\"").replace("\\", "/").lstrip("./").lower()
+
 
 def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
@@ -59,49 +52,121 @@ def write_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def resolve_file(source_roots: list[Path], file_path: str) -> Path | None:
-    normalized = file_path.replace("\\", "/").lower()
+def resolve_workspace_config(path: Path, workspace: Path | None) -> Path:
+    candidates = [path]
 
-    for root in source_roots:
-        direct = root / file_path
-        if direct.exists():
-            return direct
+    if workspace:
+        candidates.extend([
+            workspace / path,
+            workspace / "config" / path.name,
+        ])
 
-    candidates: list[Path] = []
+    for candidate in candidates:
+        if candidate.exists():
+            return candidate.resolve()
 
-    for root in source_roots:
-        candidates.extend(root.rglob("*.lua"))
+    raise FileNotFoundError(f"Could not find workspace config: {path}")
 
-    exact = [
-        p for p in candidates
-        if p.as_posix().lower().endswith(normalized)
-    ]
 
-    if exact:
-        return exact[0]
+def load_source_roots(config_path: Path, workspace: Path | None) -> list[Path]:
+    config = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+    roots = config.get("source_roots", [])
 
-    wanted_parts = normalized.split("/")
-    scored: list[tuple[int, Path]] = []
+    resolved: list[Path] = []
+    for root in roots:
+        p = Path(str(root))
+        if not p.is_absolute():
+            base = workspace or config_path.parent
+            p = base / p
+        if p.exists():
+            resolved.append(p.resolve())
 
-    for path in candidates:
-        parts = path.as_posix().lower().split("/")
-        score = 0
+    if workspace and workspace.exists():
+        resolved.append(workspace.resolve())
 
-        for wanted in wanted_parts:
-            if wanted in parts:
-                score += 1
+    # preserve order, remove duplicates
+    out: list[Path] = []
+    seen: set[str] = set()
+    for p in resolved:
+        key = p.as_posix().lower()
+        if key not in seen:
+            seen.add(key)
+            out.append(p)
 
-        if parts[-1] == wanted_parts[-1]:
-            score += 5
+    return out
 
-        if score > 0:
-            scored.append((score, path))
 
-    if not scored:
-        return None
+class SourceIndex:
+    def __init__(self, roots: list[Path]) -> None:
+        self.roots = roots
+        self.lua_files: list[Path] = []
+        self.by_name: dict[str, list[Path]] = {}
 
-    scored.sort(key=lambda x: x[0], reverse=True)
-    return scored[0][1]
+        for root in roots:
+            for path in root.rglob("*.lua"):
+                if path.is_file():
+                    self.lua_files.append(path.resolve())
+                    self.by_name.setdefault(path.name.lower(), []).append(path.resolve())
+
+    def resolve(self, file_path: str) -> ResolvedFile:
+        requested = norm_path(file_path)
+        raw = Path(file_path)
+
+        if raw.is_absolute() and raw.exists():
+            return ResolvedFile(file_path, str(raw.resolve()), "direct_absolute", [])
+
+        for root in self.roots:
+            direct = root / file_path
+            if direct.exists():
+                return ResolvedFile(file_path, str(direct.resolve()), "direct_root_join", [])
+
+            direct_norm = root / requested
+            if direct_norm.exists():
+                return ResolvedFile(file_path, str(direct_norm.resolve()), "direct_normalized_join", [])
+
+        suffix_matches = [
+            p for p in self.lua_files
+            if norm_path(p.as_posix()).endswith(requested)
+        ]
+        if len(suffix_matches) == 1:
+            return ResolvedFile(file_path, str(suffix_matches[0]), "unique_suffix", [])
+        if len(suffix_matches) > 1:
+            return ResolvedFile(file_path, str(suffix_matches[0]), "ambiguous_suffix_first", [str(p) for p in suffix_matches[:10]])
+
+        basename = Path(requested).name.lower()
+        name_matches = self.by_name.get(basename, [])
+        if len(name_matches) == 1:
+            return ResolvedFile(file_path, str(name_matches[0]), "unique_basename", [])
+        if len(name_matches) > 1:
+            scored = sorted(
+                ((tail_score(requested, norm_path(p.as_posix())), p) for p in name_matches),
+                key=lambda x: x[0],
+                reverse=True,
+            )
+            best_score, best = scored[0]
+            if best_score > 0:
+                return ResolvedFile(file_path, str(best), "basename_tail_score", [str(p) for _, p in scored[:10]])
+            return ResolvedFile(file_path, None, "ambiguous_basename_unresolved", [str(p) for p in name_matches[:10]])
+
+        return ResolvedFile(file_path, None, "unresolved", [])
+
+
+def tail_score(requested: str, actual: str) -> int:
+    req_parts = requested.split("/")
+    act_parts = actual.split("/")
+    score = 0
+
+    for i in range(1, min(len(req_parts), len(act_parts)) + 1):
+        if req_parts[-i] == act_parts[-i]:
+            score += 10 * i
+        else:
+            break
+
+    for part in req_parts:
+        if part in act_parts:
+            score += 1
+
+    return score
 
 
 def read_lines(path: Path) -> list[str]:
@@ -110,9 +175,7 @@ def read_lines(path: Path) -> list[str]:
 
 def find_pattern_hits(lines: list[str], pattern: str, context: int) -> list[tuple[int, int, str]]:
     hits: list[tuple[int, int, str]] = []
-
-    escaped = re.escape(pattern)
-    regex = re.compile(escaped, re.IGNORECASE)
+    regex = re.compile(re.escape(pattern), re.IGNORECASE)
 
     for index, line in enumerate(lines):
         if not regex.search(line):
@@ -120,173 +183,187 @@ def find_pattern_hits(lines: list[str], pattern: str, context: int) -> list[tupl
 
         start = max(0, index - context)
         end = min(len(lines), index + context + 1)
-
-        snippet_lines = []
-        for line_no in range(start, end):
-            snippet_lines.append(f"{line_no + 1}: {lines[line_no]}")
-
-        hits.append((start + 1, end, "\n".join(snippet_lines)))
+        snippet = "\n".join(f"{i + 1}: {lines[i]}" for i in range(start, end))
+        hits.append((start + 1, end, snippet))
 
     return hits
 
 
-def validate_check(source_roots: list[Path], check: dict[str, Any], context: int, max_hits_per_pattern: int) -> list[SourceHit]:
+def validate_check(index: SourceIndex, check: dict[str, Any], context: int, max_hits: int) -> list[SourceHit]:
     file_path = str(check.get("file", ""))
-    resolved = resolve_file(source_roots, file_path)
+    resolved = index.resolve(file_path)
+    patterns = [str(p) for p in check.get("required_patterns", [])]
 
     hits: list[SourceHit] = []
 
-    if resolved is None:
-        for pattern in check.get("required_patterns", []):
-            hits.append(
-                SourceHit(
-                    check_id=str(check.get("check_id", "")),
-                    hypothesis=str(check.get("hypothesis", "")),
-                    priority=str(check.get("priority", "")),
-                    file=file_path,
-                    resolved_path=None,
-                    pattern=str(pattern),
-                    line_start=0,
-                    line_end=0,
-                    snippet="",
-                    found=False,
-                )
-            )
+    if not resolved.resolved_path:
+        for pattern in patterns:
+            hits.append(SourceHit(
+                check_id=str(check.get("check_id", "")),
+                hypothesis=str(check.get("hypothesis", "")),
+                priority=str(check.get("priority", "")),
+                file=file_path,
+                resolved_path=None,
+                resolution_status=resolved.status,
+                pattern=pattern,
+                line_start=0,
+                line_end=0,
+                snippet="",
+                found=False,
+            ))
         return hits
 
-    lines = read_lines(resolved)
+    lines = read_lines(Path(resolved.resolved_path))
 
-    for pattern in check.get("required_patterns", []):
-        pattern_hits = find_pattern_hits(lines, str(pattern), context)
+    for pattern in patterns:
+        pattern_hits = find_pattern_hits(lines, pattern, context)
 
         if not pattern_hits:
-            hits.append(
-                SourceHit(
-                    check_id=str(check.get("check_id", "")),
-                    hypothesis=str(check.get("hypothesis", "")),
-                    priority=str(check.get("priority", "")),
-                    file=file_path,
-                    resolved_path=str(resolved),
-                    pattern=str(pattern),
-                    line_start=0,
-                    line_end=0,
-                    snippet="",
-                    found=False,
-                )
-            )
+            hits.append(SourceHit(
+                check_id=str(check.get("check_id", "")),
+                hypothesis=str(check.get("hypothesis", "")),
+                priority=str(check.get("priority", "")),
+                file=file_path,
+                resolved_path=resolved.resolved_path,
+                resolution_status=resolved.status,
+                pattern=pattern,
+                line_start=0,
+                line_end=0,
+                snippet="",
+                found=False,
+            ))
             continue
 
-        for line_start, line_end, snippet in pattern_hits[:max_hits_per_pattern]:
-            hits.append(
-                SourceHit(
-                    check_id=str(check.get("check_id", "")),
-                    hypothesis=str(check.get("hypothesis", "")),
-                    priority=str(check.get("priority", "")),
-                    file=file_path,
-                    resolved_path=str(resolved),
-                    pattern=str(pattern),
-                    line_start=line_start,
-                    line_end=line_end,
-                    snippet=snippet,
-                    found=True,
-                )
-            )
+        for line_start, line_end, snippet in pattern_hits[:max_hits]:
+            hits.append(SourceHit(
+                check_id=str(check.get("check_id", "")),
+                hypothesis=str(check.get("hypothesis", "")),
+                priority=str(check.get("priority", "")),
+                file=file_path,
+                resolved_path=resolved.resolved_path,
+                resolution_status=resolved.status,
+                pattern=pattern,
+                line_start=line_start,
+                line_end=line_end,
+                snippet=snippet,
+                found=True,
+            ))
 
     return hits
 
 
 def summarize(hits: list[SourceHit]) -> dict[str, Any]:
-    total = len(hits)
-    found = len([h for h in hits if h.found])
-    missing = total - found
+    found = sum(1 for h in hits if h.found)
+    missing = len(hits) - found
 
-    by_file: dict[str, dict[str, int]] = {}
-    by_check: dict[str, dict[str, int]] = {}
+    requested_files = sorted({h.file for h in hits})
+    resolved_files = sorted({h.resolved_path for h in hits if h.resolved_path})
+    unresolved_files = sorted({h.file for h in hits if not h.resolved_path})
 
-    for hit in hits:
-        by_file.setdefault(hit.file, {"found": 0, "missing": 0})
-        by_check.setdefault(hit.check_id, {"found": 0, "missing": 0})
+    duplicate_keys: set[tuple[str, str, int, int]] = set()
+    duplicates = 0
+    for h in hits:
+        if not h.found:
+            continue
+        key = (h.resolved_path or "", h.pattern, h.line_start, h.line_end)
+        if key in duplicate_keys:
+            duplicates += 1
+        duplicate_keys.add(key)
 
-        key = "found" if hit.found else "missing"
-        by_file[hit.file][key] += 1
-        by_check[hit.check_id][key] += 1
+    causal_terms = [
+        "hook.Run", "netstream.Start", "net.Receive", "inventory:add", "removeItem",
+        "setData", "sync", "ItemDataChanged", "InventoryDataChanged", "SetUpPanel",
+    ]
+    causal = sum(1 for h in hits if h.found and any(t.lower() in h.snippet.lower() for t in causal_terms))
 
     return {
-        "total_pattern_results": total,
+        "pattern_results_total": len(hits),
         "found": found,
         "missing": missing,
-        "by_file": by_file,
-        "by_check": by_check,
+        "requested_files": len(requested_files),
+        "resolved_files": len(resolved_files),
+        "unresolved_files": unresolved_files,
+        "duplicate_fragments": duplicates,
+        "causal_fragments": causal,
+        "quality": {
+            "resolution_rate": round(len(resolved_files) / max(1, len(requested_files)), 3),
+            "pattern_hit_rate": round(found / max(1, len(hits)), 3),
+            "causal_hit_rate": round(causal / max(1, found), 3),
+        },
     }
 
 
 def format_md(targeted_path: Path, payload: dict[str, Any], hits: list[SourceHit]) -> str:
-    summary = summarize(hits)
+    s = summarize(hits)
+    lines = [
+        "# SIGNALIS AI — Targeted Source Validation",
+        "",
+        f"- Targeted plan: `{targeted_path}`",
+        f"- Query: `{payload.get('query', '')}`",
+        f"- Pattern results: `{s['pattern_results_total']}`",
+        f"- Found: `{s['found']}`",
+        f"- Missing: `{s['missing']}`",
+        f"- Requested files: `{s['requested_files']}`",
+        f"- Resolved files: `{s['resolved_files']}`",
+        f"- Duplicate fragments: `{s['duplicate_fragments']}`",
+        f"- Causal fragments: `{s['causal_fragments']}`",
+        f"- Resolution rate: `{s['quality']['resolution_rate']}`",
+        f"- Pattern hit rate: `{s['quality']['pattern_hit_rate']}`",
+        f"- Causal hit rate: `{s['quality']['causal_hit_rate']}`",
+        "",
+    ]
 
-    lines: list[str] = []
-    lines.append("# SIGNALIS AI — Targeted Source Validation")
-    lines.append("")
-    lines.append(f"- Targeted plan: `{targeted_path}`")
-    lines.append(f"- Query: `{payload.get('query', '')}`")
-    lines.append(f"- Pattern results: `{summary['total_pattern_results']}`")
-    lines.append(f"- Found: `{summary['found']}`")
-    lines.append(f"- Missing: `{summary['missing']}`")
-    lines.append("")
-
-    lines.append("## Interpretation")
-    lines.append("")
-    lines.append("This report validates targeted hypothesis checks against exact source files.")
-    lines.append("")
-    lines.append("Use found patterns as source anchors. Missing patterns are not automatically bugs; they may mean the targeted plan expected the wrong file or naming.")
-    lines.append("")
-
-    lines.append("## File Summary")
-    lines.append("")
-    for file_path, counts in summary["by_file"].items():
-        lines.append(f"- `{file_path}`: found `{counts['found']}`, missing `{counts['missing']}`")
-    lines.append("")
+    if s["unresolved_files"]:
+        lines += ["## Unresolved Files", ""]
+        for f in s["unresolved_files"]:
+            lines.append(f"- `{f}`")
+        lines.append("")
 
     checks = payload.get("checks", [])
     check_lookup = {str(c.get("check_id", "")): c for c in checks}
 
-    for check_id, counts in summary["by_check"].items():
+    for check_id in sorted({h.check_id for h in hits}):
         check = check_lookup.get(check_id, {})
-        lines.append(f"## {check_id} — `{check.get('file', '')}`")
-        lines.append("")
-        lines.append(f"- Priority: `{check.get('priority', '')}`")
-        lines.append(f"- Hypothesis: {check.get('hypothesis', '')}")
-        lines.append(f"- Expected runtime relation: {check.get('expected_runtime_relation', '')}")
-        lines.append(f"- Found: `{counts['found']}`")
-        lines.append(f"- Missing: `{counts['missing']}`")
-        lines.append("")
-
         check_hits = [h for h in hits if h.check_id == check_id]
-
-        missing = [h for h in check_hits if not h.found]
-        if missing:
-            lines.append("### Missing Patterns")
-            lines.append("")
-            for hit in missing:
-                lines.append(f"- `{hit.pattern}`")
-            lines.append("")
-
         found = [h for h in check_hits if h.found]
-        if found:
-            lines.append("### Found Evidence")
+        missing = [h for h in check_hits if not h.found]
+
+        lines += [
+            f"## {check_id} — `{check.get('file', '')}`",
+            "",
+            f"- Priority: `{check.get('priority', '')}`",
+            f"- Hypothesis: {check.get('hypothesis', '')}",
+            f"- Expected runtime relation: {check.get('expected_runtime_relation', '')}",
+            f"- Resolution: `{check_hits[0].resolution_status if check_hits else ''}`",
+            f"- Found: `{len(found)}`",
+            f"- Missing: `{len(missing)}`",
+            "",
+        ]
+
+        if missing:
+            lines += ["### Missing Patterns", ""]
+            for h in missing:
+                lines.append(f"- `{h.pattern}`")
             lines.append("")
-            for idx, hit in enumerate(found, start=1):
-                lines.append(f"#### {idx}. `{hit.pattern}` lines `{hit.line_start}-{hit.line_end}`")
-                lines.append("")
-                lines.append("```lua")
-                lines.append(hit.snippet)
-                lines.append("```")
-                lines.append("")
+
+        if found:
+            lines += ["### Found Evidence", ""]
+            for i, h in enumerate(found, 1):
+                lines += [
+                    f"#### {i}. `{h.pattern}` lines `{h.line_start}-{h.line_end}`",
+                    "",
+                    "```lua",
+                    h.snippet,
+                    "```",
+                    "",
+                ]
 
     return "\n".join(lines)
 
 
 def main() -> int:
     parser = argparse.ArgumentParser()
+    parser.add_argument("--workspace", type=Path, default=None)
     parser.add_argument("--workspace-config", type=Path, default=Path("workspace.yaml"))
     parser.add_argument("--targeted", required=True, type=Path)
     parser.add_argument("--out-dir", type=Path, default=None)
@@ -294,21 +371,17 @@ def main() -> int:
     parser.add_argument("--max-hits-per-pattern", type=int, default=5)
     args = parser.parse_args()
 
-    source_roots = load_source_roots(args.workspace_config)
+    workspace = args.workspace.resolve() if args.workspace else None
+    config_path = resolve_workspace_config(args.workspace_config, workspace)
+    source_roots = load_source_roots(config_path, workspace)
+    index = SourceIndex(source_roots)
+
     targeted_path = args.targeted.resolve()
     payload = read_json(targeted_path)
 
     hits: list[SourceHit] = []
-
     for check in payload.get("checks", []):
-        hits.extend(
-            validate_check(
-                source_roots=source_roots,
-                check=check,
-                context=args.context,
-                max_hits_per_pattern=args.max_hits_per_pattern,
-            )
-        )
+        hits.extend(validate_check(index, check, args.context, args.max_hits_per_pattern))
 
     out_dir = args.out_dir.resolve() if args.out_dir else targeted_path.parent
 
@@ -316,11 +389,7 @@ def main() -> int:
     for suffix in ["_source_validation", "_targeted_validation"]:
         if stem.endswith(suffix):
             stem = stem[: -len(suffix)]
-
     stem = f"{stem}_source_validation"
-
-    json_path = out_dir / f"{stem}.json"
-    md_path = out_dir / f"{stem}.md"
 
     output = {
         "source_targeted_validation": str(targeted_path),
@@ -329,6 +398,9 @@ def main() -> int:
         "hits": [asdict(h) for h in hits],
     }
 
+    json_path = out_dir / f"{stem}.json"
+    md_path = out_dir / f"{stem}.md"
+
     write_json(json_path, output)
     write_text(md_path, format_md(targeted_path, payload, hits))
 
@@ -336,8 +408,10 @@ def main() -> int:
     print(f"Wrote targeted source validation report: {md_path}")
     print("")
     print("Summary:")
-    print(f"  found: {output['summary']['found']}")
-    print(f"  missing: {output['summary']['missing']}")
+    for k, v in output["summary"].items():
+        if k != "quality":
+            print(f"  {k}: {v}")
+    print(f"  quality: {output['summary']['quality']}")
 
     return 0
 

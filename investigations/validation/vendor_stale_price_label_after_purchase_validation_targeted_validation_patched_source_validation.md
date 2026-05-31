@@ -1,17 +1,17 @@
 # SIGNALIS AI — Targeted Source Validation
 
-- Targeted plan: `E:\signalis_ai\investigations\validation\vendor_stale_price_label_after_purchase_validation_targeted_validation.json`
+- Targeted plan: `E:\signalis_ai\investigations\validation\vendor_stale_price_label_after_purchase_validation_targeted_validation_patched.json`
 - Query: `vendor stale price label after purchase`
-- Pattern results: `204`
-- Found: `154`
+- Pattern results: `238`
+- Found: `188`
 - Missing: `50`
-- Requested files: `9`
-- Resolved files: `9`
+- Requested files: `11`
+- Resolved files: `11`
 - Duplicate fragments: `66`
-- Causal fragments: `103`
+- Causal fragments: `132`
 - Resolution rate: `1.0`
-- Pattern hit rate: `0.755`
-- Causal hit rate: `0.669`
+- Pattern hit rate: `0.79`
+- Causal hit rate: `0.702`
 
 ## TV-001 — `gamemode/core/meta/inventory/cl_base_inventory.lua`
 
@@ -3022,4 +3022,627 @@
 281: 	if (not nut.item.held or nut.item.held == self) then return end
 282: 	local cursorX, cursorY = self:LocalCursorPos()
 283: 	if (
+```
+
+## TV-PATCH-016 — `plugins/gridinv/sv_transfer.lua`
+
+- Priority: `high`
+- Hypothesis: Vendor purchase transfer clears purchased-item vendor metadata and syncs item data to client UI
+- Expected runtime relation: vendor purchase transfer boundary and purchased-item vendor metadata cleanup
+- Resolution: `direct_root_join`
+- Found: `21`
+- Missing: `0`
+
+### Found Evidence
+
+#### 1. `vendorSellItem` lines `72-84`
+
+```lua
+72: 			client:notify("У торговца недостаточно денег")
+73: 		end
+74: 
+75: 		return true
+76: 	end
+77: 
+78: 	local vendorSellItem = false
+79: 	if (oldInventory && IsValid(oldInventory.vendor) && inventory == client:getChar():getInv())
+80: 	then
+81: 		local char = client:getChar()
+82: 		price = tonumber(oldInventory.vendor:GetItemPrice(item.uniqueID, true, client)) * qty
+83: 		if (char:hasMoney(price))
+84: 		then
+```
+
+#### 2. `vendorSellItem` lines `79-91`
+
+```lua
+79: 	if (oldInventory && IsValid(oldInventory.vendor) && inventory == client:getChar():getInv())
+80: 	then
+81: 		local char = client:getChar()
+82: 		price = tonumber(oldInventory.vendor:GetItemPrice(item.uniqueID, true, client)) * qty
+83: 		if (char:hasMoney(price))
+84: 		then
+85: 			vendorSellItem = true
+86: 		else
+87: 			client:notify("У вас не хватает рацион-марок")
+88: 			return true
+89: 		end
+90: 	end
+91: 
+```
+
+#### 3. `vendorSellItem` lines `116-128`
+
+```lua
+116: 
+117: 	local tryCombineWith
+118: 	local originalAddRes
+119: 	local targetCharId = inventory:getData("char")
+120: 
+121: 	if ((x == 0 && y == 0 && inventory:findFreePosition(item) == nil) ||
+122: 		(vendorSellItem && inventory:findFreePosition(item) == nil))
+123: 	then
+124: 		return true
+125: 	end
+126: 
+127: 	return oldInventory:removeItem(itemID, true)
+128: 		:next(function()
+```
+
+#### 4. `vendorSellItem` lines `161-173`
+
+```lua
+161: 		:next(function(res)
+162: 			if ((!res || !res.error) && !tryCombineWith)
+163: 			then
+164: 				return
+165: 			end
+166: 
+167: 			if (vendorSellItem && res && res.error)
+168: 			then
+169: 				return inventory:add(item)
+170: 			end
+171: 
+172: 			if (tryCombineWith)
+173: 			then
+```
+
+#### 5. `vendorSellItem` lines `207-219`
+
+```lua
+207: 
+208: 				if (inventory && inventory.trashcan)
+209: 				then
+210: 					inventory.storage:SetBodyGroups("011000000")
+211: 				end
+212: 
+213: 				if (vendorSellItem)
+214: 				then
+215: 					client:getChar():takeMoney(price)
+216: 					oldInventory.vendor:HandleMoney(price, client)
+217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
+218: 					item:setData("vendorQty", nil, client)
+219: 					item:setData("vendorSPrice", nil, client)
+```
+
+#### 6. `oldInventory` lines `4-16`
+
+```lua
+4: 
+5: function PLUGIN:HandleItemTransferRequest(client, itemID, x, y, invID, laltPressed)
+6: 	-- Get the item that should be moved, its inventory, and the destination.
+7: 	local inventory = nut.inventory.instances[invID]
+8: 	local item = nut.item.instances[itemID]
+9: 	if (not item) then return end
+10: 	local oldInventory = nut.inventory.instances[item.invID]
+11: 	if (not oldInventory or not oldInventory.items[itemID]) then
+12: 		return
+13: 	end
+14: 	
+15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
+16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
+```
+
+#### 7. `oldInventory` lines `5-17`
+
+```lua
+5: function PLUGIN:HandleItemTransferRequest(client, itemID, x, y, invID, laltPressed)
+6: 	-- Get the item that should be moved, its inventory, and the destination.
+7: 	local inventory = nut.inventory.instances[invID]
+8: 	local item = nut.item.instances[itemID]
+9: 	if (not item) then return end
+10: 	local oldInventory = nut.inventory.instances[item.invID]
+11: 	if (not oldInventory or not oldInventory.items[itemID]) then
+12: 		return
+13: 	end
+14: 	
+15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
+16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
+17: 	-- Make sure the item is permitted to move between the two inventories.
+```
+
+#### 8. `oldInventory` lines `10-22`
+
+```lua
+10: 	local oldInventory = nut.inventory.instances[item.invID]
+11: 	if (not oldInventory or not oldInventory.items[itemID]) then
+12: 		return
+13: 	end
+14: 	
+15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
+16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
+17: 	-- Make sure the item is permitted to move between the two inventories.
+18: 	local status, reason = hook.Run("CanItemBeTransfered", item, oldInventory, inventory, client)
+19: 
+20: 	if (status == false) then client:notify(reason or "You can't do that right now.") return end
+21: 	local context = {
+22: 		client = client,
+```
+
+#### 9. `oldInventory` lines `12-24`
+
+```lua
+12: 		return
+13: 	end
+14: 	
+15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
+16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
+17: 	-- Make sure the item is permitted to move between the two inventories.
+18: 	local status, reason = hook.Run("CanItemBeTransfered", item, oldInventory, inventory, client)
+19: 
+20: 	if (status == false) then client:notify(reason or "You can't do that right now.") return end
+21: 	local context = {
+22: 		client = client,
+23: 		item = item,
+24: 		from = oldInventory,
+```
+
+#### 10. `oldInventory` lines `18-30`
+
+```lua
+18: 	local status, reason = hook.Run("CanItemBeTransfered", item, oldInventory, inventory, client)
+19: 
+20: 	if (status == false) then client:notify(reason or "You can't do that right now.") return end
+21: 	local context = {
+22: 		client = client,
+23: 		item = item,
+24: 		from = oldInventory,
+25: 		to = inventory,
+26: 		vendor = vendor
+27: 	}
+28: 
+29: 	local canTransfer, reason = oldInventory:canAccess(TRANSFER, context)
+30: 	if (not canTransfer) then
+```
+
+#### 11. `inventory:add` lines `143-155`
+
+```lua
+143: 				
+144: 			end
+145: 
+146: 			local res = nil
+147: 			if (x == 0 && y == 0)
+148: 			then
+149: 				res = inventory:add(item)
+150: 			else
+151: 				res = inventory:add(item, x, y)
+152: 			end
+153: 
+154: 			if (res && !res.error && item.transfered)
+155: 			then
+```
+
+#### 12. `inventory:add` lines `145-157`
+
+```lua
+145: 
+146: 			local res = nil
+147: 			if (x == 0 && y == 0)
+148: 			then
+149: 				res = inventory:add(item)
+150: 			else
+151: 				res = inventory:add(item, x, y)
+152: 			end
+153: 
+154: 			if (res && !res.error && item.transfered)
+155: 			then
+156: 				item:transfered(client, oldInventory, inventory)
+157: 			end
+```
+
+#### 13. `inventory:add` lines `163-175`
+
+```lua
+163: 			then
+164: 				return
+165: 			end
+166: 
+167: 			if (vendorSellItem && res && res.error)
+168: 			then
+169: 				return inventory:add(item)
+170: 			end
+171: 
+172: 			if (tryCombineWith)
+173: 			then
+174: 				inventory:removeItem(itemID, true)
+175: 			end
+```
+
+#### 14. `inventory:add` lines `182-194`
+
+```lua
+182: 				if (conflictingItem) then
+183: 					tryCombineWith = conflictingItem
+184: 				end
+185: 			end
+186: 
+187: 			originalAddRes = res
+188: 			return oldInventory:add(item, oldX, oldY)
+189: 		end)
+190: 		:next(function(res)
+191: 			if (res and res.error) then return res end
+192: 			if (tryCombineWith && IsValid(client) && (targetCharId == client:getChar():getID() || !targetCharId))
+193: 			then
+194: 				if (hook.Run("ItemCombine", client, item, tryCombineWith))
+```
+
+#### 15. `item:setData("vendorSPrice", nil` lines `213-225`
+
+```lua
+213: 				if (vendorSellItem)
+214: 				then
+215: 					client:getChar():takeMoney(price)
+216: 					oldInventory.vendor:HandleMoney(price, client)
+217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
+218: 					item:setData("vendorQty", nil, client)
+219: 					item:setData("vendorSPrice", nil, client)
+220: 					item:setData("vendorMQty", nil, client)
+221: 					if (oldInventory.vendor.items[item.uniqueID])
+222: 					then
+223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
+224: 					end
+225: 				end
+```
+
+#### 16. `item:setData("vendorQty", nil` lines `212-224`
+
+```lua
+212: 
+213: 				if (vendorSellItem)
+214: 				then
+215: 					client:getChar():takeMoney(price)
+216: 					oldInventory.vendor:HandleMoney(price, client)
+217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
+218: 					item:setData("vendorQty", nil, client)
+219: 					item:setData("vendorSPrice", nil, client)
+220: 					item:setData("vendorMQty", nil, client)
+221: 					if (oldInventory.vendor.items[item.uniqueID])
+222: 					then
+223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
+224: 					end
+```
+
+#### 17. `item:setData("vendorMQty", nil` lines `214-226`
+
+```lua
+214: 				then
+215: 					client:getChar():takeMoney(price)
+216: 					oldInventory.vendor:HandleMoney(price, client)
+217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
+218: 					item:setData("vendorQty", nil, client)
+219: 					item:setData("vendorSPrice", nil, client)
+220: 					item:setData("vendorMQty", nil, client)
+221: 					if (oldInventory.vendor.items[item.uniqueID])
+222: 					then
+223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
+224: 					end
+225: 				end
+226: 			end
+```
+
+#### 18. `item:setData("vendorBPrice"` lines `217-229`
+
+```lua
+217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
+218: 					item:setData("vendorQty", nil, client)
+219: 					item:setData("vendorSPrice", nil, client)
+220: 					item:setData("vendorMQty", nil, client)
+221: 					if (oldInventory.vendor.items[item.uniqueID])
+222: 					then
+223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
+224: 					end
+225: 				end
+226: 			end
+227: 			return originalAddRes
+228: 		end)
+229: 		:catch(fail)
+```
+
+#### 19. `CanItemBeTransfered` lines `12-24`
+
+```lua
+12: 		return
+13: 	end
+14: 	
+15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
+16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
+17: 	-- Make sure the item is permitted to move between the two inventories.
+18: 	local status, reason = hook.Run("CanItemBeTransfered", item, oldInventory, inventory, client)
+19: 
+20: 	if (status == false) then client:notify(reason or "You can't do that right now.") return end
+21: 	local context = {
+22: 		client = client,
+23: 		item = item,
+24: 		from = oldInventory,
+```
+
+#### 20. `HandleItemTransferRequest` lines `1-11`
+
+```lua
+1: util.AddNetworkString("nutTransferItem")
+2: 
+3: local TRANSFER = "transfer"
+4: 
+5: function PLUGIN:HandleItemTransferRequest(client, itemID, x, y, invID, laltPressed)
+6: 	-- Get the item that should be moved, its inventory, and the destination.
+7: 	local inventory = nut.inventory.instances[invID]
+8: 	local item = nut.item.instances[itemID]
+9: 	if (not item) then return end
+10: 	local oldInventory = nut.inventory.instances[item.invID]
+11: 	if (not oldInventory or not oldInventory.items[itemID]) then
+```
+
+#### 21. `HandleItemTransferRequest` lines `233-240`
+
+```lua
+233: 	local itemID = net.ReadUInt(32)
+234: 	local x = net.ReadUInt(32)
+235: 	local y = net.ReadUInt(32)
+236: 	local invID = net.ReadType()
+237: 	local laltPressed = net.ReadBool()
+238: 
+239: 	hook.Run("HandleItemTransferRequest", client, itemID, x, y, invID, laltPressed)
+240: end)
+```
+
+## TV-PATCH-017 — `gamemode/core/libs/item/cl_networking.lua`
+
+- Priority: `high`
+- Hypothesis: Vendor purchase transfer clears purchased-item vendor metadata and syncs item data to client UI
+- Expected runtime relation: client item metadata delta receive path and ItemDataChanged emission
+- Resolution: `direct_root_join`
+- Found: `13`
+- Missing: `0`
+
+### Found Evidence
+
+#### 1. `netstream.Hook("invData"` lines `7-19`
+
+```lua
+7: 	end
+8: 
+9: 	item.invID = invID or 0
+10: 	hook.Run("ItemInitialized", item)
+11: end)
+12: 
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+```
+
+#### 2. `hook.Run("ItemDataChanged"` lines `14-26`
+
+```lua
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+```
+
+#### 3. `nut.item.instances` lines `8-20`
+
+```lua
+8: 
+9: 	item.invID = invID or 0
+10: 	hook.Run("ItemInitialized", item)
+11: end)
+12: 
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+```
+
+#### 4. `nut.item.instances` lines `19-31`
+
+```lua
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+27: 	if (item) then
+28: 		local oldValue = item:getQuantity()
+29: 		item.quantity = quantity
+30: 
+31: 		hook.Run("ItemQuantityChanged", item, oldValue, quantity)
+```
+
+#### 5. `nut.item.instances` lines `41-53`
+
+```lua
+41: 	local quantity = net.ReadUInt(32)
+42: 
+43: 	item.data = table.Merge(item.data or {}, data)
+44: 	item.invID = invID
+45: 	item.quantity = quantity
+46: 
+47: 	nut.item.instances[itemID] = item
+48: 	hook.Run("ItemInitialized", item)
+49: end)
+50: 
+51: net.Receive("nutCharacterInvList", function()
+52: 	local charID = net.ReadUInt(32)
+53: 	local length = net.ReadUInt(32)
+```
+
+#### 6. `nut.item.instances` lines `62-74`
+
+```lua
+62: 		character.vars.inv = inventories
+63: 	end
+64: end)
+65: 
+66: net.Receive("nutItemDelete", function()
+67: 	local id = net.ReadUInt(32)
+68: 	local instance = nut.item.instances[id]
+69: 	if (instance and instance.invID) then
+70: 		local inventory = nut.inventory.instances[instance.invID]
+71: 		if (not inventory or not inventory.items[id]) then return end
+72: 
+73: 		inventory.items[id] = nil
+74: 		instance.invID = 0
+```
+
+#### 7. `nut.item.instances` lines `72-80`
+
+```lua
+72: 
+73: 		inventory.items[id] = nil
+74: 		instance.invID = 0
+75: 		hook.Run("InventoryItemRemoved", inventory, instance)
+76: 	end
+77: 
+78: 	nut.item.instances[id] = nil
+79: 	hook.Run("ItemDeleted", instance)
+80: end)
+```
+
+#### 8. `item.data[key]` lines `12-24`
+
+```lua
+12: 
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+```
+
+#### 9. `item.data[key]` lines `13-25`
+
+```lua
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+```
+
+#### 10. `oldValue` lines `12-24`
+
+```lua
+12: 
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+```
+
+#### 11. `oldValue` lines `14-26`
+
+```lua
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+```
+
+#### 12. `oldValue` lines `22-34`
+
+```lua
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+27: 	if (item) then
+28: 		local oldValue = item:getQuantity()
+29: 		item.quantity = quantity
+30: 
+31: 		hook.Run("ItemQuantityChanged", item, oldValue, quantity)
+32: 	end
+33: end)
+34: 
+```
+
+#### 13. `oldValue` lines `25-37`
+
+```lua
+25: 	local item = nut.item.instances[id]
+26: 
+27: 	if (item) then
+28: 		local oldValue = item:getQuantity()
+29: 		item.quantity = quantity
+30: 
+31: 		hook.Run("ItemQuantityChanged", item, oldValue, quantity)
+32: 	end
+33: end)
+34: 
+35: net.Receive("nutItemInstance", function()
+36: 	local itemID = net.ReadUInt(32)
+37: 	local itemType = net.ReadString()
 ```
