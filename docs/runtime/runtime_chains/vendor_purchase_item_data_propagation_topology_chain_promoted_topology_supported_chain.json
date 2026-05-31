@@ -1,0 +1,21 @@
+{
+  "source": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json",
+  "title": "vendor purchase item data propagation topology chain",
+  "promotion_type": "promoted_topology_supported_chain",
+  "promoted": true,
+  "gate": {
+    "confidence": "medium",
+    "score": 1.0,
+    "validation_coverage": 0.6667,
+    "missing_categories": [],
+    "validation_targets": null
+  },
+  "reasons": [
+    "medium confidence",
+    "score >= 0.90",
+    "validation coverage >= 0.60",
+    "missing categories none",
+    "promoted as topology-supported, not fully confirmed"
+  ],
+  "output_md": "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.md"
+}
