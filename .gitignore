@@ -20,7 +20,16 @@ embeddings/
 qdrant_storage/
 
 # Generated outputs
+# Generated outputs
+
 manifests/semantic/qdrant_embeddings.jsonl
+manifests/semantic/qdrant_embedding_summary.md
+
+manifests/semantic/qdrant_query_results*
+
+investigations/context_pack*
+
+qdrant_storage/
 
 # OS
 Thumbs.db
