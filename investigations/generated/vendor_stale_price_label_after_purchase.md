@@ -143,7 +143,7 @@ These are text-level retrieval signals, not validated truth.
 Collection: `signalis_semantic`
 Query: `build context pack for vendor stale price label inventory UI bug`
 Top K: **10**
-Model: `nomic-ai/nomic-embed-text-v1.5`
+Model: `BAAI/bge-small-en-v1.5`
 Device: `cpu`
 
 ## Filters

@@ -2,7 +2,7 @@ from sentence_transformers import SentenceTransformer
 
 print("Loading embedding model...")
 
-model = SentenceTransformer("nomic-ai/nomic-embed-text-v1.5")
+model = SentenceTransformer("BAAI/bge-small-en-v1.5")
 
 print("Generating embedding...")
 

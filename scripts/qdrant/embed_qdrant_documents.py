@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
-DEFAULT_MODEL = "nomic-ai/nomic-embed-text-v1.5"
+DEFAULT_MODEL = "BAAI/bge-small-en-v1.5"
 FALLBACK_MODEL = "BAAI/bge-small-en-v1.5"
 HASH_MODEL_NAME = "signalis-hash-embedding-v1"
 

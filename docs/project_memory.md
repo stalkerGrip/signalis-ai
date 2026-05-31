@@ -218,6 +218,17 @@ Canonical Python runtime: Python 3.11.
 Python 3.12 caused SentenceTransformer/BGE model loading hangs.
 Use .venv311 for Qdrant embeddings, ingestion, retrieval, reranking, and investigation pipeline commands.
 
+Canonical embedding model:
+BAAI/bge-small-en-v1.5
+
+Embedding dimension:
+384
+
+Reason:
+Stable CPU inference on Python 3.11,
+good retrieval quality,
+consistent Qdrant collection dimension.
+
 ## Investigation Pipeline Lessons
 
 Validated pipeline lesson:

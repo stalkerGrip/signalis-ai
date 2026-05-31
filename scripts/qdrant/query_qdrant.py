@@ -23,7 +23,7 @@ except Exception:
     rerank_results = None
 
 DEFAULT_COLLECTION = "signalis_semantic"
-DEFAULT_MODEL = "nomic-ai/nomic-embed-text-v1.5"
+DEFAULT_MODEL = "BAAI/bge-small-en-v1.5"
 HASH_MODEL_NAME = "signalis-hash-embedding-v1"
 
 

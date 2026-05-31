@@ -24,7 +24,7 @@ for ChatGPT, Gemini, and local tools.
 Preferred embedding model:
 
 ```text
-nomic-ai/nomic-embed-text-v1.5
+BAAI/bge-small-en-v1.5
 ```
 
 Reason:

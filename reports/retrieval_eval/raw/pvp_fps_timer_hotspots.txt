@@ -9,7 +9,7 @@ Wrote report to: E:\signalis_ai\manifests\semantic\qdrant_query_results.md
 Collection: `signalis_semantic`
 Query: `PVP FPS drops timer Think hooks entity simulation hotspots`
 Top K: **10**
-Model: `nomic-ai/nomic-embed-text-v1.5`
+Model: `BAAI/bge-small-en-v1.5`
 Device: `cpu`
 
 ## Filters

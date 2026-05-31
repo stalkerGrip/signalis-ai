@@ -3,7 +3,7 @@
 Collection: `signalis_semantic`
 Query: `inventory desync after character load`
 Top K: **20**
-Model: `nomic-ai/nomic-embed-text-v1.5`
+Model: `BAAI/bge-small-en-v1.5`
 Device: `cpu`
 
 ## Filters
