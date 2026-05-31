@@ -1,6 +1,6 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 85,
+  "scripts_checked": 87,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
@@ -253,6 +253,18 @@
       "module": "scripts.investigation.runtime_fact_topology_regression",
       "help_ok": true,
       "help": "usage: runtime_fact_topology_regression.py [-h] --files FILES [FILES ...]\n                                           --out-md OUT_MD\n\nRegression checks for runtime fact topology mapping artifacts.\n\noptions:\n  -h, --help            show this help message and exit\n  --files FILES [FILES ...]\n                        runtime_fact_topology.v3 JSON files to check.\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_propagation_topology_builder.py",
+      "module": "scripts.investigation.runtime_propagation_topology_builder",
+      "help_ok": true,
+      "help": "usage: runtime_propagation_topology_builder.py [-h] [--workspace WORKSPACE]\n                                               [--input INPUT]\n                                               [--out-json OUT_JSON]\n                                               [--out-md OUT_MD]\n\nBuild traversal-oriented runtime propagation topology from\nruntime_topology.json.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n                        SIGNALIS AI workspace root. Not a raw Lua source root.\n  --input INPUT\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_propagation_topology_probe.py",
+      "module": "scripts.investigation.runtime_propagation_topology_probe",
+      "help_ok": true,
+      "help": "usage: runtime_propagation_topology_probe.py [-h] --runtime-topology\n                                             RUNTIME_TOPOLOGY --source SOURCE\n                                             [--target TARGET]\n                                             [--max-depth MAX_DEPTH] --out-md\n                                             OUT_MD\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-topology RUNTIME_TOPOLOGY\n  --source SOURCE\n  --target TARGET\n  --max-depth MAX_DEPTH\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/runtime_topology_node_probe.py",

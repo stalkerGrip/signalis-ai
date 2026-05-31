@@ -563,3 +563,34 @@ less prone to memory leaks
 
 The system should support architecture reasoning over semantic manifests, not raw code.
 
+## Callback-Body Propagation Doctrine
+
+Hook listeners and network receivers are executable runtime bodies.
+
+They are not merely relationship nodes.
+
+When source evidence shows a listener or receiver emits another hook, propagation topology should represent:
+
+incoming event/message
+→ listener or receiver body
+→ emitted hook_event
+
+Examples:
+
+PlayerLoadedChar
+→ GM:PlayerLoadedChar
+→ PlayerLoadout
+
+PlayerLoadout
+→ GM:PlayerLoadout
+→ PostPlayerLoadout
+
+and
+
+netstream:invData
+→ invData receiver
+→ ItemDataChanged
+
+Callback-body propagation must be source-backed and deterministic.
+
+Do not invent callback-body propagation from ownership relationships alone.

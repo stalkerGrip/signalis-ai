@@ -139,3 +139,122 @@ Authority order:
 6. Facepunch Wiki
 
 External NutScript should be used only for comparison or historical reference and must not override validated behavior from local SIGNALIS source.
+
+## Character Load / Loadout Lifecycle
+
+Human-validated runtime behavior:
+
+Source:
+nutscript/plugins/multichar/sv_networking.lua
+
+Inside:
+
+net.Receive("nutCharChoose", function(_, client) ...)
+
+Runtime order:
+
+PrePlayerLoadedChar
+character:setup()
+PlayerLoadedChar
+
+Important:
+
+PrePlayerLoadedChar does NOT directly emit PlayerLoadedChar.
+
+Both hooks are emitted from the same nutCharChoose flow.
+
+Source:
+nutscript/gamemode/core/hooks/sv_hooks.lua
+
+Runtime propagation:
+
+PlayerLoadedChar
+→ GM:PlayerLoadedChar
+→ hook.Run("PlayerLoadout", client)
+
+PlayerLoadout
+→ GM:PlayerLoadout
+→ hook.Run("PostPlayerLoadout", client)
+
+Therefore:
+
+PrePlayerLoadedChar → PlayerLoadedChar
+
+is sibling emission from the same network flow.
+
+But:
+
+PlayerLoadedChar
+→ PlayerLoadout
+→ PostPlayerLoadout
+
+is valid runtime propagation.
+
+## invData Client Receiver Behavior
+
+Human-validated runtime behavior:
+
+Source:
+gamemode/core/libs/item/cl_networking.lua
+
+Receiver:
+
+netstream.Hook("invData", function(id, key, value)
+
+Behavior:
+
+1. locate item instance
+2. mutate item.data
+3. emit ItemDataChanged
+
+Equivalent runtime flow:
+
+netstream:invData
+→ receiver callback
+→ item.data mutation
+→ ItemDataChanged
+
+Important:
+
+ItemDataChanged is emitted directly inside the invData receiver callback.
+
+Therefore:
+
+netstream:invData
+→ ItemDataChanged
+
+is valid runtime propagation.
+
+If topology cannot reconstruct this chain, the missing artifact is callback-body propagation, not invalid runtime evidence.
+
+## Listener Body Semantics
+
+Human-validated behavior:
+
+Hook listeners are mixed.
+
+Some listeners perform direct state mutation.
+
+Some listeners call helper functions.
+
+Some listeners perform both.
+
+Examples:
+
+- loyalty point initialization
+- violation point initialization
+- trait switching
+- trait migration
+- character migration logic
+
+Therefore listeners must not be treated as passive labels.
+
+Future propagation topology should support:
+
+hook_event
+→ listener
+→ body-local operations
+→ emitted hooks
+→ state mutation
+
+File/plugin ownership exits are useful but incomplete.

@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `85`
+- Scripts checked: `87`
 
 ## scripts/diagnostics
 
@@ -2105,6 +2105,50 @@ options:
   -h, --help            show this help message and exit
   --files FILES [FILES ...]
                         runtime_fact_topology.v3 JSON files to check.
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_propagation_topology_builder`
+
+- Path: `scripts/investigation/runtime_propagation_topology_builder.py`
+- Help status: `OK`
+
+```text
+usage: runtime_propagation_topology_builder.py [-h] [--workspace WORKSPACE]
+                                               [--input INPUT]
+                                               [--out-json OUT_JSON]
+                                               [--out-md OUT_MD]
+
+Build traversal-oriented runtime propagation topology from
+runtime_topology.json.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+                        SIGNALIS AI workspace root. Not a raw Lua source root.
+  --input INPUT
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_propagation_topology_probe`
+
+- Path: `scripts/investigation/runtime_propagation_topology_probe.py`
+- Help status: `OK`
+
+```text
+usage: runtime_propagation_topology_probe.py [-h] --runtime-topology
+                                             RUNTIME_TOPOLOGY --source SOURCE
+                                             [--target TARGET]
+                                             [--max-depth MAX_DEPTH] --out-md
+                                             OUT_MD
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-topology RUNTIME_TOPOLOGY
+  --source SOURCE
+  --target TARGET
+  --max-depth MAX_DEPTH
   --out-md OUT_MD
 ```
 

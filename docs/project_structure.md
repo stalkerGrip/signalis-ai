@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-31T23:56:52`
+Generated: `2026-06-01T00:53:04`
 
 ## Workspace
 
@@ -79,6 +79,7 @@ temp/
 - `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.json` (11.5 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.json` (7.0 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json` (4.4 KB)
+- `manifests/normalized/runtime_propagation_topology.json` (6995.5 KB)
 - `manifests/normalized/runtime_topology.json` (11579.3 KB)
 - `manifests/normalized/runtime_topology_edges.json` (8330.6 KB)
 - `manifests/normalized/runtime_topology_nodes.json` (2566.3 KB)
@@ -147,9 +148,15 @@ temp/
 - `investigations/validation/characterload_inventory_runtime_fact_topology_v3.md` (9.3 KB)
 - `investigations/validation/characterload_inventory_runtime_facts.json` (10.6 KB)
 - `investigations/validation/characterload_inventory_runtime_facts.md` (5.5 KB)
-- `investigations/validation/probe_invData_topology.md` (0.9 KB)
-- `investigations/validation/probe_ItemDataChanged_topology.md` (1.2 KB)
-- `investigations/validation/probe_PlayerLoadedChar_topology.md` (5.1 KB)
+- `investigations/validation/probe_invData_to_ItemDataChanged_propagation.md` (0.9 KB)
+- `investigations/validation/probe_invData_to_ItemDataChanged_propagation_v2.md` (0.9 KB)
+- `investigations/validation/probe_invData_topology.md` (1.2 KB)
+- `investigations/validation/probe_ItemDataChanged_topology.md` (5.1 KB)
+- `investigations/validation/probe_listener_raw_topology.md` (1.9 KB)
+- `investigations/validation/probe_PlayerLoadedChar_propagation_topology.md` (5.2 KB)
+- `investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation.md` (7.3 KB)
+- `investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation_v2.md` (10.3 KB)
+- `investigations/validation/probe_PlayerLoadedChar_topology.md` (0.9 KB)
 - `investigations/validation/runtime_chain_graph_audit_v1.json` (3.5 KB)
 - `investigations/validation/runtime_chain_graph_audit_v1.md` (2.9 KB)
 - `investigations/validation/runtime_chain_graph_characterload_v1.json` (3.7 KB)
@@ -205,7 +212,7 @@ temp/
 - `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.md` (46.8 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json` (2.0 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.md` (1.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json` (1.2 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json` (1.3 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.md` (0.9 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json` (10.1 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.md` (2.8 KB)
@@ -366,7 +373,7 @@ temp/
 - `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v1.json` (10.1 KB)
 - `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json` (8.2 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json` (2.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json` (1.2 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json` (1.3 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json` (10.1 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json` (7.9 KB)
 - `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json` (2.5 KB)
@@ -399,6 +406,8 @@ temp/
 - `manifests/normalized/runtime_graph_edges.json` (2625.8 KB)
 - `manifests/normalized/runtime_graph_nodes.json` (1116.8 KB)
 - `manifests/normalized/runtime_graph_summary.md` (4.6 KB)
+- `manifests/normalized/runtime_propagation_topology.json` (6995.5 KB)
+- `manifests/normalized/runtime_propagation_topology_summary.md` (1.7 KB)
 - `manifests/normalized/runtime_topology.json` (11579.3 KB)
 - `manifests/normalized/runtime_topology_edges.json` (8330.6 KB)
 - `manifests/normalized/runtime_topology_nodes.json` (2566.3 KB)
@@ -424,7 +433,7 @@ temp/
 - `subsystem_docs/persistence_model.md` (3.3 KB)
 - `subsystem_docs/qdrant_plan.md` (3.6 KB)
 - `subsystem_docs/realm_model.md` (3.5 KB)
-- `subsystem_docs/runtime_doctrine.md` (10.7 KB)
+- `subsystem_docs/runtime_doctrine.md` (11.3 KB)
 
 ## Active Investigation
 
