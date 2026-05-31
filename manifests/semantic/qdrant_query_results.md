@@ -1,674 +1,712 @@
 # Qdrant Query Results
 
 Collection: `signalis_semantic`
-Query: `build context pack for vendor stale price label inventory UI bug`
+Query: `vendor purchase item metadata sync`
+Expanded query used: `vendor purchase item metadata sync client UI file file_summary hook_emitter hook_event hook_listener invAct inventory inventoryOpen netstream.Hook netstream.Start network_context network_message network_operation network_payload_operation plugin plugin_summary realm crossing server authoritative vendor`
 Top K: **10**
+Retrieve K: **50**
 Model: `nomic-ai/nomic-embed-text-v1.5`
-Device: `cpu`
-
-## Filters
-
-```json
-{}
-```
+Hash query: `False`
 
 ## Returned results: 10
 
 ## Result 1
 
-- Score: **0.5893**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:runtime_node:0157ea5724a0dfe0`
-- Doc type: `runtime_node`
-- Node type: `plugin`
-- Plugin: `vendor`
+- Score: **-0.0225**
+- Rerank score: `0.31`
+- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:inventory:+0.05', 'network_text_match:+0.10', 'doctrine_required:+0.16', 'file_subsystem:inventory:+0.07', 'causal:itemdatachanged:+0.18', 'causal:nutinventoryadd:+0.16', 'causal:nutinventoryremove:+0.14', 'causal_network_flow:+0.14', 'state_mutation_or_sync:+0.14', 'realm_signal:+0.04']`
+- Source ID: `doc:doctrine:85a7da1efbcd3b66`
+- Doc type: `doctrine`
 - Subsystem: `None`
-- Realm: `None`
-- File: `None`
+- File: `docs/subsystems/inventory.md`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:runtime_node:0157ea5724a0dfe0",
-  "doc_type": "runtime_node",
-  "content_hash": "f3dca0aa8f22472f15354f5cdc603c22914f736db195215bfce0efd2f09e1d45",
-  "embedding_dim": 768,
-  "text": "Runtime topology node: vendor\nNode ID: plugin:vendor\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: vendor\nOutgoing edge counts: {'emits_event': 22, 'listens_to_event': 18, 'owns_file': 23, 'owns_timer_operation': 11, 'registers_listener': 33}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"vendor\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"vendor\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CanItemBeTransfered\n- outgoing emits_event -> hook_event CanPlayerAccessVendor\n- outgoing emits_event -> hook_event CanPlayerTradeWithVendor\n- outgoing emits_event -> hook_event CreateUsingInterface\n- outgoing emits_event -> hook_event OnCharTradeVendor\n- outgoing emits_event -> hook_event OnOpenVendorMenu\n- outgoing emits_event -> hook_event OpenVendorTradeInterface\n- outgoing emits_event -> hook_event StorageEntityRemoved\n- outgoing emits_event -> hook_event StorageInventorySet\n- outgoing emits_event -> hook_event StorageRestored\n- outgoing emits_event -> hook_event VendorClassUpdated\n- outgoing emits_event -> hook_event VendorEdited",
+  "source_id": "doc:doctrine:85a7da1efbcd3b66",
+  "doc_type": "doctrine",
+  "content_hash": "1c9d2a0945769b3df5df6c52b5cb331b5f800bcaa9c105940490a2028d80b088",
+  "embedding_dim": 384,
+  "text": "# Subsystem: inventory\n\n## Purpose\n\nDeterministic subsystem summary generated from runtime topology.\n\n## Topology Summary\n\n- Nodes: **443**\n- Edges: **7885**\n\n## Node Types\n\n- `hook_event`: 97\n- `network_operation`: 83\n- `hook_listener`: 62\n- `hook_emitter`: 44\n- `network_payload_operation`: 39\n- `file`: 37\n- `network_message`: 34\n- `network_context`: 13\n- `plugin`: 12\n- `timer_operation`: 9\n- `realm`: 3\n- `event_class`: 3\n- `timer`: 2\n- `timer_class`: 2\n- `subsystem`: 1\n- `gamemode`: 1\n- `timer_risk`: 1\n\n## Edge Types\n\n- `runs_in_realm`: 4470\n- `classified_as`: 577\n- `registers_listener`: 331\n- `listens_to_event`: 261\n- `listens_to`: 198\n- `contains_listener`: 192\n- `owns_timer_operation`: 191\n- `owns_file`: 188\n- `has_timer_risk`: 182\n- `contains_network_operation`: 177\n- `dispatches_to`: 129\n- `emits`: 104\n- `file_sends_network_message`: 101\n- `contains_timer_operation`: 99\n- `contains_emitter`: 96\n- `emits_event`: 80\n- `file_receives_network_message`: 71\n- `contains_network_payload_operation`: 67\n- `references_timer`: 64\n- `sends_network_message`: 47\n\n## Major Hooks\n\n- `listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8`: 2\n- `listen ItemDraggedOutOfInventory @ plugins\\gridinv\\sh_plugin.lua:33`: 2\n- `listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8`: 2\n- `listen ns1SetupInventorySearch @ plugins\\tying\\sh_charsearch.lua:4`: 2\n- `listen DisplayInventoryNut1_1_beta @ plugins\\ragdollinteraction\\interaction\\cl_hooks.lua:83`: 2\n- `listen DisplayInventoryNut1_1 @ plugins\\ragdollinteraction\\interaction\\cl_hooks.lua:152`: 2\n- `VendorItemStockUpdated`: 1\n- `OnTakeShipmentItem`: 1\n- `name`: 1\n- `listen TransferInventory @ plugins\\ragdollinteraction\\interaction\\sv_hooks.lua:144`: 1\n- `emit CreateNewInventoryPanel @ plugins\\ragdollinteraction\\interaction\\cl_hooks.lua:90`: 1\n- `ItemShouldSave`: 1\n- `OnRequestItemTransfer`: 1\n- `listen SetupBagInventoryAccessRules @ plugins\\gridinv\\sv_access_rules.lua:54`: 1\n- `InventoryItemAdded`: 1\n- `PlayerCanPickupWeapon`: 1\n- `emit InventoryItemRemoved @ gamemode\\core\\libs\\item\\cl_networking.lua:75`: 1\n- `exitStorage`: 1\n- `ItemDataChanged`: 1\n- `emit PlayerLoadout @ gamemode\\core\\hooks\\sv_hooks.lua:263`: 1\n\n## Major Network Signals\n\n- `netstream send inventorySetPanelStatus`: 10\n- `netstream send invAct`: 3\n- `netstream send hookName`: 2\n- `netstream send itemSplitAdd`: 2\n- `netstream send inventoryUpdSkin`: 2\n- `send nutInventoryDelete`: 2\n- `netstream send storageInventory`: 2\n- `netstream hook itemSplitDrop`: 2\n- `Start nutInventoryDelete`: 2\n- `Start nutTransferItem`: 1\n- `foodReadyPartAddClient`: 1\n- `register nutInventoryRemove`: 1\n- `receive OpenMyInv`: 1\n- `netstream send inventoryOpen`: 1\n- `netstream hook inventoryCloseOnAction`: 1\n- `netstream hook mnhrOpenVisor`: 1\n- `netstream hook invAct`: 1\n- `send nutInventoryData`: 1\n- `receive nutInventoryRemove`: 1\n- `send nutInventoryAdd`: 1\n\n## Lifecycle Propagation",
   "metadata": {
-    "degree": 107,
-    "file": null,
-    "in_degree": 0,
-    "label": "vendor",
-    "node_type": "plugin",
-    "out_degree": 107,
-    "plugin": "vendor",
-    "realm": null,
-    "source_id": "plugin:vendor",
-    "subsystem": null
+    "chunk_index": 0,
+    "file": "docs/subsystems/inventory.md",
+    "node_type": "doctrine",
+    "source_id": "docs/subsystems/inventory.md"
   },
-  "node_type": "plugin",
-  "plugin": "vendor",
-  "subsystem": null,
-  "realm": null,
-  "file": null,
-  "degree": 107
+  "node_type": "doctrine",
+  "file": "docs/subsystems/inventory.md"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology node: vendor
-Node ID: plugin:vendor
-Node type: plugin
-File: n/a
-Realm: unknown
-Plugin/subsystem: vendor
-Outgoing edge counts: {'emits_event': 22, 'listens_to_event': 18, 'owns_file': 23, 'owns_timer_operation': 11, 'registers_listener': 33}
-Incoming edge counts: {}
-Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "vendor", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "vendor", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
-Selected neighboring relationships:
-- outgoing emits_event -> hook_event CanItemBeTransfered
-- outgoing emits_event -> hook_event CanPlayerAccessVendor
-- outgoing emits_event -> hook_event CanPlayerTradeWithVendor
-- outgoing emits_event -> hook_event CreateUsingInterface
-- outgoing emits_event -> hook_event OnCharTradeVendor
-- outgoing emits_event -> hook_event OnOpenVendorMenu
-- outgoing emits_event -> hook_event OpenVendorTradeInterface
-- outgoing emits_event -> hook_event StorageEntityRemoved
-- outgoing emits_event -> hook_event StorageInventorySet
-- outgoing emits_event -> hook_event StorageRestored
-- outgoing emits_event -> hook_event VendorClassUpdated
-- outgoing emits_event -> hook_event VendorEdited
+# Subsystem: inventory
+
+## Purpose
+
+Deterministic subsystem summary generated from runtime topology.
+
+## Topology Summary
+
+- Nodes: **443**
+- Edges: **7885**
+
+## Node Types
+
+- `hook_event`: 97
+- `network_operation`: 83
+- `hook_listener`: 62
+- `hook_emitter`: 44
+- `network_payload_operation`: 39
+- `file`: 37
+- `network_message`: 34
+- `network_context`: 13
+- `plugin`: 12
+- `timer_operation`: 9
+- `realm`: 3
+- `event_class`: 3
+- `timer`: 2
+- `timer_class`: 2
+- `subsystem`: 1
+- `gamemode`: 1
+- `timer_risk`: 1
+
+## Edge Types
+
+- `runs_in_realm`: 4470
+- `classified_as`: 577
+- `registers_listener`: 331
+- `listens_to_event`: 261
+- `listens_to`: 198
+- `contains_listener`: 192
+- `owns_timer_operation`: 191
+- `owns_file`: 188
+- `has_timer_risk`: 182
+- `contains_network_operation`: 177
+- `dispatches_to`: 129
+- `emits`: 104
+- `file_sends_network_message`: 101
+- `contains_timer_operation`: 99
+- `contains_emitter`: 96
+- `emits_event`: 80
+- `file_receives_network_message`: 71
+- `contains_network_payload_operation`: 67
+- `references_timer`: 64
+- `sends_network_message`: 47
+
+## Major Hooks
+
+- `listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8`: 2
+- `listen ItemDraggedOutOfInventory @ plugins\gridinv\sh_plugin.lua:33`: 2
+- `listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8`: 2
+- `listen ns1SetupInventorySearch @ plugins\tying\sh_charsearch.lua:4`: 2
+- `listen DisplayInventoryNut1_1_beta @ plugins\ragdollinteraction\interaction\cl_hooks.lua:83`: 2
+- `listen DisplayInventoryNut1_1 @ plugins\ragdollinteraction\interaction\cl_hooks.lua:152`: 2
+- `VendorItemStockUpdated`: 1
+- `OnTakeShipmentItem`: 1
+- `name`: 1
+- `listen TransferInventory @ plugins\ragdollinteraction\interaction\sv_hooks.lua:144`: 1
+- `emit CreateNewInventor...
 ```
 
 ## Result 2
 
-- Score: **0.5874**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:file_topology:fd221c850144f0ee`
-- Doc type: `file_topology`
-- Node type: `file`
-- Plugin: `None`
+- Score: **-0.0212**
+- Rerank score: `0.1935`
+- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:inventory:+0.05', 'network_text_match:+0.10', 'doctrine_required:+0.16', 'causal:sync:+0.10', 'realm_signal:+0.04']`
+- Source ID: `doc:doctrine:5516a60760c5a26c`
+- Doc type: `doctrine`
 - Subsystem: `None`
-- Realm: `None`
-- File: `plugins/vendor/derma/cl_vendor.lua`
+- File: `subsystem_docs/pipeline_state.md`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:file_topology:fd221c850144f0ee",
-  "doc_type": "file_topology",
-  "content_hash": "9198a8c42ea2dbda2cfc33d7829b202fb5c2cae2b4a0c2ec0a1ef48e63b3f323",
-  "embedding_dim": 768,
-  "text": "Runtime topology file summary: plugins/vendor/derma/cl_vendor.lua\nThis source file participates in 25 topology relationships.\nRelationship counts: {'contains_listener': 7, 'contains_network_context': 3, 'contains_network_operation': 3, 'contains_network_payload_operation': 4, 'file_sends_network_message': 3, 'runs_in_realm': 3, 'owns_file': 2}\nPlugin/subsystem guess: unknown\nRealm: client\nSelected relationships:\n- contains_listener: hook_listener listen OnCharVarChanged @ plugins\\vendor\\derma\\cl_vendor.lua:201\n- contains_listener: hook_listener listen VendorItemModeUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:211\n- contains_listener: hook_listener listen VendorEdited @ plugins\\vendor\\derma\\cl_vendor.lua:214\n- contains_listener: hook_listener listen VendorItemMaxStockUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:208\n- contains_listener: hook_listener listen VendorItemPriceUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:204\n- contains_listener: hook_listener listen VendorMoneyUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:200\n- contains_listener: hook_listener listen VendorItemStockUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:207\n- contains_network_context: network_context Start nutVendorExit\n- contains_network_context: network_context Start nutVendorTrade\n- contains_network_context: network_context Start nutVendorTrade\n- contains_network_operation: network_operation send nutVendorExit\n- contains_network_operation: network_operation send nutVendorTrade\n- contains_network_operation: network_operation send nutVendorTrade\n- contains_network_payload_operation: network_payload_operation write WriteString nutVendorTrade\n- contains_network_payload_operation: network_payload_operation write WriteBool nutVendorTrade\n- contains_network_payload_operation: network_payload_operation write WriteString nutVendorTrade\n- contains_network_payload_operation: network_payload_operation write WriteBool nutVendorTrade\n- file_sends_network_message: network_message nutVendorExit\n- file_sends_network_message: network_message nutVendorTrade\n- file_sends_network_message: network_message nutVendorTrade\n- runs_in_realm: realm client\n- runs_in_realm: realm client\n- runs_in_realm: realm client\n- owns_file: plugin vendor\n- owns_file: plugin vendor\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "source_id": "doc:doctrine:5516a60760c5a26c",
+  "doc_type": "doctrine",
+  "content_hash": "e912116becdedf46e69a4abf5d112c4c523a949926a822a06bbddeb90d59464f",
+  "embedding_dim": 384,
+  "text": "nerated retrieval-ready semantic documents:\n\n```text\nmanifests/semantic/qdrant_documents.jsonl\nmanifests/semantic/qdrant_documents_summary.md\n```\n\nDocument types:\n\n```text\nruntime_node\nplugin_topology\nfile_topology\ndoctrine\n```\n\n---\n\n## Current Canonical Source of Truth\n\nPrimary reasoning artifacts:\n\n```text\nruntime_topology_nodes.json\nruntime_topology_edges.json\nruntime_topology_summary.md\nqdrant_documents.jsonl\nruntime_doctrine.md\nevent_taxonomy.md\nnetworking_model.md\npersistence_model.md\n```\n\nRaw Lua remains important, but as a secondary exact-check layer.\n\n---\n\n## Known Current Architecture Conclusions\n\nThe framework is:\n\n```text\nsimulation-oriented\nevent-driven\nmostly server-authoritative\ncross-realm UI/sync heavy\ntimer/scheduler driven\n```\n\nMajor topology hotspots include:\n\n```text\nhealthproblems\ninventory\nvendor\nstorage\nneeds\nbiorezonance\nlightitems\nmining\nragdollinteraction\nnextbots\n```\n\nCurrent risk themes:\n\n```text\nUI desync\nPVP/PVE FPS drops\ndynamic light cost\nentity simulation cost\nnextbot cost\nnetwork sync correctness\nmemory leaks\n```\n\n---\n\n## Next Pipeline Tasks\n\nImmediate next technical tasks:\n\n```text\nembed_qdrant_documents.py\ningest_qdrant.py\nquery_qdrant.py\n```\n\nFuture diagnostics:\n\n```text\ntopology hotspot analysis\ncross-realm propagation analysis\ninventory desync analysis\nnetwork protocol cleanup\nscheduler optimization\nentity simulation lifecycle modeling\n```\n\n---\n\n## Model Roles\n\nLocal Qwen2.5-Coder 14B Q4_K_M:\n\n```text\nautocomplete\nsmall refactors\nmanifest helpers\ndeterministic transformations\n```\n\nChatGPT / Gemini:\n\n```text\narchitecture synthesis\ncross-system reasoning\nscheduler redesign\nnetworking redesign\noptimization strategy\nUI/system design\n```\n\nLLMs are mandatory external reasoning engines, but not source of truth.",
   "metadata": {
-    "degree": 25,
-    "file": "plugins/vendor/derma/cl_vendor.lua",
-    "node_type": "file",
-    "source_id": "file:plugins/vendor/derma/cl_vendor.lua"
+    "chunk_index": 1,
+    "file": "subsystem_docs/pipeline_state.md",
+    "node_type": "doctrine",
+    "source_id": "subsystem_docs/pipeline_state.md"
   },
-  "node_type": "file",
-  "file": "plugins/vendor/derma/cl_vendor.lua",
-  "degree": 25
+  "node_type": "doctrine",
+  "file": "subsystem_docs/pipeline_state.md"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology file summary: plugins/vendor/derma/cl_vendor.lua
-This source file participates in 25 topology relationships.
-Relationship counts: {'contains_listener': 7, 'contains_network_context': 3, 'contains_network_operation': 3, 'contains_network_payload_operation': 4, 'file_sends_network_message': 3, 'runs_in_realm': 3, 'owns_file': 2}
-Plugin/subsystem guess: unknown
-Realm: client
-Selected relationships:
-- contains_listener: hook_listener listen OnCharVarChanged @ plugins\vendor\derma\cl_vendor.lua:201
-- contains_listener: hook_listener listen VendorItemModeUpdated @ plugins\vendor\derma\cl_vendor.lua:211
-- contains_listener: hook_listener listen VendorEdited @ plugins\vendor\derma\cl_vendor.lua:214
-- contains_listener: hook_listener listen VendorItemMaxStockUpdated @ plugins\vendor\derma\cl_vendor.lua:208
-- contains_listener: hook_listener listen VendorItemPriceUpdated @ plugins\vendor\derma\cl_vendor.lua:204
-- contains_listener: hook_listener listen VendorMoneyUpdated @ plugins\vendor\derma\cl_vendor.lua:200
-- contains_listener: hook_listener listen VendorItemStockUpdated @ plugins\vendor\derma\cl_vendor.lua:207
-- contains_network_context: network_context Start nutVendorExit
-- contains_network_context: network_context Start nutVendorTrade
-- contains_network_context: network_context Start nutVendorTrade
-- contains_network_operation: network_operation send nutVendorExit
-- contains_network_operation: network_operation send nutVendorTrade
-- contains_network_operation: network_operation send nutVendorTrade
-- contains_network_payload_operation: network_payload_operation write WriteString nutVendorTrade
-- contains_network_payload_operation: network_payload_operation write WriteBool nutVendorTrade
-- contains_network_payload_operation: network_payload_operation write W...
+nerated retrieval-ready semantic documents:
+
+```text
+manifests/semantic/qdrant_documents.jsonl
+manifests/semantic/qdrant_documents_summary.md
+```
+
+Document types:
+
+```text
+runtime_node
+plugin_topology
+file_topology
+doctrine
+```
+
+---
+
+## Current Canonical Source of Truth
+
+Primary reasoning artifacts:
+
+```text
+runtime_topology_nodes.json
+runtime_topology_edges.json
+runtime_topology_summary.md
+qdrant_documents.jsonl
+runtime_doctrine.md
+event_taxonomy.md
+networking_model.md
+persistence_model.md
+```
+
+Raw Lua remains important, but as a secondary exact-check layer.
+
+---
+
+## Known Current Architecture Conclusions
+
+The framework is:
+
+```text
+simulation-oriented
+event-driven
+mostly server-authoritative
+cross-realm UI/sync heavy
+timer/scheduler driven
+```
+
+Major topology hotspots include:
+
+```text
+healthproblems
+inventory
+vendor
+storage
+needs
+biorezonance
+lightitems
+mining
+ragdollinteraction
+nextbots
+```
+
+Current risk themes:
+
+```text
+UI desync
+PVP/PVE FPS drops
+dynamic light cost
+entity simulation cost
+nextbot cost
+network sync correctness
+memory leaks
+```
+
+---
+
+## Next Pipeline Tasks
+
+Immediate next technical tasks:
+
+```text
+embed_qdrant_documents.py
+ingest_qdrant.py
+query_qdrant.py
+```
+
+Future diagnostics:
+
+```text
+topology hotspot analysis
+cross-realm propagation analysis
+inventory desync analysis
+network protocol cleanup
+scheduler optimization
+entity simulation lifecycle modeling
+```
+
+---
+
+## Model Roles
+
+Local Qwen2.5-Coder 14B Q4_K_M:
+
+```text
+autocomplete
+small refactors
+manifest helpers
+deterministic transformations
+```
+
+ChatGPT / Gemini:
+
+```text
+architecture synthesis
+cross-system reasoning
+scheduler redesign
+networking redesign
+optimization strategy
+UI/system design
+```
+
+LLMs are mandatory external reasoning engines, but not source of truth.
 ```
 
 ## Result 3
 
-- Score: **0.5810**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:file_topology:051e1366e8be6265`
-- Doc type: `file_topology`
-- Node type: `file`
-- Plugin: `None`
+- Score: **-0.0240**
+- Rerank score: `0.16499999999999998`
+- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:inventory:+0.05', 'doctrine_required:+0.16', 'file_subsystem:inventory:+0.07']`
+- Source ID: `doc:doctrine:d4d21d55f7342475`
+- Doc type: `doctrine`
 - Subsystem: `None`
-- Realm: `None`
-- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
+- File: `docs/ai_subsystems/inventory.md`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:file_topology:051e1366e8be6265",
-  "doc_type": "file_topology",
-  "content_hash": "a1b23cfa06ee26a68583b47b3058b5d8d06284be38196ad80dc2721768b34fc5",
-  "embedding_dim": 768,
-  "text": "Runtime topology file summary: gamemode/core/meta/inventory/cl_base_inventory.lua\nThis source file participates in 41 topology relationships.\nRelationship counts: {'contains_emitter': 6, 'contains_network_context': 5, 'contains_network_operation': 5, 'contains_network_payload_operation': 16, 'file_receives_network_message': 5, 'runs_in_realm': 3, 'owns_file': 1}\nPlugin/subsystem guess: unknown\nRealm: client\nSelected relationships:\n- contains_emitter: hook_emitter emit ItemInitialized @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:41\n- contains_emitter: hook_emitter emit InventoryDeleted @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:83\n- contains_emitter: hook_emitter emit InventoryItemRemoved @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:75\n- contains_emitter: hook_emitter emit InventoryDataChanged @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:17\n- contains_emitter: hook_emitter emit InventoryItemAdded @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:63\n- contains_emitter: hook_emitter emit InventoryInitialized @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:45\n- contains_network_context: network_context Receive nutInventoryAdd\n- contains_network_context: network_context Receive nutInventoryData\n- contains_network_context: network_context Receive nutInventoryDelete\n- contains_network_context: network_context Receive nutInventoryInit\n- contains_network_context: network_context Receive nutInventoryRemove\n- contains_network_operation: network_operation receive nutInventoryAdd\n- contains_network_operation: network_operation receive nutInventoryData\n- contains_network_operation: network_operation receive nutInventoryDelete\n- contains_network_operation: network_operation receive nutInventoryInit\n- contains_network_operation: network_operation receive nutInventoryRemove\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutInventoryAdd\n- contains_network_payload_operation: network_payload_operation read ReadType nutInventoryAdd\n- contains_network_payload_operation: network_payload_operation read ReadType nutInventoryData\n- contains_network_payload_operation: network_payload_operation read ReadString nutInventoryData\n- contains_network_payload_operation: network_payload_operation read ReadType nutInventoryData\n- contains_network_payload_operation: network_payload_operation read ReadType nutInventoryDelete\n- contains_network_payload_operation: network_payload_operation read ReadType nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadString nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadTable nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadString nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadTable nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutInventoryInit\n- contains_network_payload_operation: network_payload_operation read ReadUInt nutInventoryRemove\n- contains_network_payload_operation: network_payload_operation read ReadType nutInventoryRemove\n- file_receives_network_message: network_message nutInventoryAdd\n- file_receives_network_message: network_message nutInventoryData\n- file_receives_network_message: network_message nutInventoryDelete\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "source_id": "doc:doctrine:d4d21d55f7342475",
+  "doc_type": "doctrine",
+  "content_hash": "70d4307fa12b8c1c641f085ca4f02035efd51d267a95ca265de45e9a5ef9128a",
+  "embedding_dim": 384,
+  "text": "t Architecture Assessment\n\nInventory is not merely a storage system.\n\nInventory is a gameplay infrastructure subsystem.\n\nIt acts as the central coordination point for:\n\n```text\nItem Ownership\nEquipment\nVendor Interaction\nStorage Interaction\nLoot Interaction\nCharacter Equipment State\nInventory UI\n```\n\nBecause of this, inventory should be treated as a Tier-1 subsystem during future architecture investigations.",
   "metadata": {
-    "degree": 41,
-    "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
-    "node_type": "file",
-    "source_id": "file:gamemode/core/meta/inventory/cl_base_inventory.lua"
+    "chunk_index": 2,
+    "file": "docs/ai_subsystems/inventory.md",
+    "node_type": "doctrine",
+    "source_id": "docs/ai_subsystems/inventory.md"
   },
-  "node_type": "file",
-  "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
-  "degree": 41
+  "node_type": "doctrine",
+  "file": "docs/ai_subsystems/inventory.md"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology file summary: gamemode/core/meta/inventory/cl_base_inventory.lua
-This source file participates in 41 topology relationships.
-Relationship counts: {'contains_emitter': 6, 'contains_network_context': 5, 'contains_network_operation': 5, 'contains_network_payload_operation': 16, 'file_receives_network_message': 5, 'runs_in_realm': 3, 'owns_file': 1}
-Plugin/subsystem guess: unknown
-Realm: client
-Selected relationships:
-- contains_emitter: hook_emitter emit ItemInitialized @ gamemode\core\meta\inventory\cl_base_inventory.lua:41
-- contains_emitter: hook_emitter emit InventoryDeleted @ gamemode\core\meta\inventory\cl_base_inventory.lua:83
-- contains_emitter: hook_emitter emit InventoryItemRemoved @ gamemode\core\meta\inventory\cl_base_inventory.lua:75
-- contains_emitter: hook_emitter emit InventoryDataChanged @ gamemode\core\meta\inventory\cl_base_inventory.lua:17
-- contains_emitter: hook_emitter emit InventoryItemAdded @ gamemode\core\meta\inventory\cl_base_inventory.lua:63
-- contains_emitter: hook_emitter emit InventoryInitialized @ gamemode\core\meta\inventory\cl_base_inventory.lua:45
-- contains_network_context: network_context Receive nutInventoryAdd
-- contains_network_context: network_context Receive nutInventoryData
-- contains_network_context: network_context Receive nutInventoryDelete
-- contains_network_context: network_context Receive nutInventoryInit
-- contains_network_context: network_context Receive nutInventoryRemove
-- contains_network_operation: network_operation receive nutInventoryAdd
-- contains_network_operation: network_operation receive nutInventoryData
-- contains_network_operation: network_operation receive nutInventoryDelete
-- contains_network_operation: network_operation receive nutInventoryInit
-- contains_network_operation: network_operati...
+t Architecture Assessment
+
+Inventory is not merely a storage system.
+
+Inventory is a gameplay infrastructure subsystem.
+
+It acts as the central coordination point for:
+
+```text
+Item Ownership
+Equipment
+Vendor Interaction
+Storage Interaction
+Loot Interaction
+Character Equipment State
+Inventory UI
+```
+
+Because of this, inventory should be treated as a Tier-1 subsystem during future architecture investigations.
 ```
 
 ## Result 4
 
-- Score: **0.5778**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:runtime_node:03a413ab22454d13`
-- Doc type: `runtime_node`
-- Node type: `plugin`
-- Plugin: `inventory`
+- Score: **-0.0305**
+- Rerank score: `0.14200000000000002`
+- Rerank reasons: `['doc_type:file_topology:+0.12', 'node_type:file:+0.10', 'intent_node_type:+0.08', 'network_text_match:+0.10', 'causal:sync:+0.10', 'causal_network_flow:+0.14', 'realm_signal:+0.04']`
+- Source ID: `doc:file_topology:10c4dffa36c7630c`
+- Doc type: `file_topology`
 - Subsystem: `None`
-- Realm: `None`
-- File: `None`
+- File: `plugins/gadgets/cl_hooks.lua`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:runtime_node:03a413ab22454d13",
-  "doc_type": "runtime_node",
-  "content_hash": "af22812656bc4431ed18e41903f87bdc65d6267d9f1f166dc56479b5f9a6b0d9",
-  "embedding_dim": 768,
-  "text": "Runtime topology node: inventory\nNode ID: plugin:inventory\nNode type: plugin\nFile: n/a\nRealm: unknown\nPlugin/subsystem: inventory\nOutgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}\nIncoming edge counts: {}\nSelected properties: {\"graph_layers\": [\"hook\", \"network\", \"timer\"], \"label\": \"inventory\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\", \"timer\"]}, \"plugin\": \"inventory\", \"source_artifact\": \"derived_from_file_path\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing emits_event -> hook_event CheckBothHandsAmputation\n- outgoing emits_event -> hook_event ItemTransfered\n- outgoing emits_event -> hook_event OnCreateStoragePanel\n- outgoing listens_to_event -> hook_event CharacterPreSave\n- outgoing listens_to_event -> hook_event CreateNewInventoryPanel\n- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel\n- outgoing listens_to_event -> hook_event ItemTransfered\n- outgoing listens_to_event -> hook_event OpenVendorTradeInterface\n- outgoing listens_to_event -> hook_event PlayerButtonDown\n- outgoing listens_to_event -> hook_event PlayerLoadout\n- outgoing listens_to_event -> hook_event PostPlayerLoadout\n- outgoing owns_file -> file plugins\\inventory\\cl_hooks.lua",
+  "source_id": "doc:file_topology:10c4dffa36c7630c",
+  "doc_type": "file_topology",
+  "content_hash": "7c7cb7106b78385a6addb03ab9d38f9e1d04ca6e6afc69f10c69c973db79dfa2",
+  "embedding_dim": 384,
+  "text": "Runtime topology file summary: plugins/gadgets/cl_hooks.lua\nThis source file participates in 26 topology relationships.\nRelationship counts: {'contains_emitter': 1, 'contains_listener': 2, 'contains_network_operation': 9, 'file_receives_network_message': 9, 'runs_in_realm': 3, 'owns_file': 2}\nPlugin/subsystem guess: unknown\nRealm: client\nSelected relationships:\n- contains_emitter: hook_emitter emit CreateUsingInterface @ plugins\\gadgets\\cl_hooks.lua:88\n- contains_listener: hook_listener listen CreateUsingInterface @ plugins\\gadgets\\cl_hooks.lua:3\n- contains_listener: hook_listener listen CreateUsingInterface @ plugins\\gadgets\\cl_hooks.lua:2\n- contains_network_operation: network_operation netstream hook compSendUserCardAccess\n- contains_network_operation: network_operation netstream hook compSyncWorkShift\n- contains_network_operation: network_operation netstream hook doorInterfaceTurnOn\n- contains_network_operation: network_operation netstream hook interfaceTurnOn\n- contains_network_operation: network_operation netstream hook setUpLocksInfo\n- contains_network_operation: network_operation netstream hook setUpLocksView\n- contains_network_operation: network_operation netstream hook setUpPointsUpdate\n- contains_network_operation: network_operation netstream hook setUpReplicastatus\n- contains_network_operation: network_operation netstream hook setUpUserCard\n- file_receives_network_message: network_message compSendUserCardAccess\n- file_receives_network_message: network_message compSyncWorkShift\n- file_receives_network_message: network_message doorInterfaceTurnOn\n- file_receives_network_message: network_message interfaceTurnOn\n- file_receives_network_message: network_message setUpLocksInfo\n- file_receives_network_message: network_message setUpLocksView\n- file_receives_network_message: network_message setUpPointsUpdate\n- file_receives_network_message: network_message setUpReplicastatus\n- file_receives_network_message: network_message setUpUserCard\n- runs_in_realm: realm client\n- runs_in_realm: realm client\n- runs_in_realm: realm client\n- owns_file: plugin gadgets\n- owns_file: plugin gadgets\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
   "metadata": {
-    "degree": 37,
-    "file": null,
-    "in_degree": 0,
-    "label": "inventory",
-    "node_type": "plugin",
-    "out_degree": 37,
-    "plugin": "inventory",
-    "realm": null,
-    "source_id": "plugin:inventory",
-    "subsystem": null
+    "degree": 26,
+    "file": "plugins/gadgets/cl_hooks.lua",
+    "node_type": "file",
+    "source_id": "file:plugins/gadgets/cl_hooks.lua"
   },
-  "node_type": "plugin",
-  "plugin": "inventory",
-  "subsystem": null,
-  "realm": null,
-  "file": null,
-  "degree": 37
+  "node_type": "file",
+  "file": "plugins/gadgets/cl_hooks.lua",
+  "degree": 26
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology node: inventory
-Node ID: plugin:inventory
-Node type: plugin
-File: n/a
-Realm: unknown
-Plugin/subsystem: inventory
-Outgoing edge counts: {'emits_event': 3, 'listens_to_event': 8, 'owns_file': 8, 'owns_timer_operation': 2, 'registers_listener': 16}
-Incoming edge counts: {}
-Selected properties: {"graph_layers": ["hook", "network", "timer"], "label": "inventory", "merge_conflicts": {"source_graph": ["hook", "network", "timer"]}, "plugin": "inventory", "source_artifact": "derived_from_file_path", "source_graph": "hook"}
-Selected neighboring relationships:
-- outgoing emits_event -> hook_event CheckBothHandsAmputation
-- outgoing emits_event -> hook_event ItemTransfered
-- outgoing emits_event -> hook_event OnCreateStoragePanel
-- outgoing listens_to_event -> hook_event CharacterPreSave
-- outgoing listens_to_event -> hook_event CreateNewInventoryPanel
-- outgoing listens_to_event -> hook_event CreateTargetNewInventoryPanel
-- outgoing listens_to_event -> hook_event ItemTransfered
-- outgoing listens_to_event -> hook_event OpenVendorTradeInterface
-- outgoing listens_to_event -> hook_event PlayerButtonDown
-- outgoing listens_to_event -> hook_event PlayerLoadout
-- outgoing listens_to_event -> hook_event PostPlayerLoadout
-- outgoing owns_file -> file plugins\inventory\cl_hooks.lua
+Runtime topology file summary: plugins/gadgets/cl_hooks.lua
+This source file participates in 26 topology relationships.
+Relationship counts: {'contains_emitter': 1, 'contains_listener': 2, 'contains_network_operation': 9, 'file_receives_network_message': 9, 'runs_in_realm': 3, 'owns_file': 2}
+Plugin/subsystem guess: unknown
+Realm: client
+Selected relationships:
+- contains_emitter: hook_emitter emit CreateUsingInterface @ plugins\gadgets\cl_hooks.lua:88
+- contains_listener: hook_listener listen CreateUsingInterface @ plugins\gadgets\cl_hooks.lua:3
+- contains_listener: hook_listener listen CreateUsingInterface @ plugins\gadgets\cl_hooks.lua:2
+- contains_network_operation: network_operation netstream hook compSendUserCardAccess
+- contains_network_operation: network_operation netstream hook compSyncWorkShift
+- contains_network_operation: network_operation netstream hook doorInterfaceTurnOn
+- contains_network_operation: network_operation netstream hook interfaceTurnOn
+- contains_network_operation: network_operation netstream hook setUpLocksInfo
+- contains_network_operation: network_operation netstream hook setUpLocksView
+- contains_network_operation: network_operation netstream hook setUpPointsUpdate
+- contains_network_operation: network_operation netstream hook setUpReplicastatus
+- contains_network_operation: network_operation netstream hook setUpUserCard
+- file_receives_network_message: network_message compSendUserCardAccess
+- file_receives_network_message: network_message compSyncWorkShift
+- file_receives_network_message: network_message doorInterfaceTurnOn
+- file_receives_network_message: network_message interfaceTurnOn
+- file_receives_network_message: network_message setUpLocksInfo
+- file_receives_network_message: network_message setUpLocksView
+- file_receives_network_m...
 ```
 
 ## Result 5
 
-- Score: **0.5752**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:runtime_node:63b4b37926108939`
-- Doc type: `runtime_node`
-- Node type: `file`
-- Plugin: `None`
+- Score: **-0.0334**
+- Rerank score: `0.135`
+- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'doctrine_required:+0.16']`
+- Source ID: `doc:doctrine:d5ecf75c78e81b11`
+- Doc type: `doctrine`
 - Subsystem: `None`
-- Realm: `client`
-- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
+- File: `docs/source_index.md`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:runtime_node:63b4b37926108939",
-  "doc_type": "runtime_node",
-  "content_hash": "1510dbf7c55e1010321adeb65ef04b6f062d93ae1b651d98bfe5c7cb9dd07136",
-  "embedding_dim": 768,
-  "text": "Runtime topology node: gamemode\\core\\meta\\inventory\\cl_base_inventory.lua\nNode ID: file:gamemode/core/meta/inventory/cl_base_inventory.lua\nNode type: file\nFile: gamemode/core/meta/inventory/cl_base_inventory.lua\nRealm: client\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_emitter': 6, 'contains_network_context': 5, 'contains_network_operation': 5, 'contains_network_payload_operation': 16, 'file_receives_network_message': 5, 'runs_in_realm': 3}\nIncoming edge counts: {'owns_file': 1}\nSelected properties: {\"framework_layer\": \"framework\", \"graph_layers\": [\"hook\", \"network\"], \"label\": \"gamemode\\\\core\\\\meta\\\\inventory\\\\cl_base_inventory.lua\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\"]}, \"path\": \"gamemode\\\\core\\\\meta\\\\inventory\\\\cl_base_inventory.lua\", \"props\": {\"path\": \"gamemode\\\\core\\\\meta\\\\inventory\\\\cl_base_inventory.lua\"}, \"realm\": \"client\", \"source\": \"emitter_file\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing contains_emitter -> hook_emitter emit ItemInitialized @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:41\n- outgoing contains_emitter -> hook_emitter emit InventoryDeleted @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:83\n- outgoing contains_emitter -> hook_emitter emit InventoryItemRemoved @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:75\n- outgoing contains_emitter -> hook_emitter emit InventoryDataChanged @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:17\n- outgoing contains_emitter -> hook_emitter emit InventoryItemAdded @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:63\n- outgoing contains_emitter -> hook_emitter emit InventoryInitialized @ gamemode\\core\\meta\\inventory\\cl_base_inventory.lua:45\n- outgoing contains_network_context -> network_context Receive nutInventoryAdd\n- outgoing contains_network_context -> network_context Receive nutInventoryData\n- outgoing contains_network_context -> network_context Receive nutInventoryDelete\n- outgoing contains_network_context -> network_context Receive nutInventoryInit\n- outgoing contains_network_context -> network_context Receive nutInventoryRemove\n- outgoing contains_network_operation -> network_operation receive nutInventoryAdd\n- incoming owns_file -> plugin gamemode",
+  "source_id": "doc:doctrine:d5ecf75c78e81b11",
+  "doc_type": "doctrine",
+  "content_hash": "7d34f8830e1229a4e4ed096eefc198c606caa4771ed79df88f156eda778d3061",
+  "embedding_dim": 384,
+  "text": "lans\n\nPromote durable findings from investigations into doctrine, subsystem docs, or human context.\n\n## Scripts\n\nImportant script groups:\n\n```text\nscripts/extraction/\nscripts/normalization/\nscripts/graphs/\nscripts/qdrant/\nscripts/semantic/\nscripts/profiling/\nscripts/diagnostics/\n```\n\nQdrant scripts:\n\n```text\nscripts/qdrant/build_qdrant_documents.py\nscripts/qdrant/embed_qdrant_documents.py\nscripts/qdrant/ingest_qdrant.py\nscripts/qdrant/query_qdrant.py\nscripts/qdrant/rerank_results.py\nscripts/qdrant/context_pack.py\nscripts/qdrant/path_reconstruction.py\nscripts/qdrant/path_reconstruction_v2.py\nscripts/qdrant/retrieval_intent.py\n```\n\n## Raw Lua Source\n\nRaw Lua is not the default reasoning layer.\n\nUse raw Lua only when:\n\n- topology is ambiguous\n- exact runtime behavior must be validated\n- source authority is disputed\n- legacy vs active implementation must be confirmed\n- a bug path requires implementation-level proof\n\nRaw Lua should be requested selectively, not dumped wholesale.",
   "metadata": {
-    "degree": 41,
-    "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
-    "in_degree": 1,
-    "label": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua",
-    "node_type": "file",
-    "out_degree": 40,
-    "plugin": null,
-    "realm": "client",
-    "source_id": "file:gamemode/core/meta/inventory/cl_base_inventory.lua",
-    "subsystem": null
+    "chunk_index": 1,
+    "file": "docs/source_index.md",
+    "node_type": "doctrine",
+    "source_id": "docs/source_index.md"
   },
-  "node_type": "file",
-  "plugin": null,
-  "subsystem": null,
-  "realm": "client",
-  "file": "gamemode/core/meta/inventory/cl_base_inventory.lua",
-  "degree": 41
+  "node_type": "doctrine",
+  "file": "docs/source_index.md"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology node: gamemode\core\meta\inventory\cl_base_inventory.lua
-Node ID: file:gamemode/core/meta/inventory/cl_base_inventory.lua
-Node type: file
-File: gamemode/core/meta/inventory/cl_base_inventory.lua
-Realm: client
-Plugin/subsystem: unknown
-Outgoing edge counts: {'contains_emitter': 6, 'contains_network_context': 5, 'contains_network_operation': 5, 'contains_network_payload_operation': 16, 'file_receives_network_message': 5, 'runs_in_realm': 3}
-Incoming edge counts: {'owns_file': 1}
-Selected properties: {"framework_layer": "framework", "graph_layers": ["hook", "network"], "label": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua", "merge_conflicts": {"source_graph": ["hook", "network"]}, "path": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua", "props": {"path": "gamemode\\core\\meta\\inventory\\cl_base_inventory.lua"}, "realm": "client", "source": "emitter_file", "source_graph": "hook"}
-Selected neighboring relationships:
-- outgoing contains_emitter -> hook_emitter emit ItemInitialized @ gamemode\core\meta\inventory\cl_base_inventory.lua:41
-- outgoing contains_emitter -> hook_emitter emit InventoryDeleted @ gamemode\core\meta\inventory\cl_base_inventory.lua:83
-- outgoing contains_emitter -> hook_emitter emit InventoryItemRemoved @ gamemode\core\meta\inventory\cl_base_inventory.lua:75
-- outgoing contains_emitter -> hook_emitter emit InventoryDataChanged @ gamemode\core\meta\inventory\cl_base_inventory.lua:17
-- outgoing contains_emitter -> hook_emitter emit InventoryItemAdded @ gamemode\core\meta\inventory\cl_base_inventory.lua:63
-- outgoing contains_emitter -> hook_emitter emit InventoryInitialized @ gamemode\core\meta\inventory\cl_base_inventory.lua:45
-- outgoing contains_network_context -> network_context Receive nutInventoryAdd
-- outgoing co...
+lans
+
+Promote durable findings from investigations into doctrine, subsystem docs, or human context.
+
+## Scripts
+
+Important script groups:
+
+```text
+scripts/extraction/
+scripts/normalization/
+scripts/graphs/
+scripts/qdrant/
+scripts/semantic/
+scripts/profiling/
+scripts/diagnostics/
+```
+
+Qdrant scripts:
+
+```text
+scripts/qdrant/build_qdrant_documents.py
+scripts/qdrant/embed_qdrant_documents.py
+scripts/qdrant/ingest_qdrant.py
+scripts/qdrant/query_qdrant.py
+scripts/qdrant/rerank_results.py
+scripts/qdrant/context_pack.py
+scripts/qdrant/path_reconstruction.py
+scripts/qdrant/path_reconstruction_v2.py
+scripts/qdrant/retrieval_intent.py
+```
+
+## Raw Lua Source
+
+Raw Lua is not the default reasoning layer.
+
+Use raw Lua only when:
+
+- topology is ambiguous
+- exact runtime behavior must be validated
+- source authority is disputed
+- legacy vs active implementation must be confirmed
+- a bug path requires implementation-level proof
+
+Raw Lua should be requested selectively, not dumped wholesale.
 ```
 
 ## Result 6
 
-- Score: **0.5724**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:runtime_node:284914e7a137dc25`
-- Doc type: `runtime_node`
-- Node type: `subsystem`
-- Plugin: `None`
+- Score: **-0.0339**
+- Rerank score: `0.135`
+- Rerank reasons: `['doc_type:plugin_topology:+0.14', 'node_type:plugin_summary:+0.16', 'intent_node_type:+0.08', 'network_text_match:+0.10', 'high_priority_subsystem:+0.06']`
+- Source ID: `doc:plugin_topology:e97ed7312a8a8b47`
+- Doc type: `plugin_topology`
 - Subsystem: `None`
-- Realm: `None`
 - File: `None`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:runtime_node:284914e7a137dc25",
-  "doc_type": "runtime_node",
-  "content_hash": "f1c4fe3085f24e38ec9de339abdb8dad3b80f0648e61467089f111322facdfb4",
-  "embedding_dim": 768,
-  "text": "Runtime topology node: vendor\nNode ID: subsystem:vendor\nNode type: subsystem\nFile: n/a\nRealm: unknown\nPlugin/subsystem: unknown\nOutgoing edge counts: {}\nIncoming edge counts: {'belongs_to_subsystem': 9}\nSelected properties: {\"graph_layers\": [\"timer\"], \"label\": \"vendor\", \"source_graph\": \"timer\"}\nSelected neighboring relationships:\n- incoming belongs_to_subsystem -> timer_operation entity_timer_or_action_call@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:351\n- incoming belongs_to_subsystem -> timer_operation entity_timer_or_action_call@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:341\n- incoming belongs_to_subsystem -> timer_operation entity_timer_or_action_call@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:349\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\vendor\\cl_networking.lua:134\n- incoming belongs_to_subsystem -> timer_operation entity_timer_create@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:341\n- incoming belongs_to_subsystem -> timer_operation entity_timer_exists@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:349\n- incoming belongs_to_subsystem -> timer_operation entity_timer_remove@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:351\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua:106\n- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\\vendor\\entities\\entities\\nut_vendor\\shared.lua:39",
+  "source_id": "doc:plugin_topology:e97ed7312a8a8b47",
+  "doc_type": "plugin_topology",
+  "content_hash": "8cb1ccd4d5d6c7fae2947b3cdc4becfd8a516c889cae4777a46615d6dae46b87",
+  "embedding_dim": 384,
+  "text": "Plugin/subsystem topology summary: healthproblems\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 72, 'registers_listener': 54, 'listens_to_event': 28, 'owns_timer_operation': 19, 'emits_event': 10}\nHot members:\n- plugin healthproblems degree=183\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for healthproblems.",
   "metadata": {
-    "degree": 9,
-    "file": null,
-    "in_degree": 9,
-    "label": "vendor",
-    "node_type": "subsystem",
-    "out_degree": 0,
-    "plugin": null,
-    "realm": null,
-    "source_id": "subsystem:vendor",
-    "subsystem": null
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "healthproblems",
+    "source_id": "plugin:healthproblems"
   },
-  "node_type": "subsystem",
-  "plugin": null,
-  "subsystem": null,
-  "realm": null,
-  "file": null,
-  "degree": 9
+  "node_type": "plugin_summary",
+  "plugin": "healthproblems"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology node: vendor
-Node ID: subsystem:vendor
-Node type: subsystem
-File: n/a
-Realm: unknown
-Plugin/subsystem: unknown
-Outgoing edge counts: {}
-Incoming edge counts: {'belongs_to_subsystem': 9}
-Selected properties: {"graph_layers": ["timer"], "label": "vendor", "source_graph": "timer"}
-Selected neighboring relationships:
-- incoming belongs_to_subsystem -> timer_operation entity_timer_or_action_call@plugins\vendor\entities\entities\nut_vendor\init.lua:351
-- incoming belongs_to_subsystem -> timer_operation entity_timer_or_action_call@plugins\vendor\entities\entities\nut_vendor\init.lua:341
-- incoming belongs_to_subsystem -> timer_operation entity_timer_or_action_call@plugins\vendor\entities\entities\nut_vendor\init.lua:349
-- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\vendor\cl_networking.lua:134
-- incoming belongs_to_subsystem -> timer_operation entity_timer_create@plugins\vendor\entities\entities\nut_vendor\init.lua:341
-- incoming belongs_to_subsystem -> timer_operation entity_timer_exists@plugins\vendor\entities\entities\nut_vendor\init.lua:349
-- incoming belongs_to_subsystem -> timer_operation entity_timer_remove@plugins\vendor\entities\entities\nut_vendor\init.lua:351
-- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\vendor\entities\entities\nut_vendor\shared.lua:106
-- incoming belongs_to_subsystem -> timer_operation timer_simple@plugins\vendor\entities\entities\nut_vendor\shared.lua:39
+Plugin/subsystem topology summary: healthproblems
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 72, 'registers_listener': 54, 'listens_to_event': 28, 'owns_timer_operation': 19, 'emits_event': 10}
+Hot members:
+- plugin healthproblems degree=183
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for healthproblems.
 ```
 
 ## Result 7
 
-- Score: **0.5722**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:file_topology:b023ec3427ea1a4f`
-- Doc type: `file_topology`
-- Node type: `file`
-- Plugin: `None`
+- Score: **-0.0067**
+- Rerank score: `0.1325`
+- Rerank reasons: `['doc_type:plugin_topology:+0.14', 'node_type:plugin_summary:+0.16', 'intent_node_type:+0.08', 'text_subsystem:vendor:+0.05', 'network_text_match:+0.10']`
+- Source ID: `doc:plugin_topology:6734ebe6a22b5468`
+- Doc type: `plugin_topology`
 - Subsystem: `None`
-- Realm: `None`
-- File: `entities/weapons/nut_hands.lua`
+- File: `None`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:file_topology:b023ec3427ea1a4f",
-  "doc_type": "file_topology",
-  "content_hash": "a721d1125f5b23a95b8aeaefd2e7b5274231104e57929ab37e28936dceb7ca7f",
-  "embedding_dim": 768,
-  "text": "Runtime topology file summary: entities/weapons/nut_hands.lua\nThis source file participates in 20 topology relationships.\nRelationship counts: {'contains_emitter': 14, 'contains_timer_operation': 3, 'runs_in_realm': 2, 'owns_file': 1}\nPlugin/subsystem guess: unknown\nRealm: shared\nSelected relationships:\n- contains_emitter: hook_emitter emit PlayerThrowPunch @ entities\\weapons\\nut_hands.lua:732\n- contains_emitter: hook_emitter emit CheckBothHandsAmputation @ entities\\weapons\\nut_hands.lua:374\n- contains_emitter: hook_emitter emit CanPlayerThrowPunch @ entities\\weapons\\nut_hands.lua:351\n- contains_emitter: hook_emitter emit OnPickupObject @ entities\\weapons\\nut_hands.lua:478\n- contains_emitter: hook_emitter emit CheckBothHandsAmputation @ entities\\weapons\\nut_hands.lua:342\n- contains_emitter: hook_emitter emit EnduranceCheck @ entities\\weapons\\nut_hands.lua:342\n- contains_emitter: hook_emitter emit PlayerGetFistDamage @ entities\\weapons\\nut_hands.lua:722\n- contains_emitter: hook_emitter emit OnPickupObject @ entities\\weapons\\nut_hands.lua:465\n- contains_emitter: hook_emitter emit PlayerCanKnock @ entities\\weapons\\nut_hands.lua:388\n- contains_emitter: hook_emitter emit GravGunPickupAllowed @ entities\\weapons\\nut_hands.lua:445\n- contains_emitter: hook_emitter emit EnduranceDecrease @ entities\\weapons\\nut_hands.lua:358\n- contains_emitter: hook_emitter emit GravGunOnDropped @ entities\\weapons\\nut_hands.lua:209\n- contains_emitter: hook_emitter emit GravGunOnPickedUp @ entities\\weapons\\nut_hands.lua:595\n- contains_emitter: hook_emitter emit GetPreferredCarryAngles @ entities\\weapons\\nut_hands.lua:540\n- contains_timer_operation: timer_operation timer_simple@entities\\weapons\\nut_hands.lua:128\n- contains_timer_operation: timer_operation timer_simple@entities\\weapons\\nut_hands.lua:138\n- contains_timer_operation: timer_operation timer_simple@entities\\weapons\\nut_hands.lua:158\n- runs_in_realm: realm shared\n- runs_in_realm: realm shared\n- owns_file: plugin entities\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "source_id": "doc:plugin_topology:6734ebe6a22b5468",
+  "doc_type": "plugin_topology",
+  "content_hash": "95bb70af5942e0dde5124eb877c5ae8e82c7efe06cf7556659e3ab1a0401c341",
+  "embedding_dim": 384,
+  "text": "Plugin/subsystem topology summary: newvendorsystem\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 3}\nHot members:\n- plugin newvendorsystem degree=3\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for newvendorsystem.",
   "metadata": {
-    "degree": 20,
-    "file": "entities/weapons/nut_hands.lua",
-    "node_type": "file",
-    "source_id": "file:entities/weapons/nut_hands.lua"
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "newvendorsystem",
+    "source_id": "plugin:newvendorsystem"
   },
-  "node_type": "file",
-  "file": "entities/weapons/nut_hands.lua",
-  "degree": 20
+  "node_type": "plugin_summary",
+  "plugin": "newvendorsystem"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology file summary: entities/weapons/nut_hands.lua
-This source file participates in 20 topology relationships.
-Relationship counts: {'contains_emitter': 14, 'contains_timer_operation': 3, 'runs_in_realm': 2, 'owns_file': 1}
-Plugin/subsystem guess: unknown
-Realm: shared
-Selected relationships:
-- contains_emitter: hook_emitter emit PlayerThrowPunch @ entities\weapons\nut_hands.lua:732
-- contains_emitter: hook_emitter emit CheckBothHandsAmputation @ entities\weapons\nut_hands.lua:374
-- contains_emitter: hook_emitter emit CanPlayerThrowPunch @ entities\weapons\nut_hands.lua:351
-- contains_emitter: hook_emitter emit OnPickupObject @ entities\weapons\nut_hands.lua:478
-- contains_emitter: hook_emitter emit CheckBothHandsAmputation @ entities\weapons\nut_hands.lua:342
-- contains_emitter: hook_emitter emit EnduranceCheck @ entities\weapons\nut_hands.lua:342
-- contains_emitter: hook_emitter emit PlayerGetFistDamage @ entities\weapons\nut_hands.lua:722
-- contains_emitter: hook_emitter emit OnPickupObject @ entities\weapons\nut_hands.lua:465
-- contains_emitter: hook_emitter emit PlayerCanKnock @ entities\weapons\nut_hands.lua:388
-- contains_emitter: hook_emitter emit GravGunPickupAllowed @ entities\weapons\nut_hands.lua:445
-- contains_emitter: hook_emitter emit EnduranceDecrease @ entities\weapons\nut_hands.lua:358
-- contains_emitter: hook_emitter emit GravGunOnDropped @ entities\weapons\nut_hands.lua:209
-- contains_emitter: hook_emitter emit GravGunOnPickedUp @ entities\weapons\nut_hands.lua:595
-- contains_emitter: hook_emitter emit GetPreferredCarryAngles @ entities\weapons\nut_hands.lua:540
-- contains_timer_operation: timer_operation timer_simple@entities\weapons\nut_hands.lua:128
-- contains_timer_operation: timer_operation timer_simple@entities\weapons\nut_hands.lua:...
+Plugin/subsystem topology summary: newvendorsystem
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 3}
+Hot members:
+- plugin newvendorsystem degree=3
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for newvendorsystem.
 ```
 
 ## Result 8
 
-- Score: **0.5679**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:file_topology:7406e7fe0c6c9369`
+- Score: **-0.0279**
+- Rerank score: `0.127`
+- Rerank reasons: `['doc_type:file_topology:+0.12', 'node_type:file:+0.10', 'intent_node_type:+0.08', 'network_text_match:+0.10', 'causal_network_flow:+0.14', 'realm_signal:+0.04']`
+- Source ID: `doc:file_topology:870fd673d9af2a22`
 - Doc type: `file_topology`
-- Node type: `file`
-- Plugin: `None`
 - Subsystem: `None`
-- Realm: `None`
-- File: `plugins/vendor/entities/entities/nut_vendor/init.lua`
+- File: `schema/hooks/cl_hooks.lua`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:file_topology:7406e7fe0c6c9369",
+  "source_id": "doc:file_topology:870fd673d9af2a22",
   "doc_type": "file_topology",
-  "content_hash": "bd75f0bf66cd1783f6f3cd7730705a5493f8678cbf63519e804ff91054ae4596",
-  "embedding_dim": 768,
-  "text": "Runtime topology file summary: plugins/vendor/entities/entities/nut_vendor/init.lua\nThis source file participates in 27 topology relationships.\nRelationship counts: {'contains_emitter': 2, 'contains_network_context': 1, 'contains_network_operation': 6, 'contains_timer_operation': 6, 'file_sends_network_message': 6, 'runs_in_realm': 3, 'owns_file': 3}\nPlugin/subsystem guess: unknown\nRealm: server\nSelected relationships:\n- contains_emitter: hook_emitter emit OpenVendorTradeInterface @ plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:57\n- contains_emitter: hook_emitter emit StorageEntityRemoved @ plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:278\n- contains_network_context: network_context Start nutVendorExit\n- contains_network_operation: network_operation send nutVendorExit\n- contains_network_operation: network_operation netstream send activator\n- contains_network_operation: network_operation netstream send activator\n- contains_network_operation: network_operation netstream send sendVendorInfo\n- contains_network_operation: network_operation netstream send sendVendorInfo\n- contains_network_operation: network_operation netstream send v\n- contains_timer_operation: timer_operation entity_timer_or_action_call@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:351\n- contains_timer_operation: timer_operation entity_timer_or_action_call@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:341\n- contains_timer_operation: timer_operation entity_timer_or_action_call@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:349\n- contains_timer_operation: timer_operation entity_timer_create@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:341\n- contains_timer_operation: timer_operation entity_timer_exists@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:349\n- contains_timer_operation: timer_operation entity_timer_remove@plugins\\vendor\\entities\\entities\\nut_vendor\\init.lua:351\n- file_sends_network_message: network_message nutVendorExit\n- file_sends_network_message: network_message activator\n- file_sends_network_message: network_message activator\n- file_sends_network_message: network_message sendVendorInfo\n- file_sends_network_message: network_message sendVendorInfo\n- file_sends_network_message: network_message v\n- runs_in_realm: realm server\n- runs_in_realm: realm server\n- runs_in_realm: realm server\n- owns_file: plugin vendor\n- owns_file: plugin vendor\n- owns_file: plugin vendor\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
+  "content_hash": "b047c6597baf4d9a9e4950776b064e0cf1655702006edff4ff6a154376cab3aa",
+  "embedding_dim": 384,
+  "text": "Runtime topology file summary: schema/hooks/cl_hooks.lua\nThis source file participates in 21 topology relationships.\nRelationship counts: {'contains_listener': 7, 'contains_network_operation': 4, 'contains_timer_operation': 1, 'file_receives_network_message': 4, 'runs_in_realm': 3, 'owns_file': 2}\nPlugin/subsystem guess: unknown\nRealm: client\nSelected relationships:\n- contains_listener: hook_listener listen CharacterLoaded @ schema\\hooks\\cl_hooks.lua:121\n- contains_listener: hook_listener listen addDisplay @ schema\\hooks\\cl_hooks.lua:104\n- contains_listener: hook_listener listen HUDPaint @ schema\\hooks\\cl_hooks.lua:15\n- contains_listener: hook_listener listen OnChatReceived @ schema\\hooks\\cl_hooks.lua:113\n- contains_listener: hook_listener listen OnContextMenuClose @ schema\\hooks\\cl_hooks.lua:138\n- contains_listener: hook_listener listen RenderScreenspaceEffects @ schema\\hooks\\cl_hooks.lua:155\n- contains_listener: hook_listener listen OnContextMenuOpen @ schema\\hooks\\cl_hooks.lua:132\n- contains_network_operation: network_operation netstream hook cDisp\n- contains_network_operation: network_operation netstream hook obj\n- contains_network_operation: network_operation netstream hook plyData\n- contains_network_operation: network_operation netstream hook voicePlay\n- contains_timer_operation: timer_operation timer_create@schema\\hooks\\cl_hooks.lua:184\n- file_receives_network_message: network_message cDisp\n- file_receives_network_message: network_message obj\n- file_receives_network_message: network_message plyData\n- file_receives_network_message: network_message voicePlay\n- runs_in_realm: realm client\n- runs_in_realm: realm client\n- runs_in_realm: realm client\n- owns_file: plugin schema\n- owns_file: plugin schema\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
   "metadata": {
-    "degree": 27,
-    "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
+    "degree": 21,
+    "file": "schema/hooks/cl_hooks.lua",
     "node_type": "file",
-    "source_id": "file:plugins/vendor/entities/entities/nut_vendor/init.lua"
+    "source_id": "file:schema/hooks/cl_hooks.lua"
   },
   "node_type": "file",
-  "file": "plugins/vendor/entities/entities/nut_vendor/init.lua",
-  "degree": 27
+  "file": "schema/hooks/cl_hooks.lua",
+  "degree": 21
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology file summary: plugins/vendor/entities/entities/nut_vendor/init.lua
-This source file participates in 27 topology relationships.
-Relationship counts: {'contains_emitter': 2, 'contains_network_context': 1, 'contains_network_operation': 6, 'contains_timer_operation': 6, 'file_sends_network_message': 6, 'runs_in_realm': 3, 'owns_file': 3}
+Runtime topology file summary: schema/hooks/cl_hooks.lua
+This source file participates in 21 topology relationships.
+Relationship counts: {'contains_listener': 7, 'contains_network_operation': 4, 'contains_timer_operation': 1, 'file_receives_network_message': 4, 'runs_in_realm': 3, 'owns_file': 2}
 Plugin/subsystem guess: unknown
-Realm: server
+Realm: client
 Selected relationships:
-- contains_emitter: hook_emitter emit OpenVendorTradeInterface @ plugins\vendor\entities\entities\nut_vendor\init.lua:57
-- contains_emitter: hook_emitter emit StorageEntityRemoved @ plugins\vendor\entities\entities\nut_vendor\init.lua:278
-- contains_network_context: network_context Start nutVendorExit
-- contains_network_operation: network_operation send nutVendorExit
-- contains_network_operation: network_operation netstream send activator
-- contains_network_operation: network_operation netstream send activator
-- contains_network_operation: network_operation netstream send sendVendorInfo
-- contains_network_operation: network_operation netstream send sendVendorInfo
-- contains_network_operation: network_operation netstream send v
-- contains_timer_operation: timer_operation entity_timer_or_action_call@plugins\vendor\entities\entities\nut_vendor\init.lua:351
-- contains_timer_operation: timer_operation entity_timer_or_action_call@plugins\vendor\entities\entities\nut_vendor\init.lua:341
-- contains_timer_operation: timer_operation entity_timer_or_action_call@plugins\vendor\entities\entities\nut_vendor\init.lua:349
-- contains_timer_operation: timer_operation entity_timer_create@plugins\vendor\entities\entities\nut_vendor\init.lua:341
-- contains_timer_operation: timer_operation entity_timer_exists@plugins\vendor\entities\entities\nut_vendor\init.lua:349
-- contains_...
+- contains_listener: hook_listener listen CharacterLoaded @ schema\hooks\cl_hooks.lua:121
+- contains_listener: hook_listener listen addDisplay @ schema\hooks\cl_hooks.lua:104
+- contains_listener: hook_listener listen HUDPaint @ schema\hooks\cl_hooks.lua:15
+- contains_listener: hook_listener listen OnChatReceived @ schema\hooks\cl_hooks.lua:113
+- contains_listener: hook_listener listen OnContextMenuClose @ schema\hooks\cl_hooks.lua:138
+- contains_listener: hook_listener listen RenderScreenspaceEffects @ schema\hooks\cl_hooks.lua:155
+- contains_listener: hook_listener listen OnContextMenuOpen @ schema\hooks\cl_hooks.lua:132
+- contains_network_operation: network_operation netstream hook cDisp
+- contains_network_operation: network_operation netstream hook obj
+- contains_network_operation: network_operation netstream hook plyData
+- contains_network_operation: network_operation netstream hook voicePlay
+- contains_timer_operation: timer_operation timer_create@schema\hooks\cl_hooks.lua:184
+- file_receives_network_message: network_message cDisp
+- file_receives_network_message: network_message obj
+- file_receives_network_message: network_message plyData
+- file_receives_network_message: network_message voicePlay
+- runs_in_realm: realm client
+- runs_in_realm: realm client
+- runs_in_realm: realm client
+- owns_file: plugin schema
+- owns_file: plugin schema
+Use this document to retrieve architectural context for this file...
 ```
 
 ## Result 9
 
-- Score: **0.5666**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:runtime_node:6400c069b6b74504`
-- Doc type: `runtime_node`
-- Node type: `file`
-- Plugin: `None`
+- Score: **-0.0288**
+- Rerank score: `0.127`
+- Rerank reasons: `['doc_type:file_topology:+0.12', 'node_type:file:+0.10', 'intent_node_type:+0.08', 'network_text_match:+0.10', 'causal_network_flow:+0.14', 'realm_signal:+0.04']`
+- Source ID: `doc:file_topology:e1156a59d633d83d`
+- Doc type: `file_topology`
 - Subsystem: `None`
-- Realm: `client`
-- File: `plugins/vendor/derma/cl_vendor.lua`
+- File: `schema/hooks/sv_hooks.lua`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:runtime_node:6400c069b6b74504",
-  "doc_type": "runtime_node",
-  "content_hash": "15b306d667fe6d17704f29926eb8c88750e774ac9b041c0c4fd32da56a4f1dc0",
-  "embedding_dim": 768,
-  "text": "Runtime topology node: plugins\\vendor\\derma\\cl_vendor.lua\nNode ID: file:plugins/vendor/derma/cl_vendor.lua\nNode type: file\nFile: plugins/vendor/derma/cl_vendor.lua\nRealm: client\nPlugin/subsystem: unknown\nOutgoing edge counts: {'contains_listener': 7, 'contains_network_context': 3, 'contains_network_operation': 3, 'contains_network_payload_operation': 4, 'file_sends_network_message': 3, 'runs_in_realm': 3}\nIncoming edge counts: {'owns_file': 2}\nSelected properties: {\"framework_layer\": \"framework\", \"graph_layers\": [\"hook\", \"network\"], \"label\": \"plugins\\\\vendor\\\\derma\\\\cl_vendor.lua\", \"merge_conflicts\": {\"source_graph\": [\"hook\", \"network\"]}, \"path\": \"plugins\\\\vendor\\\\derma\\\\cl_vendor.lua\", \"props\": {\"path\": \"plugins\\\\vendor\\\\derma\\\\cl_vendor.lua\"}, \"realm\": \"client\", \"source\": \"listener_file\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing contains_listener -> hook_listener listen OnCharVarChanged @ plugins\\vendor\\derma\\cl_vendor.lua:201\n- outgoing contains_listener -> hook_listener listen VendorItemModeUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:211\n- outgoing contains_listener -> hook_listener listen VendorEdited @ plugins\\vendor\\derma\\cl_vendor.lua:214\n- outgoing contains_listener -> hook_listener listen VendorItemMaxStockUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:208\n- outgoing contains_listener -> hook_listener listen VendorItemPriceUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:204\n- outgoing contains_listener -> hook_listener listen VendorMoneyUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:200\n- outgoing contains_listener -> hook_listener listen VendorItemStockUpdated @ plugins\\vendor\\derma\\cl_vendor.lua:207\n- outgoing contains_network_context -> network_context Start nutVendorExit\n- outgoing contains_network_context -> network_context Start nutVendorTrade\n- outgoing contains_network_context -> network_context Start nutVendorTrade\n- outgoing contains_network_operation -> network_operation send nutVendorExit\n- outgoing contains_network_operation -> network_operation send nutVendorTrade\n- incoming owns_file -> plugin vendor\n- incoming owns_file -> plugin vendor",
+  "source_id": "doc:file_topology:e1156a59d633d83d",
+  "doc_type": "file_topology",
+  "content_hash": "8f67a45d608ac9634a5a0ce87fbe6929618a18bf3b2ac122979f26995209660d",
+  "embedding_dim": 384,
+  "text": "Runtime topology file summary: schema/hooks/sv_hooks.lua\nThis source file participates in 34 topology relationships.\nRelationship counts: {'contains_emitter': 3, 'contains_listener': 17, 'contains_network_operation': 5, 'file_receives_network_message': 2, 'file_sends_network_message': 3, 'runs_in_realm': 3, 'owns_file': 1}\nPlugin/subsystem guess: unknown\nRealm: server\nSelected relationships:\n- contains_emitter: hook_emitter emit CanPlayerEditData @ schema\\hooks\\sv_hooks.lua:424\n- contains_emitter: hook_emitter emit CanPlayerEditObjectives @ schema\\hooks\\sv_hooks.lua:433\n- contains_emitter: hook_emitter emit PlayerRankChanged @ schema\\hooks\\sv_hooks.lua:224\n- contains_listener: hook_listener listen PlayerHurt @ schema\\hooks\\sv_hooks.lua:284\n- contains_listener: hook_listener listen PlayerSetHandsModel @ schema\\hooks\\sv_hooks.lua:409\n- contains_listener: hook_listener listen PlayerFootstep @ schema\\hooks\\sv_hooks.lua:13\n- contains_listener: hook_listener listen CanPlayerViewData @ schema\\hooks\\sv_hooks.lua:150\n- contains_listener: hook_listener listen PostPlayerLoadout @ schema\\hooks\\sv_hooks.lua:146\n- contains_listener: hook_listener listen PlayerTick @ schema\\hooks\\sv_hooks.lua:322\n- contains_listener: hook_listener listen PlayerMessageSend @ schema\\hooks\\sv_hooks.lua:341\n- contains_listener: hook_listener listen CanPlayerViewObjectives @ schema\\hooks\\sv_hooks.lua:401\n- contains_listener: hook_listener listen GetPlayerPainSound @ schema\\hooks\\sv_hooks.lua:314\n- contains_listener: hook_listener listen CanPlayerEditObjectives @ schema\\hooks\\sv_hooks.lua:405\n- contains_listener: hook_listener listen LoadData @ schema\\hooks\\sv_hooks.lua:140\n- contains_listener: hook_listener listen PlayerRankChanged @ schema\\hooks\\sv_hooks.lua:186\n- contains_listener: hook_listener listen PlayerUseDoor @ schema\\hooks\\sv_hooks.lua:156\n- contains_listener: hook_listener listen PlayerStaminaLost @ schema\\hooks\\sv_hooks.lua:385\n- contains_listener: hook_listener listen GetPlayerDeathSound @ schema\\hooks\\sv_hooks.lua:240\n- contains_listener: hook_listener listen OnCharVarChanged @ schema\\hooks\\sv_hooks.lua:215\n- contains_listener: hook_listener listen OnCharCreated @ schema\\hooks\\sv_hooks.lua:88\n- contains_network_operation: network_operation netstream hook dataCls\n- contains_network_operation: network_operation netstream hook obj\n- contains_network_operation: network_operation netstream send nil\n- contains_network_operation: network_operation netstream send nil\n- contains_network_operation: network_operation netstream send nil\n- file_receives_network_message: network_message dataCls\n- file_receives_network_message: network_message obj\n- file_sends_network_message: network_message nil\n- file_sends_network_message: network_message nil\n- file_sends_network_message: network_message nil\n- runs_in_realm: realm server\n- runs_in_realm: realm server\n- runs_in_realm: realm server\n- owns_file: plugin schema\nUse this document to retrieve architectural context for this file without loading raw Lua by default.",
   "metadata": {
-    "degree": 25,
-    "file": "plugins/vendor/derma/cl_vendor.lua",
-    "in_degree": 2,
-    "label": "plugins\\vendor\\derma\\cl_vendor.lua",
+    "degree": 34,
+    "file": "schema/hooks/sv_hooks.lua",
     "node_type": "file",
-    "out_degree": 23,
-    "plugin": null,
-    "realm": "client",
-    "source_id": "file:plugins/vendor/derma/cl_vendor.lua",
-    "subsystem": null
+    "source_id": "file:schema/hooks/sv_hooks.lua"
   },
   "node_type": "file",
-  "plugin": null,
-  "subsystem": null,
-  "realm": "client",
-  "file": "plugins/vendor/derma/cl_vendor.lua",
-  "degree": 25
+  "file": "schema/hooks/sv_hooks.lua",
+  "degree": 34
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology node: plugins\vendor\derma\cl_vendor.lua
-Node ID: file:plugins/vendor/derma/cl_vendor.lua
-Node type: file
-File: plugins/vendor/derma/cl_vendor.lua
-Realm: client
-Plugin/subsystem: unknown
-Outgoing edge counts: {'contains_listener': 7, 'contains_network_context': 3, 'contains_network_operation': 3, 'contains_network_payload_operation': 4, 'file_sends_network_message': 3, 'runs_in_realm': 3}
-Incoming edge counts: {'owns_file': 2}
-Selected properties: {"framework_layer": "framework", "graph_layers": ["hook", "network"], "label": "plugins\\vendor\\derma\\cl_vendor.lua", "merge_conflicts": {"source_graph": ["hook", "network"]}, "path": "plugins\\vendor\\derma\\cl_vendor.lua", "props": {"path": "plugins\\vendor\\derma\\cl_vendor.lua"}, "realm": "client", "source": "listener_file", "source_graph": "hook"}
-Selected neighboring relationships:
-- outgoing contains_listener -> hook_listener listen OnCharVarChanged @ plugins\vendor\derma\cl_vendor.lua:201
-- outgoing contains_listener -> hook_listener listen VendorItemModeUpdated @ plugins\vendor\derma\cl_vendor.lua:211
-- outgoing contains_listener -> hook_listener listen VendorEdited @ plugins\vendor\derma\cl_vendor.lua:214
-- outgoing contains_listener -> hook_listener listen VendorItemMaxStockUpdated @ plugins\vendor\derma\cl_vendor.lua:208
-- outgoing contains_listener -> hook_listener listen VendorItemPriceUpdated @ plugins\vendor\derma\cl_vendor.lua:204
-- outgoing contains_listener -> hook_listener listen VendorMoneyUpdated @ plugins\vendor\derma\cl_vendor.lua:200
-- outgoing contains_listener -> hook_listener listen VendorItemStockUpdated @ plugins\vendor\derma\cl_vendor.lua:207
-- outgoing contains_network_context -> network_context Start nutVendorExit
-- outgoing contains_network_context -> network_context Start n...
+Runtime topology file summary: schema/hooks/sv_hooks.lua
+This source file participates in 34 topology relationships.
+Relationship counts: {'contains_emitter': 3, 'contains_listener': 17, 'contains_network_operation': 5, 'file_receives_network_message': 2, 'file_sends_network_message': 3, 'runs_in_realm': 3, 'owns_file': 1}
+Plugin/subsystem guess: unknown
+Realm: server
+Selected relationships:
+- contains_emitter: hook_emitter emit CanPlayerEditData @ schema\hooks\sv_hooks.lua:424
+- contains_emitter: hook_emitter emit CanPlayerEditObjectives @ schema\hooks\sv_hooks.lua:433
+- contains_emitter: hook_emitter emit PlayerRankChanged @ schema\hooks\sv_hooks.lua:224
+- contains_listener: hook_listener listen PlayerHurt @ schema\hooks\sv_hooks.lua:284
+- contains_listener: hook_listener listen PlayerSetHandsModel @ schema\hooks\sv_hooks.lua:409
+- contains_listener: hook_listener listen PlayerFootstep @ schema\hooks\sv_hooks.lua:13
+- contains_listener: hook_listener listen CanPlayerViewData @ schema\hooks\sv_hooks.lua:150
+- contains_listener: hook_listener listen PostPlayerLoadout @ schema\hooks\sv_hooks.lua:146
+- contains_listener: hook_listener listen PlayerTick @ schema\hooks\sv_hooks.lua:322
+- contains_listener: hook_listener listen PlayerMessageSend @ schema\hooks\sv_hooks.lua:341
+- contains_listener: hook_listener listen CanPlayerViewObjectives @ schema\hooks\sv_hooks.lua:401
+- contains_listener: hook_listener listen GetPlayerPainSound @ schema\hooks\sv_hooks.lua:314
+- contains_listener: hook_listener listen CanPlayerEditObjectives @ schema\hooks\sv_hooks.lua:405
+- contains_listener: hook_listener listen LoadData @ schema\hooks\sv_hooks.lua:140
+- contains_listener: hook_listener listen PlayerRankChanged @ schema\hooks\sv_hooks.lua:186
+- contains_listener: hook_listener listen P...
 ```
 
 ## Result 10
 
-- Score: **0.5654**
-- Rerank score: `None`
-- Rerank bonus: `None`
-- Rerank reasons: `[]`
-- Source ID: `doc:runtime_node:73732fbee349671d`
-- Doc type: `runtime_node`
-- Node type: `hook_emitter`
-- Plugin: `None`
+- Score: **-0.0283**
+- Rerank score: `0.12600000000000003`
+- Rerank reasons: `['doc_type:plugin_topology:+0.14', 'node_type:plugin_summary:+0.16', 'intent_node_type:+0.08', 'network_text_match:+0.10', 'realm_signal:+0.04']`
+- Source ID: `doc:plugin_topology:8ea779cd9ca10b47`
+- Doc type: `plugin_topology`
 - Subsystem: `None`
-- Realm: `shared`
-- File: `gamemode/core/libs/sh_inventory.lua`
+- File: `None`
 
 ### Metadata
 
 ```json
 {
-  "source_id": "doc:runtime_node:73732fbee349671d",
-  "doc_type": "runtime_node",
-  "content_hash": "b630afd659ebd99cc7aa89bf815d345933a84b3ff40bd10ec16655f21baa552a",
-  "embedding_dim": 768,
-  "text": "Runtime topology node: emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67\nNode ID: emitter:emitter_07985e2301e5\nNode type: hook_emitter\nFile: gamemode/core/libs/sh_inventory.lua\nRealm: shared\nPlugin/subsystem: unknown\nOutgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}\nIncoming edge counts: {'contains_emitter': 1}\nSelected properties: {\"call_type\": \"Run\", \"event\": \"CreateInventoryPanel\", \"file\": \"gamemode\\\\core\\\\libs\\\\sh_inventory.lua\", \"graph_layers\": [\"hook\"], \"label\": \"emit CreateInventoryPanel @ gamemode\\\\core\\\\libs\\\\sh_inventory.lua:67\", \"line\": 67, \"normalization_status\": \"resolved\", \"realm\": \"shared\", \"resolution_confidence\": \"low\", \"resolution_source\": \"literal\", \"return_policy\": \"maybe_returns\", \"source_artifact\": \"hook_event_emitters\", \"source_graph\": \"hook\"}\nSelected neighboring relationships:\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\gridinv\\plugins\\gridinvui\\sh_plugin.lua:8\n- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\\_disabled\\simpleinv\\plugins\\listinvui\\sh_plugin.lua:8\n- outgoing emits -> hook_event CreateInventoryPanel\n- outgoing runs_in_realm -> realm shared\n- outgoing runs_in_realm -> realm shared\n- incoming contains_emitter -> file gamemode\\core\\libs\\sh_inventory.lua",
+  "source_id": "doc:plugin_topology:8ea779cd9ca10b47",
+  "doc_type": "plugin_topology",
+  "content_hash": "76ae15f1473637c02a657a35fbaf44d65e58e777b509f7125b4d54307ddba405",
+  "embedding_dim": 384,
+  "text": "Plugin/subsystem topology summary: observer\nMember node counts by type: {'plugin': 1}\nRelationship counts: {'owns_file': 1, 'owns_timer_operation': 1}\nHot members:\n- plugin observer degree=2\nArchitectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for observer.",
   "metadata": {
-    "degree": 8,
-    "file": "gamemode/core/libs/sh_inventory.lua",
-    "in_degree": 1,
-    "label": "emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67",
-    "node_type": "hook_emitter",
-    "out_degree": 7,
-    "plugin": null,
-    "realm": "shared",
-    "source_id": "emitter:emitter_07985e2301e5",
-    "subsystem": null
+    "node_count": 1,
+    "node_type": "plugin_summary",
+    "plugin": "observer",
+    "source_id": "plugin:observer"
   },
-  "node_type": "hook_emitter",
-  "plugin": null,
-  "subsystem": null,
-  "realm": "shared",
-  "file": "gamemode/core/libs/sh_inventory.lua",
-  "degree": 8
+  "node_type": "plugin_summary",
+  "plugin": "observer"
 }
 ```
 
 ### Text
 
 ```text
-Runtime topology node: emit CreateInventoryPanel @ gamemode\core\libs\sh_inventory.lua:67
-Node ID: emitter:emitter_07985e2301e5
-Node type: hook_emitter
-File: gamemode/core/libs/sh_inventory.lua
-Realm: shared
-Plugin/subsystem: unknown
-Outgoing edge counts: {'dispatches_to': 4, 'emits': 1, 'runs_in_realm': 2}
-Incoming edge counts: {'contains_emitter': 1}
-Selected properties: {"call_type": "Run", "event": "CreateInventoryPanel", "file": "gamemode\\core\\libs\\sh_inventory.lua", "graph_layers": ["hook"], "label": "emit CreateInventoryPanel @ gamemode\\core\\libs\\sh_inventory.lua:67", "line": 67, "normalization_status": "resolved", "realm": "shared", "resolution_confidence": "low", "resolution_source": "literal", "return_policy": "maybe_returns", "source_artifact": "hook_event_emitters", "source_graph": "hook"}
-Selected neighboring relationships:
-- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8
-- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8
-- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\gridinv\plugins\gridinvui\sh_plugin.lua:8
-- outgoing dispatches_to -> hook_listener listen CreateInventoryPanel @ plugins\_disabled\simpleinv\plugins\listinvui\sh_plugin.lua:8
-- outgoing emits -> hook_event CreateInventoryPanel
-- outgoing runs_in_realm -> realm shared
-- outgoing runs_in_realm -> realm shared
-- incoming contains_emitter -> file gamemode\core\libs\sh_inventory.lua
+Plugin/subsystem topology summary: observer
+Member node counts by type: {'plugin': 1}
+Relationship counts: {'owns_file': 1, 'owns_timer_operation': 1}
+Hot members:
+- plugin observer degree=2
+Architectural use: retrieve this when analyzing coupling, responsibilities, runtime load, networking, timers, hooks, or refactoring boundaries for observer.
 ```

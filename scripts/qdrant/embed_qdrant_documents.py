@@ -4,17 +4,16 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import sys
+import math
+import os
+import random
 from pathlib import Path
 from typing import Any, Iterable
 
 
 DEFAULT_MODEL = "nomic-ai/nomic-embed-text-v1.5"
 FALLBACK_MODEL = "BAAI/bge-small-en-v1.5"
-
-
-def sha256_text(text: str) -> str:
-    return hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()
+HASH_MODEL_NAME = "signalis-hash-embedding-v1"
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -28,27 +27,28 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
             if not line:
                 continue
             try:
-                item = json.loads(line)
+                value = json.loads(line)
             except json.JSONDecodeError as exc:
                 raise ValueError(f"Invalid JSONL at {path}:{line_no}: {exc}") from exc
-            if isinstance(item, dict):
-                rows.append(item)
-
+            if isinstance(value, dict):
+                rows.append(value)
     return rows
 
 
-def write_jsonl_atomic(path: Path, rows: Iterable[dict[str, Any]]) -> int:
+def write_jsonl(path: Path, rows: Iterable[dict[str, Any]]) -> int:
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp_path = path.with_name(path.name + ".tmp")
-
+    tmp = path.with_name(path.name + ".tmp")
     count = 0
-    with tmp_path.open("w", encoding="utf-8") as f:
+    with tmp.open("w", encoding="utf-8") as f:
         for row in rows:
             f.write(json.dumps(row, ensure_ascii=False) + "\n")
             count += 1
-
-    tmp_path.replace(path)
+    tmp.replace(path)
     return count
+
+
+def sha256_text(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8", errors="ignore")).hexdigest()
 
 
 def get_doc_text(doc: dict[str, Any]) -> str:
@@ -62,74 +62,188 @@ def get_doc_text(doc: dict[str, Any]) -> str:
     return f"{title}\n\n{json.dumps(metadata, ensure_ascii=False)}".strip()
 
 
-def format_for_model(text: str, model_name: str) -> str:
+def nomic_prefix(text: str, model_name: str) -> str:
     if "nomic" in model_name.lower() and not text.startswith("search_document:"):
-        return f"search_document: {text}"
+        return "search_document: " + text
     return text
 
 
-def load_model(model_name: str, device: str, trust_remote_code: bool):
+def tokenize(text: str) -> list[str]:
+    # Lightweight tokenizer good enough for deterministic fallback retrieval.
+    chars = []
+    for ch in text.lower():
+        if ch.isalnum() or ch in "_:/.-":
+            chars.append(ch)
+        else:
+            chars.append(" ")
+    return [tok for tok in "".join(chars).split() if tok]
+
+
+def hash_embedding(text: str, dim: int = 384) -> list[float]:
+    # Signed hashing trick with L2 normalization.
+    vec = [0.0] * dim
+    tokens = tokenize(text)
+
+    # Include word unigrams and adjacent bigrams.
+    features = tokens[:]
+    features.extend(f"{a} {b}" for a, b in zip(tokens, tokens[1:]))
+
+    for feature in features:
+        digest = hashlib.blake2b(feature.encode("utf-8", errors="ignore"), digest_size=8).digest()
+        raw = int.from_bytes(digest, "little", signed=False)
+        idx = raw % dim
+        sign = 1.0 if ((raw >> 63) & 1) == 0 else -1.0
+        vec[idx] += sign
+
+    norm = math.sqrt(sum(x * x for x in vec))
+    if norm <= 0:
+        vec[0] = 1.0
+        return vec
+
+    return [x / norm for x in vec]
+
+
+def load_sentence_model(model_name: str, device: str, trust_remote_code: bool):
     from sentence_transformers import SentenceTransformer
 
     kwargs: dict[str, Any] = {"device": device}
-    if trust_remote_code:
+    if trust_remote_code or "nomic" in model_name.lower():
         kwargs["trust_remote_code"] = True
-
     return SentenceTransformer(model_name, **kwargs)
 
 
-def embed_with_model(
+def rows_from_hash(docs: list[dict[str, Any]], dim: int, limit: int | None) -> list[dict[str, Any]]:
+    selected = docs[:limit] if limit else docs
+    rows: list[dict[str, Any]] = []
+
+    for i, doc in enumerate(selected, 1):
+        text = get_doc_text(doc)
+        vec = hash_embedding(text, dim=dim)
+        rows.append({
+            "id": doc.get("id"),
+            "doc_type": doc.get("doc_type") or doc.get("type") or "unknown",
+            "title": doc.get("title"),
+            "metadata": doc.get("metadata", {}),
+            "content_hash": sha256_text(text),
+            "embedding_dim": len(vec),
+            "embedding_model": HASH_MODEL_NAME,
+            "embedding": vec,
+            "text": text,
+        })
+        if i % 100 == 0:
+            print(f"[INFO] Hash embedded {i}/{len(selected)}")
+
+    return rows
+
+
+def rows_from_sentence_model(
     docs: list[dict[str, Any]],
     model_name: str,
     device: str,
     batch_size: int,
     trust_remote_code: bool,
+    limit: int | None,
 ) -> list[dict[str, Any]]:
-    model = load_model(model_name, device=device, trust_remote_code=trust_remote_code)
-
-    texts = [get_doc_text(doc) for doc in docs]
-    encoded_texts = [format_for_model(text, model_name) for text in texts]
-
-    vectors = model.encode(
-        encoded_texts,
-        batch_size=batch_size,
-        normalize_embeddings=True,
-        show_progress_bar=True,
-    )
+    selected = docs[:limit] if limit else docs
+    model = load_sentence_model(model_name, device=device, trust_remote_code=trust_remote_code)
 
     rows: list[dict[str, Any]] = []
-    for doc, text, vector in zip(docs, texts, vectors):
-        vec = vector.tolist() if hasattr(vector, "tolist") else list(vector)
-        rows.append(
-            {
+    for start in range(0, len(selected), batch_size):
+        batch = selected[start:start + batch_size]
+        texts = [get_doc_text(doc) for doc in batch]
+        inputs = [nomic_prefix(text, model_name) for text in texts]
+
+        print(f"[INFO] Encoding batch {start + 1}-{start + len(batch)} / {len(selected)}")
+        vectors = model.encode(
+            inputs,
+            batch_size=batch_size,
+            normalize_embeddings=True,
+            show_progress_bar=False,
+        )
+
+        for doc, text, vector in zip(batch, texts, vectors):
+            vec = vector.tolist() if hasattr(vector, "tolist") else list(vector)
+            rows.append({
                 "id": doc.get("id"),
                 "doc_type": doc.get("doc_type") or doc.get("type") or "unknown",
                 "title": doc.get("title"),
                 "metadata": doc.get("metadata", {}),
                 "content_hash": sha256_text(text),
                 "embedding_dim": len(vec),
+                "embedding_model": model_name,
                 "embedding": vec,
                 "text": text,
-            }
-        )
+            })
 
     return rows
 
 
+def write_summary(
+    path: Path,
+    *,
+    input_path: Path,
+    output_path: Path,
+    model_requested: str,
+    model_used: str,
+    fallback_reason: str,
+    docs_loaded: int,
+    rows_written: int,
+    dim: int,
+) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(
+        f"""# Qdrant Embedding Summary
+
+Model requested: `{model_requested}`
+Model used: `{model_used}`
+
+## Files
+
+Input:
+
+```text
+{input_path}
+```
+
+Output:
+
+```text
+{output_path}
+```
+
+## Results
+
+- Documents loaded: **{docs_loaded}**
+- Embeddings written: **{rows_written}**
+- Embedding dimension: **{dim}**
+- Output exists: **{output_path.exists()}**
+- Output size: **{output_path.stat().st_size if output_path.exists() else 0} bytes**
+
+## Fallback reason
+
+```text
+{fallback_reason or "none"}
+```
+""",
+        encoding="utf-8",
+    )
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Embed SIGNALIS Qdrant documents. Writes qdrant_embeddings.jsonl by default."
+        description="Embed SIGNALIS Qdrant documents with deterministic no-model fallback."
     )
     parser.add_argument("--workspace", required=True, type=Path)
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--fallback-model", default=FALLBACK_MODEL)
     parser.add_argument("--device", default="cpu")
-    parser.add_argument("--batch-size", type=int, default=8)
+    parser.add_argument("--batch-size", type=int, default=4)
+    parser.add_argument("--limit", type=int, default=None)
     parser.add_argument("--trust-remote-code", action="store_true")
-    parser.add_argument("--no-fallback", action="store_true")
-    parser.add_argument("--dry-run", action="store_true", help="Embed but do not write output files.")
-    # Backward compatibility: accepted but no longer needed.
-    parser.add_argument("--write", action="store_true", help="Deprecated; writing is now default.")
+    parser.add_argument("--hash-only", action="store_true", help="Skip sentence-transformers and use deterministic fallback.")
+    parser.add_argument("--hash-dim", type=int, default=384)
+    # Compatibility. Writing is always enabled.
+    parser.add_argument("--write", action="store_true")
     args = parser.parse_args()
 
     workspace = args.workspace.resolve()
@@ -143,87 +257,67 @@ def main() -> int:
 
     docs = load_jsonl(input_path)
     if not docs:
-        raise ValueError(f"No documents found in {input_path}")
+        raise RuntimeError(f"No documents loaded from {input_path}")
 
-    used_model = args.model
-    fallback_used = False
-    primary_error = "none"
+    model_used = args.model
+    fallback_reason = ""
 
-    try:
-        rows = embed_with_model(
-            docs=docs,
-            model_name=args.model,
-            device=args.device,
-            batch_size=args.batch_size,
-            trust_remote_code=args.trust_remote_code,
-        )
-    except Exception as exc:
-        primary_error = repr(exc)
+    if args.hash_only:
+        fallback_reason = "--hash-only requested"
+        model_used = HASH_MODEL_NAME
+        rows = rows_from_hash(docs, dim=args.hash_dim, limit=args.limit)
+    else:
+        try:
+            rows = rows_from_sentence_model(
+                docs,
+                model_name=args.model,
+                device=args.device,
+                batch_size=args.batch_size,
+                trust_remote_code=True,
+                limit=args.limit,
+            )
+        except Exception as primary_exc:
+            fallback_reason = f"Primary model failed: {primary_exc!r}"
+            print(f"[WARN] {fallback_reason}")
+            try:
+                model_used = args.fallback_model
+                rows = rows_from_sentence_model(
+                    docs,
+                    model_name=args.fallback_model,
+                    device=args.device,
+                    batch_size=args.batch_size,
+                    trust_remote_code=False,
+                    limit=args.limit,
+                )
+            except Exception as fallback_exc:
+                fallback_reason += f"\nFallback model failed: {fallback_exc!r}\nUsing deterministic hash embeddings."
+                print(f"[WARN] Fallback model failed: {fallback_exc!r}")
+                print("[INFO] Using deterministic hash embeddings.")
+                model_used = HASH_MODEL_NAME
+                rows = rows_from_hash(docs, dim=args.hash_dim, limit=args.limit)
 
-        if args.no_fallback:
-            raise
+    if not rows:
+        raise RuntimeError("Embedding produced 0 rows.")
 
-        print(f"[WARN] Primary model failed: {args.model}")
-        print(f"[WARN] Error: {exc}")
-        print(f"[INFO] Trying fallback model: {args.fallback_model}")
+    written = write_jsonl(output_path, rows)
+    dim = int(rows[0].get("embedding_dim") or 0)
 
-        used_model = args.fallback_model
-        fallback_used = True
-        rows = embed_with_model(
-            docs=docs,
-            model_name=args.fallback_model,
-            device=args.device,
-            batch_size=args.batch_size,
-            trust_remote_code=False,
-        )
+    write_summary(
+        summary_path,
+        input_path=input_path,
+        output_path=output_path,
+        model_requested=args.model,
+        model_used=model_used,
+        fallback_reason=fallback_reason,
+        docs_loaded=len(docs),
+        rows_written=written,
+        dim=dim,
+    )
 
-    written = 0
-    if not args.dry_run:
-        written = write_jsonl_atomic(output_path, rows)
-
-    summary = f"""# Qdrant Embedding Summary
-
-Model requested: `{args.model}`
-Model used: `{used_model}`
-Device: `{args.device}`
-Batch size: `{args.batch_size}`
-Trust remote code requested: `{args.trust_remote_code}`
-Fallback used: `{fallback_used}`
-Dry run: `{args.dry_run}`
-
-## Results
-
-- Input documents: **{len(docs)}**
-- Embeddings produced: **{len(rows)}**
-- Embeddings written: **{written}**
-- Embedding dimension: **{rows[0]["embedding_dim"] if rows else "n/a"}**
-
-## Outputs
-
-```text
-{output_path}
-```
-
-## Primary model error
-
-```text
-{primary_error}
-```
-"""
-
-    if not args.dry_run:
-        summary_path.parent.mkdir(parents=True, exist_ok=True)
-        summary_path.write_text(summary, encoding="utf-8")
-
-    print(summary)
-
-    if not args.dry_run:
-        if not output_path.exists():
-            raise FileNotFoundError(f"Expected output file was not created: {output_path}")
-        if output_path.stat().st_size <= 0:
-            raise RuntimeError(f"Output file exists but is empty: {output_path}")
-        print(f"[OK] Created embeddings file: {output_path}")
-        print(f"[OK] Size: {output_path.stat().st_size} bytes")
+    print(f"[OK] Wrote embeddings: {output_path}")
+    print(f"[OK] Rows: {written}")
+    print(f"[OK] Dimension: {dim}")
+    print(f"[OK] Summary: {summary_path}")
 
     return 0
 

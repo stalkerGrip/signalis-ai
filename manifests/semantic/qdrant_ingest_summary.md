@@ -6,18 +6,18 @@ Input: `E:\signalis_ai\manifests\semantic\qdrant_embeddings.jsonl`
 
 ## Results
 
-- Input embeddings: **1079**
-- Vector size: **768**
-- Collection action: **created**
-- Upserted points: **1079**
+- Input embeddings: **1161**
+- Vector size: **384**
+- Collection action: **recreated**
+- Upserted points: **1161**
 - Dry run: **False**
 
 ## Document types
 
 - `runtime_node`: **900**
 - `plugin_topology`: **95**
+- `doctrine`: **86**
 - `file_topology`: **80**
-- `doctrine`: **4**
 
 ## Next
 

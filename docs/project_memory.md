@@ -214,6 +214,10 @@ Default ML pipeline should assume CPU inference.
 BGE reranker should use use_fp16=False by default.
 Do not prioritize ROCm until ranking quality is proven useful.
 
+Canonical Python runtime: Python 3.11.
+Python 3.12 caused SentenceTransformer/BGE model loading hangs.
+Use .venv311 for Qdrant embeddings, ingestion, retrieval, reranking, and investigation pipeline commands.
+
 ## Investigation Pipeline Lessons
 
 Validated pipeline lesson:
