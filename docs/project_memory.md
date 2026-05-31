@@ -223,6 +223,20 @@ Canonical embedding dimension: 384
 Canonical Python runtime: Python 3.11
 Nomic 768-dim defaults are deprecated for this pipeline unless the Qdrant collection is rebuilt with Nomic.
 
+## Installed Investigation Tooling
+
+Installed for Runtime Chain Builder V4 work:
+
+```text
+networkx
+pydantic
+jsonschema
+pytest
+duckdb
+pyinstrument
+ripgrep
+```
+
 ## Investigation Pipeline Lessons
 
 Validated pipeline lesson:
