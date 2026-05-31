@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-31T13:44:58`
+Generated: `2026-05-31T16:17:44`
 
 ## Workspace
 
@@ -18,6 +18,7 @@ docs/
   human_subsystems/
   runtime/
     runtime_chains/
+  setup/
   subsystems/
 embeddings/
 graphs/
@@ -53,6 +54,7 @@ scripts/
   embeddings/
   extraction/
   graphs/
+  investigation/
   manifests/
   normalization/
   profiling/
@@ -75,32 +77,42 @@ temp/
 
 ### Qdrant Files
 
-- `manifests/semantic/qdrant_documents.jsonl` (2185.2 KB)
+- `manifests/semantic/qdrant_documents.jsonl` (2411.3 KB)
 - `manifests/semantic/qdrant_documents_summary.md` (2.0 KB)
-- `manifests/semantic/qdrant_embedding_summary.md` (0.3 KB)
-- `manifests/semantic/qdrant_embeddings.jsonl` (20126.6 KB)
+- `manifests/semantic/qdrant_embedding_summary.md` (0.5 KB)
+- `manifests/semantic/qdrant_embeddings.jsonl` (12199.8 KB)
 - `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_query_results.md` (46.9 KB)
+- `manifests/semantic/qdrant_query_results.md` (71.2 KB)
+- `manifests/semantic/qdrant_query_results_deduped.md` (41.7 KB)
+- `manifests/semantic/qdrant_query_results_deduped.summary.md` (0.9 KB)
 - `scripts/qdrant/`
+- `scripts/qdrant/add_runtime_chains_to_qdrant_documents.py` (3.6 KB)
 - `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
-- `scripts/qdrant/embed_qdrant_documents.py` (2.5 KB)
+- `scripts/qdrant/check_runtime_chain_in_qdrant_docs.py` (3.5 KB)
+- `scripts/qdrant/deduplicate_qdrant_results.py` (5.3 KB)
+- `scripts/qdrant/embed_qdrant_documents.py` (10.1 KB)
 - `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
-- `scripts/qdrant/query_qdrant.py` (8.9 KB)
+- `scripts/qdrant/query_qdrant.py` (13.3 KB)
 - `subsystem_docs/qdrant_plan.md` (3.6 KB)
 
 ### Investigation Files
 
+- `investigations/context_pack.md` (26.7 KB)
+- `investigations/context_pack.summary.md` (1.3 KB)
+- `investigations/context_pack_deduped.md` (8.6 KB)
 - `investigations/generated/`
 - `investigations/generated/vendor_stale_price_label_after_purchase.json` (1.7 KB)
 - `investigations/generated/vendor_stale_price_label_after_purchase.md` (15.5 KB)
 - `investigations/generated/vendor_stale_price_label_after_purchase.raw.txt` (46.9 KB)
 - `investigations/inventory_desync_context_pack.md` (105.7 KB)
-- `investigations/inventory_desync_phase1.md` (99.7 KB)
+- `investigations/inventory_desync_phase1.md` (99.6 KB)
 - `investigations/paths_characterloaded_to_inventory_panel_status.md` (7.6 KB)
 - `investigations/paths_v2_characterloaded_to_inventory_panel_status.md` (10.3 KB)
 - `investigations/templates/`
 - `investigations/templates/investigation.md` (0.0 KB)
 - `investigations/validation/`
+- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.json` (284.4 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.md` (18.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.md` (39.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.json` (164.2 KB)
@@ -147,14 +159,19 @@ temp/
 ### Qdrant Scripts
 
 - `scripts/qdrant/__init__.py` (0.0 KB)
+- `scripts/qdrant/add_runtime_chains_to_qdrant_documents.py` (3.6 KB)
 - `scripts/qdrant/build_evidence_graph.py` (17.8 KB)
+- `scripts/qdrant/build_investigation_context_pack.py` (10.0 KB)
 - `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
 - `scripts/qdrant/build_runtime_chain_evidence.py` (25.3 KB)
 - `scripts/qdrant/build_runtime_chains.py` (21.4 KB)
 - `scripts/qdrant/build_targeted_validation_report.py` (15.3 KB)
+- `scripts/qdrant/check_embedding_outputs.py` (1.2 KB)
+- `scripts/qdrant/check_runtime_chain_in_qdrant_docs.py` (3.5 KB)
 - `scripts/qdrant/context_pack.py` (3.9 KB)
+- `scripts/qdrant/deduplicate_qdrant_results.py` (5.3 KB)
 - `scripts/qdrant/deduplicate_validation_fragments.py` (14.5 KB)
-- `scripts/qdrant/embed_qdrant_documents.py` (2.5 KB)
+- `scripts/qdrant/embed_qdrant_documents.py` (10.1 KB)
 - `scripts/qdrant/evaluate_retrieval.py` (17.2 KB)
 - `scripts/qdrant/extract_runtime_facts.py` (15.4 KB)
 - `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
@@ -162,8 +179,9 @@ temp/
 - `scripts/qdrant/patch_vendor_purchase_validation_targets.py` (6.8 KB)
 - `scripts/qdrant/path_reconstruction.py` (7.9 KB)
 - `scripts/qdrant/path_reconstruction_v2.py` (11.4 KB)
+- `scripts/qdrant/promote_runtime_chain.py` (9.8 KB)
 - `scripts/qdrant/promote_vendor_purchase_chain_doc.py` (3.8 KB)
-- `scripts/qdrant/query_qdrant.py` (8.9 KB)
+- `scripts/qdrant/query_qdrant.py` (13.3 KB)
 - `scripts/qdrant/rerank_results.py` (11.4 KB)
 - `scripts/qdrant/retrieval_intent.py` (3.5 KB)
 - `scripts/qdrant/score_validation_report.py` (0.0 KB)
@@ -178,6 +196,7 @@ temp/
 
 ## Important Matched Files
 
+- `investigations/context_pack.summary.md` (1.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)
@@ -193,12 +212,15 @@ temp/
 - `manifests/normalized/runtime_topology_nodes.json` (2566.3 KB)
 - `manifests/normalized/runtime_topology_summary.md` (4.4 KB)
 - `manifests/normalized/timer_graph_summary.md` (16.5 KB)
-- `manifests/semantic/qdrant_documents.jsonl` (2185.2 KB)
+- `manifests/semantic/qdrant_documents.jsonl` (2411.3 KB)
 - `manifests/semantic/qdrant_documents_summary.md` (2.0 KB)
-- `manifests/semantic/qdrant_embedding_summary.md` (0.3 KB)
-- `manifests/semantic/qdrant_embeddings.jsonl` (20126.6 KB)
+- `manifests/semantic/qdrant_embedding_summary.md` (0.5 KB)
+- `manifests/semantic/qdrant_embeddings.jsonl` (12199.8 KB)
 - `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_query_results.md` (46.9 KB)
+- `manifests/semantic/qdrant_query_results.md` (71.2 KB)
+- `manifests/semantic/qdrant_query_results_deduped.md` (41.7 KB)
+- `manifests/semantic/qdrant_query_results_deduped.summary.md` (0.9 KB)
+- `scripts/qdrant/build_investigation_context_pack.py` (10.0 KB)
 - `scripts/qdrant/context_pack.py` (3.9 KB)
 - `scripts/qdrant/rerank_results.py` (11.4 KB)
 - `scripts/qdrant/retrieval_intent.py` (3.5 KB)

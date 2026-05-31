@@ -245,3 +245,56 @@ gridinv sv_transfer
 → grid panel InventoryItemDataChanged
 → populateItems
 ```
+## Future Orchestration Layer
+
+SIGNALIS AI is not currently an autonomous agent system.
+
+Future architecture may add two orchestration roles:
+
+- Planner
+- Executor
+
+Planner responsibility:
+
+Question / investigation target
+→ choose retrieval strategy
+→ choose validation targets
+→ choose chain reconstruction strategy
+→ decide whether more evidence is needed
+→ produce investigation plan
+
+Executor responsibility:
+
+Run deterministic pipeline steps only:
+
+- Qdrant retrieval
+- context pack generation
+- source validation
+- evidence deduplication
+- evidence ranking
+- runtime chain reconstruction
+- synthesis generation
+- promotion candidate generation
+
+Important constraint:
+
+Planner and Executor must not define truth.
+
+They only orchestrate deterministic tools over:
+
+1. normalized manifests
+2. runtime topology
+3. doctrine docs
+4. subsystem docs
+5. validated source evidence
+6. human validation
+
+Planner/Executor are pipeline control layers, not autonomous code editors and not architecture authorities.
+
+Current priority remains:
+
+Evidence Ranking
+→ Runtime Chain Reconstruction
+→ Investigation Synthesis
+
+Planner/Executor should be implemented only after runtime chain reconstruction is reliable.
