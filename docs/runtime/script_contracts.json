@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 79,
+  "scripts_checked": 85,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
-      "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8292.19it/s]"
+      "help_ok": false,
+      "help": "TIMEOUT while running --help"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -147,6 +147,12 @@
       "help": "usage: runtime_chain_builder_v4.py [-h] --title TITLE --pathfinder PATHFINDER\n                                   [--validated-evidence VALIDATED_EVIDENCE]\n                                   [--runtime-facts RUNTIME_FACTS]\n                                   [--targeted-validation TARGETED_VALIDATION]\n                                   --out-json OUT_JSON --out-md OUT_MD\n                                   --out-targeted-validation\n                                   OUT_TARGETED_VALIDATION\n\nRuntime Chain Builder V4: merge topology pathfinder with validated evidence.\n\noptions:\n  -h, --help            show this help message and exit\n  --title TITLE\n  --pathfinder PATHFINDER\n  --validated-evidence VALIDATED_EVIDENCE\n  --runtime-facts RUNTIME_FACTS\n  --targeted-validation TARGETED_VALIDATION\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --out-targeted-validation OUT_TARGETED_VALIDATION"
     },
     {
+      "path": "scripts/investigation/runtime_chain_builder_v5.py",
+      "module": "scripts.investigation.runtime_chain_builder_v5",
+      "help_ok": true,
+      "help": "usage: runtime_chain_builder_v5.py [-h] --title TITLE --runtime-facts\n                                   RUNTIME_FACTS --runtime-fact-topology\n                                   RUNTIME_FACT_TOPOLOGY --runtime-topology\n                                   RUNTIME_TOPOLOGY\n                                   [--stage-facts STAGE_FACTS] --out-json\n                                   OUT_JSON --out-md OUT_MD\n                                   [--max-depth MAX_DEPTH]\n\nBuild generic runtime chain candidate from runtime facts and fact-topology\nbindings.\n\noptions:\n  -h, --help            show this help message and exit\n  --title TITLE\n  --runtime-facts RUNTIME_FACTS\n  --runtime-fact-topology RUNTIME_FACT_TOPOLOGY\n  --runtime-topology RUNTIME_TOPOLOGY\n  --stage-facts STAGE_FACTS\n                        Comma-separated ordered fact names to build chain\n                        links from.\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --max-depth MAX_DEPTH"
+    },
+    {
       "path": "scripts/investigation/runtime_chain_candidate.py",
       "module": "scripts.investigation.runtime_chain_candidate",
       "help_ok": true,
@@ -223,6 +229,36 @@
       "module": "scripts.investigation.runtime_chain_step_orderer",
       "help_ok": true,
       "help": "usage: runtime_chain_step_orderer.py [-h] --steps STEPS --out-json OUT_JSON\n                                     --out-md OUT_MD\n\nOrder runtime-chain causal steps into propagation sequence.\n\noptions:\n  -h, --help           show this help message and exit\n  --steps STEPS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_fact_builder.py",
+      "module": "scripts.investigation.runtime_fact_builder",
+      "help_ok": true,
+      "help": "usage: runtime_fact_builder.py [-h] --source-validation SOURCE_VALIDATION\n                               --out-json OUT_JSON --out-md OUT_MD\n\nBuild deduplicated normalized runtime facts from targeted source validation\noutput.\n\noptions:\n  -h, --help            show this help message and exit\n  --source-validation SOURCE_VALIDATION\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_fact_graph.py",
+      "module": "scripts.investigation.runtime_fact_graph",
+      "help_ok": true,
+      "help": "usage: runtime_fact_graph.py [-h] --runtime-facts RUNTIME_FACTS --out-json\n                             OUT_JSON --out-md OUT_MD\n\nBuild a node-only runtime fact graph from normalized runtime facts.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-facts RUNTIME_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_fact_topology_mapper.py",
+      "module": "scripts.investigation.runtime_fact_topology_mapper",
+      "help_ok": true,
+      "help": "usage: runtime_fact_topology_mapper.py [-h] --runtime-fact-graph\n                                       RUNTIME_FACT_GRAPH --runtime-topology\n                                       RUNTIME_TOPOLOGY --out-json OUT_JSON\n                                       --out-md OUT_MD\n                                       [--max-matches MAX_MATCHES]\n\nMap runtime fact graph nodes to runtime topology nodes with stricter quality\nscoring.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-fact-graph RUNTIME_FACT_GRAPH\n  --runtime-topology RUNTIME_TOPOLOGY\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --max-matches MAX_MATCHES"
+    },
+    {
+      "path": "scripts/investigation/runtime_fact_topology_regression.py",
+      "module": "scripts.investigation.runtime_fact_topology_regression",
+      "help_ok": true,
+      "help": "usage: runtime_fact_topology_regression.py [-h] --files FILES [FILES ...]\n                                           --out-md OUT_MD\n\nRegression checks for runtime fact topology mapping artifacts.\n\noptions:\n  -h, --help            show this help message and exit\n  --files FILES [FILES ...]\n                        runtime_fact_topology.v3 JSON files to check.\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_topology_node_probe.py",
+      "module": "scripts.investigation.runtime_topology_node_probe",
+      "help_ok": true,
+      "help": "usage: runtime_topology_node_probe.py [-h] --runtime-topology RUNTIME_TOPOLOGY\n                                      --node-id NODE_ID --out-md OUT_MD\n                                      [--max-edges MAX_EDGES]\n\nInspect incoming/outgoing edges around a runtime topology node.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-topology RUNTIME_TOPOLOGY\n  --node-id NODE_ID\n  --out-md OUT_MD\n  --max-edges MAX_EDGES"
     },
     {
       "path": "scripts/normalization/build_hook_event_bus.py",

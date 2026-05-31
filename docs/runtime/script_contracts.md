@@ -17,24 +17,17 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `79`
+- Scripts checked: `85`
 
 ## scripts/diagnostics
 
 ### `scripts.diagnostics.test_embeddings`
 
 - Path: `scripts/diagnostics/test_embeddings.py`
-- Help status: `OK`
+- Help status: `NO_HELP_OR_ERROR`
 
 ```text
-Loading embedding model...
-Generating embedding...
-Vector size: 384
-Success.
-Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-
-Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8292.19it/s]
+TIMEOUT while running --help
 ```
 
 ## scripts/extraction
@@ -1740,6 +1733,37 @@ options:
   --out-targeted-validation OUT_TARGETED_VALIDATION
 ```
 
+### `scripts.investigation.runtime_chain_builder_v5`
+
+- Path: `scripts/investigation/runtime_chain_builder_v5.py`
+- Help status: `OK`
+
+```text
+usage: runtime_chain_builder_v5.py [-h] --title TITLE --runtime-facts
+                                   RUNTIME_FACTS --runtime-fact-topology
+                                   RUNTIME_FACT_TOPOLOGY --runtime-topology
+                                   RUNTIME_TOPOLOGY
+                                   [--stage-facts STAGE_FACTS] --out-json
+                                   OUT_JSON --out-md OUT_MD
+                                   [--max-depth MAX_DEPTH]
+
+Build generic runtime chain candidate from runtime facts and fact-topology
+bindings.
+
+options:
+  -h, --help            show this help message and exit
+  --title TITLE
+  --runtime-facts RUNTIME_FACTS
+  --runtime-fact-topology RUNTIME_FACT_TOPOLOGY
+  --runtime-topology RUNTIME_TOPOLOGY
+  --stage-facts STAGE_FACTS
+                        Comma-separated ordered fact names to build chain
+                        links from.
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --max-depth MAX_DEPTH
+```
+
 ### `scripts.investigation.runtime_chain_candidate`
 
 - Path: `scripts/investigation/runtime_chain_candidate.py`
@@ -2003,6 +2027,105 @@ options:
   --steps STEPS
   --out-json OUT_JSON
   --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_fact_builder`
+
+- Path: `scripts/investigation/runtime_fact_builder.py`
+- Help status: `OK`
+
+```text
+usage: runtime_fact_builder.py [-h] --source-validation SOURCE_VALIDATION
+                               --out-json OUT_JSON --out-md OUT_MD
+
+Build deduplicated normalized runtime facts from targeted source validation
+output.
+
+options:
+  -h, --help            show this help message and exit
+  --source-validation SOURCE_VALIDATION
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_fact_graph`
+
+- Path: `scripts/investigation/runtime_fact_graph.py`
+- Help status: `OK`
+
+```text
+usage: runtime_fact_graph.py [-h] --runtime-facts RUNTIME_FACTS --out-json
+                             OUT_JSON --out-md OUT_MD
+
+Build a node-only runtime fact graph from normalized runtime facts.
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-facts RUNTIME_FACTS
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_fact_topology_mapper`
+
+- Path: `scripts/investigation/runtime_fact_topology_mapper.py`
+- Help status: `OK`
+
+```text
+usage: runtime_fact_topology_mapper.py [-h] --runtime-fact-graph
+                                       RUNTIME_FACT_GRAPH --runtime-topology
+                                       RUNTIME_TOPOLOGY --out-json OUT_JSON
+                                       --out-md OUT_MD
+                                       [--max-matches MAX_MATCHES]
+
+Map runtime fact graph nodes to runtime topology nodes with stricter quality
+scoring.
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-fact-graph RUNTIME_FACT_GRAPH
+  --runtime-topology RUNTIME_TOPOLOGY
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --max-matches MAX_MATCHES
+```
+
+### `scripts.investigation.runtime_fact_topology_regression`
+
+- Path: `scripts/investigation/runtime_fact_topology_regression.py`
+- Help status: `OK`
+
+```text
+usage: runtime_fact_topology_regression.py [-h] --files FILES [FILES ...]
+                                           --out-md OUT_MD
+
+Regression checks for runtime fact topology mapping artifacts.
+
+options:
+  -h, --help            show this help message and exit
+  --files FILES [FILES ...]
+                        runtime_fact_topology.v3 JSON files to check.
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_topology_node_probe`
+
+- Path: `scripts/investigation/runtime_topology_node_probe.py`
+- Help status: `OK`
+
+```text
+usage: runtime_topology_node_probe.py [-h] --runtime-topology RUNTIME_TOPOLOGY
+                                      --node-id NODE_ID --out-md OUT_MD
+                                      [--max-edges MAX_EDGES]
+
+Inspect incoming/outgoing edges around a runtime topology node.
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-topology RUNTIME_TOPOLOGY
+  --node-id NODE_ID
+  --out-md OUT_MD
+  --max-edges MAX_EDGES
 ```
 
 ## scripts/normalization
