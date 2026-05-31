@@ -1,37 +1,95 @@
+# =====================================================
 # Python
+# =====================================================
+
 .venv/
 .venv312_backup/
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
+# =====================================================
 # VSCode
+# =====================================================
+
 .vscode/
 
-# Logs
-logs/
-
-# Temporary
-temp/
-
-# Embeddings
-embeddings/
-
-# Qdrant runtime
-qdrant_storage/
-
-# Generated outputs
-# Generated outputs
-
-manifests*/*
-
-investigations/context_pack*
-investigations/validation*
-qdrant_storage/
-
+# =====================================================
 # OS
+# =====================================================
+
 Thumbs.db
 .DS_Store
 
-# Local model cache
+# =====================================================
+# Runtime
+# =====================================================
+
+logs/
+temp/
+
+# =====================================================
+# Embeddings / Models
+# =====================================================
+
+embeddings/
 models/
 hf_cache/
+
+# =====================================================
+# Qdrant Runtime
+# =====================================================
+
+qdrant_storage/
+
+# =====================================================
+# Generated Manifests
+# =====================================================
+
+manifests/character_inventory/**
+manifests/commands/**
+manifests/custom_hooks/**
+manifests/derma/**
+manifests/entities/**
+manifests/globals/**
+manifests/hooks/**
+manifests/items/**
+manifests/networking/**
+manifests/persistence/**
+manifests/plugins/**
+manifests/registries/**
+manifests/timers/**
+manifests/semantic/qdrant_embeddings.jsonl
+manifests/semantic/qdrant_query_results*
+manifests/semantic/qdrant_embedding_*
+manifests/semantic/qdrant_ingest_*
+
+# =====================================================
+# Investigation Outputs
+# =====================================================
+
+investigations/context_pack*
+investigations/generated/**
+investigations/validation/**
+
+# =====================================================
+# Reports
+# =====================================================
+
+reports/retrieval_eval/raw/**
+
+# =====================================================
+# Profiling
+# =====================================================
+
+*.prof
+*.profile
+.pyinstrument
+
+# =====================================================
+# Test / Scratch Outputs
+# =====================================================
+
+*.tmp
+*.bak
