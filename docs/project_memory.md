@@ -367,3 +367,30 @@ vendor purchase item data propagation chain
 Recovered step:
 
 item_metadata_client_apply
+
+## Pipeline-First Gameplay Rule
+
+Raw Lua gameplay fixes are deferred until the Investigation Orchestration Pipeline is reliable.
+
+Known gameplay bugs should be used as benchmark targets for:
+
+Retrieval
+→ Source Validation
+→ Evidence Ranking
+→ Runtime Chain Reconstruction
+→ Targeted Validation
+→ Promotion
+
+Do not patch gameplay logic simply because a likely source cause is found.
+
+Allowed exceptions:
+
+- pipeline tooling fixes
+- source validation fixes
+- extraction fixes
+- normalization fixes
+- topology fixes
+- retrieval fixes
+- evidence ranking fixes
+- runtime chain fixes
+- investigation orchestration fixes
