@@ -7,13 +7,13 @@ Schema: `qdrant_documents.v1`
 - Runtime topology edges: **19459**
 
 ## Documents
-- Total documents: **1079**
+- Total documents: **1161**
 
 ## Document types
 - `runtime_node`: **900**
 - `plugin_topology`: **95**
+- `doctrine`: **86**
 - `file_topology`: **80**
-- `doctrine`: **4**
 
 ## Top node types
 - `hook_listener`: **999**
