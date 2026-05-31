@@ -23,7 +23,7 @@ E:\signalis_ai\manifests\semantic\qdrant_embeddings.jsonl
 - Embeddings written: **1161**
 - Embedding dimension: **384**
 - Output exists: **True**
-- Output size: **12492629 bytes**
+- Output size: **12492634 bytes**
 
 ## Fallback reason
 

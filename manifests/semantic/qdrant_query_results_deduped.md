@@ -10,6 +10,8 @@ Hash query: `False`
 
 ## Returned results: 10
 
+## Deduplicated results: 7
+
 ## Result 1
 
 - Score: **0.7658**
@@ -290,200 +292,6 @@ gridinv sv_transfer
 
 ## Result 4
 
-- Score: **0.6742**
-- Rerank score: `0.55096832`
-- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:vendor:+0.05', 'doctrine_required:+0.16', 'file_subsystem:vendor:+0.07', 'causal:hook.run:+0.18', 'causal:net.receive:+0.15', 'causal:setdata:+0.18', 'causal:sync:+0.10', 'causal:itemdatachanged:+0.18', 'causal:inventorydatachanged:+0.16', 'causal:nutinventoryadd:+0.16', 'causal:invdata:+0.18', 'state_mutation_or_sync:+0.14', 'realm_signal:+0.04']`
-- Source ID: `doc:doctrine:12de4edc15f10fd8`
-- Doc type: `doctrine`
-- Subsystem: `None`
-- File: `docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md`
-
-### Metadata
-
-```json
-{
-  "source_id": "doc:doctrine:12de4edc15f10fd8",
-  "doc_type": "doctrine",
-  "content_hash": "f1b278ff2489acc479deda4d868fb3f4ed58940bfdf116664f41897de82a7516",
-  "embedding_dim": 384,
-  "text": "e_inventory.lua`\n- Lines: `35-47`\n- Pattern: `Inventory:syncItemAdded`\n- Score: `120`\n\n### inventory_membership_receive_add\n\n- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`\n- Lines: `50-62`\n- Pattern: `net.Receive(\"nutInventoryAdd\")`\n- Score: `120`\n\n### inventory_membership_client_event\n\n- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`\n- Lines: `57-69`\n- Pattern: `hook.Run(\"InventoryItemAdded\")`\n- Score: `115`\n\n### vendor_metadata_cleanup\n\n- File: `plugins/gridinv/sv_transfer.lua`\n- Lines: `207-219`\n- Pattern: `item:setData(\"vendorSPrice\", nil`\n- Score: `150`\n\n### item_metadata_mutation\n\n- File: `gamemode/core/meta/item/sv_item.lua`\n- Lines: `154-166`\n- Pattern: `function ITEM:setData`\n- Score: `130`\n\n### item_metadata_network_sync_send\n\n- File: `gamemode/core/meta/item/sv_item.lua`\n- Lines: `165-177`\n- Pattern: `invData`\n- Score: `130`\n\n### item_metadata_network_receive\n\n- File: `gamemode/core/libs/item/cl_networking.lua`\n- Lines: `12-24`\n- Pattern: `netstream.Hook(\"invData\")`\n- Score: `140`\n\n### item_metadata_client_event\n\n- File: `gamemode/core/libs/item/cl_networking.lua`\n- Lines: `12-24`\n- Pattern: `hook.Run(\"ItemDataChanged\")`\n- Score: `140`\n\n### gridinv_item_ui_refresh\n\n- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`\n- Lines: `265-277`\n- Pattern: `PANEL:InventoryItemDataChanged`\n- Score: `125`\n\n### gridinv_panel_repopulate\n\n- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`\n- Lines: `261-273`\n- Pattern: `self:populateItems()`\n- Score: `120`\n\n### item_metadata_persistence\n\n- File: `gamemode/core/meta/item/sv_item.lua`\n- Lines: `154-166`\n- Pattern: `database/noSave behavior`\n- Score: `50`\n\n### inventory_level_data_not_item_data\n\n- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`\n- Lines: `1-9`\n- Pattern: `nutInventoryData / InventoryDataChanged`\n- Score: `30`\n\n## Promotion Notes",
-  "metadata": {
-    "chunk_index": 1,
-    "file": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md",
-    "node_type": "doctrine",
-    "source_id": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md"
-  },
-  "node_type": "doctrine",
-  "file": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md"
-}
-```
-
-### Text
-
-```text
-e_inventory.lua`
-- Lines: `35-47`
-- Pattern: `Inventory:syncItemAdded`
-- Score: `120`
-
-### inventory_membership_receive_add
-
-- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
-- Lines: `50-62`
-- Pattern: `net.Receive("nutInventoryAdd")`
-- Score: `120`
-
-### inventory_membership_client_event
-
-- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
-- Lines: `57-69`
-- Pattern: `hook.Run("InventoryItemAdded")`
-- Score: `115`
-
-### vendor_metadata_cleanup
-
-- File: `plugins/gridinv/sv_transfer.lua`
-- Lines: `207-219`
-- Pattern: `item:setData("vendorSPrice", nil`
-- Score: `150`
-
-### item_metadata_mutation
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Lines: `154-166`
-- Pattern: `function ITEM:setData`
-- Score: `130`
-
-### item_metadata_network_sync_send
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Lines: `165-177`
-- Pattern: `invData`
-- Score: `130`
-
-### item_metadata_network_receive
-
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Lines: `12-24`
-- Pattern: `netstream.Hook("invData")`
-- Score: `140`
-
-### item_metadata_client_event
-
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Lines: `12-24`
-- Pattern: `hook.Run("ItemDataChanged")`
-- Score: `140`
-
-### gridinv_item_ui_refresh
-
-- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
-- Lines: `265-277`
-- Pattern: `PANEL:InventoryItemDataChanged`
-- Score: `125`
-
-### gridinv_panel_repopulate
-
-- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
-- Lines: `261-273`
-- Pattern: `self:populateItems()`
-- Score: `120`
-
-### item_metadata_persistence
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Lines: `154-166`
-- Pattern: `database/noSave behavior`
-- Score: `50`
-
-### inventory_level_data_not_item_data
-
-- File: `gamemode/core/meta/inventory/cl_base_inventory....
-```
-
-## Result 5
-
-- Score: **0.6700**
-- Rerank score: `0.549490305`
-- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:vendor:+0.05', 'doctrine_required:+0.16', 'file_subsystem:vendor:+0.07', 'causal:hook.run:+0.18', 'causal:setdata:+0.18', 'causal:sync:+0.10', 'causal:itemdatachanged:+0.18', 'causal:invdata:+0.18', 'state_mutation_or_sync:+0.14', 'realm_signal:+0.04']`
-- Source ID: `doc:doctrine:d0daa5728e0b23ad`
-- Doc type: `doctrine`
-- Subsystem: `None`
-- File: `docs/runtime/runtime_chains/vendor_purchase_chain.md`
-
-### Metadata
-
-```json
-{
-  "source_id": "doc:doctrine:d0daa5728e0b23ad",
-  "doc_type": "doctrine",
-  "content_hash": "a347bbb95552b8cf1ce27476515490dd9d5c54dc83bbf9a9f038e44e46ac8208",
-  "embedding_dim": 384,
-  "text": "File: `plugins/gridinv/sv_transfer.lua`\n- Lines: `207-219`\n- Pattern: `item:setData(\"vendorSPrice\", nil`\n- Score: `150`\n\n### item_metadata_mutation\n\n- File: `gamemode/core/meta/item/sv_item.lua`\n- Lines: `154-166`\n- Pattern: `function ITEM:setData`\n- Score: `130`\n\n### item_metadata_network_sync_send\n\n- File: `gamemode/core/meta/item/sv_item.lua`\n- Lines: `165-177`\n- Pattern: `invData`\n- Score: `130`\n\n### item_metadata_network_receive\n\n- File: `gamemode/core/libs/item/cl_networking.lua`\n- Lines: `12-24`\n- Pattern: `netstream.Hook(\"invData\")`\n- Score: `140`\n\n### item_metadata_client_event\n\n- File: `gamemode/core/libs/item/cl_networking.lua`\n- Lines: `12-24`\n- Pattern: `hook.Run(\"ItemDataChanged\")`\n- Score: `140`\n\n### gridinv_item_ui_refresh\n\n- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`\n- Lines: `265-277`\n- Pattern: `PANEL:InventoryItemDataChanged`\n- Score: `125`\n\n### gridinv_panel_repopulate\n\n- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`\n- Lines: `261-273`\n- Pattern: `self:populateItems()`\n- Score: `120`",
-  "metadata": {
-    "chunk_index": 1,
-    "file": "docs/runtime/runtime_chains/vendor_purchase_chain.md",
-    "node_type": "doctrine",
-    "source_id": "docs/runtime/runtime_chains/vendor_purchase_chain.md"
-  },
-  "node_type": "doctrine",
-  "file": "docs/runtime/runtime_chains/vendor_purchase_chain.md"
-}
-```
-
-### Text
-
-```text
-File: `plugins/gridinv/sv_transfer.lua`
-- Lines: `207-219`
-- Pattern: `item:setData("vendorSPrice", nil`
-- Score: `150`
-
-### item_metadata_mutation
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Lines: `154-166`
-- Pattern: `function ITEM:setData`
-- Score: `130`
-
-### item_metadata_network_sync_send
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Lines: `165-177`
-- Pattern: `invData`
-- Score: `130`
-
-### item_metadata_network_receive
-
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Lines: `12-24`
-- Pattern: `netstream.Hook("invData")`
-- Score: `140`
-
-### item_metadata_client_event
-
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Lines: `12-24`
-- Pattern: `hook.Run("ItemDataChanged")`
-- Score: `140`
-
-### gridinv_item_ui_refresh
-
-- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
-- Lines: `265-277`
-- Pattern: `PANEL:InventoryItemDataChanged`
-- Score: `125`
-
-### gridinv_panel_repopulate
-
-- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
-- Lines: `261-273`
-- Pattern: `self:populateItems()`
-- Score: `120`
-```
-
-## Result 6
-
 - Score: **0.6962**
 - Rerank score: `0.541172009`
 - Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:vendor:+0.05', 'doctrine_required:+0.16', 'causal:hook.run:+0.18', 'causal:setdata:+0.18', 'causal:sync:+0.10', 'causal:receiver:+0.10', 'causal:receivers:+0.10', 'causal:itemdatachanged:+0.18', 'causal:inventorydatachanged:+0.16', 'causal:invdata:+0.18', 'causal:setuppanel:+0.10', 'state_mutation_or_sync:+0.14', 'realm_signal:+0.04']`
@@ -567,7 +375,7 @@ inventory is the player character inventory.
 vendorSellItem becomes true when oldInventory.vendor is valid and the destination inventory is the player character in...
 ```
 
-## Result 7
+## Result 5
 
 - Score: **0.6477**
 - Rerank score: `0.524203855`
@@ -678,7 +486,7 @@ networking should explicitly cross realm boundaries
 Client prediction is not currently well understood or intentionally used. Future architecture should avoi...
 ```
 
-## Result 8
+## Result 6
 
 - Score: **0.6652**
 - Rerank score: `0.466824774`
@@ -835,7 +643,7 @@ Inventory is a gameplay infrastructure subsystem.
 It acts as the central coordinatio...
 ```
 
-## Result 9
+## Result 7
 
 - Score: **0.6431**
 - Rerank score: `0.45607477999999996`
@@ -915,55 +723,4 @@ ryRemove`: 1
 - `netstream send inventoryOpen`: 1
 - `write WriteType nutInventoryAdd`: 1
 - `read ReadType nutInventoryDelete`: 1...
-```
-
-## Result 10
-
-- Score: **0.6546**
-- Rerank score: `0.4391183545`
-- Rerank reasons: `['doc_type:doctrine:+0.20', 'node_type:doctrine:+0.18', 'text_subsystem:inventory:+0.05', 'doctrine_required:+0.16', 'file_subsystem:vendor:+0.07', 'causal:inventorydatachanged:+0.16', 'state_mutation_or_sync:+0.14']`
-- Source ID: `doc:doctrine:d42fb74f3bcc2a8d`
-- Doc type: `doctrine`
-- Subsystem: `None`
-- File: `docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md`
-
-### Metadata
-
-```json
-{
-  "source_id": "doc:doctrine:d42fb74f3bcc2a8d",
-  "doc_type": "doctrine",
-  "content_hash": "3afd7465c0cecda1fb21cff962a07d8a88757b754fcbd28c09737d1211eb29ac",
-  "embedding_dim": 384,
-  "text": "re/meta/item/sv_item.lua`\n- Lines: `154-166`\n- Pattern: `database/noSave behavior`\n- Score: `50`\n\n### inventory_level_data_not_item_data\n\n- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`\n- Lines: `1-9`\n- Pattern: `nutInventoryData / InventoryDataChanged`\n- Score: `30`\n\n## Promotion Notes\n\nPromote this document to Qdrant/retrieval corpus only after the chain is source-validated and reviewed.\nDo not promote speculative or partial chains as authoritative subsystem knowledge.",
-  "metadata": {
-    "chunk_index": 2,
-    "file": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md",
-    "node_type": "doctrine",
-    "source_id": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md"
-  },
-  "node_type": "doctrine",
-  "file": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md"
-}
-```
-
-### Text
-
-```text
-re/meta/item/sv_item.lua`
-- Lines: `154-166`
-- Pattern: `database/noSave behavior`
-- Score: `50`
-
-### inventory_level_data_not_item_data
-
-- File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
-- Lines: `1-9`
-- Pattern: `nutInventoryData / InventoryDataChanged`
-- Score: `30`
-
-## Promotion Notes
-
-Promote this document to Qdrant/retrieval corpus only after the chain is source-validated and reviewed.
-Do not promote speculative or partial chains as authoritative subsystem knowledge.
 ```
