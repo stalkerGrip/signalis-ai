@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-31T16:59:30`
+Generated: `2026-05-31T19:22:54`
 
 ## Workspace
 
@@ -77,10 +77,12 @@ temp/
 
 ### Qdrant Files
 
-- `manifests/semantic/qdrant_documents.jsonl` (2411.3 KB)
+- `manifests/semantic/qdrant_documents.jsonl` (2451.4 KB)
 - `manifests/semantic/qdrant_documents_summary.md` (2.0 KB)
+- `manifests/semantic/qdrant_embedding_ingest_audit.md` (0.6 KB)
 - `manifests/semantic/qdrant_embedding_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_embeddings.jsonl` (12199.8 KB)
+- `manifests/semantic/qdrant_embeddings.jsonl` (12244.9 KB)
+- `manifests/semantic/qdrant_ingest_filtering_audit.md` (0.3 KB)
 - `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
 - `manifests/semantic/qdrant_query_results.md` (71.2 KB)
 - `manifests/semantic/qdrant_query_results_deduped.md` (41.7 KB)
@@ -111,17 +113,41 @@ temp/
 - `investigations/templates/`
 - `investigations/templates/investigation.md` (0.0 KB)
 - `investigations/validation/`
+- `investigations/validation/runtime_chain_graph_audit_v1.json` (3.5 KB)
+- `investigations/validation/runtime_chain_graph_audit_v1.md` (2.9 KB)
+- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.json` (3.6 KB)
+- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.md` (2.9 KB)
+- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.json` (63.2 KB)
+- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.md` (27.5 KB)
+- `investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json` (45.4 KB)
+- `investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.md` (7.5 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json` (10.1 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.md` (2.8 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json` (7.9 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.md` (1.5 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json` (2.5 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request_v2.json` (0.1 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.json` (4.3 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.md` (3.3 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.json` (2.2 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.md` (1.5 KB)
+- `investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.json` (37.3 KB)
+- `investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.md` (8.4 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.json` (284.4 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.md` (18.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.json` (197.4 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.md` (24.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json` (6.9 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.md` (5.6 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.json` (11.4 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.md` (9.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.md` (39.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_request_v1.json` (1.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.json` (0.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.md` (0.5 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v2.json` (7.7 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v2.md` (6.4 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.json` (164.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.md` (102.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json` (266.7 KB)
@@ -167,6 +193,8 @@ temp/
 
 - `scripts/qdrant/__init__.py` (0.0 KB)
 - `scripts/qdrant/add_runtime_chains_to_qdrant_documents.py` (3.6 KB)
+- `scripts/qdrant/audit_embedding_ingest_counts.py` (3.5 KB)
+- `scripts/qdrant/audit_ingest_filtering.py` (3.4 KB)
 - `scripts/qdrant/build_evidence_graph.py` (17.8 KB)
 - `scripts/qdrant/build_investigation_context_pack.py` (10.0 KB)
 - `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
@@ -204,7 +232,19 @@ temp/
 ## Important Matched Files
 
 - `investigations/context_pack.summary.md` (1.3 KB)
+- `investigations/validation/runtime_chain_graph_audit_v1.json` (3.5 KB)
+- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.json` (3.6 KB)
+- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.json` (63.2 KB)
+- `investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json` (45.4 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json` (10.1 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json` (7.9 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json` (2.5 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request_v2.json` (0.1 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.json` (4.3 KB)
+- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.json` (2.2 KB)
+- `investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.json` (37.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json` (6.9 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.json` (11.4 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)
@@ -220,10 +260,12 @@ temp/
 - `manifests/normalized/runtime_topology_nodes.json` (2566.3 KB)
 - `manifests/normalized/runtime_topology_summary.md` (4.4 KB)
 - `manifests/normalized/timer_graph_summary.md` (16.5 KB)
-- `manifests/semantic/qdrant_documents.jsonl` (2411.3 KB)
+- `manifests/semantic/qdrant_documents.jsonl` (2451.4 KB)
 - `manifests/semantic/qdrant_documents_summary.md` (2.0 KB)
+- `manifests/semantic/qdrant_embedding_ingest_audit.md` (0.6 KB)
 - `manifests/semantic/qdrant_embedding_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_embeddings.jsonl` (12199.8 KB)
+- `manifests/semantic/qdrant_embeddings.jsonl` (12244.9 KB)
+- `manifests/semantic/qdrant_ingest_filtering_audit.md` (0.3 KB)
 - `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
 - `manifests/semantic/qdrant_query_results.md` (71.2 KB)
 - `manifests/semantic/qdrant_query_results_deduped.md` (41.7 KB)

@@ -132,7 +132,15 @@ def find_source_file(source_roots: list[Path], rel_path: str) -> Path | None:
 
 
 def validate_target(source_roots: list[Path], target: dict[str, Any]) -> dict[str, Any]:
-    rel_path = target["path"]
+    rel_path = target.get("path") or target.get("file") or target.get("source_file")
+
+    if not rel_path:
+        return {
+            "target": target,
+            "found": False,
+            "error": "target missing path/file/source_file",
+            "matches": [],
+        }
     source_path = find_source_file(source_roots, rel_path)
 
     result: dict[str, Any] = {
