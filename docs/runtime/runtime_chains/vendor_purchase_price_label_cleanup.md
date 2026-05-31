@@ -1,245 +1,49 @@
-# Runtime Chain: vendor_purchase_price_label_cleanup
+# Runtime Chain: vendor purchase price label cleanup
 
-Confidence: `high`
+## Status
 
-## Question
+- Artifact type: promoted runtime chain
+- Source schema: `runtime_chain.v1`
+- Confidence: **high**
+- Score: **0.7484**
 
-Why do vendor price labels sometimes remain visible after buying items?
+## Scope
+
+vendor purchase item setData vendorSPrice invData ItemDataChanged populateItems
 
 ## Chain
 
-### 1. purchase_transfer
+1. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:75-87`
+2. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:82-94`
+3. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:154-166`
+4. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:158-170`
+5. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:167-179`
+6. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:169-181`
+7. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:172-184`
+8. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:198-210`
+9. **cl_vendor.lua** — realm=`client`, `plugins/vendor/derma/cl_vendor.lua:229-241`
+10. **targeted_validation step 3** — realm=`unknown`
+11. **targeted_validation step 9** — realm=`unknown`
+12. **targeted_validation step 2** — realm=`unknown`
+13. **targeted_validation step 8** — realm=`unknown`
+14. **targeted_validation step 4** — realm=`unknown`
+15. **targeted_validation step 5** — realm=`unknown`
+16. **targeted_validation step 6** — realm=`unknown`
+17. **targeted_validation step 7** — realm=`unknown`
+18. **hook.Run** — realm=`unknown`, `docs/runtime/runtime_chains/vendor_purchase_price_label_cleanup.md`
+19. **setData** — realm=`unknown`, `docs/runtime/runtime_chains/vendor_purchase_price_label_cleanup.md`
+20. **sync** — realm=`unknown`, `docs/runtime/runtime_chains/vendor_purchase_price_label_cleanup.md`
+21. **vendor_purchase_price_label_cleanup.md** — realm=`unknown`, `docs/runtime/runtime_chains/vendor_purchase_price_label_cleanup.md`
+22. **init.lua** — realm=`unknown`, `plugins/vendor/entities/entities/nut_vendor/init.lua:51-63`
+23. **init.lua** — realm=`unknown`, `plugins/vendor/entities/entities/nut_vendor/init.lua:209-221`
+24. **init.lua** — realm=`unknown`, `plugins/vendor/entities/entities/nut_vendor/init.lua:284-296`
 
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `218`
-- Evidence source: `targeted_validation`
-- Matched terms: `plugins/gridinv/sv_transfer.lua, vendorsellitem, oldinventory.vendor, item:setdata("vendorsprice", nil, client), item:setdata("vendorqty", nil, client), item:setdata("vendormqty", nil, client)`
+## Missing causal steps
 
-```text
-210: 					inventory.storage:SetBodyGroups("011000000")
-211: 				end
-212: 
-213: 				if (vendorSellItem)
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-225: 				end
-226: 			end
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
+- none
 
-### 2. inventory_membership_sync
+## Promotion notes
 
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `16`
-- Evidence source: `targeted_validation`
-- Matched terms: `inventory.items`
-
-```text
-8: 	local item = nut.item.instances[itemID]
-9: 	if (not item) then return end
-10: 	local oldInventory = nut.inventory.instances[item.invID]
-11: 	if (not oldInventory or not oldInventory.items[itemID]) then
-12: 		return
-13: 	end
-14: 	
-15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
-16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
-17: 	-- Make sure the item is permitted to move between the two inventories.
-18: 	local status, reason = hook.Run("CanItemBeTransfered", item, oldInventory, inventory, client)
-19: 
-20: 	if (status == false) then client:notify(reason or "You can't do that right now.") return end
-21: 	local context = {
-22: 		client = client,
-23: 		item = item,
-24: 		from = oldInventory,
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
-
-### 3. item_initial_sync
-
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `78`
-- Evidence source: `targeted_validation`
-- Matched terms: ``
-
-```text
-70: 			inventory.vendor:HandleStock(item.uniqueID, false, qty, item.isStackable, client)
-71: 		else
-72: 			client:notify("У торговца недостаточно денег")
-73: 		end
-74: 
-75: 		return true
-76: 	end
-77: 
-78: 	local vendorSellItem = false
-79: 	if (oldInventory && IsValid(oldInventory.vendor) && inventory == client:getChar():getInv())
-80: 	then
-81: 		local char = client:getChar()
-82: 		price = tonumber(oldInventory.vendor:GetItemPrice(item.uniqueID, true, client)) * qty
-83: 		if (char:hasMoney(price))
-84: 		then
-85: 			vendorSellItem = true
-86: 		else
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
-
-### 4. purchase_metadata_cleanup
-
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `218`
-- Evidence source: `targeted_validation`
-- Matched terms: `vendorsprice, vendorqty, vendormqty, vendorbprice, setdata`
-
-```text
-210: 					inventory.storage:SetBodyGroups("011000000")
-211: 				end
-212: 
-213: 				if (vendorSellItem)
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-225: 				end
-226: 			end
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
-
-### 5. item_metadata_network_sync
-
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `218`
-- Evidence source: `targeted_validation`
-- Matched terms: `item:setdata`
-
-```text
-210: 					inventory.storage:SetBodyGroups("011000000")
-211: 				end
-212: 
-213: 				if (vendorSellItem)
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-225: 				end
-226: 			end
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
-
-### 6. client_item_data_apply
-
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `78`
-- Evidence source: `targeted_validation`
-- Matched terms: ``
-
-```text
-70: 			inventory.vendor:HandleStock(item.uniqueID, false, qty, item.isStackable, client)
-71: 		else
-72: 			client:notify("У торговца недостаточно денег")
-73: 		end
-74: 
-75: 		return true
-76: 	end
-77: 
-78: 	local vendorSellItem = false
-79: 	if (oldInventory && IsValid(oldInventory.vendor) && inventory == client:getChar():getInv())
-80: 	then
-81: 		local char = client:getChar()
-82: 		price = tonumber(oldInventory.vendor:GetItemPrice(item.uniqueID, true, client)) * qty
-83: 		if (char:hasMoney(price))
-84: 		then
-85: 			vendorSellItem = true
-86: 		else
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
-
-### 7. grid_inventory_ui_refresh
-
-- Status: `evidence_found`
-- Source: `E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/plugins/gridinv/sv_transfer.lua`
-- Line: `78`
-- Evidence source: `targeted_validation`
-- Matched terms: ``
-
-```text
-70: 			inventory.vendor:HandleStock(item.uniqueID, false, qty, item.isStackable, client)
-71: 		else
-72: 			client:notify("У торговца недостаточно денег")
-73: 		end
-74: 
-75: 		return true
-76: 	end
-77: 
-78: 	local vendorSellItem = false
-79: 	if (oldInventory && IsValid(oldInventory.vendor) && inventory == client:getChar():getInv())
-80: 	then
-81: 		local char = client:getChar()
-82: 		price = tonumber(oldInventory.vendor:GetItemPrice(item.uniqueID, true, client)) * qty
-83: 		if (char:hasMoney(price))
-84: 		then
-85: 			vendorSellItem = true
-86: 		else
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-plugins/gridinv/sv_transfer.lua
-E:\steam\steamapps\common\GarrysMod\garrysmod\gamemodes\nutscript\plugins\gridinv\sv_transfer.lua
-```
-
-## Confidence Reasons
-
-- `authoritative_purchase_transfer_source_validated`
-- `client_ui_refresh_present`
-- `item_metadata_sync_boundary_present`
-- `targeted_validation:client_item_data_apply`
-- `targeted_validation:grid_inventory_ui_refresh`
-- `targeted_validation:inventory_membership_sync`
-- `targeted_validation:item_initial_sync`
-- `targeted_validation:item_metadata_network_sync`
-- `targeted_validation:purchase_metadata_cleanup`
-- `targeted_validation:purchase_transfer`
-
-## Promotion Notes
-
-- Promoted from deterministic runtime chain candidate.
-- This document is a semantic runtime-chain artifact, not a raw source patch.
-- Raw Lua bugfixing is intentionally deferred until investigation pipeline reliability is proven.
+- This document is a durable runtime-chain anchor.
+- It does not modify raw Lua.
+- It should be regenerated or superseded if targeted validation contradicts any step.
