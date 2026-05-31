@@ -345,3 +345,25 @@ Raw source roots are resolved from workspace.yaml.
 All future validation, runtime chain reconstruction, targeted validation, and source discovery tools should load source paths from workspace.yaml.
 
 Do not hardcode source roots in investigation scripts.
+
+## Runtime Chain Builder V4 Lesson
+
+Missing causal steps may be caused by
+source-validation coverage gaps.
+
+Before modifying branch reconstruction logic:
+
+1. Verify targeted validation coverage.
+2. Verify recovery-input ingestion.
+3. Verify step classification.
+
+Branch-builder defects should only be investigated
+after validation coverage has been confirmed.
+
+Validated example:
+
+vendor purchase item data propagation chain
+
+Recovered step:
+
+item_metadata_client_apply
