@@ -1,41 +1,46 @@
 # SIGNALIS AI — Runtime Chain Evidence
 
 - Source validation: `E:\signalis_ai\investigations\validation\vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json`
-- Evidence total: `120`
+- Raw evidence total: `123`
+- Deduped evidence total: `102`
+- Duplicates removed: `21`
 
 ## Summary
 
 ```json
 {
-  "evidence_total": 120,
+  "raw_evidence_total": 123,
+  "deduped_evidence_total": 102,
+  "duplicates_removed": 21,
   "chain_confidence": "validated",
+  "chain_score": 1904,
   "chain_steps_present": 15,
   "chain_steps_missing": 0,
   "by_class": {
-    "gridinv_item_ui_refresh": 4,
-    "gridinv_panel_repopulate": 6,
-    "inventory_boundary_transfer": 16,
+    "gridinv_item_ui_refresh": 5,
+    "gridinv_panel_repopulate": 7,
+    "inventory_boundary_transfer": 17,
     "inventory_level_data_not_item_data": 2,
     "inventory_membership_client_event": 5,
     "inventory_membership_mutation": 8,
-    "inventory_membership_network_send": 10,
+    "inventory_membership_network_send": 5,
     "inventory_membership_receive_add": 1,
     "inventory_recipients_resolved": 6,
     "item_full_state_sync": 4,
     "item_metadata_client_event": 7,
-    "item_metadata_mutation": 4,
-    "item_metadata_network_receive": 13,
-    "item_metadata_network_sync_send": 11,
+    "item_metadata_mutation": 2,
+    "item_metadata_network_receive": 8,
+    "item_metadata_network_sync_send": 7,
     "item_metadata_persistence": 5,
-    "vendor_metadata_cleanup": 10,
+    "vendor_metadata_cleanup": 5,
     "vendor_purchase_detection": 8
   },
   "by_file": {
-    "plugins/gridinv/sv_transfer.lua": 40,
-    "gamemode/core/meta/inventory/sv_base_inventory.lua": 22,
-    "gamemode/core/meta/item/sv_item.lua": 20,
-    "gamemode/core/libs/item/cl_networking.lua": 20,
-    "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua": 13,
+    "plugins/gridinv/sv_transfer.lua": 36,
+    "gamemode/core/meta/inventory/sv_base_inventory.lua": 17,
+    "plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua": 15,
+    "gamemode/core/libs/item/cl_networking.lua": 15,
+    "gamemode/core/meta/item/sv_item.lua": 14,
     "gamemode/core/meta/inventory/cl_base_inventory.lua": 5
   }
 }
@@ -50,6 +55,7 @@
 ## CHAIN-001 — Vendor purchase transfer to item metadata cleanup
 
 - Confidence: `validated`
+- Score: `1904`
 
 Steps:
 
@@ -73,10 +79,12 @@ Missing steps:
 
 - none
 
-Evidence:
+Ranked Chain Evidence:
 
-### E-0065 — `vendor_purchase_detection`
+### E-0001 — `vendor_purchase_detection`
 
+- Rank: `1`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `116-128`
@@ -99,8 +107,10 @@ Evidence:
 vendorSellItem
 ```
 
-### E-0100 — `inventory_boundary_transfer`
+### E-0009 — `inventory_boundary_transfer`
 
+- Rank: `9`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `1-11`
@@ -121,8 +131,10 @@ vendorSellItem
 HandleItemTransferRequest
 ```
 
-### E-0067 — `inventory_membership_mutation`
+### E-0026 — `inventory_membership_mutation`
 
+- Rank: `26`
+- Score: `113`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `116-128`
@@ -145,8 +157,10 @@ HandleItemTransferRequest
 vendorSellItem
 ```
 
-### E-0020 — `inventory_recipients_resolved`
+### E-0034 — `inventory_recipients_resolved`
 
+- Rank: `34`
+- Score: `104`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `193-205`
@@ -169,8 +183,10 @@ vendorSellItem
 function Inventory:getRecipients
 ```
 
-### E-0030 — `item_full_state_sync`
+### E-0040 — `item_full_state_sync`
 
+- Rank: `40`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `41-53`
@@ -193,8 +209,10 @@ function Inventory:getRecipients
 local recipients = self:getRecipients()
 ```
 
-### E-0021 — `inventory_membership_network_send`
+### E-0044 — `inventory_membership_network_send`
 
+- Rank: `44`
+- Score: `120`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `35-47`
@@ -217,8 +235,10 @@ local recipients = self:getRecipients()
 function Inventory:syncItemAdded
 ```
 
-### E-0003 — `inventory_membership_receive_add`
+### E-0049 — `inventory_membership_receive_add`
 
+- Rank: `49`
+- Score: `120`
 - File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
 - Role: `client_inventory`
 - Lines: `50-62`
@@ -241,8 +261,10 @@ function Inventory:syncItemAdded
 net.Receive("nutInventoryAdd"
 ```
 
-### E-0002 — `inventory_membership_client_event`
+### E-0050 — `inventory_membership_client_event`
 
+- Rank: `50`
+- Score: `115`
 - File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
 - Role: `client_inventory`
 - Lines: `57-69`
@@ -265,8 +287,10 @@ net.Receive("nutInventoryAdd"
 hook.Run("InventoryItemAdded"
 ```
 
-### E-0072 — `vendor_metadata_cleanup`
+### E-0055 — `vendor_metadata_cleanup`
 
+- Rank: `55`
+- Score: `150`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `207-219`
@@ -289,8 +313,10 @@ hook.Run("InventoryItemAdded"
 vendorSellItem
 ```
 
-### E-0043 — `item_metadata_mutation`
+### E-0060 — `item_metadata_mutation`
 
+- Rank: `60`
+- Score: `130`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `154-166`
@@ -313,8 +339,10 @@ vendorSellItem
 function ITEM:setData
 ```
 
-### E-0055 — `item_metadata_network_sync_send`
+### E-0062 — `item_metadata_network_sync_send`
 
+- Rank: `62`
+- Score: `130`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `165-177`
@@ -337,8 +365,10 @@ function ITEM:setData
 self:getOwner
 ```
 
-### E-0110 — `item_metadata_network_receive`
+### E-0069 — `item_metadata_network_receive`
 
+- Rank: `69`
+- Score: `140`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `12-24`
@@ -361,8 +391,10 @@ self:getOwner
 item.data[key]
 ```
 
-### E-0112 — `item_metadata_client_event`
+### E-0077 — `item_metadata_client_event`
 
+- Rank: `77`
+- Score: `140`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `12-24`
@@ -385,8 +417,10 @@ item.data[key]
 item.data[key]
 ```
 
-### E-0008 — `gridinv_item_ui_refresh`
+### E-0084 — `gridinv_item_ui_refresh`
 
+- Rank: `84`
+- Score: `125`
 - File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
 - Role: `client_grid_panel`
 - Lines: `265-277`
@@ -409,8 +443,10 @@ item.data[key]
 function PANEL:InventoryItemRemoved
 ```
 
-### E-0012 — `gridinv_panel_repopulate`
+### E-0089 — `gridinv_panel_repopulate`
 
+- Rank: `89`
+- Score: `120`
 - File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
 - Role: `client_grid_panel`
 - Lines: `261-273`
@@ -433,10 +469,12 @@ function PANEL:InventoryItemRemoved
 self:populateItems()
 ```
 
-## Additional Classified Evidence
+## Additional Deduped Classified Evidence
 
-### E-0068 — `vendor_purchase_detection`
+### E-0002 — `vendor_purchase_detection`
 
+- Rank: `2`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `161-173`
@@ -459,8 +497,10 @@ self:populateItems()
 vendorSellItem
 ```
 
-### E-0082 — `vendor_purchase_detection`
+### E-0003 — `vendor_purchase_detection`
 
+- Rank: `3`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `163-175`
@@ -483,8 +523,10 @@ vendorSellItem
 inventory:add
 ```
 
-### E-0070 — `vendor_purchase_detection`
+### E-0004 — `vendor_purchase_detection`
 
+- Rank: `4`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `207-219`
@@ -507,8 +549,10 @@ inventory:add
 vendorSellItem
 ```
 
-### E-0090 — `vendor_purchase_detection`
+### E-0005 — `vendor_purchase_detection`
 
+- Rank: `5`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `212-224`
@@ -531,8 +575,10 @@ vendorSellItem
 item:setData("vendorQty", nil
 ```
 
-### E-0086 — `vendor_purchase_detection`
+### E-0006 — `vendor_purchase_detection`
 
+- Rank: `6`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `213-225`
@@ -555,8 +601,10 @@ item:setData("vendorQty", nil
 item:setData("vendorSPrice", nil
 ```
 
-### E-0061 — `vendor_purchase_detection`
+### E-0007 — `vendor_purchase_detection`
 
+- Rank: `7`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `72-84`
@@ -579,8 +627,10 @@ item:setData("vendorSPrice", nil
 vendorSellItem
 ```
 
-### E-0063 — `vendor_purchase_detection`
+### E-0008 — `vendor_purchase_detection`
 
+- Rank: `8`
+- Score: `145`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `79-91`
@@ -603,8 +653,10 @@ vendorSellItem
 vendorSellItem
 ```
 
-### E-0076 — `inventory_boundary_transfer`
+### E-0010 — `inventory_boundary_transfer`
 
+- Rank: `10`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `10-22`
@@ -627,8 +679,10 @@ vendorSellItem
 oldInventory
 ```
 
-### E-0066 — `inventory_boundary_transfer`
+### E-0011 — `inventory_boundary_transfer`
 
+- Rank: `11`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `116-128`
@@ -651,8 +705,10 @@ oldInventory
 vendorSellItem
 ```
 
-### E-0077 — `inventory_boundary_transfer`
+### E-0012 — `inventory_boundary_transfer`
 
+- Rank: `12`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `12-24`
@@ -675,8 +731,36 @@ vendorSellItem
 oldInventory
 ```
 
-### E-0080 — `inventory_boundary_transfer`
+### E-0013 — `inventory_boundary_transfer`
 
+- Rank: `13`
+- Score: `134`
+- File: `plugins/gridinv/sv_transfer.lua`
+- Role: `gridinv_transfer`
+- Lines: `12-24`
+- Pattern: `oldInventory + destination inventory`
+
+```lua
+12: 		return
+13: 	end
+14: 	
+15: 	local vendor = inventory && IsValid(inventory.vendor) || nil
+16: 	vendor = oldInventory && IsValid(oldInventory.vendor) || vendor
+17: 	-- Make sure the item is permitted to move between the two inventories.
+18: 	local status, reason = hook.Run("CanItemBeTransfered", item, oldInventory, inventory, client)
+19: 
+20: 	if (status == false) then client:notify(reason or "You can't do that right now.") return end
+21: 	local context = {
+22: 		client = client,
+23: 		item = item,
+24: 		from = oldInventory,
+CanItemBeTransfered
+```
+
+### E-0014 — `inventory_boundary_transfer`
+
+- Rank: `14`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `145-157`
@@ -699,8 +783,10 @@ oldInventory
 inventory:add
 ```
 
-### E-0078 — `inventory_boundary_transfer`
+### E-0015 — `inventory_boundary_transfer`
 
+- Rank: `15`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `18-30`
@@ -723,8 +809,10 @@ inventory:add
 oldInventory
 ```
 
-### E-0084 — `inventory_boundary_transfer`
+### E-0016 — `inventory_boundary_transfer`
 
+- Rank: `16`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `182-194`
@@ -747,8 +835,10 @@ oldInventory
 inventory:add
 ```
 
-### E-0071 — `inventory_boundary_transfer`
+### E-0017 — `inventory_boundary_transfer`
 
+- Rank: `17`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `207-219`
@@ -771,8 +861,10 @@ inventory:add
 vendorSellItem
 ```
 
-### E-0091 — `inventory_boundary_transfer`
+### E-0018 — `inventory_boundary_transfer`
 
+- Rank: `18`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `212-224`
@@ -795,8 +887,10 @@ vendorSellItem
 item:setData("vendorQty", nil
 ```
 
-### E-0087 — `inventory_boundary_transfer`
+### E-0019 — `inventory_boundary_transfer`
 
+- Rank: `19`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `213-225`
@@ -819,8 +913,10 @@ item:setData("vendorQty", nil
 item:setData("vendorSPrice", nil
 ```
 
-### E-0094 — `inventory_boundary_transfer`
+### E-0020 — `inventory_boundary_transfer`
 
+- Rank: `20`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `214-226`
@@ -843,8 +939,10 @@ item:setData("vendorSPrice", nil
 item:setData("vendorMQty", nil
 ```
 
-### E-0097 — `inventory_boundary_transfer`
+### E-0021 — `inventory_boundary_transfer`
 
+- Rank: `21`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `217-229`
@@ -867,8 +965,10 @@ item:setData("vendorMQty", nil
 item:setData("vendorBPrice"
 ```
 
-### E-0074 — `inventory_boundary_transfer`
+### E-0022 — `inventory_boundary_transfer`
 
+- Rank: `22`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `4-16`
@@ -891,8 +991,10 @@ item:setData("vendorBPrice"
 oldInventory
 ```
 
-### E-0075 — `inventory_boundary_transfer`
+### E-0023 — `inventory_boundary_transfer`
 
+- Rank: `23`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `5-17`
@@ -915,8 +1017,10 @@ oldInventory
 oldInventory
 ```
 
-### E-0062 — `inventory_boundary_transfer`
+### E-0024 — `inventory_boundary_transfer`
 
+- Rank: `24`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `72-84`
@@ -939,8 +1043,10 @@ oldInventory
 vendorSellItem
 ```
 
-### E-0064 — `inventory_boundary_transfer`
+### E-0025 — `inventory_boundary_transfer`
 
+- Rank: `25`
+- Score: `134`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `79-91`
@@ -963,8 +1069,10 @@ vendorSellItem
 vendorSellItem
 ```
 
-### E-0079 — `inventory_membership_mutation`
+### E-0027 — `inventory_membership_mutation`
 
+- Rank: `27`
+- Score: `113`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `143-155`
@@ -987,8 +1095,10 @@ vendorSellItem
 inventory:add
 ```
 
-### E-0081 — `inventory_membership_mutation`
+### E-0028 — `inventory_membership_mutation`
 
+- Rank: `28`
+- Score: `113`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `145-157`
@@ -1011,8 +1121,10 @@ inventory:add
 inventory:add
 ```
 
-### E-0069 — `inventory_membership_mutation`
+### E-0029 — `inventory_membership_mutation`
 
+- Rank: `29`
+- Score: `113`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `161-173`
@@ -1035,8 +1147,10 @@ inventory:add
 vendorSellItem
 ```
 
-### E-0083 — `inventory_membership_mutation`
+### E-0030 — `inventory_membership_mutation`
 
+- Rank: `30`
+- Score: `113`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `163-175`
@@ -1059,8 +1173,10 @@ vendorSellItem
 inventory:add
 ```
 
-### E-0085 — `inventory_membership_mutation`
+### E-0031 — `inventory_membership_mutation`
 
+- Rank: `31`
+- Score: `113`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `182-194`
@@ -1083,8 +1199,10 @@ inventory:add
 inventory:add
 ```
 
-### E-0019 — `inventory_membership_mutation`
+### E-0032 — `inventory_membership_mutation`
 
+- Rank: `32`
+- Score: `109`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `12-24`
@@ -1107,8 +1225,10 @@ inventory:add
 function Inventory:addItem
 ```
 
-### E-0023 — `inventory_membership_mutation`
+### E-0033 — `inventory_membership_mutation`
 
+- Rank: `33`
+- Score: `109`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `35-47`
@@ -1131,8 +1251,10 @@ function Inventory:addItem
 function Inventory:syncItemAdded
 ```
 
-### E-0022 — `inventory_recipients_resolved`
+### E-0035 — `inventory_recipients_resolved`
 
+- Rank: `35`
+- Score: `104`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `35-47`
@@ -1155,8 +1277,10 @@ function Inventory:syncItemAdded
 function Inventory:syncItemAdded
 ```
 
-### E-0029 — `inventory_recipients_resolved`
+### E-0036 — `inventory_recipients_resolved`
 
+- Rank: `36`
+- Score: `104`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `41-53`
@@ -1179,32 +1303,36 @@ function Inventory:syncItemAdded
 local recipients = self:getRecipients()
 ```
 
-### E-0024 — `inventory_recipients_resolved`
-
-- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
-- Role: `server_inventory`
-- Lines: `42-54`
-- Pattern: `self:getRecipients()`
-
-```lua
-42: 	assert(istable(item) and item.getID, "cannot sync non-item")
-43: 	assert(
-44: 		self.items[item:getID()],
-45: 		"Item "..item:getID().." does not belong to "..self.id
-46: 	)
-47: 	local recipients = self:getRecipients()
-48: 	item:sync(recipients)
-49: 	net.Start("nutInventoryAdd")
-50: 		net.WriteUInt(item:getID(), 32)
-51: 		net.WriteType(self.id)
-52: 	net.Send(recipients)
-53: end
-54: 
-item:sync(recipients)
-```
-
 ### E-0037 — `inventory_recipients_resolved`
 
+- Rank: `37`
+- Score: `104`
+- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
+- Role: `server_inventory`
+- Lines: `42-54`
+- Pattern: `self:getRecipients()`
+
+```lua
+42: 	assert(istable(item) and item.getID, "cannot sync non-item")
+43: 	assert(
+44: 		self.items[item:getID()],
+45: 		"Item "..item:getID().." does not belong to "..self.id
+46: 	)
+47: 	local recipients = self:getRecipients()
+48: 	item:sync(recipients)
+49: 	net.Start("nutInventoryAdd")
+50: 		net.WriteUInt(item:getID(), 32)
+51: 		net.WriteType(self.id)
+52: 	net.Send(recipients)
+53: end
+54: 
+item:sync(recipients)
+```
+
+### E-0038 — `inventory_recipients_resolved`
+
+- Rank: `38`
+- Score: `104`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `43-55`
@@ -1227,8 +1355,10 @@ item:sync(recipients)
 net.Start("nutInventoryAdd")
 ```
 
-### E-0033 — `inventory_recipients_resolved`
+### E-0039 — `inventory_recipients_resolved`
 
+- Rank: `39`
+- Score: `104`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `46-58`
@@ -1251,8 +1381,10 @@ net.Start("nutInventoryAdd")
 net.Send(recipients)
 ```
 
-### E-0025 — `item_full_state_sync`
+### E-0041 — `item_full_state_sync`
 
+- Rank: `41`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `42-54`
@@ -1275,8 +1407,10 @@ net.Send(recipients)
 item:sync(recipients)
 ```
 
-### E-0038 — `item_full_state_sync`
+### E-0042 — `item_full_state_sync`
 
+- Rank: `42`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `43-55`
@@ -1299,8 +1433,10 @@ item:sync(recipients)
 net.Start("nutInventoryAdd")
 ```
 
-### E-0034 — `item_full_state_sync`
+### E-0043 — `item_full_state_sync`
 
+- Rank: `43`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `46-58`
@@ -1323,8 +1459,10 @@ net.Start("nutInventoryAdd")
 net.Send(recipients)
 ```
 
-### E-0028 — `inventory_membership_network_send`
+### E-0045 — `inventory_membership_network_send`
 
+- Rank: `45`
+- Score: `120`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `41-53`
@@ -1347,32 +1485,10 @@ net.Send(recipients)
 local recipients = self:getRecipients()
 ```
 
-### E-0031 — `inventory_membership_network_send`
+### E-0046 — `inventory_membership_network_send`
 
-- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
-- Role: `server_inventory`
-- Lines: `41-53`
-- Pattern: `net.Start("nutInventoryAdd")`
-
-```lua
-41: function Inventory:syncItemAdded(item)
-42: 	assert(istable(item) and item.getID, "cannot sync non-item")
-43: 	assert(
-44: 		self.items[item:getID()],
-45: 		"Item "..item:getID().." does not belong to "..self.id
-46: 	)
-47: 	local recipients = self:getRecipients()
-48: 	item:sync(recipients)
-49: 	net.Start("nutInventoryAdd")
-50: 		net.WriteUInt(item:getID(), 32)
-51: 		net.WriteType(self.id)
-52: 	net.Send(recipients)
-53: end
-local recipients = self:getRecipients()
-```
-
-### E-0026 — `inventory_membership_network_send`
-
+- Rank: `46`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `42-54`
@@ -1395,8 +1511,10 @@ local recipients = self:getRecipients()
 item:sync(recipients)
 ```
 
-### E-0039 — `inventory_membership_network_send`
+### E-0047 — `inventory_membership_network_send`
 
+- Rank: `47`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `43-55`
@@ -1419,8 +1537,10 @@ item:sync(recipients)
 net.Start("nutInventoryAdd")
 ```
 
-### E-0035 — `inventory_membership_network_send`
+### E-0048 — `inventory_membership_network_send`
 
+- Rank: `48`
+- Score: `118`
 - File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
 - Role: `server_inventory`
 - Lines: `46-58`
@@ -1443,104 +1563,10 @@ net.Start("nutInventoryAdd")
 net.Send(recipients)
 ```
 
-### E-0032 — `inventory_membership_network_send`
+### E-0051 — `inventory_membership_client_event`
 
-- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
-- Role: `server_inventory`
-- Lines: `41-53`
-- Pattern: `net.Send(recipients)`
-
-```lua
-41: function Inventory:syncItemAdded(item)
-42: 	assert(istable(item) and item.getID, "cannot sync non-item")
-43: 	assert(
-44: 		self.items[item:getID()],
-45: 		"Item "..item:getID().." does not belong to "..self.id
-46: 	)
-47: 	local recipients = self:getRecipients()
-48: 	item:sync(recipients)
-49: 	net.Start("nutInventoryAdd")
-50: 		net.WriteUInt(item:getID(), 32)
-51: 		net.WriteType(self.id)
-52: 	net.Send(recipients)
-53: end
-local recipients = self:getRecipients()
-```
-
-### E-0027 — `inventory_membership_network_send`
-
-- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
-- Role: `server_inventory`
-- Lines: `42-54`
-- Pattern: `net.Send(recipients)`
-
-```lua
-42: 	assert(istable(item) and item.getID, "cannot sync non-item")
-43: 	assert(
-44: 		self.items[item:getID()],
-45: 		"Item "..item:getID().." does not belong to "..self.id
-46: 	)
-47: 	local recipients = self:getRecipients()
-48: 	item:sync(recipients)
-49: 	net.Start("nutInventoryAdd")
-50: 		net.WriteUInt(item:getID(), 32)
-51: 		net.WriteType(self.id)
-52: 	net.Send(recipients)
-53: end
-54: 
-item:sync(recipients)
-```
-
-### E-0040 — `inventory_membership_network_send`
-
-- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
-- Role: `server_inventory`
-- Lines: `43-55`
-- Pattern: `net.Send(recipients)`
-
-```lua
-43: 	assert(
-44: 		self.items[item:getID()],
-45: 		"Item "..item:getID().." does not belong to "..self.id
-46: 	)
-47: 	local recipients = self:getRecipients()
-48: 	item:sync(recipients)
-49: 	net.Start("nutInventoryAdd")
-50: 		net.WriteUInt(item:getID(), 32)
-51: 		net.WriteType(self.id)
-52: 	net.Send(recipients)
-53: end
-54: 
-55: -- Called to handle the logic for creating the data storage for this.
-net.Start("nutInventoryAdd")
-```
-
-### E-0036 — `inventory_membership_network_send`
-
-- File: `gamemode/core/meta/inventory/sv_base_inventory.lua`
-- Role: `server_inventory`
-- Lines: `46-58`
-- Pattern: `net.Send(recipients)`
-
-```lua
-46: 	)
-47: 	local recipients = self:getRecipients()
-48: 	item:sync(recipients)
-49: 	net.Start("nutInventoryAdd")
-50: 		net.WriteUInt(item:getID(), 32)
-51: 		net.WriteType(self.id)
-52: 	net.Send(recipients)
-53: end
-54: 
-55: -- Called to handle the logic for creating the data storage for this.
-56: -- Returns a promise that is resolved after the storing is done.
-57: function Inventory:initializeStorage(initialData)
-58: 	local d = deferred.new()
-net.Send(recipients)
-```
-
-### E-0005 — `inventory_membership_client_event`
-
+- Rank: `51`
+- Score: `115`
 - File: `gamemode/core/meta/inventory/cl_base_inventory.lua`
 - Role: `client_inventory`
 - Lines: `61-73`
@@ -1563,8 +1589,10 @@ net.Send(recipients)
 net.Receive("nutInventoryRemove"
 ```
 
-### E-0013 — `inventory_membership_client_event`
+### E-0052 — `inventory_membership_client_event`
 
+- Rank: `52`
+- Score: `97`
 - File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
 - Role: `client_grid_panel`
 - Lines: `261-273`
@@ -1587,8 +1615,10 @@ net.Receive("nutInventoryRemove"
 self:populateItems()
 ```
 
-### E-0010 — `inventory_membership_client_event`
+### E-0053 — `inventory_membership_client_event`
 
+- Rank: `53`
+- Score: `97`
 - File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
 - Role: `client_grid_panel`
 - Lines: `265-277`
@@ -1611,8 +1641,10 @@ self:populateItems()
 function PANEL:InventoryItemRemoved
 ```
 
-### E-0016 — `inventory_membership_client_event`
+### E-0054 — `inventory_membership_client_event`
 
+- Rank: `54`
+- Score: `97`
 - File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
 - Role: `client_grid_panel`
 - Lines: `266-278`
@@ -1635,8 +1667,10 @@ function PANEL:InventoryItemRemoved
 self:populateItems()
 ```
 
-### E-0092 — `vendor_metadata_cleanup`
+### E-0056 — `vendor_metadata_cleanup`
 
+- Rank: `56`
+- Score: `150`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `212-224`
@@ -1659,8 +1693,10 @@ self:populateItems()
 item:setData("vendorQty", nil
 ```
 
-### E-0088 — `vendor_metadata_cleanup`
+### E-0057 — `vendor_metadata_cleanup`
 
+- Rank: `57`
+- Score: `150`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `213-225`
@@ -1683,8 +1719,10 @@ item:setData("vendorQty", nil
 item:setData("vendorSPrice", nil
 ```
 
-### E-0095 — `vendor_metadata_cleanup`
+### E-0058 — `vendor_metadata_cleanup`
 
+- Rank: `58`
+- Score: `150`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `214-226`
@@ -1707,8 +1745,10 @@ item:setData("vendorSPrice", nil
 item:setData("vendorMQty", nil
 ```
 
-### E-0098 — `vendor_metadata_cleanup`
+### E-0059 — `vendor_metadata_cleanup`
 
+- Rank: `59`
+- Score: `150`
 - File: `plugins/gridinv/sv_transfer.lua`
 - Role: `gridinv_transfer`
 - Lines: `217-229`
@@ -1731,128 +1771,10 @@ item:setData("vendorMQty", nil
 item:setData("vendorBPrice"
 ```
 
-### E-0073 — `vendor_metadata_cleanup`
+### E-0061 — `item_metadata_mutation`
 
-- File: `plugins/gridinv/sv_transfer.lua`
-- Role: `gridinv_transfer`
-- Lines: `207-219`
-- Pattern: `vendor metadata setData cleanup/update`
-
-```lua
-207: 
-208: 				if (inventory && inventory.trashcan)
-209: 				then
-210: 					inventory.storage:SetBodyGroups("011000000")
-211: 				end
-212: 
-213: 				if (vendorSellItem)
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-vendorSellItem
-```
-
-### E-0093 — `vendor_metadata_cleanup`
-
-- File: `plugins/gridinv/sv_transfer.lua`
-- Role: `gridinv_transfer`
-- Lines: `212-224`
-- Pattern: `vendor metadata setData cleanup/update`
-
-```lua
-212: 
-213: 				if (vendorSellItem)
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-item:setData("vendorQty", nil
-```
-
-### E-0089 — `vendor_metadata_cleanup`
-
-- File: `plugins/gridinv/sv_transfer.lua`
-- Role: `gridinv_transfer`
-- Lines: `213-225`
-- Pattern: `vendor metadata setData cleanup/update`
-
-```lua
-213: 				if (vendorSellItem)
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-225: 				end
-item:setData("vendorSPrice", nil
-```
-
-### E-0096 — `vendor_metadata_cleanup`
-
-- File: `plugins/gridinv/sv_transfer.lua`
-- Role: `gridinv_transfer`
-- Lines: `214-226`
-- Pattern: `vendor metadata setData cleanup/update`
-
-```lua
-214: 				then
-215: 					client:getChar():takeMoney(price)
-216: 					oldInventory.vendor:HandleMoney(price, client)
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-225: 				end
-226: 			end
-item:setData("vendorMQty", nil
-```
-
-### E-0099 — `vendor_metadata_cleanup`
-
-- File: `plugins/gridinv/sv_transfer.lua`
-- Role: `gridinv_transfer`
-- Lines: `217-229`
-- Pattern: `vendor metadata setData cleanup/update`
-
-```lua
-217: 					oldInventory.vendor:HandleStock(item.uniqueID, true, qty, item.isStackable, client)
-218: 					item:setData("vendorQty", nil, client)
-219: 					item:setData("vendorSPrice", nil, client)
-220: 					item:setData("vendorMQty", nil, client)
-221: 					if (oldInventory.vendor.items[item.uniqueID])
-222: 					then
-223: 						item:setData("vendorBPrice", oldInventory.vendor.items[item.uniqueID].buyPrice, client)
-224: 					end
-225: 				end
-226: 			end
-227: 			return originalAddRes
-228: 		end)
-229: 		:catch(fail)
-item:setData("vendorBPrice"
-```
-
-### E-0052 — `item_metadata_mutation`
-
+- Rank: `61`
+- Score: `130`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `156-168`
@@ -1875,56 +1797,10 @@ item:setData("vendorBPrice"
 self.data[key] = value
 ```
 
-### E-0044 — `item_metadata_mutation`
+### E-0063 — `item_metadata_network_sync_send`
 
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Role: `server_item_data`
-- Lines: `154-166`
-- Pattern: `self.data[key] = value`
-
-```lua
-154: 	else
-155: 		net.Send(recipient)
-156: 	end
-157: 	self:onSync(recipient)
-158: end
-159: 
-160: function ITEM:setData(key, value, receivers, noSave, noCheckEntity)
-161: 	self.data = self.data or {}
-162: 	self.data[key] = value
-163: 
-164: 	if (not noCheckEntity) then
-165: 		local ent = self:getEntity()
-166: 		if (IsValid(ent)) then
-function ITEM:setData
-```
-
-### E-0053 — `item_metadata_mutation`
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Role: `server_item_data`
-- Lines: `156-168`
-- Pattern: `self.data[key] = value`
-
-```lua
-156: 	end
-157: 	self:onSync(recipient)
-158: end
-159: 
-160: function ITEM:setData(key, value, receivers, noSave, noCheckEntity)
-161: 	self.data = self.data or {}
-162: 	self.data[key] = value
-163: 
-164: 	if (not noCheckEntity) then
-165: 		local ent = self:getEntity()
-166: 		if (IsValid(ent)) then
-167: 			ent:setNetVar("data", self.data)
-168: 		end
-self.data[key] = value
-```
-
-### E-0046 — `item_metadata_network_sync_send`
-
+- Rank: `63`
+- Score: `130`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `166-178`
@@ -1947,8 +1823,10 @@ self.data[key] = value
 netstream.Start
 ```
 
-### E-0057 — `item_metadata_network_sync_send`
+### E-0064 — `item_metadata_network_sync_send`
 
+- Rank: `64`
+- Score: `130`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `167-179`
@@ -1971,8 +1849,10 @@ netstream.Start
 self:getOwner
 ```
 
-### E-0041 — `item_metadata_network_sync_send`
+### E-0065 — `item_metadata_network_sync_send`
 
+- Rank: `65`
+- Score: `130`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `168-180`
@@ -1995,104 +1875,10 @@ self:getOwner
 "invData"
 ```
 
-### E-0056 — `item_metadata_network_sync_send`
+### E-0066 — `item_metadata_network_sync_send`
 
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Role: `server_item_data`
-- Lines: `165-177`
-- Pattern: `netstream.Start(..., "invData", ...)`
-
-```lua
-165: 		local ent = self:getEntity()
-166: 		if (IsValid(ent)) then
-167: 			ent:setNetVar("data", self.data)
-168: 		end
-169: 	end
-170: 
-171: 	if (receivers or self:getOwner()) then
-172: 		netstream.Start(
-173: 			receivers or self:getOwner(),
-174: 			"invData",
-175: 			self:getID(),
-176: 			key,
-177: 			value
-self:getOwner
-```
-
-### E-0047 — `item_metadata_network_sync_send`
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Role: `server_item_data`
-- Lines: `166-178`
-- Pattern: `netstream.Start(..., "invData", ...)`
-
-```lua
-166: 		if (IsValid(ent)) then
-167: 			ent:setNetVar("data", self.data)
-168: 		end
-169: 	end
-170: 
-171: 	if (receivers or self:getOwner()) then
-172: 		netstream.Start(
-173: 			receivers or self:getOwner(),
-174: 			"invData",
-175: 			self:getID(),
-176: 			key,
-177: 			value
-178: 		)
-netstream.Start
-```
-
-### E-0058 — `item_metadata_network_sync_send`
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Role: `server_item_data`
-- Lines: `167-179`
-- Pattern: `netstream.Start(..., "invData", ...)`
-
-```lua
-167: 			ent:setNetVar("data", self.data)
-168: 		end
-169: 	end
-170: 
-171: 	if (receivers or self:getOwner()) then
-172: 		netstream.Start(
-173: 			receivers or self:getOwner(),
-174: 			"invData",
-175: 			self:getID(),
-176: 			key,
-177: 			value
-178: 		)
-179: 	end
-self:getOwner
-```
-
-### E-0042 — `item_metadata_network_sync_send`
-
-- File: `gamemode/core/meta/item/sv_item.lua`
-- Role: `server_item_data`
-- Lines: `168-180`
-- Pattern: `netstream.Start(..., "invData", ...)`
-
-```lua
-168: 		end
-169: 	end
-170: 
-171: 	if (receivers or self:getOwner()) then
-172: 		netstream.Start(
-173: 			receivers or self:getOwner(),
-174: 			"invData",
-175: 			self:getID(),
-176: 			key,
-177: 			value
-178: 		)
-179: 	end
-180: 
-"invData"
-```
-
-### E-0059 — `item_metadata_network_sync_send`
-
+- Rank: `66`
+- Score: `124`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `221-233`
@@ -2115,8 +1901,10 @@ self:getOwner
 self:getOwner
 ```
 
-### E-0048 — `item_metadata_network_sync_send`
+### E-0067 — `item_metadata_network_sync_send`
 
+- Rank: `67`
+- Score: `124`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `222-234`
@@ -2139,8 +1927,10 @@ self:getOwner
 netstream.Start
 ```
 
-### E-0060 — `item_metadata_network_sync_send`
+### E-0068 — `item_metadata_network_sync_send`
 
+- Rank: `68`
+- Score: `124`
 - File: `gamemode/core/meta/item/sv_item.lua`
 - Role: `server_item_data`
 - Lines: `223-235`
@@ -2163,8 +1953,10 @@ netstream.Start
 self:getOwner
 ```
 
-### E-0116 — `item_metadata_network_receive`
+### E-0070 — `item_metadata_network_receive`
 
+- Rank: `70`
+- Score: `140`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `12-24`
@@ -2187,8 +1979,10 @@ self:getOwner
 oldValue
 ```
 
-### E-0113 — `item_metadata_network_receive`
+### E-0071 — `item_metadata_network_receive`
 
+- Rank: `71`
+- Score: `140`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `13-25`
@@ -2211,8 +2005,10 @@ oldValue
 item.data[key]
 ```
 
-### E-0101 — `item_metadata_network_receive`
+### E-0072 — `item_metadata_network_receive`
 
+- Rank: `72`
+- Score: `140`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `7-19`
@@ -2235,8 +2031,10 @@ item.data[key]
 netstream.Hook("invData"
 ```
 
-### E-0105 — `item_metadata_network_receive`
+### E-0073 — `item_metadata_network_receive`
 
+- Rank: `73`
+- Score: `140`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `8-20`
@@ -2259,80 +2057,10 @@ netstream.Hook("invData"
 nut.item.instances
 ```
 
-### E-0111 — `item_metadata_network_receive`
+### E-0074 — `item_metadata_network_receive`
 
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Role: `client_item_networking`
-- Lines: `12-24`
-- Pattern: `client item.data[key] mutation`
-
-```lua
-12: 
-13: netstream.Hook("invData", function(id, key, value)
-14: 	local item = nut.item.instances[id]
-15: 
-16: 	if (item) then
-17: 		item.data = item.data or {}
-18: 		local oldValue = item.data[key]
-19: 		item.data[key] = value
-20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
-21: 	end
-22: end)
-23: 
-24: netstream.Hook("invQuantity", function(id, quantity)
-item.data[key]
-```
-
-### E-0117 — `item_metadata_network_receive`
-
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Role: `client_item_networking`
-- Lines: `12-24`
-- Pattern: `client item.data[key] mutation`
-
-```lua
-12: 
-13: netstream.Hook("invData", function(id, key, value)
-14: 	local item = nut.item.instances[id]
-15: 
-16: 	if (item) then
-17: 		item.data = item.data or {}
-18: 		local oldValue = item.data[key]
-19: 		item.data[key] = value
-20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
-21: 	end
-22: end)
-23: 
-24: netstream.Hook("invQuantity", function(id, quantity)
-oldValue
-```
-
-### E-0114 — `item_metadata_network_receive`
-
-- File: `gamemode/core/libs/item/cl_networking.lua`
-- Role: `client_item_networking`
-- Lines: `13-25`
-- Pattern: `client item.data[key] mutation`
-
-```lua
-13: netstream.Hook("invData", function(id, key, value)
-14: 	local item = nut.item.instances[id]
-15: 
-16: 	if (item) then
-17: 		item.data = item.data or {}
-18: 		local oldValue = item.data[key]
-19: 		item.data[key] = value
-20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
-21: 	end
-22: end)
-23: 
-24: netstream.Hook("invQuantity", function(id, quantity)
-25: 	local item = nut.item.instances[id]
-item.data[key]
-```
-
-### E-0103 — `item_metadata_network_receive`
-
+- Rank: `74`
+- Score: `130`
 - File: `gamemode/core/libs/item/cl_networking.lua`
 - Role: `client_item_networking`
 - Lines: `14-26`
@@ -2353,4 +2081,472 @@ item.data[key]
 25: 	local item = nut.item.instances[id]
 26: 
 hook.Run("ItemDataChanged"
+```
+
+### E-0075 — `item_metadata_network_receive`
+
+- Rank: `75`
+- Score: `130`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `14-26`
+- Pattern: `client item.data[key] mutation`
+
+```lua
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+oldValue
+```
+
+### E-0076 — `item_metadata_network_receive`
+
+- Rank: `76`
+- Score: `130`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `19-31`
+- Pattern: `client item.data[key] mutation`
+
+```lua
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+27: 	if (item) then
+28: 		local oldValue = item:getQuantity()
+29: 		item.quantity = quantity
+30: 
+31: 		hook.Run("ItemQuantityChanged", item, oldValue, quantity)
+nut.item.instances
+```
+
+### E-0078 — `item_metadata_client_event`
+
+- Rank: `78`
+- Score: `140`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `12-24`
+- Pattern: `hook.Run("ItemDataChanged")`
+
+```lua
+12: 
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+oldValue
+```
+
+### E-0079 — `item_metadata_client_event`
+
+- Rank: `79`
+- Score: `140`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `13-25`
+- Pattern: `hook.Run("ItemDataChanged")`
+
+```lua
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+item.data[key]
+```
+
+### E-0080 — `item_metadata_client_event`
+
+- Rank: `80`
+- Score: `140`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `14-26`
+- Pattern: `hook.Run("ItemDataChanged")`
+
+```lua
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+hook.Run("ItemDataChanged"
+```
+
+### E-0081 — `item_metadata_client_event`
+
+- Rank: `81`
+- Score: `140`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `14-26`
+- Pattern: `hook.Run("ItemDataChanged")`
+
+```lua
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+oldValue
+```
+
+### E-0082 — `item_metadata_client_event`
+
+- Rank: `82`
+- Score: `140`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `19-31`
+- Pattern: `hook.Run("ItemDataChanged")`
+
+```lua
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+21: 	end
+22: end)
+23: 
+24: netstream.Hook("invQuantity", function(id, quantity)
+25: 	local item = nut.item.instances[id]
+26: 
+27: 	if (item) then
+28: 		local oldValue = item:getQuantity()
+29: 		item.quantity = quantity
+30: 
+31: 		hook.Run("ItemQuantityChanged", item, oldValue, quantity)
+nut.item.instances
+```
+
+### E-0083 — `item_metadata_client_event`
+
+- Rank: `83`
+- Score: `140`
+- File: `gamemode/core/libs/item/cl_networking.lua`
+- Role: `client_item_networking`
+- Lines: `8-20`
+- Pattern: `hook.Run("ItemDataChanged")`
+
+```lua
+8: 
+9: 	item.invID = invID or 0
+10: 	hook.Run("ItemInitialized", item)
+11: end)
+12: 
+13: netstream.Hook("invData", function(id, key, value)
+14: 	local item = nut.item.instances[id]
+15: 
+16: 	if (item) then
+17: 		item.data = item.data or {}
+18: 		local oldValue = item.data[key]
+19: 		item.data[key] = value
+20: 		hook.Run("ItemDataChanged", item, key, oldValue, value)
+nut.item.instances
+```
+
+### E-0085 — `gridinv_item_ui_refresh`
+
+- Rank: `85`
+- Score: `125`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `266-278`
+- Pattern: `PANEL:InventoryItemDataChanged`
+
+```lua
+266: function PANEL:InventoryItemAdded(item)
+267: 	self:populateItems()
+268: end
+269: 
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+self:populateItems()
+```
+
+### E-0086 — `gridinv_item_ui_refresh`
+
+- Rank: `86`
+- Score: `125`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `270-282`
+- Pattern: `PANEL:InventoryItemDataChanged`
+
+```lua
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+279: 
+280: function PANEL:computeHeldPanel()
+281: 	if (not nut.item.held or nut.item.held == self) then return end
+282: 	local cursorX, cursorY = self:LocalCursorPos()
+InventoryItemDataChanged
+```
+
+### E-0087 — `gridinv_item_ui_refresh`
+
+- Rank: `87`
+- Score: `125`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `270-282`
+- Pattern: `PANEL:InventoryItemDataChanged`
+
+```lua
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+279: 
+280: function PANEL:computeHeldPanel()
+281: 	if (not nut.item.held or nut.item.held == self) then return end
+282: 	local cursorX, cursorY = self:LocalCursorPos()
+function PANEL:InventoryItemDataChanged
+```
+
+### E-0088 — `gridinv_item_ui_refresh`
+
+- Rank: `88`
+- Score: `125`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `271-283`
+- Pattern: `PANEL:InventoryItemDataChanged`
+
+```lua
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+279: 
+280: function PANEL:computeHeldPanel()
+281: 	if (not nut.item.held or nut.item.held == self) then return end
+282: 	local cursorX, cursorY = self:LocalCursorPos()
+283: 	if (
+self:populateItems()
+```
+
+### E-0090 — `gridinv_panel_repopulate`
+
+- Rank: `90`
+- Score: `120`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `265-277`
+- Pattern: `self:populateItems()`
+
+```lua
+265: -- Called when the given item has been added to the inventory.
+266: function PANEL:InventoryItemAdded(item)
+267: 	self:populateItems()
+268: end
+269: 
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+function PANEL:InventoryItemRemoved
+```
+
+### E-0091 — `gridinv_panel_repopulate`
+
+- Rank: `91`
+- Score: `120`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `266-278`
+- Pattern: `self:populateItems()`
+
+```lua
+266: function PANEL:InventoryItemAdded(item)
+267: 	self:populateItems()
+268: end
+269: 
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+self:populateItems()
+```
+
+### E-0092 — `gridinv_panel_repopulate`
+
+- Rank: `92`
+- Score: `120`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `270-282`
+- Pattern: `self:populateItems()`
+
+```lua
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+279: 
+280: function PANEL:computeHeldPanel()
+281: 	if (not nut.item.held or nut.item.held == self) then return end
+282: 	local cursorX, cursorY = self:LocalCursorPos()
+InventoryItemDataChanged
+```
+
+### E-0093 — `gridinv_panel_repopulate`
+
+- Rank: `93`
+- Score: `120`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `270-282`
+- Pattern: `self:populateItems()`
+
+```lua
+270: -- Called when the given item has been removed from the inventory.
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+279: 
+280: function PANEL:computeHeldPanel()
+281: 	if (not nut.item.held or nut.item.held == self) then return end
+282: 	local cursorX, cursorY = self:LocalCursorPos()
+function PANEL:InventoryItemDataChanged
+```
+
+### E-0094 — `gridinv_panel_repopulate`
+
+- Rank: `94`
+- Score: `120`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `271-283`
+- Pattern: `self:populateItems()`
+
+```lua
+271: function PANEL:InventoryItemRemoved(item)
+272: 	self:populateItems()
+273: end
+274: 
+275: -- Called when an item within this inventory has its data changed.
+276: function PANEL:InventoryItemDataChanged(item, key, oldValue, newValue)
+277: 	self:populateItems()
+278: end
+279: 
+280: function PANEL:computeHeldPanel()
+281: 	if (not nut.item.held or nut.item.held == self) then return end
+282: 	local cursorX, cursorY = self:LocalCursorPos()
+283: 	if (
+self:populateItems()
+```
+
+### E-0095 — `gridinv_panel_repopulate`
+
+- Rank: `95`
+- Score: `120`
+- File: `plugins/gridinv/plugins/gridinvui/derma/cl_grid_inventory_panel.lua`
+- Role: `client_grid_panel`
+- Lines: `41-53`
+- Pattern: `self:populateItems()`
+
+```lua
+41: 	end
+42: end
+43: 
+44: function PANEL:setInventory(inventory)
+45: 	self:nutListenForInventoryChanges(inventory)
+46: 	self.inventory = inventory
+47: 	self:populateItems()
+48: end
+49: 
+50: function PANEL:setGridSize(width, height, iconSize)
+51: 	self.size = iconSize or NS_ICON_SIZE
+52: 	self.gridW = width
+53: 	self.gridH = height
+self:populateItems()
 ```

@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-05-30T23:20:19`
+Generated: `2026-05-31T13:44:58`
 
 ## Workspace
 
@@ -16,6 +16,8 @@ decisions/
 docs/
   ai_subsystems/
   human_subsystems/
+  runtime/
+    runtime_chains/
   subsystems/
 embeddings/
 graphs/
@@ -83,7 +85,7 @@ temp/
 - `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
 - `scripts/qdrant/embed_qdrant_documents.py` (2.5 KB)
 - `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
-- `scripts/qdrant/query_qdrant.py` (7.4 KB)
+- `scripts/qdrant/query_qdrant.py` (8.9 KB)
 - `subsystem_docs/qdrant_plan.md` (3.6 KB)
 
 ### Investigation Files
@@ -99,6 +101,8 @@ temp/
 - `investigations/templates/`
 - `investigations/templates/investigation.md` (0.0 KB)
 - `investigations/validation/`
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.md` (39.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.json` (164.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation.md` (102.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json` (266.7 KB)
@@ -107,16 +111,26 @@ temp/
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_evidence_graph.md` (41.3 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json` (9.9 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.md` (9.6 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.md` (58.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.md` (8.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json` (78.1 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.md` (65.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.json` (203.7 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.md` (75.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json` (235.9 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.md` (111.9 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json` (18.9 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.md` (15.6 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json` (179.1 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.md` (82.1 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation_targeted_validation.json` (0.3 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation_targeted_validation.md` (0.4 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json` (20.3 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.md` (17.3 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched.json` (22.8 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.json` (166.6 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.md` (67.6 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence_graph.json` (9.4 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json` (213.2 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.md` (99.3 KB)
 
 ### Subsystem Docs
 
@@ -135,8 +149,9 @@ temp/
 - `scripts/qdrant/__init__.py` (0.0 KB)
 - `scripts/qdrant/build_evidence_graph.py` (17.8 KB)
 - `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
+- `scripts/qdrant/build_runtime_chain_evidence.py` (25.3 KB)
 - `scripts/qdrant/build_runtime_chains.py` (21.4 KB)
-- `scripts/qdrant/build_targeted_validation_report.py` (15.0 KB)
+- `scripts/qdrant/build_targeted_validation_report.py` (15.3 KB)
 - `scripts/qdrant/context_pack.py` (3.9 KB)
 - `scripts/qdrant/deduplicate_validation_fragments.py` (14.5 KB)
 - `scripts/qdrant/embed_qdrant_documents.py` (2.5 KB)
@@ -144,15 +159,17 @@ temp/
 - `scripts/qdrant/extract_runtime_facts.py` (15.4 KB)
 - `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
 - `scripts/qdrant/investigate.py` (21.1 KB)
+- `scripts/qdrant/patch_vendor_purchase_validation_targets.py` (6.8 KB)
 - `scripts/qdrant/path_reconstruction.py` (7.9 KB)
 - `scripts/qdrant/path_reconstruction_v2.py` (11.4 KB)
-- `scripts/qdrant/query_qdrant.py` (7.4 KB)
-- `scripts/qdrant/rerank_results.py` (5.3 KB)
+- `scripts/qdrant/promote_vendor_purchase_chain_doc.py` (3.8 KB)
+- `scripts/qdrant/query_qdrant.py` (8.9 KB)
+- `scripts/qdrant/rerank_results.py` (11.4 KB)
 - `scripts/qdrant/retrieval_intent.py` (3.5 KB)
 - `scripts/qdrant/score_validation_report.py` (0.0 KB)
 - `scripts/qdrant/synthesize_investigation.py` (14.4 KB)
 - `scripts/qdrant/validate_sources.py` (12.6 KB)
-- `scripts/qdrant/validate_targeted_sources.py` (10.9 KB)
+- `scripts/qdrant/validate_targeted_sources.py` (14.2 KB)
 
 ### Semantic Scripts
 
@@ -161,8 +178,12 @@ temp/
 
 ## Important Matched Files
 
+- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)
 - `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json` (78.1 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.json` (166.6 KB)
+- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence_graph.json` (9.4 KB)
 - `manifests/normalized/network_graph_summary.md` (7.3 KB)
 - `manifests/normalized/runtime_graph_edges.json` (2625.8 KB)
 - `manifests/normalized/runtime_graph_nodes.json` (1116.8 KB)
@@ -179,7 +200,7 @@ temp/
 - `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
 - `manifests/semantic/qdrant_query_results.md` (46.9 KB)
 - `scripts/qdrant/context_pack.py` (3.9 KB)
-- `scripts/qdrant/rerank_results.py` (5.3 KB)
+- `scripts/qdrant/rerank_results.py` (11.4 KB)
 - `scripts/qdrant/retrieval_intent.py` (3.5 KB)
 - `scripts/semantic/generate_subsystem_docs.py` (10.6 KB)
 - `subsystem_docs/event_taxonomy.md` (4.2 KB)
