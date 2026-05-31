@@ -236,6 +236,12 @@ duckdb
 pyinstrument
 ripgrep
 ```
+networkx — runtime topology path reconstruction
+pydantic — runtime chain schema models
+jsonschema — artifact validation
+pytest — golden regression tests
+duckdb — local topology/evidence query cache
+pyinstrument — script profiling
 
 ## Investigation Pipeline Lessons
 

@@ -31,13 +31,26 @@ Workspace root != Source root
 
 Source roots are loaded from workspace.yaml.
 
-```powershell
-pip install sentence-transformers qdrant-client pyyaml
-```
+## Investigation Pipeline Dependencies
 
-networkx — runtime topology path reconstruction
-pydantic — runtime chain schema models
-jsonschema — artifact validation
-pytest — golden regression tests
-duckdb — local topology/evidence query cache
-pyinstrument — script profiling
+Runtime chain reconstruction:
+
+- networkx
+- pydantic
+- jsonschema
+
+Validation:
+
+- pytest
+
+Evidence / topology querying:
+
+- duckdb
+
+Profiling:
+
+- pyinstrument
+
+Workspace configuration:
+
+- PyYAML
