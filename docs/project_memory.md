@@ -7,59 +7,91 @@ Retrieval-Guided Architecture Intelligence
 Current Sprint:
 Investigation Pipeline V1
 
+Current Focus:
+
+Runtime Chain Builder V5 validation against
+Runtime Propagation Topology V3.
+
 ## Current Bottleneck
 
-Runtime Propagation Topology V2 is partially successful.
+Runtime Chain Builder V5 validation against
+runtime_propagation_topology.json
 
 Validated:
 
-- hook_event → listener fanout exists
-- network_message → receiver fanout exists
-- listener → owner file/plugin exits exist
-- PlayerLoadedChar listener dead ends reduced significantly
+- Runtime Propagation Topology V1 PASS
+- Runtime Propagation Topology V2 PASS
+- Runtime Propagation Topology V3 PASS
 
-Current missing propagation:
+Validated propagation probes:
 
-callback body
-→ emitted hook
+- netstream:invData
+  → ItemDataChanged
 
-Known human-validated examples:
+- PlayerLoadedChar
+  → PlayerLoadout
 
-netstream:invData
-→ receiver callback
-→ ItemDataChanged
+- PlayerLoadout
+  → PostPlayerLoadout
 
-and
+Generated propagation support:
 
-PlayerLoadedChar
-→ GM:PlayerLoadedChar
-→ PlayerLoadout
+- generated_hook_listener_emits_hook_event: 583
+- generated_network_receiver_emits_hook_event: 433
 
-PlayerLoadout
-→ GM:PlayerLoadout
-→ PostPlayerLoadout
+Important finding:
 
-Conclusion:
+Existing runtime_fact_topology_v3 artifacts were generated against:
 
-Runtime Chain Builder V5 is not currently the primary bottleneck.
+manifests/normalized/runtime_topology.json
 
-Current bottleneck is missing callback-body propagation in runtime_propagation_topology.json.
+rather than:
 
-Likely next artifact:
+manifests/normalized/runtime_propagation_topology.json
 
-Runtime Propagation Topology Builder V3
+Therefore existing Runtime Chain Builder V5 results do not yet validate Runtime Propagation Topology V3.
+
+Current experiment:
+
+runtime_fact_topology_mapper
+→ runtime_propagation_topology.json
+
+runtime_chain_builder_v5
+→ runtime_propagation_topology.json
+
+Benchmark chains:
+
+1. vendor_purchase_item_data_propagation_topology_chain
+
+2. characterload_inventory_initialization_lifecycle_chain
 
 Goal:
 
-Support deterministic propagation:
+Determine whether Runtime Propagation Topology V3 resolves the V5 support bottleneck or whether runtime_chain_builder_v5 becomes the next bottleneck.
 
-network_operation
-→ emitted hook_event
+---
 
-hook_listener
-→ emitted hook_event
+## Completed Bottlenecks
 
-when supported by extracted source evidence.
+1. Runtime Topology Relationship Discovery
+PASS
+
+2. Runtime Propagation Topology V1
+PASS
+
+3. Runtime Propagation Topology V2
+PASS
+
+4. Runtime Propagation Topology V3
+PASS
+
+Validated propagation chains:
+
+- invData → ItemDataChanged
+
+- PlayerLoadedChar → PlayerLoadout
+
+- PlayerLoadout → PostPlayerLoadout
 
 ---
 
@@ -145,17 +177,79 @@ Transform relationship-oriented topology into traversal-oriented topology suitab
 
 ---
 
-## Investigation Note
+## Investigation Pipeline Lessons
 
-runtime_chain_builder_v5 performs generic BFS traversal using the topology supplied through:
+Runtime Propagation Topology validation requires:
 
---runtime-topology
+1. propagation probe PASS
 
-Current unsupported links are caused by missing callback-body propagation edges in runtime_propagation_topology.json.
+2. runtime_fact_topology_mapper generated against:
 
-Current evidence does not indicate a known BFS or CLI defect in runtime_chain_builder_v5.
+   manifests/normalized/runtime_propagation_topology.json
 
-Do not modify Runtime Chain Builder V5 unless regression or validation proves a builder defect.
+3. runtime_chain_builder_v5 generated against:
+
+   manifests/normalized/runtime_propagation_topology.json
+
+Artifacts generated against runtime_topology.json are not evidence for Runtime Propagation Topology effectiveness.
+
+Before declaring a Runtime Chain Builder bottleneck:
+
+- verify propagation probes
+- verify runtime fact mappings
+- verify topology artifact source
+
+---
+
+## Source Validation Environment:
+
+Current canonical topology artifacts:
+
+Relationship topology:
+manifests/normalized/runtime_topology.json
+
+Propagation topology:
+manifests/normalized/runtime_propagation_topology.json
+
+Runtime chain reconstruction should prefer:
+
+runtime_propagation_topology.json
+
+Relationship analysis may use:
+
+runtime_topology.json
+
+---
+
+
+## Project State Preservation Rule
+
+Project State Preservation Rule
+
+At the end of every significant investigation milestone:
+
+1. Update project_memory.md.
+
+2. Update doctrine documents when reusable pipeline rules are discovered.
+
+3. Update subsystem documents when subsystem understanding changes.
+
+4. Do not create duplicate investigation summaries when equivalent generated artifacts already exist.
+
+Record:
+
+- current bottleneck
+- completed bottlenecks
+- current experiment
+- next experiment
+- validated conclusions
+- invalidated hypotheses
+
+project_memory.md is the canonical cross-chat state artifact.
+
+Future investigation chats should consult project_memory.md before planning new work.
+
+---
 
 ## Canonical Environment
 
@@ -176,3 +270,5 @@ Rule:
 Workspace root != source root.
 
 Investigation scripts must load source roots from config/workspace.yaml.
+
+---

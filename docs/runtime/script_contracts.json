@@ -1,6 +1,6 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 87,
+  "scripts_checked": 88,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
@@ -103,6 +103,12 @@
       "module": "scripts.investigation.build_targeted_validation_request",
       "help_ok": true,
       "help": "usage: build_targeted_validation_request.py [-h] --candidate CANDIDATE --out\n                                            OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --candidate CANDIDATE\n  --out OUT"
+    },
+    {
+      "path": "scripts/investigation/debug_runtime_propagation_v3_bridges.py",
+      "module": "scripts.investigation.debug_runtime_propagation_v3_bridges",
+      "help_ok": true,
+      "help": "usage: debug_runtime_propagation_v3_bridges.py [-h] --runtime-topology\n                                               RUNTIME_TOPOLOGY --out-md\n                                               OUT_MD\n                                               [--max-forward-lines MAX_FORWARD_LINES]\n                                               [--max-backward-lines MAX_BACKWARD_LINES]\n                                               [--focus-file FOCUS_FILE]\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-topology RUNTIME_TOPOLOGY\n  --out-md OUT_MD\n  --max-forward-lines MAX_FORWARD_LINES\n  --max-backward-lines MAX_BACKWARD_LINES\n  --focus-file FOCUS_FILE"
     },
     {
       "path": "scripts/investigation/evidence_ranker.py",
@@ -258,7 +264,7 @@
       "path": "scripts/investigation/runtime_propagation_topology_builder.py",
       "module": "scripts.investigation.runtime_propagation_topology_builder",
       "help_ok": true,
-      "help": "usage: runtime_propagation_topology_builder.py [-h] [--workspace WORKSPACE]\n                                               [--input INPUT]\n                                               [--out-json OUT_JSON]\n                                               [--out-md OUT_MD]\n\nBuild traversal-oriented runtime propagation topology from\nruntime_topology.json.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n                        SIGNALIS AI workspace root. Not a raw Lua source root.\n  --input INPUT\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+      "help": "usage: runtime_propagation_topology_builder.py [-h] [--workspace WORKSPACE]\n                                               [--runtime-topology RUNTIME_TOPOLOGY]\n                                               [--out-json OUT_JSON]\n                                               [--out-md OUT_MD]\n                                               [--max-callback-forward-lines MAX_CALLBACK_FORWARD_LINES]\n                                               [--max-callback-backward-lines MAX_CALLBACK_BACKWARD_LINES]\n\nBuild traversal-oriented runtime propagation topology from\nruntime_topology.json.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --runtime-topology RUNTIME_TOPOLOGY\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --max-callback-forward-lines MAX_CALLBACK_FORWARD_LINES\n  --max-callback-backward-lines MAX_CALLBACK_BACKWARD_LINES"
     },
     {
       "path": "scripts/investigation/runtime_propagation_topology_probe.py",

@@ -83,3 +83,14 @@ Not file containment.
 Not relationship counts.
 
 Propagation topology is traversal-oriented.
+
+## Validation Rule
+
+Propagation topology validation requires:
+
+1. runtime_propagation_topology_probe PASS
+2. runtime_fact_topology_mapper generated against runtime_propagation_topology.json
+3. runtime_chain_builder_v5 generated against runtime_propagation_topology.json
+
+Artifacts generated against runtime_topology.json are not evidence
+for propagation topology effectiveness.

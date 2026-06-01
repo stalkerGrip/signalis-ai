@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `87`
+- Scripts checked: `88`
 
 ## scripts/diagnostics
 
@@ -1590,6 +1590,28 @@ options:
   --out OUT
 ```
 
+### `scripts.investigation.debug_runtime_propagation_v3_bridges`
+
+- Path: `scripts/investigation/debug_runtime_propagation_v3_bridges.py`
+- Help status: `OK`
+
+```text
+usage: debug_runtime_propagation_v3_bridges.py [-h] --runtime-topology
+                                               RUNTIME_TOPOLOGY --out-md
+                                               OUT_MD
+                                               [--max-forward-lines MAX_FORWARD_LINES]
+                                               [--max-backward-lines MAX_BACKWARD_LINES]
+                                               [--focus-file FOCUS_FILE]
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-topology RUNTIME_TOPOLOGY
+  --out-md OUT_MD
+  --max-forward-lines MAX_FORWARD_LINES
+  --max-backward-lines MAX_BACKWARD_LINES
+  --focus-file FOCUS_FILE
+```
+
 ### `scripts.investigation.evidence_ranker`
 
 - Path: `scripts/investigation/evidence_ranker.py`
@@ -2115,9 +2137,11 @@ options:
 
 ```text
 usage: runtime_propagation_topology_builder.py [-h] [--workspace WORKSPACE]
-                                               [--input INPUT]
+                                               [--runtime-topology RUNTIME_TOPOLOGY]
                                                [--out-json OUT_JSON]
                                                [--out-md OUT_MD]
+                                               [--max-callback-forward-lines MAX_CALLBACK_FORWARD_LINES]
+                                               [--max-callback-backward-lines MAX_CALLBACK_BACKWARD_LINES]
 
 Build traversal-oriented runtime propagation topology from
 runtime_topology.json.
@@ -2125,10 +2149,11 @@ runtime_topology.json.
 options:
   -h, --help            show this help message and exit
   --workspace WORKSPACE
-                        SIGNALIS AI workspace root. Not a raw Lua source root.
-  --input INPUT
+  --runtime-topology RUNTIME_TOPOLOGY
   --out-json OUT_JSON
   --out-md OUT_MD
+  --max-callback-forward-lines MAX_CALLBACK_FORWARD_LINES
+  --max-callback-backward-lines MAX_CALLBACK_BACKWARD_LINES
 ```
 
 ### `scripts.investigation.runtime_propagation_topology_probe`
