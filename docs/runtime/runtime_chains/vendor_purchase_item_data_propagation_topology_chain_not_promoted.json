@@ -1,9 +1,0 @@
-{
-  "source": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json",
-  "promotion_type": "not_promoted",
-  "promoted": false,
-  "reasons": [
-    "promotion thresholds not met"
-  ],
-  "output_md": "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_not_promoted.md"
-}

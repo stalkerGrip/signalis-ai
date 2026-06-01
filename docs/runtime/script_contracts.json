@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 97,
+  "scripts_checked": 90,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
       "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8650.92it/s]"
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8258.87it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -147,12 +147,6 @@
       "help": ""
     },
     {
-      "path": "scripts/investigation/promote_characterload_runtime_chain.py",
-      "module": "scripts.investigation.promote_characterload_runtime_chain",
-      "help_ok": true,
-      "help": "usage: promote_characterload_runtime_chain.py [-h] [--candidate CANDIDATE]\n                                              [--out-dir OUT_DIR]\n\nPromote CharacterLoaded runtime chain candidate as topology/source-validation\nsupported chain.\n\noptions:\n  -h, --help            show this help message and exit\n  --candidate CANDIDATE\n  --out-dir OUT_DIR"
-    },
-    {
       "path": "scripts/investigation/promote_runtime_chain_candidate.py",
       "module": "scripts.investigation.promote_runtime_chain_candidate",
       "help_ok": true,
@@ -169,12 +163,6 @@
       "module": "scripts.investigation.runtime_chain_branch_builder",
       "help_ok": true,
       "help": "usage: runtime_chain_branch_builder.py [-h] --ordered-steps ORDERED_STEPS\n                                       --out-json OUT_JSON --out-md OUT_MD\n                                       [--root ROOT] [--join JOIN]\n\nBuild branch-aware runtime chain from ordered runtime steps.\n\noptions:\n  -h, --help            show this help message and exit\n  --ordered-steps ORDERED_STEPS\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --root ROOT\n  --join JOIN"
-    },
-    {
-      "path": "scripts/investigation/runtime_chain_builder.py",
-      "module": "scripts.investigation.runtime_chain_builder",
-      "help_ok": true,
-      "help": "usage: runtime_chain_builder.py [-h] --workspace WORKSPACE\n                                [--workspace-config WORKSPACE_CONFIG] --title\n                                TITLE --query QUERY\n                                [--validated-evidence VALIDATED_EVIDENCE]\n                                [--runtime-facts RUNTIME_FACTS]\n                                [--runtime-topology RUNTIME_TOPOLOGY]\n                                [--targeted-validation TARGETED_VALIDATION]\n                                [--promoted-chain PROMOTED_CHAIN] --out-json\n                                OUT_JSON --out-md OUT_MD\n                                [--max-steps MAX_STEPS]\n\nBuild general runtime chain candidate from validated investigation artifacts.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --workspace-config WORKSPACE_CONFIG\n  --title TITLE\n  --query QUERY\n  --validated-evidence VALIDATED_EVIDENCE\n  --runtime-facts RUNTIME_FACTS\n  --runtime-topology RUNTIME_TOPOLOGY\n  --targeted-validation TARGETED_VALIDATION\n  --promoted-chain PROMOTED_CHAIN\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --max-steps MAX_STEPS"
     },
     {
       "path": "scripts/investigation/runtime_chain_builder_v4.py",
@@ -201,34 +189,10 @@
       "help": "usage: runtime_chain_graph.py [-h] --workspace WORKSPACE [--nodes NODES]\n                              [--edges EDGES] [--out-json OUT_JSON]\n                              [--out-md OUT_MD] [--source-query SOURCE_QUERY]\n                              [--target-query TARGET_QUERY]\n                              [--max-paths MAX_PATHS] [--cutoff CUTOFF]\n\nRuntime Chain Builder V4 graph foundation.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --nodes NODES\n  --edges EDGES\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --source-query SOURCE_QUERY\n  --target-query TARGET_QUERY\n  --max-paths MAX_PATHS\n  --cutoff CUTOFF"
     },
     {
-      "path": "scripts/investigation/runtime_chain_graph_characterload.py",
-      "module": "scripts.investigation.runtime_chain_graph_characterload",
-      "help_ok": true,
-      "help": "Wrote graph audit JSON: investigations\\validation\\runtime_chain_graph_characterload_v1.json\nWrote graph audit MD:   investigations\\validation\\runtime_chain_graph_characterload_v1.md\nNodes: 5066\nEdges: 19459\nCandidate paths: 0\n[RUN] E:\\signalis_ai\\.venv\\Scripts\\python.exe -m scripts.investigation.runtime_chain_graph --workspace E:\\signalis_ai --source-query CharacterLoaded PlayerLoadedChar PrePlayerLoadedChar --target-query inventoryOpen inventorySetPanelStatus client inventory UI --max-paths 50 --cutoff 12 --out-json investigations\\validation\\runtime_chain_graph_characterload_v1.json --out-md investigations\\validation\\runtime_chain_graph_characterload_v1.md\n\n[DONE] CharacterLoaded graph audit written:\nJSON: investigations\\validation\\runtime_chain_graph_characterload_v1.json\nMD:   investigations\\validation\\runtime_chain_graph_characterload_v1.md"
-    },
-    {
-      "path": "scripts/investigation/runtime_chain_node_search_characterload.py",
-      "module": "scripts.investigation.runtime_chain_node_search_characterload",
-      "help_ok": true,
-      "help": "Wrote: investigations\\validation\\runtime_chain_node_search_characterload_v1.md"
-    },
-    {
       "path": "scripts/investigation/runtime_chain_pathfinder.py",
       "module": "scripts.investigation.runtime_chain_pathfinder",
       "help_ok": true,
       "help": "usage: runtime_chain_pathfinder.py [-h] --graph-audit GRAPH_AUDIT --title\n                                   TITLE --out-json OUT_JSON --out-md OUT_MD\n                                   [--top-k TOP_K]\n\nScore topology candidate paths and export runtime_chain.v2 candidate.\n\noptions:\n  -h, --help            show this help message and exit\n  --graph-audit GRAPH_AUDIT\n  --title TITLE\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --top-k TOP_K"
-    },
-    {
-      "path": "scripts/investigation/runtime_chain_pipeline.py",
-      "module": "scripts.investigation.runtime_chain_pipeline",
-      "help_ok": true,
-      "help": "usage: runtime_chain_pipeline.py [-h] --ranked-evidence RANKED_EVIDENCE --name\n                                 NAME [--out-dir OUT_DIR]\n                                 [--recovery-input [RECOVERY_INPUT ...]]\n                                 [--root ROOT] [--join JOIN]\n                                 [--min-score MIN_SCORE]\n                                 [--min-evidence-score MIN_EVIDENCE_SCORE]\n                                 [--max-evidence-per-step MAX_EVIDENCE_PER_STEP]\n                                 [--drop-generic-related] [--drop-empty-text]\n                                 [--drop-setup-only]\n\nRun Runtime Chain Builder V4 pipeline: step builder -> step orderer -> branch\nbuilder.\n\noptions:\n  -h, --help            show this help message and exit\n  --ranked-evidence RANKED_EVIDENCE\n  --name NAME\n  --out-dir OUT_DIR\n  --recovery-input [RECOVERY_INPUT ...]\n  --root ROOT\n  --join JOIN\n  --min-score MIN_SCORE\n  --min-evidence-score MIN_EVIDENCE_SCORE\n  --max-evidence-per-step MAX_EVIDENCE_PER_STEP\n  --drop-generic-related\n  --drop-empty-text\n  --drop-setup-only"
-    },
-    {
-      "path": "scripts/investigation/runtime_chain_promoter.py",
-      "module": "scripts.investigation.runtime_chain_promoter",
-      "help_ok": true,
-      "help": "usage: runtime_chain_promoter.py [-h] --chain CHAIN --workspace WORKSPACE\n                                 [--out OUT] [--allow-medium]\n\nPromote a high-confidence runtime chain candidate into\ndocs/runtime/runtime_chains.\n\noptions:\n  -h, --help            show this help message and exit\n  --chain CHAIN\n  --workspace WORKSPACE\n  --out OUT\n  --allow-medium"
     },
     {
       "path": "scripts/investigation/runtime_chain_promoter_v4.py",
@@ -483,12 +447,6 @@
       "help": "usage: investigate.py [-h] --workspace WORKSPACE --query QUERY [--top-k TOP_K]\n                      [--collection COLLECTION] [--out-dir OUT_DIR]\n                      [--extra-query-arg EXTRA_QUERY_ARG] [--no-human-context]\n                      [--no-project-memory] [--no-topology-summary]\n\nGenerate SIGNALIS investigation report.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --query QUERY\n  --top-k TOP_K\n  --collection COLLECTION\n  --out-dir OUT_DIR\n  --extra-query-arg EXTRA_QUERY_ARG\n  --no-human-context\n  --no-project-memory\n  --no-topology-summary"
     },
     {
-      "path": "scripts/qdrant/patch_vendor_purchase_validation_targets.py",
-      "module": "scripts.qdrant.patch_vendor_purchase_validation_targets",
-      "help_ok": true,
-      "help": "usage: patch_vendor_purchase_validation_targets.py [-h] --input INPUT\n                                                   [--output OUTPUT]\n\nPatch vendor purchase targeted validation plan with missing source checks.\n\noptions:\n  -h, --help       show this help message and exit\n  --input INPUT    Existing *_targeted_validation.json file\n  --output OUTPUT  Patched output json. Defaults to *_patched.json"
-    },
-    {
       "path": "scripts/qdrant/path_reconstruction.py",
       "module": "scripts.qdrant.path_reconstruction",
       "help_ok": true,
@@ -499,18 +457,6 @@
       "module": "scripts.qdrant.path_reconstruction_v2",
       "help_ok": true,
       "help": "usage: path_reconstruction_v2.py [-h] --workspace WORKSPACE\n                                 [--topology TOPOLOGY] --from FROM_TERM --to\n                                 TO_TERM [--terms [TERMS ...]]\n                                 [--max-depth MAX_DEPTH]\n                                 [--max-paths MAX_PATHS] [--output OUTPUT]\n\nWeighted runtime topology path reconstruction.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --topology TOPOLOGY\n  --from FROM_TERM\n  --to TO_TERM\n  --terms [TERMS ...]\n  --max-depth MAX_DEPTH\n  --max-paths MAX_PATHS\n  --output OUTPUT"
-    },
-    {
-      "path": "scripts/qdrant/promote_runtime_chain.py",
-      "module": "scripts.qdrant.promote_runtime_chain",
-      "help_ok": true,
-      "help": "usage: promote_runtime_chain.py [-h] --chain CHAIN --subsystem SUBSYSTEM\n                                --name NAME [--out-dir OUT_DIR] [--out OUT]\n                                [--title TITLE] [--chain-id CHAIN_ID]\n\nPromote validated runtime chain evidence into durable runtime-chain\ndocumentation.\n\noptions:\n  -h, --help            show this help message and exit\n  --chain CHAIN         Runtime chain evidence JSON\n  --subsystem SUBSYSTEM\n                        Subsystem name, e.g. vendor\n  --name NAME           Output slug/name, e.g.\n                        vendor_purchase_item_metadata_sync\n  --out-dir OUT_DIR\n  --out OUT             Optional exact output markdown path\n  --title TITLE         Optional document title\n  --chain-id CHAIN_ID   Optional chain id to select from multi-chain evidence\n                        JSON"
-    },
-    {
-      "path": "scripts/qdrant/promote_vendor_purchase_chain_doc.py",
-      "module": "scripts.qdrant.promote_vendor_purchase_chain_doc",
-      "help_ok": true,
-      "help": "usage: promote_vendor_purchase_chain_doc.py [-h] --chain-evidence\n                                            CHAIN_EVIDENCE [--out OUT]\n\nPromote validated vendor purchase runtime chain to durable markdown doc.\n\noptions:\n  -h, --help            show this help message and exit\n  --chain-evidence CHAIN_EVIDENCE\n                        Runtime chain evidence JSON produced by\n                        build_runtime_chain_evidence.py\n  --out OUT"
     },
     {
       "path": "scripts/qdrant/query_qdrant.py",
@@ -571,6 +517,18 @@
       "module": "scripts.tools.check_pipeline_contracts",
       "help_ok": true,
       "help": "usage: check_pipeline_contracts.py [-h] [--workspace WORKSPACE]\n                                   [--contract CONTRACT] [--out-json OUT_JSON]\n                                   [--out-md OUT_MD] [--init-contract]\n                                   [--fail-on-error]\n\nCheck SIGNALIS AI script/artifact contracts against actual repository state.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --contract CONTRACT\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --init-contract       Create a starter contract if missing.\n  --fail-on-error       Exit non-zero when ERROR findings exist."
+    },
+    {
+      "path": "scripts/tools/classify_pipeline_artifacts.py",
+      "module": "scripts.tools.classify_pipeline_artifacts",
+      "help_ok": true,
+      "help": "usage: classify_pipeline_artifacts.py [-h] --workspace WORKSPACE\n                                      [--contract CONTRACT]\n                                      [--out-json OUT_JSON] [--out-md OUT_MD]\n                                      [--archive-dir ARCHIVE_DIR] [--apply]\n                                      [--delete]\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --contract CONTRACT\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --archive-dir ARCHIVE_DIR\n  --apply\n  --delete"
+    },
+    {
+      "path": "scripts/tools/cleanup_pipeline_artifacts.py",
+      "module": "scripts.tools.cleanup_pipeline_artifacts",
+      "help_ok": true,
+      "help": "usage: cleanup_pipeline_artifacts.py [-h] --workspace WORKSPACE\n                                     [--contract CONTRACT]\n                                     [--out-json OUT_JSON] [--out-md OUT_MD]\n                                     [--apply] [--archive]\n                                     [--archive-dir ARCHIVE_DIR]\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --contract CONTRACT\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --apply\n  --archive\n  --archive-dir ARCHIVE_DIR"
     },
     {
       "path": "scripts/tools/generate_project_structure.py",

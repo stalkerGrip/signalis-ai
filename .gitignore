@@ -93,3 +93,6 @@ reports/retrieval_eval/raw/**
 
 *.tmp
 *.bak
+
+# SIGNALIS AI local archives / cleanup trash
+_archive/
