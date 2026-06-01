@@ -96,7 +96,10 @@ scripts/tools/check_pipeline_contracts.py
 
 ## Pipeline Contract Rule
 
-Every pipeline-stable script must be contract-addressable.
+Only NEW scripts and MAJOR REWRITES
+must contain PIPELINE_CONTRACT.
+
+Old scripts are grandfathered.
 
 Scripts should declare:
 
@@ -120,6 +123,29 @@ PIPELINE_CONTRACT = {
 ```
 
 Registry generation must prefer explicit contract flags over inference.
+
+---
+
+## Legacy Script Rule
+
+The contract system is forward-looking.
+
+Existing scripts created before the contract system was introduced are considered legacy scripts.
+
+Legacy scripts do not need to be retrofitted with PIPELINE_CONTRACT metadata.
+
+The registry builder may infer metadata for legacy scripts.
+
+Mandatory PIPELINE_CONTRACT metadata applies only to:
+
+- newly created scripts
+- major script rewrites
+- replacement scripts
+- pipeline infrastructure scripts
+
+This prevents large-scale retrofitting work from becoming a bottleneck.
+
+Pipeline progress takes priority over historical contract coverage.
 
 ---
 

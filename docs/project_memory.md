@@ -132,6 +132,26 @@ Do not investigate gameplay fixes.
 
 ## Completed Bottlenecks
 
+### Contract Adoption Policy
+
+Contract Registry:
+PASS
+
+Contract Checker:
+PASS
+
+Adoption strategy:
+
+- Legacy scripts are grandfathered.
+- Registry inference is acceptable for legacy scripts.
+- PIPELINE_CONTRACT metadata is mandatory only for:
+  - new scripts
+  - major rewrites
+  - replacement scripts
+  - pipeline infrastructure
+
+Do not pause pipeline progress to retrofit historical scripts.
+
 ### Extraction Phase
 PASS
 
@@ -380,7 +400,9 @@ Validated promoted chains:
 Critical lesson:
 
 Do not infer script names from prior chats.
-script_contracts.md is authoritative.
+pipeline_artifact_doctrine.md is doctrine.
+script_contracts.md is generated CLI reference.
+pipeline_artifact_contract.json/md is generated machine registry.
 If a script is missing from script_contracts.md, do not invent it.
 Use:
 1. docs/runtime/script_contracts.md
