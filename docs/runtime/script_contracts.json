@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 88,
+  "scripts_checked": 91,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
-      "help_ok": false,
-      "help": "TIMEOUT while running --help"
+      "help_ok": true,
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -109,6 +109,24 @@
       "module": "scripts.investigation.debug_runtime_propagation_v3_bridges",
       "help_ok": true,
       "help": "usage: debug_runtime_propagation_v3_bridges.py [-h] --runtime-topology\n                                               RUNTIME_TOPOLOGY --out-md\n                                               OUT_MD\n                                               [--max-forward-lines MAX_FORWARD_LINES]\n                                               [--max-backward-lines MAX_BACKWARD_LINES]\n                                               [--focus-file FOCUS_FILE]\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-topology RUNTIME_TOPOLOGY\n  --out-md OUT_MD\n  --max-forward-lines MAX_FORWARD_LINES\n  --max-backward-lines MAX_BACKWARD_LINES\n  --focus-file FOCUS_FILE"
+    },
+    {
+      "path": "scripts/investigation/diagnose_runtime_fact_generation.py",
+      "module": "scripts.investigation.diagnose_runtime_fact_generation",
+      "help_ok": true,
+      "help": "usage: diagnose_runtime_fact_generation.py [-h] --facts FACTS --out-md OUT_MD\n                                           --out-json OUT_JSON\n\nDiagnose missing vendor runtime facts/stages.\n\noptions:\n  -h, --help           show this help message and exit\n  --facts FACTS\n  --out-md OUT_MD\n  --out-json OUT_JSON"
+    },
+    {
+      "path": "scripts/investigation/diagnose_source_validation_scope.py",
+      "module": "scripts.investigation.diagnose_source_validation_scope",
+      "help_ok": true,
+      "help": "usage: diagnose_source_validation_scope.py [-h] --source-validation\n                                           SOURCE_VALIDATION --out-json\n                                           OUT_JSON --out-md OUT_MD\n\noptions:\n  -h, --help            show this help message and exit\n  --source-validation SOURCE_VALIDATION\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/diagnose_target_request_scope.py",
+      "module": "scripts.investigation.diagnose_target_request_scope",
+      "help_ok": true,
+      "help": "usage: diagnose_target_request_scope.py [-h] --target-request TARGET_REQUEST\n                                        --out-json OUT_JSON --out-md OUT_MD\n\nDiagnose whether a targeted validation request covers the vendor itemdata\nruntime chain.\n\noptions:\n  -h, --help            show this help message and exit\n  --target-request TARGET_REQUEST\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/evidence_ranker.py",

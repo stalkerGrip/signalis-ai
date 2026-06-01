@@ -17,17 +17,24 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `88`
+- Scripts checked: `91`
 
 ## scripts/diagnostics
 
 ### `scripts.diagnostics.test_embeddings`
 
 - Path: `scripts/diagnostics/test_embeddings.py`
-- Help status: `NO_HELP_OR_ERROR`
+- Help status: `OK`
 
 ```text
-TIMEOUT while running --help
+Loading embedding model...
+Generating embedding...
+Vector size: 384
+Success.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]
 ```
 
 ## scripts/extraction
@@ -1610,6 +1617,60 @@ options:
   --max-forward-lines MAX_FORWARD_LINES
   --max-backward-lines MAX_BACKWARD_LINES
   --focus-file FOCUS_FILE
+```
+
+### `scripts.investigation.diagnose_runtime_fact_generation`
+
+- Path: `scripts/investigation/diagnose_runtime_fact_generation.py`
+- Help status: `OK`
+
+```text
+usage: diagnose_runtime_fact_generation.py [-h] --facts FACTS --out-md OUT_MD
+                                           --out-json OUT_JSON
+
+Diagnose missing vendor runtime facts/stages.
+
+options:
+  -h, --help           show this help message and exit
+  --facts FACTS
+  --out-md OUT_MD
+  --out-json OUT_JSON
+```
+
+### `scripts.investigation.diagnose_source_validation_scope`
+
+- Path: `scripts/investigation/diagnose_source_validation_scope.py`
+- Help status: `OK`
+
+```text
+usage: diagnose_source_validation_scope.py [-h] --source-validation
+                                           SOURCE_VALIDATION --out-json
+                                           OUT_JSON --out-md OUT_MD
+
+options:
+  -h, --help            show this help message and exit
+  --source-validation SOURCE_VALIDATION
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.diagnose_target_request_scope`
+
+- Path: `scripts/investigation/diagnose_target_request_scope.py`
+- Help status: `OK`
+
+```text
+usage: diagnose_target_request_scope.py [-h] --target-request TARGET_REQUEST
+                                        --out-json OUT_JSON --out-md OUT_MD
+
+Diagnose whether a targeted validation request covers the vendor itemdata
+runtime chain.
+
+options:
+  -h, --help            show this help message and exit
+  --target-request TARGET_REQUEST
+  --out-json OUT_JSON
+  --out-md OUT_MD
 ```
 
 ### `scripts.investigation.evidence_ranker`
