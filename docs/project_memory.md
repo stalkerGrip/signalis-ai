@@ -14,35 +14,7 @@ Runtime Propagation Topology V3.
 
 ---
 
-## Current Experiment
-
-Runtime Fact Sequencing Investigation
-
-Target:
-
-vendor_purchase_itemdata_generic_runtime_facts_v2.json
-
-Objective:
-
-Determine whether Runtime Chain Builder V5 failure is caused by:
-
-- incorrect fact ordering
-- incorrect fact generation
-- incorrect stage selection
-
-Known evidence:
-
-Characterload benchmark passes against
-runtime_propagation_topology.json
-
-Therefore Runtime Propagation Topology V3 is not the active bottleneck.
-
----
-
-## Current Bottleneck
-
-Runtime Fact sequencing validation
-for Runtime Chain Builder V5.
+## Current Investigation Update — Vendor Benchmark
 
 Runtime Propagation Topology V3:
 PASS
@@ -51,62 +23,294 @@ Characterload benchmark:
 PASS
 
 Vendor benchmark:
-FAIL
+previous FAIL was traced to targeted validation request scope collapse.
 
-Current hypothesis:
+Confirmed failure chain:
 
-vendor_purchase_itemdata_generic_runtime_facts_v2.json
-contains stage ordering that does not match validated runtime propagation.
+vendor_purchase_itemdata_invdata_client_apply_targets.json
+contained only:
+
+- gamemode/core/libs/item/cl_networking.lua
+- invData
+- ItemDataChanged
+
+Therefore source validation, runtime facts, and chain builder only received client-apply evidence.
+
+Root cause was not Runtime Chain Builder V5 and not Runtime Propagation Topology V3.
+
+Resolved bottleneck:
+
+targeted_validation_request_generation
+
+Fix applied:
+
+scripts/investigation/build_targeted_validation_request.py now expands known vendor itemdata benchmark chains into full-chain validation targets.
+
+New full-chain target request validation:
+
+vendor_purchase_itemdata_full_chain_targets_v3.json
+
+Source validation result:
+
+vendor_purchase_itemdata_full_chain_source_validation_v3.md
+
+Result:
+
+- files_total: 6
+- files_found: 6
+- needles_total: 27
+- needles_found: 26
+- all_needles_found: False
+
+Validated stages:
+
+- vendor open metadata assignment
+- vendorSPrice/vendorBPrice assignment
+- vendor purchase transfer
+- inventory:add
+- vendor metadata cleanup
+- ITEM:setData
+- netstream.Start("invData")
+- invData client apply
+- ItemDataChanged
+- InventoryItemDataChanged UI hook
+
+Only missing needle:
+
+- syncItemAdded
+
+Interpretation:
+
+syncItemAdded is likely outdated stage naming or wrong expected needle, because inventory:add and nutInventoryAdd were validated directly.
+
+---
+
+## Current Bottleneck
+
+### Runtime Fact Sequencing Validation
+
+Status:
+
+ACTIVE
+
+Vendor benchmark status:
+
+PARTIAL PASS
+
+Current evidence:
+
+Full-chain source validation now recovers:
+
+vendor open metadata assignment
+→ vendorSPrice/vendorBPrice assignment
+→ vendor purchase transfer
+→ inventory:add
+→ vendor metadata cleanup
+→ ITEM:setData
+→ netstream.Start("invData")
+→ invData
+→ ItemDataChanged
+→ InventoryItemDataChanged
+
+Source validation coverage:
+
+- files_total: 6
+- files_found: 6
+- needles_total: 27
+- needles_found: 26
+
+Only missing needle:
+
+- syncItemAdded
+
+Current unknown:
+
+Determine how runtime facts are generated from:
+
+vendor_purchase_itemdata_full_chain_source_validation_v3.json
 
 Goal:
 
-Determine whether the next bottleneck is:
+Determine whether runtime fact generation preserves:
 
-- runtime fact generation
-- runtime fact ordering
-- runtime chain stage selection
+vendor purchase transfer
+→ metadata mutation
+→ metadata synchronization
+→ client apply
+→ UI refresh
+
+or whether sequencing/stage loss still occurs after source validation.
+
+Important:
+
+Do not guess script names.
+
+script_contracts.md is authoritative.
+
+If a runtime-fact generation script is not listed in script_contracts.md:
+
+1. inspect actual pipeline scripts
+2. use --help
+3. ask human for authoritative module
+
+before continuing investigation.
+
+Current investigation target:
+
+Identify the actual runtime-fact generation module and continue validation from:
+
+vendor_purchase_itemdata_full_chain_source_validation_v3.json
+
+Pipeline-first doctrine remains active.
+
+Do not investigate gameplay fixes.
 
 ---
 
 ## Completed Bottlenecks
 
-1. Runtime Topology Relationship Discovery
+### Extraction Phase
 PASS
 
-2. Runtime Propagation Topology V1
+Completed:
+
+- Hook extraction stabilization
+- Registry/global extraction improvements
+- Runtime event extraction
+- Network extraction
+- Timer extraction
+
+Result:
+
+Deterministic runtime topology generation established.
+
+---
+
+### Embedding / Retrieval Phase
 PASS
 
-3. Runtime Propagation Topology V2
+Completed:
+
+- Migration to Python 3.11
+- BAAI/bge-small-en-v1.5 adoption
+- Qdrant ingestion pipeline
+- Reranking integration
+- Retrieval validation
+- Context pack generation
+
+Result:
+
+Runtime investigations can retrieve authoritative evidence from semantic artifacts.
+
+---
+
+### Runtime Propagation Topology V3
 PASS
 
-4. Runtime Propagation Topology V3
+Completed:
+
+- Runtime graph construction
+- Runtime propagation topology generation
+- Topology probe tooling
+- Character lifecycle validation
+
+Result:
+
+Runtime propagation topology accepted as authoritative runtime structure source.
+
+---
+
+### Characterload Benchmark
 PASS
 
-Validated propagation chains:
-
-- invData → ItemDataChanged
-
-- PlayerLoadedChar → PlayerLoadout
-
-- PlayerLoadout → PostPlayerLoadout
-
-5. Runtime Chain Builder V5 propagation topology consumption
-
-PASS
-
-Validated by:
+Validated:
 
 PlayerLoadedChar
+→ CharacterLoaded
+→ inventory initialization
 → PlayerLoadout
-
-PlayerLoadout
 → PostPlayerLoadout
 
-Supported links increased from:
+Result:
 
-0
-→
-5
+Characterload benchmark chain successfully reconstructed and promoted.
+
+---
+
+### Runtime Chain Builder Validation
+PASS
+
+Completed:
+
+- Runtime chain graph generation
+- Runtime chain pathfinder
+- Runtime chain builder V4/V5 validation
+- Runtime chain promotion validation
+
+Result:
+
+Runtime chain builder correctly reconstructs chains from supplied evidence.
+
+---
+
+### Vendor Benchmark Investigation
+PARTIAL PASS
+
+Resolved bottleneck:
+
+Targeted Validation Request Generation
+
+Root cause:
+
+vendor_purchase_itemdata_invdata_client_apply_targets.json
+collapsed investigation scope to:
+
+- cl_networking.lua
+- invData
+- ItemDataChanged
+
+This caused:
+
+- client-only source validation
+- client-only runtime facts
+- incomplete runtime chains
+
+Fix:
+
+build_targeted_validation_request.py expanded to support benchmark-aware full-chain target generation.
+
+Validation result:
+
+vendor_purchase_itemdata_full_chain_targets_v3.json
+
+Recovered stages:
+
+- vendor metadata assignment
+- vendor purchase transfer
+- inventory:add
+- vendor metadata cleanup
+- ITEM:setData
+- invData synchronization
+- ItemDataChanged
+- InventoryItemDataChanged
+
+Result:
+
+Target selection bottleneck resolved.
+
+---
+
+### Eliminated Bottlenecks
+
+Evidence currently does NOT support failures in:
+
+- Runtime Propagation Topology V3
+- Runtime Fact Graph generation
+- Runtime Fact Ordering
+- Runtime Chain Builder V5
+- Source Validation execution
+
+These systems behaved correctly given supplied evidence.
 
 ---
 
@@ -147,13 +351,15 @@ Validated promoted chains:
 - runtime_propagation_doctrine.md
 - runtime_chain_promotion.md
 
-Script contracts are authoritative for CLI usage.
+Critical lesson:
 
-Do not infer arguments from previous chats.
-
-When in doubt:
-1. script_contracts.md
+Do not infer script names from prior chats.
+script_contracts.md is authoritative.
+If a script is missing from script_contracts.md, do not invent it.
+Use:
+1. docs/runtime/script_contracts.md
 2. python -m <module> --help
+3. ask user for actual module if not listed
 
 ---
 
