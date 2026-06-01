@@ -34,7 +34,7 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8291.03it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8651.19it/s]
 ```
 
 ## scripts/extraction
@@ -1526,6 +1526,7 @@ Saved 102 entries -> manifests\timers\player_action_timers.json
 ```text
 usage: build_architecture_intelligence_v1.py [-h] --workspace WORKSPACE
                                              [--context-pack CONTEXT_PACK]
+                                             [--rule-config RULE_CONFIG]
                                              [--out-json OUT_JSON]
                                              [--out-md OUT_MD]
 
@@ -1536,6 +1537,9 @@ options:
   -h, --help            show this help message and exit
   --workspace WORKSPACE
   --context-pack CONTEXT_PACK
+  --rule-config RULE_CONFIG
+                        Optional JSON file with stage_classes and
+                        contract_rules.
   --out-json OUT_JSON
   --out-md OUT_MD
 ```
@@ -1823,10 +1827,15 @@ usage: retrieve_promoted_runtime_chains.py [-h] --workspace WORKSPACE --query
                                            [--qdrant-url QDRANT_URL]
                                            [--retrieve-k RETRIEVE_K]
                                            [--top-k TOP_K]
+                                           [--required-doc-type REQUIRED_DOC_TYPE]
+                                           [--required-schema REQUIRED_SCHEMA]
+                                           [--allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES]
+                                           [--include-raw-payload]
+                                           [--debug-first-payload]
                                            [--out-json OUT_JSON]
                                            [--out-md OUT_MD]
 
-Retrieve promoted runtime chains from Qdrant and build an architecture context
+Retrieve runtime chain context from Qdrant and build an architecture context
 pack.
 
 options:
@@ -1838,6 +1847,19 @@ options:
   --qdrant-url QDRANT_URL
   --retrieve-k RETRIEVE_K
   --top-k TOP_K
+  --required-doc-type REQUIRED_DOC_TYPE
+                        Accepted doc_type. Use an empty string to disable
+                        doc_type filtering.
+  --required-schema REQUIRED_SCHEMA
+                        Accepted payload schema. Use an empty string to
+                        disable schema filtering.
+  --allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES
+                        Comma-separated accepted promotion statuses. Use an
+                        empty string to disable status filtering.
+  --include-raw-payload
+                        Include raw Qdrant payloads in the JSON context pack.
+  --debug-first-payload
+                        Print the first accepted raw payload for diagnostics.
   --out-json OUT_JSON
   --out-md OUT_MD
 ```
@@ -2774,7 +2796,11 @@ options:
 - Help status: `OK`
 
 ```text
-usage: embed_qdrant_documents.py [-h] --workspace WORKSPACE [--model MODEL]
+usage: embed_qdrant_documents.py [-h] --workspace WORKSPACE
+                                 [--input-jsonl INPUT_JSONL]
+                                 [--optional-input-jsonl OPTIONAL_INPUT_JSONL]
+                                 [--out OUT] [--summary SUMMARY]
+                                 [--model MODEL]
                                  [--fallback-model FALLBACK_MODEL]
                                  [--device DEVICE] [--batch-size BATCH_SIZE]
                                  [--limit LIMIT] [--trust-remote-code]
@@ -2785,6 +2811,16 @@ Embed SIGNALIS Qdrant documents with deterministic no-model fallback.
 options:
   -h, --help            show this help message and exit
   --workspace WORKSPACE
+  --input-jsonl INPUT_JSONL
+                        Required input JSONL. May be repeated. Default:
+                        <workspace>/manifests/semantic/qdrant_documents.jsonl
+  --optional-input-jsonl OPTIONAL_INPUT_JSONL
+                        Optional input JSONL. May be repeated. Default: <works
+                        pace>/manifests/semantic/runtime_chain_corpus.jsonl
+  --out OUT             Default:
+                        <workspace>/manifests/semantic/qdrant_embeddings.jsonl
+  --summary SUMMARY     Default: <workspace>/manifests/semantic/qdrant_embeddi
+                        ng_summary.md
   --model MODEL
   --fallback-model FALLBACK_MODEL
   --device DEVICE
@@ -2851,7 +2887,8 @@ options:
 - Help status: `OK`
 
 ```text
-usage: ingest_qdrant.py [-h] --workspace WORKSPACE [--host HOST] [--port PORT]
+usage: ingest_qdrant.py [-h] --workspace WORKSPACE [--input INPUT]
+                        [--summary SUMMARY] [--host HOST] [--port PORT]
                         [--collection COLLECTION] [--batch-size BATCH_SIZE]
                         [--recreate] [--dry-run] [--write]
 
@@ -2861,6 +2898,10 @@ options:
   -h, --help            show this help message and exit
   --workspace WORKSPACE
                         Workspace root, e.g. E:/signalis_ai
+  --input INPUT         Default:
+                        <workspace>/manifests/semantic/qdrant_embeddings.jsonl
+  --summary SUMMARY     Default: <workspace>/manifests/semantic/qdrant_ingest_
+                        summary.md
   --host HOST           Qdrant host
   --port PORT           Qdrant HTTP port
   --collection COLLECTION
@@ -3092,6 +3133,8 @@ usage: build_pipeline_contract_registry.py [-h] [--workspace WORKSPACE]
                                            [--existing-contract EXISTING_CONTRACT]
                                            [--out-json OUT_JSON]
                                            [--out-md OUT_MD]
+                                           [--script-dir SCRIPT_DIR]
+                                           [--artifact-dir ARTIFACT_DIR]
                                            [--no-merge-existing]
 
 Build fire-and-forget SIGNALIS pipeline script/artifact contract registry.
@@ -3102,6 +3145,14 @@ options:
   --existing-contract EXISTING_CONTRACT
   --out-json OUT_JSON
   --out-md OUT_MD
+  --script-dir SCRIPT_DIR
+                        Script directory to scan, relative to workspace unless
+                        absolute. Can be repeated. Defaults to canonical
+                        script roots.
+  --artifact-dir ARTIFACT_DIR
+                        Artifact directory to scan, relative to workspace
+                        unless absolute. Can be repeated. Defaults to
+                        canonical artifact roots.
   --no-merge-existing   Do not preserve manual curations from existing
                         contract.
 ```
@@ -3114,8 +3165,9 @@ options:
 ```text
 usage: check_pipeline_contracts.py [-h] [--workspace WORKSPACE]
                                    [--contract CONTRACT] [--out-json OUT_JSON]
-                                   [--out-md OUT_MD] [--init-contract]
-                                   [--fail-on-error]
+                                   [--out-md OUT_MD] [--script-dir SCRIPT_DIR]
+                                   [--artifact-dir ARTIFACT_DIR]
+                                   [--init-contract] [--fail-on-error]
 
 Check SIGNALIS AI script/artifact contracts against actual repository state.
 
@@ -3125,6 +3177,12 @@ options:
   --contract CONTRACT
   --out-json OUT_JSON
   --out-md OUT_MD
+  --script-dir SCRIPT_DIR
+                        Additional or replacement script directory to scan.
+                        Repeatable. Defaults to canonical script dirs.
+  --artifact-dir ARTIFACT_DIR
+                        Additional or replacement artifact directory to scan.
+                        Repeatable. Defaults to canonical artifact dirs.
   --init-contract       Create a starter contract if missing.
   --fail-on-error       Exit non-zero when ERROR findings exist.
 ```

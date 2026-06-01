@@ -9,6 +9,7 @@ from typing import Any
 
 PIPELINE_CONTRACT = {
     "script_id": "scripts.investigation.update_promoted_runtime_chain_registry",
+    "purpose": "Build promoted runtime chain registry from canonical promotion decisions.",
     "pipeline_stage": "promotion",
     "input_schemas": [
         "runtime_chain_promotion_decision.v4",
@@ -16,6 +17,10 @@ PIPELINE_CONTRACT = {
     "output_schemas": [
         "promoted_runtime_chain_registry.v1",
     ],
+    "artifact_patterns": [
+        "manifests/runtime/promoted_runtime_chains.json",
+    ],
+    "promotion_role": "promotion_support",
     "canonical_status": "active",
 }
 
@@ -23,25 +28,8 @@ PIPELINE_CONTRACT = {
 PROMOTED_STATUSES = {
     "promoted_confirmed_chain",
     "promoted_topology_supported_chain",
+    "promoted_source_validated_chain",
 }
-
-
-def read_candidate_steps(candidate_path: Path) -> tuple[str | None, list[str]]:
-    if not candidate_path.exists():
-        return None, []
-
-    payload = read_json(candidate_path)
-
-    title = payload.get("title")
-
-    steps = []
-
-    for stage in payload.get("stages", []):
-        name = stage.get("stage")
-        if name:
-            steps.append(name)
-
-    return title, steps
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -61,24 +49,98 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
     )
 
 
+def read_candidate_steps(candidate_path: Path | None) -> tuple[str | None, list[str]]:
+    if not candidate_path or not candidate_path.exists():
+        return None, []
+
+    payload = read_json(candidate_path)
+
+    title = payload.get("title")
+
+    steps = []
+
+    for stage in payload.get("stages", []):
+        name = stage.get("stage")
+        if name:
+            steps.append(name)
+
+    return title, steps
+
+
 def discover_decisions(validation_dir: Path) -> list[Path]:
-    return sorted(
-        validation_dir.glob("*_promotion_decision_v2.json")
-    )
+    return sorted(validation_dir.glob("*.json"))
+
+
+def resolve_workspace_path(workspace: Path, value: str | None) -> Path | None:
+    if not value:
+        return None
+
+    path = Path(value)
+
+    if path.is_absolute():
+        return path
+
+    return workspace / path
+
+
+def decision_timestamp(payload: dict[str, Any]) -> str:
+    value = payload.get("generated_at")
+
+    if isinstance(value, str):
+        return value
+
+    return ""
+
+
+def promoted_artifact_key(workspace: Path, payload: dict[str, Any], fallback: str) -> str:
+    outputs = payload.get("outputs", {})
+    promoted_md = outputs.get("promoted_md")
+
+    if promoted_md:
+        path = resolve_workspace_path(workspace, promoted_md)
+        if path:
+            try:
+                return str(path.resolve()).lower()
+            except OSError:
+                return str(path).lower()
+
+    benchmark = payload.get("benchmark")
+    if benchmark:
+        return str(benchmark)
+
+    return fallback
+
+
+def is_promoted_decision(workspace: Path, payload: dict[str, Any]) -> bool:
+    if payload.get("schema") != "runtime_chain_promotion_decision.v4":
+        return False
+
+    if payload.get("canonical_status") != "canonical":
+        return False
+
+    decision = payload.get("decision", {})
+    if decision.get("decision") not in PROMOTED_STATUSES:
+        return False
+
+    outputs = payload.get("outputs", {})
+    promoted_md = outputs.get("promoted_md")
+    if not promoted_md:
+        return False
+
+    promoted_path = resolve_workspace_path(workspace, promoted_md)
+    if not promoted_path or not promoted_path.exists():
+        return False
+
+    return True
 
 
 def build_registry_entry(
+    workspace: Path,
     decision_file: Path,
     decision_payload: dict[str, Any],
 ) -> dict[str, Any]:
 
     decision = decision_payload.get("decision", {})
-
-    decision_name = decision.get("decision")
-
-    if decision_name not in PROMOTED_STATUSES:
-        return {}
-
     outputs = decision_payload.get("outputs", {})
     inputs = decision_payload.get("inputs", [])
 
@@ -88,42 +150,58 @@ def build_registry_entry(
     )
 
     candidate_path = None
-
     if len(inputs) > 0:
-        candidate_path = Path(inputs[0])
+        candidate_path = resolve_workspace_path(workspace, inputs[0])
 
-    title = None
-    steps = []
-
-    if candidate_path:
-        title, steps = read_candidate_steps(candidate_path)
+    title, steps = read_candidate_steps(candidate_path)
 
     return {
         "chain_id": benchmark,
-
         "title": title,
-
-        "promotion_status": decision_name,
-
+        "promotion_status": decision.get("decision"),
         "confidence": decision.get("confidence"),
         "score": decision.get("score"),
-
         "runtime_chain_steps": steps,
         "stages_total": len(steps),
-
         "generated_at": decision_payload.get("generated_at"),
-
         "decision_artifact": str(decision_file),
-
-        "candidate_artifact":
-            inputs[0] if len(inputs) > 0 else None,
-
-        "promotion_validation_artifact":
-            inputs[1] if len(inputs) > 1 else None,
-
-        "promoted_artifact":
-            outputs.get("promoted_md"),
+        "candidate_artifact": inputs[0] if len(inputs) > 0 else None,
+        "promotion_validation_artifact": inputs[1] if len(inputs) > 1 else None,
+        "promoted_artifact": outputs.get("promoted_md"),
     }
+
+
+def collect_latest_promoted_decisions(
+    workspace: Path,
+    validation_dir: Path,
+) -> list[tuple[Path, dict[str, Any]]]:
+    latest_by_promoted_artifact: dict[str, tuple[Path, dict[str, Any]]] = {}
+
+    for decision_file in discover_decisions(validation_dir):
+        payload = read_json(decision_file)
+
+        if not is_promoted_decision(workspace, payload):
+            continue
+
+        key = promoted_artifact_key(
+            workspace=workspace,
+            payload=payload,
+            fallback=str(decision_file),
+        )
+
+        existing = latest_by_promoted_artifact.get(key)
+        if existing is None:
+            latest_by_promoted_artifact[key] = (decision_file, payload)
+            continue
+
+        _, existing_payload = existing
+        if decision_timestamp(payload) >= decision_timestamp(existing_payload):
+            latest_by_promoted_artifact[key] = (decision_file, payload)
+
+    return sorted(
+        latest_by_promoted_artifact.values(),
+        key=lambda item: item[1].get("benchmark", item[0].stem),
+    )
 
 
 def main() -> None:
@@ -166,21 +244,19 @@ def main() -> None:
         / "promoted_runtime_chains.json"
     )
 
-    chains = []
+    promoted_decisions = collect_latest_promoted_decisions(
+        workspace=workspace,
+        validation_dir=validation_dir,
+    )
 
-    for decision_file in discover_decisions(validation_dir):
-        payload = read_json(decision_file)
-
-        if payload.get("schema") != "runtime_chain_promotion_decision.v4":
-            continue
-
-        entry = build_registry_entry(
-            decision_file,
-            payload,
+    chains = [
+        build_registry_entry(
+            workspace=workspace,
+            decision_file=decision_file,
+            decision_payload=payload,
         )
-
-        if entry:
-            chains.append(entry)
+        for decision_file, payload in promoted_decisions
+    ]
 
     chains.sort(
         key=lambda x: x["chain_id"]

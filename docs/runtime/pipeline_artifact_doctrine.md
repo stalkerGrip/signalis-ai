@@ -652,3 +652,22 @@ promotion
 Architecture goal:
 
 Each fix should improve future investigation orchestration, not only make the current benchmark pass.
+
+## Schema-Driven Discovery Rule
+
+Permanent pipeline scripts must not discover canonical artifacts by filename version when a stable schema exists.
+
+Preferred discovery order:
+
+1. scan candidate JSON artifacts broadly
+2. load JSON
+3. filter by `schema`
+4. filter by `canonical_status`
+5. filter by semantic status fields such as promotion decision
+6. resolve artifact lineage from explicit metadata and `inputs` / `outputs`
+
+Filename patterns may be used only as a broad search optimization, not as authority.
+
+Versioned filename filters such as `_v6`, `_v7`, or `_promotion_decision_v2` are allowed only in one-time migration or diagnostic scripts.
+
+Stable infrastructure scripts must survive future artifact versions without code edits when the schema contract remains compatible.

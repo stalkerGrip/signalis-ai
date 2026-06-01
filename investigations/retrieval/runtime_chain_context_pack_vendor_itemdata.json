@@ -1,0 +1,299 @@
+{
+  "schema": "runtime_chain_context_pack.v1",
+  "producer_script": "scripts.investigation.retrieve_promoted_runtime_chains",
+  "pipeline_stage": "retrieval",
+  "query": "vendor purchase item metadata sync inventory membership item data UI refresh",
+  "collection": "signalis_semantic",
+  "model": "BAAI/bge-small-en-v1.5",
+  "filters": {
+    "required_doc_type": "promoted_runtime_chain",
+    "retrieve_k": 20,
+    "top_k": 5
+  },
+  "inputs": [
+    "qdrant_collection.v1",
+    "runtime_chain_corpus.v1",
+    "E:\\signalis_ai\\docs\\runtime\\pipeline_artifact_contract.json"
+  ],
+  "contract_generated_at": "2026-06-02T00:23:45",
+  "ranked_chains": [
+    {
+      "rank": 1,
+      "qdrant_id": "8ffc7f84-b570-5683-9add-593334a84f06",
+      "score": 0.67969686,
+      "source_id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "doc_type": "promoted_runtime_chain",
+      "title": "Vendor purchase item metadata propagation",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "confidence": "high",
+      "promotion_status": "promoted_confirmed_chain",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md",
+      "text": "Promoted runtime chain: Vendor purchase item metadata propagation\nChain ID: vendor_purchase_itemdata_runtime_chain_candidate_v7\nPromotion status: promoted_confirmed_chain\nConfidence: high\nScore: 1.0\nRuntime propagation: vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+      "stages": [
+        "vendor_open_metadata_assignment",
+        "vendor_purchase_transfer",
+        "vendor_metadata_cleanup",
+        "item_metadata_mutation",
+        "item_metadata_network_send",
+        "inventory_membership_client_apply",
+        "item_metadata_client_apply",
+        "ui_itemdata_refresh_hook"
+      ],
+      "rerank_reasons": [],
+      "raw_payload": {
+        "candidate_artifact": "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v7.json",
+        "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+        "confidence": "high",
+        "content": "Promoted runtime chain: Vendor purchase item metadata propagation\nChain ID: vendor_purchase_itemdata_runtime_chain_candidate_v7\nPromotion status: promoted_confirmed_chain\nConfidence: high\nScore: 1.0\nRuntime propagation: vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+        "decision_artifact": "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_promotion_decision.json",
+        "doc_type": "promoted_runtime_chain",
+        "generated_at": "2026-06-02T00:24:08",
+        "id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v7",
+        "producer_script": "scripts.qdrant.build_runtime_chain_corpus",
+        "promoted_artifact": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md",
+        "promotion_status": "promoted_confirmed_chain",
+        "promotion_validation_artifact": "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_promotion_validation_v7.json",
+        "registry_artifact": "E:/signalis_ai/manifests/runtime/promoted_runtime_chains.json",
+        "runtime_chain_steps": [
+          "vendor_open_metadata_assignment",
+          "vendor_purchase_transfer",
+          "vendor_metadata_cleanup",
+          "item_metadata_mutation",
+          "item_metadata_network_send",
+          "inventory_membership_client_apply",
+          "item_metadata_client_apply",
+          "ui_itemdata_refresh_hook"
+        ],
+        "runtime_chain_text": "vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+        "schema": "runtime_chain_corpus.v1",
+        "score": 1.0,
+        "stages_total": 8,
+        "title": "Vendor purchase item metadata propagation",
+        "metadata": {},
+        "content_hash": "e3225071f78271168666a4b7951251bb9992a2fc14ab2cddde609c32367271fb",
+        "embedding_dim": 384,
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "text": "Promoted runtime chain: Vendor purchase item metadata propagation\nChain ID: vendor_purchase_itemdata_runtime_chain_candidate_v7\nPromotion status: promoted_confirmed_chain\nConfidence: high\nScore: 1.0\nRuntime propagation: vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+        "source_id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v7"
+      },
+      "architecture_relevance": [
+        "query_term_match:data,inventory,item,membership,metadata,purchase,refresh,ui,vendor",
+        "confidence:high",
+        "promotion_status:promoted_confirmed_chain",
+        "stage_count:8"
+      ]
+    },
+    {
+      "rank": 2,
+      "qdrant_id": "0c2dd6aa-d23a-5674-b176-2712e122ee00",
+      "score": 0.67139804,
+      "source_id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "doc_type": "promoted_runtime_chain",
+      "title": "vendor purchase itemdata propagation chain",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "confidence": "high",
+      "promotion_status": "promoted_confirmed_chain",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
+      "text": "Promoted runtime chain: vendor purchase itemdata propagation chain\nChain ID: vendor_purchase_itemdata_runtime_chain_candidate_v6\nPromotion status: promoted_confirmed_chain\nConfidence: high\nScore: 1.0\nRuntime propagation: vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+      "stages": [
+        "vendor_open_metadata_assignment",
+        "vendor_purchase_transfer",
+        "vendor_metadata_cleanup",
+        "item_metadata_mutation",
+        "item_metadata_network_send",
+        "inventory_membership_client_apply",
+        "item_metadata_client_apply",
+        "ui_itemdata_refresh_hook"
+      ],
+      "rerank_reasons": [],
+      "raw_payload": {
+        "candidate_artifact": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6.json",
+        "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+        "confidence": "high",
+        "content": "Promoted runtime chain: vendor purchase itemdata propagation chain\nChain ID: vendor_purchase_itemdata_runtime_chain_candidate_v6\nPromotion status: promoted_confirmed_chain\nConfidence: high\nScore: 1.0\nRuntime propagation: vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+        "decision_artifact": "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.json",
+        "doc_type": "promoted_runtime_chain",
+        "generated_at": "2026-06-02T00:07:57",
+        "id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v6",
+        "producer_script": "scripts.qdrant.build_runtime_chain_corpus",
+        "promoted_artifact": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
+        "promotion_status": "promoted_confirmed_chain",
+        "promotion_validation_artifact": "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.json",
+        "registry_artifact": "E:/signalis_ai/manifests/runtime/promoted_runtime_chains.json",
+        "runtime_chain_steps": [
+          "vendor_open_metadata_assignment",
+          "vendor_purchase_transfer",
+          "vendor_metadata_cleanup",
+          "item_metadata_mutation",
+          "item_metadata_network_send",
+          "inventory_membership_client_apply",
+          "item_metadata_client_apply",
+          "ui_itemdata_refresh_hook"
+        ],
+        "runtime_chain_text": "vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+        "schema": "runtime_chain_corpus.v1",
+        "score": 1.0,
+        "stages_total": 8,
+        "title": "vendor purchase itemdata propagation chain",
+        "metadata": {},
+        "content_hash": "8a94b80f0a50464c8e0bd60bb7370cbca2ed02f4c6a445c267f44ccc53ba8fc7",
+        "embedding_dim": 384,
+        "embedding_model": "BAAI/bge-small-en-v1.5",
+        "text": "Promoted runtime chain: vendor purchase itemdata propagation chain\nChain ID: vendor_purchase_itemdata_runtime_chain_candidate_v6\nPromotion status: promoted_confirmed_chain\nConfidence: high\nScore: 1.0\nRuntime propagation: vendor_open_metadata_assignment -> vendor_purchase_transfer -> vendor_metadata_cleanup -> item_metadata_mutation -> item_metadata_network_send -> inventory_membership_client_apply -> item_metadata_client_apply -> ui_itemdata_refresh_hook",
+        "source_id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v6"
+      },
+      "architecture_relevance": [
+        "query_term_match:data,inventory,item,membership,metadata,purchase,refresh,ui,vendor",
+        "confidence:high",
+        "promotion_status:promoted_confirmed_chain",
+        "stage_count:8"
+      ]
+    }
+  ],
+  "rejected_results": [
+    {
+      "rank": 1,
+      "qdrant_id": "65c70a72-004f-5b49-8f23-b941d15ca578",
+      "score": 0.7943172,
+      "source_id": "doc:doctrine:47ad906557a8aae4",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/project_memory.md#1"
+    },
+    {
+      "rank": 2,
+      "qdrant_id": "a26e7944-b9e4-5e76-941c-9bf29ce05702",
+      "score": 0.7828857,
+      "source_id": "doc:doctrine:24070106b1a7a7f3",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md#0"
+    },
+    {
+      "rank": 3,
+      "qdrant_id": "851c9ffd-d623-5474-b96f-e866f8a3cfce",
+      "score": 0.7828857,
+      "source_id": "runtime_chain:docs:runtime:runtime_chains:vendor_purchase_item_metadata_sync.md",
+      "doc_type": "runtime_chain",
+      "title": "Vendor Purchase Item Metadata Sync"
+    },
+    {
+      "rank": 4,
+      "qdrant_id": "8f0fadae-aab4-5b66-b87f-09a0c54a6ec1",
+      "score": 0.7472155,
+      "source_id": "doc:doctrine:7ba6861373241eea",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/human_context.md#0"
+    },
+    {
+      "rank": 5,
+      "qdrant_id": "756c6701-4c81-5690-b9c0-a64d29efa196",
+      "score": 0.7415379,
+      "source_id": "runtime_chain:docs:runtime:runtime_chains:vendor_purchase_chain.md",
+      "doc_type": "runtime_chain",
+      "title": "Vendor Purchase Chain"
+    },
+    {
+      "rank": 6,
+      "qdrant_id": "672402f0-9e9d-5110-a2ef-9e4a9caf7e67",
+      "score": 0.7415379,
+      "source_id": "doc:doctrine:dad865c1ed66ff02",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/runtime/runtime_chains/vendor_purchase_chain.md#0"
+    },
+    {
+      "rank": 7,
+      "qdrant_id": "fa601f56-abd7-59fc-8bf5-71a037a402fc",
+      "score": 0.7339939,
+      "source_id": "doc:doctrine:31bbd827617dc491",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/ai_subsystems/inventory.md#1"
+    },
+    {
+      "rank": 8,
+      "qdrant_id": "455cf0c8-7f2c-571b-a595-5edc79e83d0c",
+      "score": 0.73343754,
+      "source_id": "doc:doctrine:ad2363ed53d711ff",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/human_context.md#1"
+    },
+    {
+      "rank": 9,
+      "qdrant_id": "4fac9f36-361b-5c47-951d-bd4987d9cbe9",
+      "score": 0.7090266,
+      "source_id": "doc:doctrine:716ac0b5c759aa56",
+      "doc_type": "doctrine",
+      "title": "Doctrine: subsystem_docs/runtime_doctrine.md#2"
+    },
+    {
+      "rank": 10,
+      "qdrant_id": "897cf71f-2b3a-527d-bb0e-4f54c7cd9d22",
+      "score": 0.6853857,
+      "source_id": "runtime_chain:docs:runtime:runtime_chains:vendor_purchase_price_label_cleanup.md",
+      "doc_type": "runtime_chain",
+      "title": "Vendor Purchase Price Label Cleanup"
+    },
+    {
+      "rank": 12,
+      "qdrant_id": "b13ca460-d5b9-5939-9fba-567679a6b480",
+      "score": 0.6778298,
+      "source_id": "doc:doctrine:12de4edc15f10fd8",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md#1"
+    },
+    {
+      "rank": 13,
+      "qdrant_id": "ad062b1e-b647-5d52-ba7e-4923325fe3f4",
+      "score": 0.67357767,
+      "source_id": "doc:doctrine:efc101c096ec2f34",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/human_subsystems/inventory.md#0"
+    },
+    {
+      "rank": 15,
+      "qdrant_id": "0d2816a4-89d3-5e34-a138-697d49115cbb",
+      "score": 0.6553547,
+      "source_id": "doc:doctrine:d4d21d55f7342475",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/ai_subsystems/inventory.md#2"
+    },
+    {
+      "rank": 16,
+      "qdrant_id": "b1a0b2fd-fb7c-5d3f-944a-6ce613029598",
+      "score": 0.65014005,
+      "source_id": "doc:doctrine:3a4b169ea7c423ab",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/ai_subsystems/inventory.md#0"
+    },
+    {
+      "rank": 17,
+      "qdrant_id": "12faeb08-eb24-527d-8486-81b0c9ac570a",
+      "score": 0.643913,
+      "source_id": "doc:doctrine:923e386863a34fb9",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/project_memory.md#0"
+    },
+    {
+      "rank": 18,
+      "qdrant_id": "a0f77892-933d-5143-8cd4-45d4b7c89ccb",
+      "score": 0.6425829,
+      "source_id": "doc:doctrine:d42fb74f3bcc2a8d",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md#2"
+    },
+    {
+      "rank": 19,
+      "qdrant_id": "f6b7f394-c851-53d2-a75e-33088fe26914",
+      "score": 0.63887244,
+      "source_id": "doc:doctrine:d0daa5728e0b23ad",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/runtime/runtime_chains/vendor_purchase_chain.md#1"
+    },
+    {
+      "rank": 20,
+      "qdrant_id": "0c07d9d7-c1ed-51b5-a1d2-802daacb7c90",
+      "score": 0.6378229,
+      "source_id": "doc:doctrine:3b99494b660d7a2e",
+      "doc_type": "doctrine",
+      "title": "Doctrine: docs/subsystems/vendor.md#1"
+    }
+  ]
+}

@@ -19,6 +19,7 @@ PIPELINE_CONTRACT = {
     "input_schemas": [
         "runtime_chain_candidate.v5",
         "runtime_chain_candidate.v6",
+        "runtime_chain_candidate.v7",
         "runtime_chain_promotion_validation.v1",
         "pipeline_artifact_contract.v1",
     ],
@@ -27,8 +28,8 @@ PIPELINE_CONTRACT = {
         "promoted_runtime_chain.md",
     ],
     "artifact_patterns": [
-        "investigations/validation/*_promotion_decision_v2.json",
-        "investigations/validation/*_promotion_decision_v2.md",
+        "investigations/validation/*_promotion_decision*.json",
+        "investigations/validation/*_promotion_decision*.md",
         "docs/runtime/runtime_chains/*_promoted_confirmed_chain.md",
         "docs/runtime/runtime_chains/*_promoted_topology_supported_chain.md",
         "docs/runtime/runtime_chains/*_not_promoted.md",
@@ -45,6 +46,28 @@ CONFIDENCE_RANK = {
     "low": 1,
     "medium": 2,
     "high": 3,
+}
+
+
+CANDIDATE_SCHEMAS = {
+    "runtime_chain_candidate.v5",
+    "runtime_chain_candidate.v6",
+    "runtime_chain_candidate.v7",
+}
+
+
+PROMOTION_VALIDATION_SCHEMAS = {
+    "runtime_chain_promotion_validation.v1",
+}
+
+
+PROMOTION_DECISION_SCHEMA = "runtime_chain_promotion_decision.v4"
+
+
+PROMOTED_DECISIONS = {
+    "promoted_confirmed_chain",
+    "promoted_topology_supported_chain",
+    "promoted_source_validated_chain",
 }
 
 
@@ -71,6 +94,18 @@ def read_json(path: Path) -> dict[str, Any]:
 def write_json(path: Path, data: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def resolve_workspace_path(workspace: Path, value: Path | str | None) -> Path | None:
+    if value is None:
+        return None
+
+    path = Path(value)
+
+    if path.is_absolute():
+        return path
+
+    return workspace / path
 
 
 def safe_slug(value: str) -> str:
@@ -384,6 +419,10 @@ def decide(candidate: dict[str, Any], validation: dict[str, Any]) -> PromotionDe
     )
 
 
+def is_promoted_status(decision_name: str) -> bool:
+    return decision_name in PROMOTED_DECISIONS
+
+
 def supersede_existing(promoted_dir: Path, slug: str, dry_run: bool) -> list[dict[str, str]]:
     superseded: list[dict[str, str]] = []
     if not promoted_dir.exists():
@@ -502,7 +541,7 @@ def render_markdown(
                     "pipeline_stage": "promotion",
                     "promotion_role": "promotion_core",
                     "canonical_status": (
-                        "canonical" if decision.decision.startswith("promoted_") else "intermediate"
+                        "canonical" if is_promoted_status(decision.decision) else "intermediate"
                     ),
                     "inputs": [str(candidate_path), str(validation_path)],
                 },
@@ -547,11 +586,29 @@ def main() -> None:
     args = parser.parse_args()
 
     workspace = args.workspace.resolve()
-    registry_path = args.registry or workspace / "docs/runtime/pipeline_artifact_contract.json"
-    promoted_dir = args.promoted_dir or workspace / "docs/runtime/runtime_chains"
+    registry_path = resolve_workspace_path(
+        workspace,
+        args.registry or "docs/runtime/pipeline_artifact_contract.json",
+    )
+    promoted_dir = resolve_workspace_path(
+        workspace,
+        args.promoted_dir or "docs/runtime/runtime_chains",
+    )
 
-    candidate_path = args.candidate
-    validation_path = args.promotion_validation
+    if registry_path is None:
+        raise ValueError("Registry path could not be resolved")
+
+    if promoted_dir is None:
+        raise ValueError("Promoted output directory could not be resolved")
+
+    candidate_path = resolve_workspace_path(workspace, args.candidate)
+    validation_path = resolve_workspace_path(workspace, args.promotion_validation)
+
+    if candidate_path is None:
+        raise ValueError("--candidate is required")
+
+    if validation_path is None:
+        raise ValueError("--promotion-validation is required")
 
     registry = read_json(registry_path)
     candidate = read_json(candidate_path)
@@ -561,12 +618,12 @@ def main() -> None:
     validate_input_artifact(
         candidate_path,
         candidate,
-        {"runtime_chain_candidate.v5", "runtime_chain_candidate.v6"},
+        CANDIDATE_SCHEMAS,
     )
     validate_input_artifact(
         validation_path,
         validation,
-        {"runtime_chain_promotion_validation.v1"},
+        PROMOTION_VALIDATION_SCHEMAS,
     )
 
     benchmark = extract_benchmark(candidate, fallback=candidate_path.stem)
@@ -576,21 +633,34 @@ def main() -> None:
     decision = decide(candidate, validation)
 
     superseded = []
-    if decision.decision.startswith("promoted_"):
+    if is_promoted_status(decision.decision):
         superseded = supersede_existing(promoted_dir, slug, args.dry_run)
 
-    out_json = args.out_json or workspace / "investigations/validation" / f"{slug}_promotion_decision_v2.json"
-    out_md = args.out_md or workspace / "investigations/validation" / f"{slug}_promotion_decision_v2.md"
+    out_json = resolve_workspace_path(
+        workspace,
+        args.out_json or f"investigations/validation/{slug}_promotion_decision.json",
+    )
+    out_md = resolve_workspace_path(
+        workspace,
+        args.out_md or f"investigations/validation/{slug}_promotion_decision.md",
+    )
+
+    if out_json is None or out_md is None:
+        raise ValueError("Decision output paths could not be resolved")
 
     promoted_md = promoted_dir / f"{slug}_{decision.decision}.md"
 
     decision_payload = {
-        "schema": "runtime_chain_promotion_decision.v4",
+        "schema": PROMOTION_DECISION_SCHEMA,
         "producer_script": PIPELINE_CONTRACT["script_id"],
         "pipeline_stage": "promotion",
         "benchmark": benchmark,
         "promotion_role": "promotion_core",
-        "canonical_status": "canonical" if decision.decision.startswith("promoted_") else "intermediate",
+        "canonical_status": (
+            "canonical"
+            if is_promoted_status(decision.decision) and not args.dry_run
+            else "intermediate"
+        ),
         "generated_at": datetime.now().isoformat(timespec="seconds"),
         "decision": decision.__dict__,
         "inputs": [str(candidate_path), str(validation_path), str(registry_path)],
@@ -618,14 +688,14 @@ def main() -> None:
     out_md.parent.mkdir(parents=True, exist_ok=True)
     out_md.write_text(markdown, encoding="utf-8")
 
-    if decision.decision.startswith("promoted_"):
+    if is_promoted_status(decision.decision):
         promoted_dir.mkdir(parents=True, exist_ok=True)
         promoted_md.write_text(markdown, encoding="utf-8")
 
     print(f"Decision: {decision.decision}")
     print(f"Wrote JSON: {out_json}")
     print(f"Wrote MD:   {out_md}")
-    if decision.decision.startswith("promoted_"):
+    if is_promoted_status(decision.decision):
         print(f"Wrote promoted chain: {promoted_md}")
 
 

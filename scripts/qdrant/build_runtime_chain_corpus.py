@@ -67,15 +67,34 @@ def build_content(chain: dict[str, Any]) -> str:
     return "\n".join(part for part in parts if part)
 
 
-def build_doc(chain: dict[str, Any], registry_path: Path) -> dict[str, Any]:
+def build_doc(
+    chain: dict[str, Any],
+    registry_path: Path,
+    registry: dict[str, Any],
+) -> dict[str, Any]:
     chain_id = chain.get("chain_id")
     steps = chain.get("runtime_chain_steps") or []
+
+    KNOWN_FIELDS = {
+        "chain_id",
+        "title",
+        "promotion_status",
+        "confidence",
+        "score",
+        "stages_total",
+        "runtime_chain_steps",
+        "decision_artifact",
+        "candidate_artifact",
+        "promotion_validation_artifact",
+        "promoted_artifact",
+    }
 
     return {
         "schema": "runtime_chain_corpus.v1",
         "producer_script": PIPELINE_CONTRACT["script_id"],
         "generated_at": datetime.now().isoformat(timespec="seconds"),
-
+        "source_registry_schema": registry.get("schema"),
+        "source_registry_generated_at": registry.get("generated_at"),
         "doc_type": "promoted_runtime_chain",
         "id": f"promoted_runtime_chain:{chain_id}",
         "chain_id": chain_id,
@@ -96,6 +115,12 @@ def build_doc(chain: dict[str, Any], registry_path: Path) -> dict[str, Any]:
             chain.get("promotion_validation_artifact")
         ),
         "promoted_artifact": normalize_path(chain.get("promoted_artifact")),
+
+        "metadata": {
+            k: v
+            for k, v in chain.items()
+            if k not in KNOWN_FIELDS
+        },
 
         "content": build_content(chain),
     }
@@ -153,13 +178,20 @@ def main() -> None:
         if not isinstance(chain, dict):
             continue
 
-        if not str(chain.get("promotion_status", "")).startswith("promoted_"):
+        ALLOWED_PROMOTION_STATUSES = {
+            "promoted_confirmed_chain",
+            "promoted_topology_supported_chain",
+            "promoted_source_validated_chain",
+        }
+
+        if chain.get("promotion_status") not in ALLOWED_PROMOTION_STATUSES:
             continue
 
         rows.append(
             build_doc(
                 chain=chain,
                 registry_path=registry_path,
+                registry=registry,
             )
         )
 

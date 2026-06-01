@@ -2,12 +2,33 @@
   "schema": "promoted_runtime_chain_registry.v1",
   "producer_script": "scripts.investigation.update_promoted_runtime_chain_registry",
   "pipeline_stage": "promotion",
-  "generated_at": "2026-06-01T20:42:59",
-  "chains_total": 1,
+  "generated_at": "2026-06-02T00:24:08",
+  "chains_total": 2,
   "chains": [
     {
-      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
-      "title": "vendor purchase itemdata propagation chain",
+      "chain_id": "characterload_inventory_runtime_chain_candidate_v7",
+      "title": "Character load inventory lifecycle propagation",
+      "promotion_status": "promoted_confirmed_chain",
+      "confidence": "high",
+      "score": 1.0,
+      "runtime_chain_steps": [
+        "character_choose_network_receive",
+        "pre_player_loaded_char",
+        "player_loaded_char",
+        "inventory_initialization",
+        "player_loadout",
+        "post_player_loadout"
+      ],
+      "stages_total": 6,
+      "generated_at": "2026-06-02T00:06:41",
+      "decision_artifact": "E:\\signalis_ai\\investigations\\validation\\characterload_inventory_promotion_decision_v7.json",
+      "candidate_artifact": "investigations\\validation\\characterload_inventory_runtime_chain_candidate_v7.json",
+      "promotion_validation_artifact": "investigations\\validation\\characterload_inventory_promotion_validation_v7.json",
+      "promoted_artifact": "E:\\signalis_ai\\docs\\runtime\\runtime_chains\\characterload_inventory_promoted_confirmed_chain.md"
+    },
+    {
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "title": "Vendor purchase item metadata propagation",
       "promotion_status": "promoted_confirmed_chain",
       "confidence": "high",
       "score": 1.0,
@@ -22,11 +43,11 @@
         "ui_itemdata_refresh_hook"
       ],
       "stages_total": 8,
-      "generated_at": "2026-06-01T20:34:07",
-      "decision_artifact": "E:\\signalis_ai\\investigations\\validation\\vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.json",
-      "candidate_artifact": "investigations\\validation\\vendor_purchase_itemdata_runtime_chain_candidate_v6.json",
-      "promotion_validation_artifact": "investigations\\validation\\vendor_purchase_itemdata_v6_promotion_validation.json",
-      "promoted_artifact": "E:\\signalis_ai\\docs\\runtime\\runtime_chains\\vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+      "generated_at": "2026-06-02T00:23:59",
+      "decision_artifact": "E:\\signalis_ai\\investigations\\validation\\vendor_purchase_itemdata_promotion_decision.json",
+      "candidate_artifact": "E:\\signalis_ai\\investigations\\validation\\vendor_purchase_itemdata_runtime_chain_candidate_v7.json",
+      "promotion_validation_artifact": "E:\\signalis_ai\\investigations\\validation\\vendor_purchase_itemdata_promotion_validation_v7.json",
+      "promoted_artifact": "E:\\signalis_ai\\docs\\runtime\\runtime_chains\\vendor_purchase_itemdata_promoted_confirmed_chain.md"
     }
   ]
 }

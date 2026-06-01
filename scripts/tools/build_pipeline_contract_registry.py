@@ -7,21 +7,25 @@ import re
 from dataclasses import asdict, dataclass
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, Iterable
 
 
 CONTRACT_SCHEMA = "pipeline_artifact_contract.v1"
 
-SCRIPT_DIRS = [
+DEFAULT_SCRIPT_DIRS = [
+    Path("scripts/tools"),
     Path("scripts/investigation"),
     Path("scripts/qdrant"),
     Path("scripts/extraction"),
     Path("scripts/normalization"),
 ]
 
-ARTIFACT_DIRS = [
+DEFAULT_ARTIFACT_DIRS = [
     Path("investigations/validation"),
+    Path("investigations/retrieval"),
+    Path("investigations/architecture"),
     Path("docs/runtime/runtime_chains"),
+    Path("manifests/runtime"),
     Path("manifests/normalized"),
     Path("manifests/semantic"),
 ]
@@ -44,31 +48,61 @@ ALLOWED_PROMOTION_ROLES = [
     "not_promotion_relevant",
 ]
 
+PROMOTION_CORE_STAGES = {
+    "source_validation",
+    "runtime_facts",
+    "ordered_runtime_facts",
+    "runtime_fact_graph",
+    "runtime_fact_topology",
+    "runtime_chain_candidate",
+    "promotion",
+    "promotion_output",
+}
 
-# Future explicit flag format inside scripts:
-#
-# PIPELINE_CONTRACT = {
-#   "script_id": "...",
-#   "purpose": "...",
-#   "pipeline_stage": "...",
-#   "input_schemas": [...],
-#   "output_schemas": [...],
-#   "artifact_patterns": [...],
-#   "promotion_role": "...",
-#   "canonical_status": "active"
-# }
-#
-# Future explicit flag format inside JSON artifacts:
-#
-# {
-#   "schema": "...",
-#   "producer_script": "scripts.investigation.example",
-#   "pipeline_stage": "...",
-#   "benchmark": "...",
-#   "promotion_role": "...",
-#   "canonical_status": "...",
-#   "inputs": [...]
-# }
+PROMOTION_SUPPORT_STAGES = {
+    "targeted_validation_request",
+    "runtime_steps",
+    "ordered_steps",
+    "runtime_chain_regression",
+    "pathfinder",
+    "retrieval",
+    "embedding",
+    "ingestion",
+    "architecture_intelligence",
+}
+
+STAGE_RULES = [
+    ("architecture_intelligence", "architecture_intelligence"),
+    ("runtime_chain_context_pack", "retrieval"),
+    ("runtime_chain_corpus", "retrieval"),
+    ("promoted_runtime_chain_registry", "promotion"),
+    ("promotion_decision", "promotion"),
+    ("promotion_validation", "promotion"),
+    ("targeted_validation", "targeted_validation_request"),
+    ("source_validation", "source_validation"),
+    ("ranked_evidence", "ranked_evidence"),
+    ("runtime_steps", "runtime_steps"),
+    ("ordered_steps", "ordered_steps"),
+    ("ordered_runtime_facts", "ordered_runtime_facts"),
+    ("runtime_fact_topology", "runtime_fact_topology"),
+    ("runtime_fact_graph", "runtime_fact_graph"),
+    ("runtime_facts", "runtime_facts"),
+    ("runtime_chain_candidate", "runtime_chain_candidate"),
+    ("runtime_chain_regression", "runtime_chain_regression"),
+    ("runtime_chain_promoter", "promotion"),
+    ("promote_", "promotion"),
+    ("promoted", "promotion_output"),
+    ("not_promoted", "promotion_output"),
+    ("probe", "probe"),
+    ("diagnos", "diagnosis"),
+    ("extract_", "extraction"),
+    ("normalize_", "normalization"),
+    ("query_qdrant", "retrieval"),
+    ("retrieve_", "retrieval"),
+    ("embed_", "embedding"),
+    ("ingest_", "ingestion"),
+    ("build_", "builder"),
+]
 
 
 @dataclass
@@ -107,9 +141,32 @@ def read_json(path: Path) -> Any | None:
         return None
 
 
+def read_jsonl_first_object(path: Path) -> dict[str, Any] | None:
+    try:
+        with path.open("r", encoding="utf-8") as handle:
+            for line in handle:
+                line = line.strip()
+                if not line:
+                    continue
+                data = json.loads(line)
+                return data if isinstance(data, dict) else None
+    except Exception:
+        return None
+
+    return None
+
+
 def write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
+
+
+def normalize_rel(path: Path) -> str:
+    return str(path).replace("\\", "/")
+
+
+def resolve_workspace_path(workspace: Path, path: Path) -> Path:
+    return path if path.is_absolute() else workspace / path
 
 
 def module_from_path(path: Path) -> str:
@@ -120,6 +177,18 @@ def slug(value: str) -> str:
     value = value.replace("\\", "/")
     value = re.sub(r"[^a-zA-Z0-9_.:/-]+", "_", value)
     return value.strip("_")
+
+
+def as_str_list(value: Any) -> list[str]:
+    if value is None:
+        return []
+    if isinstance(value, list):
+        return [str(item) for item in value]
+    return [str(value)]
+
+
+def sorted_unique(values: Iterable[str]) -> list[str]:
+    return sorted({str(value).replace("\\", "/") for value in values if str(value).strip()})
 
 
 def extract_pipeline_contract_from_script(path: Path) -> dict[str, Any] | None:
@@ -144,36 +213,37 @@ def extract_pipeline_contract_from_script(path: Path) -> dict[str, Any] | None:
     return None
 
 
+def extract_markdown_contract_metadata(path: Path) -> dict[str, Any]:
+    try:
+        text = path.read_text(encoding="utf-8", errors="ignore")
+    except Exception:
+        return {}
+
+    # Prefer fenced JSON blocks that explicitly describe generated artifact metadata.
+    for match in re.finditer(r"```json\s*(\{.*?\})\s*```", text, flags=re.DOTALL):
+        data = read_json_from_text(match.group(1))
+        if isinstance(data, dict) and (
+            "schema" in data
+            or "producer_script" in data
+            or "pipeline_stage" in data
+            or "canonical_status" in data
+        ):
+            return data
+
+    return {}
+
+
+def read_json_from_text(text: str) -> Any | None:
+    try:
+        return json.loads(text)
+    except Exception:
+        return None
+
+
 def infer_stage_from_name(name: str) -> str:
     n = name.lower()
 
-    rules = [
-        ("target", "targeted_validation_request"),
-        ("source_validation", "source_validation"),
-        ("ranked_evidence", "ranked_evidence"),
-        ("runtime_steps", "runtime_steps"),
-        ("ordered_steps", "ordered_steps"),
-        ("ordered_runtime_facts", "ordered_runtime_facts"),
-        ("runtime_facts", "runtime_facts"),
-        ("runtime_fact_graph", "runtime_fact_graph"),
-        ("runtime_fact_topology", "runtime_fact_topology"),
-        ("runtime_chain_candidate", "runtime_chain_candidate"),
-        ("runtime_chain_regression", "runtime_chain_regression"),
-        ("runtime_chain_promoter", "promotion"),
-        ("promote_", "promotion"),
-        ("promoted", "promotion_output"),
-        ("not_promoted", "promotion_output"),
-        ("probe", "probe"),
-        ("diagnos", "diagnosis"),
-        ("extract_", "extraction"),
-        ("normalize_", "normalization"),
-        ("build_", "builder"),
-        ("query_qdrant", "retrieval"),
-        ("embed_", "embedding"),
-        ("ingest_", "ingestion"),
-    ]
-
-    for needle, stage in rules:
+    for needle, stage in STAGE_RULES:
         if needle in n:
             return stage
 
@@ -183,53 +253,39 @@ def infer_stage_from_name(name: str) -> str:
 def infer_benchmark_from_name(name: str) -> str:
     n = name.lower()
 
-    if n.startswith("vendor_purchase_itemdata"):
-        return "vendor_purchase_itemdata"
-    if n.startswith("vendor_stale_price_label"):
-        return "vendor_stale_price_label_after_purchase"
-    if n.startswith("vendor_purchase_price_label"):
-        return "vendor_purchase_price_label_cleanup"
-    if n.startswith("characterload_inventory") or "playerloadedchar" in n:
-        return "characterload_inventory"
-    if n.startswith("runtime_chain_regression") or n.startswith("runtime_fact_topology_regression"):
-        return "global_regression"
+    # This is fallback only. Explicit artifact metadata wins.
+    fallback_rules = [
+        ("vendor_purchase_itemdata", "vendor_purchase_itemdata"),
+        ("vendor_stale_price_label", "vendor_stale_price_label_after_purchase"),
+        ("vendor_purchase_price_label", "vendor_purchase_price_label_cleanup"),
+        ("characterload_inventory", "characterload_inventory"),
+        ("playerloadedchar", "characterload_inventory"),
+        ("runtime_chain_regression", "global_regression"),
+        ("runtime_fact_topology_regression", "global_regression"),
+        ("runtime_propagation_topology", "runtime_topology"),
+        ("runtime_topology", "runtime_topology"),
+        ("network", "networking"),
+        ("hook", "hooks"),
+        ("timer", "timers"),
+    ]
+
+    for needle, benchmark in fallback_rules:
+        if needle in n:
+            return benchmark
+
     if n.startswith("probe_") or n.startswith("debug_"):
         return "topology_debug"
-    if "runtime_propagation_topology" in n:
-        return "runtime_topology"
-    if "runtime_topology" in n:
-        return "runtime_topology"
-    if "network" in n:
-        return "networking"
-    if "hook" in n:
-        return "hooks"
-    if "timer" in n:
-        return "timers"
 
     return "unknown"
 
 
 def infer_promotion_role(stage: str, path: str) -> str:
-    p = path.lower()
+    p = path.lower().replace("\\", "/")
 
-    if stage in {
-        "source_validation",
-        "runtime_facts",
-        "ordered_runtime_facts",
-        "runtime_fact_graph",
-        "runtime_fact_topology",
-        "runtime_chain_candidate",
-        "promotion_output",
-    }:
+    if stage in PROMOTION_CORE_STAGES:
         return "promotion_core"
 
-    if stage in {
-        "targeted_validation_request",
-        "runtime_steps",
-        "ordered_steps",
-        "runtime_chain_regression",
-        "pathfinder",
-    }:
+    if stage in PROMOTION_SUPPORT_STAGES:
         return "promotion_support"
 
     if "docs/runtime/runtime_chains" in p:
@@ -239,13 +295,17 @@ def infer_promotion_role(stage: str, path: str) -> str:
 
 
 def infer_status(path: str, stage: str) -> str:
-    p = path.lower()
+    p = path.lower().replace("\\", "/")
 
+    if "/_superseded/" in p or "_superseded_" in p:
+        return "superseded"
     if "not_promoted" in p:
         return "failed"
     if "debug" in p or "probe" in p or "diagnosis" in p:
         return "debug"
-    if "generic" in p or "legacy" in p:
+    if "legacy" in p:
+        return "legacy"
+    if "generic" in p:
         return "intermediate"
     if "regenerated" in p and "confidence_none" in p:
         return "failed"
@@ -259,7 +319,11 @@ def infer_status(path: str, stage: str) -> str:
 
 def extract_schemas_from_script_text(text: str) -> tuple[list[str], list[str]]:
     schemas = sorted(set(re.findall(r"[a-zA-Z0-9_.-]+\.v\d+", text)))
-    output_schemas = [s for s in schemas if any(key in s for key in ["runtime", "targeted", "pipeline", "chain"])]
+    output_schemas = [
+        schema
+        for schema in schemas
+        if any(key in schema for key in ["runtime", "targeted", "pipeline", "chain", "architecture"])
+    ]
     return schemas, output_schemas
 
 
@@ -267,17 +331,18 @@ def extract_artifact_patterns_from_script_text(text: str) -> list[str]:
     patterns: set[str] = set()
 
     for match in re.findall(r"['\"]([^'\"]+\.(?:json|md|jsonl))['\"]", text):
-        if any(prefix in match for prefix in ["investigations/", "manifests/", "docs/"]):
-            patterns.add(match.replace("\\", "/"))
+        normalized = match.replace("\\", "/")
+        if any(prefix in normalized for prefix in ["investigations/", "manifests/", "docs/"]):
+            patterns.add(normalized)
 
     return sorted(patterns)
 
 
-def discover_scripts(workspace: Path) -> list[ScriptContract]:
+def discover_scripts(workspace: Path, script_dirs: list[Path]) -> list[ScriptContract]:
     results: list[ScriptContract] = []
 
-    for script_dir in SCRIPT_DIRS:
-        root = workspace / script_dir
+    for script_dir in script_dirs:
+        root = resolve_workspace_path(workspace, script_dir)
         if not root.exists():
             continue
 
@@ -286,7 +351,7 @@ def discover_scripts(workspace: Path) -> list[ScriptContract]:
                 continue
 
             rel = path.relative_to(workspace)
-            rel_str = str(rel).replace("\\", "/")
+            rel_str = normalize_rel(rel)
             module = module_from_path(rel)
             text = path.read_text(encoding="utf-8", errors="ignore")
 
@@ -300,9 +365,9 @@ def discover_scripts(workspace: Path) -> list[ScriptContract]:
                         module=str(explicit.get("module") or module),
                         purpose=str(explicit.get("purpose") or ""),
                         pipeline_stage=str(explicit.get("pipeline_stage") or infer_stage_from_name(path.name)),
-                        input_schemas=list(explicit.get("input_schemas") or []),
-                        output_schemas=list(explicit.get("output_schemas") or []),
-                        artifact_patterns=list(explicit.get("artifact_patterns") or []),
+                        input_schemas=as_str_list(explicit.get("input_schemas")),
+                        output_schemas=as_str_list(explicit.get("output_schemas")),
+                        artifact_patterns=sorted_unique(as_str_list(explicit.get("artifact_patterns"))),
                         promotion_role=str(explicit.get("promotion_role") or "context_or_debug"),
                         canonical_status=str(explicit.get("canonical_status") or "active"),
                         source="explicit_script_flag",
@@ -311,6 +376,7 @@ def discover_scripts(workspace: Path) -> list[ScriptContract]:
                 continue
 
             input_schemas, output_schemas = extract_schemas_from_script_text(text)
+            stage = infer_stage_from_name(path.name)
 
             results.append(
                 ScriptContract(
@@ -318,11 +384,11 @@ def discover_scripts(workspace: Path) -> list[ScriptContract]:
                     path=rel_str,
                     module=module,
                     purpose=f"Inferred registry entry for {module}.",
-                    pipeline_stage=infer_stage_from_name(path.name),
+                    pipeline_stage=stage,
                     input_schemas=input_schemas,
                     output_schemas=output_schemas,
                     artifact_patterns=extract_artifact_patterns_from_script_text(text),
-                    promotion_role=infer_promotion_role(infer_stage_from_name(path.name), rel_str),
+                    promotion_role=infer_promotion_role(stage, rel_str),
                     canonical_status="active",
                     source="inferred_from_script",
                 )
@@ -381,11 +447,24 @@ def artifact_explicit_metadata(data: Any) -> dict[str, Any]:
     return metadata
 
 
-def discover_artifacts(workspace: Path) -> list[ArtifactContract]:
+def load_artifact_data(path: Path) -> Any | None:
+    suffix = path.suffix.lower()
+
+    if suffix == ".json":
+        return read_json(path)
+    if suffix == ".jsonl":
+        return read_jsonl_first_object(path)
+    if suffix == ".md":
+        return extract_markdown_contract_metadata(path)
+
+    return None
+
+
+def discover_artifacts(workspace: Path, artifact_dirs: list[Path]) -> list[ArtifactContract]:
     results: list[ArtifactContract] = []
 
-    for artifact_dir in ARTIFACT_DIRS:
-        root = workspace / artifact_dir
+    for artifact_dir in artifact_dirs:
+        root = resolve_workspace_path(workspace, artifact_dir)
         if not root.exists():
             continue
 
@@ -393,8 +472,8 @@ def discover_artifacts(workspace: Path) -> list[ArtifactContract]:
             if not path.is_file() or path.suffix.lower() not in {".json", ".md", ".txt", ".jsonl"}:
                 continue
 
-            rel_str = str(path.relative_to(workspace)).replace("\\", "/")
-            data = read_json(path) if path.suffix.lower() == ".json" else None
+            rel_str = normalize_rel(path.relative_to(workspace))
+            data = load_artifact_data(path)
             explicit = artifact_explicit_metadata(data)
 
             schema = None
@@ -427,7 +506,7 @@ def discover_artifacts(workspace: Path) -> list[ArtifactContract]:
                     benchmark=benchmark,
                     promotion_role=role,
                     canonical_status=status,
-                    inputs=sorted(str(x).replace("\\", "/") for x in inputs),
+                    inputs=sorted_unique(str(x) for x in inputs),
                     source=source,
                 )
             )
@@ -456,10 +535,7 @@ def merge_existing_curations(
 
     for entry in generated["scripts"]:
         old = existing_scripts.get(entry["path"])
-        if not old:
-            continue
-
-        if entry.get("source") == "explicit_script_flag":
+        if not old or entry.get("source") == "explicit_script_flag":
             continue
 
         for key in [
@@ -478,10 +554,7 @@ def merge_existing_curations(
 
     for entry in generated["artifacts"]:
         old = existing_artifacts.get(entry["path"])
-        if not old:
-            continue
-
-        if entry.get("source") == "explicit_artifact_flag":
+        if not old or entry.get("source") == "explicit_artifact_flag":
             continue
 
         for key in [
@@ -500,20 +573,22 @@ def merge_existing_curations(
     return generated
 
 
+def count_by(items: list[dict[str, Any]], key: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for item in items:
+        value = str(item.get(key) or "unknown")
+        counts[value] = counts.get(value, 0) + 1
+    return dict(sorted(counts.items()))
+
+
 def render_md(contract: dict[str, Any]) -> str:
     scripts = contract["scripts"]
     artifacts = contract["artifacts"]
 
-    scripts_by_stage: dict[str, int] = {}
-    artifacts_by_stage: dict[str, int] = {}
-    artifacts_by_status: dict[str, int] = {}
-
-    for s in scripts:
-        scripts_by_stage[s["pipeline_stage"]] = scripts_by_stage.get(s["pipeline_stage"], 0) + 1
-
-    for a in artifacts:
-        artifacts_by_stage[a["pipeline_stage"]] = artifacts_by_stage.get(a["pipeline_stage"], 0) + 1
-        artifacts_by_status[a["canonical_status"]] = artifacts_by_status.get(a["canonical_status"], 0) + 1
+    scripts_by_stage = count_by(scripts, "pipeline_stage")
+    artifacts_by_stage = count_by(artifacts, "pipeline_stage")
+    artifacts_by_status = count_by(artifacts, "canonical_status")
+    artifacts_by_source = count_by(artifacts, "source")
 
     lines = [
         "# Pipeline Artifact Contract Registry",
@@ -529,66 +604,64 @@ def render_md(contract: dict[str, Any]) -> str:
         "|---|---:|",
     ]
 
-    for stage, count in sorted(scripts_by_stage.items()):
+    for stage, count in scripts_by_stage.items():
         lines.append(f"| `{stage}` | {count} |")
 
-    lines.extend([
-        "",
-        "## Artifact Stages",
-        "",
-        "| Stage | Count |",
-        "|---|---:|",
-    ])
-
-    for stage, count in sorted(artifacts_by_stage.items()):
+    lines.extend(["", "## Artifact Stages", "", "| Stage | Count |", "|---|---:|"])
+    for stage, count in artifacts_by_stage.items():
         lines.append(f"| `{stage}` | {count} |")
 
-    lines.extend([
-        "",
-        "## Artifact Statuses",
-        "",
-        "| Status | Count |",
-        "|---|---:|",
-    ])
-
-    for status, count in sorted(artifacts_by_status.items()):
+    lines.extend(["", "## Artifact Statuses", "", "| Status | Count |", "|---|---:|"])
+    for status, count in artifacts_by_status.items():
         lines.append(f"| `{status}` | {count} |")
 
-    lines.extend([
-        "",
-        "## Contract Flag Format",
-        "",
-        "Scripts may define:",
-        "",
-        "```python",
-        "PIPELINE_CONTRACT = {",
-        '    "script_id": "scripts.investigation.example",',
-        '    "purpose": "What this script does.",',
-        '    "pipeline_stage": "runtime_facts",',
-        '    "input_schemas": ["targeted_validation_result.v2"],',
-        '    "output_schemas": ["runtime_facts.v2"],',
-        '    "artifact_patterns": ["investigations/validation/*_runtime_facts_v2.json"],',
-        '    "promotion_role": "promotion_core",',
-        '    "canonical_status": "active",',
-        "}",
-        "```",
-        "",
-        "Generated JSON artifacts may define:",
-        "",
-        "```json",
-        "{",
-        '  "schema": "runtime_facts.v2",',
-        '  "producer_script": "scripts.investigation.example",',
-        '  "pipeline_stage": "runtime_facts",',
-        '  "benchmark": "vendor_purchase_itemdata",',
-        '  "promotion_role": "promotion_core",',
-        '  "canonical_status": "intermediate",',
-        '  "inputs": ["investigations/validation/source_validation.json"]',
-        "}",
-        "```",
-    ])
+    lines.extend(["", "## Artifact Metadata Sources", "", "| Source | Count |", "|---|---:|"])
+    for source, count in artifacts_by_source.items():
+        lines.append(f"| `{source}` | {count} |")
+
+    lines.extend(
+        [
+            "",
+            "## Contract Flag Format",
+            "",
+            "Scripts may define:",
+            "",
+            "```python",
+            "PIPELINE_CONTRACT = {",
+            '    "script_id": "scripts.investigation.example",',
+            '    "purpose": "What this script does.",',
+            '    "pipeline_stage": "runtime_facts",',
+            '    "input_schemas": ["targeted_validation_result.v2"],',
+            '    "output_schemas": ["runtime_facts.v2"],',
+            '    "artifact_patterns": ["investigations/validation/*_runtime_facts_v2.json"],',
+            '    "promotion_role": "promotion_core",',
+            '    "canonical_status": "active",',
+            "}",
+            "```",
+            "",
+            "Generated JSON artifacts may define:",
+            "",
+            "```json",
+            "{",
+            '  "schema": "runtime_facts.v2",',
+            '  "producer_script": "scripts.investigation.example",',
+            '  "pipeline_stage": "runtime_facts",',
+            '  "benchmark": "vendor_purchase_itemdata",',
+            '  "promotion_role": "promotion_core",',
+            '  "canonical_status": "intermediate",',
+            '  "inputs": ["investigations/validation/source_validation.json"]',
+            "}",
+            "```",
+        ]
+    )
 
     return "\n".join(lines)
+
+
+def parse_path_list(values: list[str] | None, defaults: list[Path]) -> list[Path]:
+    if not values:
+        return defaults
+    return [Path(value) for value in values]
 
 
 def main() -> None:
@@ -596,20 +669,20 @@ def main() -> None:
         description="Build fire-and-forget SIGNALIS pipeline script/artifact contract registry."
     )
     parser.add_argument("--workspace", type=Path, default=Path("."))
+    parser.add_argument("--existing-contract", type=Path, default=Path("docs/runtime/pipeline_artifact_contract.json"))
+    parser.add_argument("--out-json", type=Path, default=Path("docs/runtime/pipeline_artifact_contract.json"))
+    parser.add_argument("--out-md", type=Path, default=Path("docs/runtime/pipeline_artifact_contract.md"))
     parser.add_argument(
-        "--existing-contract",
-        type=Path,
-        default=Path("docs/runtime/pipeline_artifact_contract.json"),
+        "--script-dir",
+        action="append",
+        default=None,
+        help="Script directory to scan, relative to workspace unless absolute. Can be repeated. Defaults to canonical script roots.",
     )
     parser.add_argument(
-        "--out-json",
-        type=Path,
-        default=Path("docs/runtime/pipeline_artifact_contract.json"),
-    )
-    parser.add_argument(
-        "--out-md",
-        type=Path,
-        default=Path("docs/runtime/pipeline_artifact_contract.md"),
+        "--artifact-dir",
+        action="append",
+        default=None,
+        help="Artifact directory to scan, relative to workspace unless absolute. Can be repeated. Defaults to canonical artifact roots.",
     )
     parser.add_argument(
         "--no-merge-existing",
@@ -619,9 +692,11 @@ def main() -> None:
     args = parser.parse_args()
 
     workspace = args.workspace.resolve()
+    script_dirs = parse_path_list(args.script_dir, DEFAULT_SCRIPT_DIRS)
+    artifact_dirs = parse_path_list(args.artifact_dir, DEFAULT_ARTIFACT_DIRS)
 
-    scripts = discover_scripts(workspace)
-    artifacts = discover_artifacts(workspace)
+    scripts = discover_scripts(workspace, script_dirs)
+    artifacts = discover_artifacts(workspace, artifact_dirs)
 
     contract = {
         "schema": CONTRACT_SCHEMA,
@@ -634,19 +709,22 @@ def main() -> None:
             "runtime_propagation_topology.json is required for propagation-chain promotion evidence.",
             "Explicit PIPELINE_CONTRACT flags in scripts override inference.",
             "Explicit artifact metadata fields override inference.",
+            "Stable infrastructure scripts must discover artifacts by schema and metadata before filename version.",
         ],
         "allowed_statuses": ALLOWED_STATUSES,
         "allowed_promotion_roles": ALLOWED_PROMOTION_ROLES,
+        "script_dirs": [normalize_rel(path) for path in script_dirs],
+        "artifact_dirs": [normalize_rel(path) for path in artifact_dirs],
         "scripts": [asdict(s) for s in scripts],
         "artifacts": [asdict(a) for a in artifacts],
     }
 
-    existing_path = workspace / args.existing_contract
+    existing_path = resolve_workspace_path(workspace, args.existing_contract)
     if not args.no_merge_existing and existing_path.exists():
         contract = merge_existing_curations(contract, read_json(existing_path))
 
-    out_json = workspace / args.out_json
-    out_md = workspace / args.out_md
+    out_json = resolve_workspace_path(workspace, args.out_json)
+    out_md = resolve_workspace_path(workspace, args.out_md)
 
     write_json(out_json, contract)
     out_md.parent.mkdir(parents=True, exist_ok=True)

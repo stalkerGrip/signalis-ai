@@ -5,6 +5,7 @@ import argparse
 import hashlib
 import json
 import math
+from collections import Counter
 import os
 import random
 from pathlib import Path
@@ -27,8 +28,8 @@ PIPELINE_CONTRACT = {
         "qdrant_embedding_summary.v1"
     ],
     "artifact_patterns": [
-        "manifests/semantic/qdrant_embeddings.jsonl",
-        "manifests/semantic/qdrant_embedding_summary.md"
+        "manifests/semantic/*embeddings*.jsonl",
+        "manifests/semantic/*embedding_summary*.md"
     ],
     "promotion_role": "promotion_support",
     "canonical_status": "active"
@@ -63,6 +64,63 @@ def load_optional_jsonl(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
     return load_jsonl(path)
+
+
+def resolve_workspace_path(workspace: Path, value: Path) -> Path:
+    if value.is_absolute():
+        return value
+    return workspace / value
+
+
+def default_required_inputs(workspace: Path) -> list[Path]:
+    semantic_dir = workspace / "manifests" / "semantic"
+    return [semantic_dir / "qdrant_documents.jsonl"]
+
+
+def default_optional_inputs(workspace: Path) -> list[Path]:
+    semantic_dir = workspace / "manifests" / "semantic"
+    return [semantic_dir / "runtime_chain_corpus.jsonl"]
+
+
+def load_documents_from_inputs(
+    required_inputs: list[Path],
+    optional_inputs: list[Path],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    docs: list[dict[str, Any]] = []
+    load_report: list[dict[str, Any]] = []
+
+    for input_path in required_inputs:
+        rows = load_jsonl(input_path)
+        docs.extend(rows)
+        load_report.append({
+            "path": str(input_path),
+            "required": True,
+            "exists": True,
+            "rows": len(rows),
+        })
+
+    for input_path in optional_inputs:
+        exists = input_path.exists()
+        rows = load_optional_jsonl(input_path)
+        docs.extend(rows)
+        load_report.append({
+            "path": str(input_path),
+            "required": False,
+            "exists": exists,
+            "rows": len(rows),
+        })
+
+    return docs, load_report
+
+
+def count_field(rows: list[dict[str, Any]], key: str) -> dict[str, int]:
+    counts: Counter[str] = Counter()
+    for row in rows:
+        value = row.get(key)
+        if value is None and key == "doc_type":
+            value = row.get("type")
+        counts[str(value or "unknown")] += 1
+    return dict(sorted(counts.items()))
 
 
 def write_jsonl(path: Path, rows: Iterable[dict[str, Any]]) -> int:
@@ -227,7 +285,7 @@ def rows_from_sentence_model(
 def write_summary(
     path: Path,
     *,
-    input_paths: list[Path],
+    input_report: list[dict[str, Any]],
     output_path: Path,
     model_requested: str,
     model_used: str,
@@ -235,10 +293,23 @@ def write_summary(
     docs_loaded: int,
     rows_written: int,
     dim: int,
+    doc_type_counts: dict[str, int],
+    schema_counts: dict[str, int],
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
 
-    input_block = "\n".join(str(p) for p in input_paths)
+    input_block = "\n".join(
+        f"{item['path']} | required={item['required']} | exists={item['exists']} | rows={item['rows']}"
+        for item in input_report
+    )
+
+    doc_type_block = "\n".join(
+        f"- `{key}`: **{value}**" for key, value in doc_type_counts.items()
+    ) or "- none"
+
+    schema_block = "\n".join(
+        f"- `{key}`: **{value}**" for key, value in schema_counts.items()
+    ) or "- none"
 
     lines = [
         "# Qdrant Embedding Summary",
@@ -268,6 +339,14 @@ def write_summary(
         f"- Output exists: **{output_path.exists()}**",
         f"- Output size: **{output_path.stat().st_size if output_path.exists() else 0} bytes**",
         "",
+        "## Document Types",
+        "",
+        doc_type_block,
+        "",
+        "## Schemas",
+        "",
+        schema_block,
+        "",
         "## Fallback reason",
         "",
         "```text",
@@ -284,6 +363,38 @@ def main() -> int:
         description="Embed SIGNALIS Qdrant documents with deterministic no-model fallback."
     )
     parser.add_argument("--workspace", required=True, type=Path)
+    parser.add_argument(
+        "--input-jsonl",
+        action="append",
+        type=Path,
+        default=None,
+        help=(
+            "Required input JSONL. May be repeated. "
+            "Default: <workspace>/manifests/semantic/qdrant_documents.jsonl"
+        ),
+    )
+    parser.add_argument(
+        "--optional-input-jsonl",
+        action="append",
+        type=Path,
+        default=None,
+        help=(
+            "Optional input JSONL. May be repeated. "
+            "Default: <workspace>/manifests/semantic/runtime_chain_corpus.jsonl"
+        ),
+    )
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=None,
+        help="Default: <workspace>/manifests/semantic/qdrant_embeddings.jsonl",
+    )
+    parser.add_argument(
+        "--summary",
+        type=Path,
+        default=None,
+        help="Default: <workspace>/manifests/semantic/qdrant_embedding_summary.md",
+    )
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--fallback-model", default=FALLBACK_MODEL)
     parser.add_argument("--device", default="cpu")
@@ -300,29 +411,45 @@ def main() -> int:
 
     semantic_dir = workspace / "manifests" / "semantic"
 
-    input_path = semantic_dir / "qdrant_documents.jsonl"
-    runtime_chain_corpus_path = semantic_dir / "runtime_chain_corpus.jsonl"
-    output_path = semantic_dir / "qdrant_embeddings.jsonl"
-    summary_path = semantic_dir / "qdrant_embedding_summary.md"
+    required_inputs = [
+        resolve_workspace_path(workspace, path)
+        for path in (args.input_jsonl or default_required_inputs(workspace))
+    ]
+    optional_inputs = [
+        resolve_workspace_path(workspace, path)
+        for path in (args.optional_input_jsonl or default_optional_inputs(workspace))
+    ]
+
+    output_path = resolve_workspace_path(
+        workspace,
+        args.out or semantic_dir / "qdrant_embeddings.jsonl",
+    )
+    summary_path = resolve_workspace_path(
+        workspace,
+        args.summary or semantic_dir / "qdrant_embedding_summary.md",
+    )
 
     print(f"[INFO] Workspace: {workspace}")
-    print(f"[INFO] Input documents: {input_path}")
-    print(f"[INFO] Runtime chain corpus: {runtime_chain_corpus_path}")
+    for input_path in required_inputs:
+        print(f"[INFO] Required input: {input_path}")
+    for input_path in optional_inputs:
+        print(f"[INFO] Optional input: {input_path}")
     print(f"[INFO] Output embeddings: {output_path}")
 
-    docs = load_jsonl(input_path)
+    docs, input_report = load_documents_from_inputs(
+        required_inputs=required_inputs,
+        optional_inputs=optional_inputs,
+    )
 
-    runtime_chain_docs = load_optional_jsonl(runtime_chain_corpus_path)
-    if runtime_chain_docs:
-        docs.extend(runtime_chain_docs)
-        print(f"[INFO] Runtime chain corpus docs added: {len(runtime_chain_docs)}")
-    else:
-        print("[INFO] Runtime chain corpus docs added: 0")
+    for item in input_report:
+        print(
+            "[INFO] Loaded "
+            f"{item['rows']} rows from {item['path']} "
+            f"required={item['required']} exists={item['exists']}"
+        )
 
     if not docs:
-        raise RuntimeError(
-            f"No documents loaded from {input_path} or {runtime_chain_corpus_path}"
-        )
+        raise RuntimeError("No documents loaded from configured input JSONL files.")
 
     model_used = args.model
     fallback_reason = ""
@@ -338,7 +465,7 @@ def main() -> int:
                 model_name=args.model,
                 device=args.device,
                 batch_size=args.batch_size,
-                trust_remote_code=True,
+                trust_remote_code=args.trust_remote_code,
                 limit=args.limit,
             )
         except Exception as primary_exc:
@@ -369,10 +496,7 @@ def main() -> int:
 
     write_summary(
         summary_path,
-        input_paths=[
-            input_path,
-            runtime_chain_corpus_path,
-        ],
+        input_report=input_report,
         output_path=output_path,
         model_requested=args.model,
         model_used=model_used,
@@ -380,6 +504,8 @@ def main() -> int:
         docs_loaded=len(docs),
         rows_written=written,
         dim=dim,
+        doc_type_counts=count_field(rows, "doc_type"),
+        schema_counts=count_field(rows, "schema"),
     )
 
     print(f"[OK] Wrote embeddings: {output_path}")

@@ -9,12 +9,18 @@ from pathlib import Path
 from typing import Any
 
 
+BUILDER_BY_CANDIDATE_SCHEMA = {
+    "runtime_chain_candidate.v6": "scripts.investigation.build_runtime_chain_candidate_v6",
+    "runtime_chain_candidate.v7": "scripts.investigation.build_runtime_chain_candidate_v7",
+}
+
+
 PIPELINE_CONTRACT = {
     "script_id": "scripts.investigation.validate_runtime_chain_promotion",
     "purpose": "Validate deterministic regeneration of a runtime chain promotion candidate.",
     "pipeline_stage": "promotion",
     "input_schemas": [
-        "runtime_chain_candidate.v6",
+        *BUILDER_BY_CANDIDATE_SCHEMA.keys(),
         "ordered_runtime_facts.v1",
     ],
     "output_schemas": [
@@ -85,15 +91,25 @@ def normalize_candidate(candidate: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def run_v6_builder(
+def run_candidate_builder(
     ordered_facts: Path,
     out_json: Path,
     out_md: Path,
+    candidate_schema: str,
 ) -> None:
+    module = BUILDER_BY_CANDIDATE_SCHEMA.get(candidate_schema)
+
+    if not module:
+        known = ", ".join(sorted(BUILDER_BY_CANDIDATE_SCHEMA))
+        raise ValueError(
+            f"Unsupported runtime chain candidate schema: {candidate_schema!r}. "
+            f"Known schemas: {known}"
+        )
+
     cmd = [
         sys.executable,
         "-m",
-        "scripts.investigation.build_runtime_chain_candidate_v6",
+        module,
         "--ordered-facts",
         str(ordered_facts),
         "--out-json",
@@ -102,20 +118,7 @@ def run_v6_builder(
         str(out_md),
     ]
 
-    result = subprocess.run(
-        cmd,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
-
-    if result.returncode != 0:
-        raise RuntimeError(
-            "V6 rebuild failed.\n\n"
-            f"Command:\n{' '.join(cmd)}\n\n"
-            f"STDOUT:\n{result.stdout}\n\n"
-            f"STDERR:\n{result.stderr}"
-        )
+    subprocess.run(cmd, check=True)
 
 
 def compare(original: dict[str, Any], regenerated: dict[str, Any]) -> dict[str, Any]:
@@ -223,16 +226,25 @@ def main() -> None:
         raise FileNotFoundError(f"Ordered facts not found: {ordered_facts_path}")
 
     original = load_json(candidate_path)
+    candidate_schema = original.get("schema")
+
+    if candidate_schema not in BUILDER_BY_CANDIDATE_SCHEMA:
+        known = ", ".join(sorted(BUILDER_BY_CANDIDATE_SCHEMA))
+        raise ValueError(
+            f"Unsupported candidate schema in {candidate_path}: {candidate_schema!r}. "
+            f"Known schemas: {known}"
+        )
 
     with tempfile.TemporaryDirectory() as tmp_dir:
         tmp_path = Path(tmp_dir)
         regen_json = args.keep_regenerated_json or tmp_path / "regenerated_candidate.json"
         regen_md = args.keep_regenerated_md or tmp_path / "regenerated_candidate.md"
 
-        run_v6_builder(
+        run_candidate_builder(
             ordered_facts=ordered_facts_path,
             out_json=regen_json,
             out_md=regen_md,
+            candidate_schema=candidate_schema,
         )
 
         regenerated = load_json(regen_json)

@@ -150,6 +150,18 @@ def main() -> None:
         description="Ingest SIGNALIS semantic embeddings into Qdrant."
     )
     parser.add_argument("--workspace", required=True, help="Workspace root, e.g. E:/signalis_ai")
+    parser.add_argument(
+        "--input",
+        type=Path,
+        default=None,
+        help="Default: <workspace>/manifests/semantic/qdrant_embeddings.jsonl",
+    )
+    parser.add_argument(
+        "--summary",
+        type=Path,
+        default=None,
+        help="Default: <workspace>/manifests/semantic/qdrant_ingest_summary.md",
+    )
     parser.add_argument("--host", default="localhost", help="Qdrant host")
     parser.add_argument("--port", type=int, default=6333, help="Qdrant HTTP port")
     parser.add_argument("--collection", default=DEFAULT_COLLECTION)
@@ -159,9 +171,23 @@ def main() -> None:
     parser.add_argument("--write", action="store_true", help="Write summary markdown")
     args = parser.parse_args()
 
-    workspace = Path(args.workspace)
-    input_path = workspace / "manifests" / "semantic" / "qdrant_embeddings.jsonl"
-    summary_path = workspace / "manifests" / "semantic" / "qdrant_ingest_summary.md"
+    workspace = Path(args.workspace).resolve()
+
+    input_path = (
+        args.input
+        or workspace / "manifests" / "semantic" / "qdrant_embeddings.jsonl"
+    )
+
+    summary_path = (
+        args.summary
+        or workspace / "manifests" / "semantic" / "qdrant_ingest_summary.md"
+    )
+
+    if not input_path.is_absolute():
+        input_path = workspace / input_path
+
+    if not summary_path.is_absolute():
+        summary_path = workspace / summary_path
 
     if not input_path.exists():
         raise FileNotFoundError(f"Missing embeddings file: {input_path}")
@@ -214,6 +240,16 @@ def main() -> None:
         doc_type = item.get("doc_type") or "unknown"
         doc_types[doc_type] = doc_types.get(doc_type, 0) + 1
 
+    schemas = {}
+    models = {}
+
+    for item in items:
+        schema = item.get("schema") or "unknown"
+        model = item.get("embedding_model") or "unknown"
+
+        schemas[schema] = schemas.get(schema, 0) + 1
+        models[model] = models.get(model, 0) + 1
+
     lines = [
         "# Qdrant Ingest Summary",
         "",
@@ -236,6 +272,16 @@ def main() -> None:
     for doc_type, count in sorted(doc_types.items(), key=lambda kv: (-kv[1], kv[0])):
         lines.append(f"- `{doc_type}`: **{count}**")
 
+    lines.extend(["", "## Schemas", ""])
+
+    for schema, count in sorted(schemas.items(), key=lambda kv: (-kv[1], kv[0])):
+        lines.append(f"- `{schema}`: **{count}**")
+
+    lines.extend(["", "## Embedding models", ""])
+
+    for model, count in sorted(models.items(), key=lambda kv: (-kv[1], kv[0])):
+        lines.append(f"- `{model}`: **{count}**")
+
     lines.extend(
         [
             "",
@@ -249,6 +295,7 @@ def main() -> None:
     summary = "\n".join(lines)
 
     if args.write:
+        summary_path.parent.mkdir(parents=True, exist_ok=True)
         summary_path.write_text(summary, encoding="utf-8")
 
     print(summary)
