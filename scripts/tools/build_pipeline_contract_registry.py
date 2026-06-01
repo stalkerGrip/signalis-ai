@@ -459,6 +459,9 @@ def merge_existing_curations(
         if not old:
             continue
 
+        if entry.get("source") == "explicit_script_flag":
+            continue
+
         for key in [
             "purpose",
             "pipeline_stage",
@@ -476,6 +479,9 @@ def merge_existing_curations(
     for entry in generated["artifacts"]:
         old = existing_artifacts.get(entry["path"])
         if not old:
+            continue
+
+        if entry.get("source") == "explicit_artifact_flag":
             continue
 
         for key in [

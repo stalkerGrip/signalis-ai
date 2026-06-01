@@ -12,6 +12,28 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Filter, FieldCondition, MatchValue
 
 
+PIPELINE_CONTRACT = {
+    "script_id": "scripts.qdrant.query_qdrant",
+    "purpose": (
+        "Execute retrieval against Qdrant using semantic embeddings, "
+        "reranking, and context-pack generation support."
+    ),
+    "pipeline_stage": "retrieval",
+    "input_schemas": [
+        "qdrant_collection.v1",
+        "qdrant_embeddings.v1"
+    ],
+    "output_schemas": [
+        "qdrant_query_results.v1"
+    ],
+    "artifact_patterns": [
+        "manifests/semantic/qdrant_query_results.md"
+    ],
+    "promotion_role": "promotion_support",
+    "canonical_status": "active"
+}
+
+
 DEFAULT_MODEL = "BAAI/bge-small-en-v1.5"
 DEFAULT_COLLECTION = "signalis_semantic"
 DEFAULT_DIM = 384
@@ -240,6 +262,7 @@ def rerank_result(point: Any, query: str) -> tuple[float, list[str]]:
     node_type = str(payload.get("node_type", ""))
 
     q = query.lower()
+    text_lower = text.lower()
     normalized_file = file_path.replace("\\", "/").lower()
 
     score = 0.0
@@ -248,6 +271,14 @@ def rerank_result(point: Any, query: str) -> tuple[float, list[str]]:
     if "docs/project_structure.md" in normalized_file:
         score -= 0.40
         reasons.append("penalty:project_structure:-0.40")
+
+    if doc_type == "promoted_runtime_chain":
+        score += 0.70
+        reasons.append("doc_type:promoted_runtime_chain:+0.70")
+
+    if doc_type == "runtime_chain":
+        score += 0.45
+        reasons.append("doc_type:runtime_chain:+0.45")
 
     if doc_type == "doctrine":
         score += 0.20
@@ -265,6 +296,15 @@ def rerank_result(point: Any, query: str) -> tuple[float, list[str]]:
         if subsystem in q and subsystem in (text.lower() + " " + file_path.lower()):
             score += 0.05
             reasons.append(f"text_subsystem:{subsystem}:+0.05")
+
+    for exact in [
+        "promoted_runtime_chain",
+        "promoted_confirmed_chain",
+        "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+    ]:
+        if exact in q and exact in text_lower:
+            score += 0.50
+            reasons.append(f"exact_match:{exact}:+0.50")
 
     for event in [
         "characterloaded",

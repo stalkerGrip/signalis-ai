@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-01T20:14:10",
+  "generated_at": "2026-06-01T21:37:39",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -214,6 +214,33 @@
       "source": "merged_existing_curation"
     },
     {
+      "script_id": "scripts.investigation.promote_runtime_chain_candidate_v2",
+      "path": "scripts/investigation/promote_runtime_chain_candidate_v2.py",
+      "module": "scripts.investigation.promote_runtime_chain_candidate_v2",
+      "purpose": "Govern runtime chain promotion from candidate and promotion validation into deterministic decision, supersession, and canonical promoted output.",
+      "pipeline_stage": "promotion",
+      "input_schemas": [
+        "runtime_chain_candidate.v5",
+        "runtime_chain_candidate.v6",
+        "runtime_chain_promotion_validation.v1",
+        "pipeline_artifact_contract.v1"
+      ],
+      "output_schemas": [
+        "runtime_chain_promotion_decision.v4",
+        "promoted_runtime_chain.md"
+      ],
+      "artifact_patterns": [
+        "investigations/validation/*_promotion_decision_v2.json",
+        "investigations/validation/*_promotion_decision_v2.md",
+        "docs/runtime/runtime_chains/*_promoted_confirmed_chain.md",
+        "docs/runtime/runtime_chains/*_promoted_topology_supported_chain.md",
+        "docs/runtime/runtime_chains/*_not_promoted.md"
+      ],
+      "promotion_role": "promotion_core",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
+    },
+    {
       "script_id": "scripts.investigation.run_targeted_validation_request",
       "path": "scripts/investigation/run_targeted_validation_request.py",
       "module": "scripts.investigation.run_targeted_validation_request",
@@ -346,7 +373,7 @@
       "script_id": "scripts.investigation.runtime_chain_promoter_v4",
       "path": "scripts/investigation/runtime_chain_promoter_v4.py",
       "module": "scripts.investigation.runtime_chain_promoter_v4",
-      "purpose": "Inferred registry entry for scripts.investigation.runtime_chain_promoter_v4.",
+      "purpose": "Promote or reject runtime chain candidates using gate values and optional deterministic promotion validation.",
       "pipeline_stage": "promotion",
       "input_schemas": [
         "runtime_chain_candidate.v5",
@@ -363,9 +390,9 @@
         "docs/runtime/runtime_chains/*_not_promoted.md",
         "investigations/validation/*_promotion_decision.json"
       ],
-      "promotion_role": "context_or_debug",
+      "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_ranker",
@@ -584,6 +611,23 @@
       "source": "merged_existing_curation"
     },
     {
+      "script_id": "scripts.investigation.update_promoted_runtime_chain_registry",
+      "path": "scripts/investigation/update_promoted_runtime_chain_registry.py",
+      "module": "scripts.investigation.update_promoted_runtime_chain_registry",
+      "purpose": "",
+      "pipeline_stage": "promotion",
+      "input_schemas": [
+        "runtime_chain_promotion_decision.v4"
+      ],
+      "output_schemas": [
+        "promoted_runtime_chain_registry.v1"
+      ],
+      "artifact_patterns": [],
+      "promotion_role": "context_or_debug",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
+    },
+    {
       "script_id": "scripts.investigation.validate_runtime_chain_promotion",
       "path": "scripts/investigation/validate_runtime_chain_promotion.py",
       "module": "scripts.investigation.validate_runtime_chain_promotion",
@@ -602,7 +646,7 @@
       ],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.qdrant.add_runtime_chains_to_qdrant_documents",
@@ -690,6 +734,25 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
       "source": "merged_existing_curation"
+    },
+    {
+      "script_id": "scripts.qdrant.build_runtime_chain_corpus",
+      "path": "scripts/qdrant/build_runtime_chain_corpus.py",
+      "module": "scripts.qdrant.build_runtime_chain_corpus",
+      "purpose": "Build retrieval-ready runtime chain corpus documents from the promoted runtime chain registry.",
+      "pipeline_stage": "retrieval",
+      "input_schemas": [
+        "promoted_runtime_chain_registry.v1"
+      ],
+      "output_schemas": [
+        "runtime_chain_corpus.v1"
+      ],
+      "artifact_patterns": [
+        "manifests/semantic/runtime_chain_corpus.jsonl"
+      ],
+      "promotion_role": "promotion_support",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.qdrant.build_runtime_chain_evidence",
@@ -812,14 +875,23 @@
       "script_id": "scripts.qdrant.embed_qdrant_documents",
       "path": "scripts/qdrant/embed_qdrant_documents.py",
       "module": "scripts.qdrant.embed_qdrant_documents",
-      "purpose": "Inferred registry entry for scripts.qdrant.embed_qdrant_documents.",
+      "purpose": "Generate BGE embeddings for semantic documents and runtime chain corpus artifacts.",
       "pipeline_stage": "embedding",
-      "input_schemas": [],
-      "output_schemas": [],
-      "artifact_patterns": [],
-      "promotion_role": "context_or_debug",
+      "input_schemas": [
+        "qdrant_documents.v1",
+        "runtime_chain_corpus.v1"
+      ],
+      "output_schemas": [
+        "qdrant_embeddings.v1",
+        "qdrant_embedding_summary.v1"
+      ],
+      "artifact_patterns": [
+        "manifests/semantic/qdrant_embeddings.jsonl",
+        "manifests/semantic/qdrant_embedding_summary.md"
+      ],
+      "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.qdrant.evaluate_retrieval",
@@ -851,14 +923,20 @@
       "script_id": "scripts.qdrant.ingest_qdrant",
       "path": "scripts/qdrant/ingest_qdrant.py",
       "module": "scripts.qdrant.ingest_qdrant",
-      "purpose": "Inferred registry entry for scripts.qdrant.ingest_qdrant.",
+      "purpose": "Ingest generated embeddings into the Qdrant collection used by retrieval and investigation workflows.",
       "pipeline_stage": "ingestion",
-      "input_schemas": [],
-      "output_schemas": [],
-      "artifact_patterns": [],
-      "promotion_role": "context_or_debug",
+      "input_schemas": [
+        "qdrant_embeddings.v1"
+      ],
+      "output_schemas": [
+        "qdrant_collection.v1"
+      ],
+      "artifact_patterns": [
+        "qdrant_collection"
+      ],
+      "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.qdrant.investigate",
@@ -903,16 +981,21 @@
       "script_id": "scripts.qdrant.query_qdrant",
       "path": "scripts/qdrant/query_qdrant.py",
       "module": "scripts.qdrant.query_qdrant",
-      "purpose": "Inferred registry entry for scripts.qdrant.query_qdrant.",
+      "purpose": "Execute retrieval against Qdrant using semantic embeddings, reranking, and context-pack generation support.",
       "pipeline_stage": "retrieval",
-      "input_schemas": [],
-      "output_schemas": [],
-      "artifact_patterns": [
-        "docs/project_structure.md"
+      "input_schemas": [
+        "qdrant_collection.v1",
+        "qdrant_embeddings.v1"
       ],
-      "promotion_role": "context_or_debug",
+      "output_schemas": [
+        "qdrant_query_results.v1"
+      ],
+      "artifact_patterns": [
+        "manifests/semantic/qdrant_query_results.md"
+      ],
+      "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.qdrant.rerank_results",
@@ -1800,7 +1883,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/pipeline_cleanup_plan_v1.json",
@@ -1956,7 +2039,7 @@
         "manifests/semantic/qdrant_embedding_summary.md",
         "manifests/semantic/qdrant_embeddings.jsonl"
       ],
-      "source": "merged_existing_curation"
+      "source": "explicit_artifact_flag"
     },
     {
       "artifact_id": "investigations/validation/pipeline_cleanup_plan_v1.md",
@@ -2926,6 +3009,34 @@
       "source": "merged_existing_curation"
     },
     {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.json",
+      "schema": "runtime_chain_promotion_decision.v4",
+      "producer_script": "scripts.investigation.promote_runtime_chain_candidate_v2",
+      "pipeline_stage": "promotion",
+      "benchmark": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "promotion_role": "promotion_core",
+      "canonical_status": "canonical",
+      "inputs": [
+        "E:/signalis_ai/docs/runtime/pipeline_artifact_contract.json",
+        "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6.json",
+        "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.json"
+      ],
+      "source": "explicit_artifact_flag"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json",
       "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json",
       "schema": "runtime_chain_candidate.v6",
@@ -3078,7 +3189,7 @@
         "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.json",
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json"
       ],
-      "source": "merged_existing_curation"
+      "source": "explicit_artifact_flag"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.md",
@@ -3130,6 +3241,18 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json"
       ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "docs/runtime/runtime_chains/_superseded/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain_superseded_20260601_203407.md",
+      "path": "docs/runtime/runtime_chains/_superseded/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain_superseded_20260601_203407.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "canonical",
+      "inputs": [],
       "source": "merged_existing_curation"
     },
     {
@@ -3217,6 +3340,18 @@
       "schema": null,
       "producer_script": null,
       "pipeline_stage": "promotion_output",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "canonical",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
+      "path": "docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
       "benchmark": "vendor_purchase_itemdata",
       "promotion_role": "promotion_core",
       "canonical_status": "canonical",
@@ -3365,7 +3500,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "merged_existing_curation"
+      "source": "explicit_artifact_flag"
     },
     {
       "artifact_id": "manifests/normalized/plugin_hook_edges.json",
@@ -3389,7 +3524,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "merged_existing_curation"
+      "source": "explicit_artifact_flag"
     },
     {
       "artifact_id": "manifests/normalized/resolved_hook_runs.json",
@@ -3477,7 +3612,7 @@
         "{'edge_file': 'E://signalis_ai//manifests//normalized//runtime_graph_edges.json', 'edges': 8263, 'label': 'Hook/event runtime graph', 'layer': 'hook', 'loaded': True, 'node_file': 'E://signalis_ai//manifests//normalized//runtime_graph_nodes.json', 'nodes': 2376}",
         "{'edge_file': 'E://signalis_ai//manifests//normalized//timer_graph_edges.json', 'edges': 4854, 'label': 'Timer graph', 'layer': 'timer', 'loaded': True, 'node_file': 'E://signalis_ai//manifests//normalized//timer_graph_nodes.json', 'nodes': 940}"
       ],
-      "source": "merged_existing_curation"
+      "source": "explicit_artifact_flag"
     },
     {
       "artifact_id": "manifests/normalized/runtime_topology_edges.json",
@@ -3686,6 +3821,18 @@
     {
       "artifact_id": "manifests/semantic/qdrant_query_results_deduped.summary.md",
       "path": "manifests/semantic/qdrant_query_results_deduped.summary.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "unknown",
+      "benchmark": "unknown",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "manifests/semantic/runtime_chain_corpus.jsonl",
+      "path": "manifests/semantic/runtime_chain_corpus.jsonl",
       "schema": null,
       "producer_script": null,
       "pipeline_stage": "unknown",

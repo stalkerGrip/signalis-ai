@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `90`
+- Scripts checked: `93`
 
 ## scripts/diagnostics
 
@@ -34,7 +34,7 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8258.87it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]
 ```
 
 ## scripts/extraction
@@ -1732,6 +1732,41 @@ options:
   --out OUT
 ```
 
+### `scripts.investigation.promote_runtime_chain_candidate_v2`
+
+- Path: `scripts/investigation/promote_runtime_chain_candidate_v2.py`
+- Help status: `OK`
+
+```text
+usage: promote_runtime_chain_candidate_v2.py [-h] --workspace WORKSPACE
+                                             --candidate CANDIDATE
+                                             --promotion-validation
+                                             PROMOTION_VALIDATION
+                                             [--registry REGISTRY]
+                                             [--name NAME]
+                                             [--promoted-dir PROMOTED_DIR]
+                                             [--out-json OUT_JSON]
+                                             [--out-md OUT_MD] [--dry-run]
+
+Promote runtime chain candidate with contract validation, promotion
+validation, supersession, and canonical output.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --candidate CANDIDATE
+  --promotion-validation PROMOTION_VALIDATION
+  --registry REGISTRY   Default: <workspace>/docs/runtime/pipeline_artifact_co
+                        ntract.json
+  --name NAME           Output slug. Default: benchmark/title derived.
+  --promoted-dir PROMOTED_DIR
+                        Default: <workspace>/docs/runtime/runtime_chains
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --dry-run             Validate and write decision files, but do not move
+                        superseded promoted docs.
+```
+
 ### `scripts.investigation.run_targeted_validation_request`
 
 - Path: `scripts/investigation/run_targeted_validation_request.py`
@@ -2180,6 +2215,25 @@ options:
   --max-edges MAX_EDGES
 ```
 
+### `scripts.investigation.update_promoted_runtime_chain_registry`
+
+- Path: `scripts/investigation/update_promoted_runtime_chain_registry.py`
+- Help status: `OK`
+
+```text
+usage: update_promoted_runtime_chain_registry.py [-h] --workspace WORKSPACE
+                                                 [--validation-dir VALIDATION_DIR]
+                                                 [--out OUT]
+
+Build promoted runtime chain registry.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --validation-dir VALIDATION_DIR
+  --out OUT
+```
+
 ### `scripts.investigation.validate_runtime_chain_promotion`
 
 - Path: `scripts/investigation/validate_runtime_chain_promotion.py`
@@ -2492,6 +2546,26 @@ options:
                         large.
   --top-node-docs TOP_NODE_DOCS
                         Include this many high-degree node docs by default.
+```
+
+### `scripts.qdrant.build_runtime_chain_corpus`
+
+- Path: `scripts/qdrant/build_runtime_chain_corpus.py`
+- Help status: `OK`
+
+```text
+usage: build_runtime_chain_corpus.py [-h] --workspace WORKSPACE
+                                     [--registry REGISTRY] [--out OUT]
+
+Build runtime chain retrieval corpus from promoted runtime chain registry.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --registry REGISTRY   Default: <workspace>/manifests/runtime/promoted_runtim
+                        e_chains.json
+  --out OUT             Default: <workspace>/manifests/semantic/runtime_chain_
+                        corpus.jsonl
 ```
 
 ### `scripts.qdrant.build_runtime_chain_evidence`

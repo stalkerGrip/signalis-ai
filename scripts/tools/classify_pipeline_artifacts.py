@@ -37,7 +37,15 @@ KEEP_PATTERNS = [
 
     "characterload_inventory_runtime_chain_candidate_v5",
     "characterload_inventory_runtime_fact_topology_v3",
-]
+    "runtime_propagation_topology",
+    "qdrant_documents",
+    "qdrant_embeddings",
+    "qdrant_embedding_summary",
+    "qdrant_ingest_summary",
+    "vendor_purchase_chain",
+    "vendor_purchase_item_metadata_sync",
+    "vendor_purchase_price_label_cleanup",
+    ]
 
 DELETE_PATTERNS = [
     "debug",

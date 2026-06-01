@@ -8,6 +8,27 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, PointStruct, VectorParams
 
 
+PIPELINE_CONTRACT = {
+    "script_id": "scripts.qdrant.ingest_qdrant",
+    "purpose": (
+        "Ingest generated embeddings into the Qdrant collection used by "
+        "retrieval and investigation workflows."
+    ),
+    "pipeline_stage": "ingestion",
+    "input_schemas": [
+        "qdrant_embeddings.v1"
+    ],
+    "output_schemas": [
+        "qdrant_collection.v1"
+    ],
+    "artifact_patterns": [
+        "qdrant_collection"
+    ],
+    "promotion_role": "promotion_support",
+    "canonical_status": "active"
+}
+
+
 DEFAULT_COLLECTION = "signalis_semantic"
 
 

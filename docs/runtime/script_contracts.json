@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 90,
+  "scripts_checked": 93,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
       "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8258.87it/s]"
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -153,6 +153,12 @@
       "help": "usage: promote_runtime_chain_candidate.py [-h] --candidate CANDIDATE --out OUT\n\noptions:\n  -h, --help            show this help message and exit\n  --candidate CANDIDATE\n  --out OUT"
     },
     {
+      "path": "scripts/investigation/promote_runtime_chain_candidate_v2.py",
+      "module": "scripts.investigation.promote_runtime_chain_candidate_v2",
+      "help_ok": true,
+      "help": "usage: promote_runtime_chain_candidate_v2.py [-h] --workspace WORKSPACE\n                                             --candidate CANDIDATE\n                                             --promotion-validation\n                                             PROMOTION_VALIDATION\n                                             [--registry REGISTRY]\n                                             [--name NAME]\n                                             [--promoted-dir PROMOTED_DIR]\n                                             [--out-json OUT_JSON]\n                                             [--out-md OUT_MD] [--dry-run]\n\nPromote runtime chain candidate with contract validation, promotion\nvalidation, supersession, and canonical output.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --candidate CANDIDATE\n  --promotion-validation PROMOTION_VALIDATION\n  --registry REGISTRY   Default: <workspace>/docs/runtime/pipeline_artifact_co\n                        ntract.json\n  --name NAME           Output slug. Default: benchmark/title derived.\n  --promoted-dir PROMOTED_DIR\n                        Default: <workspace>/docs/runtime/runtime_chains\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --dry-run             Validate and write decision files, but do not move\n                        superseded promoted docs."
+    },
+    {
       "path": "scripts/investigation/run_targeted_validation_request.py",
       "module": "scripts.investigation.run_targeted_validation_request",
       "help_ok": true,
@@ -279,6 +285,12 @@
       "help": "usage: runtime_topology_node_probe.py [-h] --runtime-topology RUNTIME_TOPOLOGY\n                                      --node-id NODE_ID --out-md OUT_MD\n                                      [--max-edges MAX_EDGES]\n\nInspect incoming/outgoing edges around a runtime topology node.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-topology RUNTIME_TOPOLOGY\n  --node-id NODE_ID\n  --out-md OUT_MD\n  --max-edges MAX_EDGES"
     },
     {
+      "path": "scripts/investigation/update_promoted_runtime_chain_registry.py",
+      "module": "scripts.investigation.update_promoted_runtime_chain_registry",
+      "help_ok": true,
+      "help": "usage: update_promoted_runtime_chain_registry.py [-h] --workspace WORKSPACE\n                                                 [--validation-dir VALIDATION_DIR]\n                                                 [--out OUT]\n\nBuild promoted runtime chain registry.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --validation-dir VALIDATION_DIR\n  --out OUT"
+    },
+    {
       "path": "scripts/investigation/validate_runtime_chain_promotion.py",
       "module": "scripts.investigation.validate_runtime_chain_promotion",
       "help_ok": true,
@@ -367,6 +379,12 @@
       "module": "scripts.qdrant.build_qdrant_documents",
       "help_ok": true,
       "help": "usage: build_qdrant_documents.py [-h] [--workspace WORKSPACE] [--write]\n                                 [--include-node-docs]\n                                 [--top-node-docs TOP_NODE_DOCS]\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --write\n  --include-node-docs   Include per-node documents for all nodes. Can be\n                        large.\n  --top-node-docs TOP_NODE_DOCS\n                        Include this many high-degree node docs by default."
+    },
+    {
+      "path": "scripts/qdrant/build_runtime_chain_corpus.py",
+      "module": "scripts.qdrant.build_runtime_chain_corpus",
+      "help_ok": true,
+      "help": "usage: build_runtime_chain_corpus.py [-h] --workspace WORKSPACE\n                                     [--registry REGISTRY] [--out OUT]\n\nBuild runtime chain retrieval corpus from promoted runtime chain registry.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --registry REGISTRY   Default: <workspace>/manifests/runtime/promoted_runtim\n                        e_chains.json\n  --out OUT             Default: <workspace>/manifests/semantic/runtime_chain_\n                        corpus.jsonl"
     },
     {
       "path": "scripts/qdrant/build_runtime_chain_evidence.py",

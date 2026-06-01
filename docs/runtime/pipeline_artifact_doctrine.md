@@ -286,3 +286,120 @@ The contract registry is the canonical machine-readable source for script and ar
 Investigation outputs are evidence.
 
 The registry defines how evidence is organized.
+
+## Code Generation Markup Safety Rule
+
+Problem:
+
+ChatGPT responses frequently corrupt code when multiple markup layers are nested:
+
+* Markdown code block containing Markdown code block
+* Python triple-quoted string containing Markdown fences
+* Markdown examples containing triple backticks
+* JSON examples inside Markdown inside Python
+
+These corruptions are difficult to detect and cause copy-paste failures.
+
+### Rule 1
+
+Never demonstrate Markdown fences inside another Markdown fence.
+
+Bad:
+
+[Markdown block]
+`python
+    text = '''
+    `text
+value
+`     '''
+    `
+[/Markdown block]
+
+### Rule 2
+
+When generating Python that writes Markdown:
+
+Do not use large triple-quoted templates.
+
+Avoid:
+
+Python:
+summary = f"""..."""
+
+Prefer:
+
+Python:
+lines = []
+lines.append(...)
+path.write_text("\n".join(lines))
+
+### Rule 3
+
+When discussing code that itself contains code fences:
+
+Use indentation examples or pseudocode.
+
+Do not emit nested triple-backtick examples.
+
+### Rule 4
+
+For copy-paste script delivery:
+
+Prefer:
+
+* exact replacement blocks
+* complete functions
+* complete files
+
+Avoid:
+
+* partial multiline fragments
+* snippets that start/end inside a string literal
+
+### Rule 5
+
+If a response contains:
+
+* Python
+* Markdown generation
+* JSON generation
+
+then perform a "markup safety check":
+
+Verify:
+
+* all quotes balanced
+* all parentheses balanced
+* all braces balanced
+* all Markdown fences balanced
+* no nested Markdown fences
+
+### Rule 6
+
+Canonical SIGNALIS pipeline scripts should use:
+
+Python:
+lines: list[str]
+
+for Markdown generation.
+
+This is the preferred architecture pattern.
+
+Reason:
+
+Deterministic generation is more important than concise generation.
+
+Copy-paste reliability is a pipeline requirement.
+
+## Promoted runtime chains are first-class retrieval artifacts.
+
+A promoted runtime chain must flow through:
+
+promotion decision
+→ promoted runtime chain registry
+→ runtime chain corpus
+→ qdrant embeddings
+→ qdrant ingestion
+→ retrieval validation
+
+Promotion is not complete until the promoted chain is retrievable by chain_id and promotion_status.

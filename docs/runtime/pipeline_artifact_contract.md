@@ -1,9 +1,9 @@
 # Pipeline Artifact Contract Registry
 
 - Schema: `pipeline_artifact_contract.v1`
-- Generated at: `2026-06-01T20:14:10`
-- Scripts: `82`
-- Artifacts: `113`
+- Generated at: `2026-06-01T21:37:39`
+- Scripts: `85`
+- Artifacts: `118`
 
 ## Script Stages
 
@@ -16,8 +16,8 @@
 | `ingestion` | 3 |
 | `normalization` | 2 |
 | `probe` | 2 |
-| `promotion` | 2 |
-| `retrieval` | 1 |
+| `promotion` | 4 |
+| `retrieval` | 2 |
 | `runtime_chain_candidate` | 4 |
 | `runtime_chain_regression` | 1 |
 | `runtime_fact_graph` | 1 |
@@ -34,9 +34,9 @@
 | `diagnosis` | 2 |
 | `ingestion` | 3 |
 | `ordered_runtime_facts` | 2 |
-| `promotion` | 1 |
+| `promotion` | 2 |
 | `promotion_output` | 5 |
-| `runtime_chain_candidate` | 17 |
+| `runtime_chain_candidate` | 20 |
 | `runtime_chain_regression` | 1 |
 | `runtime_fact_graph` | 4 |
 | `runtime_fact_topology` | 11 |
@@ -44,15 +44,15 @@
 | `source_validation` | 5 |
 | `targeted_validation_request` | 6 |
 | `tooling` | 1 |
-| `unknown` | 48 |
+| `unknown` | 49 |
 
 ## Artifact Statuses
 
 | Status | Count |
 |---|---:|
-| `canonical` | 5 |
+| `canonical` | 8 |
 | `debug` | 2 |
-| `intermediate` | 106 |
+| `intermediate` | 108 |
 
 ## Contract Flag Format
 

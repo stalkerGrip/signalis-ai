@@ -11,6 +11,30 @@ from pathlib import Path
 from typing import Any, Iterable
 
 
+PIPELINE_CONTRACT = {
+    "script_id": "scripts.qdrant.embed_qdrant_documents",
+    "purpose": (
+        "Generate BGE embeddings for semantic documents and runtime chain "
+        "corpus artifacts."
+    ),
+    "pipeline_stage": "embedding",
+    "input_schemas": [
+        "qdrant_documents.v1",
+        "runtime_chain_corpus.v1"
+    ],
+    "output_schemas": [
+        "qdrant_embeddings.v1",
+        "qdrant_embedding_summary.v1"
+    ],
+    "artifact_patterns": [
+        "manifests/semantic/qdrant_embeddings.jsonl",
+        "manifests/semantic/qdrant_embedding_summary.md"
+    ],
+    "promotion_role": "promotion_support",
+    "canonical_status": "active"
+}
+
+
 DEFAULT_MODEL = "BAAI/bge-small-en-v1.5"
 FALLBACK_MODEL = "BAAI/bge-small-en-v1.5"
 HASH_MODEL_NAME = "signalis-hash-embedding-v1"
@@ -33,6 +57,12 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
             if isinstance(value, dict):
                 rows.append(value)
     return rows
+
+
+def load_optional_jsonl(path: Path) -> list[dict[str, Any]]:
+    if not path.exists():
+        return []
+    return load_jsonl(path)
 
 
 def write_jsonl(path: Path, rows: Iterable[dict[str, Any]]) -> int:
@@ -181,7 +211,7 @@ def rows_from_sentence_model(
 def write_summary(
     path: Path,
     *,
-    input_path: Path,
+    input_paths: list[Path],
     output_path: Path,
     model_requested: str,
     model_used: str,
@@ -191,42 +221,46 @@ def write_summary(
     dim: int,
 ) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(
-        f"""# Qdrant Embedding Summary
 
-Model requested: `{model_requested}`
-Model used: `{model_used}`
+    input_block = "\n".join(str(p) for p in input_paths)
 
-## Files
+    lines = [
+        "# Qdrant Embedding Summary",
+        "",
+        f"Model requested: `{model_requested}`",
+        f"Model used: `{model_used}`",
+        "",
+        "## Files",
+        "",
+        "Inputs:",
+        "",
+        "```text",
+        input_block,
+        "```",
+        "",
+        "Output:",
+        "",
+        "```text",
+        str(output_path),
+        "```",
+        "",
+        "## Results",
+        "",
+        f"- Documents loaded: **{docs_loaded}**",
+        f"- Embeddings written: **{rows_written}**",
+        f"- Embedding dimension: **{dim}**",
+        f"- Output exists: **{output_path.exists()}**",
+        f"- Output size: **{output_path.stat().st_size if output_path.exists() else 0} bytes**",
+        "",
+        "## Fallback reason",
+        "",
+        "```text",
+        fallback_reason or "none",
+        "```",
+        "",
+    ]
 
-Input:
-
-```text
-{input_path}
-```
-
-Output:
-
-```text
-{output_path}
-```
-
-## Results
-
-- Documents loaded: **{docs_loaded}**
-- Embeddings written: **{rows_written}**
-- Embedding dimension: **{dim}**
-- Output exists: **{output_path.exists()}**
-- Output size: **{output_path.stat().st_size if output_path.exists() else 0} bytes**
-
-## Fallback reason
-
-```text
-{fallback_reason or "none"}
-```
-""",
-        encoding="utf-8",
-    )
+    path.write_text("\n".join(lines), encoding="utf-8")
 
 
 def main() -> int:
@@ -247,17 +281,32 @@ def main() -> int:
     args = parser.parse_args()
 
     workspace = args.workspace.resolve()
-    input_path = workspace / "manifests" / "semantic" / "qdrant_documents.jsonl"
-    output_path = workspace / "manifests" / "semantic" / "qdrant_embeddings.jsonl"
-    summary_path = workspace / "manifests" / "semantic" / "qdrant_embedding_summary.md"
+
+    semantic_dir = workspace / "manifests" / "semantic"
+
+    input_path = semantic_dir / "qdrant_documents.jsonl"
+    runtime_chain_corpus_path = semantic_dir / "runtime_chain_corpus.jsonl"
+    output_path = semantic_dir / "qdrant_embeddings.jsonl"
+    summary_path = semantic_dir / "qdrant_embedding_summary.md"
 
     print(f"[INFO] Workspace: {workspace}")
     print(f"[INFO] Input documents: {input_path}")
+    print(f"[INFO] Runtime chain corpus: {runtime_chain_corpus_path}")
     print(f"[INFO] Output embeddings: {output_path}")
 
     docs = load_jsonl(input_path)
+
+    runtime_chain_docs = load_optional_jsonl(runtime_chain_corpus_path)
+    if runtime_chain_docs:
+        docs.extend(runtime_chain_docs)
+        print(f"[INFO] Runtime chain corpus docs added: {len(runtime_chain_docs)}")
+    else:
+        print("[INFO] Runtime chain corpus docs added: 0")
+
     if not docs:
-        raise RuntimeError(f"No documents loaded from {input_path}")
+        raise RuntimeError(
+            f"No documents loaded from {input_path} or {runtime_chain_corpus_path}"
+        )
 
     model_used = args.model
     fallback_reason = ""
@@ -304,7 +353,10 @@ def main() -> int:
 
     write_summary(
         summary_path,
-        input_path=input_path,
+        input_paths=[
+            input_path,
+            runtime_chain_corpus_path,
+        ],
         output_path=output_path,
         model_requested=args.model,
         model_used=model_used,
