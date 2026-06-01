@@ -1,9 +1,9 @@
 # Pipeline Artifact Contract Registry
 
 - Schema: `pipeline_artifact_contract.v1`
-- Generated at: `2026-06-01T18:53:39`
-- Scripts: `90`
-- Artifacts: `276`
+- Generated at: `2026-06-01T19:53:45`
+- Scripts: `91`
+- Artifacts: `295`
 
 ## Script Stages
 
@@ -16,7 +16,7 @@
 | `ingestion` | 3 |
 | `normalization` | 2 |
 | `probe` | 2 |
-| `promotion` | 5 |
+| `promotion` | 6 |
 | `retrieval` | 1 |
 | `runtime_chain_candidate` | 4 |
 | `runtime_chain_regression` | 1 |
@@ -31,31 +31,32 @@
 
 | Stage | Count |
 |---|---:|
-| `diagnosis` | 2 |
+| `diagnosis` | 4 |
 | `ingestion` | 3 |
-| `ordered_runtime_facts` | 2 |
+| `ordered_runtime_facts` | 4 |
 | `ordered_steps` | 14 |
 | `probe` | 16 |
-| `promotion_output` | 6 |
+| `promotion` | 1 |
+| `promotion_output` | 8 |
 | `ranked_evidence` | 6 |
-| `runtime_chain_candidate` | 22 |
+| `runtime_chain_candidate` | 24 |
 | `runtime_chain_regression` | 2 |
-| `runtime_fact_graph` | 10 |
-| `runtime_fact_topology` | 22 |
-| `runtime_facts` | 14 |
+| `runtime_fact_graph` | 12 |
+| `runtime_fact_topology` | 24 |
+| `runtime_facts` | 16 |
 | `runtime_steps` | 16 |
 | `source_validation` | 8 |
 | `targeted_validation_request` | 35 |
-| `unknown` | 98 |
+| `unknown` | 102 |
 
 ## Artifact Statuses
 
 | Status | Count |
 |---|---:|
-| `canonical` | 4 |
-| `debug` | 28 |
-| `failed` | 2 |
-| `intermediate` | 242 |
+| `canonical` | 5 |
+| `debug` | 30 |
+| `failed` | 3 |
+| `intermediate` | 257 |
 
 ## Contract Flag Format
 

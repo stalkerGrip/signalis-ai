@@ -87,50 +87,82 @@ syncItemAdded is likely outdated stage naming or wrong expected needle, because 
 
 ## Current Bottleneck
 
-### Runtime Chain Promotion Validation
+### Promotion Governance Automation
 
-Goal:
+What is still manual:
 
-Validate that promoted runtime chains can be regenerated
-from full-chain evidence and not from manually reconstructed stages.
+runtime_chain_promoter_v4
+required modification
 
-Suggested next experiment:
+promotion validation artifact
+must be manually supplied
 
-vendor_purchase_itemdata_runtime_chain_candidate_v6
+superseded chain handling
+is manual
+
+canonical chain selection
+is manual
+
+Next Infrastructure
+
+Create:
+
+scripts/investigation/promote_runtime_chain_candidate_v2.py
+
+Purpose:
+
+candidate
 ↓
-runtime_chain_promotion_validation
+contract validation
+↓
+promotion validation
 ↓
 promotion decision
+↓
+supersede older promotion
+↓
+canonical promotion output
 
-Questions to answer:
-
-Does V6 supersede the currently promoted vendor chain?
-
-Does V6 provide stronger evidence coverage?
-
-Should the promoted vendor chain artifact be replaced by V6?
-
-Can promotion be made deterministic from ordered runtime facts?
-
-Important:
-
-Do not guess script names.
-
-script_contracts.md is authoritative.
-
-If a runtime-fact generation script is not listed in script_contracts.md:
-
-1. inspect actual pipeline scripts
-2. use --help
-3. ask human for authoritative module
-
-Pipeline-first doctrine remains active.
-
-Do not investigate gameplay fixes.
+This would remove the manual patch we just added to runtime_chain_promoter_v4.
 
 ---
 
 ## Completed Bottlenecks
+
+### Runtime Chain Promotion Validation
+PASS
+
+Validated candidate:
+
+vendor_purchase_itemdata_runtime_chain_candidate_v6
+
+Deterministic regeneration:
+PASS
+
+Promotion validation:
+PASS
+
+Promotion decision:
+promoted_confirmed_chain
+
+Recovered chain:
+
+vendor_open_metadata_assignment
+→ vendor_purchase_transfer
+→ vendor_metadata_cleanup
+→ item_metadata_mutation
+→ item_metadata_network_send
+→ inventory_membership_client_apply
+→ item_metadata_client_apply
+→ ui_itemdata_refresh_hook
+
+Result:
+
+Promotion can now be validated from
+ordered runtime facts rather than
+manual reconstruction.
+
+Vendor V6 supersedes previous vendor promotion.
 
 ### Contract Adoption Policy
 

@@ -8,6 +8,30 @@ from pathlib import Path
 from typing import Any
 
 
+PIPELINE_CONTRACT = {
+    "script_id": "scripts.investigation.runtime_chain_promoter_v4",
+    "purpose": "Promote or reject runtime chain candidates using gate values and optional deterministic promotion validation.",
+    "pipeline_stage": "promotion",
+    "input_schemas": [
+        "runtime_chain_candidate.v5",
+        "runtime_chain_candidate.v6",
+        "runtime_chain_promotion_validation.v1",
+    ],
+    "output_schemas": [
+        "runtime_chain_promotion_decision.v4",
+        "promoted_runtime_chain.md",
+    ],
+    "artifact_patterns": [
+        "docs/runtime/runtime_chains/*_promoted_confirmed_chain.md",
+        "docs/runtime/runtime_chains/*_promoted_topology_supported_chain.md",
+        "docs/runtime/runtime_chains/*_not_promoted.md",
+        "investigations/validation/*_promotion_decision.json",
+    ],
+    "promotion_role": "promotion_core",
+    "canonical_status": "active",
+}
+
+
 CONFIRMED = "promoted_confirmed_chain"
 TOPOLOGY_SUPPORTED = "promoted_topology_supported_chain"
 REJECTED = "not_promoted"
@@ -190,6 +214,7 @@ Do not collapse these promotion classes.
 
 def main() -> None:
     ap = argparse.ArgumentParser()
+    ap.add_argument("--promotion-validation", type=Path, default=None)
     ap.add_argument("--chain", required=True, type=Path)
     ap.add_argument("--out-dir", default=Path("docs/runtime/runtime_chains"), type=Path)
     ap.add_argument("--out-json", type=Path)
@@ -199,6 +224,25 @@ def main() -> None:
     data = load_json(args.chain)
     gate = extract_gate(data)
     promotion_type, reasons = decide(gate)
+
+    promotion_validation = None
+
+    if args.promotion_validation:
+        promotion_validation = load_json(args.promotion_validation)
+
+        if promotion_validation.get("promotion_validation") is not True:
+            reasons.append("promotion validation artifact did not pass")
+        elif promotion_validation.get("promotion_recommendation") != "approve":
+            reasons.append(
+                f"promotion validation recommendation is {promotion_validation.get('promotion_recommendation')}"
+            )
+        else:
+            promotion_type = CONFIRMED
+            reasons = [
+                "promotion validation approved",
+                "deterministic regeneration confirmed",
+                "candidate matches regenerated chain",
+            ]
 
     title = extract_title(data, args.chain)
     slug = slugify(title)

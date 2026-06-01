@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 96,
+  "scripts_checked": 97,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
       "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8291.61it/s]"
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8650.92it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -234,7 +234,7 @@
       "path": "scripts/investigation/runtime_chain_promoter_v4.py",
       "module": "scripts.investigation.runtime_chain_promoter_v4",
       "help_ok": true,
-      "help": "usage: runtime_chain_promoter_v4.py [-h] --chain CHAIN [--out-dir OUT_DIR]\n                                    [--out-json OUT_JSON] [--fail-on-rejected]\n\noptions:\n  -h, --help           show this help message and exit\n  --chain CHAIN\n  --out-dir OUT_DIR\n  --out-json OUT_JSON\n  --fail-on-rejected"
+      "help": "usage: runtime_chain_promoter_v4.py [-h]\n                                    [--promotion-validation PROMOTION_VALIDATION]\n                                    --chain CHAIN [--out-dir OUT_DIR]\n                                    [--out-json OUT_JSON] [--fail-on-rejected]\n\noptions:\n  -h, --help            show this help message and exit\n  --promotion-validation PROMOTION_VALIDATION\n  --chain CHAIN\n  --out-dir OUT_DIR\n  --out-json OUT_JSON\n  --fail-on-rejected"
     },
     {
       "path": "scripts/investigation/runtime_chain_ranker.py",
@@ -313,6 +313,12 @@
       "module": "scripts.investigation.runtime_topology_node_probe",
       "help_ok": true,
       "help": "usage: runtime_topology_node_probe.py [-h] --runtime-topology RUNTIME_TOPOLOGY\n                                      --node-id NODE_ID --out-md OUT_MD\n                                      [--max-edges MAX_EDGES]\n\nInspect incoming/outgoing edges around a runtime topology node.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-topology RUNTIME_TOPOLOGY\n  --node-id NODE_ID\n  --out-md OUT_MD\n  --max-edges MAX_EDGES"
+    },
+    {
+      "path": "scripts/investigation/validate_runtime_chain_promotion.py",
+      "module": "scripts.investigation.validate_runtime_chain_promotion",
+      "help_ok": true,
+      "help": "usage: validate_runtime_chain_promotion.py [-h] --candidate CANDIDATE\n                                           --ordered-facts ORDERED_FACTS\n                                           --out-json OUT_JSON --out-md OUT_MD\n                                           [--keep-regenerated-json KEEP_REGENERATED_JSON]\n                                           [--keep-regenerated-md KEEP_REGENERATED_MD]\n\nValidate deterministic regeneration of a runtime chain promotion candidate.\n\noptions:\n  -h, --help            show this help message and exit\n  --candidate CANDIDATE\n  --ordered-facts ORDERED_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --keep-regenerated-json KEEP_REGENERATED_JSON\n                        Optional path to keep regenerated candidate JSON.\n  --keep-regenerated-md KEEP_REGENERATED_MD\n                        Optional path to keep regenerated candidate MD."
     },
     {
       "path": "scripts/normalization/build_hook_event_bus.py",

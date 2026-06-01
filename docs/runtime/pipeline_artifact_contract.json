@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-01T18:53:39",
+  "generated_at": "2026-06-01T19:53:45",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -46,7 +46,7 @@
       ],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.build_characterload_runtime_facts",
@@ -67,7 +67,7 @@
       ],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.build_investigation_synthesis",
@@ -82,7 +82,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.build_runtime_chain_candidate_v6",
@@ -99,7 +99,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.build_runtime_facts_from_source_validation",
@@ -116,7 +116,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.build_targeted_validation_request",
@@ -133,7 +133,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.debug_runtime_propagation_v3_bridges",
@@ -146,7 +146,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.diagnose_runtime_fact_generation",
@@ -159,7 +159,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.diagnose_source_validation_scope",
@@ -172,7 +172,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.diagnose_target_request_scope",
@@ -185,7 +185,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.evidence_ranker",
@@ -198,7 +198,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.promote_characterload_runtime_chain",
@@ -213,7 +213,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.promote_runtime_chain_candidate",
@@ -226,7 +226,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.run_targeted_validation_request",
@@ -243,7 +243,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_branch_builder",
@@ -260,7 +260,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_builder",
@@ -279,7 +279,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_builder_v4",
@@ -300,7 +300,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_builder_v5",
@@ -321,7 +321,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_candidate",
@@ -338,7 +338,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_graph",
@@ -355,7 +355,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_graph_characterload",
@@ -371,7 +371,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_node_search_characterload",
@@ -387,7 +387,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_pathfinder",
@@ -406,7 +406,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_pipeline",
@@ -419,7 +419,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_promoter",
@@ -436,7 +436,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_promoter_v4",
@@ -444,12 +444,24 @@
       "module": "scripts.investigation.runtime_chain_promoter_v4",
       "purpose": "Inferred registry entry for scripts.investigation.runtime_chain_promoter_v4.",
       "pipeline_stage": "promotion",
-      "input_schemas": [],
-      "output_schemas": [],
-      "artifact_patterns": [],
+      "input_schemas": [
+        "runtime_chain_candidate.v5",
+        "runtime_chain_candidate.v6",
+        "runtime_chain_promotion_validation.v1"
+      ],
+      "output_schemas": [
+        "runtime_chain_promotion_decision.v4",
+        "promoted_runtime_chain.md"
+      ],
+      "artifact_patterns": [
+        "docs/runtime/runtime_chains/*_promoted_confirmed_chain.md",
+        "docs/runtime/runtime_chains/*_promoted_topology_supported_chain.md",
+        "docs/runtime/runtime_chains/*_not_promoted.md",
+        "investigations/validation/*_promotion_decision.json"
+      ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_ranker",
@@ -466,7 +478,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_regression",
@@ -486,7 +498,7 @@
       ],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_scorer",
@@ -499,7 +511,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_step_builder",
@@ -516,7 +528,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_chain_step_orderer",
@@ -533,7 +545,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_fact_builder",
@@ -550,7 +562,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_fact_graph",
@@ -569,7 +581,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_fact_sequencer",
@@ -586,7 +598,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_fact_topology_mapper",
@@ -605,7 +617,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_fact_topology_regression",
@@ -622,7 +634,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_propagation_topology_builder",
@@ -639,7 +651,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_propagation_topology_probe",
@@ -652,7 +664,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.runtime_topology_node_probe",
@@ -665,7 +677,28 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
+    },
+    {
+      "script_id": "scripts.investigation.validate_runtime_chain_promotion",
+      "path": "scripts/investigation/validate_runtime_chain_promotion.py",
+      "module": "scripts.investigation.validate_runtime_chain_promotion",
+      "purpose": "Validate deterministic regeneration of a runtime chain promotion candidate.",
+      "pipeline_stage": "promotion",
+      "input_schemas": [
+        "runtime_chain_candidate.v6",
+        "ordered_runtime_facts.v1"
+      ],
+      "output_schemas": [
+        "runtime_chain_promotion_validation.v1"
+      ],
+      "artifact_patterns": [
+        "investigations/validation/*_promotion_validation.json",
+        "investigations/validation/*_promotion_validation.md"
+      ],
+      "promotion_role": "promotion_core",
+      "canonical_status": "active",
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.add_runtime_chains_to_qdrant_documents",
@@ -680,7 +713,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.audit_embedding_ingest_counts",
@@ -693,7 +726,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.audit_ingest_filtering",
@@ -706,7 +739,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.build_evidence_graph",
@@ -719,7 +752,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.build_investigation_context_pack",
@@ -737,7 +770,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.build_qdrant_documents",
@@ -752,7 +785,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.build_runtime_chain_evidence",
@@ -769,7 +802,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.build_runtime_chains",
@@ -782,7 +815,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.build_targeted_validation_report",
@@ -797,7 +830,7 @@
       ],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.check_embedding_outputs",
@@ -810,7 +843,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.check_runtime_chain_in_qdrant_docs",
@@ -825,7 +858,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.context_pack",
@@ -838,7 +871,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.deduplicate_qdrant_results",
@@ -856,7 +889,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.deduplicate_validation_fragments",
@@ -869,7 +902,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.embed_qdrant_documents",
@@ -882,7 +915,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.evaluate_retrieval",
@@ -895,7 +928,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.extract_runtime_facts",
@@ -908,7 +941,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.ingest_qdrant",
@@ -921,7 +954,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.investigate",
@@ -934,7 +967,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.patch_vendor_purchase_validation_targets",
@@ -949,7 +982,7 @@
       ],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.path_reconstruction",
@@ -962,7 +995,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.path_reconstruction_v2",
@@ -975,7 +1008,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.promote_runtime_chain",
@@ -988,7 +1021,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.promote_vendor_purchase_chain_doc",
@@ -1003,7 +1036,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.query_qdrant",
@@ -1018,7 +1051,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.rerank_results",
@@ -1031,7 +1064,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.retrieval_intent",
@@ -1044,7 +1077,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.score_validation_report",
@@ -1057,7 +1090,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.synthesize_investigation",
@@ -1072,7 +1105,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.validate_sources",
@@ -1085,7 +1118,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.qdrant.validate_targeted_sources",
@@ -1098,7 +1131,7 @@
       "artifact_patterns": [],
       "promotion_role": "promotion_support",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_character_inventory",
@@ -1111,7 +1144,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_commands",
@@ -1124,7 +1157,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_derma",
@@ -1137,7 +1170,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_entities",
@@ -1150,7 +1183,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_globals",
@@ -1163,7 +1196,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_hooks",
@@ -1176,7 +1209,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_items",
@@ -1189,7 +1222,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_network_payloads",
@@ -1202,7 +1235,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_persistence",
@@ -1215,7 +1248,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_plugins",
@@ -1228,7 +1261,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_registries",
@@ -1241,7 +1274,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.extraction.extract_timers",
@@ -1254,7 +1287,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.build_hook_event_bus",
@@ -1269,7 +1302,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.build_network_graph",
@@ -1284,7 +1317,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.build_runtime_graph",
@@ -1301,7 +1334,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.build_timer_graph",
@@ -1316,7 +1349,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.merge_runtime_graphs",
@@ -1333,7 +1366,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.normalize_hook_symbols",
@@ -1349,7 +1382,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.normalize_network_operations",
@@ -1364,7 +1397,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.normalization.qa_hook_resolution",
@@ -1377,7 +1410,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     }
   ],
   "artifacts": [
@@ -1391,7 +1424,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_generic_runtime_facts_v1.json",
@@ -1405,7 +1438,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_generic_runtime_facts_v1.md",
@@ -1417,7 +1450,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json",
@@ -1431,7 +1464,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_generic_runtime_facts_v2.md",
@@ -1443,7 +1476,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets.json",
@@ -1455,7 +1488,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json",
@@ -1469,7 +1502,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/characterload_inventory_lifecycle_targets.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.md",
@@ -1481,7 +1514,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v1.json",
@@ -1495,7 +1528,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_runtime_facts.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v1.md",
@@ -1507,7 +1540,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5.json",
@@ -1523,7 +1556,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_topology_v3.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5.md",
@@ -1535,7 +1568,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_ordered.json",
@@ -1551,7 +1584,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_topology_v3.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_ordered.md",
@@ -1563,7 +1596,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_propagation.json",
@@ -1579,7 +1612,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_topology_propagation.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_propagation.md",
@@ -1591,7 +1624,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_graph_v1.json",
@@ -1605,7 +1638,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_graph_v1.md",
@@ -1617,7 +1650,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_graph_v2.json",
@@ -1631,7 +1664,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_graph_v2.md",
@@ -1643,7 +1676,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_propagation.json",
@@ -1658,7 +1691,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_propagation.md",
@@ -1670,7 +1703,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_v1.json",
@@ -1685,7 +1718,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_v1.md",
@@ -1697,7 +1730,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_v2.json",
@@ -1712,7 +1745,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_v2.md",
@@ -1724,7 +1757,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_v3.json",
@@ -1739,7 +1772,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_topology_v3.md",
@@ -1751,7 +1784,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_facts.json",
@@ -1765,7 +1798,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_facts.md",
@@ -1777,7 +1810,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/debug_v3_bridges_core_sv_hooks.md",
@@ -1789,7 +1822,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/debug_v3_bridges_item_cl_networking.md",
@@ -1801,7 +1834,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/pipeline_artifact_inventory_v1.json",
@@ -2298,7 +2331,7 @@
         "vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json",
         "vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.md"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/pipeline_artifact_inventory_v1.md",
@@ -2310,7 +2343,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/pipeline_contract_check_v1.json",
@@ -2853,7 +2886,7 @@
         "vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json",
         "vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.md"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/pipeline_contract_check_v1.md",
@@ -2865,7 +2898,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_invData_propagation_v3.md",
@@ -2877,7 +2910,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_invData_to_ItemDataChanged_propagation.md",
@@ -2889,7 +2922,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_invData_to_ItemDataChanged_propagation_v2.md",
@@ -2901,7 +2934,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_invData_to_ItemDataChanged_propagation_v3.md",
@@ -2913,7 +2946,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_invData_to_ItemDataChanged_propagation_v3_fix1.md",
@@ -2925,7 +2958,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_invData_topology.md",
@@ -2937,7 +2970,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_ItemDataChanged_propagation_v3.md",
@@ -2949,7 +2982,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_ItemDataChanged_topology.md",
@@ -2961,7 +2994,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_listener_raw_topology.md",
@@ -2973,7 +3006,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadedChar_propagation_topology.md",
@@ -2985,7 +3018,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation.md",
@@ -2997,7 +3030,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation_v2.md",
@@ -3009,7 +3042,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation_v3.md",
@@ -3021,7 +3054,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation_v3_fix1.md",
@@ -3033,7 +3066,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadedChar_topology.md",
@@ -3045,7 +3078,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/probe_PlayerLoadout_to_PostPlayerLoadout_propagation_v3_fix1.md",
@@ -3057,7 +3090,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_audit_v1.json",
@@ -3069,7 +3102,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_audit_v1.md",
@@ -3081,7 +3114,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_characterload_v1.json",
@@ -3093,7 +3126,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_characterload_v1.md",
@@ -3105,7 +3138,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.json",
@@ -3117,7 +3150,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.md",
@@ -3129,7 +3162,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.json",
@@ -3141,7 +3174,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.md",
@@ -3153,7 +3186,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_node_search_characterload_v1.md",
@@ -3165,7 +3198,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json",
@@ -3179,7 +3212,7 @@
       "inputs": [
         "investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.md",
@@ -3191,7 +3224,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_regression_report.json",
@@ -3207,7 +3240,7 @@
         "docs/runtime/runtime_chains/characterload_inventory_initialization_lifecycle_chain_promoted_source_validated_chain.json",
         "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_chain_regression_report.md",
@@ -3219,7 +3252,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/runtime_fact_topology_regression_report.md",
@@ -3231,7 +3264,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/scripts_inventory.txt",
@@ -3243,7 +3276,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_pipeline.json",
@@ -3257,7 +3290,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_steps_pipeline.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_pipeline.md",
@@ -3269,7 +3302,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v1.json",
@@ -3283,7 +3316,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_steps_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v1.md",
@@ -3295,7 +3328,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v2.json",
@@ -3309,7 +3342,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_steps_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v2.md",
@@ -3321,7 +3354,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v3.json",
@@ -3335,7 +3368,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_steps_v4.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v3.md",
@@ -3347,7 +3380,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v4.json",
@@ -3361,7 +3394,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_steps_v5.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v4.md",
@@ -3373,7 +3406,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v5.json",
@@ -3387,7 +3420,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_steps_v6.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_branch_chain_v5.md",
@@ -3399,7 +3432,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_fact_generation_diagnosis_v1.json",
@@ -3411,7 +3444,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_fact_generation_diagnosis_v1.md",
@@ -3423,7 +3456,31 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_fact_generation_diagnosis.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_full_chain_fact_generation_diagnosis.json",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "diagnosis",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "debug",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_fact_generation_diagnosis.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_full_chain_fact_generation_diagnosis.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "diagnosis",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "debug",
+      "inputs": [],
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_runtime_facts_v2.json",
@@ -3437,7 +3494,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_full_chain_source_validation_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_runtime_facts_v2.md",
@@ -3449,7 +3506,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_source_validation_v2.json",
@@ -3463,7 +3520,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_full_chain_targets_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_source_validation_v2.md",
@@ -3475,7 +3532,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_source_validation_v3.json",
@@ -3489,7 +3546,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_full_chain_targets_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_source_validation_v3.md",
@@ -3501,7 +3558,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_targets_v2.json",
@@ -3515,7 +3572,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_full_chain_targets_v3.json",
@@ -3529,7 +3586,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_fact_graph_v3.json",
@@ -3543,7 +3600,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_fact_graph_v3.md",
@@ -3555,7 +3612,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_fact_topology_v3.json",
@@ -3570,7 +3627,7 @@
         "investigations/validation/vendor_purchase_itemdata_generic_runtime_fact_graph_v3.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_fact_topology_v3.md",
@@ -3582,7 +3639,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v1.json",
@@ -3596,7 +3653,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v1.md",
@@ -3608,7 +3665,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json",
@@ -3622,7 +3679,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.md",
@@ -3634,7 +3691,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets.json",
@@ -3646,7 +3703,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json",
@@ -3660,7 +3717,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.md",
@@ -3672,7 +3729,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.json",
@@ -3686,7 +3743,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_full_chain_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.md",
@@ -3698,7 +3755,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_pipeline.json",
@@ -3712,7 +3769,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_pipeline.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_pipeline.md",
@@ -3724,7 +3781,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v1.json",
@@ -3738,7 +3795,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v1.md",
@@ -3750,7 +3807,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v2.json",
@@ -3764,7 +3821,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v2.md",
@@ -3776,7 +3833,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v3.json",
@@ -3790,7 +3847,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_v4.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v3.md",
@@ -3802,7 +3859,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v4.json",
@@ -3816,7 +3873,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_v5.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v4.md",
@@ -3828,7 +3885,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v5.json",
@@ -3842,7 +3899,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_v6.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v5.md",
@@ -3854,7 +3911,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v6.json",
@@ -3868,7 +3925,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_steps_v7.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_steps_v6.md",
@@ -3880,7 +3937,140 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_chain.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_chain.json",
+      "schema": "runtime_chain_candidate.v5",
+      "producer_script": null,
+      "pipeline_stage": "unknown",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_topology_v3.json",
+        "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_facts_v2.json",
+        "manifests/normalized/runtime_propagation_topology.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_chain.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_chain.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "unknown",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.json",
+      "schema": "ordered_runtime_facts.v1",
+      "producer_script": null,
+      "pipeline_stage": "ordered_runtime_facts",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_full_chain_runtime_facts_v2.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "ordered_runtime_facts",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_graph_v2.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_graph_v2.json",
+      "schema": "runtime_fact_graph.v2",
+      "producer_script": null,
+      "pipeline_stage": "runtime_fact_graph",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_facts_v2.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_graph_v2.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_graph_v2.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_fact_graph",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_topology_v3.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_topology_v3.json",
+      "schema": "runtime_fact_topology.v3",
+      "producer_script": null,
+      "pipeline_stage": "runtime_fact_topology",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_graph_v2.json",
+        "manifests/normalized/runtime_propagation_topology.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_topology_v3.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_fact_topology_v3.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_fact_topology",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_facts_v2.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_facts_v2.json",
+      "schema": "runtime_facts.v2",
+      "producer_script": null,
+      "pipeline_stage": "runtime_facts",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_full_chain_source_validation_v3.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_facts_v2.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_promotion_validation_runtime_facts_v2.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_facts",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v1.json",
@@ -3895,7 +4085,7 @@
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "explicit_artifact_flag"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v1.md",
@@ -3907,7 +4097,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.json",
@@ -3922,7 +4112,7 @@
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "explicit_artifact_flag"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.md",
@@ -3934,7 +4124,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.json",
@@ -3949,7 +4139,7 @@
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "explicit_artifact_flag"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.md",
@@ -3961,7 +4151,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json",
@@ -3977,7 +4167,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.md",
@@ -3989,7 +4179,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json",
@@ -4005,7 +4195,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.md",
@@ -4017,7 +4207,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_propagation.json",
@@ -4033,7 +4223,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_propagation.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_propagation.md",
@@ -4045,7 +4235,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6.json",
@@ -4059,7 +4249,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6.md",
@@ -4071,7 +4261,33 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json",
+      "schema": "runtime_chain_candidate.v6",
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_regenerated.json",
@@ -4087,7 +4303,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v6_validation.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_regenerated.md",
@@ -4099,7 +4315,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json",
@@ -4113,7 +4329,7 @@
       "inputs": [
         "investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.md",
@@ -4125,7 +4341,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json",
@@ -4139,7 +4355,7 @@
       "inputs": [
         "investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.md",
@@ -4151,7 +4367,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json",
@@ -4163,7 +4379,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request_v2.json",
@@ -4175,7 +4391,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.json",
@@ -4189,7 +4405,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.md",
@@ -4201,7 +4417,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.json",
@@ -4215,7 +4431,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.md",
@@ -4227,7 +4443,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v5_sequence_test.json",
@@ -4243,7 +4459,7 @@
         "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_v5_sequence_test.md",
@@ -4255,7 +4471,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v1.json",
@@ -4269,7 +4485,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v1.md",
@@ -4281,7 +4497,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",
@@ -4295,7 +4511,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.md",
@@ -4307,7 +4523,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_propagation.json",
@@ -4322,7 +4538,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_propagation.md",
@@ -4334,7 +4550,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.json",
@@ -4349,7 +4565,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.md",
@@ -4361,7 +4577,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.json",
@@ -4376,7 +4592,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.md",
@@ -4388,7 +4604,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json",
@@ -4403,7 +4619,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.md",
@@ -4415,7 +4631,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v6_regression.md",
@@ -4427,7 +4643,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v6_validation.json",
@@ -4442,7 +4658,7 @@
         "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v6_validation.md",
@@ -4454,7 +4670,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_pipeline.json",
@@ -4469,7 +4685,7 @@
         "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json",
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_pipeline.md",
@@ -4481,7 +4697,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v1.json",
@@ -4495,7 +4711,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v1.md",
@@ -4507,7 +4723,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v2.json",
@@ -4521,7 +4737,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v2.md",
@@ -4533,7 +4749,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v3.json",
@@ -4547,7 +4763,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v3.md",
@@ -4559,7 +4775,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v4.json",
@@ -4573,7 +4789,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v4.md",
@@ -4585,7 +4801,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v5.json",
@@ -4599,7 +4815,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v5.md",
@@ -4611,7 +4827,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v6.json",
@@ -4627,7 +4843,7 @@
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
         "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v6.md",
@@ -4639,7 +4855,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v7.json",
@@ -4654,7 +4870,7 @@
         "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json",
         "investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_steps_v7.md",
@@ -4666,7 +4882,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_source_validation_scope_diagnosis_v1.json",
@@ -4680,7 +4896,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_source_validation_scope_diagnosis_v1.md",
@@ -4692,7 +4908,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_target_scope_diagnosis_v1.json",
@@ -4706,7 +4922,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_target_scope_diagnosis_v1.md",
@@ -4718,7 +4934,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_target_scope_diagnosis_v2.json",
@@ -4732,7 +4948,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_full_chain_targets_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_target_scope_diagnosis_v2.md",
@@ -4744,7 +4960,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_target_scope_diagnosis_v3.json",
@@ -4758,7 +4974,7 @@
       "inputs": [
         "investigations/validation/vendor_purchase_itemdata_full_chain_targets_v3.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_target_scope_diagnosis_v3.md",
@@ -4770,7 +4986,49 @@
       "promotion_role": "promotion_support",
       "canonical_status": "debug",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_v6_promotion_decision.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_v6_promotion_decision.json",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "unknown",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "docs/runtime/runtime_chains/vendor_purchase_itemdata_propagation_chain_promoted_confirmed_chain.md",
+        "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.json",
+      "schema": "runtime_chain_promotion_validation.v1",
+      "producer_script": "scripts.investigation.validate_runtime_chain_promotion",
+      "pipeline_stage": "promotion",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/vendor_purchase_itemdata_promotion_validation_ordered_runtime_facts_v1.json",
+        "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_validation.json"
+      ],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "unknown",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "context_or_debug",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.json",
@@ -4786,7 +5044,7 @@
         "docs/runtime/runtime_chains/vendor_purchase_price_label_cleanup.md",
         "vendor_purchase_price_label_cleanup.md"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.md",
@@ -4798,7 +5056,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.json",
@@ -4812,7 +5070,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.md",
@@ -4824,7 +5082,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.json",
@@ -4838,7 +5096,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.md",
@@ -4850,7 +5108,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json",
@@ -4862,7 +5120,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.md",
@@ -4874,7 +5132,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.json",
@@ -4886,7 +5144,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.md",
@@ -4898,7 +5156,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json",
@@ -4912,7 +5170,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.md",
@@ -4924,7 +5182,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_request_v1.json",
@@ -4938,7 +5196,7 @@
       "inputs": [
         "investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.json",
@@ -4952,7 +5210,7 @@
       "inputs": [
         "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_request_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.md",
@@ -4964,7 +5222,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v2.json",
@@ -4978,7 +5236,7 @@
       "inputs": [
         "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_request_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v2.md",
@@ -4990,7 +5248,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation.json",
@@ -5004,7 +5262,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/generated/vendor_stale_price_label_after_purchase.md"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation.md",
@@ -5016,7 +5274,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json",
@@ -5030,7 +5288,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.md",
@@ -5042,7 +5300,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_evidence_graph.json",
@@ -5056,7 +5314,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_evidence_graph.md",
@@ -5068,7 +5326,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json",
@@ -5082,7 +5340,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.md",
@@ -5094,7 +5352,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json",
@@ -5108,7 +5366,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.md",
@@ -5120,7 +5378,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json",
@@ -5135,7 +5393,7 @@
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
         "human_context.md"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.md",
@@ -5147,7 +5405,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json",
@@ -5161,7 +5419,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.md",
@@ -5173,7 +5431,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.json",
@@ -5187,7 +5445,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.md",
@@ -5199,7 +5457,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json",
@@ -5213,7 +5471,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.md",
@@ -5225,7 +5483,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation_targeted_validation.json",
@@ -5239,7 +5497,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation_targeted_validation.md",
@@ -5251,7 +5509,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json",
@@ -5265,7 +5523,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.md",
@@ -5277,7 +5535,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched.json",
@@ -5291,7 +5549,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.json",
@@ -5305,7 +5563,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.md",
@@ -5317,7 +5575,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence_graph.json",
@@ -5329,7 +5587,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json",
@@ -5343,7 +5601,7 @@
       "inputs": [
         "E:/signalis_ai/investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.md",
@@ -5355,7 +5613,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/characterload_inventory_initialization_lifecycle_chain_promoted_source_validated_chain.json",
@@ -5371,7 +5629,7 @@
         "investigations/validation/characterload_inventory_runtime_chain_candidate_v1.json",
         "investigations/validation/characterload_inventory_runtime_facts.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/characterload_inventory_initialization_lifecycle_chain_promoted_source_validated_chain.md",
@@ -5383,7 +5641,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "canonical",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_chain.md",
@@ -5395,7 +5653,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_not_promoted.json",
@@ -5410,7 +5668,7 @@
         "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_not_promoted.md",
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_not_promoted.md",
@@ -5422,7 +5680,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "failed",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.json",
@@ -5437,7 +5695,7 @@
         "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.md",
         "investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.md",
@@ -5449,7 +5707,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "canonical",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_item_metadata_sync.md",
@@ -5461,7 +5719,31 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_itemdata_propagation_chain_not_promoted.md",
+      "path": "docs/runtime/runtime_chains/vendor_purchase_itemdata_propagation_chain_not_promoted.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "promotion_output",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "failed",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_itemdata_propagation_chain_promoted_confirmed_chain.md",
+      "path": "docs/runtime/runtime_chains/vendor_purchase_itemdata_propagation_chain_promoted_confirmed_chain.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "promotion_output",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "canonical",
+      "inputs": [],
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/vendor_purchase_price_label_cleanup.md",
@@ -5473,7 +5755,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/hook_event_bus_qa.md",
@@ -5485,7 +5767,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/hook_event_emitters.json",
@@ -5497,7 +5779,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/hook_event_graph.json",
@@ -5509,7 +5791,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/hook_event_listeners.json",
@@ -5521,7 +5803,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/network_graph.json",
@@ -5533,7 +5815,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/network_graph_edges.json",
@@ -5545,7 +5827,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/network_graph_nodes.json",
@@ -5557,7 +5839,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/network_graph_summary.md",
@@ -5569,7 +5851,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/network_protocol_qa.md",
@@ -5581,7 +5863,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/network_symbol_issues.json",
@@ -5593,7 +5875,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/normalized_network_operations.json",
@@ -5605,7 +5887,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "explicit_artifact_flag"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/plugin_hook_edges.json",
@@ -5617,7 +5899,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/qa_hook_resolution.json",
@@ -5629,7 +5911,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "explicit_artifact_flag"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/qa_hook_resolution.md",
@@ -5641,7 +5923,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/resolved_hook_runs.json",
@@ -5653,7 +5935,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_graph_edges.json",
@@ -5665,7 +5947,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_graph_nodes.json",
@@ -5677,7 +5959,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_graph_summary.md",
@@ -5689,7 +5971,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_propagation_topology.json",
@@ -5701,7 +5983,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_propagation_topology_summary.md",
@@ -5713,7 +5995,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_topology.json",
@@ -5729,7 +6011,7 @@
         "{'edge_file': 'E://signalis_ai//manifests//normalized//runtime_graph_edges.json', 'edges': 8263, 'label': 'Hook/event runtime graph', 'layer': 'hook', 'loaded': True, 'node_file': 'E://signalis_ai//manifests//normalized//runtime_graph_nodes.json', 'nodes': 2376}",
         "{'edge_file': 'E://signalis_ai//manifests//normalized//timer_graph_edges.json', 'edges': 4854, 'label': 'Timer graph', 'layer': 'timer', 'loaded': True, 'node_file': 'E://signalis_ai//manifests//normalized//timer_graph_nodes.json', 'nodes': 940}"
       ],
-      "source": "explicit_artifact_flag"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_topology_edges.json",
@@ -5741,7 +6023,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_topology_nodes.json",
@@ -5753,7 +6035,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/runtime_topology_summary.md",
@@ -5765,7 +6047,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/timer_graph.json",
@@ -5777,7 +6059,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/timer_graph_edges.json",
@@ -5789,7 +6071,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/timer_graph_nodes.json",
@@ -5801,7 +6083,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/timer_graph_summary.md",
@@ -5813,7 +6095,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/normalized/unresolved_hook_runs.json",
@@ -5825,7 +6107,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_documents.jsonl",
@@ -5837,7 +6119,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_documents_summary.md",
@@ -5849,7 +6131,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_embedding_ingest_audit.md",
@@ -5861,7 +6143,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_embedding_summary.md",
@@ -5873,7 +6155,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_embeddings.jsonl",
@@ -5885,7 +6167,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_ingest_filtering_audit.md",
@@ -5897,7 +6179,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_ingest_summary.md",
@@ -5909,7 +6191,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_query_results.md",
@@ -5921,7 +6203,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_query_results_deduped.md",
@@ -5933,7 +6215,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "manifests/semantic/qdrant_query_results_deduped.summary.md",
@@ -5945,7 +6227,7 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     }
   ]
 }

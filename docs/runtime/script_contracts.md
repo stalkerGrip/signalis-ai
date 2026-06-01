@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `96`
+- Scripts checked: `97`
 
 ## scripts/diagnostics
 
@@ -34,7 +34,7 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8291.61it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8650.92it/s]
 ```
 
 ## scripts/extraction
@@ -2037,11 +2037,14 @@ options:
 - Help status: `OK`
 
 ```text
-usage: runtime_chain_promoter_v4.py [-h] --chain CHAIN [--out-dir OUT_DIR]
+usage: runtime_chain_promoter_v4.py [-h]
+                                    [--promotion-validation PROMOTION_VALIDATION]
+                                    --chain CHAIN [--out-dir OUT_DIR]
                                     [--out-json OUT_JSON] [--fail-on-rejected]
 
 options:
-  -h, --help           show this help message and exit
+  -h, --help            show this help message and exit
+  --promotion-validation PROMOTION_VALIDATION
   --chain CHAIN
   --out-dir OUT_DIR
   --out-json OUT_JSON
@@ -2310,6 +2313,32 @@ options:
   --node-id NODE_ID
   --out-md OUT_MD
   --max-edges MAX_EDGES
+```
+
+### `scripts.investigation.validate_runtime_chain_promotion`
+
+- Path: `scripts/investigation/validate_runtime_chain_promotion.py`
+- Help status: `OK`
+
+```text
+usage: validate_runtime_chain_promotion.py [-h] --candidate CANDIDATE
+                                           --ordered-facts ORDERED_FACTS
+                                           --out-json OUT_JSON --out-md OUT_MD
+                                           [--keep-regenerated-json KEEP_REGENERATED_JSON]
+                                           [--keep-regenerated-md KEEP_REGENERATED_MD]
+
+Validate deterministic regeneration of a runtime chain promotion candidate.
+
+options:
+  -h, --help            show this help message and exit
+  --candidate CANDIDATE
+  --ordered-facts ORDERED_FACTS
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --keep-regenerated-json KEEP_REGENERATED_JSON
+                        Optional path to keep regenerated candidate JSON.
+  --keep-regenerated-md KEEP_REGENERATED_MD
+                        Optional path to keep regenerated candidate MD.
 ```
 
 ## scripts/normalization

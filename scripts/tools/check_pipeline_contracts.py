@@ -224,10 +224,18 @@ def discover_artifacts(workspace: Path) -> list[ArtifactInfo]:
             continue
 
         for path in sorted(root.rglob("*")):
-            if not path.is_file() or path.suffix.lower() not in {".json", ".md", ".txt"}:
+            if not path.is_file() or path.suffix.lower() not in {
+                ".json",
+                ".jsonl",
+                ".md",
+                ".txt",
+            }:
                 continue
 
-            data = load_json(path) if path.suffix.lower() == ".json" else None
+            data = None
+
+            if path.suffix.lower() == ".json":
+                data = load_json(path)
             schema = data.get("schema") if isinstance(data, dict) and isinstance(data.get("schema"), str) else None
             producer = data.get("producer_script") if isinstance(data, dict) and isinstance(data.get("producer_script"), str) else None
             benchmark = data.get("benchmark") if isinstance(data, dict) and isinstance(data.get("benchmark"), str) else None
