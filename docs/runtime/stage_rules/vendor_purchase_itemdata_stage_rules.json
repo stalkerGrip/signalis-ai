@@ -1,0 +1,42 @@
+{
+  "schema": "stage_rule_set.v1",
+  "rule_set_id": "vendor_purchase_itemdata",
+  "title": "Vendor purchase item metadata propagation",
+  "version": 1,
+  "status": "active",
+  "promotion_compatible": true,
+  "applies_to": {
+    "benchmark": "vendor_purchase_itemdata",
+    "subsystems": ["vendor", "inventory", "gridinv"],
+    "chain_type": "item_metadata_sync"
+  },
+  "stage_order": [
+    "vendor_open_metadata_assignment",
+    "vendor_purchase_transfer",
+    "vendor_metadata_cleanup",
+    "item_metadata_mutation",
+    "item_metadata_network_send",
+    "inventory_membership_client_apply",
+    "item_metadata_client_apply",
+    "ui_itemdata_refresh_hook"
+  ],
+  "required_stage_ids": [
+    "vendor_purchase_transfer",
+    "vendor_metadata_cleanup",
+    "item_metadata_mutation",
+    "item_metadata_network_send",
+    "item_metadata_client_apply",
+    "ui_itemdata_refresh_hook"
+  ],
+  "optional_stage_ids": [
+    "vendor_open_metadata_assignment",
+    "inventory_membership_client_apply"
+  ],
+  "invalid_conflations": [
+    {
+      "left": "ItemDataChanged",
+      "right": "InventoryDataChanged",
+      "reason": "Item metadata sync and inventory membership sync are separate systems."
+    }
+  ]
+}

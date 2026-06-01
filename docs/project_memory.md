@@ -87,39 +87,41 @@ syncItemAdded is likely outdated stage naming or wrong expected needle, because 
 
 ## Current Bottleneck
 
-### Benchmark Generalization Bottleneck
-DISCOVERED
+### Retrieval-Guided Architecture Intelligence V1
 
-Vendor and Characterload benchmarks exposed
-hidden benchmark-specific logic inside:
+Goal:
 
-- build_runtime_facts_from_source_validation.py
-- runtime_fact_sequencer.py
-- build_runtime_chain_candidate_v6.py
+Promoted runtime chains become retrievable architecture knowledge.
 
-Direction:
+Target flow:
 
-stage_rule_set.v1
-
-Benchmark-specific ordering and classification
-must move from scripts into stage-rule artifacts.
-
-Target:
-
-source validation
-→ runtime facts
-→ stage rules
-→ ordered runtime facts
-→ runtime chain candidate
-→ promotion
-
-Status:
-identified
-not yet implemented
-
+promoted runtime chains
+→ runtime_chain_corpus.v1
+→ embeddings
+→ Qdrant
+→ retrieval
+→ architecture intelligence
 ---
 
 ## Completed Bottlenecks
+
+### Benchmark Generalization Bottleneck
+PASS
+
+Implemented:
+
+- stage_rule_set.v1
+- generic runtime_fact_sequencer
+- generic runtime_chain_candidate.v7
+
+Removed benchmark-specific chain construction from active path.
+
+Validated:
+
+- Characterload benchmark
+- Vendor benchmark
+
+---
 
 Promotion Governance Automation: PASS
 Promoted Runtime Chain Registry: PASS

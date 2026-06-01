@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-01T23:22:19",
+  "generated_at": "2026-06-01T23:55:54",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -123,21 +123,45 @@
       "source": "merged_existing_curation"
     },
     {
-      "script_id": "scripts.investigation.build_runtime_facts_from_source_validation",
-      "path": "scripts/investigation/build_runtime_facts_from_source_validation.py",
-      "module": "scripts.investigation.build_runtime_facts_from_source_validation",
-      "purpose": "Inferred registry entry for scripts.investigation.build_runtime_facts_from_source_validation.",
-      "pipeline_stage": "source_validation",
+      "script_id": "scripts.investigation.build_runtime_chain_candidate_v7",
+      "path": "scripts/investigation/build_runtime_chain_candidate_v7.py",
+      "module": "scripts.investigation.build_runtime_chain_candidate_v7",
+      "purpose": "Build generic runtime_chain_candidate.v7 from ordered_runtime_facts.v1 without benchmark-specific stage constants.",
+      "pipeline_stage": "runtime_chain_candidate",
       "input_schemas": [
-        "runtime_facts.v2"
+        "ordered_runtime_facts.v1"
       ],
       "output_schemas": [
-        "runtime_facts.v2"
+        "runtime_chain_candidate.v7"
       ],
-      "artifact_patterns": [],
+      "artifact_patterns": [
+        "investigations/validation/*_runtime_chain_candidate_v7.json",
+        "investigations/validation/*_runtime_chain_candidate_v7.md"
+      ],
       "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
+    },
+    {
+      "script_id": "scripts.investigation.runtime_fact_sequencer",
+      "path": "scripts/investigation/build_runtime_facts_from_source_validation.py",
+      "module": "scripts.investigation.build_runtime_facts_from_source_validation",
+      "purpose": "Classify and order neutral runtime_facts.v2 using an external stage_rule_set.v1 artifact.",
+      "pipeline_stage": "ordered_runtime_facts",
+      "input_schemas": [
+        "runtime_facts.v2",
+        "stage_rule_set.v1"
+      ],
+      "output_schemas": [
+        "ordered_runtime_facts.v1"
+      ],
+      "artifact_patterns": [
+        "investigations/validation/*_ordered_runtime_facts_v1.json",
+        "investigations/validation/*_ordered_runtime_facts_v1.md"
+      ],
+      "promotion_role": "promotion_core",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.investigation.build_targeted_validation_request",
@@ -561,18 +585,22 @@
       "script_id": "scripts.investigation.runtime_fact_sequencer",
       "path": "scripts/investigation/runtime_fact_sequencer.py",
       "module": "scripts.investigation.runtime_fact_sequencer",
-      "purpose": "Inferred registry entry for scripts.investigation.runtime_fact_sequencer.",
-      "pipeline_stage": "unknown",
+      "purpose": "Classify and order neutral runtime_facts.v2 using an external stage_rule_set.v1 artifact.",
+      "pipeline_stage": "ordered_runtime_facts",
       "input_schemas": [
-        "ordered_runtime_facts.v1"
+        "runtime_facts.v2",
+        "stage_rule_set.v1"
       ],
       "output_schemas": [
         "ordered_runtime_facts.v1"
       ],
-      "artifact_patterns": [],
-      "promotion_role": "context_or_debug",
+      "artifact_patterns": [
+        "investigations/validation/*_ordered_runtime_facts_v1.json",
+        "investigations/validation/*_ordered_runtime_facts_v1.md"
+      ],
+      "promotion_role": "promotion_core",
       "canonical_status": "active",
-      "source": "merged_existing_curation"
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.investigation.runtime_fact_topology_mapper",
@@ -1425,7 +1453,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_clean_runtime_facts_v2.md",
@@ -1437,7 +1465,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json",
@@ -1477,7 +1505,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_lifecycle_targets_clean_v1.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v1.md",
@@ -1489,7 +1517,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.json",
@@ -1503,7 +1531,7 @@
       "inputs": [
         "investigations/validation/characterload_inventory_lifecycle_targets_clean_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.md",
@@ -1515,7 +1543,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_v1.json",
@@ -1527,7 +1555,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_v2.json",
@@ -1539,7 +1567,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json",
@@ -1559,15 +1587,16 @@
       "artifact_id": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.json",
       "path": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.json",
       "schema": "ordered_runtime_facts.v1",
-      "producer_script": null,
+      "producer_script": "scripts.investigation.runtime_fact_sequencer",
       "pipeline_stage": "ordered_runtime_facts",
       "benchmark": "characterload_inventory",
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [
+        "docs/runtime/stage_rules/characterload_inventory_stage_rules.json",
         "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "explicit_artifact_flag"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.md",
@@ -1579,7 +1608,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v1.json",
@@ -1665,7 +1694,7 @@
         "investigations/validation/characterload_inventory_runtime_fact_topology_v3.json",
         "manifests/normalized/runtime_propagation_topology.json"
       ],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_promotion_candidate.md",
@@ -1677,7 +1706,7 @@
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_propagation.json",
@@ -1706,6 +1735,33 @@
       "canonical_status": "intermediate",
       "inputs": [],
       "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v7.json",
+      "path": "investigations/validation/characterload_inventory_runtime_chain_candidate_v7.json",
+      "schema": "runtime_chain_candidate.v7",
+      "producer_script": "scripts.investigation.build_runtime_chain_candidate_v7",
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "docs/runtime/stage_rules/characterload_inventory_stage_rules.json",
+        "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.json"
+      ],
+      "source": "explicit_artifact_flag"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v7.md",
+      "path": "investigations/validation/characterload_inventory_runtime_chain_candidate_v7.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_fact_graph_v2.json",
@@ -3050,14 +3106,27 @@
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.json",
       "path": "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.json",
       "schema": "ordered_runtime_facts.v1",
-      "producer_script": null,
+      "producer_script": "scripts.investigation.runtime_fact_sequencer",
       "pipeline_stage": "ordered_runtime_facts",
       "benchmark": "vendor_purchase_itemdata",
       "promotion_role": "promotion_core",
       "canonical_status": "intermediate",
       "inputs": [
+        "docs/runtime/stage_rules/vendor_purchase_itemdata_stage_rules.json",
         "investigations/validation/vendor_purchase_itemdata_full_chain_runtime_facts_v2.json"
       ],
+      "source": "explicit_artifact_flag"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "ordered_runtime_facts",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
       "source": "merged_existing_curation"
     },
     {
@@ -3288,6 +3357,33 @@
       "canonical_status": "intermediate",
       "inputs": [],
       "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v7.json",
+      "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v7.json",
+      "schema": "runtime_chain_candidate.v7",
+      "producer_script": "scripts.investigation.build_runtime_chain_candidate_v7",
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "docs/runtime/stage_rules/vendor_purchase_itemdata_stage_rules.json",
+        "investigations/validation/vendor_purchase_itemdata_ordered_runtime_facts_v1.json"
+      ],
+      "source": "explicit_artifact_flag"
+    },
+    {
+      "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v7.md",
+      "path": "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v7.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "vendor_purchase_itemdata",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
     },
     {
       "artifact_id": "investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json",

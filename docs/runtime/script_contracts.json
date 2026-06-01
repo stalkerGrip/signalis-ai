@@ -1,6 +1,6 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 95,
+  "scripts_checked": 96,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
@@ -111,10 +111,16 @@
       "help": "usage: build_runtime_chain_candidate_v6.py [-h] --ordered-facts ORDERED_FACTS\n                                           --out-json OUT_JSON --out-md OUT_MD\n\nBuild runtime chain candidate V6 from ordered runtime facts.\n\noptions:\n  -h, --help            show this help message and exit\n  --ordered-facts ORDERED_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
+      "path": "scripts/investigation/build_runtime_chain_candidate_v7.py",
+      "module": "scripts.investigation.build_runtime_chain_candidate_v7",
+      "help_ok": true,
+      "help": "usage: build_runtime_chain_candidate_v7.py [-h] --ordered-facts ORDERED_FACTS\n                                           --out-json OUT_JSON --out-md OUT_MD\n\nBuild generic runtime chain candidate V7 from ordered runtime facts.\n\noptions:\n  -h, --help            show this help message and exit\n  --ordered-facts ORDERED_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
       "path": "scripts/investigation/build_runtime_facts_from_source_validation.py",
       "module": "scripts.investigation.build_runtime_facts_from_source_validation",
       "help_ok": true,
-      "help": "usage: build_runtime_facts_from_source_validation.py [-h] --source-validation\n                                                     SOURCE_VALIDATION\n                                                     --out-json OUT_JSON\n                                                     --out-md OUT_MD\n\noptions:\n  -h, --help            show this help message and exit\n  --source-validation SOURCE_VALIDATION\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+      "help": "usage: build_runtime_facts_from_source_validation.py [-h] --runtime-facts\n                                                     RUNTIME_FACTS\n                                                     --stage-rules STAGE_RULES\n                                                     --out-json OUT_JSON\n                                                     --out-md OUT_MD\n\nClassify and order runtime facts using an external stage_rule_set.v1 artifact.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-facts RUNTIME_FACTS\n  --stage-rules STAGE_RULES\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/build_targeted_validation_request.py",
@@ -264,7 +270,7 @@
       "path": "scripts/investigation/runtime_fact_sequencer.py",
       "module": "scripts.investigation.runtime_fact_sequencer",
       "help_ok": true,
-      "help": "usage: runtime_fact_sequencer.py [-h] --runtime-facts RUNTIME_FACTS --out-json\n                                 OUT_JSON --out-md OUT_MD\n\nOrder runtime facts into deterministic vendor itemdata stage sequence.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-facts RUNTIME_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+      "help": "usage: runtime_fact_sequencer.py [-h] --runtime-facts RUNTIME_FACTS\n                                 --stage-rules STAGE_RULES --out-json OUT_JSON\n                                 --out-md OUT_MD\n\nClassify and order runtime facts using an external stage_rule_set.v1 artifact.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-facts RUNTIME_FACTS\n  --stage-rules STAGE_RULES\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/runtime_fact_topology_mapper.py",

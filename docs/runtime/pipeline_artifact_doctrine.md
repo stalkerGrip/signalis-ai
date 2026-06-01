@@ -219,6 +219,45 @@ must not be used as full-chain promotion evidence unless explicitly marked compa
 
 ---
 
+## Doctrine Hierarchy Rule
+
+When planning or modifying pipeline work, doctrine files must be applied in this order:
+
+1. `human_context.md`
+2. `project_memory.md`
+3. `pipeline_artifact_doctrine.md`
+4. `pipeline_artifact_contract.json`
+5. `script_contracts.md`
+6. `runtime_chain_promotion.md`
+7. `runtime_propagation_doctrine.md`
+8. subsystem doctrine files
+
+`human_context.md` is first for authority rules and human-validated behavior, but SIGNALIS source code still wins for exact implementation behavior.
+
+`project_memory.md` controls current phase, current bottleneck, completed bottlenecks, and active direction.
+
+`pipeline_artifact_doctrine.md` controls permanent pipeline governance, script ownership, artifact ownership, architecture-first implementation, and cross-chat recovery.
+
+`pipeline_artifact_contract.json` controls machine-readable script/artifact ownership and promotion compatibility.
+
+`script_contracts.md` controls actual CLI usage and prevents invented script names or arguments.
+
+Runtime and subsystem doctrine explain semantics, but they must not override source authority, current bottleneck, or artifact governance.
+
+If these sources conflict:
+
+* human-validated behavior wins over generated artifacts
+* doctrine wins over generated summaries
+* contract registry wins over memory for script/artifact ownership
+* script contracts win over guessed CLI usage
+* current bottleneck wins over tempting side quests
+
+Before proposing code, commands, or artifact promotion, check the highest applicable authority in this hierarchy.
+
+Do not reconstruct script names, artifact paths, or pipeline state from memory when contract or script-contract artifacts exist.
+
+---
+
 ## Cross-Chat Recovery Rule
 
 Before planning work, future chats must recover context in the following order:
@@ -537,3 +576,79 @@ promoted runtime chain
 ```
 
 Benchmark-specific knowledge belongs in stage-rule artifacts, not in pipeline infrastructure.
+
+## Stage Rule Set Rule
+
+Runtime fact classification and ordering must be data-driven.
+
+Benchmark-specific stage ordering must live in stage-rule artifacts, not inside generic scripts.
+
+Stage-rule artifacts use:
+
+`stage_rule_set.v1`
+
+Stage rules are consumed after runtime facts are generated:
+
+source validation
+→ runtime facts
+→ stage rules
+→ ordered runtime facts
+→ runtime chain candidate
+→ promotion
+
+Stage rules may classify, require, order, or reject stages.
+
+Stage rules must not invent runtime facts.
+
+Promotion-compatible runtime chain candidates must record which stage_rule_set was used.
+
+## Architecture-First Implementation Rule
+
+Pipeline work must prefer architecturally reusable solutions over benchmark-specific fixes.
+
+Benchmarks such as vendor purchase item data and characterload inventory are regression fixtures.
+
+They are not infrastructure design targets.
+
+When a benchmark exposes a failure, the preferred response is:
+
+1. identify the generic pipeline stage that failed
+2. move benchmark-specific knowledge into data artifacts
+3. keep scripts generic
+4. add only the minimum one-time migration or compatibility code needed
+5. validate the benchmark as a regression
+
+Do not over-optimize a single benchmark rule set.
+
+Do not hardcode vendor, characterload, storage, or other subsystem behavior into generic scripts.
+
+Allowed one-time scripts:
+
+* migration helpers
+* artifact inspectors
+* compatibility converters
+* contract repair utilities
+* regression setup utilities
+
+One-time scripts must not become promotion-critical unless later generalized and registered.
+
+Preferred long-term pattern:
+
+runtime facts
+→ neutral facts
+
+stage rules
+→ declarative classification and ordering
+
+sequencer
+→ generic rule engine
+
+chain candidate builder
+→ generic ordered-fact consumer
+
+promotion
+→ deterministic validation and registry update
+
+Architecture goal:
+
+Each fix should improve future investigation orchestration, not only make the current benchmark pass.

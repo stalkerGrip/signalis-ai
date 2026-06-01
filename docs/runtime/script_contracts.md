@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `95`
+- Scripts checked: `96`
 
 ## scripts/diagnostics
 
@@ -1622,20 +1622,42 @@ options:
   --out-md OUT_MD
 ```
 
+### `scripts.investigation.build_runtime_chain_candidate_v7`
+
+- Path: `scripts/investigation/build_runtime_chain_candidate_v7.py`
+- Help status: `OK`
+
+```text
+usage: build_runtime_chain_candidate_v7.py [-h] --ordered-facts ORDERED_FACTS
+                                           --out-json OUT_JSON --out-md OUT_MD
+
+Build generic runtime chain candidate V7 from ordered runtime facts.
+
+options:
+  -h, --help            show this help message and exit
+  --ordered-facts ORDERED_FACTS
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
 ### `scripts.investigation.build_runtime_facts_from_source_validation`
 
 - Path: `scripts/investigation/build_runtime_facts_from_source_validation.py`
 - Help status: `OK`
 
 ```text
-usage: build_runtime_facts_from_source_validation.py [-h] --source-validation
-                                                     SOURCE_VALIDATION
+usage: build_runtime_facts_from_source_validation.py [-h] --runtime-facts
+                                                     RUNTIME_FACTS
+                                                     --stage-rules STAGE_RULES
                                                      --out-json OUT_JSON
                                                      --out-md OUT_MD
 
+Classify and order runtime facts using an external stage_rule_set.v1 artifact.
+
 options:
   -h, --help            show this help message and exit
-  --source-validation SOURCE_VALIDATION
+  --runtime-facts RUNTIME_FACTS
+  --stage-rules STAGE_RULES
   --out-json OUT_JSON
   --out-md OUT_MD
 ```
@@ -2147,14 +2169,16 @@ options:
 - Help status: `OK`
 
 ```text
-usage: runtime_fact_sequencer.py [-h] --runtime-facts RUNTIME_FACTS --out-json
-                                 OUT_JSON --out-md OUT_MD
+usage: runtime_fact_sequencer.py [-h] --runtime-facts RUNTIME_FACTS
+                                 --stage-rules STAGE_RULES --out-json OUT_JSON
+                                 --out-md OUT_MD
 
-Order runtime facts into deterministic vendor itemdata stage sequence.
+Classify and order runtime facts using an external stage_rule_set.v1 artifact.
 
 options:
   -h, --help            show this help message and exit
   --runtime-facts RUNTIME_FACTS
+  --stage-rules STAGE_RULES
   --out-json OUT_JSON
   --out-md OUT_MD
 ```
