@@ -421,3 +421,42 @@ human validation changes promotion policy
 Do not duplicate generated investigation artifacts here.
 
 This document defines promotion rules, not individual investigation reports.
+
+## Pipeline Artifact Contract Rule
+
+Every investigation script and generated artifact must be contract-addressable.
+
+A script is not considered pipeline-stable unless it is registered with:
+
+- script_id
+- module
+- purpose
+- pipeline_stage
+- accepted input schemas
+- produced output schemas
+- artifact naming pattern
+- promotion role
+- canonical/legacy status
+
+An artifact is not considered promotion-valid unless it can be traced to:
+
+- producer script
+- input artifacts
+- schema
+- benchmark
+- pipeline stage
+- canonical status
+
+Promotion validation must not mix artifacts from different lineage families.
+
+Examples:
+
+- generic runtime facts must not be used as full-chain promotion evidence unless explicitly marked compatible.
+- runtime_chain_candidate.v5 regenerated artifacts do not automatically validate runtime_chain_candidate.v6 artifacts.
+- artifacts generated against runtime_topology.json are not evidence for propagation-chain promotion.
+
+If a script creates an artifact, it must either:
+1. write contract metadata into the artifact JSON, or
+2. emit/update a registry entry consumed by the artifact contract checker.
+
+Before any promotion decision, run the contract checker.

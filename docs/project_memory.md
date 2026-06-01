@@ -375,6 +375,7 @@ Validated promoted chains:
 - runtime_doctrine.md
 - runtime_propagation_doctrine.md
 - runtime_chain_promotion.md
+- pipeline_artifact_doctrine.md - permanent source for script ownership, artifact ownership, contract metadata rules, and cross-chat recovery order
 
 Critical lesson:
 

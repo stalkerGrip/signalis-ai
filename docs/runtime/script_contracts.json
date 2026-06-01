@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 94,
+  "scripts_checked": 96,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
       "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8652.44it/s]"
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8291.61it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -553,6 +553,18 @@
       "module": "scripts.semantic.generate_subsystem_docs",
       "help_ok": true,
       "help": "usage: generate_subsystem_docs.py [-h] --workspace WORKSPACE\n                                  [--topology TOPOLOGY]\n                                  [--output-dir OUTPUT_DIR]\n                                  [--subsystems [SUBSYSTEMS ...]]\n\nGenerate subsystem semantic docs from runtime topology.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --topology TOPOLOGY\n  --output-dir OUTPUT_DIR\n  --subsystems [SUBSYSTEMS ...]"
+    },
+    {
+      "path": "scripts/tools/build_pipeline_contract_registry.py",
+      "module": "scripts.tools.build_pipeline_contract_registry",
+      "help_ok": true,
+      "help": "usage: build_pipeline_contract_registry.py [-h] [--workspace WORKSPACE]\n                                           [--existing-contract EXISTING_CONTRACT]\n                                           [--out-json OUT_JSON]\n                                           [--out-md OUT_MD]\n                                           [--no-merge-existing]\n\nBuild fire-and-forget SIGNALIS pipeline script/artifact contract registry.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --existing-contract EXISTING_CONTRACT\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --no-merge-existing   Do not preserve manual curations from existing\n                        contract."
+    },
+    {
+      "path": "scripts/tools/check_pipeline_contracts.py",
+      "module": "scripts.tools.check_pipeline_contracts",
+      "help_ok": true,
+      "help": "usage: check_pipeline_contracts.py [-h] [--workspace WORKSPACE]\n                                   [--contract CONTRACT] [--out-json OUT_JSON]\n                                   [--out-md OUT_MD] [--init-contract]\n                                   [--fail-on-error]\n\nCheck SIGNALIS AI script/artifact contracts against actual repository state.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --contract CONTRACT\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --init-contract       Create a starter contract if missing.\n  --fail-on-error       Exit non-zero when ERROR findings exist."
     },
     {
       "path": "scripts/tools/generate_project_structure.py",

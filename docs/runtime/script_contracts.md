@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `94`
+- Scripts checked: `96`
 
 ## scripts/diagnostics
 
@@ -34,7 +34,7 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8652.44it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8291.61it/s]
 ```
 
 ## scripts/extraction
@@ -3099,6 +3099,53 @@ options:
 ```
 
 ## scripts/tools
+
+### `scripts.tools.build_pipeline_contract_registry`
+
+- Path: `scripts/tools/build_pipeline_contract_registry.py`
+- Help status: `OK`
+
+```text
+usage: build_pipeline_contract_registry.py [-h] [--workspace WORKSPACE]
+                                           [--existing-contract EXISTING_CONTRACT]
+                                           [--out-json OUT_JSON]
+                                           [--out-md OUT_MD]
+                                           [--no-merge-existing]
+
+Build fire-and-forget SIGNALIS pipeline script/artifact contract registry.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --existing-contract EXISTING_CONTRACT
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --no-merge-existing   Do not preserve manual curations from existing
+                        contract.
+```
+
+### `scripts.tools.check_pipeline_contracts`
+
+- Path: `scripts/tools/check_pipeline_contracts.py`
+- Help status: `OK`
+
+```text
+usage: check_pipeline_contracts.py [-h] [--workspace WORKSPACE]
+                                   [--contract CONTRACT] [--out-json OUT_JSON]
+                                   [--out-md OUT_MD] [--init-contract]
+                                   [--fail-on-error]
+
+Check SIGNALIS AI script/artifact contracts against actual repository state.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --contract CONTRACT
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --init-contract       Create a starter contract if missing.
+  --fail-on-error       Exit non-zero when ERROR findings exist.
+```
 
 ### `scripts.tools.generate_project_structure`
 
