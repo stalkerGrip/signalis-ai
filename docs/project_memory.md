@@ -125,6 +125,15 @@ Validated promoted chains:
 
 ---
 
+## Doctrine Sources
+
+- human_context.md
+- runtime_doctrine.md
+- runtime_propagation_doctrine.md
+- runtime_chain_promotion.md
+
+---
+
 ## Runtime Propagation Topology Milestone
 
 Runtime Topology Node Probe established that:
@@ -198,6 +207,21 @@ Before declaring a Runtime Chain Builder bottleneck:
 - verify propagation probes
 - verify runtime fact mappings
 - verify topology artifact source
+
+Preferred outputs:
+
+- hook chains
+- network chains
+- realm crossings
+- inventory ownership chains
+- storage ownership chains
+- persistence flows
+
+Goal:
+
+runtime reconstruction
+
+not fragment collection
 
 ---
 
