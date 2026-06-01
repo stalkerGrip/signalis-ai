@@ -87,59 +87,30 @@ syncItemAdded is likely outdated stage naming or wrong expected needle, because 
 
 ## Current Bottleneck
 
-### Runtime Fact Sequencing Validation
-
-Status:
-
-ACTIVE
-
-Vendor benchmark status:
-
-PARTIAL PASS
-
-Current evidence:
-
-Full-chain source validation now recovers:
-
-vendor open metadata assignment
-→ vendorSPrice/vendorBPrice assignment
-→ vendor purchase transfer
-→ inventory:add
-→ vendor metadata cleanup
-→ ITEM:setData
-→ netstream.Start("invData")
-→ invData
-→ ItemDataChanged
-→ InventoryItemDataChanged
-
-Source validation coverage:
-
-- files_total: 6
-- files_found: 6
-- needles_total: 27
-- needles_found: 26
-
-Only missing needle:
-
-- syncItemAdded
-
-Current unknown:
-
-Determine how runtime facts are generated from:
-
-vendor_purchase_itemdata_full_chain_source_validation_v3.json
+### Runtime Chain Promotion Validation
 
 Goal:
 
-Determine whether runtime fact generation preserves:
+Validate that promoted runtime chains can be regenerated
+from full-chain evidence and not from manually reconstructed stages.
 
-vendor purchase transfer
-→ metadata mutation
-→ metadata synchronization
-→ client apply
-→ UI refresh
+Suggested next experiment:
 
-or whether sequencing/stage loss still occurs after source validation.
+vendor_purchase_itemdata_runtime_chain_candidate_v6
+↓
+runtime_chain_promotion_validation
+↓
+promotion decision
+
+Questions to answer:
+
+Does V6 supersede the currently promoted vendor chain?
+
+Does V6 provide stronger evidence coverage?
+
+Should the promoted vendor chain artifact be replaced by V6?
+
+Can promotion be made deterministic from ordered runtime facts?
 
 Important:
 
@@ -152,14 +123,6 @@ If a runtime-fact generation script is not listed in script_contracts.md:
 1. inspect actual pipeline scripts
 2. use --help
 3. ask human for authoritative module
-
-before continuing investigation.
-
-Current investigation target:
-
-Identify the actual runtime-fact generation module and continue validation from:
-
-vendor_purchase_itemdata_full_chain_source_validation_v3.json
 
 Pipeline-first doctrine remains active.
 
@@ -251,10 +214,45 @@ Result:
 
 Runtime chain builder correctly reconstructs chains from supplied evidence.
 
+### Runtime Fact Sequencing Validation
+PASS
+
+Completed:
+Runtime Propagation Topology V3
+Characterload Benchmark
+
+Targeted Validation Request Generation
+Source Validation
+Runtime Fact Generation
+Runtime Fact Sequencing Validation
+
+Runtime Chain Builder V5
+
+Vendor Benchmark
+PASS
+
+Recovered chain:
+
+vendor_open_metadata_assignment
+→ vendor_purchase_transfer
+→ vendor_metadata_cleanup
+→ item_metadata_mutation
+→ item_metadata_network_send
+→ inventory_membership_client_apply
+→ item_metadata_client_apply
+→ ui_itemdata_refresh_hook
+
+Result:
+
+Pipeline bottleneck found
+→ fixed
+→ revalidated
+→ full chain recovered
+
 ---
 
 ### Vendor Benchmark Investigation
-PARTIAL PASS
+PASS
 
 Resolved bottleneck:
 
@@ -296,7 +294,34 @@ Recovered stages:
 
 Result:
 
-Target selection bottleneck resolved.
+Vendor benchmark completed.
+
+Recovered chain:
+
+vendor_open_metadata_assignment
+→ vendor_purchase_transfer
+→ vendor_metadata_cleanup
+→ item_metadata_mutation
+→ item_metadata_network_send
+→ inventory_membership_client_apply
+→ item_metadata_client_apply
+→ ui_itemdata_refresh_hook
+
+Root cause was not:
+
+- Runtime Propagation Topology V3
+- Runtime Fact Generation
+- Runtime Fact Ordering
+- Runtime Chain Builder V5
+
+Root cause was:
+
+- Targeted Validation Request Generation
+
+Pipeline bottleneck identified
+→ fixed
+→ revalidated
+→ benchmark passed
 
 ---
 
@@ -451,6 +476,17 @@ Goal:
 runtime reconstruction
 
 not fragment collection
+
+The original benchmark failure was not caused by:
+
+runtime topology
+runtime facts
+runtime sequencing
+runtime chain building
+
+It was caused by:
+
+targeted validation request scope collapse
 
 ---
 

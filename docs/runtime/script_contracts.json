@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 91,
+  "scripts_checked": 94,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
       "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]"
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8652.44it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -97,6 +97,18 @@
       "module": "scripts.investigation.build_investigation_synthesis",
       "help_ok": true,
       "help": "usage: build_investigation_synthesis.py [-h] --question QUESTION\n                                        [--source-validation SOURCE_VALIDATION]\n                                        [--runtime-facts RUNTIME_FACTS]\n                                        [--runtime-chain-evidence RUNTIME_CHAIN_EVIDENCE]\n                                        --out-json OUT_JSON --out-md OUT_MD\n\noptions:\n  -h, --help            show this help message and exit\n  --question QUESTION\n  --source-validation SOURCE_VALIDATION\n  --runtime-facts RUNTIME_FACTS\n  --runtime-chain-evidence RUNTIME_CHAIN_EVIDENCE\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/build_runtime_chain_candidate_v6.py",
+      "module": "scripts.investigation.build_runtime_chain_candidate_v6",
+      "help_ok": true,
+      "help": "usage: build_runtime_chain_candidate_v6.py [-h] --ordered-facts ORDERED_FACTS\n                                           --out-json OUT_JSON --out-md OUT_MD\n\nBuild runtime chain candidate V6 from ordered runtime facts.\n\noptions:\n  -h, --help            show this help message and exit\n  --ordered-facts ORDERED_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/build_runtime_facts_from_source_validation.py",
+      "module": "scripts.investigation.build_runtime_facts_from_source_validation",
+      "help_ok": true,
+      "help": "usage: build_runtime_facts_from_source_validation.py [-h] --source-validation\n                                                     SOURCE_VALIDATION\n                                                     --out-json OUT_JSON\n                                                     --out-md OUT_MD\n\noptions:\n  -h, --help            show this help message and exit\n  --source-validation SOURCE_VALIDATION\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/build_targeted_validation_request.py",
@@ -265,6 +277,12 @@
       "module": "scripts.investigation.runtime_fact_graph",
       "help_ok": true,
       "help": "usage: runtime_fact_graph.py [-h] --runtime-facts RUNTIME_FACTS --out-json\n                             OUT_JSON --out-md OUT_MD\n\nBuild a node-only runtime fact graph from normalized runtime facts.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-facts RUNTIME_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+    },
+    {
+      "path": "scripts/investigation/runtime_fact_sequencer.py",
+      "module": "scripts.investigation.runtime_fact_sequencer",
+      "help_ok": true,
+      "help": "usage: runtime_fact_sequencer.py [-h] --runtime-facts RUNTIME_FACTS --out-json\n                                 OUT_JSON --out-md OUT_MD\n\nOrder runtime facts into deterministic vendor itemdata stage sequence.\n\noptions:\n  -h, --help            show this help message and exit\n  --runtime-facts RUNTIME_FACTS\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/runtime_fact_topology_mapper.py",

@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `91`
+- Scripts checked: `94`
 
 ## scripts/diagnostics
 
@@ -34,7 +34,7 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8652.44it/s]
 ```
 
 ## scripts/extraction
@@ -1582,6 +1582,42 @@ options:
   --out-md OUT_MD
 ```
 
+### `scripts.investigation.build_runtime_chain_candidate_v6`
+
+- Path: `scripts/investigation/build_runtime_chain_candidate_v6.py`
+- Help status: `OK`
+
+```text
+usage: build_runtime_chain_candidate_v6.py [-h] --ordered-facts ORDERED_FACTS
+                                           --out-json OUT_JSON --out-md OUT_MD
+
+Build runtime chain candidate V6 from ordered runtime facts.
+
+options:
+  -h, --help            show this help message and exit
+  --ordered-facts ORDERED_FACTS
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.build_runtime_facts_from_source_validation`
+
+- Path: `scripts/investigation/build_runtime_facts_from_source_validation.py`
+- Help status: `OK`
+
+```text
+usage: build_runtime_facts_from_source_validation.py [-h] --source-validation
+                                                     SOURCE_VALIDATION
+                                                     --out-json OUT_JSON
+                                                     --out-md OUT_MD
+
+options:
+  -h, --help            show this help message and exit
+  --source-validation SOURCE_VALIDATION
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
 ### `scripts.investigation.build_targeted_validation_request`
 
 - Path: `scripts/investigation/build_targeted_validation_request.py`
@@ -2141,6 +2177,24 @@ usage: runtime_fact_graph.py [-h] --runtime-facts RUNTIME_FACTS --out-json
                              OUT_JSON --out-md OUT_MD
 
 Build a node-only runtime fact graph from normalized runtime facts.
+
+options:
+  -h, --help            show this help message and exit
+  --runtime-facts RUNTIME_FACTS
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
+### `scripts.investigation.runtime_fact_sequencer`
+
+- Path: `scripts/investigation/runtime_fact_sequencer.py`
+- Help status: `OK`
+
+```text
+usage: runtime_fact_sequencer.py [-h] --runtime-facts RUNTIME_FACTS --out-json
+                                 OUT_JSON --out-md OUT_MD
+
+Order runtime facts into deterministic vendor itemdata stage sequence.
 
 options:
   -h, --help            show this help message and exit
