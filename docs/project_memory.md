@@ -87,47 +87,28 @@ syncItemAdded is likely outdated stage naming or wrong expected needle, because 
 
 ## Current Bottleneck
 
-### Promotion Governance Automation
-
-What is still manual:
-
-runtime_chain_promoter_v4
-required modification
-
-promotion validation artifact
-must be manually supplied
-
-superseded chain handling
-is manual
-
-canonical chain selection
-is manual
-
-Next Infrastructure
-
-Create:
-
-scripts/investigation/promote_runtime_chain_candidate_v2.py
-
-Purpose:
-
-candidate
-↓
-contract validation
-↓
-promotion validation
-↓
-promotion decision
-↓
-supersede older promotion
-↓
-canonical promotion output
-
-This would remove the manual patch we just added to runtime_chain_promoter_v4.
+### Retrieval-Guided Architecture Intelligence V1
 
 ---
 
 ## Completed Bottlenecks
+
+Promotion Governance Automation: PASS
+Promoted Runtime Chain Registry: PASS
+Runtime Chain Corpus Builder: PASS
+Promoted Runtime Chain Retrieval: PASS
+
+Completed:
+
+runtime_chain_candidate.v6
+→ promotion_validation.v1
+→ promotion_decision.v4
+→ promoted_runtime_chain_registry.v1
+→ runtime_chain_corpus.v1
+→ qdrant_embeddings
+→ qdrant_ingest
+→ query_qdrant
+→ promoted chain retrieval
 
 ### Runtime Chain Promotion Validation
 PASS
