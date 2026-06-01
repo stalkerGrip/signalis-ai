@@ -61,17 +61,16 @@ def stable_point_id(item: Dict[str, Any]) -> str:
 
 
 def normalize_payload(item: Dict[str, Any]) -> Dict[str, Any]:
+    payload = dict(item)
+
+    payload["source_id"] = item.get("source_id") or item.get("id")
+    payload["doc_type"] = item.get("doc_type") or item.get("type") or "unknown"
+    payload["text"] = item.get("text") or item.get("content") or item.get("body") or ""
+
+    payload.pop("embedding", None)
+
     metadata = item.get("metadata") or {}
 
-    payload = {
-        "source_id": item.get("id"),
-        "doc_type": item.get("doc_type"),
-        "content_hash": item.get("content_hash"),
-        "embedding_dim": item.get("embedding_dim"),
-        "text": item.get("text", ""),
-    }
-
-    # Flatten selected metadata for easy Qdrant filtering.
     if isinstance(metadata, dict):
         payload["metadata"] = metadata
 

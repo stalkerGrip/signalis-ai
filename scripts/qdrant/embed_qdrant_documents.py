@@ -92,6 +92,28 @@ def get_doc_text(doc: dict[str, Any]) -> str:
     return f"{title}\n\n{json.dumps(metadata, ensure_ascii=False)}".strip()
 
 
+def build_embedding_row(
+    doc: dict[str, Any],
+    *,
+    text: str,
+    vec: list[float],
+    embedding_model: str,
+) -> dict[str, Any]:
+    row = dict(doc)
+
+    row["id"] = doc.get("id")
+    row["doc_type"] = doc.get("doc_type") or doc.get("type") or "unknown"
+    row["title"] = doc.get("title")
+    row["metadata"] = doc.get("metadata", {})
+    row["content_hash"] = sha256_text(text)
+    row["embedding_dim"] = len(vec)
+    row["embedding_model"] = embedding_model
+    row["embedding"] = vec
+    row["text"] = text
+
+    return row
+
+
 def nomic_prefix(text: str, model_name: str) -> str:
     if "nomic" in model_name.lower() and not text.startswith("search_document:"):
         return "search_document: " + text
@@ -149,17 +171,14 @@ def rows_from_hash(docs: list[dict[str, Any]], dim: int, limit: int | None) -> l
     for i, doc in enumerate(selected, 1):
         text = get_doc_text(doc)
         vec = hash_embedding(text, dim=dim)
-        rows.append({
-            "id": doc.get("id"),
-            "doc_type": doc.get("doc_type") or doc.get("type") or "unknown",
-            "title": doc.get("title"),
-            "metadata": doc.get("metadata", {}),
-            "content_hash": sha256_text(text),
-            "embedding_dim": len(vec),
-            "embedding_model": HASH_MODEL_NAME,
-            "embedding": vec,
-            "text": text,
-        })
+        rows.append(
+            build_embedding_row(
+                doc,
+                text=text,
+                vec=vec,
+                embedding_model=HASH_MODEL_NAME,
+            )
+        )
         if i % 100 == 0:
             print(f"[INFO] Hash embedded {i}/{len(selected)}")
 
@@ -193,17 +212,14 @@ def rows_from_sentence_model(
 
         for doc, text, vector in zip(batch, texts, vectors):
             vec = vector.tolist() if hasattr(vector, "tolist") else list(vector)
-            rows.append({
-                "id": doc.get("id"),
-                "doc_type": doc.get("doc_type") or doc.get("type") or "unknown",
-                "title": doc.get("title"),
-                "metadata": doc.get("metadata", {}),
-                "content_hash": sha256_text(text),
-                "embedding_dim": len(vec),
-                "embedding_model": model_name,
-                "embedding": vec,
-                "text": text,
-            })
+            rows.append(
+                build_embedding_row(
+                    doc,
+                    text=text,
+                    vec=vec,
+                    embedding_model=model_name,
+                )
+            )
 
     return rows
 

@@ -403,3 +403,137 @@ promotion decision
 → retrieval validation
 
 Promotion is not complete until the promoted chain is retrievable by chain_id and promotion_status.
+
+## Incremental Pipeline Execution Rule
+
+For multi-stage pipeline work:
+
+Do not generate future commands based on assumed intermediate outputs.
+
+Execute one stage at a time.
+
+Workflow:
+
+1. Provide exactly one command or one inspection step.
+2. Wait for actual output.
+3. Re-evaluate using the output.
+4. Provide the next step.
+
+Prefer evidence-driven progression over predicted pipeline paths.
+
+This is mandatory when:
+
+- promotion workflows
+- contract workflows
+- retrieval workflows
+- validation workflows
+- artifact generation workflows
+
+Never assume:
+
+- artifact existence
+- artifact schema
+- script arguments
+- script outputs
+
+until verified from actual execution.
+
+## Benchmark Generalization Rule
+
+Vendor and characterload are benchmark datasets.
+
+They are not infrastructure templates.
+
+Do not hardcode benchmark-specific stages into generic pipeline scripts.
+
+Benchmark-specific logic may exist only as:
+
+* configuration
+* stage-rule files
+* test fixtures
+* benchmark fixtures
+
+not as hidden constants inside generic scripts.
+
+Required direction:
+
+```text
+source validation
+→ runtime fact extraction
+→ runtime fact sequencing
+→ runtime chain candidate building
+```
+
+must accept explicit stage-rule input.
+
+Generic scripts should consume:
+
+```text
+stage_rule_set.v1
+```
+
+rather than hardcoded stage names.
+
+Allowed benchmark rule files:
+
+```text
+docs/runtime/stage_rules/vendor_purchase_itemdata_stage_rules.json
+docs/runtime/stage_rules/characterload_inventory_stage_rules.json
+```
+
+or equivalent configured paths.
+
+Rule files define:
+
+* benchmark key
+* stage order
+* stage descriptions
+* classification needles
+* expected realms
+* expected kinds
+* required / optional stages
+* promotion compatibility
+
+Promotion must record which stage-rule set was used.
+
+A promoted runtime chain is invalid if its stage order came from hidden benchmark-specific script constants.
+
+Vendor and characterload should remain regression benchmarks for the generic pipeline, not special-case infrastructure.
+
+### Infrastructure Direction
+
+Current hardcoded benchmark implementations:
+
+* build_runtime_facts_from_source_validation.py
+* runtime_fact_sequencer.py
+* build_runtime_chain_candidate_v6.py
+
+These scripts must be migrated to consume:
+
+```text
+stage_rule_set.v1
+```
+
+through explicit inputs rather than embedded benchmark rules.
+
+Target architecture:
+
+```text
+benchmark targets
+    ↓
+source validation
+    ↓
+runtime facts
+    ↓
+stage rules
+    ↓
+ordered runtime facts
+    ↓
+runtime chain candidate
+    ↓
+promotion validation
+    ↓
+promoted runtime chain
+```
+
+Benchmark-specific knowledge belongs in stage-rule artifacts, not in pipeline infrastructure.

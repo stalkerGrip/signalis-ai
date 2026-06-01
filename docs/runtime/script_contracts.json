@@ -1,12 +1,12 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 93,
+  "scripts_checked": 95,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
       "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]"
+      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8291.03it/s]"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -79,6 +79,12 @@
       "module": "scripts.extraction.extract_timers",
       "help_ok": true,
       "help": "Scanning root: E:\\steam\\steamapps\\common\\GarrysMod\\garrysmod\\gamemodes\\signalis\nLua files found: 969\n\nScanning root: E:\\steam\\steamapps\\common\\GarrysMod\\garrysmod\\gamemodes\\nutscript\nLua files found: 218\nSaved 42 entries -> manifests\\timers\\timer_creates.json\nSaved 131 entries -> manifests\\timers\\timer_simples.json\nSaved 64 entries -> manifests\\timers\\timer_operations.json\nSaved 183 entries -> manifests\\timers\\entity_timer_calls.json\nSaved 102 entries -> manifests\\timers\\player_action_timers.json"
+    },
+    {
+      "path": "scripts/investigation/build_architecture_intelligence_v1.py",
+      "module": "scripts.investigation.build_architecture_intelligence_v1",
+      "help_ok": true,
+      "help": "usage: build_architecture_intelligence_v1.py [-h] --workspace WORKSPACE\n                                             [--context-pack CONTEXT_PACK]\n                                             [--out-json OUT_JSON]\n                                             [--out-md OUT_MD]\n\nBuild deterministic architecture intelligence from runtime chain context\npacks.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --context-pack CONTEXT_PACK\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/build_characterload_runtime_chain_candidate.py",
@@ -157,6 +163,12 @@
       "module": "scripts.investigation.promote_runtime_chain_candidate_v2",
       "help_ok": true,
       "help": "usage: promote_runtime_chain_candidate_v2.py [-h] --workspace WORKSPACE\n                                             --candidate CANDIDATE\n                                             --promotion-validation\n                                             PROMOTION_VALIDATION\n                                             [--registry REGISTRY]\n                                             [--name NAME]\n                                             [--promoted-dir PROMOTED_DIR]\n                                             [--out-json OUT_JSON]\n                                             [--out-md OUT_MD] [--dry-run]\n\nPromote runtime chain candidate with contract validation, promotion\nvalidation, supersession, and canonical output.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --candidate CANDIDATE\n  --promotion-validation PROMOTION_VALIDATION\n  --registry REGISTRY   Default: <workspace>/docs/runtime/pipeline_artifact_co\n                        ntract.json\n  --name NAME           Output slug. Default: benchmark/title derived.\n  --promoted-dir PROMOTED_DIR\n                        Default: <workspace>/docs/runtime/runtime_chains\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --dry-run             Validate and write decision files, but do not move\n                        superseded promoted docs."
+    },
+    {
+      "path": "scripts/investigation/retrieve_promoted_runtime_chains.py",
+      "module": "scripts.investigation.retrieve_promoted_runtime_chains",
+      "help_ok": true,
+      "help": "usage: retrieve_promoted_runtime_chains.py [-h] --workspace WORKSPACE --query\n                                           QUERY [--collection COLLECTION]\n                                           [--model MODEL]\n                                           [--qdrant-url QDRANT_URL]\n                                           [--retrieve-k RETRIEVE_K]\n                                           [--top-k TOP_K]\n                                           [--out-json OUT_JSON]\n                                           [--out-md OUT_MD]\n\nRetrieve promoted runtime chains from Qdrant and build an architecture context\npack.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --query QUERY\n  --collection COLLECTION\n  --model MODEL\n  --qdrant-url QDRANT_URL\n  --retrieve-k RETRIEVE_K\n  --top-k TOP_K\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/run_targeted_validation_request.py",

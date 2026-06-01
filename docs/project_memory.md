@@ -87,7 +87,35 @@ syncItemAdded is likely outdated stage naming or wrong expected needle, because 
 
 ## Current Bottleneck
 
-### Retrieval-Guided Architecture Intelligence V1
+### Benchmark Generalization Bottleneck
+DISCOVERED
+
+Vendor and Characterload benchmarks exposed
+hidden benchmark-specific logic inside:
+
+- build_runtime_facts_from_source_validation.py
+- runtime_fact_sequencer.py
+- build_runtime_chain_candidate_v6.py
+
+Direction:
+
+stage_rule_set.v1
+
+Benchmark-specific ordering and classification
+must move from scripts into stage-rule artifacts.
+
+Target:
+
+source validation
+→ runtime facts
+→ stage rules
+→ ordered runtime facts
+→ runtime chain candidate
+→ promotion
+
+Status:
+identified
+not yet implemented
 
 ---
 

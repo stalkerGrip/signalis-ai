@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `93`
+- Scripts checked: `95`
 
 ## scripts/diagnostics
 
@@ -34,7 +34,7 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8651.46it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8291.03it/s]
 ```
 
 ## scripts/extraction
@@ -1518,6 +1518,28 @@ Saved 102 entries -> manifests\timers\player_action_timers.json
 
 ## scripts/investigation
 
+### `scripts.investigation.build_architecture_intelligence_v1`
+
+- Path: `scripts/investigation/build_architecture_intelligence_v1.py`
+- Help status: `OK`
+
+```text
+usage: build_architecture_intelligence_v1.py [-h] --workspace WORKSPACE
+                                             [--context-pack CONTEXT_PACK]
+                                             [--out-json OUT_JSON]
+                                             [--out-md OUT_MD]
+
+Build deterministic architecture intelligence from runtime chain context
+packs.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --context-pack CONTEXT_PACK
+  --out-json OUT_JSON
+  --out-md OUT_MD
+```
+
 ### `scripts.investigation.build_characterload_runtime_chain_candidate`
 
 - Path: `scripts/investigation/build_characterload_runtime_chain_candidate.py`
@@ -1765,6 +1787,37 @@ options:
   --out-md OUT_MD
   --dry-run             Validate and write decision files, but do not move
                         superseded promoted docs.
+```
+
+### `scripts.investigation.retrieve_promoted_runtime_chains`
+
+- Path: `scripts/investigation/retrieve_promoted_runtime_chains.py`
+- Help status: `OK`
+
+```text
+usage: retrieve_promoted_runtime_chains.py [-h] --workspace WORKSPACE --query
+                                           QUERY [--collection COLLECTION]
+                                           [--model MODEL]
+                                           [--qdrant-url QDRANT_URL]
+                                           [--retrieve-k RETRIEVE_K]
+                                           [--top-k TOP_K]
+                                           [--out-json OUT_JSON]
+                                           [--out-md OUT_MD]
+
+Retrieve promoted runtime chains from Qdrant and build an architecture context
+pack.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --query QUERY
+  --collection COLLECTION
+  --model MODEL
+  --qdrant-url QDRANT_URL
+  --retrieve-k RETRIEVE_K
+  --top-k TOP_K
+  --out-json OUT_JSON
+  --out-md OUT_MD
 ```
 
 ### `scripts.investigation.run_targeted_validation_request`

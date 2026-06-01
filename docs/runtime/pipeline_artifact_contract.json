@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-01T21:37:39",
+  "generated_at": "2026-06-01T23:22:19",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -27,6 +27,27 @@
     "not_promotion_relevant"
   ],
   "scripts": [
+    {
+      "script_id": "scripts.investigation.build_architecture_intelligence_v1",
+      "path": "scripts/investigation/build_architecture_intelligence_v1.py",
+      "module": "scripts.investigation.build_architecture_intelligence_v1",
+      "purpose": "Build deterministic architecture intelligence from promoted runtime chain context packs.",
+      "pipeline_stage": "architecture_intelligence",
+      "input_schemas": [
+        "runtime_chain_context_pack.v1",
+        "pipeline_artifact_contract.v1"
+      ],
+      "output_schemas": [
+        "architecture_intelligence.v1"
+      ],
+      "artifact_patterns": [
+        "investigations/architecture/architecture_intelligence_v1.json",
+        "investigations/architecture/architecture_intelligence_v1.md"
+      ],
+      "promotion_role": "promotion_support",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
+    },
     {
       "script_id": "scripts.investigation.build_characterload_runtime_chain_candidate",
       "path": "scripts/investigation/build_characterload_runtime_chain_candidate.py",
@@ -237,6 +258,28 @@
         "docs/runtime/runtime_chains/*_not_promoted.md"
       ],
       "promotion_role": "promotion_core",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
+    },
+    {
+      "script_id": "scripts.investigation.retrieve_promoted_runtime_chains",
+      "path": "scripts/investigation/retrieve_promoted_runtime_chains.py",
+      "module": "scripts.investigation.retrieve_promoted_runtime_chains",
+      "purpose": "Retrieve promoted runtime chains from Qdrant and build a ranked architecture context pack for investigation consumption.",
+      "pipeline_stage": "retrieval",
+      "input_schemas": [
+        "qdrant_collection.v1",
+        "runtime_chain_corpus.v1",
+        "pipeline_artifact_contract.v1"
+      ],
+      "output_schemas": [
+        "runtime_chain_context_pack.v1"
+      ],
+      "artifact_patterns": [
+        "investigations/retrieval/runtime_chain_context_pack.json",
+        "investigations/retrieval/runtime_chain_context_pack.md"
+      ],
+      "promotion_role": "promotion_support",
       "canonical_status": "active",
       "source": "explicit_script_flag"
     },
@@ -1371,6 +1414,32 @@
       "source": "merged_existing_curation"
     },
     {
+      "artifact_id": "investigations/validation/characterload_inventory_clean_runtime_facts_v2.json",
+      "path": "investigations/validation/characterload_inventory_clean_runtime_facts_v2.json",
+      "schema": "runtime_facts.v2",
+      "producer_script": null,
+      "pipeline_stage": "runtime_facts",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.json"
+      ],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_clean_runtime_facts_v2.md",
+      "path": "investigations/validation/characterload_inventory_clean_runtime_facts_v2.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_facts",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
+    },
+    {
       "artifact_id": "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json",
       "path": "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json",
       "schema": "runtime_facts.v2",
@@ -1397,6 +1466,82 @@
       "source": "merged_existing_curation"
     },
     {
+      "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v1.json",
+      "path": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v1.json",
+      "schema": "targeted_validation_result.v2",
+      "producer_script": null,
+      "pipeline_stage": "targeted_validation_request",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/characterload_inventory_lifecycle_targets_clean_v1.json"
+      ],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v1.md",
+      "path": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v1.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "targeted_validation_request",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.json",
+      "path": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.json",
+      "schema": "targeted_validation_result.v2",
+      "producer_script": null,
+      "pipeline_stage": "targeted_validation_request",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/characterload_inventory_lifecycle_targets_clean_v2.json"
+      ],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.md",
+      "path": "investigations/validation/characterload_inventory_lifecycle_targets_clean_source_validation_v2.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "targeted_validation_request",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_v1.json",
+      "path": "investigations/validation/characterload_inventory_lifecycle_targets_clean_v1.json",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "targeted_validation_request",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_clean_v2.json",
+      "path": "investigations/validation/characterload_inventory_lifecycle_targets_clean_v2.json",
+      "schema": "targeted_validation_request.v3",
+      "producer_script": null,
+      "pipeline_stage": "targeted_validation_request",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
+    },
+    {
       "artifact_id": "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json",
       "path": "investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json",
       "schema": null,
@@ -1409,6 +1554,32 @@
         "E:/signalis_ai/investigations/validation/characterload_inventory_lifecycle_targets.json"
       ],
       "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.json",
+      "path": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.json",
+      "schema": "ordered_runtime_facts.v1",
+      "producer_script": null,
+      "pipeline_stage": "ordered_runtime_facts",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json"
+      ],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.md",
+      "path": "investigations/validation/characterload_inventory_ordered_runtime_facts_v1.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "ordered_runtime_facts",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v1.json",
@@ -1479,6 +1650,34 @@
       "canonical_status": "intermediate",
       "inputs": [],
       "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_promotion_candidate.json",
+      "path": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_promotion_candidate.json",
+      "schema": "runtime_chain_candidate.v5",
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "investigations/validation/characterload_inventory_generic_runtime_facts_v2.json",
+        "investigations/validation/characterload_inventory_runtime_fact_topology_v3.json",
+        "manifests/normalized/runtime_propagation_topology.json"
+      ],
+      "source": "inferred_from_artifact"
+    },
+    {
+      "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_promotion_candidate.md",
+      "path": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_promotion_candidate.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "runtime_chain_candidate",
+      "benchmark": "characterload_inventory",
+      "promotion_role": "promotion_core",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "inferred_from_artifact"
     },
     {
       "artifact_id": "investigations/validation/characterload_inventory_runtime_chain_candidate_v5_propagation.json",

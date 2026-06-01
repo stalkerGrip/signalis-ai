@@ -1,14 +1,15 @@
 # Pipeline Artifact Contract Registry
 
 - Schema: `pipeline_artifact_contract.v1`
-- Generated at: `2026-06-01T21:37:39`
-- Scripts: `85`
-- Artifacts: `118`
+- Generated at: `2026-06-01T23:22:19`
+- Scripts: `87`
+- Artifacts: `130`
 
 ## Script Stages
 
 | Stage | Count |
 |---|---:|
+| `architecture_intelligence` | 1 |
 | `builder` | 10 |
 | `diagnosis` | 1 |
 | `embedding` | 1 |
@@ -17,7 +18,7 @@
 | `normalization` | 2 |
 | `probe` | 2 |
 | `promotion` | 4 |
-| `retrieval` | 2 |
+| `retrieval` | 3 |
 | `runtime_chain_candidate` | 4 |
 | `runtime_chain_regression` | 1 |
 | `runtime_fact_graph` | 1 |
@@ -33,16 +34,16 @@
 |---|---:|
 | `diagnosis` | 2 |
 | `ingestion` | 3 |
-| `ordered_runtime_facts` | 2 |
+| `ordered_runtime_facts` | 4 |
 | `promotion` | 2 |
 | `promotion_output` | 5 |
-| `runtime_chain_candidate` | 20 |
+| `runtime_chain_candidate` | 22 |
 | `runtime_chain_regression` | 1 |
 | `runtime_fact_graph` | 4 |
 | `runtime_fact_topology` | 11 |
-| `runtime_facts` | 7 |
+| `runtime_facts` | 9 |
 | `source_validation` | 5 |
-| `targeted_validation_request` | 6 |
+| `targeted_validation_request` | 12 |
 | `tooling` | 1 |
 | `unknown` | 49 |
 
@@ -52,7 +53,7 @@
 |---|---:|
 | `canonical` | 8 |
 | `debug` | 2 |
-| `intermediate` | 108 |
+| `intermediate` | 120 |
 
 ## Contract Flag Format
 
