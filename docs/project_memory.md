@@ -12,62 +12,59 @@ Current Focus:
 Runtime Chain Builder V5 validation against
 Runtime Propagation Topology V3.
 
-## Current Bottleneck
+---
 
-Runtime Chain Builder V5 validation against
+## Current Experiment
+
+Runtime Fact Sequencing Investigation
+
+Target:
+
+vendor_purchase_itemdata_generic_runtime_facts_v2.json
+
+Objective:
+
+Determine whether Runtime Chain Builder V5 failure is caused by:
+
+- incorrect fact ordering
+- incorrect fact generation
+- incorrect stage selection
+
+Known evidence:
+
+Characterload benchmark passes against
 runtime_propagation_topology.json
 
-Validated:
+Therefore Runtime Propagation Topology V3 is not the active bottleneck.
 
-- Runtime Propagation Topology V1 PASS
-- Runtime Propagation Topology V2 PASS
-- Runtime Propagation Topology V3 PASS
+---
 
-Validated propagation probes:
+## Current Bottleneck
 
-- netstream:invData
-  → ItemDataChanged
+Runtime Fact sequencing validation
+for Runtime Chain Builder V5.
 
-- PlayerLoadedChar
-  → PlayerLoadout
+Runtime Propagation Topology V3:
+PASS
 
-- PlayerLoadout
-  → PostPlayerLoadout
+Characterload benchmark:
+PASS
 
-Generated propagation support:
+Vendor benchmark:
+FAIL
 
-- generated_hook_listener_emits_hook_event: 583
-- generated_network_receiver_emits_hook_event: 433
+Current hypothesis:
 
-Important finding:
-
-Existing runtime_fact_topology_v3 artifacts were generated against:
-
-manifests/normalized/runtime_topology.json
-
-rather than:
-
-manifests/normalized/runtime_propagation_topology.json
-
-Therefore existing Runtime Chain Builder V5 results do not yet validate Runtime Propagation Topology V3.
-
-Current experiment:
-
-runtime_fact_topology_mapper
-→ runtime_propagation_topology.json
-
-runtime_chain_builder_v5
-→ runtime_propagation_topology.json
-
-Benchmark chains:
-
-1. vendor_purchase_item_data_propagation_topology_chain
-
-2. characterload_inventory_initialization_lifecycle_chain
+vendor_purchase_itemdata_generic_runtime_facts_v2.json
+contains stage ordering that does not match validated runtime propagation.
 
 Goal:
 
-Determine whether Runtime Propagation Topology V3 resolves the V5 support bottleneck or whether runtime_chain_builder_v5 becomes the next bottleneck.
+Determine whether the next bottleneck is:
+
+- runtime fact generation
+- runtime fact ordering
+- runtime chain stage selection
 
 ---
 
@@ -92,6 +89,24 @@ Validated propagation chains:
 - PlayerLoadedChar → PlayerLoadout
 
 - PlayerLoadout → PostPlayerLoadout
+
+5. Runtime Chain Builder V5 propagation topology consumption
+
+PASS
+
+Validated by:
+
+PlayerLoadedChar
+→ PlayerLoadout
+
+PlayerLoadout
+→ PostPlayerLoadout
+
+Supported links increased from:
+
+0
+→
+5
 
 ---
 
@@ -131,6 +146,14 @@ Validated promoted chains:
 - runtime_doctrine.md
 - runtime_propagation_doctrine.md
 - runtime_chain_promotion.md
+
+Script contracts are authoritative for CLI usage.
+
+Do not infer arguments from previous chats.
+
+When in doubt:
+1. script_contracts.md
+2. python -m <module> --help
 
 ---
 
