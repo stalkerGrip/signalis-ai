@@ -1,0 +1,104 @@
+{
+  "schema": "orchestration_scope",
+  "schema_version": "1",
+  "artifact_family": "orchestration_scope",
+  "artifact_id": "orchestration_scope:822e2688ac02e02f7302",
+  "producer_script": "scripts.investigation.build_orchestration_scope",
+  "pipeline_stage": "orchestration",
+  "canonical_status": "intermediate",
+  "promotion_role": "context_or_debug",
+  "generated_at": "2026-06-02T17:26:32Z",
+  "required_capabilities": [
+    "subsystem_scope",
+    "realm_scope",
+    "runtime_surface_scope"
+  ],
+  "input_artifacts": [
+    "investigations\\orchestration\\armor_reduction_algorithm_orchestration_request.json"
+  ],
+  "upstream_artifact_ids": [
+    "orchestration_request:ec028b4ed85d7c7b"
+  ],
+  "scope_summary": {
+    "subsystems": [
+      "unknown"
+    ],
+    "realms": [
+      "unknown"
+    ],
+    "runtime_surfaces": [
+      "unknown"
+    ]
+  },
+  "subsystem_scope": [
+    {
+      "scope_id": "unknown",
+      "display_name": "unknown",
+      "confidence": "low",
+      "evidence_source": "insufficient_external_scope_evidence",
+      "matched_aliases": [],
+      "source_artifact": null,
+      "source_family": null,
+      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps."
+    }
+  ],
+  "realm_scope": [
+    {
+      "scope_id": "unknown",
+      "display_name": "unknown",
+      "confidence": "low",
+      "evidence_source": "insufficient_external_scope_evidence",
+      "matched_aliases": [],
+      "source_artifact": null,
+      "source_family": null,
+      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps."
+    }
+  ],
+  "runtime_surface_scope": [
+    {
+      "scope_id": "unknown",
+      "display_name": "unknown",
+      "confidence": "low",
+      "evidence_source": "insufficient_external_scope_evidence",
+      "matched_aliases": [],
+      "source_artifact": null,
+      "source_family": null,
+      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps."
+    }
+  ],
+  "confidence_notes": [
+    "subsystem scope contains unknown due to missing matched evidence",
+    "realm scope contains unknown due to missing matched evidence",
+    "runtime_surface scope contains unknown due to missing matched evidence"
+  ],
+  "index_metadata": {
+    "index_present": false,
+    "index_path": null,
+    "index_digest": null,
+    "index_schema": null
+  },
+  "lineage": {
+    "input_kind": "orchestration_request",
+    "input_artifacts": [
+      "investigations\\orchestration\\armor_reduction_algorithm_orchestration_request.json"
+    ],
+    "parent_artifact_id": "orchestration_request:ec028b4ed85d7c7b",
+    "regenerates": null,
+    "regeneration_inputs": {
+      "orchestration_request_artifact_id": "orchestration_request:ec028b4ed85d7c7b",
+      "orchestration_request_digest": "d6d2b00113273da1be97dfe9",
+      "orchestration_index_digest": null,
+      "producer_script": "scripts.investigation.build_orchestration_scope",
+      "schema": "orchestration_scope",
+      "schema_version": "1"
+    }
+  },
+  "contract_guards": {
+    "no_benchmark_routing": true,
+    "no_subsystem_routing_tables": true,
+    "no_hidden_keyword_maps": true,
+    "no_version_coupled_orchestration": true,
+    "consumes_by_artifact_family": true,
+    "consumes_by_required_capabilities": true
+  }
+}

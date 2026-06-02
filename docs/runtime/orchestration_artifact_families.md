@@ -502,3 +502,342 @@ orchestration_scope
 generation.
 
 Nothing more.
+
+# Orchestration Scope Contract
+
+## Purpose
+
+Defines the stable artifact family:
+
+orchestration_scope
+
+This artifact represents the inferred scope of work for a normalized orchestration_request.
+
+The orchestration_scope artifact is a planning/control artifact.
+
+It does not select doctrine files, generate retrieval queries, perform source validation, produce runtime chains, or provide implementation guidance.
+
+---
+
+## Artifact Family
+
+artifact_family:
+
+orchestration_scope
+
+schema:
+
+orchestration_scope
+
+schema_version:
+
+compatibility metadata only
+
+Schema version must not control routing, discovery, orchestration, or script compatibility.
+
+---
+
+## Required Capabilities
+
+Every orchestration_scope must contain:
+
+- subsystem_scope
+- realm_scope
+- runtime_surface_scope
+
+An artifact lacking any required capability is not a valid orchestration_scope.
+
+---
+
+## Required Metadata
+
+Every orchestration_scope must contain:
+
+- schema
+- schema_version
+- artifact_family
+- artifact_id
+- producer_script
+- pipeline_stage
+- canonical_status
+- promotion_role
+- generated_at
+- required_capabilities
+- input_artifacts
+- upstream_artifact_ids
+- lineage
+
+Required fixed values:
+
+artifact_family:
+
+orchestration_scope
+
+schema:
+
+orchestration_scope
+
+pipeline_stage:
+
+orchestration
+
+promotion_role:
+
+context_or_debug
+
+canonical_status:
+
+intermediate
+
+---
+
+## Artifact ID Rule
+
+artifact_id must be deterministic.
+
+Recommended format:
+
+orchestration_scope:<stable_scope_hash>
+
+The stable scope hash must be derived from:
+
+- artifact_family
+- producer_script
+- upstream orchestration_request artifact_id
+- normalized_request_text
+- external orchestration_index digest when present
+- generated scope payload
+
+Do not derive artifact identity from:
+
+- filename
+- output path
+- schema version
+- benchmark name
+- subsystem guess alone
+- request classification alone
+- expected downstream output alone
+
+---
+
+## subsystem_scope
+
+Purpose:
+
+Record candidate subsystems involved in the request.
+
+Rules:
+
+- generated from request artifact plus external evidence/index signals
+- may contain `unknown` when evidence is insufficient
+- must preserve confidence and reasoning
+- must not be treated as validated truth
+- must not be produced from hidden subsystem routing tables inside Python
+
+Each subsystem scope item should contain:
+
+- scope_id
+- display_name
+- confidence
+- evidence_source
+- matched_aliases
+- source_artifact
+- source_family
+- reason
+
+---
+
+## realm_scope
+
+Purpose:
+
+Record likely execution realms involved in the request.
+
+Allowed scope_id examples:
+
+- server
+- client
+- shared
+- cross_realm
+- unknown
+
+Rules:
+
+- realm uncertainty must remain explicit
+- do not silently assume client authority
+- do not silently assume server authority without evidence
+- networking/cross-realm scope is a planning signal, not proof
+
+Each realm scope item should contain:
+
+- scope_id
+- display_name
+- confidence
+- evidence_source
+- matched_aliases
+- source_artifact
+- source_family
+- reason
+
+---
+
+## runtime_surface_scope
+
+Purpose:
+
+Record likely runtime surfaces involved in the request.
+
+Allowed scope_id examples:
+
+- hook_event
+- network_message
+- timer_scheduler
+- ui_derma
+- hud
+- entity_simulation
+- inventory_ownership
+- item_metadata
+- persistence
+- command_config
+- database_state
+- unknown
+
+Rules:
+
+- runtime surfaces guide downstream doctrine and retrieval selection
+- runtime surfaces are not source validation targets by themselves
+- runtime chain reconstruction is only requested later when propagation reasoning is required
+
+Each runtime surface scope item should contain:
+
+- scope_id
+- display_name
+- confidence
+- evidence_source
+- matched_aliases
+- source_artifact
+- source_family
+- reason
+
+---
+
+## Required Capabilities Are Not Routing Tables
+
+The three required scope capabilities define artifact structure only.
+
+They must not become hardcoded routing tables.
+
+Downstream consumers must use:
+
+- artifact_family
+- required_capabilities
+- canonical_status
+- lineage
+- scope item confidence
+- scope item evidence_source
+
+not schema version suffixes or benchmark names.
+
+---
+
+## Lineage Requirements
+
+Every orchestration_scope must include lineage metadata:
+
+lineage.input_kind:
+
+orchestration_request
+
+lineage.input_artifacts:
+
+at least the upstream orchestration_request JSON artifact path
+
+lineage.parent_artifact_id:
+
+upstream orchestration_request artifact_id
+
+lineage.regenerates:
+
+null unless this artifact intentionally replaces an earlier orchestration_scope
+
+lineage.regeneration_inputs:
+
+the minimum inputs needed to deterministically regenerate the artifact
+
+Required regeneration inputs:
+
+- orchestration_request_artifact_id
+- orchestration_request_digest
+- orchestration_index_digest when present
+- producer_script
+- schema
+- schema_version
+
+---
+
+## Capability-Based Consumption Rule
+
+A consumer may consume orchestration_scope only when:
+
+- artifact_family == orchestration_scope
+- required_capabilities contains subsystem_scope
+- required_capabilities contains realm_scope
+- required_capabilities contains runtime_surface_scope
+- canonical_status is not failed, legacy, superseded, or debug unless explicitly allowed
+- lineage.parent_artifact_id points to an orchestration_request artifact
+
+A consumer must not consume orchestration_scope by:
+
+- exact schema version suffix
+- filename pattern only
+- benchmark name
+- subsystem name alone
+- request wording alone
+
+---
+
+## Prohibited Behavior
+
+orchestration_scope must not introduce:
+
+- benchmark-specific routing
+- subsystem-specific routing tables
+- hidden keyword maps
+- version-coupled orchestration
+- doctrine file selection
+- retrieval query generation
+- source validation targets
+- runtime chain generation
+- implementation guidance
+
+---
+
+## Regeneration Rule
+
+orchestration_scope must be reproducible from:
+
+- upstream orchestration_request artifact
+- producer script
+- schema contract
+- optional external orchestration_index artifact
+
+Generated orchestration_scope artifacts must not be manually patched.
+
+If output is wrong:
+
+- fix the producer script
+- fix the external orchestration_index producer
+- fix the scope contract
+- regenerate
+
+---
+
+## Output Rule
+
+The output of orchestration_scope should be sufficient for:
+
+doctrine_context_selection
+
+and later retrieval_scope planning.
+
+Nothing more.

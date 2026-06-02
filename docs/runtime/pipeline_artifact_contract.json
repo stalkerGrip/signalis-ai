@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-02T18:02:12",
+  "generated_at": "2026-06-02T19:23:14",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -252,6 +252,24 @@
       "output_schemas": [],
       "artifact_patterns": [
         "investigations/orchestration/*_orchestration_request.json"
+      ],
+      "promotion_role": "context_or_debug",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
+    },
+    {
+      "script_id": "scripts.investigation.build_orchestration_scope",
+      "path": "scripts/investigation/build_orchestration_scope.py",
+      "module": "scripts.investigation.build_orchestration_scope",
+      "purpose": "Build a capability-driven orchestration_scope artifact from an orchestration_request artifact and optional external orchestration index signals.",
+      "pipeline_stage": "orchestration",
+      "input_schemas": [],
+      "output_schemas": [
+        "orchestration_scope"
+      ],
+      "artifact_patterns": [
+        "investigations/orchestration/*_orchestration_scope.json",
+        "investigations/orchestration/*_orchestration_scope.md"
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",

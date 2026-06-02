@@ -302,6 +302,50 @@ Breaking schema changes must be handled through:
 
 not parallel versioned pipeline paths.
 
+# Contract Registration Note — orchestration_scope
+
+Do not manually edit generated files:
+
+- docs/runtime/pipeline_artifact_contract.md
+- docs/runtime/pipeline_artifact_contract.json
+- docs/runtime/script_contracts.md
+- docs/runtime/script_contracts.json
+
+Registration happens through `PIPELINE_CONTRACT` in:
+
+scripts/investigation/build_orchestration_scope.py
+
+Then regenerate:
+
+```powershell
+python -m scripts.tools.build_pipeline_contract_registry --workspace E:\signalis_ai
+python -m scripts.tools.generate_script_contracts --workspace E:\signalis_ai
+python -m scripts.tools.check_pipeline_contracts --workspace E:\signalis_ai
+```
+
+Expected registry entry:
+
+```json
+{
+  "script_id": "scripts.investigation.build_orchestration_scope",
+  "path": "scripts/investigation/build_orchestration_scope.py",
+  "module": "scripts.investigation.build_orchestration_scope",
+  "purpose": "Build a capability-driven orchestration_scope artifact from an orchestration_request artifact and optional external orchestration index signals.",
+  "pipeline_stage": "orchestration",
+  "input_families": ["orchestration_request"],
+  "required_input_capabilities": ["request_text", "normalized_request_text"],
+  "output_families": ["orchestration_scope"],
+  "required_output_capabilities": ["subsystem_scope", "realm_scope", "runtime_surface_scope"],
+  "output_schemas": ["orchestration_scope"],
+  "artifact_patterns": [
+    "investigations/orchestration/*_orchestration_scope.json",
+    "investigations/orchestration/*_orchestration_scope.md"
+  ],
+  "promotion_role": "context_or_debug",
+  "canonical_status": "active"
+}
+```
+
 ## Artifact Creation Rule
 
 Do not create a new artifact family when:
@@ -996,3 +1040,4 @@ Runtime chains are generated only when propagation reasoning is required.
 Artifact family names are stable pipeline concepts.
 Schema versions are compatibility contracts.
 Do not create new artifact families or script generations only because an implementation changed.
+

@@ -1,6 +1,6 @@
 {
   "schema": "signalis_script_contracts.v1",
-  "scripts_checked": 96,
+  "scripts_checked": 98,
   "contracts": [
     {
       "path": "scripts/diagnostics/test_embeddings.py",
@@ -105,6 +105,18 @@
       "help": "usage: build_investigation_synthesis.py [-h] --question QUESTION\n                                        [--source-validation SOURCE_VALIDATION]\n                                        [--runtime-facts RUNTIME_FACTS]\n                                        [--runtime-chain-evidence RUNTIME_CHAIN_EVIDENCE]\n                                        --out-json OUT_JSON --out-md OUT_MD\n\noptions:\n  -h, --help            show this help message and exit\n  --question QUESTION\n  --source-validation SOURCE_VALIDATION\n  --runtime-facts RUNTIME_FACTS\n  --runtime-chain-evidence RUNTIME_CHAIN_EVIDENCE\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
+      "path": "scripts/investigation/build_orchestration_entrypoint.py",
+      "module": "scripts.investigation.build_orchestration_entrypoint",
+      "help_ok": true,
+      "help": "usage: build_orchestration_entrypoint.py [-h] --workspace WORKSPACE --request\n                                         REQUEST [--input-kind INPUT_KIND]\n                                         [--user-constraint USER_CONSTRAINT]\n                                         [--source-preference SOURCE_PREFERENCE]\n                                         [--input-artifact INPUT_ARTIFACT]\n                                         [--parent-artifact-id PARENT_ARTIFACT_ID]\n                                         [--regenerates REGENERATES]\n                                         [--out OUT]\n\nBuild a normalization-only orchestration_request artifact.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --request REQUEST\n  --input-kind INPUT_KIND\n  --user-constraint USER_CONSTRAINT\n  --source-preference SOURCE_PREFERENCE\n  --input-artifact INPUT_ARTIFACT\n  --parent-artifact-id PARENT_ARTIFACT_ID\n  --regenerates REGENERATES\n  --out OUT"
+    },
+    {
+      "path": "scripts/investigation/build_orchestration_scope.py",
+      "module": "scripts.investigation.build_orchestration_scope",
+      "help_ok": true,
+      "help": "usage: build_orchestration_scope.py [-h] --orchestration-request\n                                    ORCHESTRATION_REQUEST\n                                    [--orchestration-index ORCHESTRATION_INDEX]\n                                    [--out-dir OUT_DIR] [--out-json OUT_JSON]\n                                    [--out-md OUT_MD]\n\nBuild canonical orchestration_scope from orchestration_request without hidden\nrouting maps.\n\noptions:\n  -h, --help            show this help message and exit\n  --orchestration-request ORCHESTRATION_REQUEST\n                        Path to an orchestration_request JSON artifact.\n  --orchestration-index ORCHESTRATION_INDEX\n                        Optional external orchestration index JSON. Entries\n                        must provide scope_type, scope_id/id/name, and\n                        aliases. The script does not contain hidden scope\n                        maps.\n  --out-dir OUT_DIR     Output directory. Defaults to\n                        investigations/orchestration.\n  --out-json OUT_JSON   Explicit JSON output path.\n  --out-md OUT_MD       Explicit Markdown output path."
+    },
+    {
       "path": "scripts/investigation/build_runtime_chain_candidate_v6.py",
       "module": "scripts.investigation.build_runtime_chain_candidate_v6",
       "help_ok": true,
@@ -173,8 +185,8 @@
     {
       "path": "scripts/investigation/retrieve_promoted_runtime_chains.py",
       "module": "scripts.investigation.retrieve_promoted_runtime_chains",
-      "help_ok": false,
-      "help": "TIMEOUT while running --help"
+      "help_ok": true,
+      "help": "usage: retrieve_promoted_runtime_chains.py [-h] --workspace WORKSPACE --query\n                                           QUERY [--collection COLLECTION]\n                                           [--model MODEL]\n                                           [--qdrant-url QDRANT_URL]\n                                           [--retrieve-k RETRIEVE_K]\n                                           [--top-k TOP_K]\n                                           [--required-doc-type REQUIRED_DOC_TYPE]\n                                           [--required-schema REQUIRED_SCHEMA]\n                                           [--allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES]\n                                           [--include-raw-payload]\n                                           [--debug-first-payload]\n                                           [--out-json OUT_JSON]\n                                           [--out-md OUT_MD]\n\nRetrieve runtime chain context from Qdrant and build an architecture context\npack.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --query QUERY\n  --collection COLLECTION\n  --model MODEL\n  --qdrant-url QDRANT_URL\n  --retrieve-k RETRIEVE_K\n  --top-k TOP_K\n  --required-doc-type REQUIRED_DOC_TYPE\n                        Accepted doc_type. Use an empty string to disable\n                        doc_type filtering.\n  --required-schema REQUIRED_SCHEMA\n                        Accepted payload schema. Use an empty string to\n                        disable schema filtering.\n  --allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES\n                        Comma-separated accepted promotion statuses. Use an\n                        empty string to disable status filtering.\n  --include-raw-payload\n                        Include raw Qdrant payloads in the JSON context pack.\n  --debug-first-payload\n                        Print the first accepted raw payload for diagnostics.\n  --out-json OUT_JSON\n  --out-md OUT_MD"
     },
     {
       "path": "scripts/investigation/run_targeted_validation_request.py",

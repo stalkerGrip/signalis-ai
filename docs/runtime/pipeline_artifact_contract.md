@@ -1,8 +1,8 @@
 # Pipeline Artifact Contract Registry
 
 - Schema: `pipeline_artifact_contract.v1`
-- Generated at: `2026-06-02T18:02:12`
-- Scripts: `95`
+- Generated at: `2026-06-02T19:23:14`
+- Scripts: `96`
 - Artifacts: `159`
 
 ## Script Stages
@@ -16,7 +16,7 @@
 | `extraction` | 12 |
 | `ingestion` | 3 |
 | `normalization` | 2 |
-| `orchestration` | 1 |
+| `orchestration` | 2 |
 | `ordered_runtime_facts` | 2 |
 | `probe` | 2 |
 | `promotion` | 4 |

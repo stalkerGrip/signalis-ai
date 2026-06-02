@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `96`
+- Scripts checked: `98`
 
 ## scripts/diagnostics
 
@@ -1601,6 +1601,66 @@ options:
   --out-md OUT_MD
 ```
 
+### `scripts.investigation.build_orchestration_entrypoint`
+
+- Path: `scripts/investigation/build_orchestration_entrypoint.py`
+- Help status: `OK`
+
+```text
+usage: build_orchestration_entrypoint.py [-h] --workspace WORKSPACE --request
+                                         REQUEST [--input-kind INPUT_KIND]
+                                         [--user-constraint USER_CONSTRAINT]
+                                         [--source-preference SOURCE_PREFERENCE]
+                                         [--input-artifact INPUT_ARTIFACT]
+                                         [--parent-artifact-id PARENT_ARTIFACT_ID]
+                                         [--regenerates REGENERATES]
+                                         [--out OUT]
+
+Build a normalization-only orchestration_request artifact.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --request REQUEST
+  --input-kind INPUT_KIND
+  --user-constraint USER_CONSTRAINT
+  --source-preference SOURCE_PREFERENCE
+  --input-artifact INPUT_ARTIFACT
+  --parent-artifact-id PARENT_ARTIFACT_ID
+  --regenerates REGENERATES
+  --out OUT
+```
+
+### `scripts.investigation.build_orchestration_scope`
+
+- Path: `scripts/investigation/build_orchestration_scope.py`
+- Help status: `OK`
+
+```text
+usage: build_orchestration_scope.py [-h] --orchestration-request
+                                    ORCHESTRATION_REQUEST
+                                    [--orchestration-index ORCHESTRATION_INDEX]
+                                    [--out-dir OUT_DIR] [--out-json OUT_JSON]
+                                    [--out-md OUT_MD]
+
+Build canonical orchestration_scope from orchestration_request without hidden
+routing maps.
+
+options:
+  -h, --help            show this help message and exit
+  --orchestration-request ORCHESTRATION_REQUEST
+                        Path to an orchestration_request JSON artifact.
+  --orchestration-index ORCHESTRATION_INDEX
+                        Optional external orchestration index JSON. Entries
+                        must provide scope_type, scope_id/id/name, and
+                        aliases. The script does not contain hidden scope
+                        maps.
+  --out-dir OUT_DIR     Output directory. Defaults to
+                        investigations/orchestration.
+  --out-json OUT_JSON   Explicit JSON output path.
+  --out-md OUT_MD       Explicit Markdown output path.
+```
+
 ### `scripts.investigation.build_runtime_chain_candidate_v6`
 
 - Path: `scripts/investigation/build_runtime_chain_candidate_v6.py`
@@ -1811,10 +1871,50 @@ options:
 ### `scripts.investigation.retrieve_promoted_runtime_chains`
 
 - Path: `scripts/investigation/retrieve_promoted_runtime_chains.py`
-- Help status: `NO_HELP_OR_ERROR`
+- Help status: `OK`
 
 ```text
-TIMEOUT while running --help
+usage: retrieve_promoted_runtime_chains.py [-h] --workspace WORKSPACE --query
+                                           QUERY [--collection COLLECTION]
+                                           [--model MODEL]
+                                           [--qdrant-url QDRANT_URL]
+                                           [--retrieve-k RETRIEVE_K]
+                                           [--top-k TOP_K]
+                                           [--required-doc-type REQUIRED_DOC_TYPE]
+                                           [--required-schema REQUIRED_SCHEMA]
+                                           [--allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES]
+                                           [--include-raw-payload]
+                                           [--debug-first-payload]
+                                           [--out-json OUT_JSON]
+                                           [--out-md OUT_MD]
+
+Retrieve runtime chain context from Qdrant and build an architecture context
+pack.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --query QUERY
+  --collection COLLECTION
+  --model MODEL
+  --qdrant-url QDRANT_URL
+  --retrieve-k RETRIEVE_K
+  --top-k TOP_K
+  --required-doc-type REQUIRED_DOC_TYPE
+                        Accepted doc_type. Use an empty string to disable
+                        doc_type filtering.
+  --required-schema REQUIRED_SCHEMA
+                        Accepted payload schema. Use an empty string to
+                        disable schema filtering.
+  --allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES
+                        Comma-separated accepted promotion statuses. Use an
+                        empty string to disable status filtering.
+  --include-raw-payload
+                        Include raw Qdrant payloads in the JSON context pack.
+  --debug-first-payload
+                        Print the first accepted raw payload for diagnostics.
+  --out-json OUT_JSON
+  --out-md OUT_MD
 ```
 
 ### `scripts.investigation.run_targeted_validation_request`
