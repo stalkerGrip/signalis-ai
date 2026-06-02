@@ -5,8 +5,8 @@
     {
       "path": "scripts/diagnostics/test_embeddings.py",
       "module": "scripts.diagnostics.test_embeddings",
-      "help_ok": true,
-      "help": "Loading embedding model...\nGenerating embedding...\nVector size: 384\nSuccess.\nWarning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.\n\nLoading weights:   0%|          | 0/199 [00:00<?, ?it/s]\nLoading weights: 100%|##########| 199/199 [00:00<00:00, 8651.19it/s]"
+      "help_ok": false,
+      "help": "TIMEOUT while running --help"
     },
     {
       "path": "scripts/extraction/extract_character_inventory.py",
@@ -173,8 +173,8 @@
     {
       "path": "scripts/investigation/retrieve_promoted_runtime_chains.py",
       "module": "scripts.investigation.retrieve_promoted_runtime_chains",
-      "help_ok": true,
-      "help": "usage: retrieve_promoted_runtime_chains.py [-h] --workspace WORKSPACE --query\n                                           QUERY [--collection COLLECTION]\n                                           [--model MODEL]\n                                           [--qdrant-url QDRANT_URL]\n                                           [--retrieve-k RETRIEVE_K]\n                                           [--top-k TOP_K]\n                                           [--required-doc-type REQUIRED_DOC_TYPE]\n                                           [--required-schema REQUIRED_SCHEMA]\n                                           [--allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES]\n                                           [--include-raw-payload]\n                                           [--debug-first-payload]\n                                           [--out-json OUT_JSON]\n                                           [--out-md OUT_MD]\n\nRetrieve runtime chain context from Qdrant and build an architecture context\npack.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --query QUERY\n  --collection COLLECTION\n  --model MODEL\n  --qdrant-url QDRANT_URL\n  --retrieve-k RETRIEVE_K\n  --top-k TOP_K\n  --required-doc-type REQUIRED_DOC_TYPE\n                        Accepted doc_type. Use an empty string to disable\n                        doc_type filtering.\n  --required-schema REQUIRED_SCHEMA\n                        Accepted payload schema. Use an empty string to\n                        disable schema filtering.\n  --allowed-promotion-statuses ALLOWED_PROMOTION_STATUSES\n                        Comma-separated accepted promotion statuses. Use an\n                        empty string to disable status filtering.\n  --include-raw-payload\n                        Include raw Qdrant payloads in the JSON context pack.\n  --debug-first-payload\n                        Print the first accepted raw payload for diagnostics.\n  --out-json OUT_JSON\n  --out-md OUT_MD"
+      "help_ok": false,
+      "help": "TIMEOUT while running --help"
     },
     {
       "path": "scripts/investigation/run_targeted_validation_request.py",

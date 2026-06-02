@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-02T00:49:08",
+  "generated_at": "2026-06-02T13:53:23",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -68,7 +68,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.tools.check_pipeline_contracts",
@@ -91,7 +91,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.tools.classify_pipeline_artifacts",
@@ -144,7 +144,7 @@
       "artifact_patterns": [],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.tools.generate_script_contracts",
@@ -162,7 +162,7 @@
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
-      "source": "inferred_from_script"
+      "source": "merged_existing_curation"
     },
     {
       "script_id": "scripts.investigation.build_architecture_intelligence_v1",
@@ -3854,6 +3854,34 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/retrieval/runtime_chain_context_pack_inventory_sync.json",
+      "path": "investigations/retrieval/runtime_chain_context_pack_inventory_sync.json",
+      "schema": "runtime_chain_context_pack.v1",
+      "producer_script": "scripts.investigation.retrieve_promoted_runtime_chains",
+      "pipeline_stage": "retrieval",
+      "benchmark": "unknown",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "E:/signalis_ai/docs/runtime/pipeline_artifact_contract.json",
+        "qdrant_collection.v1",
+        "runtime_chain_corpus.v1"
+      ],
+      "source": "explicit_artifact_flag"
+    },
+    {
+      "artifact_id": "investigations/retrieval/runtime_chain_context_pack_inventory_sync.md",
+      "path": "investigations/retrieval/runtime_chain_context_pack_inventory_sync.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "retrieval",
+      "benchmark": "unknown",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [],
       "source": "inferred_from_artifact"
     },
     {
@@ -3878,6 +3906,34 @@
       "schema": null,
       "producer_script": null,
       "pipeline_stage": "retrieval",
+      "benchmark": "unknown",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [],
+      "source": "merged_existing_curation"
+    },
+    {
+      "artifact_id": "investigations/architecture/architecture_intelligence_inventory_sync_v1.json",
+      "path": "investigations/architecture/architecture_intelligence_inventory_sync_v1.json",
+      "schema": "architecture_intelligence.v1",
+      "producer_script": "scripts.investigation.build_architecture_intelligence_v1",
+      "pipeline_stage": "architecture_intelligence",
+      "benchmark": "unknown",
+      "promotion_role": "promotion_support",
+      "canonical_status": "intermediate",
+      "inputs": [
+        "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md",
+        "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
+        "E:/signalis_ai/investigations/retrieval/runtime_chain_context_pack_inventory_sync.json"
+      ],
+      "source": "explicit_artifact_flag"
+    },
+    {
+      "artifact_id": "investigations/architecture/architecture_intelligence_inventory_sync_v1.md",
+      "path": "investigations/architecture/architecture_intelligence_inventory_sync_v1.md",
+      "schema": null,
+      "producer_script": null,
+      "pipeline_stage": "architecture_intelligence",
       "benchmark": "unknown",
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
@@ -3909,7 +3965,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "docs/runtime/runtime_chains/_superseded/characterload_inventory_initialization_lifecycle_chain_promoted_source_validated_chain_superseded_20260602_000641.md",
@@ -4101,12 +4157,16 @@
       "inputs": [
         "E:/signalis_ai/docs/runtime/runtime_chains/characterload_inventory_promoted_confirmed_chain.md",
         "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md",
+        "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
         "E:/signalis_ai/investigations/validation/characterload_inventory_promotion_decision_v7.json",
         "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_promotion_decision.json",
         "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_promotion_validation_v7.json",
+        "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.json",
         "E:/signalis_ai/investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v7.json",
         "investigations/validation/characterload_inventory_promotion_validation_v7.json",
-        "investigations/validation/characterload_inventory_runtime_chain_candidate_v7.json"
+        "investigations/validation/characterload_inventory_runtime_chain_candidate_v7.json",
+        "investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v6.json",
+        "investigations/validation/vendor_purchase_itemdata_v6_promotion_validation.json"
       ],
       "source": "explicit_artifact_flag"
     },

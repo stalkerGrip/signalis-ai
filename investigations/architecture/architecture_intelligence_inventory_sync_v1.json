@@ -1,0 +1,648 @@
+{
+  "schema": "architecture_intelligence.v1",
+  "producer_script": "scripts.investigation.build_architecture_intelligence_v1",
+  "pipeline_stage": "architecture_intelligence",
+  "generated_at": "2026-06-02T00:58:07",
+  "input_artifact": "E:\\signalis_ai\\investigations\\retrieval\\runtime_chain_context_pack_inventory_sync.json",
+  "source_query": "inventory vendor storage item metadata sync UI desync network propagation",
+  "source_context_pack_producer": "scripts.investigation.retrieve_promoted_runtime_chains",
+  "rule_config_artifact": null,
+  "analysis_rules": {
+    "stage_classes": {
+      "metadata": [
+        "metadata",
+        "itemdata",
+        "item_data",
+        "data_mutation",
+        "setdata"
+      ],
+      "network": [
+        "network",
+        "netstream",
+        "sync",
+        "send",
+        "receive",
+        "receiver"
+      ],
+      "client_apply": [
+        "client_apply",
+        "client",
+        "apply"
+      ],
+      "ui": [
+        "ui",
+        "refresh",
+        "panel",
+        "presentation",
+        "derma",
+        "hud"
+      ],
+      "inventory": [
+        "inventory",
+        "transfer",
+        "ownership",
+        "membership"
+      ],
+      "storage": [
+        "storage"
+      ],
+      "vendor": [
+        "vendor"
+      ],
+      "persistence": [
+        "save",
+        "load",
+        "persist",
+        "database",
+        "db"
+      ],
+      "server_authority": [
+        "server",
+        "mutation",
+        "cleanup",
+        "authoritative"
+      ],
+      "hook_event": [
+        "hook",
+        "event",
+        "listener",
+        "emit"
+      ],
+      "timer_scheduler": [
+        "timer",
+        "delay",
+        "scheduler",
+        "tick"
+      ]
+    },
+    "contract_rules": [
+      {
+        "id": "metadata_sync_contract",
+        "required_terms": [
+          "metadata",
+          "send",
+          "client_apply"
+        ],
+        "description": "Metadata mutation should expose a send/apply synchronization path."
+      },
+      {
+        "id": "client_apply_to_presentation_contract",
+        "required_terms": [
+          "client_apply",
+          "ui"
+        ],
+        "description": "Client-side state application should have an explicit presentation refresh path when UI is affected."
+      },
+      {
+        "id": "ownership_vs_metadata_boundary",
+        "required_terms": [
+          "inventory",
+          "metadata"
+        ],
+        "description": "Inventory ownership/membership and item metadata should remain distinguishable propagation concerns."
+      },
+      {
+        "id": "persistence_sync_boundary",
+        "required_terms": [
+          "persistence",
+          "network"
+        ],
+        "description": "Persistence flows that cross the network boundary should be explicit synchronization contracts."
+      }
+    ]
+  },
+  "summary": {
+    "chains_total": 2,
+    "chains_by_confidence": {
+      "high": 2
+    },
+    "chains_by_promotion_status": {
+      "promoted_confirmed_chain": 2
+    },
+    "stage_class_totals": {
+      "client_apply": 4,
+      "hook_event": 2,
+      "inventory": 4,
+      "metadata": 12,
+      "network": 2,
+      "server_authority": 4,
+      "ui": 2,
+      "vendor": 6
+    },
+    "observed_coupling_patterns": {
+      "client_apply_to_ui_refresh": 2,
+      "inventory_and_metadata_propagation": 2,
+      "network_sync_boundary": 2
+    },
+    "observed_sync_contracts": {
+      "client_apply_to_presentation_contract": 2,
+      "metadata_sync_contract": 2,
+      "ownership_vs_metadata_boundary": 2
+    }
+  },
+  "chain_analyses": [
+    {
+      "source_id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "title": "Vendor purchase item metadata propagation",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "confidence": "high",
+      "promotion_status": "promoted_confirmed_chain",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md",
+      "stage_count": 8,
+      "stages": [
+        "vendor_open_metadata_assignment",
+        "vendor_purchase_transfer",
+        "vendor_metadata_cleanup",
+        "item_metadata_mutation",
+        "item_metadata_network_send",
+        "inventory_membership_client_apply",
+        "item_metadata_client_apply",
+        "ui_itemdata_refresh_hook"
+      ],
+      "classified_stages": [
+        {
+          "stage": "vendor_open_metadata_assignment",
+          "classes": [
+            "metadata",
+            "vendor"
+          ]
+        },
+        {
+          "stage": "vendor_purchase_transfer",
+          "classes": [
+            "inventory",
+            "vendor"
+          ]
+        },
+        {
+          "stage": "vendor_metadata_cleanup",
+          "classes": [
+            "metadata",
+            "vendor",
+            "server_authority"
+          ]
+        },
+        {
+          "stage": "item_metadata_mutation",
+          "classes": [
+            "metadata",
+            "server_authority"
+          ]
+        },
+        {
+          "stage": "item_metadata_network_send",
+          "classes": [
+            "metadata",
+            "network"
+          ]
+        },
+        {
+          "stage": "inventory_membership_client_apply",
+          "classes": [
+            "client_apply",
+            "inventory"
+          ]
+        },
+        {
+          "stage": "item_metadata_client_apply",
+          "classes": [
+            "metadata",
+            "client_apply"
+          ]
+        },
+        {
+          "stage": "ui_itemdata_refresh_hook",
+          "classes": [
+            "metadata",
+            "ui",
+            "hook_event"
+          ]
+        }
+      ],
+      "stage_class_counts": {
+        "client_apply": 2,
+        "hook_event": 1,
+        "inventory": 2,
+        "metadata": 6,
+        "network": 1,
+        "server_authority": 2,
+        "ui": 1,
+        "vendor": 3
+      },
+      "realm_transitions": [
+        {
+          "from_stage": "item_metadata_mutation",
+          "to_stage": "item_metadata_network_send",
+          "transition_type": "network_sync_boundary",
+          "confidence": "medium"
+        },
+        {
+          "from_stage": "item_metadata_network_send",
+          "to_stage": "inventory_membership_client_apply",
+          "transition_type": "network_or_client_sync_boundary",
+          "confidence": "medium"
+        },
+        {
+          "from_stage": "inventory_membership_client_apply",
+          "to_stage": "item_metadata_client_apply",
+          "transition_type": "network_or_client_sync_boundary",
+          "confidence": "medium"
+        },
+        {
+          "from_stage": "item_metadata_client_apply",
+          "to_stage": "ui_itemdata_refresh_hook",
+          "transition_type": "network_or_client_sync_boundary",
+          "confidence": "medium"
+        }
+      ],
+      "sync_contracts": [
+        {
+          "contract_id": "metadata_sync_contract",
+          "description": "Metadata mutation should expose a send/apply synchronization path.",
+          "matched_terms": [
+            "metadata",
+            "send",
+            "client_apply"
+          ],
+          "required_terms": [
+            "metadata",
+            "send",
+            "client_apply"
+          ],
+          "coverage": 1.0,
+          "status": "observed"
+        },
+        {
+          "contract_id": "client_apply_to_presentation_contract",
+          "description": "Client-side state application should have an explicit presentation refresh path when UI is affected.",
+          "matched_terms": [
+            "client_apply",
+            "ui"
+          ],
+          "required_terms": [
+            "client_apply",
+            "ui"
+          ],
+          "coverage": 1.0,
+          "status": "observed"
+        },
+        {
+          "contract_id": "ownership_vs_metadata_boundary",
+          "description": "Inventory ownership/membership and item metadata should remain distinguishable propagation concerns.",
+          "matched_terms": [
+            "inventory",
+            "metadata"
+          ],
+          "required_terms": [
+            "inventory",
+            "metadata"
+          ],
+          "coverage": 1.0,
+          "status": "observed"
+        },
+        {
+          "contract_id": "persistence_sync_boundary",
+          "description": "Persistence flows that cross the network boundary should be explicit synchronization contracts.",
+          "matched_terms": [
+            "network"
+          ],
+          "required_terms": [
+            "persistence",
+            "network"
+          ],
+          "coverage": 0.5,
+          "status": "partial"
+        }
+      ],
+      "coupling_findings": [
+        {
+          "coupling_id": "inventory_and_metadata_propagation",
+          "description": "The chain contains both inventory propagation and metadata propagation concerns.",
+          "risk": "desync_risk_if_one_path_refreshes_without_the_other",
+          "confidence": "high"
+        },
+        {
+          "coupling_id": "client_apply_to_ui_refresh",
+          "description": "Client-side state application appears coupled to UI/presentation refresh.",
+          "risk": "stale_presentation_if_refresh_hook_or_panel_update_is_missing",
+          "confidence": "high"
+        },
+        {
+          "coupling_id": "network_sync_boundary",
+          "description": "The chain crosses at least one synchronization/network boundary.",
+          "risk": "receiver_scope_payload_or_ordering_errors_can_create_client_desync",
+          "confidence": "high"
+        }
+      ]
+    },
+    {
+      "source_id": "promoted_runtime_chain:vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "title": "vendor purchase itemdata propagation chain",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "confidence": "high",
+      "promotion_status": "promoted_confirmed_chain",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md",
+      "stage_count": 8,
+      "stages": [
+        "vendor_open_metadata_assignment",
+        "vendor_purchase_transfer",
+        "vendor_metadata_cleanup",
+        "item_metadata_mutation",
+        "item_metadata_network_send",
+        "inventory_membership_client_apply",
+        "item_metadata_client_apply",
+        "ui_itemdata_refresh_hook"
+      ],
+      "classified_stages": [
+        {
+          "stage": "vendor_open_metadata_assignment",
+          "classes": [
+            "metadata",
+            "vendor"
+          ]
+        },
+        {
+          "stage": "vendor_purchase_transfer",
+          "classes": [
+            "inventory",
+            "vendor"
+          ]
+        },
+        {
+          "stage": "vendor_metadata_cleanup",
+          "classes": [
+            "metadata",
+            "vendor",
+            "server_authority"
+          ]
+        },
+        {
+          "stage": "item_metadata_mutation",
+          "classes": [
+            "metadata",
+            "server_authority"
+          ]
+        },
+        {
+          "stage": "item_metadata_network_send",
+          "classes": [
+            "metadata",
+            "network"
+          ]
+        },
+        {
+          "stage": "inventory_membership_client_apply",
+          "classes": [
+            "client_apply",
+            "inventory"
+          ]
+        },
+        {
+          "stage": "item_metadata_client_apply",
+          "classes": [
+            "metadata",
+            "client_apply"
+          ]
+        },
+        {
+          "stage": "ui_itemdata_refresh_hook",
+          "classes": [
+            "metadata",
+            "ui",
+            "hook_event"
+          ]
+        }
+      ],
+      "stage_class_counts": {
+        "client_apply": 2,
+        "hook_event": 1,
+        "inventory": 2,
+        "metadata": 6,
+        "network": 1,
+        "server_authority": 2,
+        "ui": 1,
+        "vendor": 3
+      },
+      "realm_transitions": [
+        {
+          "from_stage": "item_metadata_mutation",
+          "to_stage": "item_metadata_network_send",
+          "transition_type": "network_sync_boundary",
+          "confidence": "medium"
+        },
+        {
+          "from_stage": "item_metadata_network_send",
+          "to_stage": "inventory_membership_client_apply",
+          "transition_type": "network_or_client_sync_boundary",
+          "confidence": "medium"
+        },
+        {
+          "from_stage": "inventory_membership_client_apply",
+          "to_stage": "item_metadata_client_apply",
+          "transition_type": "network_or_client_sync_boundary",
+          "confidence": "medium"
+        },
+        {
+          "from_stage": "item_metadata_client_apply",
+          "to_stage": "ui_itemdata_refresh_hook",
+          "transition_type": "network_or_client_sync_boundary",
+          "confidence": "medium"
+        }
+      ],
+      "sync_contracts": [
+        {
+          "contract_id": "metadata_sync_contract",
+          "description": "Metadata mutation should expose a send/apply synchronization path.",
+          "matched_terms": [
+            "metadata",
+            "send",
+            "client_apply"
+          ],
+          "required_terms": [
+            "metadata",
+            "send",
+            "client_apply"
+          ],
+          "coverage": 1.0,
+          "status": "observed"
+        },
+        {
+          "contract_id": "client_apply_to_presentation_contract",
+          "description": "Client-side state application should have an explicit presentation refresh path when UI is affected.",
+          "matched_terms": [
+            "client_apply",
+            "ui"
+          ],
+          "required_terms": [
+            "client_apply",
+            "ui"
+          ],
+          "coverage": 1.0,
+          "status": "observed"
+        },
+        {
+          "contract_id": "ownership_vs_metadata_boundary",
+          "description": "Inventory ownership/membership and item metadata should remain distinguishable propagation concerns.",
+          "matched_terms": [
+            "inventory",
+            "metadata"
+          ],
+          "required_terms": [
+            "inventory",
+            "metadata"
+          ],
+          "coverage": 1.0,
+          "status": "observed"
+        },
+        {
+          "contract_id": "persistence_sync_boundary",
+          "description": "Persistence flows that cross the network boundary should be explicit synchronization contracts.",
+          "matched_terms": [
+            "network"
+          ],
+          "required_terms": [
+            "persistence",
+            "network"
+          ],
+          "coverage": 0.5,
+          "status": "partial"
+        }
+      ],
+      "coupling_findings": [
+        {
+          "coupling_id": "inventory_and_metadata_propagation",
+          "description": "The chain contains both inventory propagation and metadata propagation concerns.",
+          "risk": "desync_risk_if_one_path_refreshes_without_the_other",
+          "confidence": "high"
+        },
+        {
+          "coupling_id": "client_apply_to_ui_refresh",
+          "description": "Client-side state application appears coupled to UI/presentation refresh.",
+          "risk": "stale_presentation_if_refresh_hook_or_panel_update_is_missing",
+          "confidence": "high"
+        },
+        {
+          "coupling_id": "network_sync_boundary",
+          "description": "The chain crosses at least one synchronization/network boundary.",
+          "risk": "receiver_scope_payload_or_ordering_errors_can_create_client_desync",
+          "confidence": "high"
+        }
+      ]
+    }
+  ],
+  "architecture_findings": [
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7:inventory_and_metadata_propagation",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "type": "coupling",
+      "description": "The chain contains both inventory propagation and metadata propagation concerns.",
+      "risk": "desync_risk_if_one_path_refreshes_without_the_other",
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7:client_apply_to_ui_refresh",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "type": "coupling",
+      "description": "Client-side state application appears coupled to UI/presentation refresh.",
+      "risk": "stale_presentation_if_refresh_hook_or_panel_update_is_missing",
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7:network_sync_boundary",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "type": "coupling",
+      "description": "The chain crosses at least one synchronization/network boundary.",
+      "risk": "receiver_scope_payload_or_ordering_errors_can_create_client_desync",
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7:metadata_sync_contract",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "type": "sync_contract",
+      "description": "Metadata mutation should expose a send/apply synchronization path.",
+      "coverage": 1.0,
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7:client_apply_to_presentation_contract",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "type": "sync_contract",
+      "description": "Client-side state application should have an explicit presentation refresh path when UI is affected.",
+      "coverage": 1.0,
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7:ownership_vs_metadata_boundary",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "type": "sync_contract",
+      "description": "Inventory ownership/membership and item metadata should remain distinguishable propagation concerns.",
+      "coverage": 1.0,
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6:inventory_and_metadata_propagation",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "type": "coupling",
+      "description": "The chain contains both inventory propagation and metadata propagation concerns.",
+      "risk": "desync_risk_if_one_path_refreshes_without_the_other",
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6:client_apply_to_ui_refresh",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "type": "coupling",
+      "description": "Client-side state application appears coupled to UI/presentation refresh.",
+      "risk": "stale_presentation_if_refresh_hook_or_panel_update_is_missing",
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6:network_sync_boundary",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "type": "coupling",
+      "description": "The chain crosses at least one synchronization/network boundary.",
+      "risk": "receiver_scope_payload_or_ordering_errors_can_create_client_desync",
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6:metadata_sync_contract",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "type": "sync_contract",
+      "description": "Metadata mutation should expose a send/apply synchronization path.",
+      "coverage": 1.0,
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6:client_apply_to_presentation_contract",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "type": "sync_contract",
+      "description": "Client-side state application should have an explicit presentation refresh path when UI is affected.",
+      "coverage": 1.0,
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    },
+    {
+      "finding_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6:ownership_vs_metadata_boundary",
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "type": "sync_contract",
+      "description": "Inventory ownership/membership and item metadata should remain distinguishable propagation concerns.",
+      "coverage": 1.0,
+      "confidence": "high",
+      "source_path": "E:/signalis_ai/docs/runtime/runtime_chains/vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    }
+  ],
+  "next_questions": [
+    "Which UI refresh stages are synchronization boundaries versus presentation-only refreshes?",
+    "Which network propagation stages should become explicit synchronization contracts?",
+    "Where should inventory membership and metadata synchronization be documented as separate contracts?"
+  ]
+}

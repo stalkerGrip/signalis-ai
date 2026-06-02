@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+import re
 
 
 PIPELINE_CONTRACT = {
@@ -32,6 +33,34 @@ PROMOTED_STATUSES = {
 }
 
 
+def logical_chain_id(value: str | None) -> str:
+    if not value:
+        return "unknown"
+
+    text = str(value).lower().replace("\\", "/")
+    text = Path(text).stem
+
+    text = re.sub(
+        r"_runtime_chain_candidate_v\d+$",
+        "",
+        text,
+    )
+
+    text = re.sub(
+        r"_promotion_decision(?:_v\d+)?$",
+        "",
+        text,
+    )
+
+    text = re.sub(
+        r"_promoted_(confirmed_chain|topology_supported_chain|source_validated_chain)$",
+        "",
+        text,
+    )
+
+    return text
+
+
 def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -47,6 +76,18 @@ def write_json(path: Path, payload: dict[str, Any]) -> None:
         ),
         encoding="utf-8",
     )
+
+
+def resolve_workspace_path(workspace: Path, value: Any) -> Path | None:
+    if not value:
+        return None
+
+    path = Path(str(value))
+
+    if path.is_absolute():
+        return path
+
+    return workspace / path
 
 
 def read_candidate_steps(candidate_path: Path | None) -> tuple[str | None, list[str]]:
@@ -68,19 +109,7 @@ def read_candidate_steps(candidate_path: Path | None) -> tuple[str | None, list[
 
 
 def discover_decisions(validation_dir: Path) -> list[Path]:
-    return sorted(validation_dir.glob("*.json"))
-
-
-def resolve_workspace_path(workspace: Path, value: str | None) -> Path | None:
-    if not value:
-        return None
-
-    path = Path(value)
-
-    if path.is_absolute():
-        return path
-
-    return workspace / path
+    return sorted(validation_dir.glob("*promotion_decision*.json"))
 
 
 def decision_timestamp(payload: dict[str, Any]) -> str:
@@ -111,7 +140,7 @@ def promoted_artifact_key(workspace: Path, payload: dict[str, Any], fallback: st
     return fallback
 
 
-def is_promoted_decision(workspace: Path, payload: dict[str, Any]) -> bool:
+def is_promoted_decision(payload: dict[str, Any]) -> bool:
     if payload.get("schema") != "runtime_chain_promotion_decision.v4":
         return False
 
@@ -125,10 +154,6 @@ def is_promoted_decision(workspace: Path, payload: dict[str, Any]) -> bool:
     outputs = payload.get("outputs", {})
     promoted_md = outputs.get("promoted_md")
     if not promoted_md:
-        return False
-
-    promoted_path = resolve_workspace_path(workspace, promoted_md)
-    if not promoted_path or not promoted_path.exists():
         return False
 
     return True
@@ -157,6 +182,7 @@ def build_registry_entry(
 
     return {
         "chain_id": benchmark,
+        "logical_chain_id": logical_chain_id(benchmark),
         "title": title,
         "promotion_status": decision.get("decision"),
         "confidence": decision.get("confidence"),
@@ -175,32 +201,29 @@ def collect_latest_promoted_decisions(
     workspace: Path,
     validation_dir: Path,
 ) -> list[tuple[Path, dict[str, Any]]]:
-    latest_by_promoted_artifact: dict[str, tuple[Path, dict[str, Any]]] = {}
+    latest_by_logical_chain: dict[str, tuple[Path, dict[str, Any]]] = {}
 
     for decision_file in discover_decisions(validation_dir):
         payload = read_json(decision_file)
 
-        if not is_promoted_decision(workspace, payload):
+        if not is_promoted_decision(payload):
             continue
 
-        key = promoted_artifact_key(
-            workspace=workspace,
-            payload=payload,
-            fallback=str(decision_file),
-        )
+        benchmark = payload.get("benchmark") or decision_file.stem
+        key = logical_chain_id(benchmark)
 
-        existing = latest_by_promoted_artifact.get(key)
+        existing = latest_by_logical_chain.get(key)
         if existing is None:
-            latest_by_promoted_artifact[key] = (decision_file, payload)
+            latest_by_logical_chain[key] = (decision_file, payload)
             continue
 
         _, existing_payload = existing
         if decision_timestamp(payload) >= decision_timestamp(existing_payload):
-            latest_by_promoted_artifact[key] = (decision_file, payload)
+            latest_by_logical_chain[key] = (decision_file, payload)
 
     return sorted(
-        latest_by_promoted_artifact.values(),
-        key=lambda item: item[1].get("benchmark", item[0].stem),
+        latest_by_logical_chain.values(),
+        key=lambda item: logical_chain_id(item[1].get("benchmark", item[0].stem)),
     )
 
 

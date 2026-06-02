@@ -1,9 +1,9 @@
 # Pipeline Artifact Contract Registry
 
 - Schema: `pipeline_artifact_contract.v1`
-- Generated at: `2026-06-02T00:49:08`
+- Generated at: `2026-06-02T13:53:23`
 - Scripts: `94`
-- Artifacts: `155`
+- Artifacts: `159`
 
 ## Script Stages
 
@@ -34,13 +34,13 @@
 
 | Stage | Count |
 |---|---:|
-| `architecture_intelligence` | 2 |
+| `architecture_intelligence` | 4 |
 | `diagnosis` | 2 |
 | `ingestion` | 3 |
 | `ordered_runtime_facts` | 5 |
 | `promotion` | 17 |
 | `promotion_output` | 5 |
-| `retrieval` | 5 |
+| `retrieval` | 7 |
 | `runtime_chain_candidate` | 23 |
 | `runtime_chain_regression` | 1 |
 | `runtime_fact_graph` | 4 |
@@ -57,15 +57,15 @@
 |---|---:|
 | `canonical` | 18 |
 | `debug` | 2 |
-| `intermediate` | 135 |
+| `intermediate` | 139 |
 
 ## Artifact Metadata Sources
 
 | Source | Count |
 |---|---:|
-| `explicit_artifact_flag` | 30 |
-| `inferred_from_artifact` | 3 |
-| `merged_existing_curation` | 122 |
+| `explicit_artifact_flag` | 32 |
+| `inferred_from_artifact` | 2 |
+| `merged_existing_curation` | 125 |
 
 ## Contract Flag Format
 

@@ -671,3 +671,62 @@ Filename patterns may be used only as a broad search optimization, not as author
 Versioned filename filters such as `_v6`, `_v7`, or `_promotion_decision_v2` are allowed only in one-time migration or diagnostic scripts.
 
 Stable infrastructure scripts must survive future artifact versions without code edits when the schema contract remains compatible.
+
+## Stable Pipeline Rule
+
+When a pipeline stage is considered operational:
+
+Do not investigate generated artifacts first.
+
+Investigate the producer script first.
+
+Artifact review remains useful for diagnosis, but fixes should be applied to the producer whenever possible.
+
+Preferred order:
+
+Producer Script
+→ Contract
+→ Registry
+→ Generated Artifact
+
+not
+
+Generated Artifact
+→ Manual Cleanup
+
+Manual artifact cleanup is allowed only for migration, archival, or corruption recovery.
+
+## Artifact Lineage Metadata Rule
+
+Stable long-term pipeline artifacts should carry explicit lineage metadata.
+
+Preferred fields:
+
+- logical_chain_id
+- chain_id
+- artifact_version
+- candidate_version
+- producer_script
+- source_schema
+- input_artifacts
+- supersedes
+- superseded_by
+- canonical_status
+- promotion_role
+
+Producer scripts must prefer explicit lineage metadata over filename inference.
+
+Allowed fallback order:
+
+1. explicit artifact metadata
+2. upstream artifact metadata
+3. pipeline contract metadata
+4. normalized benchmark name
+5. filename inference
+
+Filename inference is last-resort compatibility behavior, not primary governance.
+
+Registry and retrieval scripts should dedupe by explicit logical identity when available.
+
+Generated artifacts must not be manually patched to add lineage metadata.
+Fix producer scripts and regenerate.

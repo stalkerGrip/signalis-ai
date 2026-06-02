@@ -2,11 +2,12 @@
   "schema": "promoted_runtime_chain_registry.v1",
   "producer_script": "scripts.investigation.update_promoted_runtime_chain_registry",
   "pipeline_stage": "promotion",
-  "generated_at": "2026-06-02T00:24:08",
-  "chains_total": 2,
+  "generated_at": "2026-06-02T13:44:31",
+  "chains_total": 3,
   "chains": [
     {
       "chain_id": "characterload_inventory_runtime_chain_candidate_v7",
+      "logical_chain_id": "characterload_inventory",
       "title": "Character load inventory lifecycle propagation",
       "promotion_status": "promoted_confirmed_chain",
       "confidence": "high",
@@ -27,7 +28,32 @@
       "promoted_artifact": "E:\\signalis_ai\\docs\\runtime\\runtime_chains\\characterload_inventory_promoted_confirmed_chain.md"
     },
     {
+      "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v6",
+      "logical_chain_id": "vendor_purchase_itemdata",
+      "title": "vendor purchase itemdata propagation chain",
+      "promotion_status": "promoted_confirmed_chain",
+      "confidence": "high",
+      "score": 1.0,
+      "runtime_chain_steps": [
+        "vendor_open_metadata_assignment",
+        "vendor_purchase_transfer",
+        "vendor_metadata_cleanup",
+        "item_metadata_mutation",
+        "item_metadata_network_send",
+        "inventory_membership_client_apply",
+        "item_metadata_client_apply",
+        "ui_itemdata_refresh_hook"
+      ],
+      "stages_total": 8,
+      "generated_at": "2026-06-01T20:34:07",
+      "decision_artifact": "E:\\signalis_ai\\investigations\\validation\\vendor_purchase_itemdata_runtime_chain_candidate_v6_promotion_decision_v2.json",
+      "candidate_artifact": "investigations\\validation\\vendor_purchase_itemdata_runtime_chain_candidate_v6.json",
+      "promotion_validation_artifact": "investigations\\validation\\vendor_purchase_itemdata_v6_promotion_validation.json",
+      "promoted_artifact": "E:\\signalis_ai\\docs\\runtime\\runtime_chains\\vendor_purchase_itemdata_runtime_chain_candidate_v6_promoted_confirmed_chain.md"
+    },
+    {
       "chain_id": "vendor_purchase_itemdata_runtime_chain_candidate_v7",
+      "logical_chain_id": "vendor_purchase_itemdata",
       "title": "Vendor purchase item metadata propagation",
       "promotion_status": "promoted_confirmed_chain",
       "confidence": "high",
