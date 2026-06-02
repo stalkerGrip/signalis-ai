@@ -21,7 +21,10 @@
    → source_file_manifest:
       None
 1.3.2 Update project sources CURRENT
-1.3.3 Define a solid pipeline on base of plan and Current Architecture Intent in human_context.md NEXT
+1.3.2.1 Define a solid pipeline on base of plan and Current Architecture Intent in human_context.md PASS
+   Architectural decision has been made
+   → source_file_manifest:
+      None
 
 2. Raw extraction
    → extract_lua_runtime_signals.py
@@ -114,3 +117,12 @@ CURRENT = task actively being executed now.
 NEXT = task that starts only after CURRENT is completed.
 BLOCKED = cannot start until prerequisites are completed.
 PASS = completed.
+
+Hierarchical schema example by numeration
+1 Block - 1-st
+1.1 Task - 2-nd
+1.1.1 Subtask - 3-rd
+1.2 Task - 4-th
+1.2.1 Subtask - 5-th
+1.2.2 Subtask - 6-th
+... etc
