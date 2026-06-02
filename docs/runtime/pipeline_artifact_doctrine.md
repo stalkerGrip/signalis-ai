@@ -182,6 +182,181 @@ Registry generation must prefer explicit artifact metadata over filename inferen
 
 ---
 
+## Stable Artifact Family Rule
+
+Pipeline architecture must be built around stable artifact families and capability contracts.
+
+Artifact family names define pipeline concepts.
+
+Schema names describe artifact structure.
+
+Schema versions must not define routing, orchestration, discovery, or script compatibility.
+
+Do not create version-driven pipeline architecture.
+
+Bad:
+
+- runtime_chain_candidate.v5
+- runtime_chain_candidate.v6
+- runtime_chain_candidate.v7
+- retrieval_plan.v1
+- retrieval_plan.v2
+- retrieval_plan.v3
+- orchestration_context_pack.v2
+
+when these names are used as script dependencies or pipeline concepts.
+
+Correct:
+
+artifact_family:
+runtime_chain_candidate
+
+schema:
+runtime_chain_candidate
+
+required_capabilities:
+- ordered_runtime_facts_input
+- propagation_chain_candidate
+- validation_backed
+
+Pipeline design must reason about:
+
+artifact_family
++
+required_capabilities
++
+lineage
++
+canonical_status
+
+not version suffixes.
+
+## Canonical Orchestration Artifact Families
+
+Preferred orchestration families:
+
+- orchestration_request
+- orchestration_scope
+- doctrine_context_selection
+- retrieval_scope
+- retrieval_result_set
+- evidence_set
+- source_validation_request
+- source_validation_result
+- orchestration_context_pack
+- guidance_report
+
+Optional families:
+
+- runtime_chain_reconstruction_request
+- runtime_chain_candidate
+- promotion_validation
+- promotion_decision
+
+Runtime chains are not mandatory outputs.
+
+Many requests should terminate at:
+
+orchestration_context_pack
+→ guidance_report
+
+without chain reconstruction.
+
+## Version-Coupling Prohibition
+
+Scripts must not depend on exact schema version suffixes.
+
+Bad:
+
+input_schemas:
+- runtime_chain_candidate.v7
+
+output_schemas:
+- runtime_chain_candidate.v7
+
+Good:
+
+input_families:
+- runtime_chain_candidate
+
+required_capabilities:
+- propagation_chain_candidate
+- validation_backed
+
+Schema versions are compatibility metadata only.
+
+Pipeline orchestration, routing, discovery, and consumption must use:
+
+- artifact_family
+- required_capabilities
+- canonical_status
+- lineage metadata
+
+Version numbers must never define pipeline behavior.
+
+Breaking schema changes must be handled through:
+
+- compatibility adapters
+- explicit migration
+- producer regeneration
+
+not parallel versioned pipeline paths.
+
+## Artifact Creation Rule
+
+Do not create a new artifact family when:
+
+- adding metadata
+- adding validation
+- changing ranking logic
+- changing orchestration logic
+- changing retrieval strategy
+- changing schema layout
+
+Prefer capability-compatible schema evolution or explicit migration over new artifact families.
+
+Do not create multiple families for the same conceptual artifact.
+
+Bad:
+
+- retrieval_context_pack
+- investigation_context_pack
+- architecture_context_pack
+- orchestration_context_pack
+
+when they represent the same orchestration context product.
+
+Correct:
+
+artifact_family:
+orchestration_context_pack
+
+capabilities:
+- retrieval_evidence
+- doctrine_context
+- validation_summary
+- guidance_ready
+
+## Regeneration Rule
+
+Long-term artifacts should be reproducible from upstream evidence.
+
+Do not create artifact families that exist only to preserve intermediate reasoning.
+
+Prefer:
+
+evidence
+→ validation
+→ regeneration
+
+over permanent chains of derived artifacts.
+
+Generated artifacts are disposable if they can be reproduced from authoritative upstream evidence.
+
+The pipeline should regenerate truth from evidence whenever possible.
+
+---
+
 ## Contract Validation Rule
 
 Before promotion work:
@@ -730,3 +905,94 @@ Registry and retrieval scripts should dedupe by explicit logical identity when a
 
 Generated artifacts must not be manually patched to add lineage metadata.
 Fix producer scripts and regenerate.
+
+## Orchestration Governance Rule
+
+The active pipeline must be request-driven.
+
+A human/local-LLM request should produce generated artifacts through orchestration, not through manually maintained per-chain definitions.
+
+Manual doctrine files may define:
+
+- source authority
+- subsystem meaning
+- legacy vs authoritative notes
+- orchestration rules
+- artifact governance
+
+Manual doctrine files should not define every small runtime chain.
+
+Concrete runtime chains, retrieval scopes, validation requests, and context packs are generated evidence artifacts.
+
+Runtime chain reconstruction is optional and should only run when propagation reasoning is needed.
+
+## Artifact Lineage Identity Rule
+
+Active pipeline code must not infer logical artifact identity from:
+
+- filenames
+- artifact paths
+- benchmark names embedded in filenames
+- candidate version suffixes
+- promoted markdown output names
+
+Permanent precedence:
+
+1. explicit artifact metadata
+2. contract registry metadata
+3. explicit CLI migration override, clearly marked as migration-only
+4. fail clearly
+
+Filename/path inference is forbidden for active lineage decisions.
+
+Generated artifacts must not be manually patched to add missing lineage.
+
+If lineage metadata is missing:
+
+1. fix the earliest producer script that should have emitted it
+2. regenerate the artifact
+3. regenerate downstream artifacts
+
+Required lineage metadata for chain-specific artifacts:
+
+```json
+{
+  "schema": "...",
+  "artifact_id": "...",
+  "logical_chain_id": "...",
+  "artifact_role": "...",
+  "producer_script": "...",
+  "pipeline_stage": "...",
+  "promotion_role": "...",
+  "canonical_status": "...",
+  "generated_at": "...",
+  "input_artifacts": [],
+  "lineage_source": "input_metadata|producer_metadata|cli_migration"
+}
+```
+
+## Orchestration Artifact Rule
+
+Request-driven orchestration is the active pipeline entry point.
+
+The orchestrator may generate:
+
+- orchestration request
+- retrieval scope
+- doctrine context selection
+- source validation request
+- source validation result
+- context pack
+- optional runtime chain artifacts
+
+These are generated evidence/control artifacts, not doctrine.
+
+Do not manually patch orchestration outputs.
+
+Do not require human-maintained definitions for every concrete runtime chain.
+
+Runtime chains are generated only when propagation reasoning is required.
+
+Artifact family names are stable pipeline concepts.
+Schema versions are compatibility contracts.
+Do not create new artifact families or script generations only because an implementation changed.

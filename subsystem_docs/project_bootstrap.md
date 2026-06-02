@@ -254,22 +254,17 @@ Current focus:
 - cross-realm network/UI synchronization
 - timer/scheduler noise reduction
 
-Current pipeline:
+Current target pipeline:
 
-query
-→ intent classification
-→ query expansion
+human/local-LLM request
+→ orchestration request
+→ retrieval scope planning
+→ doctrine context selection
 → Qdrant retrieval
-→ deterministic reranking
-→ context pack generation
 → source validation
-→ evidence deduplication
-→ runtime fact extraction
-→ runtime chain reconstruction
-→ investigation synthesis
-→ targeted validation plan
-→ targeted source validation
-→ architecture reasoning
+→ context pack generation
+→ optional runtime chain reconstruction
+→ architecture or implementation guidance
 
 ---
 

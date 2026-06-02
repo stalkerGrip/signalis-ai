@@ -10,91 +10,137 @@ Investigation Pipeline V1 — promoted chain retrieval and architecture synthesi
 
 ## Current Focus
 
-Promoted runtime chains are now retrievable architecture knowledge.
+Promoted runtime chains are retrievable architecture knowledge.
 
-Current validated flow:
+The downstream promoted-chain flow works as an artifact-family chain:
 
-runtime_chain_candidate.v7
-→ promotion_validation.v1
-→ promotion_decision.v4
-→ promoted_runtime_chain_registry.v1
-→ runtime_chain_corpus.v1
-→ qdrant_embeddings.v1
-→ qdrant_collection.v1
-→ runtime_chain_context_pack.v1
-→ architecture_intelligence.v1
+runtime_chain_candidate
+→ promotion_validation
+→ promotion_decision
+→ promoted_runtime_chain_registry
+→ runtime_chain_corpus
+→ qdrant_embeddings
+→ qdrant_collection
+→ runtime_chain_context_pack
+→ architecture_intelligence
+
+Current issue:
+
+The downstream flow still contains historical schema-version suffixes in existing scripts and generated contracts.
+
+Do not treat those suffixes as architectural concepts.
+
+They are compatibility metadata only.
 
 ## Current Bottleneck
 
-### Artifact Lineage and Metadata Governance
+### Orchestration Entry Point
 
-The promoted runtime chain pipeline works end-to-end, but logical chain identity is still inferred too often from filenames, benchmark names, or promoted artifact paths.
+The pipeline has many working components, but it does not yet have a stable orchestrator that turns a human/local-LLM request into the correct generated artifacts.
 
-This caused V6 and V7 promoted vendor chains to appear simultaneously in promoted runtime chain retrieval.
+Target flow:
 
-Correct direction:
+natural-language request
+→ structured orchestration request
+→ retrieval scope
+→ doctrine context selection
+→ Qdrant retrieval
+→ source validation
+→ context pack
+→ optional runtime chain reconstruction
+→ implementation or investigation guidance
 
-metadata first
-→ contract second
-→ filename inference last
+Orchestration governance decision:
 
-Next implementation approach:
+The orchestration layer must use stable artifact families and capability contracts.
 
-Fix one artifact producer chain at a time:
+Do not introduce retrieval_plan.vN as a long-term concept.
 
-runtime_chain_candidate.v7
-→ promotion_validation.v1
-→ promotion_decision.v4
-→ promoted_runtime_chain_registry.v1
-→ runtime_chain_corpus.v1
-→ retrieval context pack
-→ architecture intelligence
+Use retrieval_scope as the stable family.
 
-Do not patch generated artifacts manually.
+Do not introduce runtime_chain_candidate.v8 or any successor-version architecture.
 
-Do not update all scripts at once.
+Runtime chain reconstruction remains optional and downstream.
 
-Each script update must:
+Primary orchestration product:
 
-1. inspect current producer
-2. add or propagate stable logical metadata
-3. run regression
-4. regenerate downstream artifacts
+orchestration_context_pack
+→ guidance_report
 
-### Promoted Chain Supersession Hygiene(postponed)
+Runtime chain generation should happen only when the request requires propagation reasoning.
 
-Retrieval and Architecture Intelligence now PASS.
+Next implementation order:
 
-Latest validation:
+1. Define orchestration_request artifact family and required capabilities.
+2. Define orchestration_scope artifact family and required capabilities.
+3. Define doctrine_context_selection artifact family and required capabilities.
+4. Define retrieval_scope artifact family and required capabilities.
+5. Define orchestration_context_pack artifact family and required capabilities.
+6. Only then create orchestration scripts.
 
-* promoted runtime chain retrieval accepted chains: 2
-* architecture intelligence analyzed chains: 2
-* architecture findings generated: 12
+Schema evolution rule:
 
-Remaining issue:
+Schema consumers must check artifact_family and required capabilities, not hardcoded version suffixes.
 
-Both V6 and V7 vendor promoted chains are retrievable.
+Breaking schema changes must be handled through compatibility adapters or explicit migration, not by creating parallel versioned pipeline paths.
 
-This suggests registry/corpus generation still treats superseded candidate versions as separate logical promoted chains.
+Do not start from code before these artifact families and compatibility rules are defined.
 
-Next focus:
+Important correction:
 
-update long-term producer scripts, not generated artifacts:
+Do not require human-maintained definitions for every tiny runtime chain.
 
-1. review `scripts/investigation/update_promoted_runtime_chain_registry.py`
-2. ensure latest canonical promotion decision wins per logical chain identity
-3. prevent superseded V6/V7 duplicates from entering `promoted_runtime_chain_registry.v1`
-4. regenerate registry
-5. regenerate runtime_chain_corpus
-6. regenerate embeddings and Qdrant ingest
-7. rerun promoted chain retrieval
-8. rerun architecture intelligence
+Human-maintained files should describe doctrine, source authority, subsystem meaning, and orchestration rules.
 
-Do not manually delete generated artifacts unless needed for migration or corruption recovery.
+Concrete runtime chains should be generated from evidence when needed.
+
+Runtime chain reconstruction is optional, not mandatory for every request.
+
+Do not patch generated artifacts.
+
+Do not keep optimizing vendor/characterload as the product.
+
+Vendor and Characterload are regression examples only.
 
 ---
 
 ## Completed Bottlenecks
+
+### Artifact Lineage Audit Result
+
+PASS.
+
+Audit proved that `logical_chain_id` is not currently born anywhere in the active pipeline.
+
+Eliminated as lineage origin:
+
+* `runtime_facts.v2`
+* `stage_rule_set.v1`
+* `ordered_runtime_facts.v1`
+* `runtime_chain_candidate.v7`
+* `targeted_validation_request.v2`
+
+Important findings:
+
+* `runtime_facts.v2` is neutral runtime evidence.
+* `stage_rule_set.v1` is stage classification logic, not chain identity.
+* `ordered_runtime_facts.v1` is the first binding point between neutral facts and a selected stage rule set.
+* `runtime_chain_candidate.v7` is downstream and must only propagate identity.
+* Current scripts implicitly use `stage_rule_set.rule_set_id` as identity, which is the governance leak.
+
+Superseded decision:
+
+The earlier idea to introduce human-maintained per-chain identity configs under config/runtime_chains/*.json is postponed/superseded.
+
+Reason:
+
+The project goal is request-driven orchestration, not manual chain catalog maintenance.
+
+Humans should maintain doctrine, source authority, subsystem meaning, and orchestration rules.
+
+Concrete runtime chain identity should be generated deterministically from validated evidence when runtime chain reconstruction is needed.
+
+Do not require human-maintained logical_chain_id definitions for every small request or chain.
 
 ### Benchmark Generalization Bottleneck
 PASS
