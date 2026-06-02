@@ -7,6 +7,14 @@
         source_file_manifest.json
         source_file_manifest.md
 
+1.2 Audit of current scripts PASS
+   build_pipeline_contract_registry implemented
+   → source_file_manifest:
+        pipeline_artifact_contract.json
+        pipeline_artifact_contract.md
+        script_contracts.json
+        script_contracts.md
+
 2. Raw extraction CURRENT
    → extract_lua_runtime_signals.py
    → raw_lua_extraction
