@@ -4,103 +4,94 @@
 
 Retrieval-Guided Architecture Intelligence
 
-Current Sprint:
-Investigation Pipeline V1
+## Current Sprint
 
-Current Focus:
+Investigation Pipeline V1 — promoted chain retrieval and architecture synthesis.
 
-Runtime Chain Builder V5 validation against
-Runtime Propagation Topology V3.
+## Current Focus
 
----
+Promoted runtime chains are now retrievable architecture knowledge.
 
-## Current Investigation Update — Vendor Benchmark
+Current validated flow:
 
-Runtime Propagation Topology V3:
-PASS
-
-Characterload benchmark:
-PASS
-
-Vendor benchmark:
-previous FAIL was traced to targeted validation request scope collapse.
-
-Confirmed failure chain:
-
-vendor_purchase_itemdata_invdata_client_apply_targets.json
-contained only:
-
-- gamemode/core/libs/item/cl_networking.lua
-- invData
-- ItemDataChanged
-
-Therefore source validation, runtime facts, and chain builder only received client-apply evidence.
-
-Root cause was not Runtime Chain Builder V5 and not Runtime Propagation Topology V3.
-
-Resolved bottleneck:
-
-targeted_validation_request_generation
-
-Fix applied:
-
-scripts/investigation/build_targeted_validation_request.py now expands known vendor itemdata benchmark chains into full-chain validation targets.
-
-New full-chain target request validation:
-
-vendor_purchase_itemdata_full_chain_targets_v3.json
-
-Source validation result:
-
-vendor_purchase_itemdata_full_chain_source_validation_v3.md
-
-Result:
-
-- files_total: 6
-- files_found: 6
-- needles_total: 27
-- needles_found: 26
-- all_needles_found: False
-
-Validated stages:
-
-- vendor open metadata assignment
-- vendorSPrice/vendorBPrice assignment
-- vendor purchase transfer
-- inventory:add
-- vendor metadata cleanup
-- ITEM:setData
-- netstream.Start("invData")
-- invData client apply
-- ItemDataChanged
-- InventoryItemDataChanged UI hook
-
-Only missing needle:
-
-- syncItemAdded
-
-Interpretation:
-
-syncItemAdded is likely outdated stage naming or wrong expected needle, because inventory:add and nutInventoryAdd were validated directly.
-
----
+runtime_chain_candidate.v7
+→ promotion_validation.v1
+→ promotion_decision.v4
+→ promoted_runtime_chain_registry.v1
+→ runtime_chain_corpus.v1
+→ qdrant_embeddings.v1
+→ qdrant_collection.v1
+→ runtime_chain_context_pack.v1
+→ architecture_intelligence.v1
 
 ## Current Bottleneck
 
-### Retrieval-Guided Architecture Intelligence V1
+### Artifact Lineage and Metadata Governance
 
-Goal:
+The promoted runtime chain pipeline works end-to-end, but logical chain identity is still inferred too often from filenames, benchmark names, or promoted artifact paths.
 
-Promoted runtime chains become retrievable architecture knowledge.
+This caused V6 and V7 promoted vendor chains to appear simultaneously in promoted runtime chain retrieval.
 
-Target flow:
+Correct direction:
 
-promoted runtime chains
+metadata first
+→ contract second
+→ filename inference last
+
+Next implementation approach:
+
+Fix one artifact producer chain at a time:
+
+runtime_chain_candidate.v7
+→ promotion_validation.v1
+→ promotion_decision.v4
+→ promoted_runtime_chain_registry.v1
 → runtime_chain_corpus.v1
-→ embeddings
-→ Qdrant
-→ retrieval
+→ retrieval context pack
 → architecture intelligence
+
+Do not patch generated artifacts manually.
+
+Do not update all scripts at once.
+
+Each script update must:
+
+1. inspect current producer
+2. add or propagate stable logical metadata
+3. run regression
+4. regenerate downstream artifacts
+
+### Promoted Chain Supersession Hygiene(postponed)
+
+Retrieval and Architecture Intelligence now PASS.
+
+Latest validation:
+
+* promoted runtime chain retrieval accepted chains: 2
+* architecture intelligence analyzed chains: 2
+* architecture findings generated: 12
+
+Remaining issue:
+
+Both V6 and V7 vendor promoted chains are retrievable.
+
+This suggests registry/corpus generation still treats superseded candidate versions as separate logical promoted chains.
+
+Next focus:
+
+update long-term producer scripts, not generated artifacts:
+
+1. review `scripts/investigation/update_promoted_runtime_chain_registry.py`
+2. ensure latest canonical promotion decision wins per logical chain identity
+3. prevent superseded V6/V7 duplicates from entering `promoted_runtime_chain_registry.v1`
+4. regenerate registry
+5. regenerate runtime_chain_corpus
+6. regenerate embeddings and Qdrant ingest
+7. rerun promoted chain retrieval
+8. rerun architecture intelligence
+
+Do not manually delete generated artifacts unless needed for migration or corruption recovery.
+
 ---
 
 ## Completed Bottlenecks
