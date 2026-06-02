@@ -1,5 +1,11 @@
 # SIGNALIS AI — Event Taxonomy
 
+NutScript 1.2 derived framework
+messy legacy-heavy codebase
+do not assume clean architecture
+runtime propagation priority
+realm transitions
+
 ## Core Rule
 
 In this project:

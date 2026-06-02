@@ -15,7 +15,15 @@
         script_contracts.json
         script_contracts.md
 
-2. Raw extraction CURRENT
+1.3 Make a solid plan BLOCKED
+1.3.1 Update system promt PASS
+   Promt updated implemented
+   → source_file_manifest:
+      None
+1.3.2 Update project sources CURRENT
+1.3.3 Define a solid pipeline on base of plan and Current Architecture Intent in human_context.md NEXT
+
+2. Raw extraction
    → extract_lua_runtime_signals.py
    → raw_lua_extraction
 
@@ -96,6 +104,13 @@
 
 ## Rules
 
-Task status is tracked.
-Task results are filled in.
-The master plan is divided into tasks and subtasks.
+Task status should be tracked.
+Task results should be filled in.
+The master should be divided into tasks and subtasks.
+
+## Plan terminology
+
+CURRENT = task actively being executed now.
+NEXT = task that starts only after CURRENT is completed.
+BLOCKED = cannot start until prerequisites are completed.
+PASS = completed.
