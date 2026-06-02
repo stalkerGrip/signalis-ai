@@ -53,8 +53,7 @@ Represents the original user request after normalization.
 Required capabilities:
 
 - request_text
-- request_type
-- expected_output
+- normalized_request_text
 
 Examples:
 
@@ -260,3 +259,246 @@ orchestration_context_pack
 Runtime chains are downstream specialist artifacts.
 
 They are not the default orchestration output.
+
+# SIGNALIS AI — Orchestration Request Contract
+
+## Purpose
+
+Defines the stable artifact family:
+
+orchestration_request
+
+This artifact represents a normalized human or local-LLM request.
+
+The orchestration_request artifact is the entry point for the orchestration pipeline.
+
+It is normalization only.
+
+It does not select subsystem scope, doctrine context, retrieval scope, validation targets, or runtime chains.
+
+---
+
+## Artifact Family
+
+artifact_family:
+
+orchestration_request
+
+schema:
+
+orchestration_request
+
+schema_version:
+
+compatibility metadata only
+
+Schema version must not control routing, discovery, orchestration, or script compatibility.
+
+---
+
+## Required Capabilities
+
+Every orchestration_request must contain:
+
+- request_text
+- normalized_request_text
+
+An artifact lacking either required capability is not a valid orchestration_request.
+
+---
+
+## Required Metadata
+
+Every orchestration_request must contain:
+
+- schema
+- schema_version
+- artifact_family
+- artifact_id
+- producer_script
+- pipeline_stage
+- canonical_status
+- promotion_role
+- generated_at
+- required_capabilities
+
+Required fixed values:
+
+artifact_family:
+orchestration_request
+
+schema:
+orchestration_request
+
+pipeline_stage:
+orchestration
+
+promotion_role:
+context_or_debug
+
+canonical_status:
+intermediate
+
+---
+
+## Artifact ID Rule
+
+artifact_id must be deterministic.
+
+Recommended format:
+
+orchestration_request:<stable_request_hash>
+
+The stable request hash should be derived from:
+
+- artifact_family
+- request_text
+
+Do not derive artifact identity from:
+
+- filename
+- output path
+- schema version
+- benchmark name
+- subsystem guess
+- request classification
+- expected downstream output
+
+---
+
+## request_text
+
+Purpose:
+
+Preserve the original request.
+
+Rules:
+
+- preserve user intent
+- preserve important terminology
+- do not inject assumptions
+- do not rewrite into subsystem-specific language
+
+---
+
+## normalized_request_text
+
+Purpose:
+
+Provide a lightly normalized version for downstream consumption.
+
+Rules:
+
+- fix whitespace
+- preserve meaning
+- preserve domain terms
+- do not add inferred subsystem scope
+- do not add inferred root cause
+
+---
+
+## Optional Capabilities
+
+Optional capabilities may exist without changing the artifact family.
+
+Allowed optional fields:
+
+- user_constraints
+- urgency
+- source_preferences
+- subsystem_hints
+- uncertainty
+
+Optional capabilities must never become mandatory through schema evolution.
+
+---
+
+## Lineage Requirements
+
+Every orchestration_request must include lineage metadata:
+
+lineage.input_kind:
+human_request or local_llm_request
+
+lineage.input_artifacts:
+empty unless generated from another artifact
+
+lineage.parent_artifact_id:
+null unless regenerated from another orchestration artifact
+
+lineage.regenerates:
+null unless this artifact intentionally replaces an earlier request artifact
+
+lineage.regeneration_inputs:
+the minimum inputs needed to deterministically regenerate the artifact
+
+Required regeneration inputs:
+
+- request_text
+- producer_script
+- schema
+- schema_version
+
+---
+
+## Regeneration Rule
+
+orchestration_request must be reproducible from:
+
+- original request text
+- producer script
+- schema contract
+- deterministic classification rules
+
+Generated orchestration_request artifacts must not be manually patched.
+
+If output is wrong:
+
+- fix request classification logic
+- fix metadata generation
+- fix doctrine
+- regenerate
+
+---
+
+## Request Interpretation Rule
+
+orchestration_request must not:
+
+- select subsystems
+- select doctrine
+- perform retrieval
+- perform validation
+- build runtime chains
+- decide implementation files
+- decide source validation targets
+
+Those responsibilities belong to downstream artifact families.
+
+---
+
+## Stability Rule
+
+The orchestration_request artifact family is stable.
+
+Future schema changes must preserve:
+
+- request_text
+- request_type
+- expected_output
+
+Compatibility adapters should be preferred over creating new orchestration request families.
+
+Schema versions are compatibility metadata only.
+
+---
+
+## Output Rule
+
+The output of orchestration_request should be sufficient for:
+
+orchestration_scope
+
+generation.
+
+Nothing more.

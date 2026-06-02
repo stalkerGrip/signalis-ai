@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-02T13:53:23",
+  "generated_at": "2026-06-02T18:02:12",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -241,6 +241,21 @@
       "promotion_role": "context_or_debug",
       "canonical_status": "active",
       "source": "merged_existing_curation"
+    },
+    {
+      "script_id": "scripts.investigation.build_orchestration_entrypoint",
+      "path": "scripts/investigation/build_orchestration_entrypoint.py",
+      "module": "scripts.investigation.build_orchestration_entrypoint",
+      "purpose": "Build a normalization-only orchestration_request artifact from request text.",
+      "pipeline_stage": "orchestration",
+      "input_schemas": [],
+      "output_schemas": [],
+      "artifact_patterns": [
+        "investigations/orchestration/*_orchestration_request.json"
+      ],
+      "promotion_role": "context_or_debug",
+      "canonical_status": "active",
+      "source": "explicit_script_flag"
     },
     {
       "script_id": "scripts.investigation.build_runtime_chain_candidate_v6",
@@ -3882,7 +3897,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/retrieval/runtime_chain_context_pack_vendor_itemdata.json",
@@ -3938,7 +3953,7 @@
       "promotion_role": "promotion_support",
       "canonical_status": "intermediate",
       "inputs": [],
-      "source": "inferred_from_artifact"
+      "source": "merged_existing_curation"
     },
     {
       "artifact_id": "investigations/architecture/architecture_intelligence_v1.json",

@@ -33,6 +33,74 @@ Truth rules live in:
 
 The orchestrator must consume those rules, not duplicate or override them.
 
+## Intelligence Layer Rule
+
+The orchestrator is not a monolithic AI agent.
+
+It coordinates four layers:
+
+```text
+Local LLM
+
+RAG
+
+Pipeline Scripts
+
+Architect AI
+```
+
+Responsibilities:
+
+```text
+Local LLM
+- normalize requests
+- generate retrieval candidates
+- draft orchestration artifacts
+- generate reports and code from validated context
+
+RAG
+- retrieve doctrine
+- retrieve subsystem documents
+- retrieve topology summaries
+- retrieve promoted runtime chains
+- retrieve validation artifacts
+
+Pipeline Scripts
+- generate deterministic artifacts
+- execute retrieval
+- perform source validation
+- preserve lineage
+- enforce artifact-family contracts
+
+Architect AI
+- review doctrine compliance
+- review architecture decisions
+- perform cross-system reasoning
+- evaluate risks
+- review generated patches
+- synthesize guidance reports
+```
+
+Truth hierarchy:
+
+```text
+Source Code
+>
+Validated Artifacts
+>
+Retrieved Evidence
+>
+Architect Reasoning
+>
+Local LLM Interpretation
+```
+
+RAG results are evidence candidates.
+
+Architect AI reasoning is guidance.
+
+Neither becomes truth until supported by validated evidence.
+
 ## Main Input
 
 The main input is a natural-language request.

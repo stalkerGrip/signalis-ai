@@ -191,24 +191,75 @@ def sorted_unique(values: Iterable[str]) -> list[str]:
     return sorted({str(value).replace("\\", "/") for value in values if str(value).strip()})
 
 
+def safe_eval_contract_node(node: ast.AST, constants: dict[str, Any]) -> Any:
+    if isinstance(node, ast.Constant):
+        return node.value
+
+    if isinstance(node, ast.Name):
+        if node.id in constants:
+            return constants[node.id]
+        raise ValueError(f"Unknown constant reference: {node.id}")
+
+    if isinstance(node, ast.List):
+        return [safe_eval_contract_node(item, constants) for item in node.elts]
+
+    if isinstance(node, ast.Tuple):
+        return [safe_eval_contract_node(item, constants) for item in node.elts]
+
+    if isinstance(node, ast.Dict):
+        result: dict[str, Any] = {}
+
+        for key_node, value_node in zip(node.keys, node.values):
+            if key_node is None:
+                raise ValueError("Dict unpacking is not supported in PIPELINE_CONTRACT")
+
+            key = safe_eval_contract_node(key_node, constants)
+            value = safe_eval_contract_node(value_node, constants)
+            result[str(key)] = value
+
+        return result
+
+    raise ValueError(f"Unsupported PIPELINE_CONTRACT expression: {type(node).__name__}")
+
+
 def extract_pipeline_contract_from_script(path: Path) -> dict[str, Any] | None:
     try:
         tree = ast.parse(path.read_text(encoding="utf-8", errors="ignore"))
     except SyntaxError:
         return None
 
+    constants: dict[str, Any] = {}
+
     for node in tree.body:
-        if not isinstance(node, ast.Assign):
+        target_name = None
+        value_node = None
+
+        if isinstance(node, ast.Assign) and len(node.targets) == 1:
+            target = node.targets[0]
+            if isinstance(target, ast.Name):
+                target_name = target.id
+                value_node = node.value
+
+        elif isinstance(node, ast.AnnAssign) and isinstance(node.target, ast.Name):
+            target_name = node.target.id
+            value_node = node.value
+
+        if not target_name or value_node is None:
             continue
 
-        for target in node.targets:
-            if isinstance(target, ast.Name) and target.id == "PIPELINE_CONTRACT":
-                try:
-                    value = ast.literal_eval(node.value)
-                    if isinstance(value, dict):
-                        return value
-                except Exception:
-                    return None
+        if target_name == "PIPELINE_CONTRACT":
+            try:
+                value = safe_eval_contract_node(value_node, constants)
+                return value if isinstance(value, dict) else None
+            except Exception:
+                return None
+
+        try:
+            value = ast.literal_eval(value_node)
+            if isinstance(value, (str, int, float, bool, list, tuple, dict)) or value is None:
+                constants[target_name] = value
+        except Exception:
+            continue
 
     return None
 
@@ -356,6 +407,8 @@ def discover_scripts(workspace: Path, script_dirs: list[Path]) -> list[ScriptCon
             text = path.read_text(encoding="utf-8", errors="ignore")
 
             explicit = extract_pipeline_contract_from_script(path)
+            if explicit:
+                print(f"[CONTRACT] {path}")
 
             if explicit:
                 results.append(

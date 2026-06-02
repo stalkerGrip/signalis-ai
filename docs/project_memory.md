@@ -104,6 +104,156 @@ Vendor and Characterload are regression examples only.
 
 ---
 
+## Orchestration Architecture Decision
+
+The orchestration layer is built around four cooperating layers:
+
+```text
+Local LLM
+= operator
+= request interpretation
+= query drafting
+= artifact rendering
+= code generation from validated context
+
+RAG
+= evidence access
+= doctrine retrieval
+= subsystem retrieval
+= topology retrieval
+= validation artifact retrieval
+
+Pipeline Scripts
+= truth machinery
+= extraction
+= normalization
+= topology generation
+= retrieval execution
+= source validation
+= artifact generation
+
+Architect AI
+= architecture reviewer
+= doctrine compliance
+= cross-system reasoning
+= risk analysis
+= guidance synthesis
+```
+
+Core rule:
+
+```text
+Local LLM proposes.
+
+RAG retrieves.
+
+Pipeline validates.
+
+Architect AI reviews.
+
+Artifacts preserve.
+
+Guidance reports explain.
+```
+
+LLMs do not define truth.
+
+Validated source and deterministic artifacts remain authoritative.
+
+Primary orchestration flow:
+
+```text
+natural-language request
+→ orchestration_request
+→ orchestration_index retrieval
+→ orchestration_scope
+→ doctrine_context_selection
+→ retrieval_scope
+→ retrieval_result_set
+→ evidence_set
+→ source_validation_request
+→ source_validation_result
+→ orchestration_context_pack
+→ guidance_report
+→ optional implementation patch
+```
+
+Runtime chains remain optional specialist artifacts.
+
+Use runtime chain reconstruction only when propagation reasoning is required.
+
+Generic orchestration requirements:
+
+```text
+No benchmark-specific routing.
+
+No vendor-specific routing.
+
+No armor-specific routing.
+
+No hidden keyword maps inside Python.
+
+No version-driven orchestration paths.
+```
+
+Scope and doctrine selection should be derived from:
+
+```text
+orchestration_index
+runtime topology
+semantic documents
+subsystem documents
+promoted runtime chains
+source validation artifacts
+human authority notes
+```
+
+Human-maintained sources define:
+
+```text
+meaning
+authority
+constraints
+doctrine
+```
+
+Human-maintained sources should not define:
+
+```text
+per-request routing
+per-feature routing
+hardcoded subsystem mappings
+```
+
+---
+
+## Project File Budget Rule
+
+ChatGPT Project files are a constrained resource.
+
+Permanent files should only exist when they define:
+
+- doctrine
+- governance
+- source authority
+- subsystem meaning
+- artifact family contracts
+
+Do not create a new project file when information belongs in an existing doctrine file.
+
+Preferred order:
+
+1. Update existing doctrine.
+2. Update existing contract.
+3. Update existing subsystem document.
+4. Create a new permanent file only when a genuinely new concept appears.
+
+Generated artifacts are not project files and do not count toward this rule.
+
+The orchestration architecture should minimize permanent file growth.
+
+---
+
 ## Completed Bottlenecks
 
 ### Artifact Lineage Audit Result
