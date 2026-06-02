@@ -147,33 +147,6 @@ def render_project_structure(workspace: Path, max_depth: int) -> str:
             size_kb = path.stat().st_size / 1024
             lines.append(f"- `{rel(path, workspace)}` ({size_kb:.1f} KB)")
 
-    lines.extend([
-        "",
-        "## Active Investigation",
-        "",
-        "```text",
-        "inventory desync after character load",
-        "```",
-        "",
-        "## Current Runtime Chain Under Investigation",
-        "",
-        "```text",
-        "CharacterLoaded",
-        "→ PlayerLoadedChar",
-        "→ PlayerLoadout",
-        "→ PostPlayerLoadout",
-        "→ inventory initialization / sync",
-        "→ inventoryOpen",
-        "→ inventorySetPanelStatus",
-        "→ client inventory UI",
-        "```",
-        "",
-        "## Notes",
-        "",
-        "This file is generated on demand. Re-run this script after adding scripts, manifests, subsystem docs, or investigation reports.",
-        "",
-    ])
-
     return "\n".join(lines)
 
 

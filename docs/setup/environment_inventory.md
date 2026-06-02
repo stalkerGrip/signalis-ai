@@ -16,15 +16,6 @@ Resolve authoritative source roots.
 
 Investigation scripts must use workspace.yaml instead of hardcoded filesystem paths.
 
-Required consumers:
-
-- source validation
-- targeted validation
-- runtime chain reconstruction
-- evidence extraction
-- source discovery
-- promotion validation
-
 Rule:
 
 Workspace root != Source root
@@ -73,16 +64,8 @@ Workspace configuration:
 - pyinstrument
 - ripgrep
 
-## Runtime Artifacts
+## System
 
-- runtime topology
-- subsystem docs
-- doctrine docs
-- validation reports
-- runtime chains
-
-## Workspace
-
-Source roots are loaded from:
-
-config/workspace.yaml
+Ryzen 5 7500f
+RX 9060 XT 16Gb
+32 Gb DDR4 RAM

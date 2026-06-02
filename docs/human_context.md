@@ -2,7 +2,13 @@
 
 ## Project Reality Notes
 
+ChatGPT is actively going off track, strict control is required, about a week of work was ultimately lost due to the fact that the chat was too focused on specific moments instead of conceptual work
+
 ## Current Architecture Intent
+
+AI Orchestra: Local LLM + qdrant + RAG API + Thinking AI API + ChatGPT
+The idea is to use PC power to maximize savings on Thinking AI API tokens during refactoring, creating new features, and code analysis using a local LLM, which will provide maximum context for the current project from qdrant and external sources via a low-cost RAG. This also applies to using a ChatGPT Plus subscription, which maximizes cost savings and accelerates coding and the adoption of architectural decisions or changes.
+I would like to achieve from the local LLM the ability to update the code, using all the instruments and models available in the orchestra as a brain
 
 ## Known Legacy / Reworked Systems
 
@@ -93,35 +99,6 @@ Vendor price labels are presentation/UI metadata and should not be treated as au
 ## Refactor Intent
 
 ## Open Questions
-
-## Human Validation Rule
-
-When topology, doctrine, subsystem docs, and retrieval do not provide enough evidence to determine runtime behavior:
-
-DO NOT GUESS.
-
-Ask the project owner for:
-
-- intended behavior
-- subsystem history
-- legacy vs authoritative implementation
-- runtime observations
-- reproduction steps
-- exact Lua files involved
-
-Human-confirmed information has higher priority than AI inference.
-
-The preferred validation order is:
-
-runtime topology
-→ doctrine
-→ subsystem docs
-→ retrieval
-→ targeted raw Lua
-→ human validation
-→ updated semantic artifacts
-
-The goal is architecture understanding, not architecture speculation.
 
 ## Source Authority Rules
 

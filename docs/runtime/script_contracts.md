@@ -17,7 +17,7 @@ Rule:
 
 Before wrapping or chaining a script, check this file or run the script with `--help`.
 
-- Scripts checked: `8`
+- Scripts checked: `6`
 
 ## scripts/diagnostics
 
@@ -34,91 +34,31 @@ Success.
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 
 Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
-Loading weights: 100%|##########| 199/199 [00:00<00:00, 8649.04it/s]
+Loading weights: 100%|##########| 199/199 [00:00<00:00, 8651.90it/s]
 ```
 
-## scripts/investigation
+## scripts/extraction
 
-### `scripts.investigation.build_orchestration_entrypoint`
+### `scripts.extraction.discover_lua_sources`
 
-- Path: `scripts/investigation/build_orchestration_entrypoint.py`
+- Path: `scripts/extraction/discover_lua_sources.py`
 - Help status: `OK`
 
 ```text
-usage: build_orchestration_entrypoint.py [-h] --workspace WORKSPACE --request
-                                         REQUEST [--input-kind INPUT_KIND]
-                                         [--user-constraint USER_CONSTRAINT]
-                                         [--source-preference SOURCE_PREFERENCE]
-                                         [--input-artifact INPUT_ARTIFACT]
-                                         [--parent-artifact-id PARENT_ARTIFACT_ID]
-                                         [--regenerates REGENERATES]
-                                         [--out OUT]
+usage: discover_lua_sources.py [-h] --workspace WORKSPACE
+                               [--out-json OUT_JSON] [--out-md OUT_MD]
 
-Build a normalization-only orchestration_request artifact.
+Discover Lua source files from config/workspace.yaml and build
+source_file_manifest artifacts.
 
 options:
   -h, --help            show this help message and exit
   --workspace WORKSPACE
-  --request REQUEST
-  --input-kind INPUT_KIND
-  --user-constraint USER_CONSTRAINT
-  --source-preference SOURCE_PREFERENCE
-  --input-artifact INPUT_ARTIFACT
-  --parent-artifact-id PARENT_ARTIFACT_ID
-  --regenerates REGENERATES
-  --out OUT
-```
-
-### `scripts.investigation.build_orchestration_index`
-
-- Path: `scripts/investigation/build_orchestration_index.py`
-- Help status: `OK`
-
-```text
-usage: build_orchestration_index.py [-h] [--workspace WORKSPACE]
-                                    [--evidence-artifact EVIDENCE_ARTIFACT]
-                                    [--out-json OUT_JSON] [--out-md OUT_MD]
-
-Build orchestration_index from explicit upstream scope-signal artifacts. No
-request-text routing or hidden keyword maps are used.
-
-options:
-  -h, --help            show this help message and exit
-  --workspace WORKSPACE
-  --evidence-artifact EVIDENCE_ARTIFACT
-                        JSON artifact or directory containing JSON artifacts
-                        with explicit scope signals.
-  --out-json OUT_JSON
-  --out-md OUT_MD
-```
-
-### `scripts.investigation.build_orchestration_scope`
-
-- Path: `scripts/investigation/build_orchestration_scope.py`
-- Help status: `OK`
-
-```text
-usage: build_orchestration_scope.py [-h] --orchestration-request
-                                    ORCHESTRATION_REQUEST
-                                    [--orchestration-index ORCHESTRATION_INDEX]
-                                    [--out-dir OUT_DIR] [--out-json OUT_JSON]
-                                    [--out-md OUT_MD]
-
-Build canonical orchestration_scope from orchestration_request. Optional scope
-evidence must come from a contract-valid orchestration_index.
-
-options:
-  -h, --help            show this help message and exit
-  --orchestration-request ORCHESTRATION_REQUEST
-                        Path to an orchestration_request JSON artifact.
-  --orchestration-index ORCHESTRATION_INDEX
-                        Optional contract-valid orchestration_index JSON
-                        artifact. Must use artifact_family=orchestration_index
-                        and required_capabilities including scope_entries.
-  --out-dir OUT_DIR     Output directory. Defaults to
-                        investigations/orchestration.
-  --out-json OUT_JSON   Explicit JSON output path.
-  --out-md OUT_MD       Explicit Markdown output path.
+                        Workspace root containing config/workspace.yaml.
+  --out-json OUT_JSON   Output JSON path. Defaults to
+                        manifests/extraction/source_file_manifest.json.
+  --out-md OUT_MD       Output Markdown path. Defaults to
+                        manifests/extraction/source_file_manifest.md.
 ```
 
 ## scripts/tools

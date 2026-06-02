@@ -27,6 +27,119 @@ hook.Add(X, ...)
 
 ---
 
+## Networking Doctrine
+
+Preferred abstraction:
+
+* netstream2
+
+Legacy:
+
+* net.Start
+* net.Receive
+
+Networking represents:
+
+* synchronization
+* replication
+* realm crossing
+* UI updates
+
+Not all networking is RPC.
+
+### netstream2 Semantics
+
+Important project rule:
+Dynamic/symbolic messages are allowed in the codebase.
+
+Examples:
+
+```lua
+netstream.Start(client, hookName, ...)
+netstream.Start(client, callbackHook, ...)
+```
+
+However, many previously “dynamic” values were actually recipient variables misread as messages.
+
+#### Server realm
+
+```lua
+netstream.Start(recipient, message, payload...)
+```
+
+Examples:
+
+```lua
+netstream.Start(client, "inventoryOpen", data)
+netstream.Start(receivers, "hudAddStatusIcon", status)
+```
+
+#### Client realm
+
+```lua
+netstream.Start(message, payload...)
+```
+
+Example:
+
+```lua
+netstream.Start("invAct", index, entity)
+```
+
+Reason:
+
+```text
+client sends to server implicitly as LocalPlayer()
+```
+
+### Raw GMod net Semantics
+
+Raw net model:
+
+```lua
+net.Start(messageName, unreliable?)
+net.Write*
+net.Send(...)
+```
+
+Receiver:
+
+```lua
+net.Receive(messageName, function(len, ply)
+    ...
+end)
+```
+
+Server-side registration:
+
+```lua
+util.AddNetworkString(messageName)
+```
+
+Raw GMod net messages should generally have `util.AddNetworkString` on server before use.
+
+## Timer Doctrine
+
+Timers are scheduler/runtime propagation layers.
+
+High-frequency timers are not automatically defects.
+
+Acceptable:
+
+* animation
+* interpolation
+* UI behavior
+* stamina/sprint
+
+Suspicious:
+
+* persistence
+* inventory mutation
+* heavy networking
+* large scans
+
+Classify timer intent before judging.
+
 ## NutScript Plugin Listener Registration
 
 NutScript plugin loading registers every function on `PLUGIN` / `SCHEMA` as a hook listener.
@@ -126,29 +239,6 @@ These should be classified as:
 broadcast/runtime event
 maybe_returns
 ```
-
----
-
-## Event Classes
-
-Recommended taxonomy:
-
-```text
-plugin_callback
-global_runtime_event
-framework_lifecycle
-domain_event
-entity_signal
-entity_inventory_domain
-ui_extension_point
-network_or_sync
-query_or_gate
-engine_bridge
-ad_hoc_lowercase_event
-player_lifecycle_or_action
-```
-
----
 
 ## Important Event Types
 
@@ -298,7 +388,33 @@ sh_*.lua → shared
 unknown prefix → shared unless context says otherwise
 ```
 
-Shared files may contain:
+Server owns:
+
+* gameplay state
+* inventory mutation
+* persistence
+* simulation
+* authority
+
+Client owns:
+
+* UI rendering
+* HUD
+* Derma panels
+* 3D2D presentation
+* visual interpolation
+* input capture
+* local effects
+
+Shared code should define:
+
+text
+* schemas
+* metadata
+* item definitions
+* protocol constants
+* utility functions
+* state descriptions
 
 ```lua
 if SERVER then
@@ -313,39 +429,3 @@ end
 Future extractors should preserve conditional realm context where possible.
 
 ---
-
-## Graph Model
-
-Event graph concepts:
-
-```text
-file emits hook_event
-hook_event dispatches_to listener
-plugin/schema/gamemode owns listener
-listener runs_in_realm realm
-```
-
-Stable IDs should distinguish concepts:
-
-```text
-hook:SaveData
-listener:plugin:healthproblems:SaveData
-file:plugins/healthproblems/sv_hooks.lua
-plugin:healthproblems
-realm:server
-```
-
----
-
-## Important Design Rule
-
-Do not keep adding fragile normalizer heuristics forever.
-
-Correct loop:
-
-```text
-normalization finds ambiguity
-→ improve extractor schema
-→ regenerate manifests
-→ rerun normalization
-```

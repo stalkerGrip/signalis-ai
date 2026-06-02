@@ -1,6 +1,6 @@
 {
   "schema": "pipeline_artifact_contract.v1",
-  "generated_at": "2026-06-02T20:50:25",
+  "generated_at": "2026-06-02T22:44:49",
   "purpose": "Permanent fire-and-forget registry for SIGNALIS AI scripts and generated artifacts.",
   "rules": [
     "Every pipeline-stable script must be registered.",
@@ -125,51 +125,18 @@
       "source": "inferred_from_script"
     },
     {
-      "script_id": "scripts.investigation.build_orchestration_entrypoint",
-      "path": "scripts/investigation/build_orchestration_entrypoint.py",
-      "module": "scripts.investigation.build_orchestration_entrypoint",
-      "purpose": "Build a normalization-only orchestration_request artifact from request text.",
-      "pipeline_stage": "orchestration",
-      "input_schemas": [],
-      "output_schemas": [],
-      "artifact_patterns": [
-        "investigations/orchestration/*_orchestration_request.json"
-      ],
-      "promotion_role": "context_or_debug",
-      "canonical_status": "active",
-      "source": "explicit_script_flag"
-    },
-    {
-      "script_id": "scripts.investigation.build_orchestration_index",
-      "path": "scripts/investigation/build_orchestration_index.py",
-      "module": "scripts.investigation.build_orchestration_index",
-      "purpose": "Build a generic, evidence-backed orchestration_index artifact from upstream artifacts that explicitly expose orchestration scope signals.",
-      "pipeline_stage": "orchestration",
+      "script_id": "scripts.extraction.discover_lua_sources",
+      "path": "scripts/extraction/discover_lua_sources.py",
+      "module": "scripts.extraction.discover_lua_sources",
+      "purpose": "Discover canonical Lua source files from config/workspace.yaml and produce a deterministic source_file_manifest artifact.",
+      "pipeline_stage": "extraction",
       "input_schemas": [],
       "output_schemas": [
-        "orchestration_index"
+        "source_file_manifest"
       ],
       "artifact_patterns": [
-        "investigations/orchestration/*_orchestration_index.json",
-        "investigations/orchestration/*_orchestration_index.md"
-      ],
-      "promotion_role": "context_or_debug",
-      "canonical_status": "active",
-      "source": "explicit_script_flag"
-    },
-    {
-      "script_id": "scripts.investigation.build_orchestration_scope",
-      "path": "scripts/investigation/build_orchestration_scope.py",
-      "module": "scripts.investigation.build_orchestration_scope",
-      "purpose": "Build a capability-driven orchestration_scope artifact from an orchestration_request artifact and an optional contract-valid orchestration_index artifact.",
-      "pipeline_stage": "orchestration",
-      "input_schemas": [],
-      "output_schemas": [
-        "orchestration_scope"
-      ],
-      "artifact_patterns": [
-        "investigations/orchestration/*_orchestration_scope.json",
-        "investigations/orchestration/*_orchestration_scope.md"
+        "manifests/extraction/source_file_manifest.json",
+        "manifests/extraction/source_file_manifest.md"
       ],
       "promotion_role": "context_or_debug",
       "canonical_status": "active",

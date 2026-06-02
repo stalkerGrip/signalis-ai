@@ -1,6 +1,6 @@
 # SIGNALIS AI — Project Structure
 
-Generated: `2026-06-01T00:53:04`
+Generated: `2026-06-02T22:45:40`
 
 ## Workspace
 
@@ -11,43 +11,15 @@ E:/signalis_ai
 ## Directory Tree
 
 ```text
+_archive/
 config/
-decisions/
 docs/
-  ai_subsystems/
-  human_subsystems/
   runtime/
-    runtime_chains/
   setup/
   subsystems/
-embeddings/
-graphs/
-investigations/
-  generated/
-  templates/
-  validation/
 logs/
 manifests/
-  character_inventory/
-  commands/
-  custom_hooks/
-  derma/
-  entities/
-  globals/
-  hooks/
-  items/
-  networking/
-  normalized/
-  persistence/
-  plugins/
-  registries/
-  semantic/
-  timers/
-prompts/
-reports/
-  retrieval_eval/
-    raw/
-runtime_schemas/
+  extraction/
 scripts/
   diagnostics/
   doctrine/
@@ -63,7 +35,6 @@ scripts/
   semantic/
   tools/
   utils/
-subsystem_docs/
 temp/
 ```
 
@@ -71,389 +42,28 @@ temp/
 
 ### Runtime Topology Files
 
-- `docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_not_promoted.json` (0.3 KB)
-- `docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.json` (0.7 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v1.json` (56.0 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v2.json` (25.7 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v3.json` (14.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.json` (11.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.json` (7.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json` (4.4 KB)
-- `manifests/normalized/runtime_propagation_topology.json` (6995.5 KB)
-- `manifests/normalized/runtime_topology.json` (11579.3 KB)
-- `manifests/normalized/runtime_topology_edges.json` (8330.6 KB)
-- `manifests/normalized/runtime_topology_nodes.json` (2566.3 KB)
+- none found
 
 ### Qdrant Files
 
-- `manifests/semantic/qdrant_documents.jsonl` (2443.2 KB)
-- `manifests/semantic/qdrant_documents_summary.md` (2.0 KB)
-- `manifests/semantic/qdrant_embedding_ingest_audit.md` (0.6 KB)
-- `manifests/semantic/qdrant_embedding_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_embeddings.jsonl` (12257.8 KB)
-- `manifests/semantic/qdrant_ingest_filtering_audit.md` (0.3 KB)
-- `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_query_results.md` (184.0 KB)
-- `manifests/semantic/qdrant_query_results_deduped.md` (41.7 KB)
-- `manifests/semantic/qdrant_query_results_deduped.summary.md` (0.9 KB)
 - `scripts/qdrant/`
-- `scripts/qdrant/add_runtime_chains_to_qdrant_documents.py` (3.6 KB)
-- `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
-- `scripts/qdrant/check_runtime_chain_in_qdrant_docs.py` (3.5 KB)
-- `scripts/qdrant/deduplicate_qdrant_results.py` (5.3 KB)
-- `scripts/qdrant/embed_qdrant_documents.py` (10.1 KB)
-- `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
-- `scripts/qdrant/query_qdrant.py` (13.3 KB)
-- `subsystem_docs/qdrant_plan.md` (3.6 KB)
 
 ### Investigation Files
 
-- `investigations/context_pack.md` (26.7 KB)
-- `investigations/context_pack.summary.md` (1.3 KB)
-- `investigations/context_pack_deduped.md` (8.6 KB)
-- `investigations/generated/`
-- `investigations/generated/vendor_stale_price_label_after_purchase.json` (1.7 KB)
-- `investigations/generated/vendor_stale_price_label_after_purchase.md` (15.5 KB)
-- `investigations/generated/vendor_stale_price_label_after_purchase.raw.txt` (46.9 KB)
-- `investigations/inventory_desync_context_pack.md` (105.7 KB)
-- `investigations/inventory_desync_phase1.md` (99.6 KB)
-- `investigations/paths_characterloaded_to_inventory_panel_status.md` (7.6 KB)
-- `investigations/paths_v2_characterloaded_to_inventory_panel_status.md` (10.3 KB)
-- `investigations/templates/`
-- `investigations/templates/investigation.md` (0.0 KB)
-- `investigations/validation/`
-- `investigations/validation/characterload_inventory_generic_runtime_facts_v1.json` (23.5 KB)
-- `investigations/validation/characterload_inventory_generic_runtime_facts_v1.md` (20.1 KB)
-- `investigations/validation/characterload_inventory_generic_runtime_facts_v2.json` (19.7 KB)
-- `investigations/validation/characterload_inventory_generic_runtime_facts_v2.md` (15.8 KB)
-- `investigations/validation/characterload_inventory_lifecycle_targets.json` (2.4 KB)
-- `investigations/validation/characterload_inventory_lifecycle_targets_source_validation.json` (26.2 KB)
-- `investigations/validation/characterload_inventory_lifecycle_targets_source_validation.md` (14.0 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v1.json` (3.8 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v1.md` (2.1 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5.json` (6.7 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5.md` (4.9 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5_ordered.json` (3.2 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5_ordered.md` (2.3 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5_ordered.mdэ` (2.3 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_graph_v1.json` (12.4 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_graph_v1.md` (7.5 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_graph_v2.json` (7.5 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_graph_v2.md` (3.8 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v1.json` (56.0 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v1.md` (35.0 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v2.json` (25.7 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v2.md` (16.6 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v3.json` (14.9 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v3.md` (9.3 KB)
-- `investigations/validation/characterload_inventory_runtime_facts.json` (10.6 KB)
-- `investigations/validation/characterload_inventory_runtime_facts.md` (5.5 KB)
-- `investigations/validation/probe_invData_to_ItemDataChanged_propagation.md` (0.9 KB)
-- `investigations/validation/probe_invData_to_ItemDataChanged_propagation_v2.md` (0.9 KB)
-- `investigations/validation/probe_invData_topology.md` (1.2 KB)
-- `investigations/validation/probe_ItemDataChanged_topology.md` (5.1 KB)
-- `investigations/validation/probe_listener_raw_topology.md` (1.9 KB)
-- `investigations/validation/probe_PlayerLoadedChar_propagation_topology.md` (5.2 KB)
-- `investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation.md` (7.3 KB)
-- `investigations/validation/probe_PlayerLoadedChar_to_PlayerLoadout_propagation_v2.md` (10.3 KB)
-- `investigations/validation/probe_PlayerLoadedChar_topology.md` (0.9 KB)
-- `investigations/validation/runtime_chain_graph_audit_v1.json` (3.5 KB)
-- `investigations/validation/runtime_chain_graph_audit_v1.md` (2.9 KB)
-- `investigations/validation/runtime_chain_graph_characterload_v1.json` (3.7 KB)
-- `investigations/validation/runtime_chain_graph_characterload_v1.md` (2.9 KB)
-- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.json` (3.6 KB)
-- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.md` (2.9 KB)
-- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.json` (63.2 KB)
-- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.md` (27.5 KB)
-- `investigations/validation/runtime_chain_node_search_characterload_v1.md` (22.7 KB)
-- `investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json` (45.4 KB)
-- `investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.md` (7.5 KB)
-- `investigations/validation/runtime_chain_regression_report.json` (1.0 KB)
-- `investigations/validation/runtime_chain_regression_report.md` (0.8 KB)
-- `investigations/validation/runtime_fact_topology_regression_report.md` (0.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_pipeline.json` (4.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_pipeline.md` (3.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v1.json` (4.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v1.md` (3.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v2.json` (4.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v2.md` (3.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v3.json` (4.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v3.md` (3.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v4.json` (4.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v4.md` (3.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v5.json` (4.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_branch_chain_v5.md` (3.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v1.json` (10.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v1.md` (8.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json` (8.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.md` (6.7 KB)
-- `investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets.json` (0.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.json` (7.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_invdata_client_apply_targets_source_validation.md` (3.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_pipeline.json` (17.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_pipeline.md` (13.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v1.json` (8.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v1.md` (6.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v2.json` (8.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v2.md` (6.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v3.json` (8.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v3.md` (6.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v4.json` (8.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v4.md` (6.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v5.json` (8.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v5.md` (6.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v6.json` (17.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_ordered_steps_v6.md` (13.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v1.json` (133.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v1.md` (33.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.json` (135.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v2.md` (37.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.json` (138.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_ranked_evidence_v3.md` (46.8 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json` (2.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.md` (1.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json` (1.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.md` (0.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json` (10.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.md` (2.8 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json` (7.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.md` (1.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json` (2.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request_v2.json` (0.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.json` (4.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.md` (3.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.json` (2.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.md` (1.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v1.json` (3.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v1.md` (2.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json` (2.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.md` (1.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.json` (11.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.md` (7.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.json` (7.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.md` (4.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json` (4.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.md` (2.8 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_pipeline.json` (17.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_pipeline.md` (13.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v1.json` (13.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v1.md` (10.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v2.json` (8.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v2.md` (6.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v3.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v3.md` (6.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v4.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v4.md` (6.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v5.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v5.md` (6.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v6.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v6.md` (6.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v7.json` (17.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v7.md` (13.5 KB)
-- `investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.json` (37.3 KB)
-- `investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.md` (8.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.json` (284.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v1.md` (18.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.json` (197.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_investigation_synthesis_v2.md` (24.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json` (6.9 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.md` (5.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.json` (11.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.md` (9.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.md` (39.5 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_request_v1.json` (1.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.json` (0.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v1.md` (0.5 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v2.json` (7.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_targeted_validation_result_v2.md` (6.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation.json` (164.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation.md` (102.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.json` (266.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_deduped.md` (40.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_evidence_graph.json` (64.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_evidence_graph.md` (41.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.json` (9.9 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_investigation_synthesis.md` (9.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.md` (58.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.md` (8.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json` (78.1 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.md` (65.5 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.json` (203.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_scored.md` (75.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.json` (179.1 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation.md` (82.1 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation_targeted_validation.json` (0.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_source_validation_targeted_validation.md` (0.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.json` (20.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation.md` (17.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched.json` (22.8 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.json` (166.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.md` (67.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence_graph.json` (9.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.json` (213.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_source_validation.md` (99.3 KB)
+- none found
 
 ### Subsystem Docs
 
-- `docs/subsystems/gridinv.md` (11.1 KB)
-- `docs/subsystems/healthproblems.md` (12.9 KB)
-- `docs/subsystems/inventory.md` (12.2 KB)
-- `docs/subsystems/lightitems.md` (12.5 KB)
-- `docs/subsystems/multichar.md` (11.9 KB)
-- `docs/subsystems/needs.md` (12.5 KB)
-- `docs/subsystems/nextbots.md` (2.3 KB)
-- `docs/subsystems/storage.md` (11.7 KB)
-- `docs/subsystems/vendor.md` (11.3 KB)
+- none found
 
 ### Qdrant Scripts
 
 - `scripts/qdrant/__init__.py` (0.0 KB)
-- `scripts/qdrant/add_runtime_chains_to_qdrant_documents.py` (3.6 KB)
-- `scripts/qdrant/audit_embedding_ingest_counts.py` (3.5 KB)
-- `scripts/qdrant/audit_ingest_filtering.py` (3.4 KB)
-- `scripts/qdrant/build_evidence_graph.py` (17.8 KB)
-- `scripts/qdrant/build_investigation_context_pack.py` (10.0 KB)
-- `scripts/qdrant/build_qdrant_documents.py` (16.3 KB)
-- `scripts/qdrant/build_runtime_chain_evidence.py` (25.3 KB)
-- `scripts/qdrant/build_runtime_chains.py` (21.4 KB)
-- `scripts/qdrant/build_targeted_validation_report.py` (15.3 KB)
-- `scripts/qdrant/check_embedding_outputs.py` (1.2 KB)
-- `scripts/qdrant/check_runtime_chain_in_qdrant_docs.py` (3.5 KB)
-- `scripts/qdrant/context_pack.py` (3.9 KB)
-- `scripts/qdrant/deduplicate_qdrant_results.py` (5.3 KB)
-- `scripts/qdrant/deduplicate_validation_fragments.py` (14.5 KB)
-- `scripts/qdrant/embed_qdrant_documents.py` (10.1 KB)
-- `scripts/qdrant/evaluate_retrieval.py` (17.2 KB)
-- `scripts/qdrant/extract_runtime_facts.py` (15.4 KB)
-- `scripts/qdrant/ingest_qdrant.py` (7.1 KB)
-- `scripts/qdrant/investigate.py` (21.1 KB)
-- `scripts/qdrant/patch_vendor_purchase_validation_targets.py` (6.8 KB)
-- `scripts/qdrant/path_reconstruction.py` (7.9 KB)
-- `scripts/qdrant/path_reconstruction_v2.py` (11.4 KB)
-- `scripts/qdrant/promote_runtime_chain.py` (9.8 KB)
-- `scripts/qdrant/promote_vendor_purchase_chain_doc.py` (3.8 KB)
-- `scripts/qdrant/query_qdrant.py` (13.3 KB)
-- `scripts/qdrant/rerank_results.py` (11.4 KB)
-- `scripts/qdrant/retrieval_intent.py` (3.5 KB)
-- `scripts/qdrant/score_validation_report.py` (0.0 KB)
-- `scripts/qdrant/synthesize_investigation.py` (14.4 KB)
-- `scripts/qdrant/validate_sources.py` (12.6 KB)
-- `scripts/qdrant/validate_targeted_sources.py` (14.2 KB)
 
 ### Semantic Scripts
 
 - `scripts/semantic/__init__.py` (0.0 KB)
-- `scripts/semantic/generate_subsystem_docs.py` (10.6 KB)
 
 ## Important Matched Files
 
-- `docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_not_promoted.json` (0.3 KB)
-- `docs/runtime/runtime_chains/vendor_purchase_item_data_propagation_topology_chain_promoted_topology_supported_chain.json` (0.7 KB)
-- `investigations/context_pack.summary.md` (1.3 KB)
-- `investigations/validation/characterload_inventory_generic_runtime_facts_v1.json` (23.5 KB)
-- `investigations/validation/characterload_inventory_generic_runtime_facts_v2.json` (19.7 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v1.json` (3.8 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5.json` (6.7 KB)
-- `investigations/validation/characterload_inventory_runtime_chain_candidate_v5_ordered.json` (3.2 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_graph_v1.json` (12.4 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_graph_v2.json` (7.5 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v1.json` (56.0 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v2.json` (25.7 KB)
-- `investigations/validation/characterload_inventory_runtime_fact_topology_v3.json` (14.9 KB)
-- `investigations/validation/characterload_inventory_runtime_facts.json` (10.6 KB)
-- `investigations/validation/runtime_chain_graph_audit_v1.json` (3.5 KB)
-- `investigations/validation/runtime_chain_graph_characterload_v1.json` (3.7 KB)
-- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v1.json` (3.6 KB)
-- `investigations/validation/runtime_chain_graph_vendor_itemdata_path_v2.json` (63.2 KB)
-- `investigations/validation/runtime_chain_pathfinder_vendor_itemdata_v1.json` (45.4 KB)
-- `investigations/validation/runtime_chain_regression_report.json` (1.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v1.json` (10.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_generic_runtime_facts_v2.json` (8.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5.json` (2.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_candidate_v5_ordered.json` (1.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4.json` (10.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_after_validation.json` (7.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request.json` (2.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_request_v2.json` (0.1 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result.json` (4.3 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_chain_v4_targeted_validation_result_v2.json` (2.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v1.json` (3.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_graph_v2.json` (2.2 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v1.json` (11.5 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v2.json` (7.0 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_fact_topology_v3.json` (4.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_pipeline.json` (17.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v1.json` (13.9 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v2.json` (8.4 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v3.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v4.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v5.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v6.json` (8.6 KB)
-- `investigations/validation/vendor_purchase_itemdata_runtime_steps_v7.json` (17.9 KB)
-- `investigations/validation/vendor_purchase_price_label_cleanup_runtime_chain_v3.json` (37.3 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v1.json` (6.9 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_candidate_v2.json` (11.4 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_runtime_chain_evidence.json` (60.7 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chain_evidence.json` (116.5 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_chains.json` (14.2 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_runtime_facts.json` (78.1 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence.json` (166.6 KB)
-- `investigations/validation/vendor_stale_price_label_after_purchase_validation_targeted_validation_patched_runtime_chain_evidence_graph.json` (9.4 KB)
-- `manifests/normalized/network_graph_summary.md` (7.3 KB)
-- `manifests/normalized/runtime_graph_edges.json` (2625.8 KB)
-- `manifests/normalized/runtime_graph_nodes.json` (1116.8 KB)
-- `manifests/normalized/runtime_graph_summary.md` (4.6 KB)
-- `manifests/normalized/runtime_propagation_topology.json` (6995.5 KB)
-- `manifests/normalized/runtime_propagation_topology_summary.md` (1.7 KB)
-- `manifests/normalized/runtime_topology.json` (11579.3 KB)
-- `manifests/normalized/runtime_topology_edges.json` (8330.6 KB)
-- `manifests/normalized/runtime_topology_nodes.json` (2566.3 KB)
-- `manifests/normalized/runtime_topology_summary.md` (4.4 KB)
-- `manifests/normalized/timer_graph_summary.md` (16.5 KB)
-- `manifests/semantic/qdrant_documents.jsonl` (2443.2 KB)
-- `manifests/semantic/qdrant_documents_summary.md` (2.0 KB)
-- `manifests/semantic/qdrant_embedding_ingest_audit.md` (0.6 KB)
-- `manifests/semantic/qdrant_embedding_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_embeddings.jsonl` (12257.8 KB)
-- `manifests/semantic/qdrant_ingest_filtering_audit.md` (0.3 KB)
-- `manifests/semantic/qdrant_ingest_summary.md` (0.5 KB)
-- `manifests/semantic/qdrant_query_results.md` (184.0 KB)
-- `manifests/semantic/qdrant_query_results_deduped.md` (41.7 KB)
-- `manifests/semantic/qdrant_query_results_deduped.summary.md` (0.9 KB)
-- `scripts/qdrant/build_investigation_context_pack.py` (10.0 KB)
-- `scripts/qdrant/context_pack.py` (3.9 KB)
-- `scripts/qdrant/rerank_results.py` (11.4 KB)
-- `scripts/qdrant/retrieval_intent.py` (3.5 KB)
-- `scripts/semantic/generate_subsystem_docs.py` (10.6 KB)
-- `subsystem_docs/event_taxonomy.md` (4.2 KB)
-- `subsystem_docs/networking_model.md` (3.8 KB)
-- `subsystem_docs/persistence_model.md` (3.3 KB)
-- `subsystem_docs/qdrant_plan.md` (3.6 KB)
-- `subsystem_docs/realm_model.md` (3.5 KB)
-- `subsystem_docs/runtime_doctrine.md` (11.3 KB)
-
-## Active Investigation
-
-```text
-inventory desync after character load
-```
-
-## Current Runtime Chain Under Investigation
-
-```text
-CharacterLoaded
-→ PlayerLoadedChar
-→ PlayerLoadout
-→ PostPlayerLoadout
-→ inventory initialization / sync
-→ inventoryOpen
-→ inventorySetPanelStatus
-→ client inventory UI
-```
-
-## Notes
-
-This file is generated on demand. Re-run this script after adding scripts, manifests, subsystem docs, or investigation reports.
+- none found
