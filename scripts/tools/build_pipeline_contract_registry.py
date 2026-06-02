@@ -407,8 +407,6 @@ def discover_scripts(workspace: Path, script_dirs: list[Path]) -> list[ScriptCon
             text = path.read_text(encoding="utf-8", errors="ignore")
 
             explicit = extract_pipeline_contract_from_script(path)
-            if explicit:
-                print(f"[CONTRACT] {path}")
 
             if explicit:
                 results.append(
