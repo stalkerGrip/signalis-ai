@@ -229,6 +229,12 @@ def validate_index_entry(item: dict[str, Any], index: int, path: Path) -> dict[s
             f"orchestration_index entry {entry_id!r} has invalid confidence {confidence!r}"
         )
 
+    lineage = item.get("lineage")
+    if not isinstance(lineage, dict) or not lineage:
+        raise ContractError(
+            f"orchestration_index entry {entry_id!r} lacks non-empty lineage object"
+        )
+
     return {
         "entry_id": entry_id,
         "scope_type": scope_type,
@@ -239,7 +245,7 @@ def validate_index_entry(item: dict[str, Any], index: int, path: Path) -> dict[s
         "source_family": source_family,
         "evidence_kind": evidence_kind,
         "confidence": confidence,
-        "lineage": item.get("lineage") or {},
+        "lineage": lineage,
         "capabilities": item.get("capabilities") or [],
     }
 
@@ -339,6 +345,7 @@ def match_entries(
                 "source_family": entry.get("source_family"),
                 "evidence_kind": entry.get("evidence_kind"),
                 "index_entry_id": entry.get("entry_id"),
+                "index_entry_lineage": entry.get("lineage"),
                 "reason": (
                     "Request text matched aliases supplied by a contract-valid "
                     "orchestration_index entry. This is a scope signal, not validated truth."
@@ -479,7 +486,6 @@ def build_scope(
                 "orchestration_index_digest": index_metadata.get("index_digest"),
                 "producer_script": SCRIPT_ID,
                 "schema": SCHEMA,
-                "schema_version": SCHEMA_VERSION,
             },
         },
         "contract_guards": {

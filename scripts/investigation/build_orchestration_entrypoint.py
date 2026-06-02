@@ -119,7 +119,6 @@ def build_orchestration_request(
                 "request_text",
                 "producer_script",
                 "schema",
-                "schema_version",
             ],
         },
     }

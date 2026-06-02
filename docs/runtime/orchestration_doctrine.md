@@ -134,17 +134,79 @@ A valid context pack should include:
 
 ## Orchestration Pipeline
 
+Primary flow:
+
 Request
-→ request interpretation
-→ subsystem and realm scope
-→ doctrine context selection
-→ retrieval query planning
-→ Qdrant retrieval
-→ evidence deduplication
-→ targeted source validation
-→ context pack generation
-→ optional runtime chain reconstruction
-→ implementation or investigation guidance
+→ orchestration_request
+→ retrieval_seed
+→ retrieval_result_set
+→ evidence_set
+→ orchestration_scope
+→ doctrine_context_selection
+→ retrieval_scope
+→ source_validation_request
+→ source_validation_result
+→ orchestration_context_pack
+→ guidance_report
+
+Rationale:
+
+First-pass scope cannot be reliable without evidence unless a deterministic scope index already exists.
+
+Therefore the primary orchestration path performs broad retrieval first, deduplicates/ranks evidence, then derives orchestration_scope from evidence metadata.
+
+orchestration_scope is a planning artifact, not validated truth.
+
+If evidence is missing or lacks scope metadata, scope must remain explicit unknown.
+
+The orchestrator must not infer scope from request text keywords, benchmark names, subsystem routing tables, or hidden Python maps.
+
+Add:
+
+Retrieval Seed Rule
+
+retrieval_seed is the only artifact allowed to be generated directly from orchestration_request before evidence exists.
+
+It may preserve:
+
+original request text
+normalized request text
+explicit user constraints
+explicit source preferences
+
+It must not infer:
+
+subsystem
+realm
+runtime surface
+doctrine context
+validation targets
+implementation files
+runtime chain identity
+
+Add:
+
+Evidence-Backed Scope Rule
+
+orchestration_scope must be generated from evidence_set, not from request keywords.
+
+Valid scope sources:
+
+retrieved document metadata
+artifact_family
+required_capabilities
+canonical_status
+lineage
+explicit subsystem/realm/runtime_surface metadata emitted by generated artifacts
+validated evidence when available
+
+Invalid scope sources:
+
+hidden Python keyword maps
+manually maintained per-request routing tables
+benchmark-specific routing
+schema version suffixes
+raw request text substring checks
 
 ## Request Interpretation
 

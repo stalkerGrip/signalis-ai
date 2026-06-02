@@ -1041,3 +1041,37 @@ Artifact family names are stable pipeline concepts.
 Schema versions are compatibility contracts.
 Do not create new artifact families or script generations only because an implementation changed.
 
+## Evidence-Backed Orchestration Rule
+
+Orchestration must not infer scope from request text through hidden keyword maps.
+
+The primary orchestration order is:
+
+orchestration_request
+→ retrieval_seed
+→ retrieval_result_set
+→ evidence_set
+→ orchestration_scope
+
+retrieval_seed may be request-derived.
+
+orchestration_scope must be evidence-derived.
+
+A valid orchestration_scope may only use:
+
+artifact_family
+required_capabilities
+canonical_status
+lineage
+explicit metadata from retrieved artifacts
+evidence_set ranking/deduplication metadata
+
+If evidence is missing, incomplete, or lacks scope metadata, the scope field must be unknown.
+
+Do not solve missing scope by adding:
+
+request keyword maps
+subsystem routing tables
+benchmark-specific branches
+schema-version routing
+manually maintained per-request mappings

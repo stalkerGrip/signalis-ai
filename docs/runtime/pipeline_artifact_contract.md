@@ -1,71 +1,32 @@
 # Pipeline Artifact Contract Registry
 
 - Schema: `pipeline_artifact_contract.v1`
-- Generated at: `2026-06-02T19:23:14`
-- Scripts: `96`
-- Artifacts: `159`
+- Generated at: `2026-06-02T20:50:25`
+- Scripts: `7`
+- Artifacts: `0`
 
 ## Script Stages
 
 | Stage | Count |
 |---|---:|
-| `architecture_intelligence` | 1 |
-| `builder` | 11 |
-| `diagnosis` | 1 |
-| `embedding` | 1 |
-| `extraction` | 12 |
-| `ingestion` | 3 |
-| `normalization` | 2 |
-| `orchestration` | 2 |
-| `ordered_runtime_facts` | 2 |
-| `probe` | 2 |
-| `promotion` | 4 |
-| `retrieval` | 3 |
-| `runtime_chain_candidate` | 5 |
-| `runtime_chain_regression` | 1 |
-| `runtime_fact_graph` | 1 |
-| `runtime_fact_topology` | 2 |
-| `runtime_facts` | 2 |
-| `source_validation` | 1 |
-| `targeted_validation_request` | 5 |
-| `tooling` | 2 |
-| `unknown` | 33 |
+| `builder` | 1 |
+| `orchestration` | 3 |
+| `unknown` | 3 |
 
 ## Artifact Stages
 
 | Stage | Count |
 |---|---:|
-| `architecture_intelligence` | 4 |
-| `diagnosis` | 2 |
-| `ingestion` | 3 |
-| `ordered_runtime_facts` | 5 |
-| `promotion` | 17 |
-| `promotion_output` | 5 |
-| `retrieval` | 7 |
-| `runtime_chain_candidate` | 23 |
-| `runtime_chain_regression` | 1 |
-| `runtime_fact_graph` | 4 |
-| `runtime_fact_topology` | 11 |
-| `runtime_facts` | 9 |
-| `source_validation` | 5 |
-| `targeted_validation_request` | 12 |
-| `tooling` | 1 |
-| `unknown` | 50 |
 
 ## Artifact Statuses
 
 | Status | Count |
 |---|---:|
-| `canonical` | 18 |
-| `debug` | 2 |
-| `intermediate` | 139 |
 
 ## Artifact Metadata Sources
 
 | Source | Count |
 |---|---:|
-| `explicit_artifact_flag` | 32 |
-| `merged_existing_curation` | 127 |
 
 ## Contract Flag Format
 

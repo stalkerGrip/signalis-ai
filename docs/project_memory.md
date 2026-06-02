@@ -34,73 +34,60 @@ They are compatibility metadata only.
 
 ## Current Bottleneck
 
-### Orchestration Entry Point
+### Evidence-Backed Orchestration Pipeline
 
-The pipeline has many working components, but it does not yet have a stable orchestrator that turns a human/local-LLM request into the correct generated artifacts.
+The previous proposed flow placed orchestration_scope before retrieval:
 
-Target flow:
+orchestration_request
+→ orchestration_scope
+→ doctrine_context_selection
+→ retrieval_scope
 
-natural-language request
-→ structured orchestration request
-→ retrieval scope
-→ doctrine context selection
-→ Qdrant retrieval
-→ source validation
-→ context pack
-→ optional runtime chain reconstruction
-→ implementation or investigation guidance
+This was rejected because reliable scope cannot be generated from request text without hidden keyword maps or manual routing tables.
 
-Orchestration governance decision:
+Correct primary flow:
 
-The orchestration layer must use stable artifact families and capability contracts.
-
-Do not introduce retrieval_plan.vN as a long-term concept.
-
-Use retrieval_scope as the stable family.
-
-Do not introduce runtime_chain_candidate.v8 or any successor-version architecture.
-
-Runtime chain reconstruction remains optional and downstream.
-
-Primary orchestration product:
-
-orchestration_context_pack
+orchestration_request
+→ retrieval_seed
+→ retrieval_result_set
+→ evidence_set
+→ orchestration_scope
+→ doctrine_context_selection
+→ retrieval_scope
+→ source_validation_request
+→ source_validation_result
+→ orchestration_context_pack
 → guidance_report
 
-Runtime chain generation should happen only when the request requires propagation reasoning.
+Rules:
 
-Next implementation order:
+orchestration_request is normalization only.
+retrieval_seed preserves request wording for broad retrieval.
+retrieval_result_set stores retrieved candidates, not truth.
+evidence_set deduplicates/ranks candidates, not truth.
+orchestration_scope is generated from evidence metadata and lineage.
+if evidence does not support scope, output unknown.
+do not create hidden keyword maps.
+do not create subsystem routing tables.
+do not introduce benchmark/vendor/armor-specific routing.
+do not use schema_version for routing or compatibility.
+runtime chains remain optional and downstream.
 
-1. Define orchestration_request artifact family and required capabilities.
-2. Define orchestration_scope artifact family and required capabilities.
-3. Define doctrine_context_selection artifact family and required capabilities.
-4. Define retrieval_scope artifact family and required capabilities.
-5. Define orchestration_context_pack artifact family and required capabilities.
-6. Only then create orchestration scripts.
+Add:
 
-Schema evolution rule:
+Orchestration Scope Ordering Correction
 
-Schema consumers must check artifact_family and required capabilities, not hardcoded version suffixes.
+Decision:
 
-Breaking schema changes must be handled through compatibility adapters or explicit migration, not by creating parallel versioned pipeline paths.
+orchestration_scope must not be the first inferred artifact after orchestration_request.
 
-Do not start from code before these artifact families and compatibility rules are defined.
+Reason:
 
-Important correction:
+A scope artifact produced before retrieval either guesses or depends on a manually maintained index. Both violate doctrine unless the index is itself generated from deterministic evidence.
 
-Do not require human-maintained definitions for every tiny runtime chain.
+New rule:
 
-Human-maintained files should describe doctrine, source authority, subsystem meaning, and orchestration rules.
-
-Concrete runtime chains should be generated from evidence when needed.
-
-Runtime chain reconstruction is optional, not mandatory for every request.
-
-Do not patch generated artifacts.
-
-Do not keep optimizing vendor/characterload as the product.
-
-Vendor and Characterload are regression examples only.
+First retrieve broadly from the semantic corpus, then derive scope from retrieved evidence metadata.
 
 ---
 

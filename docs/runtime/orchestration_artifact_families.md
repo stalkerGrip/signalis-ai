@@ -23,24 +23,101 @@ not schema version suffixes.
 
 ## Core Orchestration Flow
 
+Primary flow:
+
 human/local-LLM request
 → orchestration_request
+→ retrieval_seed
+→ retrieval_result_set
+→ evidence_set
 → orchestration_scope
 → doctrine_context_selection
 → retrieval_scope
-→ retrieval_result_set
-→ evidence_set
 → source_validation_request
 → source_validation_result
 → orchestration_context_pack
 → guidance_report
 
-Optional:
+Optional second-pass retrieval:
 
-→ runtime_chain_reconstruction_request
+retrieval_scope
+→ retrieval_result_set
+→ evidence_set
+
+Optional runtime propagation flow:
+
+runtime_chain_reconstruction_request
 → runtime_chain_candidate
 → promotion_validation
 → promotion_decision
+
+Important correction:
+
+orchestration_scope is evidence-backed.
+
+It must not be generated from hidden request keyword maps, subsystem routing tables, benchmark routing, or manually maintained per-request rules.
+
+If no retrieved/deduplicated evidence supports scope, scope must remain unknown.
+
+Add this section after orchestration_request:
+
+retrieval_seed
+
+Purpose:
+
+Defines safe first-pass retrieval seeds from an orchestration_request.
+
+Required capabilities:
+
+request_text
+normalized_request_text
+retrieval_seed_queries
+
+Retrieval seed is not scope.
+
+Retrieval seed must not infer:
+
+subsystem
+realm
+runtime surface
+doctrine files
+validation targets
+implementation files
+runtime chain identity
+
+Allowed query seeds:
+
+original request text
+normalized request text
+explicit user-provided source preferences
+explicit user-provided constraints
+
+Do not use hidden keyword maps or subsystem routing tables.
+
+Update orchestration_scope section:
+
+orchestration_scope
+
+Purpose:
+
+Defines evidence-backed scope of work.
+
+Required capabilities:
+
+subsystem_scope
+realm_scope
+runtime_surface_scope
+
+Rules:
+
+produced after retrieval_result_set and evidence_set in the primary flow
+scope is derived from evidence metadata and lineage
+scope is not validated truth
+scope may contain unknown
+if evidence does not expose a scope dimension, output unknown
+do not infer scope from request keywords
+do not use hidden subsystem routing tables
+do not use benchmark-specific routing
 
 ---
 
