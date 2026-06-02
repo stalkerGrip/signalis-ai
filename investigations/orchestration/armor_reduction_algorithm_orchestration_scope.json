@@ -2,12 +2,12 @@
   "schema": "orchestration_scope",
   "schema_version": "1",
   "artifact_family": "orchestration_scope",
-  "artifact_id": "orchestration_scope:822e2688ac02e02f7302",
+  "artifact_id": "orchestration_scope:7c5efeebe3c315e7c0ff",
   "producer_script": "scripts.investigation.build_orchestration_scope",
   "pipeline_stage": "orchestration",
   "canonical_status": "intermediate",
   "promotion_role": "context_or_debug",
-  "generated_at": "2026-06-02T17:26:32Z",
+  "generated_at": "2026-06-02T17:36:40Z",
   "required_capabilities": [
     "subsystem_scope",
     "realm_scope",
@@ -39,7 +39,9 @@
       "matched_aliases": [],
       "source_artifact": null,
       "source_family": null,
-      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps."
+      "evidence_kind": null,
+      "index_entry_id": null,
+      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps or hardcoded routing."
     }
   ],
   "realm_scope": [
@@ -51,7 +53,9 @@
       "matched_aliases": [],
       "source_artifact": null,
       "source_family": null,
-      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps."
+      "evidence_kind": null,
+      "index_entry_id": null,
+      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps or hardcoded routing."
     }
   ],
   "runtime_surface_scope": [
@@ -63,7 +67,9 @@
       "matched_aliases": [],
       "source_artifact": null,
       "source_family": null,
-      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps."
+      "evidence_kind": null,
+      "index_entry_id": null,
+      "reason": "No orchestration_index was provided. Scope remains explicit unknown rather than using hidden keyword maps or hardcoded routing."
     }
   ],
   "confidence_notes": [
@@ -74,19 +80,29 @@
   "index_metadata": {
     "index_present": false,
     "index_path": null,
+    "index_artifact_id": null,
     "index_digest": null,
-    "index_schema": null
+    "index_schema": null,
+    "index_schema_version": null,
+    "index_required_capabilities": [],
+    "index_entries_total": 0,
+    "index_entries_accepted": 0
   },
   "lineage": {
     "input_kind": "orchestration_request",
     "input_artifacts": [
       "investigations\\orchestration\\armor_reduction_algorithm_orchestration_request.json"
     ],
+    "optional_input_artifacts": [],
     "parent_artifact_id": "orchestration_request:ec028b4ed85d7c7b",
+    "upstream_artifact_ids": [
+      "orchestration_request:ec028b4ed85d7c7b"
+    ],
     "regenerates": null,
     "regeneration_inputs": {
       "orchestration_request_artifact_id": "orchestration_request:ec028b4ed85d7c7b",
       "orchestration_request_digest": "d6d2b00113273da1be97dfe9",
+      "orchestration_index_artifact_id": null,
       "orchestration_index_digest": null,
       "producer_script": "scripts.investigation.build_orchestration_scope",
       "schema": "orchestration_scope",
@@ -97,8 +113,11 @@
     "no_benchmark_routing": true,
     "no_subsystem_routing_tables": true,
     "no_hidden_keyword_maps": true,
+    "no_hardcoded_subsystem_inference": true,
     "no_version_coupled_orchestration": true,
     "consumes_by_artifact_family": true,
-    "consumes_by_required_capabilities": true
+    "consumes_by_required_capabilities": true,
+    "orchestration_index_required_when_scope_is_not_unknown": true,
+    "orchestration_index_is_scope_signal_not_truth": true
   }
 }
