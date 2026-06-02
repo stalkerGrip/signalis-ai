@@ -15,12 +15,15 @@
         script_contracts.json
         script_contracts.md
 
-1.3 Make a solid plan BLOCKED
-1.3.1 Update system promt PASS
-   Promt updated implemented
+1.3 Make a solid plan CURRENT
+1.3.1 Update system prompt PASS
+   Prompt updated implemented
    → source_file_manifest:
       None
-1.3.2 Update project sources CURRENT
+1.3.2 Update project sources, include new to system prompt if needed PASS
+   human_context updated
+   → source_file_manifest:
+      architecture.md
 1.3.2.1 Define a solid pipeline on base of plan and Current Architecture Intent in human_context.md PASS
    Architectural decision has been made
    → source_file_manifest:

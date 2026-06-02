@@ -6,6 +6,13 @@ ChatGPT is actively going off track, strict control is required, about a week of
 
 ## Current Architecture Intent
 
+Important:
+
+This section describes human intent, goals, desired capabilities, and architectural direction.
+It is not the authoritative architecture definition.
+The accepted architecture derived from this intent is owned by architecture.md.
+If architecture.md differs from this section, architecture.md represents the current accepted architecture while this section remains historical human intent.
+
 AI Orchestra: Local LLM + qdrant + RAG API + Thinking AI API + ChatGPT
 The idea is to use PC power to maximize savings on Thinking AI API tokens during refactoring, creating new features, and code analysis using a local LLM, which will provide maximum context for the current project from qdrant and external sources via a low-cost RAG. This also applies to using a ChatGPT Plus subscription, which maximizes cost savings and accelerates coding and the adoption of architectural decisions or changes.
 I would like to achieve from the local LLM the ability to update the code, using all the instruments and models available in the orchestra as a brain
