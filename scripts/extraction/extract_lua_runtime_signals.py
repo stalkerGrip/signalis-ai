@@ -663,7 +663,7 @@ def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
         raise ValueError('lua_syntax_alphabet.regex.qualified_symbol must be declared')
     return bool(re.fullmatch(rf"(?:{q})(?:\[[^\]]+\])?", lhs))
 
-def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[tuple[bool,str,str,dict[str,Any]]]:
+def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]], file_id:str|None=None, line_no:int|None=None, raw_text:str|None=None)->list[tuple[bool,str,str,dict[str,Any]]]:
     masked=mask_strings(code,patterns)
     out=[]
     for m in re.finditer(r"=", masked):
@@ -692,7 +692,7 @@ def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pat
         )
         group_id=None
         if len(lhs_parts) > 1:
-            group_id="lua_multi_assignment:"+stable_hash({"lhs":lhs_parts,"rhs":rhs,"is_local":is_local})[:16]
+            group_id="lua_multi_assignment:"+stable_hash({"file_id":file_id,"line":line_no,"raw_text":raw_text if raw_text is not None else code,"lhs":lhs_parts,"rhs":rhs,"is_local":is_local})[:16]
         for pos,lhs in enumerate(lhs_parts):
             lhs=lhs.strip()
             if not assignment_lhs_is_syntax(lhs,a):
@@ -829,7 +829,7 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
             True: first_entity(a,'local_assignment'),
             False: first_entity(a,'assignment'),
         }
-        for is_local,lhs,rhs,assignment_meta in extract_assignment_candidates(code,a,patterns):
+        for is_local,lhs,rhs,assignment_meta in extract_assignment_candidates(code,a,patterns,file_record.get('file_id'),idx,raw):
             ent=assignment_ent_by_local.get(is_local)
             if not ent or ent['id'] in suppressed: continue
             rhs_full, rhs_end, rhs_complete = collect_multiline_assignment_rhs(lines,idx,rhs,a,patterns)

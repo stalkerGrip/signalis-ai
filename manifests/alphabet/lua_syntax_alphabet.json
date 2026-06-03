@@ -1,6 +1,6 @@
 {
   "artifact_family": "lua_syntax_alphabet",
-  "artifact_id": "lua_syntax_alphabet:0e4150167ac74976",
+  "artifact_id": "lua_syntax_alphabet:a7757d3d46158dad",
   "block_tokens": {
     "close": [
       "end",
@@ -45,7 +45,7 @@
     ]
   },
   "canonical_status": "intermediate",
-  "content_digest": "0e4150167ac749769dbb3681002ce640a918aa958fbc72937f92361b9a92ec8f",
+  "content_digest": "a7757d3d46158dad2517c26da2b828fe31d1859fffdbd9e22082654f5463d400",
   "control_call_words": [
     "if",
     "for",
@@ -129,15 +129,11 @@
     "key_syntax_computed": "computed_key",
     "key_syntax_identifier": "identifier_key",
     "key_syntax_implicit_array_index": "implicit_array_index",
-    "key_syntax_positional_field": "positional_field",
     "literal_values_may_be_emitted_separately": true,
     "local_assignment_has_is_local_and_clean_lhs": true,
     "local_multi_assignment_enabled": true,
     "multi_assignment_emit_each_lhs": true,
     "multi_assignment_missing_rhs_value": "nil",
-    "multi_assignment_single_call_rhs_may_return_multiple": true,
-    "multi_assignment_single_call_rhs_metadata": "rhs_returns_maybe_multiple",
-    "multi_assignment_single_call_rhs_strategy": "share_rhs_for_all_lhs",
     "multi_assignment_split_strategy": "top_level_commas_only",
     "multiline_assignment_rhs_balance_tokens": [
       "parentheses",
@@ -166,11 +162,6 @@
       "quoted_string_literal",
       "long_bracket_string_literal"
     ],
-    "positional_table_field_key_expression": null,
-    "positional_table_field_key_expression_kind": "positional",
-    "positional_table_field_key_text": null,
-    "positional_table_field_ownership": "table_context",
-    "positional_table_field_value_capture": true,
     "positional_table_fields_enabled": true,
     "preserve_table_context_labels": true,
     "preview_text_is_not_source_location_evidence": true,
@@ -190,7 +181,19 @@
       "key_text",
       "value_preview"
     ],
-    "table_field_function_literal_emits_function_assignment": false
+    "table_field_function_literal_emits_function_assignment": false,
+    "multi_assignment_single_call_rhs_may_return_multiple": true,
+    "multi_assignment_single_call_rhs_metadata": "rhs_returns_maybe_multiple",
+    "multi_assignment_single_call_rhs_strategy": "share_rhs_for_all_lhs",
+    "multi_assignment_group_identity": "occurrence_unique_deterministic",
+    "multi_assignment_group_identity_inputs": [
+      "file_id",
+      "line",
+      "raw_evidence_text",
+      "normalized_lhs_list",
+      "normalized_rhs_list",
+      "is_local"
+    ]
   },
   "minimal_required_changes_for_extractor": [
     "Replace script-owned evidence-kind/vocabulary constants with syntax_entities declared by lua_syntax_alphabet.",
@@ -225,8 +228,8 @@
     "For assignment-owned multiline table literals, do not emit table fields from collected RHS preview text; emit child fields only from real source-line traversal.",
     "When emitting nested table fields, preserve the real child table field start line in context_path and value_body_span.",
     "Deduplicate lua_table_field evidence by file_id, line, table_depth, context_path, key_text, and value_preview.",
-    "When mechanics.positional_table_fields_enabled is true, emit lua_table_field evidence for positional table entries using key_syntax_positional_field and table_context ownership.",
-    "When a multi-assignment has multiple LHS entries and exactly one RHS that is a syntactic call expression, do not invent nil for later LHS entries; share the call RHS and mark rhs_returns_maybe_multiple when declared."
+    "When a multi-assignment has multiple LHS entries and exactly one RHS that is a syntactic call expression, do not invent nil for later LHS entries; share the call RHS and mark rhs_returns_maybe_multiple when declared.",
+    "multi_assignment_group must be deterministic per raw assignment occurrence: same emitted assignments from one raw occurrence share a group, repeated identical assignment text on different lines must have different groups using source occurrence identity."
   ],
   "pipeline_stage": "extraction",
   "producer_script": "manual.source_governed_extraction_alphabet",
