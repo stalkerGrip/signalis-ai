@@ -32,6 +32,8 @@
         "3dpanel.lua",
         "3dtext.lua",
         "E:/signalis_ai/config/workspace.yaml",
+        "E:/signalis_ai/manifests/alphabet/lua_syntax_alphabet.json",
+        "E:/signalis_ai/manifests/extraction/source_file_manifest.json",
         "E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/entities/effects/nut_smallsmoke.lua",
         "E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/entities/entities/nut_item.lua",
         "E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/nutscript/entities/entities/nut_money.lua",
@@ -1553,6 +1555,10 @@
         "logging.lua",
         "looting.lua",
         "madness.lua",
+        "manifests/alphabet/lua_syntax_alphabet.json",
+        "manifests/extraction/raw_lua_extraction copy.json",
+        "manifests/extraction/raw_lua_extraction.json",
+        "manifests/extraction/raw_lua_extraction.md",
         "manifests/extraction/source_file_manifest.json",
         "manifests/extraction/source_file_manifest.md",
         "mapscene.lua",
@@ -2656,6 +2662,7 @@
         "schema/sh_schema.lua",
         "schema/sh_voices.lua",
         "scripts/extraction/discover_lua_sources.py",
+        "scripts/extraction/extract_lua_runtime_signals.py",
         "scripts/tools/build_pipeline_contract_registry.py",
         "scripts/tools/generate_project_structure.py",
         "serverguardsupport.lua",
@@ -3353,8 +3360,8 @@
       "input_families": [],
       "inputs": [
         "scripts/extraction/discover_lua_sources.py",
-        "scripts/tools/build_pipeline_contract_registry.py",
-        "scripts/tools/generate_project_structure.py"
+        "scripts/extraction/extract_lua_runtime_signals.py",
+        "scripts/tools/build_pipeline_contract_registry.py"
       ],
       "output_families": [],
       "path": "docs/runtime/script_contracts.json",
@@ -3367,10 +3374,10 @@
     },
     {
       "artifact_family": "lua_syntax_alphabet",
-      "artifact_id": "lua_syntax_alphabet:5acdd4b5350419c0",
+      "artifact_id": "lua_syntax_alphabet:52475f03a5b7ca4a",
       "canonical_status": "intermediate",
       "capabilities": [],
-      "content_digest": "5acdd4b5350419c0832d5b91d7217e0053cf3b75450fafcd7943411d5256fb9c",
+      "content_digest": "52475f03a5b7ca4a1ee5f9204895ebc989d6e7a6b0bfd66ef1653b5c0d29748f",
       "findings": [
         "invalid_promotion_role"
       ],
@@ -3384,78 +3391,6 @@
       "producer_script": "manual.source_governed_extraction_alphabet",
       "promotion_role": "syntax_extraction_rule_input",
       "schema": "lua_syntax_alphabet",
-      "source": "explicit_or_embedded_metadata",
-      "source_files": []
-    },
-    {
-      "artifact_family": "raw_lua_extraction",
-      "artifact_id": "raw_lua_extraction:96fe38321c5c6176",
-      "canonical_status": "intermediate",
-      "capabilities": [
-        "file_digest_verification",
-        "line_evidence",
-        "lua_anonymous_functions",
-        "lua_assignments",
-        "lua_call_arguments",
-        "lua_call_expressions",
-        "lua_function_assignments",
-        "lua_function_body_spans",
-        "lua_function_definitions",
-        "lua_literal_values",
-        "lua_method_call_expressions",
-        "lua_table_fields",
-        "source_manifest_reference"
-      ],
-      "content_digest": "96fe38321c5c617657fb44d1e03a4db7e9744b0d66dacd02c1b76ba14deade91",
-      "findings": [
-        "invalid_promotion_role"
-      ],
-      "input_families": [],
-      "inputs": [
-        "E:/signalis_ai/manifests/extraction/source_file_manifest.json",
-        "E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/signalis/plugins/needs/items/base/sh_container.lua",
-        "sh_container.lua"
-      ],
-      "output_families": [
-        "raw_lua_extraction"
-      ],
-      "path": "manifests/extraction/raw_lua_extraction copy.json",
-      "pipeline_stage": "extraction",
-      "producer_script": "scripts.extraction.extract_lua_runtime_signals",
-      "promotion_role": "intermediate_evidence",
-      "schema": "raw_lua_extraction",
-      "source": "explicit_or_embedded_metadata",
-      "source_files": []
-    },
-    {
-      "artifact_family": "raw_lua_extraction",
-      "artifact_id": "raw_lua_extraction:3ad1efa8fcac76d1",
-      "canonical_status": "intermediate",
-      "capabilities": [
-        "file_digest_verification",
-        "line_evidence",
-        "lua_syntax_alphabet_reference",
-        "source_manifest_reference"
-      ],
-      "content_digest": "3ad1efa8fcac76d158f8ee9af769ab68c3f3b24208c6ad3e740bd31e257b1ea1",
-      "findings": [
-        "invalid_promotion_role"
-      ],
-      "input_families": [],
-      "inputs": [
-        "E:/signalis_ai/manifests/alphabet/lua_syntax_alphabet.json",
-        "E:/signalis_ai/manifests/extraction/source_file_manifest.json",
-        "E:/steam/steamapps/common/GarrysMod/garrysmod/gamemodes/signalis/plugins/needs/items/base/sh_container.lua",
-        "sh_container.lua"
-      ],
-      "output_families": [
-        "raw_lua_extraction"
-      ],
-      "path": "manifests/extraction/raw_lua_extraction.json",
-      "pipeline_stage": "extraction",
-      "producer_script": "scripts.extraction.extract_lua_runtime_signals",
-      "promotion_role": "intermediate_evidence",
-      "schema": "raw_lua_extraction",
       "source": "explicit_or_embedded_metadata",
       "source_files": []
     },
@@ -3502,19 +3437,9 @@
       "message": "invalid_promotion_role",
       "path": "manifests/alphabet/lua_syntax_alphabet.json",
       "severity": "error"
-    },
-    {
-      "message": "invalid_promotion_role",
-      "path": "manifests/extraction/raw_lua_extraction copy.json",
-      "severity": "error"
-    },
-    {
-      "message": "invalid_promotion_role",
-      "path": "manifests/extraction/raw_lua_extraction.json",
-      "severity": "error"
     }
   ],
-  "generated_at": "2026-06-03T11:07:46Z",
+  "generated_at": "2026-06-03T11:46:00Z",
   "purpose": "Deterministic registry for explicit SIGNALIS AI pipeline script contracts and artifact metadata.",
   "rules": [
     "The registry scans the workspace by default; it does not depend on hardcoded script or artifact subdirectories.",

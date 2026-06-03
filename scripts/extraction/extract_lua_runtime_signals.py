@@ -155,8 +155,16 @@ def emit(kind: str, file_record:dict[str,Any], line_no:int, line:str, payload:di
     e.update(payload); return e
 
 def symbol_shape(target: str)->dict[str,Any]:
-    seps=[c for c in target if c in '.:']; parts=re.split(r'[.:]', target)
-    return {"target":target,"root":parts[0] if parts else target,"leaf":parts[-1] if parts else target,"parts":parts,"separators":seps,"uses_method_colon":':' in seps,"uses_table_dot":'.' in seps}
+    # Syntax-only symbol shape. For ordinary targets this preserves the old
+    # qualified-symbol behavior. For call-selected targets such as
+    # client:getChar():getInv():add, keep the full syntactic target while
+    # deriving root/leaf/parts from identifier tokens and separators from the
+    # punctuation between them.
+    parts=re.findall(r"[A-Za-z_][A-Za-z0-9_]*", target)
+    seps=[]
+    for m in re.finditer(r"[.:]\s*[A-Za-z_][A-Za-z0-9_]*", target):
+        seps.append(m.group(0).strip()[0])
+    return {"target":target,"root":parts[0] if parts else target,"leaf":parts[-1] if parts else target,"parts":parts,"separators":seps,"uses_method_colon":':' in seps,"uses_table_dot":'.' in seps,"is_call_chain":'()' in target}
 
 def context_path(stack:list[SyntaxContext])->list[dict[str,Any]]:
     return [{"kind":c.kind,"start_line":c.start_line,"label":c.label} for c in stack]
@@ -171,10 +179,26 @@ def tokenized_block_end_line(lines:list[str], start_line:int, a:Alphabet, patter
     stack=[]; tok_re=patterns.get('block_token');
     if not tok_re: return None
     opens=set(a.block_tokens.get('open',[])); closes=set(a.block_tokens.get('close',[]))
+    previous_significant_code=''
+    def then_belongs_to_elseif(code:str, token_start:int)->bool:
+        before=code[:token_start]
+        # Same-line `elseif cond then` does not create a new nested block.
+        if re.search(r"\belseif\b[^;]*$", before): return True
+        # Split-line style:
+        #   elseif cond
+        #   then
+        stripped_before=before.strip()
+        if not stripped_before and re.match(r"^\s*then\b", code[token_start:]):
+            return bool(re.match(r"^\s*elseif\b", previous_significant_code))
+        return False
     for li in range(start_line-1, len(lines)):
         code=mask_strings(strip_line_comment(lines[li]), patterns)
-        for tok in tok_re.findall(code):
-            if tok in opens: stack.append(tok)
+        for mt in tok_re.finditer(code):
+            tok=mt.group(1)
+            if tok in opens:
+                if tok=='then' and then_belongs_to_elseif(code, mt.start(1)):
+                    continue
+                stack.append(tok)
             elif tok in closes:
                 if tok=='until':
                     for i in range(len(stack)-1,-1,-1):
@@ -182,6 +206,7 @@ def tokenized_block_end_line(lines:list[str], start_line:int, a:Alphabet, patter
                 elif stack:
                     stack.pop()
                     if not stack: return li+1
+        if code.strip(): previous_significant_code=code
     return None
 
 def table_literal_end_line(lines:list[str], start_line:int, patterns:dict[str,re.Pattern[str]])->int|None:
@@ -288,6 +313,97 @@ def extract_call_arguments(code_line:str, call_start:int)->tuple[str,bool]:
             if depth==0: return code_line[oi+1:idx], True
     return code_line[oi+1:], False
 
+def find_call_close_index(code_line:str, call_start:int)->int|None:
+    oi=code_line.find('(',call_start)
+    if oi<0: return None
+    depth=0; ins=ind=esc=False
+    for idx in range(oi,len(code_line)):
+        ch=code_line[idx]
+        if esc: esc=False; continue
+        if ch=='\\' and (ins or ind): esc=True; continue
+        if ch=="'" and not ind: ins=not ins; continue
+        if ch=='"' and not ins: ind=not ind; continue
+        if ins or ind: continue
+        if ch=='(': depth+=1
+        elif ch==')':
+            depth-=1
+            if depth==0: return idx
+    return None
+
+def call_target_with_result_suffix(previous_target:str, sep:str, leaf:str)->str:
+    # The target is syntax evidence for callable selection from a previous call
+    # result. It does not classify runtime meaning.
+    return f"{previous_target}(){sep}{leaf}"
+
+def is_single_assignment_operator(code:str, pos:int)->bool:
+    if pos < 0 or pos >= len(code) or code[pos] != '=': return False
+    prev = code[pos-1] if pos > 0 else ''
+    nxt = code[pos+1] if pos+1 < len(code) else ''
+    return prev not in '<>~=' and nxt != '='
+
+def statement_boundary_start(masked_left:str, a:Alphabet)->int:
+    # Generic Lua/GLua statement boundary. This is syntax-only: inline statements
+    # such as `if cond then x = y end` own the assignment after `then`, not the
+    # full control statement prefix.
+    boundary = -1
+    for m in re.finditer(r";", masked_left): boundary = max(boundary, m.end()-1)
+    for word in a.mechanics.get('inline_assignment_left_boundary_tokens', ['then','do']):
+        for m in re.finditer(rf"\b{re.escape(str(word))}\b", masked_left):
+            boundary = max(boundary, m.end())
+    return boundary + 1
+
+def statement_boundary_end(masked_right:str, a:Alphabet)->int:
+    depth=0; ins=ind=esc=False; i=0
+    right_boundary_tokens={str(x) for x in a.mechanics.get('inline_assignment_right_boundary_tokens', ['end','elseif','else'])}
+    while i < len(masked_right):
+        ch=masked_right[i]
+        if esc: esc=False; i+=1; continue
+        if ch=='\\' and (ins or ind): esc=True; i+=1; continue
+        if ch=="'" and not ind: ins=not ins; i+=1; continue
+        if ch=='"' and not ins: ind=not ind; i+=1; continue
+        if ins or ind: i+=1; continue
+        if ch in '({[': depth+=1; i+=1; continue
+        if ch in ')}]' and depth>0: depth-=1; i+=1; continue
+        if depth==0 and ch==';': return i
+        if depth==0:
+            m=re.match(r"\b([A-Za-z_][A-Za-z0-9_]*)\b", masked_right[i:])
+            if m and m.group(1) in right_boundary_tokens:
+                before=masked_right[i-1] if i>0 else ' '
+                if before.isspace() or before in ';': return i
+        i+=1
+    return len(masked_right)
+
+def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
+    lhs=lhs.strip()
+    if not lhs: return False
+    q=a.regex.get('qualified_symbol', r'[A-Za-z_][A-Za-z0-9_]*(?:(?:\.|:)[A-Za-z_][A-Za-z0-9_]*)*')
+    return bool(re.fullmatch(rf"(?:{q})(?:\[[^\]]+\])?", lhs))
+
+def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[tuple[bool,str,str]]:
+    masked=mask_strings(code,patterns)
+    out=[]
+    for m in re.finditer(r"=", masked):
+        eq=m.start()
+        if not is_single_assignment_operator(masked, eq): continue
+        left_start=statement_boundary_start(masked[:eq], a)
+        raw_left=code[left_start:eq].strip()
+        masked_left=masked[left_start:eq].strip()
+        is_local=False
+        if re.match(r"^local\s+", masked_left):
+            is_local=True
+            raw_left=re.sub(r"^local\s+", "", raw_left, count=1).strip()
+            # Generic single-name local extraction for this syntax layer.
+            if ',' in raw_left: continue
+        lhs=raw_left.strip()
+        if not assignment_lhs_is_syntax(lhs,a): continue
+        right_raw=code[eq+1:]
+        right_masked=masked[eq+1:]
+        rend=statement_boundary_end(right_masked,a)
+        rhs=right_raw[:rend].strip()
+        if not rhs: continue
+        out.append((is_local,lhs,rhs))
+    return out
+
 def extract_multiline_call_arguments(lines:list[str], start_line:int, col:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[str,bool,list[ArgumentSpan]]:
     first=strip_line_comment(lines[start_line-1]); oi=first.find('(',col-1)
     if oi<0: return '',False,[]
@@ -360,23 +476,33 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
             if vk==a.mechanics.get('table_body_value_kind'): table_label_to_open=kp['key_text']
             break
         # assignments
-        for op in ['local_assignment','assignment']:
-            for ent in entity_by_operation(a,op):
-                if ent['id'] in suppressed: continue
-                m=pattern(patterns,ent['regex']).match(code)
-                if not m or (op=='assignment' and re.search(r"(?<![<>=~])={2,}|~=|<=|>=", code)): continue
-                lhs=m.group('lhs').strip(); rhs=m.group('rhs').strip(); rk=classify_value(rhs,a,patterns)
-                payload={"lhs":lhs,"is_local":bool(ent.get('sets_is_local')),"rhs_kind":rk,"rhs_preview":rhs[:240],"rhs_truncated":len(rhs)>240}
-                if rk in set(a.mechanics.get('body_span_value_kinds',[])): payload['rhs_body_span']=body_span_for_value(lines,idx,rk,a,patterns)
-                items.append(emit(ent['id'],file_record,idx,raw,payload))
-                if rk==ent.get('opens_table_context_when_value_kind'): table_label_to_open=lhs
-                suppressed.add(ent['id']); break
+        assignment_ent_by_local = {
+            True: first_entity(a,'local_assignment'),
+            False: first_entity(a,'assignment'),
+        }
+        for is_local,lhs,rhs in extract_assignment_candidates(code,a,patterns):
+            ent=assignment_ent_by_local.get(is_local)
+            if not ent or ent['id'] in suppressed: continue
+            rk=classify_value(rhs,a,patterns)
+            payload={"lhs":lhs,"is_local":is_local,"rhs_kind":rk,"rhs_preview":rhs[:240],"rhs_truncated":len(rhs)>240}
+            if rk in set(a.mechanics.get('body_span_value_kinds',[])): payload['rhs_body_span']=body_span_for_value(lines,idx,rk,a,patterns)
+            items.append(emit(ent['id'],file_record,idx,raw,payload))
+            if rk==ent.get('opens_table_context_when_value_kind'): table_label_to_open=lhs
+            suppressed.add(ent['id'])
+            break
         # function declarations / assignments
+        owned_function_literal_line=False
+        for it in items:
+            if it.get('evidence',{}).get('file_id')==file_record.get('file_id') and it.get('evidence',{}).get('line')==idx:
+                if it.get('rhs_kind')==a.mechanics.get('function_body_value_kind') or it.get('value_kind')==a.mechanics.get('function_body_value_kind'):
+                    owned_function_literal_line=True
         for op in ['function_definition','assigned_function','local_assigned_function']:
             for ent in entity_by_operation(a,op):
+                if ent['id'] in suppressed: continue
+                if owned_function_literal_line and ent.get('suppressed_when_assignment_rhs_is_function_literal', False): continue
                 m=pattern(patterns,ent['regex']).match(code)
                 if not m: continue
-                declaration_line=True
+                declaration_line=True; owned_function_literal_line=True
                 if op=='function_definition':
                     local_marker,name,params=m.groups(); payload={"definition_form":a.mechanics.get('definition_form_function_statement','function_statement'),"is_local":bool(local_marker),"symbol":symbol_shape(name),"parameters":split_params(params),"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)}
                 elif op=='assigned_function':
@@ -384,28 +510,56 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                 else:
                     lhs,params=m.groups(); payload={"is_local":True,"lhs":lhs,"symbol":symbol_shape(lhs),"parameters":split_params(params),"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)}
                 items.append(emit(ent['id'],file_record,idx,raw,payload))
-        # inline anonymous function not already declaration and not call-argument attached
+        # inline anonymous function not already declaration and not call-argument attached.
+        # Owned function literals are governed by their owner evidence unless the
+        # alphabet explicitly allows standalone anonymous evidence for them.
         anon=first_entity(a,'anonymous_function')
-        if anon and 'function' in code and not declaration_line:
+        emit_owned_anon=bool(a.mechanics.get('owned_function_literals_emit_anonymous_function_evidence', False))
+        if anon and 'function' in code and not declaration_line and (emit_owned_anon or not owned_function_literal_line):
             for mm in re.finditer(r"function\s*\(([^)]*)\)", code):
                 items.append(emit(anon['id'],file_record,idx,raw,{"parameters":split_params(mm.group(1)),"column":mm.start()+1,"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns),"context_path":context_path(stack)}))
         # calls
         call_ent=first_entity(a,'call_expression')
         if call_ent and not (declaration_line and a.mechanics.get('function_definition_lines_are_not_call_expression_lines', True)):
+            close_to_target:dict[int,str]={}
+            close_to_evidence:dict[int,dict[str,Any]]={}
+            emitted_call_spans:set[tuple[int,int]]=set()
+            def emit_call_from_match(target:str, col0:int, ent:dict[str,Any], parent_ev:dict[str,Any]|None=None):
+                argtxt,complete=extract_call_arguments(code,col0)
+                argspans=split_args_with_spans(argtxt,idx,a,patterns) if complete else []
+                kind=ent.get('method_kind_id') if ':' in target and ent.get('method_kind_id') else ent['id']
+                payload={"symbol":symbol_shape(target),"column":col0+1,"arguments_preview":argtxt[:240],"arguments_truncated":len(argtxt)>240,"arguments_complete_on_line":complete,"argument_count_on_line":len(argspans),"argument_kinds_on_line":[classify_value(sx.text,a,patterns) for sx in argspans]}
+                if parent_ev is not None:
+                    payload['call_chain_parent_evidence_id']=parent_ev.get('evidence_id')
+                    payload['call_chain_parent_symbol']=parent_ev.get('symbol')
+                ev=emit(str(kind),file_record,idx,raw,payload)
+                ev['_argument_entity_id']=ent.get('argument_entity_id')
+                items.append(ev)
+                if not complete:
+                    matxt,mcomp,argspans=extract_multiline_call_arguments(lines,idx,col0+1,a,patterns)
+                    ev.update({"arguments_complete_multiline":mcomp,"argument_count_multiline":len(argspans),"argument_kinds_multiline":[classify_value(sx.text,a,patterns) for sx in argspans],"arguments_multiline_preview":matxt[:240],"arguments_multiline_truncated":len(matxt)>240})
+                for ai,sp in enumerate(argspans): emit_call_argument(items,file_record,sp.start_line,lines[sp.start_line-1],ev,ai,sp.text,sp.start_line,sp.end_line,lines,a,patterns)
+                ev.pop('_argument_entity_id',None)
+                close_idx=find_call_close_index(code,col0)
+                if close_idx is not None:
+                    close_to_target[close_idx]=target
+                    close_to_evidence[close_idx]=ev
+                emitted_call_spans.add((col0, close_idx if close_idx is not None else col0))
+                return ev
             for cm in pattern(patterns,call_ent['regex']).finditer(code):
                 target=cm.group('target')
                 if target in a.control_call_words: continue
-                argtxt,complete=extract_call_arguments(code,cm.start('target'))
-                argspans=split_args_with_spans(argtxt,idx,a,patterns) if complete else []
-                kind=call_ent.get('method_kind_id') if ':' in target and call_ent.get('method_kind_id') else call_ent['id']
-                ev=emit(str(kind),file_record,idx,raw,{"symbol":symbol_shape(target),"column":cm.start('target')+1,"arguments_preview":argtxt[:240],"arguments_truncated":len(argtxt)>240,"arguments_complete_on_line":complete,"argument_count_on_line":len(argspans),"argument_kinds_on_line":[classify_value(s.text,a,patterns) for s in argspans]})
-                ev['_argument_entity_id']=call_ent.get('argument_entity_id')
-                items.append(ev)
-                if not complete:
-                    matxt,mcomp,argspans=extract_multiline_call_arguments(lines,idx,cm.start('target')+1,a,patterns)
-                    ev.update({"arguments_complete_multiline":mcomp,"argument_count_multiline":len(argspans),"argument_kinds_multiline":[classify_value(s.text,a,patterns) for s in argspans],"arguments_multiline_preview":matxt[:240],"arguments_multiline_truncated":len(matxt)>240})
-                for ai,sp in enumerate(argspans): emit_call_argument(items,file_record,sp.start_line,lines[sp.start_line-1],ev,ai,sp.text,sp.start_line,sp.end_line,lines,a,patterns)
-                ev.pop('_argument_entity_id',None)
+                emit_call_from_match(target,cm.start('target'),call_ent)
+            for chain_ent in entity_by_operation(a,'call_after_call_result'):
+                if not a.mechanics.get('call_after_call_result_enabled', True): continue
+                for cm in pattern(patterns,chain_ent['regex']).finditer(code):
+                    previous_target=close_to_target.get(cm.start())
+                    if not previous_target: continue
+                    sep=cm.groupdict().get('sep') or ':'
+                    leaf=cm.groupdict().get('leaf') or ''
+                    target=call_target_with_result_suffix(previous_target,sep,leaf)
+                    parent_ev=close_to_evidence.get(cm.start())
+                    emit_call_from_match(target,cm.start('leaf'),chain_ent,parent_ev)
         # quoted string literals
         lit=first_entity(a,'quoted_string_literal')
         if lit:

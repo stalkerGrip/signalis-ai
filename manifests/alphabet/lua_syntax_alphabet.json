@@ -1,6 +1,6 @@
 {
   "artifact_family": "lua_syntax_alphabet",
-  "artifact_id": "lua_syntax_alphabet:5acdd4b5350419c0",
+  "artifact_id": "lua_syntax_alphabet:4b75a463fcff3559",
   "block_tokens": {
     "close": [
       "end",
@@ -45,7 +45,7 @@
     ]
   },
   "canonical_status": "intermediate",
-  "content_digest": "5acdd4b5350419c0832d5b91d7217e0053cf3b75450fafcd7943411d5256fb9c",
+  "content_digest": "4b75a463fcff35599d5664c92823e81341735c1e157a9aa76b9458d38fabee42",
   "control_call_words": [
     "if",
     "for",
@@ -57,7 +57,7 @@
     "local",
     "elseif"
   ],
-  "generated_at": "2026-06-03T10:47:22Z",
+  "generated_at": "2026-06-03T11:35:00Z",
   "literal_tokens": {
     "boolean": [
       "true",
@@ -69,25 +69,50 @@
   },
   "mechanics": {
     "anonymous_function_arguments_attach_to_parent_call_argument": true,
+    "anonymous_function_entity_for_call_argument_callbacks_only_when_attached": true,
+    "anonymous_function_evidence_scope": "call_argument_callbacks_or_unowned_inline_literals",
+    "assignment_lhs_grammar": "qualified_symbol_or_indexed_qualified_symbol",
+    "assignment_operator_kind": "single_equals_not_comparison",
     "body_span_value_kinds": [
       "table_literal",
       "function_literal"
     ],
+    "call_after_call_result_enabled": true,
+    "call_after_call_result_parent_reference": true,
+    "call_after_call_result_root_label": "<call_result>",
+    "call_after_call_result_target_example": "client:getChar():getInv():add",
+    "call_after_call_result_target_prefix": ")",
+    "call_after_call_result_target_strategy": "append_parent_call_target_with_call_suffix_and_selected_member",
     "call_arguments_emit_parent_call_evidence_id": true,
     "context_kind_table": "table",
     "definition_form_function_statement": "function_statement",
+    "elseif_then_does_not_open_new_block_depth": true,
+    "function_assignment_entity_suppressed_when_assignment_rhs_is_function_literal": true,
     "function_body_value_kind": "function_literal",
     "function_definition_lines_are_not_call_expression_lines": true,
+    "function_literal_assignment_emits_function_assignment": false,
     "function_literals_inside_table_constructors_are_table_fields": true,
     "identifier_key_expression_kind": "identifier",
+    "inline_assignment_left_boundary_tokens": [
+      "then",
+      "do"
+    ],
+    "inline_assignment_right_boundary_tokens": [
+      "end",
+      "elseif",
+      "else"
+    ],
     "key_syntax_computed": "computed_key",
     "key_syntax_identifier": "identifier_key",
     "literal_values_may_be_emitted_separately": true,
     "local_assignment_has_is_local_and_clean_lhs": true,
+    "owned_function_literals_emit_anonymous_function_evidence": false,
     "preserve_table_context_labels": true,
+    "split_line_then_after_elseif_does_not_open_new_block_depth": true,
     "table_body_value_kind": "table_literal",
     "table_constructor_fields_are_not_assignments": true,
-    "table_field_context_must_match_current_function_depth": true
+    "table_field_context_must_match_current_function_depth": true,
+    "table_field_function_literal_emits_function_assignment": false
   },
   "minimal_required_changes_for_extractor": [
     "Replace script-owned evidence-kind/vocabulary constants with syntax_entities declared by lua_syntax_alphabet.",
@@ -95,7 +120,14 @@
     "Use alphabet value_classification_rules for all value_kind decisions.",
     "Use alphabet mechanics for table context labels, body-span value kinds, declaration-line call suppression, and callback argument ownership.",
     "Keep Lua parsing utilities in the script, but do not let the script define which evidence kinds exist or which syntax entities are emitted.",
-    "Keep extraction syntax-only; defer all runtime/project meaning to normalization."
+    "Keep extraction syntax-only; defer all runtime/project meaning to normalization.",
+    "Use lua_syntax_alphabet regex.call_after_call_result and parser_operation=call_after_call_result for chained calls after call results.",
+    "Do not emit lua_function_assignment for table field function literals when mechanics.table_field_function_literal_emits_function_assignment is false.",
+    "Do not emit duplicate lua_function_assignment for assignment RHS function literals when mechanics.function_literal_assignment_emits_function_assignment is false.",
+    "Do not emit standalone lua_anonymous_function for owned function literals when mechanics.owned_function_literals_emit_anonymous_function_evidence is false.",
+    "For parser_operation=call_after_call_result, build the emitted symbol target by appending the selected member to the parent call target, e.g. client:getChar():getInv():add.",
+    "When mechanics.call_after_call_result_parent_reference is true, emit parent call evidence references for chained-call evidence.",
+    "When mechanics.owned_function_literals_emit_anonymous_function_evidence is false, suppress lua_anonymous_function for function literals already owned by lua_assignment or lua_table_field."
   ],
   "pipeline_stage": "extraction",
   "producer_script": "manual.source_governed_extraction_alphabet",
@@ -106,6 +138,7 @@
     "assignment": "^\\s*(?P<lhs>[^=~<>]+?)\\s*=\\s*(?P<rhs>.+?)\\s*$",
     "block_token": "\\b(function|then|do|repeat|end|until)\\b",
     "call": "(?<![\\w.:'\\\"])(?P<target>[A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*\\(",
+    "call_after_call_result": "\\)\\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\\s*\\(",
     "function_statement": "^\\s*(?:(local)\\s+)?function\\s+([A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*\\(([^)]*)\\)",
     "identifier": "[A-Za-z_][A-Za-z0-9_]*",
     "local_assigned_function": "^\\s*local\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*function\\s*\\(([^)]*)\\)",
@@ -125,6 +158,7 @@
   "syntax_entities": [
     {
       "enabled": true,
+      "function_literal_ownership": "table_field_only",
       "id": "lua_table_field",
       "parser_operation": "table_field",
       "regex": "table_field",
@@ -161,21 +195,27 @@
     {
       "declaration_line": true,
       "enabled": true,
+      "function_literal_assignment_ownership": "assignment_with_function_body_span",
       "id": "lua_function_assignment",
       "parser_operation": "assigned_function",
-      "regex": "assigned_function"
+      "regex": "assigned_function",
+      "suppressed_when_assignment_rhs_is_function_literal": true
     },
     {
       "declaration_line": true,
       "enabled": true,
+      "function_literal_assignment_ownership": "assignment_with_function_body_span",
       "id": "lua_function_assignment",
       "parser_operation": "local_assigned_function",
-      "regex": "local_assigned_function"
+      "regex": "local_assigned_function",
+      "suppressed_when_assignment_rhs_is_function_literal": true
     },
     {
+      "emits_for_owned_function_literal": false,
       "enabled": true,
       "id": "lua_anonymous_function",
       "parser_operation": "anonymous_function",
+      "primary_use": "call_argument_callback_attachment_or_unowned_inline_function_literal",
       "regex": "function_literal_inline"
     },
     {
@@ -185,6 +225,19 @@
       "method_kind_id": "lua_method_call_expression",
       "parser_operation": "call_expression",
       "regex": "call"
+    },
+    {
+      "argument_entity_id": "lua_call_argument",
+      "enabled": true,
+      "id": "lua_call_expression",
+      "method_kind_id": "lua_method_call_expression",
+      "parent_call_reference": true,
+      "parser_operation": "call_after_call_result",
+      "purpose": "Capture call expressions whose callable is selected from the result of a previous call, for syntax such as object:method():next(arg).",
+      "regex": "call_after_call_result",
+      "target_prefix": ")",
+      "target_root": "<call_result>",
+      "target_strategy": "append_parent_call_target_with_call_suffix_and_selected_member"
     },
     {
       "enabled": true,
