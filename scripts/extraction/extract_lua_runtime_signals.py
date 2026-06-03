@@ -300,14 +300,26 @@ def update_table_context_after_line(code:str,line_no:int,stack:list[SyntaxContex
 def split_args_with_spans(args:str, base_line:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[ArgumentSpan]:
     spans=[]; start=0; depth=0; block=0; ins=ind=esc=False; i=0; tok_re=patterns.get('block_token')
     opens=set(a.block_tokens.get('open',[])); closes=set(a.block_tokens.get('close',[]))
+    previous_significant_line=''
+    line_start=0
     def line_for(o:int)->int: return base_line+args.count('\n',0,max(0,min(o,len(args))))
     def append(s:int,e:int):
         raw=args[s:e]; st=raw.strip()
         if not st: return
         lead=len(raw)-len(raw.lstrip()); trail=len(raw.rstrip()); a0=s+lead; a1=s+trail
         spans.append(ArgumentSpan(st,line_for(a0),line_for(max(a0,a1-1))))
+    def then_belongs_to_elseif(pos:int)->bool:
+        current_prefix=args[line_start:pos]
+        if re.search(r"\belseif\b[^\n;]*$", current_prefix): return True
+        if not current_prefix.strip() and re.match(r"^\s*elseif\b", previous_significant_line): return True
+        return False
     while i<len(args):
         ch=args[i]
+        if ch=='\n':
+            line_txt=args[line_start:i].strip()
+            if line_txt: previous_significant_line=line_txt
+            line_start=i+1
+            i+=1; continue
         if esc: esc=False; i+=1; continue
         if ch=='\\' and (ins or ind): esc=True; i+=1; continue
         if ch=="'" and not ind: ins=not ins; i+=1; continue
@@ -317,8 +329,13 @@ def split_args_with_spans(args:str, base_line:int, a:Alphabet, patterns:dict[str
             mt=tok_re.match(args,i)
             if mt:
                 tok=mt.group(1)
-                if tok in opens: block+=1
-                elif tok in closes and block>0: block-=1
+                if tok in opens:
+                    if tok=='then' and a.mechanics.get('elseif_then_does_not_open_new_block_depth', False) and then_belongs_to_elseif(i):
+                        pass
+                    else:
+                        block+=1
+                elif tok in closes and block>0:
+                    block-=1
                 i=mt.end(); continue
         if ch in '({[': depth+=1
         elif ch in ')}]' and depth>0: depth-=1
@@ -428,6 +445,160 @@ def statement_boundary_end(masked_right:str, a:Alphabet)->int:
         i+=1
     return len(masked_right)
 
+
+def split_top_level_csv(text: str, a: Alphabet, patterns: dict[str,re.Pattern[str]]) -> list[str]:
+    parts=[]; start=0; par=br=brace=0; block=0; ins=ind=esc=False; i=0
+    tok_re=patterns.get('block_token')
+    opens=set(a.block_tokens.get('open',[])); closes=set(a.block_tokens.get('close',[]))
+    while i < len(text):
+        ch=text[i]
+        if esc: esc=False; i+=1; continue
+        if ch=='\\' and (ins or ind): esc=True; i+=1; continue
+        if ch=="'" and not ind: ins=not ins; i+=1; continue
+        if ch=='"' and not ins: ind=not ind; i+=1; continue
+        if ins or ind: i+=1; continue
+        if tok_re:
+            mt=tok_re.match(text,i)
+            if mt:
+                tok=mt.group(1)
+                if tok in opens: block+=1
+                elif tok in closes and block>0: block-=1
+                i=mt.end(); continue
+        if ch=='(': par+=1
+        elif ch==')' and par>0: par-=1
+        elif ch=='[': br+=1
+        elif ch==']' and br>0: br-=1
+        elif ch=='{': brace+=1
+        elif ch=='}' and brace>0: brace-=1
+        elif ch==',' and par==0 and br==0 and brace==0 and block==0:
+            parts.append(text[start:i].strip()); start=i+1
+        i+=1
+    tail=text[start:].strip()
+    if tail or text.strip(): parts.append(tail)
+    return parts
+
+def rhs_is_direct_table_constructor(rhs: str) -> bool:
+    return rhs.strip().startswith('{')
+
+def classify_assignment_rhs(rhs: str, a: Alphabet, patterns: dict[str,re.Pattern[str]]) -> str:
+    vk=classify_value(rhs,a,patterns)
+    table_kind=a.mechanics.get('table_body_value_kind','table_literal')
+    if vk==table_kind and not rhs_is_direct_table_constructor(rhs):
+        return 'expression'
+    return vk
+
+def balanced_expression_end_line(lines:list[str], start_line:int, rhs_start_text:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->int|None:
+    par=br=brace=0; block=0; seen_balance_token=False; ins=ind=esc=False
+    tok_re=patterns.get('block_token')
+    opens=set(a.block_tokens.get('open',[])); closes=set(a.block_tokens.get('close',[]))
+    for ln in range(start_line, len(lines)+1):
+        text = rhs_start_text if ln==start_line else strip_line_comment(lines[ln-1])
+        code=mask_strings(strip_line_comment(text), patterns)
+        i=0
+        while i < len(code):
+            ch=code[i]
+            if esc: esc=False; i+=1; continue
+            if ch=='\\' and (ins or ind): esc=True; i+=1; continue
+            if ch=="'" and not ind: ins=not ins; i+=1; continue
+            if ch=='"' and not ins: ind=not ind; i+=1; continue
+            if ins or ind: i+=1; continue
+            if tok_re:
+                mt=tok_re.match(code,i)
+                if mt:
+                    tok=mt.group(1)
+                    if tok in opens:
+                        block+=1; seen_balance_token=True
+                    elif tok in closes and block>0:
+                        block-=1; seen_balance_token=True
+                    i=mt.end(); continue
+            if ch=='(': par+=1; seen_balance_token=True
+            elif ch==')' and par>0: par-=1
+            elif ch=='[': br+=1; seen_balance_token=True
+            elif ch==']' and br>0: br-=1
+            elif ch=='{': brace+=1; seen_balance_token=True
+            elif ch=='}' and brace>0: brace-=1
+            i+=1
+        if ln==start_line and not seen_balance_token:
+            return start_line
+        if seen_balance_token and par==0 and br==0 and brace==0 and block==0:
+            return ln
+    return None
+
+def collect_multiline_assignment_rhs(lines:list[str], start_line:int, rhs:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[str,int,bool]:
+    if not a.mechanics.get('multiline_assignment_rhs_enabled', False):
+        return rhs, start_line, True
+    end=balanced_expression_end_line(lines,start_line,rhs,a,patterns)
+    if end is None or end==start_line:
+        return rhs, end or start_line, end is not None
+    collected=[rhs.rstrip('\n')]
+    for ln in range(start_line+1,end+1):
+        collected.append(lines[ln-1].rstrip('\n'))
+    text='\n'.join(collected).strip()
+    return text,end,True
+
+def parse_inline_table_fields(table_text:str, base_line:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[dict[str,Any]]:
+    stripped=table_text.strip().rstrip(',').strip()
+    if not (stripped.startswith('{') and stripped.endswith('}')):
+        return []
+    inner=stripped[1:-1]
+    fields=[]; implicit_index=1
+    for part in split_top_level_csv(inner,a,patterns):
+        if not part: continue
+        key=None; value=part; key_payload=None
+        masked=mask_strings(part,patterns)
+        eq_pos=None
+        for m in re.finditer(r"=", masked):
+            if is_single_assignment_operator(masked,m.start()):
+                left=part[:m.start()].strip()
+                if re.fullmatch(a.regex.get('identifier', r'[A-Za-z_][A-Za-z0-9_]*'), left) or (left.startswith('[') and left.endswith(']')):
+                    eq_pos=m.start(); break
+        if eq_pos is not None:
+            key=part[:eq_pos].strip(); value=part[eq_pos+1:].strip(); key_payload=computed_key_payload(key,a)
+        else:
+            key=str(implicit_index); implicit_index+=1
+            key_payload={"key_syntax":a.mechanics.get('key_syntax_implicit_array_index','implicit_array_index'),"key_text":key,"key_expression":key,"key_expression_kind":"number_literal"}
+        fields.append({"key_payload":key_payload,"value":value,"value_kind":classify_value(value,a,patterns),"start_line":base_line})
+    return fields
+
+def inline_value_body_span(raw:str, line_no:int, value_kind:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->dict[str,Any]:
+    span=body_span_for_value([raw],1,value_kind,a,patterns)
+    if span.get('start_line') == 1:
+        span['start_line']=line_no
+    if span.get('end_line') == 1:
+        span['end_line']=line_no
+    return span
+
+def emit_inline_table_fields(items:list[dict[str,Any]], file_record:dict[str,Any], line_no:int, raw:str, owner_label:str, table_text:str, parent_context:list[dict[str,Any]], a:Alphabet, patterns:dict[str,re.Pattern[str]], table_depth:int=1):
+    # Inline table field expansion is only source-location-safe for a single raw
+    # source line. Multiline assignment-owned table literals must be traversed
+    # from their real source lines by the normal table-context scanner, not from
+    # collected RHS preview text.
+    if '\n' in table_text or '\r' in table_text:
+        return
+    if a.mechanics.get('preview_text_table_fields_forbidden_unless_marked_synthetic', False):
+        if raw != table_text and ('\n' in table_text or '\r' in table_text):
+            return
+    if not (a.mechanics.get('inline_table_constructor_fields_enabled', False) or a.mechanics.get('positional_table_fields_enabled', False)):
+        return
+    ent=first_entity(a,'table_field')
+    if not ent: return
+    base_context=list(parent_context)+[{"kind":a.mechanics.get('context_kind_table','table'),"start_line":line_no,"label":owner_label}]
+    for f in parse_inline_table_fields(table_text,line_no,a,patterns):
+        kp=f['key_payload']; val=f['value']; vk=f['value_kind']
+        payload={**kp,"value_kind":vk,"value_preview":val[:240],"value_truncated":len(val)>240,"table_depth":table_depth,"context_path":base_context}
+        if vk in set(a.mechanics.get('body_span_value_kinds',[])):
+            payload['value_body_span']=inline_value_body_span(raw,line_no,vk,a,patterns)
+        items.append(emit(ent['id'],file_record,line_no,raw,payload))
+        if vk==a.mechanics.get('table_body_value_kind') and a.mechanics.get('inline_nested_table_fields_enabled', False):
+            nested_label=kp.get('key_text')
+            nested_context=base_context+[{"kind":a.mechanics.get('context_kind_table','table'),"start_line":line_no,"label":nested_label}]
+            for nf in parse_inline_table_fields(val,line_no,a,patterns):
+                nkp=nf['key_payload']; nval=nf['value']; nvk=nf['value_kind']
+                npayload={**nkp,"value_kind":nvk,"value_preview":nval[:240],"value_truncated":len(nval)>240,"table_depth":table_depth+1,"context_path":nested_context}
+                if nvk in set(a.mechanics.get('body_span_value_kinds',[])):
+                    npayload['value_body_span']=inline_value_body_span(raw,line_no,nvk,a,patterns)
+                items.append(emit(ent['id'],file_record,line_no,raw,npayload))
+
 def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
     lhs=lhs.strip()
     if not lhs: return False
@@ -449,16 +620,20 @@ def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pat
         if re.match(r"^local\s+", masked_left):
             is_local=True
             raw_left=re.sub(r"^local\s+", "", raw_left, count=1).strip()
-            # Generic single-name local extraction for this syntax layer.
-            if ',' in raw_left: continue
-        lhs=raw_left.strip()
-        if not assignment_lhs_is_syntax(lhs,a): continue
         right_raw=code[eq+1:]
         right_masked=masked[eq+1:]
         rend=statement_boundary_end(right_masked,a)
         rhs=right_raw[:rend].strip()
         if not rhs: continue
-        out.append((is_local,lhs,rhs))
+        lhs_parts=split_top_level_csv(raw_left,a,patterns)
+        rhs_parts=split_top_level_csv(rhs,a,patterns)
+        if not lhs_parts: continue
+        for pos,lhs in enumerate(lhs_parts):
+            lhs=lhs.strip()
+            if not assignment_lhs_is_syntax(lhs,a):
+                continue
+            rhs_part=rhs_parts[pos].strip() if pos < len(rhs_parts) else 'nil'
+            out.append((is_local,lhs,rhs_part))
     return out
 
 def extract_multiline_call_arguments(lines:list[str], start_line:int, col:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[str,bool,list[ArgumentSpan]]:
@@ -516,6 +691,25 @@ def count_by(items:Iterable[dict[str,Any]], key:str)->dict[str,int]:
         v=str(it.get(key,'unknown')); d[v]=d.get(v,0)+1
     return dict(sorted(d.items()))
 
+def dedupe_table_fields(items:list[dict[str,Any]])->list[dict[str,Any]]:
+    seen=set(); out=[]
+    for it in items:
+        if it.get('kind')!='lua_table_field':
+            out.append(it); continue
+        ev=it.get('evidence',{})
+        key=(
+            ev.get('file_id'),
+            ev.get('line'),
+            it.get('table_depth'),
+            json.dumps(it.get('context_path',[]), ensure_ascii=False, sort_keys=True, separators=(',',':')),
+            it.get('key_text'),
+            it.get('value_preview'),
+        )
+        if key in seen:
+            continue
+        seen.add(key); out.append(it)
+    return out
+
 def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[list[dict[str,Any]],dict[str,Any]]:
     path=Path(str(file_record['absolute_path'])); expected=str(file_record.get('sha256','')); actual=file_sha256(path)
     text,enc=read_text_lossless(path); lines=text.splitlines(); ranges=discover_function_ranges(lines,a,patterns)
@@ -537,7 +731,10 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
             payload={**kp,"value_kind":vk,"value_preview":val[:240],"value_truncated":len(val)>240,"table_depth":len([c for c in stack if c.kind==a.mechanics.get('context_kind_table','table')]),"context_path":context_path(stack)}
             if vk in set(a.mechanics.get('body_span_value_kinds',[])): payload['value_body_span']=body_span_for_value(lines,idx,vk,a,patterns)
             items.append(emit(ent['id'],file_record,idx,raw,payload)); suppressed.update(ent.get('suppresses',[]))
-            if vk==a.mechanics.get('table_body_value_kind'): table_label_to_open=kp['key_text']
+            if vk==a.mechanics.get('table_body_value_kind'):
+                table_label_to_open=kp['key_text']
+                if val.strip().startswith('{'):
+                    emit_inline_table_fields(items,file_record,idx,raw,kp['key_text'],val,context_path(stack),a,patterns,table_depth=len([c for c in stack if c.kind==a.mechanics.get('context_kind_table','table')])+1)
             break
         # assignments
         assignment_ent_by_local = {
@@ -547,13 +744,25 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
         for is_local,lhs,rhs in extract_assignment_candidates(code,a,patterns):
             ent=assignment_ent_by_local.get(is_local)
             if not ent or ent['id'] in suppressed: continue
-            rk=classify_value(rhs,a,patterns)
-            payload={"lhs":lhs,"is_local":is_local,"rhs_kind":rk,"rhs_preview":rhs[:240],"rhs_truncated":len(rhs)>240}
+            rhs_full, rhs_end, rhs_complete = collect_multiline_assignment_rhs(lines,idx,rhs,a,patterns)
+            rk=classify_assignment_rhs(rhs_full,a,patterns)
+            payload={"lhs":lhs,"is_local":is_local,"rhs_kind":rk,"rhs_preview":rhs_full[:240],"rhs_truncated":len(rhs_full)>240}
+            if rhs_end != idx or not rhs_complete:
+                payload['rhs_span']={"start_line":idx,"end_line":rhs_end,"complete":rhs_complete}
             if rk in set(a.mechanics.get('body_span_value_kinds',[])): payload['rhs_body_span']=body_span_for_value(lines,idx,rk,a,patterns)
             items.append(emit(ent['id'],file_record,idx,raw,payload))
-            if rk==ent.get('opens_table_context_when_value_kind'): table_label_to_open=lhs
-            suppressed.add(ent['id'])
-            break
+            if rk==ent.get('opens_table_context_when_value_kind'):
+                table_label_to_open=lhs
+                # Only same-line direct table constructors may emit inline field
+                # evidence from the assignment line. Multiline RHS text is a
+                # collected preview/span, not source-line evidence for child
+                # fields; real child fields are emitted later from their own
+                # raw source lines by table-context traversal.
+                if rhs_is_direct_table_constructor(rhs_full) and rhs_end == idx and '\n' not in rhs_full and '\r' not in rhs_full:
+                    emit_inline_table_fields(items,file_record,idx,raw,lhs,rhs_full,context_path(stack),a,patterns,table_depth=len([c for c in stack if c.kind==a.mechanics.get('context_kind_table','table')])+1)
+            if not a.mechanics.get('multi_assignment_emit_each_lhs', False):
+                suppressed.add(ent['id'])
+                break
         # function declarations / assignments
         owned_function_literal_line=False
         for it in items:
@@ -670,6 +879,7 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
         for lm in pattern(patterns,long_lit['regex']).finditer(text):
             line_no=text.count('\n',0,lm.start())+1; val=lm.group(2); src=lines[line_no-1] if line_no-1<len(lines) else ''
             items.append(emit(long_lit['id'],file_record,line_no,src,{"literal_kind":long_lit.get('literal_kind'),"literal_form":long_lit.get('literal_form'),"equals_depth":len(lm.group(1)),"value":val[:max_string_length],"value_truncated":len(val)>max_string_length,"length":len(val),"column":1}))
+    items=dedupe_table_fields(items)
     summary={"file_id":file_record.get('file_id'),"relative_path":file_record.get('relative_path'),"absolute_path":file_record.get('absolute_path'),"realm_hint":file_record.get('realm_hint'),"expected_sha256":expected,"actual_sha256":actual,"digest_status":"match" if actual==expected else "mismatch","encoding":enc,"line_count":len(lines),"evidence_total":len(items),"evidence_kind_counts":count_by(items,'kind')}
     return items,summary
 
