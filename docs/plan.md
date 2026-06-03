@@ -19,28 +19,38 @@ it's a context for a chat, not a directive for immediate execution
         script_contracts.md
 
 1.3 Make a solid plan PASS
-1.3.1 Update system prompt PASS
-   Prompt updated implemented
-   → source_file_manifest:
-      None
-1.3.2 Update project sources, include new to system prompt if needed PASS
-   human_context updated
-   → source_file_manifest:
-      architecture.md
-1.3.2.1 Define a solid pipeline on base of plan and Current Architecture Intent in human_context.md PASS
-   Architectural decision has been made
-   → source_file_manifest:
-      None
+   1.3.1 Update system prompt PASS
+      Prompt updated implemented
+      → source_file_manifest:
+         None
+   1.3.2 Update project sources, include new to system prompt if needed PASS
+      human_context updated
+      → source_file_manifest:
+         architecture.md
+      1.3.2.1 Define a solid pipeline on base of plan and Current Architecture Intent in human_context.md PASS
+         Architectural decision has been made
+         → source_file_manifest:
+            None
 
 2. Raw extraction IN PROGRESS
-2.2 Make extract infrostructure IN PROGRESS
-2.2.1 Investigation of creation extract_lua_runtime_signals.py based on discover_lua_sources.py input CURRENT
-2.2.2 Working on extract_lua_runtime_signals.py INCLUDE
-2.2.3 Audit 2 chain pipeline discover_lua_sources -> extract_lua_runtime_signals INCLUDE
+2.1 Make extract infrostructure IN PROGRESS
+   2.1.1 Investigation of creation extract_lua_runtime_signals.py based on discover_lua_sources.py input PASS
+      test variant extract_lua_runtime_signals.py inplemented
+      → source_file_manifest:
+         lua_syntax_alphabet.json
+         lua_syntax_alphabet.md
+   2.1.2 Working on extract_lua_runtime_signals.py IN PROGRESS
+      2.1.2.1 Validate extract_lua_runtime_signals.py output agaist raw LUA CURRENT
+      2.1.2.2 Polish extraction alphabet for extract_lua_runtime_signals.py INCLUDE
+      2.1.2.3 provide fixes for extract_lua_runtime_signals.py and lua_syntax_alphabet build_pipeline_contract_registry generation for INCLUDE
+2.2 Audit 2 chain pipeline discover_lua_sources -> extract_lua_runtime_signals NEXT
 
-3. Normalization NEXT
-   → normalize_runtime_facts.py
-   → normalized_runtime_facts
+3. Normalization
+3.1 Investigation of creation normalize_runtime_facts.py based on extract_lua_runtime_signals.py input
+   3.1.1 Working on normalize_runtime_facts.py
+      3.1.1.1 Validate normalize_runtime_facts.py output agaist raw LUA and extract_lua_runtime_signals.py output artifact
+      3.1.1.2 Polish extraction alphabet for normalize_runtime_facts.py
+3.2 Audit 3 chain pipeline discover_lua_sources -> extract_lua_runtime_signals -> normalize_runtime_facts
 
 4. Relationship topology
    → build_runtime_topology.py

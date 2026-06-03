@@ -8,20 +8,20 @@
       "return_code": 0
     },
     {
+      "help": "usage: extract_lua_runtime_signals.py [-h] --workspace WORKSPACE\n                                      [--input-manifest INPUT_MANIFEST]\n                                      [--lua-syntax-alphabet LUA_SYNTAX_ALPHABET]\n                                      [--out-json OUT_JSON] [--out-md OUT_MD]\n                                      [--max-string-length MAX_STRING_LENGTH]\n                                      [--fail-on-digest-mismatch]\n\nExecute lua_syntax_alphabet-declared Lua syntax extraction rules.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --input-manifest INPUT_MANIFEST\n  --lua-syntax-alphabet LUA_SYNTAX_ALPHABET\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --max-string-length MAX_STRING_LENGTH\n  --fail-on-digest-mismatch",
+      "help_ok": true,
+      "module": "scripts.extraction.extract_lua_runtime_signals",
+      "path": "scripts/extraction/extract_lua_runtime_signals.py",
+      "return_code": 0
+    },
+    {
       "help": "usage: build_pipeline_contract_registry.py [-h] --workspace WORKSPACE\n                                           [--out-json OUT_JSON]\n                                           [--out-md OUT_MD]\n                                           [--cli-out-json CLI_OUT_JSON]\n                                           [--cli-out-md CLI_OUT_MD]\n                                           [--script-root SCRIPT_ROOT]\n                                           [--artifact-root ARTIFACT_ROOT]\n                                           [--include-missing-artifacts]\n                                           [--skip-cli-help]\n                                           [--help-timeout HELP_TIMEOUT]\n                                           [--fail-on-error]\n\nBuild generic SIGNALIS AI pipeline artifact + script CLI contract registries.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n                        Workspace root, e.g. E:/signalis_ai\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --cli-out-json CLI_OUT_JSON\n  --cli-out-md CLI_OUT_MD\n  --script-root SCRIPT_ROOT\n                        Optional scan root for Python scripts. Repeatable.\n                        Defaults to the workspace root.\n  --artifact-root ARTIFACT_ROOT\n                        Optional scan root for artifacts. Repeatable. Defaults\n                        to the workspace root.\n  --include-missing-artifacts\n                        Also include JSON/JSONL/MD files without explicit\n                        artifact metadata.\n  --skip-cli-help       Do not run python -m <module> --help.\n  --help-timeout HELP_TIMEOUT\n  --fail-on-error",
       "help_ok": true,
       "module": "scripts.tools.build_pipeline_contract_registry",
       "path": "scripts/tools/build_pipeline_contract_registry.py",
       "return_code": 0
-    },
-    {
-      "help": "usage: generate_project_structure.py [-h] --workspace WORKSPACE\n                                     [--output OUTPUT] [--max-depth MAX_DEPTH]\n\nGenerate SIGNALIS AI project structure manifest.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --output OUTPUT\n  --max-depth MAX_DEPTH",
-      "help_ok": true,
-      "module": "scripts.tools.generate_project_structure",
-      "path": "scripts/tools/generate_project_structure.py",
-      "return_code": 0
     }
   ],
-  "generated_at": "2026-06-02T21:13:05Z",
+  "generated_at": "2026-06-03T11:07:46Z",
   "schema": "script_cli_contracts"
 }

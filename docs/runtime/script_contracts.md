@@ -38,6 +38,32 @@ options:
                         manifests/extraction/source_file_manifest.md.
 ```
 
+### `scripts.extraction.extract_lua_runtime_signals`
+
+- Path: `scripts/extraction/extract_lua_runtime_signals.py`
+- Help status: `OK`
+
+```text
+usage: extract_lua_runtime_signals.py [-h] --workspace WORKSPACE
+                                      [--input-manifest INPUT_MANIFEST]
+                                      [--lua-syntax-alphabet LUA_SYNTAX_ALPHABET]
+                                      [--out-json OUT_JSON] [--out-md OUT_MD]
+                                      [--max-string-length MAX_STRING_LENGTH]
+                                      [--fail-on-digest-mismatch]
+
+Execute lua_syntax_alphabet-declared Lua syntax extraction rules.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --input-manifest INPUT_MANIFEST
+  --lua-syntax-alphabet LUA_SYNTAX_ALPHABET
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --max-string-length MAX_STRING_LENGTH
+  --fail-on-digest-mismatch
+```
+
 ## tools
 
 ### `scripts.tools.build_pipeline_contract_registry`
@@ -80,23 +106,5 @@ options:
   --skip-cli-help       Do not run python -m <module> --help.
   --help-timeout HELP_TIMEOUT
   --fail-on-error
-```
-
-### `scripts.tools.generate_project_structure`
-
-- Path: `scripts/tools/generate_project_structure.py`
-- Help status: `OK`
-
-```text
-usage: generate_project_structure.py [-h] --workspace WORKSPACE
-                                     [--output OUTPUT] [--max-depth MAX_DEPTH]
-
-Generate SIGNALIS AI project structure manifest.
-
-options:
-  -h, --help            show this help message and exit
-  --workspace WORKSPACE
-  --output OUTPUT
-  --max-depth MAX_DEPTH
 ```
 

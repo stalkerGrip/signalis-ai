@@ -1,90 +1,32 @@
 from __future__ import annotations
 
-import argparse
-import hashlib
-import json
-import re
+import argparse, hashlib, json, re
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-
 PIPELINE_CONTRACT = {
     "script_id": "scripts.extraction.extract_lua_runtime_signals",
-    "purpose": "Extract generic raw Lua syntax evidence from files listed in source_file_manifest without project-specific or runtime semantic assumptions.",
+    "purpose": "Execute lua_syntax_alphabet-declared generic Lua syntax extraction entities against files listed in source_file_manifest.",
     "pipeline_stage": "extraction",
-    "input_families": ["source_file_manifest"],
-    "required_input_capabilities": [
-        "source_roots",
-        "source_files",
-        "file_realm_hints",
-        "file_digests",
-    ],
+    "input_families": ["source_file_manifest", "lua_syntax_alphabet"],
+    "required_input_capabilities": ["source_roots", "source_files", "file_realm_hints", "file_digests", "syntax_extraction_rules"],
     "output_families": ["raw_lua_extraction"],
-    "required_output_capabilities": [
-        "source_manifest_reference",
-        "file_digest_verification",
-        "lua_assignments",
-        "lua_table_fields",
-        "lua_literal_values",
-        "lua_function_definitions",
-        "lua_function_assignments",
-        "lua_anonymous_functions",
-        "lua_call_expressions",
-        "lua_method_call_expressions",
-        "lua_call_arguments",
-        "lua_function_body_spans",
-        "line_evidence",
-    ],
+    "required_output_capabilities": ["source_manifest_reference", "lua_syntax_alphabet_reference", "file_digest_verification", "line_evidence"],
     "output_schemas": ["raw_lua_extraction"],
-    "artifact_patterns": [
-        "manifests/extraction/raw_lua_extraction.json",
-        "manifests/extraction/raw_lua_extraction.md",
-    ],
+    "artifact_patterns": ["manifests/extraction/raw_lua_extraction.json", "manifests/extraction/raw_lua_extraction.md"],
     "promotion_role": "intermediate_evidence",
     "canonical_status": "active",
 }
-
-SCRIPT_ID = "scripts.extraction.extract_lua_runtime_signals"
-SCHEMA = "raw_lua_extraction"
-SCHEMA_VERSION = "1"
-ARTIFACT_FAMILY = "raw_lua_extraction"
-REQUIRED_CAPABILITIES = PIPELINE_CONTRACT["required_output_capabilities"]
-
-IDENT = r"[A-Za-z_][A-Za-z0-9_]*"
-QUALIFIED = rf"{IDENT}(?:(?:\.|:){IDENT})*"
-
-FUNCTION_RE = re.compile(rf"^\s*(?:(local)\s+)?function\s+({QUALIFIED})\s*\(([^)]*)\)")
-ASSIGNED_FUNCTION_RE = re.compile(rf"^\s*({QUALIFIED}(?:\[[^\]]+\])?)\s*=\s*function\s*\(([^)]*)\)")
-LOCAL_ASSIGNED_FUNCTION_RE = re.compile(rf"^\s*local\s+({IDENT})\s*=\s*function\s*\(([^)]*)\)")
-LOCAL_ASSIGNMENT_RE = re.compile(rf"^\s*local\s+(?P<lhs>{IDENT})\s*=\s*(?P<rhs>.+?)\s*$")
-ASSIGNMENT_RE = re.compile(r"^\s*(?P<lhs>[^=~<>]+?)\s*=\s*(?P<rhs>.+?)\s*$")
-TABLE_FIELD_RE = re.compile(rf"^\s*(?P<key>{IDENT}|\[[^\]]+\])\s*=\s*(?P<value>.+?)(?:,)?\s*$")
-CALL_RE = re.compile(rf"(?<![\w.:'\"])(?P<target>{QUALIFIED})\s*\(")
-STRING_RE = re.compile(r"(?P<quote>['\"])(?P<value>(?:\\.|(?!\1).)*)(?P=quote)")
-LONG_STRING_RE = re.compile(r"\[(=*)\[(.*?)\]\1\]", re.DOTALL)
-TOKEN_RE = re.compile(r"\b(function|then|do|repeat|end|until)\b")
-
-CONTROL_CALL_WORDS = {
-    "if",
-    "for",
-    "while",
-    "repeat",
-    "until",
-    "return",
-    "function",
-    "local",
-    "elseif",
-}
-
+SCRIPT_ID="scripts.extraction.extract_lua_runtime_signals"; SCHEMA="raw_lua_extraction"; SCHEMA_VERSION="1"; ARTIFACT_FAMILY="raw_lua_extraction"
 
 @dataclass
 class SyntaxContext:
     kind: str
     start_line: int
-    label: str | None = None
-
+    label: str|None
+    open_function_depth: int
 
 @dataclass
 class ArgumentSpan:
@@ -92,976 +34,429 @@ class ArgumentSpan:
     start_line: int
     end_line: int
 
+@dataclass
+class Alphabet:
+    path: str
+    artifact_id: str|None
+    content_digest: str|None
+    regex: dict[str,str]
+    regex_flags: dict[str,list[str]]
+    syntax_entities: list[dict[str,Any]]
+    mechanics: dict[str,Any]
+    value_rules: list[dict[str,Any]]
+    value_detection: dict[str,str]
+    literal_tokens: dict[str,list[str]]
+    control_call_words: set[str]
+    block_tokens: dict[str,list[str]]
 
-def stable_hash(value: Any) -> str:
-    payload = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
-    return hashlib.sha256(payload.encode("utf-8")).hexdigest()
 
+def stable_hash(v: Any)->str:
+    return hashlib.sha256(json.dumps(v, ensure_ascii=False, sort_keys=True, separators=(",",":")).encode()).hexdigest()
 
-def file_sha256(path: Path) -> str:
-    h = hashlib.sha256()
-    with path.open("rb") as f:
-        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+def file_sha256(path: Path)->str:
+    h=hashlib.sha256()
+    with path.open('rb') as f:
+        for chunk in iter(lambda:f.read(1024*1024), b''):
             h.update(chunk)
     return h.hexdigest()
 
+def normalize_path(p: Path|str)->str:
+    return Path(p).as_posix() if isinstance(p,Path) else str(p).replace('\\','/')
 
-def normalize_path(path: Path | str) -> str:
-    return Path(path).as_posix() if isinstance(path, Path) else str(path).replace("\\", "/")
-
-
-def load_json(path: Path) -> dict[str, Any]:
-    with path.open("r", encoding="utf-8") as f:
-        data = json.load(f)
-    if not isinstance(data, dict):
-        raise ValueError(f"JSON root must be an object: {path}")
+def load_json(path: Path)->dict[str,Any]:
+    data=json.loads(path.read_text(encoding='utf-8'))
+    if not isinstance(data,dict): raise ValueError(f"JSON root must be object: {path}")
     return data
 
+def load_alphabet(path: Path)->Alphabet:
+    data=load_json(path)
+    if data.get('schema')!='lua_syntax_alphabet' or data.get('artifact_family')!='lua_syntax_alphabet':
+        raise ValueError(f"Input is not lua_syntax_alphabet: {path}")
+    entities=data.get('syntax_entities')
+    if not isinstance(entities,list) or not entities:
+        raise ValueError('lua_syntax_alphabet.syntax_entities must be a non-empty list')
+    return Alphabet(
+        path=normalize_path(path), artifact_id=data.get('artifact_id'), content_digest=data.get('content_digest'),
+        regex={str(k):str(v) for k,v in data.get('regex',{}).items()},
+        regex_flags={str(k):[str(x) for x in v] for k,v in data.get('regex_flags',{}).items()},
+        syntax_entities=[dict(x) for x in entities if dict(x).get('enabled', True)],
+        mechanics=dict(data.get('mechanics',{})),
+        value_rules=[dict(x) for x in data.get('value_classification_rules',[])],
+        value_detection={str(k):str(v) for k,v in data.get('value_detection',{}).items()},
+        literal_tokens={str(k):[str(x) for x in v] for k,v in data.get('literal_tokens',{}).items()},
+        control_call_words={str(x) for x in data.get('control_call_words',[])},
+        block_tokens={str(k):[str(x) for x in v] for k,v in data.get('block_tokens',{}).items()},
+    )
 
-def validate_manifest(manifest: dict[str, Any], manifest_path: Path) -> None:
-    if manifest.get("schema") != "source_file_manifest":
-        raise ValueError(f"Input is not a source_file_manifest: {manifest_path}")
-    if manifest.get("artifact_family") != "source_file_manifest":
-        raise ValueError(f"Input artifact family is not source_file_manifest: {manifest_path}")
-    if not isinstance(manifest.get("source_files"), list):
-        raise ValueError(f"source_file_manifest.source_files must be a list: {manifest_path}")
+def compile_patterns(a: Alphabet)->dict[str,re.Pattern[str]]:
+    flag_map={'DOTALL':re.DOTALL, 'MULTILINE':re.MULTILINE, 'IGNORECASE':re.IGNORECASE}
+    out={}
+    for name, pat in a.regex.items():
+        flags=0
+        for f in a.regex_flags.get(name,[]): flags |= flag_map.get(f,0)
+        out[name]=re.compile(pat, flags)
+    return out
 
+def entity_by_operation(a: Alphabet, op: str)->list[dict[str,Any]]:
+    return [e for e in a.syntax_entities if e.get('parser_operation')==op]
 
-def read_text_lossless(path: Path) -> tuple[str, str]:
-    raw = path.read_bytes()
-    try:
-        return raw.decode("utf-8"), "utf-8"
-    except UnicodeDecodeError:
-        return raw.decode("utf-8", errors="replace"), "utf-8-replace"
+def first_entity(a: Alphabet, op: str)->dict[str,Any]|None:
+    xs=entity_by_operation(a,op); return xs[0] if xs else None
 
+def pattern(patterns: dict[str,re.Pattern[str]], name: str)->re.Pattern[str]:
+    if name not in patterns: raise ValueError(f"Alphabet regex not found: {name}")
+    return patterns[name]
 
-def strip_line_comment(line: str) -> str:
-    in_single = False
-    in_double = False
-    escaped = False
-    i = 0
-    while i < len(line):
-        ch = line[i]
-        nxt = line[i + 1] if i + 1 < len(line) else ""
-        if escaped:
-            escaped = False
-        elif ch == "\\" and (in_single or in_double):
-            escaped = True
-        elif ch == "'" and not in_double:
-            in_single = not in_single
-        elif ch == '"' and not in_single:
-            in_double = not in_double
-        elif ch == "-" and nxt == "-" and not in_single and not in_double:
-            return line[:i]
-        i += 1
+def read_text_lossless(path: Path)->tuple[str,str]:
+    raw=path.read_bytes()
+    try: return raw.decode('utf-8'), 'utf-8'
+    except UnicodeDecodeError: return raw.decode('utf-8', errors='replace'), 'utf-8-replace'
+
+def strip_line_comment(line: str)->str:
+    in_s=in_d=esc=False; i=0
+    while i<len(line):
+        ch=line[i]; nx=line[i+1] if i+1<len(line) else ''
+        if esc: esc=False
+        elif ch=='\\' and (in_s or in_d): esc=True
+        elif ch=="'" and not in_d: in_s=not in_s
+        elif ch=='"' and not in_s: in_d=not in_d
+        elif ch=='-' and nx=='-' and not in_s and not in_d: return line[:i]
+        i+=1
     return line
 
+def mask_strings(line: str, patterns: dict[str,re.Pattern[str]])->str:
+    if 'string_literal' not in patterns: return line
+    return patterns['string_literal'].sub(lambda m:m.group('quote')+('_'*len(m.group('value')))+m.group('quote'), line)
 
-def mask_strings(line: str) -> str:
-    return STRING_RE.sub(lambda m: m.group("quote") + ("_" * len(m.group("value"))) + m.group("quote"), line)
+def split_params(params: str)->list[str]: return [p.strip() for p in params.split(',') if p.strip()]
 
+def classify_value(value: str, a: Alphabet, patterns: dict[str,re.Pattern[str]])->str:
+    s=value.strip().rstrip(',').strip()
+    for rule in a.value_rules:
+        m=rule.get('match')
+        if m=='empty' and s=='': return str(rule['value_kind'])
+        if m=='startswith' and s.startswith(str(rule.get('value',''))): return str(rule['value_kind'])
+        if m=='token_list' and s in set(a.literal_tokens.get(str(rule.get('tokens')), [])): return str(rule['value_kind'])
+        if m=='regex_fullmatch':
+            name=str(rule.get('regex'))
+            pat=a.value_detection.get(name, a.regex.get(name))
+            if pat and re.fullmatch(pat, s): return str(rule['value_kind'])
+        if m=='compiled_regex_fullmatch':
+            name=str(rule.get('regex'))
+            if name in patterns and patterns[name].fullmatch(s): return str(rule['value_kind'])
+        if m=='fallback': return str(rule['value_kind'])
+    return 'unclassified'
 
-def split_params(params: str) -> list[str]:
-    return [part.strip() for part in params.split(",") if part.strip()]
+def line_evidence(file_record: dict[str,Any], line_no:int, line:str)->dict[str,Any]:
+    return {"file_id":file_record.get('file_id'),"source_root_index":file_record.get('source_root_index'),"relative_path":file_record.get('relative_path'),"absolute_path":file_record.get('absolute_path'),"realm_hint":file_record.get('realm_hint'),"line":line_no,"text":line.rstrip('\n')}
 
+def emit(kind: str, file_record:dict[str,Any], line_no:int, line:str, payload:dict[str,Any])->dict[str,Any]:
+    e={"kind":kind,"evidence_id":"raw_lua_evidence:"+stable_hash({"kind":kind,"file_id":file_record.get('file_id'),"line":line_no,"payload":payload,"text":line.rstrip('\n')})[:16],"evidence":line_evidence(file_record,line_no,line)}
+    e.update(payload); return e
 
-def split_args(args: str) -> list[str]:
-    return [span.text for span in split_args_with_spans(args, 1)]
+def symbol_shape(target: str)->dict[str,Any]:
+    seps=[c for c in target if c in '.:']; parts=re.split(r'[.:]', target)
+    return {"target":target,"root":parts[0] if parts else target,"leaf":parts[-1] if parts else target,"parts":parts,"separators":seps,"uses_method_colon":':' in seps,"uses_table_dot":'.' in seps}
 
+def context_path(stack:list[SyntaxContext])->list[dict[str,Any]]:
+    return [{"kind":c.kind,"start_line":c.start_line,"label":c.label} for c in stack]
 
-def split_args_with_spans(args: str, base_line: int) -> list[ArgumentSpan]:
-    spans: list[ArgumentSpan] = []
-    start = 0
-    depth = 0
-    block_depth = 0
-    in_single = False
-    in_double = False
-    escaped = False
-    i = 0
+def computed_key_payload(raw_key:str,a:Alphabet)->dict[str,Any]:
+    key=raw_key.strip(); mech=a.mechanics
+    if key.startswith('[') and key.endswith(']'):
+        expr=key[1:-1].strip(); return {"key_syntax":mech.get('key_syntax_computed','computed_key'),"key_text":key,"key_expression":expr,"key_expression_kind":"expression"}
+    return {"key_syntax":mech.get('key_syntax_identifier','identifier_key'),"key_text":key,"key_expression":key,"key_expression_kind":mech.get('identifier_key_expression_kind','identifier')}
 
-    def line_for_offset(offset: int) -> int:
-        return base_line + args.count("\n", 0, max(0, min(offset, len(args))))
-
-    def append_span(raw_start: int, raw_end: int) -> None:
-        raw = args[raw_start:raw_end]
-        stripped = raw.strip()
-        if not stripped:
-            return
-        leading_ws = len(raw) - len(raw.lstrip())
-        trailing_ws = len(raw.rstrip())
-        actual_start = raw_start + leading_ws
-        actual_end = raw_start + trailing_ws
-        spans.append(
-            ArgumentSpan(
-                text=stripped,
-                start_line=line_for_offset(actual_start),
-                end_line=line_for_offset(max(actual_start, actual_end - 1)),
-            )
-        )
-
-    def consume_word(pos: int) -> tuple[str | None, int]:
-        m = TOKEN_RE.match(args, pos)
-        if not m:
-            return None, pos
-        return m.group(1), m.end()
-
-    while i < len(args):
-        ch = args[i]
-        if escaped:
-            escaped = False
-            i += 1
-            continue
-        if ch == "\\" and (in_single or in_double):
-            escaped = True
-            i += 1
-            continue
-        if ch == "'" and not in_double:
-            in_single = not in_single
-            i += 1
-            continue
-        if ch == '"' and not in_single:
-            in_double = not in_double
-            i += 1
-            continue
-        if in_single or in_double:
-            i += 1
-            continue
-        if ch.isalpha() or ch == "_":
-            token, end_pos = consume_word(i)
-            if token:
-                if token in {"function", "then", "do", "repeat"}:
-                    block_depth += 1
-                elif token in {"end", "until"} and block_depth > 0:
-                    block_depth -= 1
-                i = end_pos
-                continue
-        if ch in "({[":
-            depth += 1
-        elif ch in ")}]" and depth > 0:
-            depth -= 1
-        elif ch == "," and depth == 0 and block_depth == 0:
-            append_span(start, i)
-            start = i + 1
-        i += 1
-    append_span(start, len(args))
-    return spans
-
-def classify_value(value: str) -> str:
-    stripped = value.strip().rstrip(",").strip()
-    if stripped == "":
-        return "empty"
-    if stripped.startswith("{"):
-        return "table_literal"
-    if stripped.startswith("function"):
-        return "function_literal"
-    if stripped in {"true", "false"}:
-        return "boolean_literal"
-    if stripped == "nil":
-        return "nil_literal"
-    if re.fullmatch(r"[-+]?\d+(?:\.\d+)?", stripped):
-        return "number_literal"
-    if STRING_RE.fullmatch(stripped) or LONG_STRING_RE.fullmatch(stripped):
-        return "string_literal"
-    if re.fullmatch(QUALIFIED, stripped):
-        return "symbol_reference"
-    return "expression"
-
-
-def symbol_shape(target: str) -> dict[str, Any]:
-    separators = [ch for ch in target if ch in ".:"]
-    parts = re.split(r"[.:]", target)
-    return {
-        "target": target,
-        "root": parts[0] if parts else target,
-        "leaf": parts[-1] if parts else target,
-        "parts": parts,
-        "separators": separators,
-        "uses_method_colon": ":" in separators,
-        "uses_table_dot": "." in separators,
-    }
-
-
-def line_evidence(file_record: dict[str, Any], line_no: int, line: str) -> dict[str, Any]:
-    return {
-        "file_id": file_record.get("file_id"),
-        "source_root_index": file_record.get("source_root_index"),
-        "relative_path": file_record.get("relative_path"),
-        "absolute_path": file_record.get("absolute_path"),
-        "realm_hint": file_record.get("realm_hint"),
-        "line": line_no,
-        "text": line.rstrip("\n"),
-    }
-
-
-def emit_evidence(kind: str, file_record: dict[str, Any], line_no: int, line: str, payload: dict[str, Any]) -> dict[str, Any]:
-    base = {
-        "kind": kind,
-        "evidence_id": "raw_lua_evidence:"
-        + stable_hash(
-            {
-                "kind": kind,
-                "file_id": file_record.get("file_id"),
-                "line": line_no,
-                "payload": payload,
-                "text": line.rstrip("\n"),
-            }
-        )[:16],
-        "evidence": line_evidence(file_record, line_no, line),
-    }
-    base.update(payload)
-    return base
-
-
-def current_table_depth(context_stack: list[SyntaxContext]) -> int:
-    return sum(1 for ctx in context_stack if ctx.kind == "table")
-
-
-def context_path(context_stack: list[SyntaxContext]) -> list[dict[str, Any]]:
-    return [{"kind": ctx.kind, "start_line": ctx.start_line, "label": ctx.label} for ctx in context_stack]
-
-
-def computed_key_payload(raw_key: str) -> dict[str, Any]:
-    key = raw_key.strip()
-    if key.startswith("[") and key.endswith("]"):
-        expr = key[1:-1].strip()
-        return {
-            "key_syntax": "computed_key",
-            "key_text": key,
-            "key_expression": expr,
-            "key_expression_kind": classify_value(expr),
-        }
-    return {
-        "key_syntax": "identifier_key",
-        "key_text": key,
-        "key_expression": key,
-        "key_expression_kind": "identifier",
-    }
-
-
-def extract_call_arguments(code_line: str, call_start: int) -> tuple[str, bool]:
-    open_index = code_line.find("(", call_start)
-    if open_index == -1:
-        return "", False
-    depth = 0
-    in_single = False
-    in_double = False
-    escaped = False
-    for index in range(open_index, len(code_line)):
-        ch = code_line[index]
-        if escaped:
-            escaped = False
-            continue
-        if ch == "\\" and (in_single or in_double):
-            escaped = True
-            continue
-        if ch == "'" and not in_double:
-            in_single = not in_single
-            continue
-        if ch == '"' and not in_single:
-            in_double = not in_double
-            continue
-        if in_single or in_double:
-            continue
-        if ch == "(":
-            depth += 1
-        elif ch == ")":
-            depth -= 1
-            if depth == 0:
-                return code_line[open_index + 1 : index], True
-    return code_line[open_index + 1 :], False
-
-
-def extract_multiline_call_arguments(lines: list[str], start_line: int, call_start_column: int) -> tuple[str, bool, list[ArgumentSpan]]:
-    first = strip_line_comment(lines[start_line - 1])
-    open_index = first.find("(", call_start_column - 1)
-    if open_index == -1:
-        return "", False, []
-
-    chunks: list[str] = []
-    depth = 0
-    started = False
-    in_single = False
-    in_double = False
-    escaped = False
-
-    for line_no in range(start_line, len(lines) + 1):
-        code = strip_line_comment(lines[line_no - 1])
-        begin = open_index if line_no == start_line else 0
-        i = begin
-        while i < len(code):
-            ch = code[i]
-            if escaped:
-                escaped = False
-                if started:
-                    chunks.append(ch)
-                i += 1
-                continue
-            if ch == "\\" and (in_single or in_double):
-                escaped = True
-                if started:
-                    chunks.append(ch)
-                i += 1
-                continue
-            if ch == "'" and not in_double:
-                in_single = not in_single
-                if started:
-                    chunks.append(ch)
-                i += 1
-                continue
-            if ch == '"' and not in_single:
-                in_double = not in_double
-                if started:
-                    chunks.append(ch)
-                i += 1
-                continue
-            if in_single or in_double:
-                if started:
-                    chunks.append(ch)
-                i += 1
-                continue
-            if ch == "(":
-                depth += 1
-                if started:
-                    chunks.append(ch)
-                else:
-                    started = True
-                i += 1
-                continue
-            if ch == ")":
-                depth -= 1
-                if depth == 0 and started:
-                    args_text = "".join(chunks)
-                    return args_text, True, split_args_with_spans(args_text, start_line)
-                if started:
-                    chunks.append(ch)
-                i += 1
-                continue
-            if started:
-                chunks.append(ch)
-            i += 1
-        if started:
-            chunks.append("\n")
-    args_text = "".join(chunks)
-    return args_text, False, split_args_with_spans(args_text, start_line)
-
-
-def close_leading_table_context(code_line: str, context_stack: list[SyntaxContext]) -> None:
-    stripped = mask_strings(code_line).strip()
-    if not stripped.startswith("}"):
-        return
-    for i in range(len(context_stack) - 1, -1, -1):
-        if context_stack[i].kind == "table":
-            del context_stack[i:]
-            break
-
-
-def update_context_stack_after_line(code_line: str, line_no: int, context_stack: list[SyntaxContext], table_label: str | None) -> None:
-    masked = mask_strings(code_line)
-    stripped = masked.strip()
-    leading_close = 1 if stripped.startswith("}") else 0
-    open_count = masked.count("{")
-    close_count = max(0, masked.count("}") - leading_close)
-
-    for open_index in range(open_count):
-        label = table_label if open_index == 0 else None
-        context_stack.append(SyntaxContext(kind="table", start_line=line_no, label=label))
-    for _ in range(close_count):
-        for i in range(len(context_stack) - 1, -1, -1):
-            if context_stack[i].kind == "table":
-                del context_stack[i:]
-                break
-
-
-def tokenized_block_end_line(lines: list[str], start_line: int) -> int | None:
-    stack: list[str] = []
-    for line_index in range(start_line - 1, len(lines)):
-        code = mask_strings(strip_line_comment(lines[line_index]))
-        for token in TOKEN_RE.findall(code):
-            if token in {"function", "then", "do", "repeat"}:
-                stack.append(token)
-            elif token == "until":
-                for i in range(len(stack) - 1, -1, -1):
-                    if stack[i] == "repeat":
-                        del stack[i:]
-                        break
-            elif token == "end":
-                if stack:
+def tokenized_block_end_line(lines:list[str], start_line:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->int|None:
+    stack=[]; tok_re=patterns.get('block_token');
+    if not tok_re: return None
+    opens=set(a.block_tokens.get('open',[])); closes=set(a.block_tokens.get('close',[]))
+    for li in range(start_line-1, len(lines)):
+        code=mask_strings(strip_line_comment(lines[li]), patterns)
+        for tok in tok_re.findall(code):
+            if tok in opens: stack.append(tok)
+            elif tok in closes:
+                if tok=='until':
+                    for i in range(len(stack)-1,-1,-1):
+                        if stack[i]=='repeat': del stack[i:]; break
+                elif stack:
                     stack.pop()
-                    if not stack:
-                        return line_index + 1
+                    if not stack: return li+1
     return None
 
-
-def table_literal_end_line(lines: list[str], start_line: int) -> int | None:
-    depth = 0
-    seen_open = False
-    for line_index in range(start_line - 1, len(lines)):
-        code = mask_strings(strip_line_comment(lines[line_index]))
+def table_literal_end_line(lines:list[str], start_line:int, patterns:dict[str,re.Pattern[str]])->int|None:
+    depth=0; seen=False
+    for li in range(start_line-1,len(lines)):
+        code=mask_strings(strip_line_comment(lines[li]), patterns)
         for ch in code:
-            if ch == "{":
-                depth += 1
-                seen_open = True
-            elif ch == "}" and seen_open:
-                depth -= 1
-                if depth <= 0:
-                    return line_index + 1
+            if ch=='{': depth+=1; seen=True
+            elif ch=='}' and seen:
+                depth-=1
+                if depth<=0: return li+1
     return None
 
+def body_span_for_value(lines:list[str], start_line:int, value_kind:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->dict[str,Any]:
+    if value_kind==a.mechanics.get('function_body_value_kind'):
+        end=tokenized_block_end_line(lines,start_line,a,patterns)
+    elif value_kind==a.mechanics.get('table_body_value_kind'):
+        end=table_literal_end_line(lines,start_line,patterns)
+    else: end=None
+    return {"start_line":start_line,"end_line":end,"complete":end is not None}
 
-def body_span_for_value(lines: list[str], start_line: int, value_kind: str) -> dict[str, Any]:
-    if value_kind == "function_literal":
-        end_line = tokenized_block_end_line(lines, start_line)
-    elif value_kind == "table_literal":
-        end_line = table_literal_end_line(lines, start_line)
-    else:
-        end_line = None
-    return {"start_line": start_line, "end_line": end_line, "complete": end_line is not None}
+def discover_function_ranges(lines:list[str], a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[tuple[int,int]]:
+    ranges=[]
+    for idx,line in enumerate(lines,1):
+        code=strip_line_comment(line)
+        for op in ['function_definition','assigned_function','local_assigned_function']:
+            ent=first_entity(a,op)
+            if ent and pattern(patterns, ent['regex']).match(code):
+                end=tokenized_block_end_line(lines,idx,a,patterns)
+                if end: ranges.append((idx,end))
+        # table field function literal
+        ent=first_entity(a,'table_field')
+        if ent:
+            m=pattern(patterns,ent['regex']).match(code)
+            if m and classify_value(m.group('value'),a,patterns)==a.mechanics.get('function_body_value_kind'):
+                end=tokenized_block_end_line(lines,idx,a,patterns)
+                if end: ranges.append((idx,end))
+    return ranges
 
+def function_depth_at(line_no:int, ranges:list[tuple[int,int]])->int:
+    return sum(1 for s,e in ranges if s < line_no < e)
 
-def emit_call_argument_evidence(
-    evidence_items: list[dict[str, Any]],
-    file_record: dict[str, Any],
-    line_no: int,
-    source_line: str,
-    parent_call: dict[str, Any],
-    argument_index: int,
-    argument_text: str,
-    argument_start_line: int,
-    argument_end_line: int,
-    lines: list[str],
-) -> None:
-    argument_kind = classify_value(argument_text)
-    payload: dict[str, Any] = {
-        "parent_call_evidence_id": parent_call["evidence_id"],
-        "parent_call_symbol": parent_call.get("symbol"),
-        "argument_index": argument_index,
-        "argument_kind": argument_kind,
-        "argument_preview": argument_text[:240],
-        "argument_truncated": len(argument_text) > 240,
-        "argument_start_line": argument_start_line,
-        "argument_end_line": argument_end_line,
-    }
-    if argument_kind == "function_literal":
-        payload["anonymous_function_body_span"] = body_span_for_value(lines, argument_start_line, "function_literal")
-    evidence_items.append(emit_evidence("lua_call_argument", file_record, line_no, source_line, payload))
+def current_table_context(stack:list[SyntaxContext], function_depth:int, same_depth:bool)->SyntaxContext|None:
+    for c in reversed(stack):
+        if c.kind=='table' and (not same_depth or c.open_function_depth==function_depth): return c
+    return None
 
+def close_leading_table_context(code:str, stack:list[SyntaxContext], patterns:dict[str,re.Pattern[str]])->None:
+    if mask_strings(code,patterns).strip().startswith('}'):
+        for i in range(len(stack)-1,-1,-1):
+            if stack[i].kind=='table': del stack[i:]; break
 
-def extract_from_file(file_record: dict[str, Any], max_string_length: int) -> tuple[list[dict[str, Any]], dict[str, Any]]:
-    path = Path(str(file_record["absolute_path"]))
-    expected_sha = str(file_record.get("sha256", ""))
-    actual_sha = file_sha256(path)
-    text, encoding = read_text_lossless(path)
+def update_table_context_after_line(code:str,line_no:int,stack:list[SyntaxContext],label:str|None,function_depth:int,a:Alphabet,patterns:dict[str,re.Pattern[str]]):
+    masked=mask_strings(code,patterns); stripped=masked.strip(); leading_close=1 if stripped.startswith('}') else 0
+    opens=masked.count('{'); closes=max(0, masked.count('}')-leading_close)
+    for i in range(opens): stack.append(SyntaxContext(a.mechanics.get('context_kind_table','table'), line_no, label if i==0 else None, function_depth))
+    for _ in range(closes):
+        for j in range(len(stack)-1,-1,-1):
+            if stack[j].kind==a.mechanics.get('context_kind_table','table'): del stack[j:]; break
 
-    digest_status = "match" if actual_sha == expected_sha else "mismatch"
-    evidence_items: list[dict[str, Any]] = []
-    context_stack: list[SyntaxContext] = []
+def split_args_with_spans(args:str, base_line:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[ArgumentSpan]:
+    spans=[]; start=0; depth=0; block=0; ins=ind=esc=False; i=0; tok_re=patterns.get('block_token')
+    opens=set(a.block_tokens.get('open',[])); closes=set(a.block_tokens.get('close',[]))
+    def line_for(o:int)->int: return base_line+args.count('\n',0,max(0,min(o,len(args))))
+    def append(s:int,e:int):
+        raw=args[s:e]; st=raw.strip()
+        if not st: return
+        lead=len(raw)-len(raw.lstrip()); trail=len(raw.rstrip()); a0=s+lead; a1=s+trail
+        spans.append(ArgumentSpan(st,line_for(a0),line_for(max(a0,a1-1))))
+    while i<len(args):
+        ch=args[i]
+        if esc: esc=False; i+=1; continue
+        if ch=='\\' and (ins or ind): esc=True; i+=1; continue
+        if ch=="'" and not ind: ins=not ins; i+=1; continue
+        if ch=='"' and not ins: ind=not ind; i+=1; continue
+        if ins or ind: i+=1; continue
+        if tok_re:
+            mt=tok_re.match(args,i)
+            if mt:
+                tok=mt.group(1)
+                if tok in opens: block+=1
+                elif tok in closes and block>0: block-=1
+                i=mt.end(); continue
+        if ch in '({[': depth+=1
+        elif ch in ')}]' and depth>0: depth-=1
+        elif ch==',' and depth==0 and block==0: append(start,i); start=i+1
+        i+=1
+    append(start,len(args)); return spans
 
-    lines = text.splitlines()
-    for index, raw_line in enumerate(lines, start=1):
-        code_line = strip_line_comment(raw_line)
-        if not code_line.strip():
-            continue
+def extract_call_arguments(code_line:str, call_start:int)->tuple[str,bool]:
+    oi=code_line.find('(',call_start)
+    if oi<0: return '',False
+    depth=0; ins=ind=esc=False
+    for idx in range(oi,len(code_line)):
+        ch=code_line[idx]
+        if esc: esc=False; continue
+        if ch=='\\' and (ins or ind): esc=True; continue
+        if ch=="'" and not ind: ins=not ins; continue
+        if ch=='"' and not ins: ind=not ind; continue
+        if ins or ind: continue
+        if ch=='(': depth+=1
+        elif ch==')':
+            depth-=1
+            if depth==0: return code_line[oi+1:idx], True
+    return code_line[oi+1:], False
 
-        close_leading_table_context(code_line, context_stack)
-        table_depth_before = current_table_depth(context_stack)
-        in_table_before = table_depth_before > 0
-        table_label_to_open: str | None = None
+def extract_multiline_call_arguments(lines:list[str], start_line:int, col:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[str,bool,list[ArgumentSpan]]:
+    first=strip_line_comment(lines[start_line-1]); oi=first.find('(',col-1)
+    if oi<0: return '',False,[]
+    chunks=[]; depth=0; started=False; ins=ind=esc=False
+    for ln in range(start_line,len(lines)+1):
+        code=strip_line_comment(lines[ln-1]); i=oi if ln==start_line else 0
+        while i<len(code):
+            ch=code[i]
+            if esc: esc=False; chunks.append(ch) if started else None; i+=1; continue
+            if ch=='\\' and (ins or ind): esc=True; chunks.append(ch) if started else None; i+=1; continue
+            if ch=="'" and not ind: ins=not ins; chunks.append(ch) if started else None; i+=1; continue
+            if ch=='"' and not ins: ind=not ind; chunks.append(ch) if started else None; i+=1; continue
+            if ins or ind: chunks.append(ch) if started else None; i+=1; continue
+            if ch=='(':
+                depth+=1
+                if started: chunks.append(ch)
+                else: started=True
+                i+=1; continue
+            if ch==')':
+                depth-=1
+                if depth==0 and started:
+                    txt=''.join(chunks); return txt, True, split_args_with_spans(txt,start_line,a,patterns)
+                if started: chunks.append(ch)
+                i+=1; continue
+            if started: chunks.append(ch)
+            i+=1
+        if started: chunks.append('\n')
+    txt=''.join(chunks); return txt, False, split_args_with_spans(txt,start_line,a,patterns)
 
-        table_match = TABLE_FIELD_RE.match(code_line)
-        if table_match and in_table_before:
-            value = table_match.group("value").strip()
-            value_kind = classify_value(value)
-            key_payload = computed_key_payload(table_match.group("key"))
-            payload = {
-                **key_payload,
-                "value_kind": value_kind,
-                "value_preview": value[:240],
-                "value_truncated": len(value) > 240,
-                "table_depth": table_depth_before,
-                "context_path": context_path(context_stack),
-            }
-            if value_kind in {"table_literal", "function_literal"}:
-                payload["value_body_span"] = body_span_for_value(lines, index, value_kind)
-            evidence_items.append(emit_evidence("lua_table_field", file_record, index, raw_line, payload))
-            if value_kind == "table_literal":
-                table_label_to_open = key_payload["key_text"]
-        else:
-            local_m = LOCAL_ASSIGNMENT_RE.match(code_line)
-            if local_m:
-                lhs = local_m.group("lhs").strip()
-                rhs = local_m.group("rhs").strip()
-                rhs_kind = classify_value(rhs)
-                payload = {
-                    "lhs": lhs,
-                    "is_local": True,
-                    "rhs_kind": rhs_kind,
-                    "rhs_preview": rhs[:240],
-                    "rhs_truncated": len(rhs) > 240,
-                }
-                if rhs_kind in {"table_literal", "function_literal"}:
-                    payload["rhs_body_span"] = body_span_for_value(lines, index, rhs_kind)
-                evidence_items.append(emit_evidence("lua_assignment", file_record, index, raw_line, payload))
-                if rhs_kind == "table_literal":
-                    table_label_to_open = lhs
-            else:
-                m = ASSIGNMENT_RE.match(code_line)
-                if m and not re.search(r"(?<![<>=~])={2,}|~=|<=|>=", code_line):
-                    lhs = m.group("lhs").strip()
-                    rhs = m.group("rhs").strip()
-                    rhs_kind = classify_value(rhs)
-                    payload = {
-                        "lhs": lhs,
-                        "is_local": False,
-                        "rhs_kind": rhs_kind,
-                        "rhs_preview": rhs[:240],
-                        "rhs_truncated": len(rhs) > 240,
-                    }
-                    if rhs_kind in {"table_literal", "function_literal"}:
-                        payload["rhs_body_span"] = body_span_for_value(lines, index, rhs_kind)
-                    evidence_items.append(emit_evidence("lua_assignment", file_record, index, raw_line, payload))
-                    if rhs_kind == "table_literal":
-                        table_label_to_open = lhs
+def emit_call_argument(items:list[dict[str,Any]], file_record:dict[str,Any], line_no:int, source_line:str, parent:dict[str,Any], arg_index:int, arg_text:str, start_line:int, end_line:int, lines:list[str], a:Alphabet, patterns:dict[str,re.Pattern[str]])->dict[str,Any]:
+    ent_id = parent.get('_argument_entity_id') or 'lua_call_argument'
+    kind=classify_value(arg_text,a,patterns)
+    payload={"parent_call_evidence_id":parent['evidence_id'],"parent_call_symbol":parent.get('symbol'),"argument_index":arg_index,"argument_kind":kind,"argument_preview":arg_text[:240],"argument_truncated":len(arg_text)>240,"argument_start_line":start_line,"argument_end_line":end_line}
+    if kind==a.mechanics.get('function_body_value_kind'):
+        payload['anonymous_function_body_span']=body_span_for_value(lines,start_line,kind,a,patterns)
+    ev=emit(ent_id,file_record,line_no,source_line,payload); items.append(ev)
+    # attached anonymous function evidence from alphabet entity
+    anon=first_entity(a,'anonymous_function')
+    if anon and kind==a.mechanics.get('function_body_value_kind') and a.mechanics.get('anonymous_function_arguments_attach_to_parent_call_argument', True):
+        mm=re.search(r"function\s*\(([^)]*)\)", arg_text)
+        items.append(emit(anon['id'], file_record, start_line, source_line, {"parameters":split_params(mm.group(1)) if mm else [],"body_span":body_span_for_value(lines,start_line,kind,a,patterns),"parent_call_evidence_id":parent['evidence_id'],"parent_call_argument_evidence_id":ev['evidence_id'],"parent_call_argument_index":arg_index}))
+    return ev
 
-        m = FUNCTION_RE.match(code_line)
-        if m:
-            local_marker, name, params = m.groups()
-            evidence_items.append(
-                emit_evidence(
-                    "lua_function_definition",
-                    file_record,
-                    index,
-                    raw_line,
-                    {
-                        "definition_form": "function_statement",
-                        "is_local": bool(local_marker),
-                        "symbol": symbol_shape(name),
-                        "parameters": split_params(params),
-                        "body_span": body_span_for_value(lines, index, "function_literal"),
-                    },
-                )
-            )
+def count_by(items:Iterable[dict[str,Any]], key:str)->dict[str,int]:
+    d={}
+    for it in items:
+        v=str(it.get(key,'unknown')); d[v]=d.get(v,0)+1
+    return dict(sorted(d.items()))
 
-        m = ASSIGNED_FUNCTION_RE.match(code_line)
-        if m and not (in_table_before and table_match):
-            lhs, params = m.groups()
-            evidence_items.append(
-                emit_evidence(
-                    "lua_function_assignment",
-                    file_record,
-                    index,
-                    raw_line,
-                    {
-                        "is_local": False,
-                        "lhs": lhs,
-                        "symbol": symbol_shape(lhs) if re.fullmatch(QUALIFIED, lhs) else {"target": lhs},
-                        "parameters": split_params(params),
-                        "body_span": body_span_for_value(lines, index, "function_literal"),
-                    },
-                )
-            )
+def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[list[dict[str,Any]],dict[str,Any]]:
+    path=Path(str(file_record['absolute_path'])); expected=str(file_record.get('sha256','')); actual=file_sha256(path)
+    text,enc=read_text_lossless(path); lines=text.splitlines(); ranges=discover_function_ranges(lines,a,patterns)
+    items=[]; stack=[]
+    for idx,raw in enumerate(lines,1):
+        code=strip_line_comment(raw)
+        if not code.strip(): continue
+        fdepth=function_depth_at(idx,ranges)
+        close_leading_table_context(code,stack,patterns)
+        table_label_to_open=None; suppressed=set(); declaration_line=False
+        # table field first if declared
+        for ent in entity_by_operation(a,'table_field'):
+            ctx=current_table_context(stack, fdepth, bool(ent.get('requires_same_function_depth_as_table')))
+            if not ctx: continue
+            m=pattern(patterns,ent['regex']).match(code)
+            if not m: continue
+            val=m.group('value').strip(); vk=classify_value(val,a,patterns); kp=computed_key_payload(m.group('key'),a)
+            payload={**kp,"value_kind":vk,"value_preview":val[:240],"value_truncated":len(val)>240,"table_depth":len([c for c in stack if c.kind==a.mechanics.get('context_kind_table','table')]),"context_path":context_path(stack)}
+            if vk in set(a.mechanics.get('body_span_value_kinds',[])): payload['value_body_span']=body_span_for_value(lines,idx,vk,a,patterns)
+            items.append(emit(ent['id'],file_record,idx,raw,payload)); suppressed.update(ent.get('suppresses',[]))
+            if vk==a.mechanics.get('table_body_value_kind'): table_label_to_open=kp['key_text']
+            break
+        # assignments
+        for op in ['local_assignment','assignment']:
+            for ent in entity_by_operation(a,op):
+                if ent['id'] in suppressed: continue
+                m=pattern(patterns,ent['regex']).match(code)
+                if not m or (op=='assignment' and re.search(r"(?<![<>=~])={2,}|~=|<=|>=", code)): continue
+                lhs=m.group('lhs').strip(); rhs=m.group('rhs').strip(); rk=classify_value(rhs,a,patterns)
+                payload={"lhs":lhs,"is_local":bool(ent.get('sets_is_local')),"rhs_kind":rk,"rhs_preview":rhs[:240],"rhs_truncated":len(rhs)>240}
+                if rk in set(a.mechanics.get('body_span_value_kinds',[])): payload['rhs_body_span']=body_span_for_value(lines,idx,rk,a,patterns)
+                items.append(emit(ent['id'],file_record,idx,raw,payload))
+                if rk==ent.get('opens_table_context_when_value_kind'): table_label_to_open=lhs
+                suppressed.add(ent['id']); break
+        # function declarations / assignments
+        for op in ['function_definition','assigned_function','local_assigned_function']:
+            for ent in entity_by_operation(a,op):
+                m=pattern(patterns,ent['regex']).match(code)
+                if not m: continue
+                declaration_line=True
+                if op=='function_definition':
+                    local_marker,name,params=m.groups(); payload={"definition_form":a.mechanics.get('definition_form_function_statement','function_statement'),"is_local":bool(local_marker),"symbol":symbol_shape(name),"parameters":split_params(params),"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)}
+                elif op=='assigned_function':
+                    lhs,params=m.groups(); payload={"is_local":False,"lhs":lhs,"symbol":symbol_shape(lhs) if re.fullmatch(a.regex.get('qualified_symbol','.*'),lhs) else {"target":lhs},"parameters":split_params(params),"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)}
+                else:
+                    lhs,params=m.groups(); payload={"is_local":True,"lhs":lhs,"symbol":symbol_shape(lhs),"parameters":split_params(params),"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)}
+                items.append(emit(ent['id'],file_record,idx,raw,payload))
+        # inline anonymous function not already declaration and not call-argument attached
+        anon=first_entity(a,'anonymous_function')
+        if anon and 'function' in code and not declaration_line:
+            for mm in re.finditer(r"function\s*\(([^)]*)\)", code):
+                items.append(emit(anon['id'],file_record,idx,raw,{"parameters":split_params(mm.group(1)),"column":mm.start()+1,"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns),"context_path":context_path(stack)}))
+        # calls
+        call_ent=first_entity(a,'call_expression')
+        if call_ent and not (declaration_line and a.mechanics.get('function_definition_lines_are_not_call_expression_lines', True)):
+            for cm in pattern(patterns,call_ent['regex']).finditer(code):
+                target=cm.group('target')
+                if target in a.control_call_words: continue
+                argtxt,complete=extract_call_arguments(code,cm.start('target'))
+                argspans=split_args_with_spans(argtxt,idx,a,patterns) if complete else []
+                kind=call_ent.get('method_kind_id') if ':' in target and call_ent.get('method_kind_id') else call_ent['id']
+                ev=emit(str(kind),file_record,idx,raw,{"symbol":symbol_shape(target),"column":cm.start('target')+1,"arguments_preview":argtxt[:240],"arguments_truncated":len(argtxt)>240,"arguments_complete_on_line":complete,"argument_count_on_line":len(argspans),"argument_kinds_on_line":[classify_value(s.text,a,patterns) for s in argspans]})
+                ev['_argument_entity_id']=call_ent.get('argument_entity_id')
+                items.append(ev)
+                if not complete:
+                    matxt,mcomp,argspans=extract_multiline_call_arguments(lines,idx,cm.start('target')+1,a,patterns)
+                    ev.update({"arguments_complete_multiline":mcomp,"argument_count_multiline":len(argspans),"argument_kinds_multiline":[classify_value(s.text,a,patterns) for s in argspans],"arguments_multiline_preview":matxt[:240],"arguments_multiline_truncated":len(matxt)>240})
+                for ai,sp in enumerate(argspans): emit_call_argument(items,file_record,sp.start_line,lines[sp.start_line-1],ev,ai,sp.text,sp.start_line,sp.end_line,lines,a,patterns)
+                ev.pop('_argument_entity_id',None)
+        # quoted string literals
+        lit=first_entity(a,'quoted_string_literal')
+        if lit:
+            for sm in pattern(patterns,lit['regex']).finditer(code):
+                val=sm.group('value'); items.append(emit(lit['id'],file_record,idx,raw,{"literal_kind":lit.get('literal_kind'),"literal_form":lit.get('literal_form'),"quote":sm.group('quote'),"value":val[:max_string_length],"value_truncated":len(val)>max_string_length,"length":len(val),"column":sm.start()+1}))
+        update_table_context_after_line(code,idx,stack,table_label_to_open,fdepth,a,patterns)
+    long_lit=first_entity(a,'long_bracket_string_literal')
+    if long_lit:
+        for lm in pattern(patterns,long_lit['regex']).finditer(text):
+            line_no=text.count('\n',0,lm.start())+1; val=lm.group(2); src=lines[line_no-1] if line_no-1<len(lines) else ''
+            items.append(emit(long_lit['id'],file_record,line_no,src,{"literal_kind":long_lit.get('literal_kind'),"literal_form":long_lit.get('literal_form'),"equals_depth":len(lm.group(1)),"value":val[:max_string_length],"value_truncated":len(val)>max_string_length,"length":len(val),"column":1}))
+    summary={"file_id":file_record.get('file_id'),"relative_path":file_record.get('relative_path'),"absolute_path":file_record.get('absolute_path'),"realm_hint":file_record.get('realm_hint'),"expected_sha256":expected,"actual_sha256":actual,"digest_status":"match" if actual==expected else "mismatch","encoding":enc,"line_count":len(lines),"evidence_total":len(items),"evidence_kind_counts":count_by(items,'kind')}
+    return items,summary
 
-        m = LOCAL_ASSIGNED_FUNCTION_RE.match(code_line)
-        if m:
-            lhs, params = m.groups()
-            evidence_items.append(
-                emit_evidence(
-                    "lua_function_assignment",
-                    file_record,
-                    index,
-                    raw_line,
-                    {
-                        "is_local": True,
-                        "lhs": lhs,
-                        "symbol": symbol_shape(lhs),
-                        "parameters": split_params(params),
-                        "body_span": body_span_for_value(lines, index, "function_literal"),
-                    },
-                )
-            )
+def validate_manifest(manifest:dict[str,Any], path:Path):
+    if manifest.get('schema')!='source_file_manifest' or manifest.get('artifact_family')!='source_file_manifest': raise ValueError(f"Input is not source_file_manifest: {path}")
+    if not isinstance(manifest.get('source_files'),list): raise ValueError('source_files must be list')
 
-        if "function" in code_line and not FUNCTION_RE.match(code_line) and not ASSIGNED_FUNCTION_RE.match(code_line) and not LOCAL_ASSIGNED_FUNCTION_RE.match(code_line):
-            for anon in re.finditer(r"function\s*\(([^)]*)\)", code_line):
-                evidence_items.append(
-                    emit_evidence(
-                        "lua_anonymous_function",
-                        file_record,
-                        index,
-                        raw_line,
-                        {
-                            "parameters": split_params(anon.group(1)),
-                            "column": anon.start() + 1,
-                            "body_span": body_span_for_value(lines, index, "function_literal"),
-                            "context_path": context_path(context_stack),
-                        },
-                    )
-                )
-
-        for call in CALL_RE.finditer(code_line):
-            target = call.group("target")
-            if target in CONTROL_CALL_WORDS:
-                continue
-            args_text, args_complete = extract_call_arguments(code_line, call.start("target"))
-            args = split_args(args_text) if args_complete else []
-            kind = "lua_method_call_expression" if ":" in target else "lua_call_expression"
-            call_item = emit_evidence(
-                kind,
-                file_record,
-                index,
-                raw_line,
-                {
-                    "symbol": symbol_shape(target),
-                    "column": call.start("target") + 1,
-                    "arguments_preview": args_text[:240],
-                    "arguments_truncated": len(args_text) > 240,
-                    "arguments_complete_on_line": args_complete,
-                    "argument_count_on_line": len(args),
-                    "argument_kinds_on_line": [classify_value(arg) for arg in args],
-                },
-            )
-            evidence_items.append(call_item)
-
-            if args_complete:
-                for arg_index, arg_text in enumerate(args):
-                    emit_call_argument_evidence(
-                        evidence_items,
-                        file_record,
-                        index,
-                        raw_line,
-                        call_item,
-                        arg_index,
-                        arg_text,
-                        index,
-                        index,
-                        lines,
-                    )
-            else:
-                multi_args_text, multi_complete, arg_spans = extract_multiline_call_arguments(lines, index, call.start("target") + 1)
-                call_item["arguments_complete_multiline"] = multi_complete
-                call_item["argument_count_multiline"] = len(arg_spans)
-                call_item["argument_kinds_multiline"] = [classify_value(span.text) for span in arg_spans]
-                call_item["arguments_multiline_preview"] = multi_args_text[:240]
-                call_item["arguments_multiline_truncated"] = len(multi_args_text) > 240
-                for arg_index, span in enumerate(arg_spans):
-                    emit_call_argument_evidence(
-                        evidence_items,
-                        file_record,
-                        span.start_line,
-                        lines[span.start_line - 1],
-                        call_item,
-                        arg_index,
-                        span.text,
-                        span.start_line,
-                        span.end_line,
-                        lines,
-                    )
-
-        for s in STRING_RE.finditer(code_line):
-            value = s.group("value")
-            evidence_items.append(
-                emit_evidence(
-                    "lua_literal_value",
-                    file_record,
-                    index,
-                    raw_line,
-                    {
-                        "literal_kind": "string_literal",
-                        "literal_form": "quoted_string",
-                        "quote": s.group("quote"),
-                        "value": value[:max_string_length],
-                        "value_truncated": len(value) > max_string_length,
-                        "length": len(value),
-                        "column": s.start() + 1,
-                    },
-                )
-            )
-
-        update_context_stack_after_line(code_line, index, context_stack, table_label_to_open)
-
-    for long_string in LONG_STRING_RE.finditer(text):
-        start_line = text.count("\n", 0, long_string.start()) + 1
-        value = long_string.group(2)
-        source_line = lines[start_line - 1] if start_line - 1 < len(lines) else ""
-        evidence_items.append(
-            emit_evidence(
-                "lua_literal_value",
-                file_record,
-                start_line,
-                source_line,
-                {
-                    "literal_kind": "string_literal",
-                    "literal_form": "long_bracket_string",
-                    "equals_depth": len(long_string.group(1)),
-                    "value": value[:max_string_length],
-                    "value_truncated": len(value) > max_string_length,
-                    "length": len(value),
-                    "column": 1,
-                },
-            )
-        )
-
-    file_summary = {
-        "file_id": file_record.get("file_id"),
-        "relative_path": file_record.get("relative_path"),
-        "absolute_path": file_record.get("absolute_path"),
-        "realm_hint": file_record.get("realm_hint"),
-        "expected_sha256": expected_sha,
-        "actual_sha256": actual_sha,
-        "digest_status": digest_status,
-        "encoding": encoding,
-        "line_count": len(lines),
-        "evidence_total": len(evidence_items),
-        "evidence_kind_counts": count_by(evidence_items, "kind"),
-    }
-    return evidence_items, file_summary
-
-
-def count_by(items: Iterable[dict[str, Any]], key: str) -> dict[str, int]:
-    counts: dict[str, int] = {}
-    for item in items:
-        value = str(item.get(key, "unknown"))
-        counts[value] = counts.get(value, 0) + 1
-    return dict(sorted(counts.items()))
-
-
-def build_artifact(
-    workspace: Path,
-    input_manifest_path: Path,
-    max_string_length: int,
-    fail_on_digest_mismatch: bool,
-) -> dict[str, Any]:
-    manifest = load_json(input_manifest_path)
-    validate_manifest(manifest, input_manifest_path)
-
-    source_files = manifest["source_files"]
-    evidence_items: list[dict[str, Any]] = []
-    file_summaries: list[dict[str, Any]] = []
-    errors: list[dict[str, Any]] = []
-
-    for file_record in source_files:
+def build_artifact(workspace:Path,input_manifest_path:Path,alphabet_path:Path,max_string_length:int,fail_on_digest_mismatch:bool)->dict[str,Any]:
+    manifest=load_json(input_manifest_path); validate_manifest(manifest,input_manifest_path)
+    a=load_alphabet(alphabet_path); patterns=compile_patterns(a)
+    items=[]; summaries=[]; errors=[]
+    for rec in manifest['source_files']:
         try:
-            file_evidence, file_summary = extract_from_file(file_record, max_string_length)
-            evidence_items.extend(file_evidence)
-            file_summaries.append(file_summary)
-        except Exception as exc:  # noqa: BLE001 - artifact should preserve per-file extraction errors.
-            errors.append(
-                {
-                    "file_id": file_record.get("file_id"),
-                    "relative_path": file_record.get("relative_path"),
-                    "absolute_path": file_record.get("absolute_path"),
-                    "error_type": type(exc).__name__,
-                    "message": str(exc),
-                }
-            )
+            ev,sm=extract_from_file(rec,max_string_length,a,patterns); items.extend(ev); summaries.append(sm)
+        except Exception as ex:
+            errors.append({"file_id":rec.get('file_id'),"relative_path":rec.get('relative_path'),"absolute_path":rec.get('absolute_path'),"error_type":type(ex).__name__,"message":str(ex)})
+    mism=[x for x in summaries if x['digest_status']!='match']
+    if fail_on_digest_mismatch and mism: raise ValueError(f"Digest mismatch in {len(mism)} files")
+    content_digest=stable_hash({"source_manifest":manifest.get('artifact_id'),"lua_syntax_alphabet":a.artifact_id,"file_summaries":[{"file_id":x['file_id'],"actual_sha256":x['actual_sha256'],"evidence_total":x['evidence_total'],"evidence_kind_counts":x['evidence_kind_counts'],"digest_status":x['digest_status']} for x in summaries],"errors":errors,"evidence_items":[{"evidence_id":x['evidence_id'],"kind":x['kind'],"file_id":x['evidence']['file_id'],"line":x['evidence']['line']} for x in items]})
+    return {"schema":SCHEMA,"schema_version":SCHEMA_VERSION,"artifact_family":ARTIFACT_FAMILY,"artifact_id":f"{ARTIFACT_FAMILY}:{content_digest[:16]}","producer_script":SCRIPT_ID,"pipeline_stage":"extraction","canonical_status":"intermediate","promotion_role":"intermediate_evidence","generated_at":datetime.utcnow().replace(microsecond=0).isoformat()+"Z","required_capabilities":PIPELINE_CONTRACT['required_output_capabilities'],"content_digest":content_digest,"workspace":normalize_path(workspace),"source_manifest":{"path":normalize_path(input_manifest_path),"artifact_id":manifest.get('artifact_id'),"content_digest":manifest.get('content_digest'),"schema":manifest.get('schema'),"schema_version":manifest.get('schema_version')},"lua_syntax_alphabet":{"path":a.path,"artifact_id":a.artifact_id,"content_digest":a.content_digest},"summary":{"files_total":len(manifest['source_files']),"files_extracted":len(summaries),"files_failed":len(errors),"digest_mismatch_files":len(mism),"evidence_total":len(items),"evidence_kind_counts":count_by(items,'kind'),"realm_hint_counts":count_by(summaries,'realm_hint')},"file_summaries":summaries,"evidence_items":items,"errors":errors,"lineage":{"input_kind":"pipeline_artifact","input_artifacts":[normalize_path(input_manifest_path),normalize_path(alphabet_path)],"parent_artifact_id":manifest.get('artifact_id'),"regenerates":None,"regeneration_inputs":{"producer_script":SCRIPT_ID,"schema":SCHEMA,"schema_version":SCHEMA_VERSION,"source_file_manifest":normalize_path(input_manifest_path),"source_file_manifest_artifact_id":manifest.get('artifact_id'),"lua_syntax_alphabet":normalize_path(alphabet_path),"lua_syntax_alphabet_artifact_id":a.artifact_id,"max_string_length":max_string_length}}}
 
-    digest_mismatches = [item for item in file_summaries if item["digest_status"] != "match"]
-    if fail_on_digest_mismatch and digest_mismatches:
-        examples = ", ".join(str(item["relative_path"]) for item in digest_mismatches[:5])
-        raise ValueError(f"Digest mismatch in {len(digest_mismatches)} files: {examples}")
+def write_json(path:Path, artifact:dict[str,Any]): path.parent.mkdir(parents=True,exist_ok=True); path.write_text(json.dumps(artifact,ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8')
+def write_md(path:Path, artifact:dict[str,Any]):
+    path.parent.mkdir(parents=True,exist_ok=True); lines=["# Raw Lua Extraction","",f"- Artifact ID: `{artifact['artifact_id']}`",f"- Producer: `{artifact['producer_script']}`",f"- Source manifest: `{artifact['source_manifest']['path']}`",f"- Lua syntax alphabet: `{artifact['lua_syntax_alphabet']['path']}`","","## Summary"]
+    for k,v in artifact['summary'].items(): lines.append(f"- `{k}`: `{v}`")
+    path.write_text('\n'.join(lines)+'\n',encoding='utf-8')
 
-    content_digest = stable_hash(
-        {
-            "input_manifest_artifact_id": manifest.get("artifact_id"),
-            "input_manifest_content_digest": manifest.get("content_digest"),
-            "file_summaries": [
-                {
-                    "file_id": item["file_id"],
-                    "actual_sha256": item["actual_sha256"],
-                    "evidence_total": item["evidence_total"],
-                    "evidence_kind_counts": item["evidence_kind_counts"],
-                    "digest_status": item["digest_status"],
-                }
-                for item in file_summaries
-            ],
-            "errors": errors,
-            "evidence_items": [
-                {
-                    "evidence_id": item["evidence_id"],
-                    "kind": item["kind"],
-                    "file_id": item["evidence"]["file_id"],
-                    "line": item["evidence"]["line"],
-                }
-                for item in evidence_items
-            ],
-        }
-    )
+def parse_args():
+    p=argparse.ArgumentParser(description='Execute lua_syntax_alphabet-declared Lua syntax extraction rules.')
+    p.add_argument('--workspace',required=True); p.add_argument('--input-manifest'); p.add_argument('--lua-syntax-alphabet'); p.add_argument('--out-json'); p.add_argument('--out-md'); p.add_argument('--max-string-length',type=int,default=500); p.add_argument('--fail-on-digest-mismatch',action='store_true')
+    return p.parse_args()
 
-    artifact_id = f"{ARTIFACT_FAMILY}:{content_digest[:16]}"
-
-    return {
-        "schema": SCHEMA,
-        "schema_version": SCHEMA_VERSION,
-        "artifact_family": ARTIFACT_FAMILY,
-        "artifact_id": artifact_id,
-        "producer_script": SCRIPT_ID,
-        "pipeline_stage": "extraction",
-        "canonical_status": "intermediate",
-        "promotion_role": "intermediate_evidence",
-        "generated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
-        "required_capabilities": REQUIRED_CAPABILITIES,
-        "content_digest": content_digest,
-        "workspace": normalize_path(workspace),
-        "source_manifest": {
-            "path": normalize_path(input_manifest_path),
-            "artifact_id": manifest.get("artifact_id"),
-            "content_digest": manifest.get("content_digest"),
-            "schema": manifest.get("schema"),
-            "schema_version": manifest.get("schema_version"),
-        },
-        "summary": {
-            "files_total": len(source_files),
-            "files_extracted": len(file_summaries),
-            "files_failed": len(errors),
-            "digest_mismatch_files": len(digest_mismatches),
-            "evidence_total": len(evidence_items),
-            "evidence_kind_counts": count_by(evidence_items, "kind"),
-            "realm_hint_counts": count_by(file_summaries, "realm_hint"),
-        },
-        "file_summaries": file_summaries,
-        "evidence_items": evidence_items,
-        "errors": errors,
-        "lineage": {
-            "input_kind": "pipeline_artifact",
-            "input_artifacts": [normalize_path(input_manifest_path)],
-            "parent_artifact_id": manifest.get("artifact_id"),
-            "regenerates": None,
-            "regeneration_inputs": {
-                "producer_script": SCRIPT_ID,
-                "schema": SCHEMA,
-                "schema_version": SCHEMA_VERSION,
-                "source_file_manifest": normalize_path(input_manifest_path),
-                "source_file_manifest_artifact_id": manifest.get("artifact_id"),
-                "source_file_manifest_content_digest": manifest.get("content_digest"),
-                "max_string_length": max_string_length,
-            },
-        },
-    }
-
-
-def write_json(path: Path, artifact: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(artifact, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
-
-
-def write_md(path: Path, artifact: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    lines: list[str] = []
-    lines.append("# Raw Lua Extraction")
-    lines.append("")
-    lines.append(f"- Artifact family: `{artifact['artifact_family']}`")
-    lines.append(f"- Artifact ID: `{artifact['artifact_id']}`")
-    lines.append(f"- Producer: `{artifact['producer_script']}`")
-    lines.append(f"- Generated at: `{artifact['generated_at']}`")
-    lines.append(f"- Workspace: `{artifact['workspace']}`")
-    lines.append(f"- Source manifest: `{artifact['source_manifest']['path']}`")
-    lines.append(f"- Source manifest artifact ID: `{artifact['source_manifest']['artifact_id']}`")
-    lines.append("")
-    lines.append("## Required Capabilities")
-    lines.append("")
-    for capability in artifact["required_capabilities"]:
-        lines.append(f"- `{capability}`")
-    lines.append("")
-    lines.append("## Summary")
-    lines.append("")
-    for key, value in artifact["summary"].items():
-        if isinstance(value, dict):
-            lines.append(f"- `{key}`:")
-            for sub_key, sub_value in value.items():
-                lines.append(f"  - `{sub_key}`: `{sub_value}`")
-        else:
-            lines.append(f"- `{key}`: `{value}`")
-    lines.append("")
-    lines.append("## Largest Files by Extracted Evidence")
-    lines.append("")
-    largest = sorted(artifact["file_summaries"], key=lambda item: item.get("evidence_total", 0), reverse=True)[:50]
-    lines.append("| Evidence | Realm | Digest | File |")
-    lines.append("|---:|---|---|---|")
-    for item in largest:
-        lines.append(
-            f"| `{item['evidence_total']}` | `{item.get('realm_hint')}` | `{item.get('digest_status')}` | `{item.get('relative_path')}` |"
-        )
-    if artifact["errors"]:
-        lines.append("")
-        lines.append("## Errors")
-        lines.append("")
-        lines.append("| File | Error | Message |")
-        lines.append("|---|---|---|")
-        for error in artifact["errors"][:100]:
-            message = str(error.get("message", "")).replace("|", "\\|")
-            lines.append(f"| `{error.get('relative_path')}` | `{error.get('error_type')}` | {message} |")
-    lines.append("")
-    path.write_text("\n".join(lines), encoding="utf-8")
-
-
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Extract generic raw Lua syntax evidence from source_file_manifest.")
-    parser.add_argument("--workspace", required=True, help="Workspace root, e.g. E:/signalis_ai")
-    parser.add_argument(
-        "--input-manifest",
-        default=None,
-        help="Input source_file_manifest JSON. Defaults to manifests/extraction/source_file_manifest.json.",
-    )
-    parser.add_argument(
-        "--out-json",
-        default=None,
-        help="Output JSON path. Defaults to manifests/extraction/raw_lua_extraction.json.",
-    )
-    parser.add_argument(
-        "--out-md",
-        default=None,
-        help="Output Markdown path. Defaults to manifests/extraction/raw_lua_extraction.md.",
-    )
-    parser.add_argument(
-        "--max-string-length",
-        type=int,
-        default=500,
-        help="Maximum stored string literal preview length. Defaults to 500.",
-    )
-    parser.add_argument(
-        "--fail-on-digest-mismatch",
-        action="store_true",
-        help="Fail if any source file digest differs from the source_file_manifest digest.",
-    )
-    return parser.parse_args()
-
-
-def main() -> None:
-    args = parse_args()
-    workspace = Path(args.workspace).resolve()
-    if not workspace.exists():
-        raise FileNotFoundError(f"Workspace does not exist: {workspace}")
-    if not workspace.is_dir():
-        raise NotADirectoryError(f"Workspace is not a directory: {workspace}")
-
-    input_manifest = Path(args.input_manifest) if args.input_manifest else workspace / "manifests" / "extraction" / "source_file_manifest.json"
-    if not input_manifest.is_absolute():
-        input_manifest = workspace / input_manifest
-    input_manifest = input_manifest.resolve()
-    if not input_manifest.exists():
-        raise FileNotFoundError(f"Input manifest does not exist: {input_manifest}")
-
-    artifact = build_artifact(
-        workspace=workspace,
-        input_manifest_path=input_manifest,
-        max_string_length=args.max_string_length,
-        fail_on_digest_mismatch=args.fail_on_digest_mismatch,
-    )
-
-    out_json = Path(args.out_json) if args.out_json else workspace / "manifests" / "extraction" / "raw_lua_extraction.json"
-    out_md = Path(args.out_md) if args.out_md else workspace / "manifests" / "extraction" / "raw_lua_extraction.md"
-    if not out_json.is_absolute():
-        out_json = workspace / out_json
-    if not out_md.is_absolute():
-        out_md = workspace / out_md
-
-    write_json(out_json, artifact)
-    write_md(out_md, artifact)
-
-    print(f"Raw Lua evidence: {artifact['summary']['evidence_total']}")
-    print(f"Files extracted: {artifact['summary']['files_extracted']}")
-    print(f"Digest mismatches: {artifact['summary']['digest_mismatch_files']}")
-    print(f"Wrote JSON: {out_json}")
-    print(f"Wrote MD: {out_md}")
-
-
-if __name__ == "__main__":
-    main()
+def main():
+    args=parse_args(); ws=Path(args.workspace).resolve()
+    if not ws.is_dir(): raise NotADirectoryError(f"Workspace is not a directory: {ws}")
+    im=Path(args.input_manifest) if args.input_manifest else ws/'manifests'/'extraction'/'source_file_manifest.json'; im=(ws/im).resolve() if not im.is_absolute() else im.resolve()
+    al=Path(args.lua_syntax_alphabet) if args.lua_syntax_alphabet else ws/'manifests'/'alphabet'/'lua_syntax_alphabet.json'; al=(ws/al).resolve() if not al.is_absolute() else al.resolve()
+    art=build_artifact(ws,im,al,args.max_string_length,args.fail_on_digest_mismatch)
+    oj=Path(args.out_json) if args.out_json else ws/'manifests'/'extraction'/'raw_lua_extraction.json'; oj=(ws/oj).resolve() if not oj.is_absolute() else oj.resolve()
+    om=Path(args.out_md) if args.out_md else ws/'manifests'/'extraction'/'raw_lua_extraction.md'; om=(ws/om).resolve() if not om.is_absolute() else om.resolve()
+    write_json(oj,art); write_md(om,art)
+    print(f"Raw Lua evidence: {art['summary']['evidence_total']}"); print(f"Files extracted: {art['summary']['files_extracted']}"); print(f"Digest mismatches: {art['summary']['digest_mismatch_files']}"); print(f"Wrote JSON: {oj}"); print(f"Wrote MD: {om}")
+if __name__=='__main__': main()

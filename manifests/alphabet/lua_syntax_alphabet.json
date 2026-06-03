@@ -1,0 +1,259 @@
+{
+  "artifact_family": "lua_syntax_alphabet",
+  "artifact_id": "lua_syntax_alphabet:5acdd4b5350419c0",
+  "block_tokens": {
+    "close": [
+      "end",
+      "until"
+    ],
+    "open": [
+      "function",
+      "then",
+      "do",
+      "repeat"
+    ],
+    "repeat_close": [
+      "until"
+    ]
+  },
+  "boundary": {
+    "allowed": [
+      "file identity and digest",
+      "source location",
+      "realm hint from filename/manifest",
+      "assignment",
+      "table field",
+      "literal value",
+      "function definition",
+      "function assignment",
+      "anonymous function",
+      "call expression",
+      "method call expression",
+      "call argument",
+      "function body span"
+    ],
+    "forbidden": [
+      "network sender classification",
+      "network receiver classification",
+      "hook listener classification",
+      "hook emission classification",
+      "scheduler classification",
+      "item action classification",
+      "inventory/vendor/armor/characterload classification",
+      "NutScript-specific behavior decisions",
+      "priority or importance decisions"
+    ]
+  },
+  "canonical_status": "intermediate",
+  "content_digest": "5acdd4b5350419c0832d5b91d7217e0053cf3b75450fafcd7943411d5256fb9c",
+  "control_call_words": [
+    "if",
+    "for",
+    "while",
+    "repeat",
+    "until",
+    "return",
+    "function",
+    "local",
+    "elseif"
+  ],
+  "generated_at": "2026-06-03T10:47:22Z",
+  "literal_tokens": {
+    "boolean": [
+      "true",
+      "false"
+    ],
+    "nil": [
+      "nil"
+    ]
+  },
+  "mechanics": {
+    "anonymous_function_arguments_attach_to_parent_call_argument": true,
+    "body_span_value_kinds": [
+      "table_literal",
+      "function_literal"
+    ],
+    "call_arguments_emit_parent_call_evidence_id": true,
+    "context_kind_table": "table",
+    "definition_form_function_statement": "function_statement",
+    "function_body_value_kind": "function_literal",
+    "function_definition_lines_are_not_call_expression_lines": true,
+    "function_literals_inside_table_constructors_are_table_fields": true,
+    "identifier_key_expression_kind": "identifier",
+    "key_syntax_computed": "computed_key",
+    "key_syntax_identifier": "identifier_key",
+    "literal_values_may_be_emitted_separately": true,
+    "local_assignment_has_is_local_and_clean_lhs": true,
+    "preserve_table_context_labels": true,
+    "table_body_value_kind": "table_literal",
+    "table_constructor_fields_are_not_assignments": true,
+    "table_field_context_must_match_current_function_depth": true
+  },
+  "minimal_required_changes_for_extractor": [
+    "Replace script-owned evidence-kind/vocabulary constants with syntax_entities declared by lua_syntax_alphabet.",
+    "Dispatch extraction by syntax_entities[*].parser_operation instead of a fixed script-owned evidence vocabulary list.",
+    "Use alphabet value_classification_rules for all value_kind decisions.",
+    "Use alphabet mechanics for table context labels, body-span value kinds, declaration-line call suppression, and callback argument ownership.",
+    "Keep Lua parsing utilities in the script, but do not let the script define which evidence kinds exist or which syntax entities are emitted.",
+    "Keep extraction syntax-only; defer all runtime/project meaning to normalization."
+  ],
+  "pipeline_stage": "extraction",
+  "producer_script": "manual.source_governed_extraction_alphabet",
+  "promotion_role": "syntax_extraction_rule_input",
+  "purpose": "Declare generic Lua syntax extraction entities, parser operations, regex, value classification, and syntax-only mechanics consumed by raw Lua extraction and future normalization.",
+  "regex": {
+    "assigned_function": "^\\s*([A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*(?:\\[[^\\]]+\\])?)\\s*=\\s*function\\s*\\(([^)]*)\\)",
+    "assignment": "^\\s*(?P<lhs>[^=~<>]+?)\\s*=\\s*(?P<rhs>.+?)\\s*$",
+    "block_token": "\\b(function|then|do|repeat|end|until)\\b",
+    "call": "(?<![\\w.:'\\\"])(?P<target>[A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*\\(",
+    "function_statement": "^\\s*(?:(local)\\s+)?function\\s+([A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*\\(([^)]*)\\)",
+    "identifier": "[A-Za-z_][A-Za-z0-9_]*",
+    "local_assigned_function": "^\\s*local\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*function\\s*\\(([^)]*)\\)",
+    "local_assignment": "^\\s*local\\s+(?P<lhs>[A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*(?P<rhs>.+?)\\s*$",
+    "long_string_literal": "\\[(=*)\\[(.*?)\\]\\1\\]",
+    "qualified_symbol": "[A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*",
+    "string_literal": "(?P<quote>['\\\"])(?P<value>(?:\\\\.|(?!\\1).)*)(?P=quote)",
+    "table_field": "^\\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*|\\[[^\\]]+\\])\\s*=\\s*(?P<value>.+?)(?:,)?\\s*$"
+  },
+  "regex_flags": {
+    "long_string_literal": [
+      "DOTALL"
+    ]
+  },
+  "schema": "lua_syntax_alphabet",
+  "schema_version": "1",
+  "syntax_entities": [
+    {
+      "enabled": true,
+      "id": "lua_table_field",
+      "parser_operation": "table_field",
+      "regex": "table_field",
+      "requires_same_function_depth_as_table": true,
+      "requires_table_context": true,
+      "suppresses": [
+        "lua_assignment",
+        "lua_function_assignment"
+      ]
+    },
+    {
+      "enabled": true,
+      "id": "lua_assignment",
+      "opens_table_context_when_value_kind": "table_literal",
+      "parser_operation": "local_assignment",
+      "regex": "local_assignment",
+      "sets_is_local": true
+    },
+    {
+      "enabled": true,
+      "id": "lua_assignment",
+      "opens_table_context_when_value_kind": "table_literal",
+      "parser_operation": "assignment",
+      "regex": "assignment",
+      "sets_is_local": false
+    },
+    {
+      "declaration_line": true,
+      "enabled": true,
+      "id": "lua_function_definition",
+      "parser_operation": "function_definition",
+      "regex": "function_statement"
+    },
+    {
+      "declaration_line": true,
+      "enabled": true,
+      "id": "lua_function_assignment",
+      "parser_operation": "assigned_function",
+      "regex": "assigned_function"
+    },
+    {
+      "declaration_line": true,
+      "enabled": true,
+      "id": "lua_function_assignment",
+      "parser_operation": "local_assigned_function",
+      "regex": "local_assigned_function"
+    },
+    {
+      "enabled": true,
+      "id": "lua_anonymous_function",
+      "parser_operation": "anonymous_function",
+      "regex": "function_literal_inline"
+    },
+    {
+      "argument_entity_id": "lua_call_argument",
+      "enabled": true,
+      "id": "lua_call_expression",
+      "method_kind_id": "lua_method_call_expression",
+      "parser_operation": "call_expression",
+      "regex": "call"
+    },
+    {
+      "enabled": true,
+      "id": "lua_literal_value",
+      "literal_form": "quoted_string",
+      "literal_kind": "string_literal",
+      "parser_operation": "quoted_string_literal",
+      "regex": "string_literal"
+    },
+    {
+      "enabled": true,
+      "id": "lua_literal_value",
+      "literal_form": "long_bracket_string",
+      "literal_kind": "string_literal",
+      "parser_operation": "long_bracket_string_literal",
+      "regex": "long_string_literal"
+    }
+  ],
+  "value_classification_rules": [
+    {
+      "match": "empty",
+      "value_kind": "empty"
+    },
+    {
+      "match": "startswith",
+      "value": "{",
+      "value_kind": "table_literal"
+    },
+    {
+      "match": "startswith",
+      "value": "function",
+      "value_kind": "function_literal"
+    },
+    {
+      "match": "token_list",
+      "tokens": "boolean",
+      "value_kind": "boolean_literal"
+    },
+    {
+      "match": "token_list",
+      "tokens": "nil",
+      "value_kind": "nil_literal"
+    },
+    {
+      "match": "regex_fullmatch",
+      "regex": "number_regex",
+      "value_kind": "number_literal"
+    },
+    {
+      "match": "compiled_regex_fullmatch",
+      "regex": "string_literal",
+      "value_kind": "string_literal"
+    },
+    {
+      "match": "compiled_regex_fullmatch",
+      "regex": "long_string_literal",
+      "value_kind": "string_literal"
+    },
+    {
+      "match": "regex_fullmatch",
+      "regex": "qualified_symbol",
+      "value_kind": "symbol_reference"
+    },
+    {
+      "match": "fallback",
+      "value_kind": "expression"
+    }
+  ],
+  "value_detection": {
+    "number_regex": "[-+]?\\d+(?:\\.\\d+)?"
+  }
+}
