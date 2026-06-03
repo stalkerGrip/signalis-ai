@@ -168,6 +168,22 @@ def emit(kind: str, file_record:dict[str,Any], line_no:int, line:str, payload:di
     e={"kind":kind,"evidence_id":"raw_lua_evidence:"+stable_hash({"kind":kind,"file_id":file_record.get('file_id'),"line":line_no,"payload":payload,"text":line.rstrip('\n')})[:16],"evidence":line_evidence(file_record,line_no,line)}
     e.update(payload); return e
 
+
+
+def declared_call_receiver_forms(a: Alphabet)->set[str]:
+    forms=a.mechanics.get('call_receiver_forms', [])
+    if isinstance(forms, list):
+        return {str(x) for x in forms}
+    return set()
+
+def call_receiver_form_enabled(a: Alphabet, form: str)->bool:
+    # Syntax ownership stays in lua_syntax_alphabet. The script only executes
+    # mechanical parsing for receiver forms explicitly declared there.
+    return form in declared_call_receiver_forms(a)
+
+def call_target_receiver_form(target: str)->str:
+    return 'indexed_receiver' if '[' in target and ']' in target else 'qualified_symbol_receiver'
+
 def symbol_shape(target: str)->dict[str,Any]:
     # Syntax-only symbol shape. For ordinary targets this preserves the old
     # qualified-symbol behavior. For call-selected targets such as
@@ -310,9 +326,9 @@ def split_args_with_spans(args:str, base_line:int, a:Alphabet, patterns:dict[str
         i+=1
     append(start,len(args)); return spans
 
-def extract_call_arguments(code_line:str, call_start:int)->tuple[str,bool]:
-    oi=code_line.find('(',call_start)
-    if oi<0: return '',False
+def extract_call_arguments(code_line:str, call_start:int, call_open:int|None=None)->tuple[str,bool]:
+    oi=call_open if call_open is not None else code_line.find('(',call_start)
+    if oi is None or oi<0 or oi>=len(code_line) or code_line[oi] != '(': return '',False
     depth=0; ins=ind=esc=False
     for idx in range(oi,len(code_line)):
         ch=code_line[idx]
@@ -327,9 +343,9 @@ def extract_call_arguments(code_line:str, call_start:int)->tuple[str,bool]:
             if depth==0: return code_line[oi+1:idx], True
     return code_line[oi+1:], False
 
-def find_call_close_index(code_line:str, call_start:int)->int|None:
-    oi=code_line.find('(',call_start)
-    if oi<0: return None
+def find_call_close_index(code_line:str, call_start:int, call_open:int|None=None)->int|None:
+    oi=call_open if call_open is not None else code_line.find('(',call_start)
+    if oi is None or oi<0 or oi>=len(code_line) or code_line[oi] != '(': return None
     depth=0; ins=ind=esc=False
     for idx in range(oi,len(code_line)):
         ch=code_line[idx]
@@ -344,10 +360,35 @@ def find_call_close_index(code_line:str, call_start:int)->int|None:
             if depth==0: return idx
     return None
 
-def call_target_with_result_suffix(previous_target:str, sep:str, leaf:str)->str:
+def call_target_with_result_suffix(previous_target:str, sep:str, leaf:str, postfix:str='')->str:
     # The target is syntax evidence for callable selection from a previous call
-    # result. It does not classify runtime meaning.
-    return f"{previous_target}(){sep}{leaf}"
+    # result. It does not classify runtime meaning. Postfix preserves syntax-only
+    # selectors such as call_result()[index] before the next selected member.
+    return f"{previous_target}(){postfix}{sep}{leaf}"
+
+def find_matching_open_paren(code_line:str, close_idx:int)->int|None:
+    # Balanced syntax utility used only after alphabet-declared recognition of
+    # parenthesized receiver method-call syntax.
+    stack=[]; ins=ind=esc=False
+    for idx,ch in enumerate(code_line[:close_idx+1]):
+        if esc: esc=False; continue
+        if ch=='\\' and (ins or ind): esc=True; continue
+        if ch=="'" and not ind: ins=not ins; continue
+        if ch=='"' and not ins: ind=not ind; continue
+        if ins or ind: continue
+        if ch=='(': stack.append(idx)
+        elif ch==')':
+            if not stack: return None
+            oi=stack.pop()
+            if idx==close_idx: return oi
+    return None
+
+def parenthesized_receiver_target(code_line:str, close_idx:int, sep:str, leaf:str)->str|None:
+    oi=find_matching_open_paren(code_line, close_idx)
+    if oi is None: return None
+    receiver=code_line[oi:close_idx+1].strip()
+    if not receiver.startswith('('): return None
+    return f"{receiver}{sep}{leaf}"
 
 def is_single_assignment_operator(code:str, pos:int)->bool:
     if pos < 0 or pos >= len(code) or code[pos] != '=': return False
@@ -539,8 +580,8 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
             close_to_target:dict[int,str]={}
             close_to_evidence:dict[int,dict[str,Any]]={}
             emitted_call_spans:set[tuple[int,int]]=set()
-            def emit_call_from_match(target:str, col0:int, ent:dict[str,Any], parent_ev:dict[str,Any]|None=None):
-                argtxt,complete=extract_call_arguments(code,col0)
+            def emit_call_from_match(target:str, col0:int, ent:dict[str,Any], parent_ev:dict[str,Any]|None=None, call_open_index:int|None=None):
+                argtxt,complete=extract_call_arguments(code,col0,call_open_index)
                 argspans=split_args_with_spans(argtxt,idx,a,patterns) if complete else []
                 kind=ent.get('method_kind_id') if ':' in target and ent.get('method_kind_id') else ent['id']
                 payload={"symbol":symbol_shape(target),"column":col0+1,"arguments_preview":argtxt[:240],"arguments_truncated":len(argtxt)>240,"arguments_complete_on_line":complete,"argument_count_on_line":len(argspans),"argument_kinds_on_line":[classify_value(sx.text,a,patterns) for sx in argspans]}
@@ -554,11 +595,11 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                 ev['_argument_entity_id']=ent.get('argument_entity_id')
                 items.append(ev)
                 if not complete:
-                    matxt,mcomp,argspans=extract_multiline_call_arguments(lines,idx,col0+1,a,patterns)
+                    matxt,mcomp,argspans=extract_multiline_call_arguments(lines,idx,(call_open_index if call_open_index is not None else col0)+1,a,patterns)
                     ev.update({"arguments_complete_multiline":mcomp,"argument_count_multiline":len(argspans),"argument_kinds_multiline":[classify_value(sx.text,a,patterns) for sx in argspans],"arguments_multiline_preview":matxt[:240],"arguments_multiline_truncated":len(matxt)>240})
                 for ai,sp in enumerate(argspans): emit_call_argument(items,file_record,sp.start_line,lines[sp.start_line-1],ev,ai,sp.text,sp.start_line,sp.end_line,lines,a,patterns,owned_call_argument_function_spans)
                 ev.pop('_argument_entity_id',None)
-                close_idx=find_call_close_index(code,col0)
+                close_idx=find_call_close_index(code,col0,call_open_index)
                 if close_idx is not None:
                     close_to_target[close_idx]=target
                     close_to_evidence[close_idx]=ev
@@ -567,17 +608,42 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
             for cm in pattern(patterns,call_ent['regex']).finditer(code):
                 target=cm.group('target')
                 if target in a.control_call_words: continue
-                emit_call_from_match(target,cm.start('target'),call_ent)
+                receiver_form=call_target_receiver_form(target)
+                if not call_receiver_form_enabled(a, receiver_form):
+                    continue
+                gd=cm.groupdict()
+                call_open_index=cm.start('call_open') if 'call_open' in gd and gd.get('call_open') is not None else None
+                emit_call_from_match(target,cm.start('target'),call_ent,call_open_index=call_open_index)
+            consumed_result_chain_closes:set[int]=set()
             for chain_ent in entity_by_operation(a,'call_after_call_result'):
                 if not a.mechanics.get('call_after_call_result_enabled', True): continue
                 for cm in pattern(patterns,chain_ent['regex']).finditer(code):
                     previous_target=close_to_target.get(cm.start())
                     if not previous_target: continue
-                    sep=cm.groupdict().get('sep') or ':'
-                    leaf=cm.groupdict().get('leaf') or ''
-                    target=call_target_with_result_suffix(previous_target,sep,leaf)
+                    gd=cm.groupdict()
+                    sep=gd.get('sep') or ':'
+                    leaf=gd.get('leaf') or ''
+                    postfix=(gd.get('postfix') or '').replace(' ', '')
+                    chain_form='call_result_indexed_receiver' if postfix else 'call_result_receiver'
+                    if not call_receiver_form_enabled(a, chain_form):
+                        continue
+                    target=call_target_with_result_suffix(previous_target,sep,leaf,postfix)
                     parent_ev=close_to_evidence.get(cm.start())
-                    emit_call_from_match(target,cm.start('leaf'),chain_ent,parent_ev)
+                    call_open_index=cm.start('call_open') if 'call_open' in gd and gd.get('call_open') is not None else None
+                    emit_call_from_match(target,cm.start('leaf'),chain_ent,parent_ev,call_open_index=call_open_index)
+                    consumed_result_chain_closes.add(cm.start())
+            for paren_ent in entity_by_operation(a,'parenthesized_expression_method_call'):
+                if not call_receiver_form_enabled(a, 'parenthesized_expression_receiver'): continue
+                for cm in pattern(patterns,paren_ent['regex']).finditer(code):
+                    if cm.start() in consumed_result_chain_closes or cm.start() in close_to_target:
+                        continue
+                    gd=cm.groupdict()
+                    sep=gd.get('sep') or ':'
+                    leaf=gd.get('leaf') or ''
+                    target=parenthesized_receiver_target(code, cm.start(), sep, leaf)
+                    if not target: continue
+                    call_open_index=cm.start('call_open') if 'call_open' in gd and gd.get('call_open') is not None else None
+                    emit_call_from_match(target,cm.start('leaf'),paren_ent,call_open_index=call_open_index)
         # inline anonymous function not already declaration and not call-argument attached.
         # Owned function literals are governed by their owner evidence unless the
         # alphabet explicitly allows standalone anonymous evidence for them.

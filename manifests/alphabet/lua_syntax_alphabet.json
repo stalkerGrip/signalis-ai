@@ -1,5 +1,6 @@
 {
   "artifact_family": "lua_syntax_alphabet",
+  "artifact_id": "lua_syntax_alphabet:3b36b10c03c3bb83",
   "block_tokens": {
     "close": [
       "end",
@@ -44,6 +45,7 @@
     ]
   },
   "canonical_status": "intermediate",
+  "content_digest": "3b36b10c03c3bb837c912ac61dcd4d9ca8d7cf3ce68ba70b4a345a9294857495",
   "control_call_words": [
     "if",
     "for",
@@ -55,7 +57,7 @@
     "local",
     "elseif"
   ],
-  "generated_at": "2026-06-03T11:35:00Z",
+  "generated_at": "2026-06-03T13:23:56Z",
   "literal_tokens": {
     "boolean": [
       "true",
@@ -84,6 +86,16 @@
     "call_after_call_result_target_prefix": ")",
     "call_after_call_result_target_strategy": "append_parent_call_target_with_call_suffix_and_selected_member",
     "call_arguments_emit_parent_call_evidence_id": true,
+    "call_receiver_forms": [
+      "qualified_symbol_receiver",
+      "indexed_receiver",
+      "call_result_receiver",
+      "call_result_indexed_receiver",
+      "parenthesized_expression_receiver"
+    ],
+    "call_receiver_forms_owner": "lua_syntax_alphabet",
+    "call_result_index_chain_enabled": true,
+    "call_target_index_postfix_preserved": true,
     "context_kind_table": "table",
     "definition_form_function_statement": "function_statement",
     "elseif_then_does_not_open_new_block_depth": true,
@@ -94,6 +106,7 @@
     "function_literal_assignment_emits_function_assignment": false,
     "function_literals_inside_table_constructors_are_table_fields": true,
     "identifier_key_expression_kind": "identifier",
+    "indexed_receiver_method_call_enabled": true,
     "inline_assignment_left_boundary_tokens": [
       "then",
       "do"
@@ -108,6 +121,8 @@
     "literal_values_may_be_emitted_separately": true,
     "local_assignment_has_is_local_and_clean_lhs": true,
     "owned_function_literals_emit_anonymous_function_evidence": false,
+    "parenthesized_expression_method_call_enabled": true,
+    "parenthesized_expression_receiver_target_strategy": "balanced_parenthesized_receiver_plus_selected_member",
     "parser_operation_order": [
       "table_field",
       "local_assignment",
@@ -118,10 +133,12 @@
       "anonymous_function",
       "call_expression",
       "call_after_call_result",
+      "parenthesized_expression_method_call",
       "quoted_string_literal",
       "long_bracket_string_literal"
     ],
     "preserve_table_context_labels": true,
+    "script_role_for_call_receiver_forms": "mechanical_balanced_parsing_only",
     "split_line_then_after_elseif_does_not_open_new_block_depth": true,
     "table_body_value_kind": "table_literal",
     "table_constructor_fields_are_not_assignments": true,
@@ -146,7 +163,12 @@
     "When mechanics.anonymous_function_suppress_when_owned_by_call_argument is true, suppress standalone lua_anonymous_function evidence for spans already emitted as call-argument callbacks.",
     "Use mechanics.parser_operation_order for parser operation precedence instead of script-owned operation ordering.",
     "When mechanics.fallback_evidence_ids_allowed is false, the script must not invent fallback evidence ids such as lua_call_argument when the alphabet entity does not declare them.",
-    "Classify assignment RHS that syntactically opens a table constructor at line end as table_literal using alphabet value_classification_rules, so assigned table context labels are preserved without project-specific rules."
+    "Classify assignment RHS that syntactically opens a table constructor at line end as table_literal using alphabet value_classification_rules, so assigned table context labels are preserved without project-specific rules.",
+    "Use alphabet regex.call named call_open group so argument extraction starts from the declared callable open parenthesis, not from the first parenthesis inside an indexed or complex receiver.",
+    "Use alphabet regex.call_after_call_result postfix group to preserve call-result indexing chains before selected method members.",
+    "Use parser_operation=parenthesized_expression_method_call for method calls selected from balanced parenthesized expressions such as (expr):method().",
+    "Declare call receiver forms in mechanics.call_receiver_forms; the script may mechanically parse only forms listed there.",
+    "Treat indexed receivers, call-result receivers, call-result indexed receivers, and parenthesized expression receivers as alphabet-owned syntax forms, not script-owned special cases."
   ],
   "pipeline_stage": "extraction",
   "producer_script": "manual.source_governed_extraction_alphabet",
@@ -156,14 +178,15 @@
     "assigned_function": "^\\s*([A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*(?:\\[[^\\]]+\\])?)\\s*=\\s*function\\s*\\(([^)]*)\\)",
     "assignment": "^\\s*(?P<lhs>[^=~<>]+?)\\s*=\\s*(?P<rhs>.+?)\\s*$",
     "block_token": "\\b(function|then|do|repeat|end|until)\\b",
-    "call": "(?<![\\w.:'\\\"])(?P<target>[A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*\\(",
-    "call_after_call_result": "\\)\\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\\s*\\(",
+    "call": "(?<![\\w.:'\\\"])(?P<target>[A-Za-z_][A-Za-z0-9_]*(?:(?:\\[[^\\]\\n]+\\])|(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*(?P<call_open>\\()",
+    "call_after_call_result": "\\)(?P<postfix>(?:\\s*\\[[^\\]\\n]+\\])*)\\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\\s*(?P<call_open>\\()",
     "function_literal_inline": "function\\s*\\(([^)]*)\\)",
     "function_statement": "^\\s*(?:(local)\\s+)?function\\s+([A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\\s*\\(([^)]*)\\)",
     "identifier": "[A-Za-z_][A-Za-z0-9_]*",
     "local_assigned_function": "^\\s*local\\s+([A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*function\\s*\\(([^)]*)\\)",
     "local_assignment": "^\\s*local\\s+(?P<lhs>[A-Za-z_][A-Za-z0-9_]*)\\s*=\\s*(?P<rhs>.+?)\\s*$",
     "long_string_literal": "\\[(=*)\\[(.*?)\\]\\1\\]",
+    "parenthesized_expression_method_call": "\\)\\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\\s*(?P<call_open>\\()",
     "qualified_symbol": "[A-Za-z_][A-Za-z0-9_]*(?:(?:\\.|:)[A-Za-z_][A-Za-z0-9_]*)*",
     "string_literal": "(?P<quote>['\\\"])(?P<value>(?:\\\\.|(?!\\1).)*)(?P=quote)",
     "table_field": "^\\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*|\\[[^\\]]+\\])\\s*=\\s*(?P<value>.+?)(?:,)?\\s*$"
@@ -260,6 +283,16 @@
       "target_strategy": "append_parent_call_target_with_call_suffix_and_selected_member"
     },
     {
+      "argument_entity_id": "lua_call_argument",
+      "enabled": true,
+      "id": "lua_call_expression",
+      "method_kind_id": "lua_method_call_expression",
+      "parser_operation": "parenthesized_expression_method_call",
+      "purpose": "Capture method calls whose callable is selected from a balanced parenthesized expression receiver, for syntax such as (a() - b()):method().",
+      "regex": "parenthesized_expression_method_call",
+      "target_strategy": "balanced_parenthesized_receiver_plus_selected_member"
+    },
+    {
       "enabled": true,
       "id": "lua_literal_value",
       "literal_form": "quoted_string",
@@ -334,7 +367,5 @@
   "value_detection": {
     "number_regex": "[-+]?\\d+(?:\\.\\d+)?",
     "table_constructor_open_at_line_end": "\\{\\s*$"
-  },
-  "content_digest": "98f54b79fee35ab09a9bc70fe6277dfdd1839d4ce8832d7183e1111079547a2d",
-  "artifact_id": "lua_syntax_alphabet:98f54b79fee35ab0"
+  }
 }
