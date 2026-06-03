@@ -1,6 +1,5 @@
 {
   "artifact_family": "lua_syntax_alphabet",
-  "artifact_id": "lua_syntax_alphabet:109ec39dbe6edb5f",
   "block_tokens": {
     "close": [
       "end",
@@ -45,7 +44,6 @@
     ]
   },
   "canonical_status": "intermediate",
-  "content_digest": "109ec39dbe6edb5f5c590124418b08736ff0c4d980f9cc6f351cc5143f034e32",
   "control_call_words": [
     "if",
     "for",
@@ -147,7 +145,8 @@
     "Use lua_syntax_alphabet regex.function_literal_inline for anonymous function parameter capture; do not hardcode function literal regex in the script.",
     "When mechanics.anonymous_function_suppress_when_owned_by_call_argument is true, suppress standalone lua_anonymous_function evidence for spans already emitted as call-argument callbacks.",
     "Use mechanics.parser_operation_order for parser operation precedence instead of script-owned operation ordering.",
-    "When mechanics.fallback_evidence_ids_allowed is false, the script must not invent fallback evidence ids such as lua_call_argument when the alphabet entity does not declare them."
+    "When mechanics.fallback_evidence_ids_allowed is false, the script must not invent fallback evidence ids such as lua_call_argument when the alphabet entity does not declare them.",
+    "Classify assignment RHS that syntactically opens a table constructor at line end as table_literal using alphabet value_classification_rules, so assigned table context labels are preserved without project-specific rules."
   ],
   "pipeline_stage": "extraction",
   "producer_script": "manual.source_governed_extraction_alphabet",
@@ -288,6 +287,11 @@
       "value_kind": "table_literal"
     },
     {
+      "match": "regex_search",
+      "regex": "table_constructor_open_at_line_end",
+      "value_kind": "table_literal"
+    },
+    {
       "match": "startswith",
       "value": "function",
       "value_kind": "function_literal"
@@ -328,6 +332,9 @@
     }
   ],
   "value_detection": {
-    "number_regex": "[-+]?\\d+(?:\\.\\d+)?"
-  }
+    "number_regex": "[-+]?\\d+(?:\\.\\d+)?",
+    "table_constructor_open_at_line_end": "\\{\\s*$"
+  },
+  "content_digest": "98f54b79fee35ab09a9bc70fe6277dfdd1839d4ce8832d7183e1111079547a2d",
+  "artifact_id": "lua_syntax_alphabet:98f54b79fee35ab0"
 }

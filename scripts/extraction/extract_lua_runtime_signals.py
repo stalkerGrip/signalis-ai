@@ -142,14 +142,22 @@ def classify_value(value: str, a: Alphabet, patterns: dict[str,re.Pattern[str]])
         m=rule.get('match')
         if m=='empty' and s=='': return str(rule['value_kind'])
         if m=='startswith' and s.startswith(str(rule.get('value',''))): return str(rule['value_kind'])
+        if m=='endswith' and s.endswith(str(rule.get('value',''))): return str(rule['value_kind'])
         if m=='token_list' and s in set(a.literal_tokens.get(str(rule.get('tokens')), [])): return str(rule['value_kind'])
         if m=='regex_fullmatch':
             name=str(rule.get('regex'))
             pat=a.value_detection.get(name, a.regex.get(name))
             if pat and re.fullmatch(pat, s): return str(rule['value_kind'])
+        if m=='regex_search':
+            name=str(rule.get('regex'))
+            pat=a.value_detection.get(name, a.regex.get(name))
+            if pat and re.search(pat, s): return str(rule['value_kind'])
         if m=='compiled_regex_fullmatch':
             name=str(rule.get('regex'))
             if name in patterns and patterns[name].fullmatch(s): return str(rule['value_kind'])
+        if m=='compiled_regex_search':
+            name=str(rule.get('regex'))
+            if name in patterns and patterns[name].search(s): return str(rule['value_kind'])
         if m=='fallback': return str(rule['value_kind'])
     return 'unclassified'
 
@@ -537,8 +545,11 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                 kind=ent.get('method_kind_id') if ':' in target and ent.get('method_kind_id') else ent['id']
                 payload={"symbol":symbol_shape(target),"column":col0+1,"arguments_preview":argtxt[:240],"arguments_truncated":len(argtxt)>240,"arguments_complete_on_line":complete,"argument_count_on_line":len(argspans),"argument_kinds_on_line":[classify_value(sx.text,a,patterns) for sx in argspans]}
                 if parent_ev is not None:
-                    payload['call_chain_parent_evidence_id']=parent_ev.get('evidence_id')
-                    payload['call_chain_parent_symbol']=parent_ev.get('symbol')
+                    # Alphabet-declared call-after-call-result parent linkage.
+                    # Use the same relationship field family as call arguments so
+                    # downstream validation does not need a chain-specific convention.
+                    payload['parent_call_evidence_id']=parent_ev.get('evidence_id')
+                    payload['parent_call_symbol']=parent_ev.get('symbol')
                 ev=emit(str(kind),file_record,idx,raw,payload)
                 ev['_argument_entity_id']=ent.get('argument_entity_id')
                 items.append(ev)
