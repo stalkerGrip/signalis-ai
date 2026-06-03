@@ -555,8 +555,17 @@ def parse_inline_table_fields(table_text:str, base_line:int, a:Alphabet, pattern
         if eq_pos is not None:
             key=part[:eq_pos].strip(); value=part[eq_pos+1:].strip(); key_payload=computed_key_payload(key,a)
         else:
-            key=str(implicit_index); implicit_index+=1
-            key_payload={"key_syntax":a.mechanics.get('key_syntax_implicit_array_index','implicit_array_index'),"key_text":key,"key_expression":key,"key_expression_kind":"number_literal"}
+            # Positional/array-style table constructor entry. The ordinal is
+            # retained as metadata, while key_text/key_expression stay null
+            # because there is no explicit Lua key in source text.
+            ordinal=implicit_index; implicit_index+=1
+            key_payload={
+                "key_syntax":a.mechanics.get('key_syntax_positional_field','positional_field'),
+                "key_text":None,
+                "key_expression":None,
+                "key_expression_kind":"positional",
+                "positional_index":ordinal,
+            }
         fields.append({"key_payload":key_payload,"value":value,"value_kind":classify_value(value,a,patterns),"start_line":base_line})
     return fields
 
@@ -599,6 +608,53 @@ def emit_inline_table_fields(items:list[dict[str,Any]], file_record:dict[str,Any
                     npayload['value_body_span']=inline_value_body_span(raw,line_no,nvk,a,patterns)
                 items.append(emit(ent['id'],file_record,line_no,raw,npayload))
 
+def is_single_call_expression(rhs: str, a: Alphabet, patterns: dict[str,re.Pattern[str]]) -> bool:
+    s=rhs.strip()
+    if not s:
+        return False
+    call_re=patterns.get('call')
+    if not call_re:
+        return False
+    m=call_re.match(s)
+    if not m:
+        return False
+    gd=m.groupdict()
+    open_idx=m.start('call_open') if 'call_open' in gd and gd.get('call_open') is not None else s.find('(', m.start())
+    close_idx=find_call_close_index(s, m.start(), open_idx)
+    return close_idx is not None and s[close_idx+1:].strip()==''
+
+def positional_table_field_payload(value: str, ordinal: int, a: Alphabet) -> dict[str,Any]:
+    return {
+        "key_syntax":a.mechanics.get('key_syntax_positional_field','positional_field'),
+        "key_text":None,
+        "key_expression":None,
+        "key_expression_kind":"positional",
+        "positional_index":ordinal,
+    }
+
+def line_is_positional_table_field(code: str, a: Alphabet, patterns: dict[str,re.Pattern[str]]) -> str|None:
+    stripped=code.strip()
+    if not stripped or stripped in {'{','}','},'}:
+        return None
+    if stripped.startswith('}') or stripped.startswith('{'):
+        return None
+    masked=mask_strings(stripped, patterns).rstrip().rstrip(',').strip()
+    if not masked:
+        return None
+    # Explicit keyed fields are handled by the table_field entity.
+    ent=first_entity(a,'table_field')
+    if ent and pattern(patterns, ent['regex']).match(code):
+        return None
+    # Do not treat ordinary assignment statements inside functions as table
+    # positional entries unless a table context owns the current line. Caller
+    # enforces table context; here we reject obvious statement/block forms.
+    head=re.match(r"^([A-Za-z_][A-Za-z0-9_]*)\b", masked)
+    if head and head.group(1) in a.control_call_words:
+        return None
+    if '=' in masked:
+        return None
+    return stripped.rstrip(',').strip()
+
 def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
     lhs=lhs.strip()
     if not lhs: return False
@@ -607,7 +663,7 @@ def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
         raise ValueError('lua_syntax_alphabet.regex.qualified_symbol must be declared')
     return bool(re.fullmatch(rf"(?:{q})(?:\[[^\]]+\])?", lhs))
 
-def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[tuple[bool,str,str]]:
+def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[tuple[bool,str,str,dict[str,Any]]]:
     masked=mask_strings(code,patterns)
     out=[]
     for m in re.finditer(r"=", masked):
@@ -628,12 +684,28 @@ def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pat
         lhs_parts=split_top_level_csv(raw_left,a,patterns)
         rhs_parts=split_top_level_csv(rhs,a,patterns)
         if not lhs_parts: continue
+        share_single_call_rhs=(
+            len(lhs_parts) > 1
+            and len(rhs_parts) == 1
+            and bool(a.mechanics.get('multi_assignment_single_call_rhs_may_return_multiple', False))
+            and is_single_call_expression(rhs_parts[0], a, patterns)
+        )
+        group_id=None
+        if len(lhs_parts) > 1:
+            group_id="lua_multi_assignment:"+stable_hash({"lhs":lhs_parts,"rhs":rhs,"is_local":is_local})[:16]
         for pos,lhs in enumerate(lhs_parts):
             lhs=lhs.strip()
             if not assignment_lhs_is_syntax(lhs,a):
                 continue
-            rhs_part=rhs_parts[pos].strip() if pos < len(rhs_parts) else 'nil'
-            out.append((is_local,lhs,rhs_part))
+            meta={}
+            if group_id:
+                meta['multi_assignment_group']=group_id
+            if share_single_call_rhs:
+                rhs_part=rhs_parts[0].strip()
+                meta['rhs_returns_maybe_multiple']=True
+            else:
+                rhs_part=rhs_parts[pos].strip() if pos < len(rhs_parts) else str(a.mechanics.get('multi_assignment_missing_rhs_value','nil'))
+            out.append((is_local,lhs,rhs_part,meta))
     return out
 
 def extract_multiline_call_arguments(lines:list[str], start_line:int, col:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[str,bool,list[ArgumentSpan]]:
@@ -736,17 +808,34 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                 if val.strip().startswith('{'):
                     emit_inline_table_fields(items,file_record,idx,raw,kp['key_text'],val,context_path(stack),a,patterns,table_depth=len([c for c in stack if c.kind==a.mechanics.get('context_kind_table','table')])+1)
             break
+        # positional/array-style table field if alphabet enables it and an
+        # existing table context owns this source line. This is generic Lua
+        # table constructor syntax and does not use project-specific names.
+        if a.mechanics.get('positional_table_fields_enabled', False):
+            ctx=current_table_context(stack, fdepth, True)
+            if ctx:
+                positional_value=line_is_positional_table_field(code,a,patterns)
+                if positional_value is not None:
+                    ent=first_entity(a,'table_field')
+                    if ent:
+                        ordinal=sum(1 for it in items if it.get('kind')=='lua_table_field' and it.get('context_path')==context_path(stack) and it.get('key_syntax')==a.mechanics.get('key_syntax_positional_field','positional_field')) + int(a.mechanics.get('implicit_array_index_start',1))
+                        vk=classify_value(positional_value,a,patterns)
+                        payload={**positional_table_field_payload(positional_value,ordinal,a),"value_kind":vk,"value_preview":positional_value[:240],"value_truncated":len(positional_value)>240,"table_depth":len([c for c in stack if c.kind==a.mechanics.get('context_kind_table','table')]),"context_path":context_path(stack)}
+                        if vk in set(a.mechanics.get('body_span_value_kinds',[])):
+                            payload['value_body_span']=body_span_for_value(lines,idx,vk,a,patterns)
+                        items.append(emit(ent['id'],file_record,idx,raw,payload))
         # assignments
         assignment_ent_by_local = {
             True: first_entity(a,'local_assignment'),
             False: first_entity(a,'assignment'),
         }
-        for is_local,lhs,rhs in extract_assignment_candidates(code,a,patterns):
+        for is_local,lhs,rhs,assignment_meta in extract_assignment_candidates(code,a,patterns):
             ent=assignment_ent_by_local.get(is_local)
             if not ent or ent['id'] in suppressed: continue
             rhs_full, rhs_end, rhs_complete = collect_multiline_assignment_rhs(lines,idx,rhs,a,patterns)
             rk=classify_assignment_rhs(rhs_full,a,patterns)
             payload={"lhs":lhs,"is_local":is_local,"rhs_kind":rk,"rhs_preview":rhs_full[:240],"rhs_truncated":len(rhs_full)>240}
+            payload.update(assignment_meta)
             if rhs_end != idx or not rhs_complete:
                 payload['rhs_span']={"start_line":idx,"end_line":rhs_end,"complete":rhs_complete}
             if rk in set(a.mechanics.get('body_span_value_kinds',[])): payload['rhs_body_span']=body_span_for_value(lines,idx,rk,a,patterns)
