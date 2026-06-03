@@ -103,6 +103,12 @@ def entity_by_operation(a: Alphabet, op: str)->list[dict[str,Any]]:
 def first_entity(a: Alphabet, op: str)->dict[str,Any]|None:
     xs=entity_by_operation(a,op); return xs[0] if xs else None
 
+def parser_operation_order(a: Alphabet)->list[str]:
+    order=a.mechanics.get('parser_operation_order')
+    if not isinstance(order,list) or not all(isinstance(x,str) for x in order):
+        raise ValueError('lua_syntax_alphabet.mechanics.parser_operation_order must be declared as list[str]')
+    return [str(x) for x in order]
+
 def pattern(patterns: dict[str,re.Pattern[str]], name: str)->re.Pattern[str]:
     if name not in patterns: raise ValueError(f"Alphabet regex not found: {name}")
     return patterns[name]
@@ -232,7 +238,7 @@ def discover_function_ranges(lines:list[str], a:Alphabet, patterns:dict[str,re.P
     ranges=[]
     for idx,line in enumerate(lines,1):
         code=strip_line_comment(line)
-        for op in ['function_definition','assigned_function','local_assigned_function']:
+        for op in [x for x in parser_operation_order(a) if x in {'function_definition','assigned_function','local_assigned_function'}]:
             ent=first_entity(a,op)
             if ent and pattern(patterns, ent['regex']).match(code):
                 end=tokenized_block_end_line(lines,idx,a,patterns)
@@ -376,7 +382,9 @@ def statement_boundary_end(masked_right:str, a:Alphabet)->int:
 def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
     lhs=lhs.strip()
     if not lhs: return False
-    q=a.regex.get('qualified_symbol', r'[A-Za-z_][A-Za-z0-9_]*(?:(?:\.|:)[A-Za-z_][A-Za-z0-9_]*)*')
+    q=a.regex.get('qualified_symbol')
+    if not q:
+        raise ValueError('lua_syntax_alphabet.regex.qualified_symbol must be declared')
     return bool(re.fullmatch(rf"(?:{q})(?:\[[^\]]+\])?", lhs))
 
 def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]])->list[tuple[bool,str,str]]:
@@ -433,8 +441,10 @@ def extract_multiline_call_arguments(lines:list[str], start_line:int, col:int, a
         if started: chunks.append('\n')
     txt=''.join(chunks); return txt, False, split_args_with_spans(txt,start_line,a,patterns)
 
-def emit_call_argument(items:list[dict[str,Any]], file_record:dict[str,Any], line_no:int, source_line:str, parent:dict[str,Any], arg_index:int, arg_text:str, start_line:int, end_line:int, lines:list[str], a:Alphabet, patterns:dict[str,re.Pattern[str]])->dict[str,Any]:
-    ent_id = parent.get('_argument_entity_id') or 'lua_call_argument'
+def emit_call_argument(items:list[dict[str,Any]], file_record:dict[str,Any], line_no:int, source_line:str, parent:dict[str,Any], arg_index:int, arg_text:str, start_line:int, end_line:int, lines:list[str], a:Alphabet, patterns:dict[str,re.Pattern[str]], owned_function_literal_spans:set[tuple[int,int]]|None=None)->dict[str,Any]:
+    ent_id = parent.get('_argument_entity_id')
+    if not ent_id:
+        raise ValueError('Call argument entity id must be declared by lua_syntax_alphabet syntax entity')
     kind=classify_value(arg_text,a,patterns)
     payload={"parent_call_evidence_id":parent['evidence_id'],"parent_call_symbol":parent.get('symbol'),"argument_index":arg_index,"argument_kind":kind,"argument_preview":arg_text[:240],"argument_truncated":len(arg_text)>240,"argument_start_line":start_line,"argument_end_line":end_line}
     if kind==a.mechanics.get('function_body_value_kind'):
@@ -443,8 +453,12 @@ def emit_call_argument(items:list[dict[str,Any]], file_record:dict[str,Any], lin
     # attached anonymous function evidence from alphabet entity
     anon=first_entity(a,'anonymous_function')
     if anon and kind==a.mechanics.get('function_body_value_kind') and a.mechanics.get('anonymous_function_arguments_attach_to_parent_call_argument', True):
-        mm=re.search(r"function\s*\(([^)]*)\)", arg_text)
-        items.append(emit(anon['id'], file_record, start_line, source_line, {"parameters":split_params(mm.group(1)) if mm else [],"body_span":body_span_for_value(lines,start_line,kind,a,patterns),"parent_call_evidence_id":parent['evidence_id'],"parent_call_argument_evidence_id":ev['evidence_id'],"parent_call_argument_index":arg_index}))
+        regex_name=str(anon.get('regex',''))
+        mm=pattern(patterns, regex_name).search(arg_text) if regex_name else None
+        span=body_span_for_value(lines,start_line,kind,a,patterns)
+        items.append(emit(anon['id'], file_record, start_line, source_line, {"parameters":split_params(mm.group(1)) if mm else [],"body_span":span,"parent_call_evidence_id":parent['evidence_id'],"parent_call_argument_evidence_id":ev['evidence_id'],"parent_call_argument_index":arg_index}))
+        if owned_function_literal_spans is not None and span.get('complete'):
+            owned_function_literal_spans.add((int(span['start_line']), int(span['end_line'])))
     return ev
 
 def count_by(items:Iterable[dict[str,Any]], key:str)->dict[str,int]:
@@ -457,6 +471,7 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
     path=Path(str(file_record['absolute_path'])); expected=str(file_record.get('sha256','')); actual=file_sha256(path)
     text,enc=read_text_lossless(path); lines=text.splitlines(); ranges=discover_function_ranges(lines,a,patterns)
     items=[]; stack=[]
+    owned_call_argument_function_spans:set[tuple[int,int]]=set()
     for idx,raw in enumerate(lines,1):
         code=strip_line_comment(raw)
         if not code.strip(): continue
@@ -496,7 +511,7 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
             if it.get('evidence',{}).get('file_id')==file_record.get('file_id') and it.get('evidence',{}).get('line')==idx:
                 if it.get('rhs_kind')==a.mechanics.get('function_body_value_kind') or it.get('value_kind')==a.mechanics.get('function_body_value_kind'):
                     owned_function_literal_line=True
-        for op in ['function_definition','assigned_function','local_assigned_function']:
+        for op in [x for x in parser_operation_order(a) if x in {'function_definition','assigned_function','local_assigned_function'}]:
             for ent in entity_by_operation(a,op):
                 if ent['id'] in suppressed: continue
                 if owned_function_literal_line and ent.get('suppressed_when_assignment_rhs_is_function_literal', False): continue
@@ -510,14 +525,6 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                 else:
                     lhs,params=m.groups(); payload={"is_local":True,"lhs":lhs,"symbol":symbol_shape(lhs),"parameters":split_params(params),"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)}
                 items.append(emit(ent['id'],file_record,idx,raw,payload))
-        # inline anonymous function not already declaration and not call-argument attached.
-        # Owned function literals are governed by their owner evidence unless the
-        # alphabet explicitly allows standalone anonymous evidence for them.
-        anon=first_entity(a,'anonymous_function')
-        emit_owned_anon=bool(a.mechanics.get('owned_function_literals_emit_anonymous_function_evidence', False))
-        if anon and 'function' in code and not declaration_line and (emit_owned_anon or not owned_function_literal_line):
-            for mm in re.finditer(r"function\s*\(([^)]*)\)", code):
-                items.append(emit(anon['id'],file_record,idx,raw,{"parameters":split_params(mm.group(1)),"column":mm.start()+1,"body_span":body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns),"context_path":context_path(stack)}))
         # calls
         call_ent=first_entity(a,'call_expression')
         if call_ent and not (declaration_line and a.mechanics.get('function_definition_lines_are_not_call_expression_lines', True)):
@@ -538,7 +545,7 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                 if not complete:
                     matxt,mcomp,argspans=extract_multiline_call_arguments(lines,idx,col0+1,a,patterns)
                     ev.update({"arguments_complete_multiline":mcomp,"argument_count_multiline":len(argspans),"argument_kinds_multiline":[classify_value(sx.text,a,patterns) for sx in argspans],"arguments_multiline_preview":matxt[:240],"arguments_multiline_truncated":len(matxt)>240})
-                for ai,sp in enumerate(argspans): emit_call_argument(items,file_record,sp.start_line,lines[sp.start_line-1],ev,ai,sp.text,sp.start_line,sp.end_line,lines,a,patterns)
+                for ai,sp in enumerate(argspans): emit_call_argument(items,file_record,sp.start_line,lines[sp.start_line-1],ev,ai,sp.text,sp.start_line,sp.end_line,lines,a,patterns,owned_call_argument_function_spans)
                 ev.pop('_argument_entity_id',None)
                 close_idx=find_call_close_index(code,col0)
                 if close_idx is not None:
@@ -560,6 +567,21 @@ def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphab
                     target=call_target_with_result_suffix(previous_target,sep,leaf)
                     parent_ev=close_to_evidence.get(cm.start())
                     emit_call_from_match(target,cm.start('leaf'),chain_ent,parent_ev)
+        # inline anonymous function not already declaration and not call-argument attached.
+        # Owned function literals are governed by their owner evidence unless the
+        # alphabet explicitly allows standalone anonymous evidence for them.
+        anon=first_entity(a,'anonymous_function')
+        emit_owned_anon=bool(a.mechanics.get('owned_function_literals_emit_anonymous_function_evidence', False))
+        if anon and 'function' in code and not declaration_line and (emit_owned_anon or not owned_function_literal_line):
+            regex_name=str(anon.get('regex',''))
+            for mm in pattern(patterns, regex_name).finditer(code):
+                span=body_span_for_value(lines,idx,a.mechanics.get('function_body_value_kind'),a,patterns)
+                if (not emit_owned_anon
+                    and a.mechanics['anonymous_function_suppress_when_owned_by_call_argument']
+                    and span.get('complete')
+                    and (int(span['start_line']), int(span['end_line'])) in owned_call_argument_function_spans):
+                    continue
+                items.append(emit(anon['id'],file_record,idx,raw,{"parameters":split_params(mm.group(1)),"column":mm.start()+1,"body_span":span,"context_path":context_path(stack)}))
         # quoted string literals
         lit=first_entity(a,'quoted_string_literal')
         if lit:
