@@ -77,6 +77,8 @@ ALLOWED_PROMOTION_ROLES = [
     "promotion_support",
     "context_or_debug",
     "not_promotion_relevant",
+    "syntax_extraction_rule_input",
+    "intermediate_evidence",
 ]
 
 ALLOWED_CANONICAL_STATUSES = [

@@ -6,17 +6,17 @@ The JSON remains the complete machine-readable registry.
 ## Summary
 
 - Schema: `pipeline_artifact_contract`
-- Generated at: `2026-06-03T11:46:00Z`
+- Generated at: `2026-06-03T19:47:50Z`
 - Script scan roots: `1`
 - Artifact scan roots: `1`
 - Scripts scanned: `3`
-- Valid script contracts: `2`
-- Invalid script contracts: `1`
+- Valid script contracts: `3`
+- Invalid script contracts: `0`
 - Unregistered scripts: `0`
-- Artifacts scanned: `4`
-- Artifacts with metadata: `2`
+- Artifacts scanned: `5`
+- Artifacts with metadata: `3`
 - Artifacts without metadata: `2`
-- Errors: `2`
+- Errors: `0`
 - Warnings: `0`
 
 ## Rules
@@ -50,21 +50,19 @@ The JSON remains the complete machine-readable registry.
 
 | Status | Count |
 |---|---:|
-| `invalid` | 1 |
-| `valid` | 2 |
+| `valid` | 3 |
 
 ## Registered Scripts
 
 | Script | Stage | Inputs | Outputs | Capabilities | Status |
 |---|---|---|---|---|---|
 | `scripts.extraction.discover_lua_sources`<br>`scripts/extraction/discover_lua_sources.py` | `extraction` | — | `source_file_manifest` | `file_digests`, `file_realm_hints`, `source_files`, `source_roots` | `active` |
+| `scripts.extraction.extract_lua_runtime_signals`<br>`scripts/extraction/extract_lua_runtime_signals.py` | `extraction` | `lua_syntax_alphabet`, `source_file_manifest` | `raw_lua_extraction` | `file_digest_verification`, `line_evidence`, `lua_syntax_alphabet_reference`, `source_manifest_reference` | `active` |
 | `scripts.tools.build_pipeline_contract_registry`<br>`scripts/tools/build_pipeline_contract_registry.py` | `governance` | — | `pipeline_artifact_contract`, `script_cli_contracts` | `artifact_lineage`, `artifact_metadata`, `contract_findings`, `script_cli_help`, `script_contracts` | `active` |
 
 ## Invalid Script Contracts
 
-| Path | Actual module | Declared script_id | Findings |
-|---|---|---|---|
-| `scripts/extraction/extract_lua_runtime_signals.py` | `scripts.extraction.extract_lua_runtime_signals` | `scripts.extraction.extract_lua_runtime_signals` | `invalid_promotion_role` |
+No invalid script contracts.
 
 ## Unregistered Scripts
 
@@ -75,14 +73,15 @@ No unregistered scripts.
 | Source | Count |
 |---|---:|
 | `artifact_without_contract_metadata` | 2 |
-| `explicit_or_embedded_metadata` | 2 |
+| `explicit_or_embedded_metadata` | 3 |
 
 ## Artifacts With Contract Metadata
 
 | Artifact | Producer | Stage | Family | Capabilities | Status |
 |---|---|---|---|---|---|
-| `lua_syntax_alphabet:52475f03a5b7ca4a`<br>`manifests/alphabet/lua_syntax_alphabet.json` | `manual.source_governed_extraction_alphabet` | `extraction` | `lua_syntax_alphabet` | — | `intermediate` |
-| `source_file_manifest:ea53d958bc6f5cee`<br>`manifests/extraction/source_file_manifest.json` | `scripts.extraction.discover_lua_sources` | `extraction` | `source_file_manifest` | `file_digests`, `file_realm_hints`, `source_files`, `source_roots` | `intermediate` |
+| `lua_syntax_alphabet:32871dfef5c211c0`<br>`manifests/alphabet/lua_syntax_alphabet.json` | `manual.source_governed_extraction_alphabet` | `extraction` | `lua_syntax_alphabet` | — | `intermediate` |
+| `raw_lua_extraction:7cc09f210e5fbd50`<br>`manifests/extraction/raw_lua_extraction.json` | `scripts.extraction.extract_lua_runtime_signals` | `extraction` | `raw_lua_extraction` | `file_digest_verification`, `line_evidence`, `lua_syntax_alphabet_reference`, `source_manifest_reference` | `intermediate` |
+| `source_file_manifest:a423e63f13adbb3d`<br>`manifests/extraction/source_file_manifest.json` | `scripts.extraction.discover_lua_sources` | `extraction` | `source_file_manifest` | `file_digests`, `file_realm_hints`, `source_files`, `source_roots` | `intermediate` |
 
 ## Artifacts Missing Metadata
 
@@ -95,7 +94,4 @@ Shown only because `--include-missing-artifacts` was used.
 
 ## Findings
 
-| Severity | Path | Message |
-|---|---|---|
-| `error` | `manifests/alphabet/lua_syntax_alphabet.json` | `invalid_promotion_role` |
-| `error` | `scripts/extraction/extract_lua_runtime_signals.py` | `invalid_promotion_role` |
+No findings.
