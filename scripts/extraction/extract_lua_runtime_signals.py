@@ -134,6 +134,75 @@ def mask_strings(line: str, patterns: dict[str,re.Pattern[str]])->str:
     if 'string_literal' not in patterns: return line
     return patterns['string_literal'].sub(lambda m:m.group('quote')+('_'*len(m.group('value')))+m.group('quote'), line)
 
+
+def mask_c_style_block_comments(text: str) -> str:
+    # Generic GLua tolerance: mask /* ... */ comment blocks before extraction,
+    # while preserving line count/columns and ignoring markers inside quoted strings
+    # or ordinary Lua line comments.
+    out=[]
+    i=0
+    in_s=False
+    in_d=False
+    esc=False
+    in_line_comment=False
+    in_c_block=False
+    while i < len(text):
+        ch=text[i]
+        nx=text[i+1] if i+1 < len(text) else ''
+        if in_c_block:
+            if ch=='*' and nx=='/':
+                out.append(' ')
+                out.append(' ')
+                i += 2
+                in_c_block=False
+                continue
+            out.append('\n' if ch=='\n' else ' ')
+            if ch=='\n':
+                in_line_comment=False
+            i += 1
+            continue
+        if in_line_comment:
+            out.append(ch)
+            if ch=='\n':
+                in_line_comment=False
+            i += 1
+            continue
+        if esc:
+            out.append(ch)
+            esc=False
+            i += 1
+            continue
+        if ch=='\\' and (in_s or in_d):
+            out.append(ch)
+            esc=True
+            i += 1
+            continue
+        if ch=="'" and not in_d:
+            in_s=not in_s
+            out.append(ch)
+            i += 1
+            continue
+        if ch=='"' and not in_s:
+            in_d=not in_d
+            out.append(ch)
+            i += 1
+            continue
+        if not in_s and not in_d and ch=='-' and nx=='-':
+            out.append(ch)
+            out.append(nx)
+            i += 2
+            in_line_comment=True
+            continue
+        if not in_s and not in_d and ch=='/' and nx=='*':
+            out.append(' ')
+            out.append(' ')
+            i += 2
+            in_c_block=True
+            continue
+        out.append(ch)
+        i += 1
+    return ''.join(out)
+
 def split_params(params: str)->list[str]: return [p.strip() for p in params.split(',') if p.strip()]
 
 def classify_value(value: str, a: Alphabet, patterns: dict[str,re.Pattern[str]])->str:
@@ -641,6 +710,10 @@ def line_is_positional_table_field(code: str, a: Alphabet, patterns: dict[str,re
     masked=mask_strings(stripped, patterns).rstrip().rstrip(',').strip()
     if not masked:
         return None
+    excluded=set(str(x) for x in a.mechanics.get('positional_table_field_excluded_standalone_tokens', ['end','else','elseif','until']))
+    token=masked.split(None,1)[0] if masked.split(None,1) else masked
+    if masked in excluded or token in excluded:
+        return None
     # Explicit keyed fields are handled by the table_field entity.
     ent=first_entity(a,'table_field')
     if ent and pattern(patterns, ent['regex']).match(code):
@@ -658,10 +731,12 @@ def line_is_positional_table_field(code: str, a: Alphabet, patterns: dict[str,re
 def assignment_lhs_is_syntax(lhs:str, a:Alphabet)->bool:
     lhs=lhs.strip()
     if not lhs: return False
-    q=a.regex.get('qualified_symbol')
-    if not q:
-        raise ValueError('lua_syntax_alphabet.regex.qualified_symbol must be declared')
-    return bool(re.fullmatch(rf"(?:{q})(?:\[[^\]]+\])?", lhs))
+    ident=r"[A-Za-z_][A-Za-z0-9_]*"
+    bracket=r"\[[^\]\r\n]+\]"
+    # Generic Lua/GLua LHS chain: symbol, dotted/method segments, and computed
+    # index segments may appear in any order after the root symbol.
+    indexed_chain=rf"{ident}(?:(?:\.|:){ident}|{bracket})*"
+    return bool(re.fullmatch(indexed_chain, lhs))
 
 def extract_assignment_candidates(code:str, a:Alphabet, patterns:dict[str,re.Pattern[str]], file_id:str|None=None, line_no:int|None=None, raw_text:str|None=None)->list[tuple[bool,str,str,dict[str,Any]]]:
     masked=mask_strings(code,patterns)
@@ -784,7 +859,7 @@ def dedupe_table_fields(items:list[dict[str,Any]])->list[dict[str,Any]]:
 
 def extract_from_file(file_record:dict[str,Any], max_string_length:int, a:Alphabet, patterns:dict[str,re.Pattern[str]])->tuple[list[dict[str,Any]],dict[str,Any]]:
     path=Path(str(file_record['absolute_path'])); expected=str(file_record.get('sha256','')); actual=file_sha256(path)
-    text,enc=read_text_lossless(path); lines=text.splitlines(); ranges=discover_function_ranges(lines,a,patterns)
+    text,enc=read_text_lossless(path); text=mask_c_style_block_comments(text); lines=text.splitlines(); ranges=discover_function_ranges(lines,a,patterns)
     items=[]; stack=[]
     owned_call_argument_function_spans:set[tuple[int,int]]=set()
     for idx,raw in enumerate(lines,1):

@@ -64,6 +64,7 @@ manifests/semantic/qdrant_embeddings.jsonl
 manifests/semantic/qdrant_query_results*
 manifests/semantic/qdrant_embedding_*
 manifests/semantic/qdrant_ingest_*
+manifests/extraction/**
 
 # =====================================================
 # Investigation Outputs

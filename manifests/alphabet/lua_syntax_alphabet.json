@@ -1,6 +1,6 @@
 {
   "artifact_family": "lua_syntax_alphabet",
-  "artifact_id": "lua_syntax_alphabet:a7757d3d46158dad",
+  "artifact_id": "lua_syntax_alphabet:32871dfef5c211c0",
   "block_tokens": {
     "close": [
       "end",
@@ -45,7 +45,7 @@
     ]
   },
   "canonical_status": "intermediate",
-  "content_digest": "a7757d3d46158dad2517c26da2b828fe31d1859fffdbd9e22082654f5463d400",
+  "content_digest": "32871dfef5c211c0e5e0b7ac6b296cf82a58c4f8601cbc88fcbed5a4caf70d49",
   "control_call_words": [
     "if",
     "for",
@@ -111,8 +111,10 @@
     "function_definition_lines_are_not_call_expression_lines": true,
     "function_literal_assignment_emits_function_assignment": false,
     "function_literals_inside_table_constructors_are_table_fields": true,
+    "glua_c_style_block_comments_masked_before_extraction": true,
     "identifier_key_expression_kind": "identifier",
     "implicit_array_index_start": 1,
+    "indexed_assignment_lhs_enabled": true,
     "indexed_receiver_method_call_enabled": true,
     "inline_assignment_left_boundary_tokens": [
       "then",
@@ -133,7 +135,19 @@
     "local_assignment_has_is_local_and_clean_lhs": true,
     "local_multi_assignment_enabled": true,
     "multi_assignment_emit_each_lhs": true,
+    "multi_assignment_group_identity": "occurrence_unique_deterministic",
+    "multi_assignment_group_identity_inputs": [
+      "file_id",
+      "line",
+      "raw_evidence_text",
+      "normalized_lhs_list",
+      "normalized_rhs_list",
+      "is_local"
+    ],
     "multi_assignment_missing_rhs_value": "nil",
+    "multi_assignment_single_call_rhs_may_return_multiple": true,
+    "multi_assignment_single_call_rhs_metadata": "rhs_returns_maybe_multiple",
+    "multi_assignment_single_call_rhs_strategy": "share_rhs_for_all_lhs",
     "multi_assignment_split_strategy": "top_level_commas_only",
     "multiline_assignment_rhs_balance_tokens": [
       "parentheses",
@@ -162,6 +176,12 @@
       "quoted_string_literal",
       "long_bracket_string_literal"
     ],
+    "positional_table_field_excluded_standalone_tokens": [
+      "end",
+      "else",
+      "elseif",
+      "until"
+    ],
     "positional_table_fields_enabled": true,
     "preserve_table_context_labels": true,
     "preview_text_is_not_source_location_evidence": true,
@@ -181,19 +201,7 @@
       "key_text",
       "value_preview"
     ],
-    "table_field_function_literal_emits_function_assignment": false,
-    "multi_assignment_single_call_rhs_may_return_multiple": true,
-    "multi_assignment_single_call_rhs_metadata": "rhs_returns_maybe_multiple",
-    "multi_assignment_single_call_rhs_strategy": "share_rhs_for_all_lhs",
-    "multi_assignment_group_identity": "occurrence_unique_deterministic",
-    "multi_assignment_group_identity_inputs": [
-      "file_id",
-      "line",
-      "raw_evidence_text",
-      "normalized_lhs_list",
-      "normalized_rhs_list",
-      "is_local"
-    ]
+    "table_field_function_literal_emits_function_assignment": false
   },
   "minimal_required_changes_for_extractor": [
     "Replace script-owned evidence-kind/vocabulary constants with syntax_entities declared by lua_syntax_alphabet.",
@@ -229,7 +237,54 @@
     "When emitting nested table fields, preserve the real child table field start line in context_path and value_body_span.",
     "Deduplicate lua_table_field evidence by file_id, line, table_depth, context_path, key_text, and value_preview.",
     "When a multi-assignment has multiple LHS entries and exactly one RHS that is a syntactic call expression, do not invent nil for later LHS entries; share the call RHS and mark rhs_returns_maybe_multiple when declared.",
-    "multi_assignment_group must be deterministic per raw assignment occurrence: same emitted assignments from one raw occurrence share a group, repeated identical assignment text on different lines must have different groups using source occurrence identity."
+    "multi_assignment_group must be deterministic per raw assignment occurrence: same emitted assignments from one raw occurrence share a group, repeated identical assignment text on different lines must have different groups using source occurrence identity.",
+    {
+      "applies_to": "lua_table_field",
+      "excluded_standalone_tokens": [
+        "end",
+        "else",
+        "elseif",
+        "until"
+      ],
+      "name": "positional_table_field_exclusions",
+      "reason": "These tokens close or continue syntax blocks and are not table values unless explicitly quoted or embedded inside an expression.",
+      "rule": "Lua block delimiters and control-flow keywords are not positional table fields."
+    },
+    {
+      "applies_before_extraction": true,
+      "forbidden_outputs_inside_mask": [
+        "lua_assignment",
+        "lua_table_field",
+        "lua_literal_value",
+        "lua_function_definition",
+        "lua_anonymous_function",
+        "lua_call_expression",
+        "lua_method_call_expression",
+        "lua_call_argument"
+      ],
+      "masking": true,
+      "name": "glua_c_style_block_comments",
+      "syntax_forms": [
+        "/* ... */"
+      ]
+    },
+    {
+      "forbidden": [
+        "project_specific_lhs_names",
+        "field_name_allowlists",
+        "method_name_allowlists"
+      ],
+      "kind": "lua_assignment",
+      "name": "indexed_assignment_lhs",
+      "rhs_capture": true,
+      "syntax_forms": [
+        "symbol[index] = rhs",
+        "symbol.field[index] = rhs",
+        "symbol[index].field = rhs",
+        "symbol.field[index].field[index] = rhs"
+      ],
+      "table_literal_rhs_supported": true
+    }
   ],
   "pipeline_stage": "extraction",
   "producer_script": "manual.source_governed_extraction_alphabet",

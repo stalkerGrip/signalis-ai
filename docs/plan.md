@@ -40,9 +40,9 @@ it's a context for a chat, not a directive for immediate execution
          lua_syntax_alphabet.json
          lua_syntax_alphabet.md
    2.1.2 Working on extract_lua_runtime_signals.py IN PROGRESS
-      2.1.2.1 Validate extract_lua_runtime_signals.py output against raw LUA CURRENT
-      2.1.2.2 Polish extraction alphabet for extract_lua_runtime_signals.py INCLUDE
-      2.1.2.3 provide fixes for extract_lua_runtime_signals.py and lua_syntax_alphabet build_pipeline_contract_registry generation for INCLUDE
+      2.1.2.1 Validate extract_lua_runtime_signals.py output against raw PASS
+      2.1.2.2 Polish extraction alphabet for extract_lua_runtime_signals.py PASS
+      2.1.2.3 provide fixes for extract_lua_runtime_signals.py and lua_syntax_alphabet build_pipeline_contract_registry generation for CURRENT
 2.2 Investigation of creation extract_ast_lua_runtime_signals.py based on results of extract_lua_runtime_signals.py input NEXT
    2.2.1 Validate extract_ast_lua_runtime_signals.py output agaist raw LUA and extract_lua_runtime_signals.py
    2.2.2 Polish extraction via extract_ast_lua_runtime_signals.py
