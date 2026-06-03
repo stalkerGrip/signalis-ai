@@ -1,5 +1,8 @@
 ## Master plan
 
+Important:
+it's a context for a chat, not a directive for immediate execution
+
 ### Tasks
 1. Source discovery PASS
    → discover_lua_sources.py implemented
@@ -15,7 +18,7 @@
         script_contracts.json
         script_contracts.md
 
-1.3 Make a solid plan CURRENT
+1.3 Make a solid plan PASS
 1.3.1 Update system prompt PASS
    Prompt updated implemented
    → source_file_manifest:
@@ -29,11 +32,13 @@
    → source_file_manifest:
       None
 
-2. Raw extraction
-   → extract_lua_runtime_signals.py
-   → raw_lua_extraction
+2. Raw extraction IN PROGRESS
+2.2 Make extract infrostructure IN PROGRESS
+2.2.1 Investigation of creation extract_lua_runtime_signals.py based on discover_lua_sources.py input CURRENT
+2.2.2 Working on extract_lua_runtime_signals.py INCLUDE
+2.2.3 Audit 2 chain pipeline discover_lua_sources -> extract_lua_runtime_signals INCLUDE
 
-3. Normalization
+3. Normalization NEXT
    → normalize_runtime_facts.py
    → normalized_runtime_facts
 
@@ -113,12 +118,15 @@
 Task status should be tracked.
 Task results should be filled in.
 The master should be divided into tasks and subtasks.
+Few subtasks can be done in one chat if they close context related.
 
 ## Plan terminology
 
-CURRENT = task actively being executed now.
+CURRENT - task actively being executed now.
+INCLUDE - means that task can be implemented with CURRENT if possible
 NEXT = task that starts only after CURRENT is completed.
-BLOCKED = cannot start until prerequisites are completed.
+IN PROGRESS = currently in progress
+BLOCKED - blocked for some reason
 PASS = completed.
 
 Hierarchical schema example by numeration

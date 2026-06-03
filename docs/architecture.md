@@ -56,6 +56,56 @@ source_file_manifest
 → orchestration_context_pack
 → guidance_report
 
+## Extraction Boundary
+
+Extraction means syntax evidence capture.
+
+Extraction scripts must capture what source files explicitly contain, without deciding what it means.
+
+Allowed extraction outputs:
+
+- file identity and digest
+- source location
+- realm hint from filename only
+- assignment
+- table field
+- literal value
+- function definition
+- function assignment
+- anonymous function
+- call expression
+- method call expression
+- call arguments
+- function body span
+
+Extraction scripts must not classify project/runtime meaning.
+
+Forbidden in extraction:
+
+- network sender / receiver classification
+- hook listener / hook emission classification
+- scheduler classification
+- item action classification
+- inventory, vendor, armor, characterload, or benchmark-specific classification
+- NutScript or SIGNALIS-specific behavior decisions
+- priority or importance decisions
+
+Normalization owns interpretation.
+
+Examples:
+
+`ITEM.desc = "text"` is extracted as assignment with string literal.
+
+`ITEM.onCombineTo = function(item, target)` is extracted as assignment with function literal and body span.
+
+`ITEM.functions.use = { onRun = function(item) ... }` is extracted as assignment with table literal and table fields.
+
+`netstream.Hook("invData", function(id, key, value) ... end)` is extracted as a call expression with an anonymous function argument.
+
+`hook.Run("ItemDataChanged", item, key, oldValue, value)` is extracted as a call expression.
+
+Only normalization may later classify these as item metadata, item action, network receiver, hook emission, scheduler registration, or runtime propagation.
+
 Optional runtime chains are used only when propagation reasoning is needed.
 
 Regression benchmarks such as vendor, characterload, and armor are only tests of the generic pipeline.

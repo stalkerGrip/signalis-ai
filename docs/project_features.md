@@ -1,5 +1,7 @@
 # SIGNALIS AI — Event Taxonomy
 
+This is information for informational purposes only; you cannot build generic scripts based on this knowledge.
+
 NutScript 1.2 derived framework
 messy legacy-heavy codebase
 do not assume clean architecture
