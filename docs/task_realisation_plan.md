@@ -1,113 +1,111 @@
-# SIGNALIS AI — Task Realisation 2.3.1
+# SIGNALIS AI — Task Realisation 2.3.2
 
-## Current task
+## Next task
 
-Create `scripts/extraction/compact_raw_lua_extraction.py`.
-
-Input:
+Start prototype work on:
 
 ```text
-manifests/extraction/raw_lua_extraction.json
+scripts/extraction/extract_ast_lua_runtime_signals.py
+manifests/alphabet/lua_ast_syntax_alphabet.json
 ```
 
-Outputs:
-
-```text
-manifests/extraction/raw_lua_extraction_compact.json
-manifests/extraction/raw_lua_extraction_index.md
-```
-
-This file owns only implementation guidance unique to task `2.3.1`. General architecture, extraction boundary, environment rules, CLI contract doctrine, and artifact registry rules remain owned by the project source files.
+This file owns only implementation guidance unique to task `2.3.2`. General extraction boundary and pipeline doctrine remain owned by the project source files.
 
 ## Task-specific decision
 
-Use a separate post-processing script. Do not change `extract_lua_runtime_signals.py` for compaction.
+Use Tree-sitter Lua as the first AST investigation target.
 
-Reason: extraction already happened. The compactor must reshape the existing artifact without reading raw Lua or creating new syntax evidence.
+The AST extractor must have its own alphabet/contract file. Do not hardcode emitted syntax families inside the script.
 
-## Problem being solved
+The script executes parser mechanics. The AST alphabet declares what AST node families may produce which extraction evidence kinds.
 
-The full raw extraction artifact is too large for practical downstream use because each evidence item repeats file metadata and source line text.
+## Prototype goal
 
-The compact artifact should keep the same syntax evidence, but move repeated data into shared indexes.
+Produce a first `ast_lua_extraction` artifact that can be compared against the compact regex extraction baseline.
 
-## Required preservation
+The AST extractor is not intended to replace regex extraction immediately. It must first prove parity or improvement against known weak areas.
 
-The compact output must preserve:
+## Required inputs
 
-- every evidence item
-- original `evidence_id`
-- evidence `kind`
-- source `file_id` and `line`
-- parent/child links such as `parent_call_evidence_id`
-- body/span fields
-- context paths
-- file summaries
-- full-artifact lineage
-- evidence kind counts
-
-Evidence count and kind counts must match the parent `raw_lua_extraction.json`.
-
-## Compaction shape
-
-Move repeated file metadata into a top-level `files` table keyed by `file_id`.
-
-Move repeated source text into a top-level `line_index` keyed as:
+Expected inputs:
 
 ```text
-<file_id>:<line>
+source_file_manifest.json
+lua_ast_syntax_alphabet.json
 ```
 
-Each compact evidence item should replace nested `evidence` with:
+Optional comparison input may be added later, but comparison should preferably stay in validation tooling, not in the AST extractor itself.
 
-```json
-{
-  "evidence_id": "raw_lua_evidence:...",
-  "kind": "lua_assignment",
-  "file_id": "lua_file:...",
-  "line": 42,
-  "line_key": "lua_file:...:42"
-}
+## Expected outputs
+
+Prototype output:
+
+```text
+manifests/extraction/ast_lua_extraction.json
+manifests/extraction/ast_lua_extraction.md
 ```
 
-Then preserve all remaining syntax fields from the original evidence item.
+## AST alphabet responsibilities
 
-## Markdown index
+`lua_ast_syntax_alphabet.json` should declare:
 
-`raw_lua_extraction_index.md` is a review surface, not a dump.
+- allowed AST node types
+- node type to evidence kind mapping
+- allowed evidence fields per emitted kind
+- GLua preprocessing rules used for parser compatibility
+- source range mapping policy
+- forbidden interpretation reminders specific to AST extraction
 
-It should include only:
+Keep it smaller than `lua_syntax_alphabet.json`. It should not duplicate regex mechanics.
 
-- compact artifact id
-- parent raw extraction artifact id
-- source manifest reference
-- Lua syntax alphabet reference
-- files total
-- evidence total
-- digest mismatch count
-- evidence kind counts table
-- top files by evidence count
-- output paths
+## GLua compatibility strategy
 
-Do not list individual evidence rows.
+Parse a transformed copy, never overwrite original source.
 
-## Validation checklist
+Initial compatibility transformations to investigate:
 
-Before task can pass:
+```text
+!x       -> not x
+a != b   -> a ~= b
+a && b   -> a and b
+a || b   -> a or b
+continue -> parser-safe placeholder
+```
 
-- CLI help works.
-- Compact JSON is generated.
-- Markdown index is generated.
-- Compact evidence count equals full evidence count.
-- Compact kind counts equal full kind counts.
-- Parent evidence references resolve inside compact evidence ids.
-- Build pipeline contract registry accepts the script and artifact metadata.
-- No runtime or project meaning is added.
+The output must cite original file lines and original source text/ranges, not transformed text.
+
+## Evidence focus
+
+Prototype should prioritize syntax facts that were fragile in regex extraction:
+
+- function declarations and body spans
+- assignment and local assignment
+- multi-assignment
+- table constructor fields
+- nested table constructors
+- function literals in table fields
+- call expressions
+- method calls
+- call arguments
+- anonymous callback function arguments
+- call-result chains where possible
+
+## Validation expectations for prototype
+
+The prototype does not need full parity on first run, but it must report parser failures and unsupported syntax explicitly.
+
+Each file summary should include:
+
+- parse status
+- transformation status
+- syntax error count if available
+- emitted evidence count by kind
+- source digest reference
 
 ## Known non-goals
 
-- No AST parsing.
+- No runtime meaning.
+- No hook/network/timer classification.
 - No normalization.
-- No raw Lua reading.
-- No filtering evidence by perceived importance.
-- No benchmark-specific handling.
+- No replacement of regex extraction before validation.
+- No project-specific symbol allowlists.

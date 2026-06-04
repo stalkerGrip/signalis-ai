@@ -1,6 +1,13 @@
 {
   "contracts": [
     {
+      "help": "usage: compact_raw_lua_extraction.py [-h] --workspace WORKSPACE\n                                     [--input-json INPUT_JSON]\n                                     [--out-json OUT_JSON] [--out-md OUT_MD]\n                                     [--fail-on-validation-error]\n\nCompact raw_lua_extraction into deduplicated line/file indexes without\nchanging syntax evidence.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n                        Workspace root containing\n                        manifests/extraction/raw_lua_extraction.json.\n  --input-json INPUT_JSON, --input INPUT_JSON\n                        Input raw_lua_extraction JSON path. Defaults to\n                        manifests/extraction/raw_lua_extraction.json.\n  --out-json OUT_JSON   Output compact JSON path. Defaults to\n                        manifests/extraction/raw_lua_extraction_compact.json.\n  --out-md OUT_MD       Output Markdown index path. Defaults to\n                        manifests/extraction/raw_lua_extraction_index.md.\n  --fail-on-validation-error\n                        Exit with an error when count validation or parent\n                        evidence reference validation fails.",
+      "help_ok": true,
+      "module": "scripts.extraction.compact_raw_lua_extraction",
+      "path": "scripts/extraction/compact_raw_lua_extraction.py",
+      "return_code": 0
+    },
+    {
       "help": "usage: discover_lua_sources.py [-h] --workspace WORKSPACE\n                               [--out-json OUT_JSON] [--out-md OUT_MD]\n\nDiscover Lua source files from config/workspace.yaml and build\nsource_file_manifest artifacts.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n                        Workspace root containing config/workspace.yaml.\n  --out-json OUT_JSON   Output JSON path. Defaults to\n                        manifests/extraction/source_file_manifest.json.\n  --out-md OUT_MD       Output Markdown path. Defaults to\n                        manifests/extraction/source_file_manifest.md.",
       "help_ok": true,
       "module": "scripts.extraction.discover_lua_sources",
@@ -22,6 +29,6 @@
       "return_code": 0
     }
   ],
-  "generated_at": "2026-06-03T19:47:50Z",
+  "generated_at": "2026-06-03T21:15:44Z",
   "schema": "script_cli_contracts"
 }

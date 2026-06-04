@@ -12,9 +12,40 @@ Purpose:
 - preserve script interfaces across chats
 - expose scripts without usable command-line help
 
-- Scripts checked: `3`
+- Scripts checked: `4`
 
 ## extraction
+
+### `scripts.extraction.compact_raw_lua_extraction`
+
+- Path: `scripts/extraction/compact_raw_lua_extraction.py`
+- Help status: `OK`
+
+```text
+usage: compact_raw_lua_extraction.py [-h] --workspace WORKSPACE
+                                     [--input-json INPUT_JSON]
+                                     [--out-json OUT_JSON] [--out-md OUT_MD]
+                                     [--fail-on-validation-error]
+
+Compact raw_lua_extraction into deduplicated line/file indexes without
+changing syntax evidence.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+                        Workspace root containing
+                        manifests/extraction/raw_lua_extraction.json.
+  --input-json INPUT_JSON, --input INPUT_JSON
+                        Input raw_lua_extraction JSON path. Defaults to
+                        manifests/extraction/raw_lua_extraction.json.
+  --out-json OUT_JSON   Output compact JSON path. Defaults to
+                        manifests/extraction/raw_lua_extraction_compact.json.
+  --out-md OUT_MD       Output Markdown index path. Defaults to
+                        manifests/extraction/raw_lua_extraction_index.md.
+  --fail-on-validation-error
+                        Exit with an error when count validation or parent
+                        evidence reference validation fails.
+```
 
 ### `scripts.extraction.discover_lua_sources`
 

@@ -68,4 +68,4 @@ Workspace configuration:
 
 Ryzen 5 7500f
 RX 9060 XT 16Gb
-32 Gb DDR4 RAM
+32 Gb DDR5 RAM

@@ -50,9 +50,13 @@ it's a context for a chat, not a directive for immediate execution
     → source_file_manifest:
       task_realisation_plan.md
 2.3 Investigation of creation extract_ast_lua_runtime_signals.py based on results of extract_lua_runtime_signals.py input IN PROGRESS
-   2.3.1 Create compact_raw_lua_extraction.py to consume raw_lua_extraction.json and provide raw_lua_extraction_compact.json, raw_lua_extraction_index.md CURRENT
-   2.3.2 Start work on extract_ast_lua_runtime_signals.py prototype with it alphabet NEXT
-   2.3.3 Validate extract_ast_lua_runtime_signals.py output agaist raw LUA and extract_lua_runtime_signals.py
+   2.3.1 Create compact_raw_lua_extraction.py to consume raw_lua_extraction.json, sript execution should provide raw_lua_extraction_compact.json, raw_lua_extraction_index.md PASS
+      compact_raw_lua_extraction.py implemented
+      → source_file_manifest:
+         raw_lua_extraction_compact.json
+         raw_lua_extraction_index.md
+   2.3.2 Start work on extract_ast_lua_runtime_signals.py prototype and it alphabet CURRENT
+   2.3.3 Validate extract_ast_lua_runtime_signals.py output agaist raw LUA and extract_lua_runtime_signals.py NEXT
       2.3.3.1 Polish extraction via extract_ast_lua_runtime_signals.py and it alphabet
 
 3. Normalization
