@@ -55,9 +55,15 @@ it's a context for a chat, not a directive for immediate execution
       → source_file_manifest:
          raw_lua_extraction_compact.json
          raw_lua_extraction_index.md
-   2.3.2 Start work on extract_ast_lua_runtime_signals.py prototype and it alphabet CURRENT
-   2.3.3 Validate extract_ast_lua_runtime_signals.py output agaist raw LUA and extract_lua_runtime_signals.py NEXT
-      2.3.3.1 Polish extraction via extract_ast_lua_runtime_signals.py and it alphabet
+   2.3.2 Start work on extract_ast_lua_runtime_signals.py prototype and it alphabet PASS
+      extract_ast_lua_runtime_signals.py implemented
+      → source_file_manifest:
+         lua_ast_syntax_alphabet.json
+         lua_ast_syntax_alphabet.md
+         ast_lua_extraction.json
+         ast_lua_extraction.md
+   2.3.3 Validate extract_ast_lua_runtime_signals.py output agaist raw LUA and extract_lua_runtime_signals.py CURRENT
+      2.3.3.1 Polish extraction via extract_ast_lua_runtime_signals.py and it INCLUDE
 
 3. Normalization
 3.1 Brainstorm, task_realisation_plan creation

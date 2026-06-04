@@ -1,7 +1,7 @@
 # Lua Syntax Alphabet
 
 Machine-readable source of truth: `lua_syntax_alphabet.json`.
-This Markdown is a human review surface regenerated from the JSON artifact.
+This Markdown is a generated human review surface and must stay consistent with the JSON artifact.
 
 ## Identity
 
@@ -52,20 +52,111 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 
 ## Syntax Entities
 
-| Entity ID | Parser operation | Regex | Notes |
-|---|---|---|---|
-| `lua_table_field` | `table_field` | `table_field` | suppresses=lua_assignment, lua_function_assignment |
-| `lua_assignment` | `local_assignment` | `local_assignment` |  |
-| `lua_assignment` | `assignment` | `assignment` |  |
-| `lua_function_definition` | `function_definition` | `function_statement` | declaration_line=True |
-| `lua_function_assignment` | `assigned_function` | `assigned_function` | declaration_line=True |
-| `lua_function_assignment` | `local_assigned_function` | `local_assigned_function` | declaration_line=True |
-| `lua_anonymous_function` | `anonymous_function` | `function_literal_inline` | primary_use=call_argument_callback_attachment_or_unowned_inline_function_literal |
-| `lua_call_expression` | `call_expression` | `call` | method_kind_id=lua_method_call_expression; argument_entity_id=lua_call_argument |
-| `lua_call_expression` | `call_after_call_result` | `call_after_call_result` | method_kind_id=lua_method_call_expression; argument_entity_id=lua_call_argument; parent_call_reference=True; target_strategy=append_parent_call_target_with_call_suffix_and_selected_member; purpose=Capture call expressions whose callable is selected from the result of a previous call, for syntax such as object:method():next(arg). |
-| `lua_call_expression` | `parenthesized_expression_method_call` | `parenthesized_expression_method_call` | method_kind_id=lua_method_call_expression; argument_entity_id=lua_call_argument; target_strategy=balanced_parenthesized_receiver_plus_selected_member; purpose=Capture method calls whose callable is selected from a balanced parenthesized expression receiver, for syntax such as (a() - b()):method(). |
-| `lua_literal_value` | `quoted_string_literal` | `string_literal` |  |
-| `lua_literal_value` | `long_bracket_string_literal` | `long_string_literal` |  |
+### 1. `lua_table_field`
+
+- `enabled`: `True`
+- `parser_operation`: `table_field`
+- `regex`: `table_field`
+- `requires_table_context`: `True`
+- `requires_same_function_depth_as_table`: `True`
+- `function_literal_ownership`: `table_field_only`
+- `suppresses`:
+
+```json
+[
+  "lua_assignment",
+  "lua_function_assignment"
+]
+```
+
+### 2. `lua_assignment`
+
+- `enabled`: `True`
+- `parser_operation`: `local_assignment`
+- `regex`: `local_assignment`
+- `sets_is_local`: `True`
+- `opens_table_context_when_value_kind`: `table_literal`
+
+### 3. `lua_assignment`
+
+- `enabled`: `True`
+- `parser_operation`: `assignment`
+- `regex`: `assignment`
+- `sets_is_local`: `False`
+- `opens_table_context_when_value_kind`: `table_literal`
+
+### 4. `lua_function_definition`
+
+- `enabled`: `True`
+- `parser_operation`: `function_definition`
+- `regex`: `function_statement`
+- `declaration_line`: `True`
+
+### 5. `lua_function_assignment`
+
+- `enabled`: `True`
+- `parser_operation`: `assigned_function`
+- `regex`: `assigned_function`
+- `declaration_line`: `True`
+- `function_literal_assignment_ownership`: `assignment_with_function_body_span`
+
+### 6. `lua_function_assignment`
+
+- `enabled`: `True`
+- `parser_operation`: `local_assigned_function`
+- `regex`: `local_assigned_function`
+- `declaration_line`: `True`
+- `function_literal_assignment_ownership`: `assignment_with_function_body_span`
+
+### 7. `lua_anonymous_function`
+
+- `enabled`: `True`
+- `parser_operation`: `anonymous_function`
+- `regex`: `function_literal_inline`
+- `primary_use`: `call_argument_callback_attachment_or_unowned_inline_function_literal`
+
+### 8. `lua_call_expression`
+
+- `enabled`: `True`
+- `parser_operation`: `call_expression`
+- `regex`: `call`
+- `method_kind_id`: `lua_method_call_expression`
+- `argument_entity_id`: `lua_call_argument`
+
+### 9. `lua_call_expression`
+
+- `enabled`: `True`
+- `parser_operation`: `call_after_call_result`
+- `regex`: `call_after_call_result`
+- `method_kind_id`: `lua_method_call_expression`
+- `argument_entity_id`: `lua_call_argument`
+- `parent_call_reference`: `True`
+- `target_strategy`: `append_parent_call_target_with_call_suffix_and_selected_member`
+- `target_root`: `<call_result>`
+- `target_prefix`: `)`
+- `purpose`: `Capture call expressions whose callable is selected from the result of a previous call, for syntax such as object:method():next(arg).`
+
+### 10. `lua_call_expression`
+
+- `enabled`: `True`
+- `parser_operation`: `parenthesized_expression_method_call`
+- `regex`: `parenthesized_expression_method_call`
+- `method_kind_id`: `lua_method_call_expression`
+- `argument_entity_id`: `lua_call_argument`
+- `target_strategy`: `balanced_parenthesized_receiver_plus_selected_member`
+- `purpose`: `Capture method calls whose callable is selected from a balanced parenthesized expression receiver, for syntax such as (a() - b()):method().`
+
+### 11. `lua_literal_value`
+
+- `enabled`: `True`
+- `parser_operation`: `quoted_string_literal`
+- `regex`: `string_literal`
+
+### 12. `lua_literal_value`
+
+- `enabled`: `True`
+- `parser_operation`: `long_bracket_string_literal`
+- `regex`: `long_string_literal`
 
 ## Parser Operation Order
 
@@ -84,25 +175,107 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 
 ## Regex
 
-| Name | Pattern |
-|---|---|
-| `assigned_function` | `^\s*([A-Za-z_][A-Za-z0-9_]*(?:(?:\.\|:)[A-Za-z_][A-Za-z0-9_]*)*(?:\[[^\]]+\])?)\s*=\s*function\s*\(([^)]*)\)` |
-| `assignment` | `^\s*(?P<lhs>[^=~<>]+?)\s*=\s*(?P<rhs>.+?)\s*$` |
-| `block_token` | `\b(function\|then\|do\|repeat\|end\|until)\b` |
-| `call` | `(?<![\w.:'\"])(?P<target>[A-Za-z_][A-Za-z0-9_]*(?:(?:\[[^\]\n]+\])\|(?:\.\|:)[A-Za-z_][A-Za-z0-9_]*)*)\s*(?P<call_open>\()` |
-| `call_after_call_result` | `\)(?P<postfix>(?:\s*\[[^\]\n]+\])*)\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\s*(?P<call_open>\()` |
-| `function_literal_inline` | `function\s*\(([^)]*)\)` |
-| `function_statement` | `^\s*(?:(local)\s+)?function\s+([A-Za-z_][A-Za-z0-9_]*(?:(?:\.\|:)[A-Za-z_][A-Za-z0-9_]*)*)\s*\(([^)]*)\)` |
-| `identifier` | `[A-Za-z_][A-Za-z0-9_]*` |
-| `local_assigned_function` | `^\s*local\s+([A-Za-z_][A-Za-z0-9_]*)\s*=\s*function\s*\(([^)]*)\)` |
-| `local_assignment` | `^\s*local\s+(?P<lhs>[A-Za-z_][A-Za-z0-9_]*(?:\s*,\s*[A-Za-z_][A-Za-z0-9_]*)*)\s*=\s*(?P<rhs>.+?)\s*$` |
-| `long_string_literal` | `\[(=*)\[(.*?)\]\1\]` |
-| `parenthesized_expression_method_call` | `\)\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\s*(?P<call_open>\()` |
-| `qualified_symbol` | `[A-Za-z_][A-Za-z0-9_]*(?:(?:\.\|:)[A-Za-z_][A-Za-z0-9_]*)*` |
-| `string_literal` | `(?P<quote>['\"])(?P<value>(?:\\.\|(?!\1).)*)(?P=quote)` |
-| `table_constructor_field_explicit` | `^\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*\|\[[^\]]+\])\s*=\s*(?P<value>.+?)\s*$` |
-| `table_constructor_field_positional` | `^\s*(?P<value>.+?)\s*$` |
-| `table_field` | `^\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*\|\[[^\]]+\])\s*=\s*(?P<value>.+?)(?:,)?\s*$` |
+### `assigned_function`
+
+```regex
+^\s*([A-Za-z_][A-Za-z0-9_]*(?:(?:\.|:)[A-Za-z_][A-Za-z0-9_]*)*(?:\[[^\]]+\])?)\s*=\s*function\s*\(([^)]*)\)
+```
+
+### `assignment`
+
+```regex
+^\s*(?P<lhs>[^=~<>]+?)\s*=\s*(?P<rhs>.+?)\s*$
+```
+
+### `block_token`
+
+```regex
+\b(function|then|do|repeat|end|until)\b
+```
+
+### `call`
+
+```regex
+(?<![\w.:'\"])(?P<target>[A-Za-z_][A-Za-z0-9_]*(?:(?:\[[^\]\n]+\])|(?:\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\s*(?P<call_open>\()
+```
+
+### `call_after_call_result`
+
+```regex
+\)(?P<postfix>(?:\s*\[[^\]\n]+\])*)\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\s*(?P<call_open>\()
+```
+
+### `function_literal_inline`
+
+```regex
+function\s*\(([^)]*)\)
+```
+
+### `function_statement`
+
+```regex
+^\s*(?:(local)\s+)?function\s+([A-Za-z_][A-Za-z0-9_]*(?:(?:\.|:)[A-Za-z_][A-Za-z0-9_]*)*)\s*\(([^)]*)\)
+```
+
+### `identifier`
+
+```regex
+[A-Za-z_][A-Za-z0-9_]*
+```
+
+### `local_assigned_function`
+
+```regex
+^\s*local\s+([A-Za-z_][A-Za-z0-9_]*)\s*=\s*function\s*\(([^)]*)\)
+```
+
+### `local_assignment`
+
+```regex
+^\s*local\s+(?P<lhs>[A-Za-z_][A-Za-z0-9_]*(?:\s*,\s*[A-Za-z_][A-Za-z0-9_]*)*)\s*=\s*(?P<rhs>.+?)\s*$
+```
+
+### `long_string_literal`
+
+```regex
+\[(=*)\[(.*?)\]\1\]
+```
+
+### `parenthesized_expression_method_call`
+
+```regex
+\)\s*(?P<sep>[:.])(?P<leaf>[A-Za-z_][A-Za-z0-9_]*)\s*(?P<call_open>\()
+```
+
+### `qualified_symbol`
+
+```regex
+[A-Za-z_][A-Za-z0-9_]*(?:(?:\.|:)[A-Za-z_][A-Za-z0-9_]*)*
+```
+
+### `string_literal`
+
+```regex
+(?P<quote>['\"])(?P<value>(?:\\.|(?!\1).)*)(?P=quote)
+```
+
+### `table_constructor_field_explicit`
+
+```regex
+^\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*|\[[^\]]+\])\s*=\s*(?P<value>.+?)\s*$
+```
+
+### `table_constructor_field_positional`
+
+```regex
+^\s*(?P<value>.+?)\s*$
+```
+
+### `table_field`
+
+```regex
+^\s*(?P<key>[A-Za-z_][A-Za-z0-9_]*|\[[^\]]+\])\s*=\s*(?P<value>.+?)(?:,)?\s*$
+```
 
 ## Regex Flags
 
@@ -126,12 +299,21 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 
 ## Value Detection
 
-- `number_regex`: `[-+]?\d+(?:\.\d+)?`
-- `table_constructor_open_at_line_end`: `\{\s*$`
+### `number_regex`
+
+```regex
+[-+]?\d+(?:\.\d+)?
+```
+
+### `table_constructor_open_at_line_end`
+
+```regex
+\{\s*$
+```
 
 ## Literal Tokens
 
-- `boolean`:
+### `boolean`
 
 ```json
 [
@@ -140,7 +322,7 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 ]
 ```
 
-- `nil`:
+### `nil`
 
 ```json
 [
@@ -148,14 +330,13 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 ]
 ```
 
-
 ## Control Call Words
 
 `if`, `for`, `while`, `repeat`, `until`, `return`, `function`, `local`, `elseif`
 
 ## Block Tokens
 
-- `close`:
+### `close`
 
 ```json
 [
@@ -164,7 +345,7 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 ]
 ```
 
-- `open`:
+### `open`
 
 ```json
 [
@@ -175,14 +356,13 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 ]
 ```
 
-- `repeat_close`:
+### `repeat_close`
 
 ```json
 [
   "until"
 ]
 ```
-
 
 ## Mechanics
 
@@ -402,7 +582,7 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 - Deduplicate lua_table_field evidence by file_id, line, table_depth, context_path, key_text, and value_preview.
 - When a multi-assignment has multiple LHS entries and exactly one RHS that is a syntactic call expression, do not invent nil for later LHS entries; share the call RHS and mark rhs_returns_maybe_multiple when declared.
 - multi_assignment_group must be deterministic per raw assignment occurrence: same emitted assignments from one raw occurrence share a group, repeated identical assignment text on different lines must have different groups using source occurrence identity.
-- `positional_table_field_exclusions`:
+### `positional_table_field_exclusions`
 
 ```json
 {
@@ -419,7 +599,7 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 }
 ```
 
-- `glua_c_style_block_comments`:
+### `glua_c_style_block_comments`
 
 ```json
 {
@@ -442,7 +622,7 @@ Declare generic Lua syntax extraction entities, parser operations, regex, value 
 }
 ```
 
-- `indexed_assignment_lhs`:
+### `indexed_assignment_lhs`
 
 ```json
 {

@@ -1,0 +1,302 @@
+{
+  "artifact_family": "lua_ast_syntax_alphabet",
+  "artifact_id": "lua_ast_syntax_alphabet:ba6dfc309c582a38",
+  "boundary": {
+    "allowed": [
+      "file identity and digest",
+      "source location and range",
+      "realm hint from manifest",
+      "assignment",
+      "table field",
+      "literal value",
+      "function definition",
+      "function assignment",
+      "anonymous function",
+      "call expression",
+      "method call expression",
+      "call argument",
+      "function body span"
+    ],
+    "forbidden": [
+      "runtime classification",
+      "network sender or receiver classification",
+      "hook emission or listener classification",
+      "scheduler classification",
+      "NutScript-specific behavior decisions",
+      "SIGNALIS-specific behavior decisions",
+      "benchmark-specific decisions"
+    ]
+  },
+  "canonical_status": "prototype",
+  "content_digest": "ba6dfc309c582a38af23fee2501b707255d6360b2532ec56163a5b2f3e15008a",
+  "glua_preprocessing": {
+    "enabled": true,
+    "masking_policy": "do_not_transform_inside_quoted_strings_or_lua_line_comments",
+    "preserve_original_source": true,
+    "rules": [
+      {
+        "from": "!",
+        "id": "not_operator",
+        "skip_when_followed_by": "=",
+        "to": "not "
+      },
+      {
+        "from": "!=",
+        "id": "not_equal_operator",
+        "to": "~="
+      },
+      {
+        "from": "&&",
+        "id": "and_operator",
+        "to": " and "
+      },
+      {
+        "from": "||",
+        "id": "or_operator",
+        "to": " or "
+      },
+      {
+        "from": "continue",
+        "id": "continue_keyword",
+        "to": "do end"
+      }
+    ],
+    "source_range_policy": "map_transformed_byte_offsets_back_to_original_byte_offsets"
+  },
+  "mechanics": {
+    "argument_split_strategy": "top_level_commas_respecting_strings_and_balanced_delimiters",
+    "assignment_operator_kind": "single_equals_not_comparison",
+    "enforce_allowed_fields": true,
+    "forbid_project_symbol_allowlists": true,
+    "function_parameter_strategy": "balanced_parentheses_after_function_name",
+    "local_declaration_prefix": "local",
+    "negative_number_policy": "include_unary_minus_when_parent_or_source_immediately_owns_minus",
+    "payload_strategy_owner": "lua_ast_syntax_alphabet",
+    "script_role": "mechanical_ast_traversal_and_declared_payload_strategy_execution_only",
+    "suppress_assignment_statement_child_inside_local_declaration": true
+  },
+  "node_families": [
+    {
+      "allowed_fields": [
+        "ast_node_type",
+        "source_preview",
+        "source_truncated",
+        "child_previews",
+        "symbol",
+        "parameters",
+        "body_span",
+        "range"
+      ],
+      "evidence_kind": "lua_function_definition",
+      "id": "function_nodes",
+      "node_types": [
+        "function_declaration",
+        "function_statement",
+        "function_declaration_statement"
+      ],
+      "payload_strategy": "function_definition_from_statement_text"
+    },
+    {
+      "allowed_fields": [
+        "ast_node_type",
+        "source_preview",
+        "source_truncated",
+        "child_previews",
+        "parameters",
+        "body_span",
+        "range",
+        "parent_evidence_id"
+      ],
+      "evidence_kind": "lua_anonymous_function",
+      "id": "function_literal_nodes",
+      "node_types": [
+        "function_definition",
+        "function_literal",
+        "anonymous_function"
+      ],
+      "payload_strategy": "anonymous_function_from_statement_text"
+    },
+    {
+      "allowed_fields": [
+        "ast_node_type",
+        "source_preview",
+        "source_truncated",
+        "child_previews",
+        "lhs",
+        "is_local",
+        "rhs_kind",
+        "rhs_preview",
+        "rhs_span",
+        "multi_assignment_group",
+        "range"
+      ],
+      "duplicate_child_node_types_suppressed_when_parent_type_in": [
+        "variable_declaration",
+        "local_variable_declaration",
+        "local_declaration"
+      ],
+      "evidence_kind": "lua_assignment",
+      "id": "assignment_nodes",
+      "local_node_types": [
+        "variable_declaration",
+        "local_variable_declaration",
+        "local_declaration"
+      ],
+      "node_types": [
+        "assignment_statement",
+        "assignment",
+        "variable_declaration",
+        "local_variable_declaration",
+        "local_declaration"
+      ],
+      "payload_strategy": "assignment_from_statement_text"
+    },
+    {
+      "allowed_fields": [
+        "ast_node_type",
+        "source_preview",
+        "source_truncated",
+        "child_previews",
+        "key_syntax",
+        "key_text",
+        "key_expression",
+        "value_kind",
+        "value_preview",
+        "context_path",
+        "range"
+      ],
+      "evidence_kind": "lua_table_field",
+      "id": "table_field_nodes",
+      "node_types": [
+        "field",
+        "table_field",
+        "record_field",
+        "list_field",
+        "pair"
+      ],
+      "payload_strategy": "table_field_from_field_text"
+    },
+    {
+      "allowed_fields": [
+        "ast_node_type",
+        "source_preview",
+        "source_truncated",
+        "child_previews",
+        "symbol",
+        "arguments_preview",
+        "argument_count",
+        "argument_kinds",
+        "range",
+        "parent_call_evidence_id"
+      ],
+      "evidence_kind": "lua_call_expression",
+      "id": "call_nodes",
+      "method_detection": "colon_before_declared_call_open",
+      "method_evidence_kind": "lua_method_call_expression",
+      "node_types": [
+        "function_call",
+        "call_expression",
+        "method_call",
+        "method_call_expression"
+      ],
+      "payload_strategy": "call_from_statement_text"
+    },
+    {
+      "allowed_fields": [
+        "ast_node_type",
+        "source_preview",
+        "source_truncated",
+        "child_previews",
+        "literal_kind",
+        "literal_form",
+        "value",
+        "range"
+      ],
+      "evidence_kind": "lua_literal_value",
+      "id": "literal_nodes",
+      "node_types": [
+        "string",
+        "string_literal",
+        "number",
+        "nil",
+        "true",
+        "false"
+      ],
+      "payload_strategy": "literal_from_node_text"
+    }
+  ],
+  "output": {
+    "artifact_family": "ast_lua_extraction",
+    "json_path": "manifests/extraction/ast_lua_extraction.json",
+    "md_path": "manifests/extraction/ast_lua_extraction.md",
+    "schema": "ast_lua_extraction"
+  },
+  "parser": {
+    "accepted_python_packages": [
+      "tree_sitter_language_pack",
+      "tree_sitter_lua",
+      "tree_sitter_languages"
+    ],
+    "language_name": "lua",
+    "parse_transformed_copy_only": true,
+    "strategy": "tree_sitter_lua_first_available"
+  },
+  "pipeline_stage": "extraction",
+  "producer_script": "manual.source_governed_ast_extraction_alphabet",
+  "promotion_role": "syntax_extraction_rule_input",
+  "prototype_validation": {
+    "compare_against_regex_baseline_outside_extractor": true,
+    "report_parser_failures": true,
+    "report_unsupported_node_types": true
+  },
+  "purpose": "Declare syntax-only AST extraction families for the first Tree-sitter Lua prototype.",
+  "schema": "lua_ast_syntax_alphabet",
+  "schema_version": "1",
+  "value_kind_rules": [
+    {
+      "node_types": [
+        "table_constructor",
+        "table"
+      ],
+      "value_kind": "table_literal"
+    },
+    {
+      "node_types": [
+        "function_definition",
+        "function_literal",
+        "anonymous_function"
+      ],
+      "value_kind": "function_literal"
+    },
+    {
+      "node_types": [
+        "string",
+        "string_literal"
+      ],
+      "value_kind": "string_literal"
+    },
+    {
+      "node_types": [
+        "number"
+      ],
+      "value_kind": "number_literal"
+    },
+    {
+      "node_types": [
+        "nil"
+      ],
+      "value_kind": "nil_literal"
+    },
+    {
+      "node_types": [
+        "true",
+        "false"
+      ],
+      "value_kind": "boolean_literal"
+    },
+    {
+      "fallback": true,
+      "value_kind": "expression"
+    }
+  ]
+}
