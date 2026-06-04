@@ -12,7 +12,7 @@ Purpose:
 - preserve script interfaces across chats
 - expose scripts without usable command-line help
 
-- Scripts checked: `4`
+- Scripts checked: `5`
 
 ## extraction
 
@@ -67,6 +67,31 @@ options:
                         manifests/extraction/source_file_manifest.json.
   --out-md OUT_MD       Output Markdown path. Defaults to
                         manifests/extraction/source_file_manifest.md.
+```
+
+### `scripts.extraction.extract_ast_lua_runtime_signals`
+
+- Path: `scripts/extraction/extract_ast_lua_runtime_signals.py`
+- Help status: `OK`
+
+```text
+usage: extract_ast_lua_runtime_signals.py [-h] --workspace WORKSPACE
+                                          [--input-manifest INPUT_MANIFEST]
+                                          [--lua-ast-syntax-alphabet LUA_AST_SYNTAX_ALPHABET]
+                                          [--out-json OUT_JSON]
+                                          [--out-md OUT_MD]
+                                          [--fail-on-digest-mismatch]
+
+Prototype Tree-sitter Lua AST syntax extraction.
+
+options:
+  -h, --help            show this help message and exit
+  --workspace WORKSPACE
+  --input-manifest INPUT_MANIFEST
+  --lua-ast-syntax-alphabet LUA_AST_SYNTAX_ALPHABET
+  --out-json OUT_JSON
+  --out-md OUT_MD
+  --fail-on-digest-mismatch
 ```
 
 ### `scripts.extraction.extract_lua_runtime_signals`

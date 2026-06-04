@@ -15,6 +15,13 @@
       "return_code": 0
     },
     {
+      "help": "usage: extract_ast_lua_runtime_signals.py [-h] --workspace WORKSPACE\n                                          [--input-manifest INPUT_MANIFEST]\n                                          [--lua-ast-syntax-alphabet LUA_AST_SYNTAX_ALPHABET]\n                                          [--out-json OUT_JSON]\n                                          [--out-md OUT_MD]\n                                          [--fail-on-digest-mismatch]\n\nPrototype Tree-sitter Lua AST syntax extraction.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --input-manifest INPUT_MANIFEST\n  --lua-ast-syntax-alphabet LUA_AST_SYNTAX_ALPHABET\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --fail-on-digest-mismatch",
+      "help_ok": true,
+      "module": "scripts.extraction.extract_ast_lua_runtime_signals",
+      "path": "scripts/extraction/extract_ast_lua_runtime_signals.py",
+      "return_code": 0
+    },
+    {
       "help": "usage: extract_lua_runtime_signals.py [-h] --workspace WORKSPACE\n                                      [--input-manifest INPUT_MANIFEST]\n                                      [--lua-syntax-alphabet LUA_SYNTAX_ALPHABET]\n                                      [--out-json OUT_JSON] [--out-md OUT_MD]\n                                      [--max-string-length MAX_STRING_LENGTH]\n                                      [--fail-on-digest-mismatch]\n\nExecute lua_syntax_alphabet-declared Lua syntax extraction rules.\n\noptions:\n  -h, --help            show this help message and exit\n  --workspace WORKSPACE\n  --input-manifest INPUT_MANIFEST\n  --lua-syntax-alphabet LUA_SYNTAX_ALPHABET\n  --out-json OUT_JSON\n  --out-md OUT_MD\n  --max-string-length MAX_STRING_LENGTH\n  --fail-on-digest-mismatch",
       "help_ok": true,
       "module": "scripts.extraction.extract_lua_runtime_signals",
@@ -29,6 +36,6 @@
       "return_code": 0
     }
   ],
-  "generated_at": "2026-06-03T21:15:44Z",
+  "generated_at": "2026-06-04T13:56:52Z",
   "schema": "script_cli_contracts"
 }
